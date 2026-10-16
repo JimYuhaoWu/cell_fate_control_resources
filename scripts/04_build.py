@@ -135,11 +135,24 @@ def write_entities_tsv(db: CFCR, path: Path) -> int:
     frames = [frame.reindex(columns=all_cols).astype(object)
               for frame in frames]
     out = pd.concat(frames, ignore_index=True, sort=False)
-    # entity columns first, then every ext column, so the shape is stable
-    # across builds even when a type gains its first record.
-    entity_cols = [c for c in db._columns("entity")]
-    rest = [c for c in out.columns if c not in entity_cols]
-    out = out[entity_cols + rest].sort_values("entity_id").reset_index(drop=True)
+    # Entity columns first, then each extension table's columns grouped in
+    # EXT_TABLES order and sorted within the group.
+    #
+    # The sort is what makes the snapshot environment-independent. Column order
+    # cannot come from PRAGMA table_info: ALTER TABLE ADD COLUMN appends, so a
+    # database migrated through MIGRATIONS reports a different order than one
+    # built fresh from the DDL, and entities.tsv would then differ between an
+    # existing checkout and a clean clone with identical data -- a diff with no
+    # curation change behind it.
+    entity_cols = list(db._columns("entity"))
+    ordered: list[str] = list(entity_cols)
+    for ext_table in EXT_TABLES.values():
+        cols = sorted(c for c in db._columns(ext_table)
+                      if c != "entity_id" and c not in ordered)
+        ordered += cols
+    ordered += sorted(c for c in out.columns if c not in ordered)
+    out = out[[c for c in ordered if c in out.columns]]
+    out = out.sort_values("entity_id").reset_index(drop=True)
     out.to_csv(path, sep="\t", index=False)
     return len(out)
 

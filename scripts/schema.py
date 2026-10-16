@@ -210,7 +210,17 @@ CREATE TABLE IF NOT EXISTS model_ext (
     input_context_bp    INTEGER,
     output_type         TEXT,       -- JSON array, controlled
     output_resolution_bp INTEGER,
-    n_parameters        INTEGER,
+    -- Parameter count as a RANGE, because an entity is a named artifact and
+    -- several ship as a family of checkpoints under one name: Evo 2 is 7B and
+    -- 40B, Nucleotide Transformer spans 50M to 2.5B. A single INTEGER forced
+    -- those to null, which made "ships in four sizes" indistinguishable from
+    -- "nobody published it" -- and left the column unfilterable either way.
+    --   single-size model : min == max
+    --   family            : min and max are the extremes of the release
+    --   genuinely unknown : both null
+    -- Filtering "what can I run on one GPU" is then n_parameters_max.
+    n_parameters_min    INTEGER,
+    n_parameters_max    INTEGER,
     genome_build        TEXT,       -- JSON array
     training_data       TEXT,       -- JSON array
     license             TEXT,       -- SPDX where possible
@@ -318,7 +328,21 @@ ALL_DDL = (CREATE_ENTITY + CREATE_PAPER + CREATE_ENTITY_PAPER + CREATE_LINK
 # an existing database, so a new column in the DDL above would never reach one.
 # Each entry is applied only when absent, keeping _create_schema() idempotent.
 # Format: (table, column, declaration).
-MIGRATIONS: list[tuple[str, str, str]] = []
+MIGRATIONS: list[tuple[str, str, str]] = [
+    ("model_ext", "n_parameters_min", "INTEGER"),
+    ("model_ext", "n_parameters_max", "INTEGER"),
+]
+
+# Columns removed after a table shipped, dropped when present. Needed because
+# db/entities.tsv is generated from the live table shape: a database carried
+# over from before a removal would keep emitting the dead column, so the
+# committed snapshot would differ between a fresh clone and an existing
+# checkout. Requires SQLite 3.35+ for ALTER TABLE DROP COLUMN; older versions
+# leave the column in place, which is harmless but does change the snapshot.
+# Format: (table, column).
+OBSOLETE_COLUMNS: list[tuple[str, str]] = [
+    ("model_ext", "n_parameters"),      # replaced by the min/max pair
+]
 
 CREATE_INDEXES = [
     "CREATE INDEX IF NOT EXISTS idx_entity_type ON entity(type);",
@@ -438,6 +462,16 @@ class CFCR:
             have = {row["name"] for row in cur.fetchall()}
             if col not in have:
                 cur.execute(f"ALTER TABLE {table} ADD COLUMN {col} {decl};")
+        for table, col in OBSOLETE_COLUMNS:
+            cur.execute(f"PRAGMA table_info({table});")
+            have = {row["name"] for row in cur.fetchall()}
+            if col in have:
+                try:
+                    cur.execute(f"ALTER TABLE {table} DROP COLUMN {col};")
+                except sqlite3.OperationalError:
+                    # SQLite < 3.35 cannot drop a column. Leave it; it is
+                    # unused, and the build still succeeds.
+                    pass
         for idx in CREATE_INDEXES:
             cur.execute(idx)
         self.conn.commit()

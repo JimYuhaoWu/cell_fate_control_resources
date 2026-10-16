@@ -75,8 +75,8 @@ def _decode(value: Any) -> list:
 
 def _coerce_numeric(df: pd.DataFrame) -> pd.DataFrame:
     for col in ("year", "input_context_bp", "output_resolution_bp",
-                "n_parameters", "n_tasks", "n_models_evaluated", "n_records",
-                "duration_hours"):
+                "n_parameters_min", "n_parameters_max", "n_tasks",
+                "n_models_evaluated", "n_records", "duration_hours"):
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce")
     return df
