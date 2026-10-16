@@ -42,6 +42,31 @@ In progress on branch `claude/loving-cohen-02b54f`.
 authoring group evaluated, and can I legally use the weights" without reading
 any YAML.
 
+### Blocker found while building M2: entity links are not exported
+
+`04_build.py` writes all 29 `link` rows into the SQLite `link` table, but the
+committed snapshots are only `entities.tsv`, `papers.tsv` and
+`entity_paper.tsv` — so the loader cannot see links at all, and the site can
+link to papers but not to a single resource. Affected: 11 `code`, 6 `dataset`,
+4 `website`, 2 `weights`, 2 `api`, 2 `supplementary`, 1 `container`, 1 `docs`.
+
+This matters more than its size suggests. Landscape §1 identifies exactly these
+links as "what make it more useful than a bibliography" — without them CFCR
+*is* the bibliography it set out not to be. It is a gap in the original spec
+(kickoff item 5 named three snapshots), not a slip in the build.
+
+Two ways to fix, and the choice is not obvious:
+
+- **A fourth snapshot, `db/links.tsv`.** Consistent with `entity_paper.tsv`,
+  keeps the per-link `checked` and `alive` columns where the link-rot sweep
+  writes them, and gives one diff line per link. Costs the loader a join.
+- **Inline into `entities.tsv` as a JSON `links` column.** One file, no join,
+  one fetch for the site. But it duplicates the `link` table's shape, and
+  `alive`/`checked` churn would then rewrite entity rows on every sweep.
+
+Recommended: the fourth snapshot. The link-rot sweep is the deciding argument —
+it rewrites link state on a schedule, and that should not touch entity rows.
+
 ## M3 — literature pipeline
 
 Adapted from `eCR_mod_lib` rather than written fresh.
@@ -138,6 +163,12 @@ Querying needs nothing but the committed TSVs. Rebuilding needs no network.
 | Main-branch working copy on PeiLab2 | `/mnt3/wuyuhao/cfcr` |
 | Website working copy on PeiLab2 | `/mnt3/wuyuhao/cfcr-site` |
 | Conda interpreter on PeiLab2 | `/mnt/wuyuhao/miniconda3/envs/cfcr/bin/python` |
+
+**Git identity:** commits so far are authored as `work_station`, the macOS
+account name, because `user.name` is unset. `user.email` is set, so GitHub
+still attributes them to the right account, but the display name is wrong. Fix
+with `git config --global user.name "Yuhao Wu"` — left for you to set, since it
+affects every repository on the machine.
 
 The two server directories are deliberately separate: both sessions were
 originally pointed at `/mnt3/wuyuhao/cfcr` and overwrote each other's files
