@@ -1,0 +1,375 @@
+# literature/papers.yaml
+# Open metadata only, harvested from Crossref and Europe PMC.
+# No full text of paywalled work; abstracts are the publisher-released
+# abstracts exposed by those APIs. Fields the APIs did not supply are
+# null rather than guessed -- see reports/seed_flags.md.
+
+- paper_id: "10.1038/s41592-021-01252-x"
+  doi: "10.1038/s41592-021-01252-x"
+  title: "Effective gene expression prediction from sequence by integrating long-range interactions"
+  authors:
+    - "Žiga Avsec"
+    - "Vikram Agarwal"
+    - "Daniel Visentin"
+    - "Joseph R. Ledsam"
+    - "Agnieszka Grabska-Barwinska"
+    - "Kyle R. Taylor"
+    - "Yannis Assael"
+    - "John Jumper"
+    - "Pushmeet Kohli"
+    - "David R. Kelley"
+  year: 2021
+  venue: "Nature Methods"
+  venue_type: "journal"
+  abstract: >-
+    How noncoding DNA determines gene expression in different cell types is a
+    major unsolved problem, and critical downstream applications in human
+    genetics depend on improved solutions. Here, we report substantially
+    improved gene expression prediction accuracy from DNA sequences through the
+    use of a deep learning architecture, called Enformer, that is able to
+    integrate information from long-range interactions (up to 100 kb away) in
+    the genome. This improvement yielded more accurate variant effect
+    predictions on gene expression for both natural genetic variants and
+    saturation mutagenesis measured by massively parallel reporter assays.
+    Furthermore, Enformer learned to predict enhancer–promoter interactions
+    directly from the DNA sequence competitively with methods that take direct
+    experimental data as input. We expect that these advances will enable more
+    effective fine-mapping of human disease associations and provide a framework
+    to interpret cis -regulatory evolution.
+  url: "https://doi.org/10.1038/s41592-021-01252-x"
+  preprint_of: null
+  metadata_source: "crossref"
+
+- paper_id: "10.1101/2021.04.07.438649"
+  doi: "10.1101/2021.04.07.438649"
+  title: "Effective gene expression prediction from sequence by integrating long-range interactions"
+  authors:
+    - "Žiga Avsec"
+    - "Vikram Agarwal"
+    - "Daniel Visentin"
+    - "Joseph R. Ledsam"
+    - "Agnieszka Grabska-Barwinska"
+    - "Kyle R. Taylor"
+    - "Yannis Assael"
+    - "John Jumper"
+    - "Pushmeet Kohli"
+    - "David R. Kelley"
+  year: 2021
+  venue: "preprint"
+  venue_type: "preprint"
+  abstract: >-
+    The next phase of genome biology research requires understanding how DNA
+    sequence encodes phenotypes, from the molecular to organismal levels. How
+    noncoding DNA determines gene expression in different cell types is a major
+    unsolved problem, and critical downstream applications in human genetics
+    depend on improved solutions. Here, we report substantially improved gene
+    expression prediction accuracy from DNA sequence through the use of a new
+    deep learning architecture called Enformer that is able to integrate long-
+    range interactions (up to 100 kb away) in the genome. This improvement
+    yielded more accurate variant effect predictions on gene expression for both
+    natural genetic variants and saturation mutagenesis measured by massively
+    parallel reporter assays. Notably, Enformer outperformed the best team on
+    the critical assessment of genome interpretation (CAGI5) challenge for
+    noncoding variant interpretation with no additional training. Furthermore,
+    Enformer learned to predict promoter-enhancer interactions directly from DNA
+    sequence competitively with methods that take direct experimental data as
+    input. We expect that these advances will enable more effective fine-mapping
+    of growing human disease associations to cell-type-specific gene regulatory
+    mechanisms and provide a framework to interpret cis -regulatory evolution.
+    To foster these downstream applications, we have made the pre-trained
+    Enformer model openly available, and provide pre-computed effect predictions
+    for all common variants in the 1000 Genomes dataset. One-sentence summary
+    Improved noncoding variant effect prediction and candidate enhancer
+    prioritization from a more accurate sequence to expression model driven by
+    extended long-range interaction modelling.
+  url: "https://doi.org/10.1101/2021.04.07.438649"
+  preprint_of: "10.1038/s41592-021-01252-x"
+  metadata_source: "crossref"
+
+- paper_id: "10.1038/s41588-024-02053-6"
+  doi: "10.1038/s41588-024-02053-6"
+  title: "Predicting RNA-seq coverage from DNA sequence as a unifying model of gene regulation"
+  authors:
+    - "Johannes Linder"
+    - "Divyanshi Srivastava"
+    - "Han Yuan"
+    - "Vikram Agarwal"
+    - "David R. Kelley"
+  year: 2025
+  venue: "Nature Genetics"
+  venue_type: "journal"
+  abstract: >-
+    Sequence-based machine-learning models trained on genomics data improve
+    genetic variant interpretation by providing functional predictions
+    describing their impact on the cis-regulatory code. However, current tools
+    do not predict RNA-seq expression profiles because of modeling challenges.
+    Here, we introduce Borzoi, a model that learns to predict cell-type-specific
+    and tissue-specific RNA-seq coverage from DNA sequence. Using statistics
+    derived from Borzoi's predicted coverage, we isolate and accurately score
+    DNA variant effects across multiple layers of regulation, including
+    transcription, splicing and polyadenylation. Evaluated on quantitative trait
+    loci, Borzoi is competitive with and often outperforms state-of-the-art
+    models trained on individual regulatory functions. By applying attribution
+    methods to the derived statistics, we extract cis-regulatory motifs driving
+    RNA expression and post-transcriptional regulation in normal tissues. The
+    wide availability of RNA-seq data across species, conditions and assays
+    profiling specific aspects of regulation emphasizes the potential of this
+    approach to decipher the mapping from DNA sequence to regulatory function.
+  url: "https://doi.org/10.1038/s41588-024-02053-6"
+  preprint_of: null
+  metadata_source: "crossref"
+
+- paper_id: "10.1101/2023.08.30.555582"
+  doi: "10.1101/2023.08.30.555582"
+  title: "Predicting RNA-seq coverage from DNA sequence as a unifying model of gene regulation"
+  authors:
+    - "Johannes Linder"
+    - "Divyanshi Srivastava"
+    - "Han Yuan"
+    - "Vikram Agarwal"
+    - "David R. Kelley"
+  year: 2023
+  venue: "preprint"
+  venue_type: "preprint"
+  abstract: >-
+    Sequence-based machine learning models trained on genome-scale biochemical
+    assays improve our ability to interpret genetic variants by providing
+    functional predictions describing their impact on the cis-regulatory code.
+    Here, we introduce a new model, Borzoi, which learns to predict cell- and
+    tissue-specific RNA-seq coverage from DNA sequence. Using statistics derived
+    from Borzoi’s predicted coverage, we isolate and accurately score variant
+    effects across multiple layers of regulation, including transcription,
+    splicing, and polyadenylation. Evaluated on QTLs, Borzoi is competitive
+    with, and often outperforms, state-of-the-art models trained on individual
+    regulatory functions. By applying attribution methods to the derived
+    statistics, we extract cis-regulatory patterns driving RNA expression and
+    post-transcriptional regulation in normal tissues. The wide availability of
+    RNA-seq data across species, conditions, and assays profiling specific
+    aspects of regulation emphasizes the potential of this approach to decipher
+    the mapping from DNA sequence to regulatory function.
+  url: "https://doi.org/10.1101/2023.08.30.555582"
+  preprint_of: "10.1038/s41588-024-02053-6"
+  metadata_source: "crossref"
+
+- paper_id: "10.1093/bioinformatics/btaf467"
+  doi: "10.1093/bioinformatics/btaf467"
+  title: "Flashzoi: an enhanced Borzoi for accelerated genomic analysis"
+  authors:
+    - "Johannes C Hingerl"
+    - "Alexander Karollus"
+    - "Julien Gagneur"
+  year: 2025
+  venue: "Bioinformatics"
+  venue_type: "journal"
+  abstract: >-
+    Motivation Accurately predicting how DNA sequence drives gene regulation and
+    how genetic variants alter gene expression is a central challenge in
+    genomics. Borzoi, which models over ten thousand genomic assays including
+    RNA-seq coverage from over half a megabase of sequence context alone
+    promises to become an important foundation model in regulatory genomics,
+    both for massively annotating variants and for further model development.
+    However, the currently used relative positional encodings limit Borzoi’s
+    computational efficiency. Results We present Flashzoi, an enhanced Borzoi
+    model that leverages rotary positional encodings and FlashAttention-2. This
+    achieves over 3-fold faster training and inference and up to 2.4-fold
+    reduced memory usage, while maintaining or improving accuracy in modeling
+    various genomic assays including RNA-seq coverage, predicting variant
+    effects, and enhancer-promoter linking. Flashzoi’s improved efficiency
+    facilitates large-scale genomic analyses and opens avenues for exploring
+    more complex regulatory mechanisms and modeling. Availability and
+    implementation The Flashzoi model architecture is part of the MIT-licensed
+    borzoi-pytorch package, can be found at https://github.com/johahi/borzoi-
+    pytorch and installed via pip. Model weights for all four Flashzoi and
+    Borzoi replicates are available at https://huggingface.co/johahi under the
+    MIT license. The code has been archived at
+    https://zenodo.org/records/15669913.
+  url: "https://doi.org/10.1093/bioinformatics/btaf467"
+  preprint_of: null
+  metadata_source: "crossref"
+
+- paper_id: "10.1101/2024.12.18.629121"
+  doi: "10.1101/2024.12.18.629121"
+  title: "Flashzoi: An enhanced Borzoi for accelerated genomic analysis"
+  authors:
+    - "Johannes C. Hingerl"
+    - "Alexander Karollus"
+    - "Julien Gagneur"
+  year: 2024
+  venue: "preprint"
+  venue_type: "preprint"
+  abstract: >-
+    Accurately predicting how DNA sequence drives gene regulation and how
+    genetic variants alter gene expression is a central challenge in genomics.
+    Borzoi, which models over ten thousand genomic assays including RNA-seq
+    coverage from over half a megabase of sequence context alone promises to
+    become an important foundation model in regulatory genomics, both for
+    massively annotating variants and for further model development. However,
+    its reliance on handcrafted, relative positional encodings within the
+    transformer architecture limits its computational efficiency. Here we
+    present Flashzoi, an enhanced Borzoi model that leverages rotary positional
+    encodings and FlashAttention-2. This achieves over 3-fold faster training
+    and inference and up to 2.4-fold reduced memory usage, while maintaining or
+    improving accuracy in modeling various genomic assays including RNA-seq
+    coverage, predicting variant effects, and enhancer-promoter linking.
+    Flashzoi’s improved efficiency facilitates large-scale genomic analyses and
+    opens avenues for exploring more complex regulatory mechanisms and modeling.
+    Availability and implementation The Flashzoi model architecture is part of
+    the MIT-licensed borzoi-pytorch package, can be found at
+    https://github.com/johahi/borzoi-pytorch and installed via pip. Model
+    weights for all four Flashzoi and Borzoi replicates are available at
+    https://huggingface.co/johahi under the MIT license.
+  url: "https://doi.org/10.1101/2024.12.18.629121"
+  preprint_of: "10.1093/bioinformatics/btaf467"
+  metadata_source: "crossref"
+
+- paper_id: "10.1038/s41588-023-01517-5"
+  doi: "10.1038/s41588-023-01517-5"
+  title: >-
+    Current approaches to genomic deep learning struggle to fully capture human
+    genetic variation
+  authors:
+    - "Ziqi Tang"
+    - "Shushan Toneyan"
+    - "Peter K. Koo"
+  year: 2023
+  venue: "Nature Genetics"
+  venue_type: "journal"
+  abstract: null
+  url: "https://doi.org/10.1038/s41588-023-01517-5"
+  preprint_of: null
+  metadata_source: "crossref"
+
+- paper_id: "10.1038/s41588-023-01574-w"
+  doi: "10.1038/s41588-023-01574-w"
+  title: >-
+    Personal transcriptome variation is poorly explained by current genomic deep
+    learning models
+  authors:
+    - "Connie Huang"
+    - "Richard W. Shuai"
+    - "Parth Baokar"
+    - "Ryan Chung"
+    - "Ruchir Rastogi"
+    - "Pooja Kathail"
+    - "Nilah M. Ioannidis"
+  year: 2023
+  venue: "Nature Genetics"
+  venue_type: "journal"
+  abstract: >-
+    Genomic deep learning models can predict genome-wide epigenetic features and
+    gene expression levels directly from DNA sequence. While current models
+    perform well at predicting gene expression levels across genes in different
+    cell types from the reference genome, their ability to explain expression
+    variation between individuals due to cis -regulatory genetic variants
+    remains largely unexplored. Here, we evaluate four state-of-the-art models
+    on paired personal genome and transcriptome data and find limited
+    performance when explaining variation in expression across individuals. In
+    addition, models often fail to predict the correct direction of effect of
+    cis -regulatory genetic variation on expression.
+  url: "https://doi.org/10.1038/s41588-023-01574-w"
+  preprint_of: null
+  metadata_source: "crossref"
+
+- paper_id: "10.1101/2023.06.30.547100"
+  doi: "10.1101/2023.06.30.547100"
+  title: >-
+    Personal transcriptome variation is poorly explained by current genomic deep
+    learning models
+  authors:
+    - "Connie Huang"
+    - "Richard Shuai"
+    - "Parth Baokar"
+    - "Ryan Chung"
+    - "Ruchir Rastogi"
+    - "Pooja Kathail"
+    - "Nilah Ioannidis"
+  year: 2023
+  venue: "preprint"
+  venue_type: "preprint"
+  abstract: >-
+    Genomic deep learning models can predict genome-wide epigenetic features and
+    gene expression levels directly from DNA sequence. While current models
+    perform well at predicting gene expression levels across genes in different
+    cell types from the reference genome, their ability to explain expression
+    variation between individuals due to cis-regulatory genetic variants remains
+    largely unexplored. Here we evaluate four state-of-the-art models on paired
+    personal genome and transcriptome data and find limited performance when
+    explaining variation in expression across individuals.
+  url: "https://doi.org/10.1101/2023.06.30.547100"
+  preprint_of: "10.1038/s41588-023-01574-w"
+  metadata_source: "crossref"
+
+- paper_id: "10.1038/s41587-024-02442-6"
+  doi: "10.1038/s41587-024-02442-6"
+  title: >-
+    Development of compact transcriptional effectors using high-throughput
+    measurements in diverse contexts
+  authors:
+    - "Josh Tycko"
+    - "Mike V. Van"
+    - "Aradhana"
+    - "Nicole DelRosso"
+    - "Hanrong Ye"
+    - "David Yao"
+    - "Raeline Valbuena"
+    - "Alun Vaughan-Jackson"
+    - "Xiaoshu Xu"
+    - "Connor Ludwig"
+    - "Kaitlyn Spees"
+    - "Katherine Liu"
+    - "Mingxin Gu"
+    - "Venya Khare"
+    - "Adi Xiyal Mukund"
+    - "Peter H. Suzuki"
+    - "Sophia Arana"
+    - "Catherine Zhang"
+    - "Peter P. Du"
+    - "Thea S. Ornstein"
+    - "Gaelen T. Hess"
+    - "Roarke A. Kamber"
+    - "Lei S. Qi"
+    - "Ahmad S. Khalil"
+    - "Lacramioara Bintu"
+    - "Michael C. Bassik"
+  year: 2024
+  venue: "Nature Biotechnology"
+  venue_type: "journal"
+  abstract: >-
+    Transcriptional effectors are protein domains known to activate or repress
+    gene expression; however, a systematic understanding of which effector
+    domains regulate transcription across genomic, cell type and DNA-binding
+    domain (DBD) contexts is lacking. Here we develop dCas9-mediated high-
+    throughput recruitment (HT-recruit), a pooled screening method for
+    quantifying effector function at endogenous target genes and test effector
+    function for a library containing 5,092 nuclear protein Pfam domains across
+    varied contexts. We also map context dependencies of effectors drawn from
+    unannotated protein regions using a larger library tiling chromatin
+    regulators and transcription factors. We find that many effectors depend on
+    target and DBD contexts, such as HLH domains that can act as either
+    activators or repressors. To enable efficient perturbations, we select
+    context-robust domains, including ZNF705 KRAB, that improve CRISPRi tools to
+    silence promoters and enhancers. We engineer a compact human activator
+    called NFZ, by combining NCOA3, FOXO3 and ZNF473 domains, which enables
+    efficient CRISPRa with better viral delivery and inducible control of
+    chimeric antigen receptor T cells.
+  url: "https://doi.org/10.1038/s41587-024-02442-6"
+  preprint_of: null
+  metadata_source: "crossref"
+
+- paper_id: "10.52202/079017-1981"
+  doi: "10.52202/079017-1981"
+  title: "DART-Eval: A Comprehensive DNA Language Model Evaluation Benchmark on Regulatory DNA"
+  authors:
+    - "Aman Patel"
+    - "Arpita Singhal"
+    - "Austin Wang"
+    - "Anusri Pampari"
+    - "Maya Kasowski"
+    - "Anshul Kundaje"
+  year: 2024
+  venue: "Advances in Neural Information Processing Systems 37"
+  venue_type: "conference"
+  abstract: null
+  url: "https://doi.org/10.52202/079017-1981"
+  preprint_of: null
+  metadata_source: "crossref"

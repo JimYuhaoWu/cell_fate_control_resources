@@ -1,0 +1,179 @@
+# records/models.yaml
+#
+# Human-curated source of truth for `type: model` entities.
+#
+# Conventions:
+#   * entity_id prefix MUST equal `type` (QC enforces it), so models are
+#     `model:<slug>`.
+#   * `evidence_tier` below is the curator's CLAIM. 05_validate.py recomputes it
+#     from entity_paper roles + author overlap and reports disagreements; the
+#     derivation is authoritative (schema §3.1).
+#   * Replicate checkpoints of one model are ONE entity. A re-implementation
+#     under its own name is a separate entity with `variant_of` set. A successor
+#     with its own paper is a separate entity with `supersedes` set.
+#   * `status` describes this entity only. Borzoi claiming to supersede Enformer
+#     does not make Enformer `superseded` -- succession is a claim made by the
+#     follower, not a fact about the precedent, and Enformer remains actively
+#     used and maintained.
+#   * Fields that could not be verified against an API are null and listed in
+#     reports/seed_flags.md. Nothing here is written from memory.
+
+- entity_id: model:enformer
+  type: model
+  name: Enformer
+  aliases: [enformer]
+  year: 2021
+  description: >
+    Predicts gene expression and chromatin tracks from DNA sequence by combining
+    dilated convolutions with transformer blocks, integrating regulatory
+    information from up to 100 kb away. Established the long-context interval
+    model as the dominant architecture for sequence-to-function prediction.
+  notes: >
+    The reference point the whole interval-model literature argues with. Two
+    independent Nature Genetics analyses (Tang/Toneyan/Koo and Huang et al.)
+    found it explains personal transcriptome variation poorly despite strong
+    cross-locus accuracy -- the across-individual vs across-gene distinction is
+    the single most important caveat to communicate to anyone picking it up.
+    Replicate checkpoints and the many community ports are deliberately not
+    separate entities; see model:flashzoi for one that is.
+  tags: [deepmind, long-range, variant-effect, enhancer-promoter]
+  fate_axis: [where]
+  organism: [human, mouse]
+  assay: [CAGE, DNase-seq, ATAC-seq, ChIP-seq]
+  task: [coverage-prediction, variant-effect-prediction, enhancer-promoter-linking]
+  status: active
+  curator: JimYuhaoWu
+  model_ext:
+    evidence_tier: externally-benchmarked
+    availability_tier: open-source
+    model_family: interval-model
+    architecture: [cnn, transformer]
+    input_type: genomic-interval
+    input_context_bp: 196608
+    output_type: [coverage-track, variant-effect]
+    output_resolution_bp: 128
+    n_parameters: null          # FLAG: not stated in the abstract; unverified
+    genome_build: [hg38, mm10]
+    license: Apache-2.0
+  links:
+    - kind: code
+      url: https://github.com/google-deepmind/deepmind-research/tree/master/enformer
+  papers:
+    - paper_id: 10.1038/s41592-021-01252-x
+      role: primary
+    - paper_id: 10.1101/2021.04.07.438649
+      role: preprint
+    - paper_id: 10.1038/s41588-023-01517-5
+      role: critique
+      note: >
+        Across-individual generalization; aggregate accuracy driven by
+        across-gene variation rather than personal variation.
+    - paper_id: 10.1038/s41588-023-01574-w
+      role: critique
+      note: Personal transcriptome variation poorly explained.
+
+- entity_id: model:borzoi
+  type: model
+  name: Borzoi
+  aliases: [borzoi]
+  year: 2023
+  description: >
+    Predicts cell-type- and tissue-specific RNA-seq coverage from DNA sequence
+    over a 524 kb context, scoring variant effects across transcription,
+    splicing and polyadenylation from the one model. Successor to Enformer with
+    finer output resolution and RNA-seq heads.
+  notes: >
+    `year: 2023` is the first public release (bioRxiv); the Nature Genetics
+    paper carries a 2025 issue year. Trained with the Baskerville framework
+    rather than the Enformer codebase, so the two are not drop-in comparable
+    despite the lineage.
+  tags: [calico, unet, rna-seq, eqtl-prioritization, splicing]
+  fate_axis: [where]
+  organism: [human, mouse]
+  assay: [RNA-seq, DNase-seq, ATAC-seq, ChIP-seq, CAGE]
+  task: [coverage-prediction, variant-effect-prediction, splicing-prediction,
+         polyadenylation-prediction]
+  status: active
+  supersedes: model:enformer
+  curator: JimYuhaoWu
+  model_ext:
+    evidence_tier: self-reported
+    availability_tier: open-source
+    model_family: interval-model
+    architecture: [cnn, transformer]
+    input_type: genomic-interval
+    input_context_bp: 524288
+    output_type: [coverage-track, variant-effect]
+    output_resolution_bp: 32
+    n_parameters: null          # FLAG: schema §9 asserts 235M; unverified
+    genome_build: [hg38, mm10]
+    training_data: [Genentech/borzoi-data]
+    license: Apache-2.0
+  links:
+    - kind: code
+      url: https://github.com/calico/borzoi
+    - kind: code
+      url: https://github.com/calico/baskerville
+      label: Baskerville training framework
+    - kind: dataset
+      url: https://huggingface.co/datasets/Genentech/borzoi-data
+      label: training/validation/test intervals
+  papers:
+    - paper_id: 10.1038/s41588-024-02053-6
+      role: primary
+    - paper_id: 10.1101/2023.08.30.555582
+      role: preprint
+    - paper_id: 10.1093/bioinformatics/btaf467
+      role: extension
+      note: Flashzoi -- see model:flashzoi
+
+- entity_id: model:flashzoi
+  type: model
+  name: Flashzoi
+  aliases: [flashzoi, borzoi-pytorch]
+  year: 2024
+  description: >
+    Re-implementation of Borzoi substituting rotary positional encodings and
+    FlashAttention-2 for relative positional encodings, giving over 3-fold
+    faster training and inference and up to 2.4-fold lower memory use while
+    maintaining or improving accuracy.
+  notes: >
+    A port under its own name, so a separate entity with `variant_of` rather
+    than a Borzoi link -- the granularity rule's worked case. Weights for all
+    four Flashzoi and Borzoi replicates are published together under MIT; the
+    replicates are one entity, not four. Licensed more permissively than Borzoi
+    itself, which matters for downstream reuse.
+  tags: [flash-attention, rotary-embedding, efficiency, gagneur]
+  fate_axis: [where]
+  organism: [human, mouse]
+  assay: [RNA-seq, DNase-seq, ATAC-seq, ChIP-seq, CAGE]
+  task: [coverage-prediction, variant-effect-prediction, enhancer-promoter-linking]
+  status: active
+  variant_of: model:borzoi
+  curator: JimYuhaoWu
+  model_ext:
+    evidence_tier: self-reported
+    availability_tier: open-source
+    model_family: interval-model
+    architecture: [cnn, transformer]
+    input_type: genomic-interval
+    input_context_bp: 524288
+    output_type: [coverage-track, variant-effect]
+    output_resolution_bp: 32
+    n_parameters: null          # FLAG: not stated in the abstract; unverified
+    genome_build: [hg38, mm10]
+    license: MIT
+  links:
+    - kind: code
+      url: https://github.com/johahi/borzoi-pytorch
+    - kind: weights
+      url: https://huggingface.co/johahi
+      label: Flashzoi and Borzoi replicate weights (MIT)
+    - kind: container
+      url: https://zenodo.org/records/15669913
+      label: archived code release
+  papers:
+    - paper_id: 10.1093/bioinformatics/btaf467
+      role: primary
+    - paper_id: 10.1101/2024.12.18.629121
+      role: preprint

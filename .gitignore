@@ -1,0 +1,21 @@
+# Build artifacts — TSV snapshots in db/ are committed, the database is not
+db/cfcr.db
+db/cfcr.db-wal
+db/cfcr.db-shm
+
+# Literature pipeline staging
+literature/candidates/
+
+# Site build output
+site/data/embeddings.bin
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+
+# OS / editor
+.DS_Store
