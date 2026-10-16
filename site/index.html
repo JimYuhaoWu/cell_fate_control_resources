@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CFCR — Cell Fate Control Resources</title>
+<meta name="description" content="A curated index of the models, benchmarks, datasets, module collections, protocols and databases for controlling cell fate — organized by what each resource lets you do.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <h1>CFCR <span>Cell Fate Control Resources</span></h1>
+    <p class="pitch">
+      Models, benchmarks, datasets, module collections, protocols and databases
+      for controlling cell fate — indexed by <strong>what each resource lets
+      you do</strong>, not by model architecture.
+    </p>
+  </div>
+</header>
+
+<nav class="axes" aria-label="Browse by fate axis">
+  <div class="wrap">
+    <h2 class="axes-head">Start from what you need to do</h2>
+    <div class="axis-grid" id="axis-grid"><!-- built from data --></div>
+  </div>
+</nav>
+
+<main class="wrap layout">
+
+  <div class="controls">
+    <label class="search" for="q">
+      <span class="sr-only">Search the catalogue</span>
+      <input type="search" id="q" placeholder="Search titles, abstracts, descriptions, curator notes…"
+             autocomplete="off" spellcheck="false">
+    </label>
+    <p class="count" id="count" role="status" aria-live="polite"></p>
+  </div>
+
+  <aside class="facets" aria-label="Filters">
+    <details class="facet-panel" open>
+      <summary><span>Filters</span> <button type="button" id="clear" class="clear">Clear all</button></summary>
+      <div id="facet-list"><!-- built from facets.json --></div>
+    </details>
+  </aside>
+
+  <section class="results" aria-label="Results">
+    <details class="legend">
+      <summary>How to read the two badges on every card</summary>
+      <div class="legend-body">
+        <p>
+          <strong>Evidence</strong> and <strong>availability</strong> are
+          orthogonal: a well-validated model can be unusable in your setting,
+          and a permissively licensed one can be entirely unchecked.
+        </p>
+        <h3>Evidence — derived, never asserted</h3>
+        <p>
+          Recomputed by QC from the attached evaluation papers and their author
+          overlap with the primary paper. It measures <em>independence only</em>:
+          a model is not promoted for being evaluated repeatedly by the same
+          group. The evaluating papers are listed under each badge, so the
+          derivation is auditable.
+        </p>
+        <ul>
+          <li><span class="badge ev externally-benchmarked">externally-benchmarked</span>
+              at least one evaluation shares no authors with the primary paper</li>
+          <li><span class="badge ev partially-independent">partially-independent</span>
+              an evaluation shares some authors, but under half of its own author list</li>
+          <li><span class="badge ev self-reported">self-reported</span>
+              every evaluation comes from substantially the same group, or there is none</li>
+        </ul>
+        <h3>Availability — read it before you read the paper</h3>
+        <ul>
+          <li><span class="badge av open-source">open-source</span> code and weights published</li>
+          <li><span class="badge av open-weights">open-weights</span> weights published, but check the licence — it may forbid commercial use</li>
+          <li><span class="badge av api-only">api-only</span> nothing to download; availability rests on the provider continuing to serve the endpoint</li>
+        </ul>
+        <p class="note">
+          Benchmarks are indexed, never run: CFCR stores no per-model scores.
+        </p>
+      </div>
+    </details>
+
+    <div id="cards"><!-- built from entities.json --></div>
+    <p class="empty" id="empty" hidden>Nothing matches those filters.</p>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>
+      v0.1 skeleton — 20 seed records chosen to stress the schema, not to be
+      comprehensive. Curated metadata CC-BY-4.0, code MIT; catalogued resources
+      keep their own licences.
+      <a href="https://github.com/JimYuhaoWu/cell_fate_control_resources">Source and contributing guide</a>.
+    </p>
+  </div>
+</footer>
+
+<script src="js/search.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

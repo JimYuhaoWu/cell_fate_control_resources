@@ -1,0 +1,42 @@
+# Publishes site/ to GitHub Pages.
+#
+# Classic Pages serves only the repository root or a folder named docs/, and
+# docs/ here holds the schema draft and the landscape research — publishing
+# from there would put working design documents on the web. Deploying from
+# Actions lets site/ be the published root and leaves docs/ as documents.
+#
+# site/data/*.json is committed, so this workflow only uploads; regenerate it
+# with `python scripts/07_export_site.py` and commit the result.
+name: pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

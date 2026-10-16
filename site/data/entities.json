@@ -1,0 +1,1916 @@
+[
+ {
+  "aliases": [
+   "bend"
+  ],
+  "assay": [
+   "ATAC-seq",
+   "DNase-seq",
+   "ChIP-seq"
+  ],
+  "baseline_included": "1",
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Benchmark of DNA language models on biologically meaningful genome annotation tasks -- chromatin accessibility, histone modification, CpG methylation and variant effects -- rather than on synthetic proxies.\n",
+  "entity_id": "benchmark:bend",
+  "evaluation_mode": [
+   "probed"
+  ],
+  "fate_axis": [
+   "how"
+  ],
+  "has_leaderboard": "0",
+  "name": "BEND",
+  "notes": "Finding worth carrying: DNA LM embeddings approach expert methods on some tasks but capture limited long-range information. `year: 2023` is the arXiv posting; the venue is ICLR 2024. No DOI -- ICLR mints none, so `paper_id` falls back to the arXiv ID per schema §2.2.\n",
+  "organism": [
+   "human"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Frederikke Isa Marin",
+     "Felix Teufel",
+     "Marc Horlacher",
+     "Dennis Madsen",
+     "Dennis Pultz",
+     "Ole Winther",
+     "Wouter Boomsma"
+    ],
+    "doi": null,
+    "note": null,
+    "paper_id": "arxiv:2311.12570",
+    "role": "primary",
+    "title": "BEND: Benchmarking DNA Language Models on biologically meaningful tasks",
+    "url": "https://arxiv.org/abs/2311.12570",
+    "venue": null,
+    "year": 2023
+   }
+  ],
+  "primary_paper_id": "arxiv:2311.12570",
+  "primary_paper_title": "BEND: Benchmarking DNA Language Models on biologically meaningful tasks",
+  "status": "active",
+  "submission_open": "0",
+  "tags": [
+   "dna-lm",
+   "genome-annotation",
+   "iclr",
+   "long-range-limits"
+  ],
+  "task": [
+   "chromatin-accessibility-prediction",
+   "histone-modification-prediction",
+   "variant-effect-prediction",
+   "representation-learning"
+  ],
+  "task_categories": [
+   "chromatin-accessibility-prediction",
+   "histone-modification-prediction",
+   "variant-effect-prediction"
+  ],
+  "type": "benchmark",
+  "year": 2023
+ },
+ {
+  "aliases": [
+   "DART-Eval",
+   "dart-eval"
+  ],
+  "assay": [
+   "ATAC-seq",
+   "DNase-seq"
+  ],
+  "baseline_included": "1",
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Regulatory-DNA focused evaluation suite comparing DNA language models against ab initio sequence baselines across zero-shot, probed and fine-tuned regimes.\n",
+  "entity_id": "benchmark:dart-eval",
+  "evaluation_mode": [
+   "zero-shot",
+   "probed",
+   "fine-tuned"
+  ],
+  "fate_axis": [
+   "how",
+   "where"
+  ],
+  "has_leaderboard": "0",
+  "n_tasks": 5,
+  "name": "DART-Eval",
+  "notes": "The finding that makes this the most useful benchmark in the seed: annotation-agnostic DNA LMs are inconsistent and show no compelling gain over ab initio baselines. Because it includes those baselines, it functions as a critique of the DNA LM programme as much as a benchmark of it. Its author list overlaps with ChromBPNet's through Kundaje, which is why model:chrombpnet derives as partially-independent rather than externally benchmarked.\n",
+  "organism": [
+   "human"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Aman Patel",
+     "Arpita Singhal",
+     "Austin Wang",
+     "Anusri Pampari",
+     "Maya Kasowski",
+     "Anshul Kundaje"
+    ],
+    "doi": "10.52202/079017-1981",
+    "note": null,
+    "paper_id": "10.52202/079017-1981",
+    "role": "primary",
+    "title": "DART-Eval: A Comprehensive DNA Language Model Evaluation Benchmark on Regulatory DNA",
+    "url": "https://doi.org/10.52202/079017-1981",
+    "venue": "Advances in Neural Information Processing Systems 37",
+    "year": 2024
+   }
+  ],
+  "primary_paper_id": "10.52202/079017-1981",
+  "primary_paper_title": "DART-Eval: A Comprehensive DNA Language Model Evaluation Benchmark on Regulatory DNA",
+  "status": "active",
+  "submission_open": "0",
+  "tags": [
+   "regulatory-dna",
+   "ab-initio-baseline",
+   "neurips",
+   "kundaje"
+  ],
+  "task": [
+   "variant-effect-prediction",
+   "tf-binding-prediction",
+   "chromatin-accessibility-prediction",
+   "representation-learning"
+  ],
+  "task_categories": [
+   "variant-effect-prediction",
+   "tf-binding-prediction",
+   "chromatin-accessibility-prediction"
+  ],
+  "type": "benchmark",
+  "year": 2024
+ },
+ {
+  "aliases": [
+   "geneb"
+  ],
+  "baseline_included": "1",
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Unified probing benchmark covering 40 genomic foundation models across 100 tasks in 13 functional categories, with leaderboard artifacts built by CI from reviewed submissions rather than hand-edited.\n",
+  "entity_id": "benchmark:geneb",
+  "evaluation_mode": [
+   "probed"
+  ],
+  "fate_axis": [
+   "how",
+   "where"
+  ],
+  "has_leaderboard": "1",
+  "n_models_evaluated": 40,
+  "n_tasks": 100,
+  "name": "GENEB",
+  "notes": "The headline finding is the reason CFCR does not store scores: aggregate leaderboards are unstable, rankings vary sharply across task categories, and scale gives modest and inconsistent gains. Any single number CFCR copied here would be misleading within a release cycle. Submission-open and CI-built, so it stays current in a way a curated table cannot.\n",
+  "organism": [
+   "human"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Daria Ledneva",
+     "Mikhail Nuridinov",
+     "Denis Kuznetsov"
+    ],
+    "doi": null,
+    "note": null,
+    "paper_id": "arxiv:2606.04525",
+    "role": "primary",
+    "title": "GENEB: Why Genomic Models Are Hard to Compare",
+    "url": "https://arxiv.org/abs/2606.04525",
+    "venue": null,
+    "year": 2026
+   }
+  ],
+  "primary_paper_id": "arxiv:2606.04525",
+  "primary_paper_title": "GENEB: Why Genomic Models Are Hard to Compare",
+  "status": "active",
+  "submission_open": "1",
+  "tags": [
+   "leaderboard",
+   "probing",
+   "foundation-model",
+   "instability"
+  ],
+  "task": [
+   "representation-learning",
+   "variant-effect-prediction",
+   "chromatin-accessibility-prediction",
+   "gene-expression-prediction"
+  ],
+  "task_categories": [
+   "representation-learning",
+   "variant-effect-prediction",
+   "chromatin-accessibility-prediction",
+   "gene-expression-prediction"
+  ],
+  "type": "benchmark",
+  "year": 2026
+ },
+ {
+  "aliases": [
+   "JASPAR"
+  ],
+  "bulk_download": "1",
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Open-access database of curated, non-redundant transcription factor binding profiles stored as position frequency matrices, with taxonomic coverage across six groups and an API and bulk downloads.\n",
+  "entity_id": "database:jaspar-2024",
+  "fate_axis": [
+   "with-what",
+   "where"
+  ],
+  "has_api": "1",
+  "name": "JASPAR 2024",
+  "notes": "`year: 2023` is the Nucleic Acids Research issue year for the release branded \"JASPAR 2024\" -- the release name and the publication year disagree, which is normal for the NAR database issue and a recurring trap when citing these. The name is kept as the community uses it.\n",
+  "organism": [
+   "human",
+   "mouse",
+   "multi-species"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Ieva Rauluseviciute",
+     "Rafael Riudavets-Puig",
+     "Romain Blanc-Mathieu",
+     "Jaime A Castro-Mondragon",
+     "Katalin Ferenc",
+     "Vipin Kumar",
+     "Roza Berhanu Lemma",
+     "Jérémy Lucas",
+     "Jeanne Chèneby",
+     "Damir Baranasic",
+     "Aziz Khan",
+     "Oriol Fornes",
+     "Sveinung Gundersen",
+     "Morten Johansen",
+     "Eivind Hovig",
+     "Boris Lenhard",
+     "Albin Sandelin",
+     "Wyeth W Wasserman",
+     "François Parcy",
+     "Anthony Mathelier"
+    ],
+    "doi": "10.1093/nar/gkad1059",
+    "note": null,
+    "paper_id": "10.1093/nar/gkad1059",
+    "role": "primary",
+    "title": "JASPAR 2024: 20th anniversary of the open-access database of transcription factor binding profiles",
+    "url": "https://doi.org/10.1093/nar/gkad1059",
+    "venue": "Nucleic Acids Research",
+    "year": 2023
+   }
+  ],
+  "primary_paper_id": "10.1093/nar/gkad1059",
+  "primary_paper_title": "JASPAR 2024: 20th anniversary of the open-access database of transcription factor binding profiles",
+  "status": "active",
+  "tags": [
+   "motif",
+   "pfm",
+   "transcription-factor",
+   "nar-database-issue"
+  ],
+  "task": [
+   "tf-binding-prediction",
+   "motif-discovery"
+  ],
+  "type": "database",
+  "update_frequency": "annual",
+  "year": 2023
+ },
+ {
+  "access": "open",
+  "aliases": [
+   "Genentech/borzoi-data",
+   "borzoi-data"
+  ],
+  "assay": [
+   "RNA-seq",
+   "ATAC-seq",
+   "DNase-seq",
+   "ChIP-seq",
+   "CAGE"
+  ],
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "The genomic intervals and train/validation/test fold assignments used to train Borzoi, released as TSV for human and mouse.\n",
+  "entity_id": "dataset:borzoi-data",
+  "fate_axis": [
+   "where"
+  ],
+  "genome_build": [
+   "hg38",
+   "mm10"
+  ],
+  "license": "MIT",
+  "modality": [
+   "rna",
+   "atac",
+   "dnase",
+   "chip",
+   "cage"
+  ],
+  "name": "Borzoi training intervals",
+  "notes": "Catalogued separately from model:borzoi because fold assignment is what makes an independent evaluation comparable. Anyone benchmarking against Borzoi who re-splits the genome themselves is not measuring the same thing. Record counts are deliberately null: the landscape doc cites 55,497 human and 49,369 mouse intervals, which is two numbers and one `n_records` column, and neither figure was confirmable from the repository metadata.\n",
+  "organism": [
+   "human",
+   "mouse"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Johannes Linder",
+     "Divyanshi Srivastava",
+     "Han Yuan",
+     "Vikram Agarwal",
+     "David R. Kelley"
+    ],
+    "doi": "10.1038/s41588-024-02053-6",
+    "note": null,
+    "paper_id": "10.1038/s41588-024-02053-6",
+    "role": "primary",
+    "title": "Predicting RNA-seq coverage from DNA sequence as a unifying model of gene regulation",
+    "url": "https://doi.org/10.1038/s41588-024-02053-6",
+    "venue": "Nature Genetics",
+    "year": 2025
+   }
+  ],
+  "primary_paper_id": "10.1038/s41588-024-02053-6",
+  "primary_paper_title": "Predicting RNA-seq coverage from DNA sequence as a unifying model of gene regulation",
+  "record_unit": "intervals",
+  "status": "active",
+  "tags": [
+   "training-data",
+   "folds",
+   "intervals",
+   "reproducibility"
+  ],
+  "task": [
+   "coverage-prediction"
+  ],
+  "type": "dataset",
+  "year": 2023
+ },
+ {
+  "access": "open",
+  "aliases": [
+   "Genentech/enformer-data",
+   "enformer-data"
+  ],
+  "assay": [
+   "CAGE",
+   "DNase-seq",
+   "ChIP-seq"
+  ],
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "The genomic intervals and fold assignments used to train Enformer, released as TSV for human and mouse.\n",
+  "entity_id": "dataset:enformer-data",
+  "fate_axis": [
+   "where"
+  ],
+  "genome_build": [
+   "hg38",
+   "mm10"
+  ],
+  "license": "MIT",
+  "modality": [
+   "cage",
+   "dnase",
+   "chip"
+  ],
+  "name": "Enformer training intervals",
+  "notes": "Same reasoning as dataset:borzoi-data. Useful mainly for like-for-like comparison against the Enformer line; the landscape doc cites 38,171 human and 33,521 mouse intervals, again unconfirmed from repository metadata.\n",
+  "organism": [
+   "human",
+   "mouse"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Žiga Avsec",
+     "Vikram Agarwal",
+     "Daniel Visentin",
+     "Joseph R. Ledsam",
+     "Agnieszka Grabska-Barwinska",
+     "Kyle R. Taylor",
+     "Yannis Assael",
+     "John Jumper",
+     "Pushmeet Kohli",
+     "David R. Kelley"
+    ],
+    "doi": "10.1038/s41592-021-01252-x",
+    "note": null,
+    "paper_id": "10.1038/s41592-021-01252-x",
+    "role": "primary",
+    "title": "Effective gene expression prediction from sequence by integrating long-range interactions",
+    "url": "https://doi.org/10.1038/s41592-021-01252-x",
+    "venue": "Nature Methods",
+    "year": 2021
+   }
+  ],
+  "primary_paper_id": "10.1038/s41592-021-01252-x",
+  "primary_paper_title": "Effective gene expression prediction from sequence by integrating long-range interactions",
+  "record_unit": "intervals",
+  "status": "active",
+  "tags": [
+   "training-data",
+   "folds",
+   "intervals",
+   "reproducibility"
+  ],
+  "task": [
+   "coverage-prediction"
+  ],
+  "type": "dataset",
+  "year": 2021
+ },
+ {
+  "access": "open",
+  "aliases": [
+   "Replogle Perturb-seq",
+   "genome-wide Perturb-seq"
+  ],
+  "assay": [
+   "Perturb-seq"
+  ],
+  "cell_type": [
+   "K562"
+  ],
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Genome-scale Perturb-seq screens in human cell lines, knocking down essentially all expressed genes and reading out single-cell transcriptomes, providing the reference training and evaluation data for perturbation response models.\n",
+  "entity_id": "dataset:replogle-2022-perturb-seq",
+  "fate_axis": [
+   "what"
+  ],
+  "genome_build": [
+   "hg38"
+  ],
+  "modality": [
+   "perturb-seq",
+   "rna"
+  ],
+  "name": "Replogle 2022 genome-scale Perturb-seq atlas",
+  "notes": "Catalogued on the `what` axis as the dataset that most perturbation models in the adjacent literature are trained or evaluated on, including model:gears. CFCR holds the pointer; the Stegle catalogue holds the method landscape.\n",
+  "organism": [
+   "human"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Joseph M. Replogle",
+     "Reuben A. Saunders",
+     "Angela N. Pogson",
+     "Jeffrey A. Hussmann",
+     "Alexander Lenail",
+     "Alina Guna",
+     "Lauren Mascibroda",
+     "Eric J. Wagner",
+     "Karen Adelman",
+     "Gila Lithwick-Yanai",
+     "Nika Iremadze",
+     "Florian Oberstrass",
+     "Doron Lipson",
+     "Jessica L. Bonnar",
+     "Marco Jost",
+     "Thomas M. Norman",
+     "Jonathan S. Weissman"
+    ],
+    "doi": "10.1016/j.cell.2022.05.013",
+    "note": null,
+    "paper_id": "10.1016/j.cell.2022.05.013",
+    "role": "primary",
+    "title": "Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq",
+    "url": "https://doi.org/10.1016/j.cell.2022.05.013",
+    "venue": "Cell",
+    "year": 2022
+   },
+   {
+    "authors": [
+     "Joseph M. Replogle",
+     "Reuben A. Saunders",
+     "Angela N. Pogson",
+     "Jeffrey A. Hussmann",
+     "Alexander Lenail",
+     "Alina Guna",
+     "Lauren Mascibroda",
+     "Eric J. Wagner",
+     "Karen Adelman",
+     "Gila Lithwick-Yanai",
+     "Nika Iremadze",
+     "Florian Oberstrass",
+     "Doron Lipson",
+     "Jessica L. Bonnar",
+     "Marco Jost",
+     "Thomas M. Norman",
+     "Jonathan S. Weissman"
+    ],
+    "doi": "10.1101/2021.12.16.473013",
+    "note": null,
+    "paper_id": "10.1101/2021.12.16.473013",
+    "role": "preprint",
+    "title": "Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq",
+    "url": "https://doi.org/10.1101/2021.12.16.473013",
+    "venue": "preprint",
+    "year": 2021
+   }
+  ],
+  "primary_paper_id": "10.1016/j.cell.2022.05.013",
+  "primary_paper_title": "Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq",
+  "record_unit": "cells",
+  "status": "active",
+  "tags": [
+   "perturb-seq",
+   "crispri",
+   "genome-scale",
+   "reference-atlas"
+  ],
+  "task": [
+   "perturbation-response-prediction"
+  ],
+  "type": "dataset",
+  "year": 2022
+ },
+ {
+  "aliases": [
+   "alphagenome"
+  ],
+  "architecture": [
+   "cnn",
+   "transformer"
+  ],
+  "assay": [
+   "RNA-seq",
+   "ATAC-seq",
+   "DNase-seq",
+   "ChIP-seq",
+   "CAGE"
+  ],
+  "availability_tier": "api-only",
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Unified DNA sequence model taking 1 Mb of input and predicting thousands of functional genomic tracks at base resolution across multiple modalities, covering regulatory variant effect prediction in one model rather than a per-assay family.\n",
+  "entity_id": "model:alphagenome",
+  "evidence_tier": "externally-benchmarked",
+  "fate_axis": [
+   "where"
+  ],
+  "genome_build": [
+   "hg38",
+   "mm10"
+  ],
+  "input_context_bp": 1000000,
+  "input_type": "genomic-interval",
+  "model_family": "interval-model",
+  "name": "AlphaGenome",
+  "notes": "The only api-only entry in the seed, and the reason that tier exists: there are no weights to download and no license to read, so reproducibility and long-term availability rest on Google continuing to serve the endpoint. Independently evaluated for fine-mapping reproducibility by Sweeney & Kang alongside Borzoi, Enformer and Sei.\n",
+  "organism": [
+   "human",
+   "mouse"
+  ],
+  "output_resolution_bp": 1,
+  "output_type": [
+   "coverage-track",
+   "variant-effect"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Žiga Avsec",
+     "Natasha Latysheva",
+     "Jun Cheng",
+     "Guido Novati",
+     "Kyle R. Taylor",
+     "Tom Ward",
+     "Clare Bycroft",
+     "Lauren Nicolaisen",
+     "Eirini Arvaniti",
+     "Joshua Pan",
+     "Raina Thomas",
+     "Vincent Dutordoir",
+     "Matteo Perino",
+     "Soham De",
+     "Alexander Karollus",
+     "Adam Gayoso",
+     "Toby Sargeant",
+     "Anne Mottram",
+     "Lai Hong Wong",
+     "Pavol Drotár",
+     "Adam Kosiorek",
+     "Andrew Senior",
+     "Richard Tanburn",
+     "Taylor Applebaum",
+     "Souradeep Basu",
+     "Demis Hassabis",
+     "Pushmeet Kohli"
+    ],
+    "doi": "10.1038/s41586-025-10014-0",
+    "note": null,
+    "paper_id": "10.1038/s41586-025-10014-0",
+    "role": "primary",
+    "title": "Advancing regulatory variant effect prediction with AlphaGenome",
+    "url": "https://doi.org/10.1038/s41586-025-10014-0",
+    "venue": "Nature",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Žiga Avsec",
+     "Natasha Latysheva",
+     "Jun Cheng",
+     "Guido Novati",
+     "Kyle R. Taylor",
+     "Tom Ward",
+     "Clare Bycroft",
+     "Lauren Nicolaisen",
+     "Eirini Arvaniti",
+     "Joshua Pan",
+     "Raina Thomas",
+     "Vincent Dutordoir",
+     "Matteo Perino",
+     "Soham De",
+     "Alexander Karollus",
+     "Adam Gayoso",
+     "Toby Sargeant",
+     "Anne Mottram",
+     "Lai Hong Wong",
+     "Pavol Drotár",
+     "Adam Kosiorek",
+     "Andrew Senior",
+     "Richard Tanburn",
+     "Taylor Applebaum",
+     "Souradeep Basu",
+     "Demis Hassabis",
+     "Pushmeet Kohli"
+    ],
+    "doi": "10.1101/2025.06.25.661532",
+    "note": null,
+    "paper_id": "10.1101/2025.06.25.661532",
+    "role": "preprint",
+    "title": "AlphaGenome: advancing regulatory variant effect prediction with a unified DNA sequence model",
+    "url": "https://doi.org/10.1101/2025.06.25.661532",
+    "venue": "preprint",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Michael D. Sweeney",
+     "Hyun Min Kang"
+    ],
+    "doi": "10.64898/2026.02.04.703796",
+    "note": "Fine-mapping reproducibility vs GTEx/TOPMed/MAGE.",
+    "paper_id": "10.64898/2026.02.04.703796",
+    "role": "benchmark",
+    "title": "Practical utility of sequence-to-omics models for improving the reproducibility of genetic fine-mapping",
+    "url": "https://doi.org/10.64898/2026.02.04.703796",
+    "venue": "preprint",
+    "year": 2026
+   }
+  ],
+  "primary_paper_id": "10.1038/s41586-025-10014-0",
+  "primary_paper_title": "Advancing regulatory variant effect prediction with AlphaGenome",
+  "status": "active",
+  "tags": [
+   "deepmind",
+   "multimodal",
+   "base-resolution",
+   "api"
+  ],
+  "task": [
+   "coverage-prediction",
+   "variant-effect-prediction",
+   "splicing-prediction",
+   "chromatin-accessibility-prediction"
+  ],
+  "type": "model",
+  "year": 2025
+ },
+ {
+  "aliases": [
+   "borzoi"
+  ],
+  "architecture": [
+   "cnn",
+   "transformer"
+  ],
+  "assay": [
+   "RNA-seq",
+   "DNase-seq",
+   "ATAC-seq",
+   "ChIP-seq",
+   "CAGE"
+  ],
+  "availability_tier": "open-source",
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Predicts cell-type- and tissue-specific RNA-seq coverage from DNA sequence over a 524 kb context, scoring variant effects across transcription, splicing and polyadenylation from the one model. Successor to Enformer with finer output resolution and RNA-seq heads.\n",
+  "entity_id": "model:borzoi",
+  "evidence_tier": "externally-benchmarked",
+  "fate_axis": [
+   "where"
+  ],
+  "genome_build": [
+   "hg38",
+   "mm10"
+  ],
+  "input_context_bp": 524288,
+  "input_type": "genomic-interval",
+  "license": "Apache-2.0",
+  "model_family": "interval-model",
+  "name": "Borzoi",
+  "notes": "`year: 2023` is the first public release (bioRxiv); the Nature Genetics paper carries a 2025 issue year. Trained with the Baskerville framework rather than the Enformer codebase, so the two are not drop-in comparable despite the lineage.\n",
+  "organism": [
+   "human",
+   "mouse"
+  ],
+  "output_resolution_bp": 32,
+  "output_type": [
+   "coverage-track",
+   "variant-effect"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Johannes Linder",
+     "Divyanshi Srivastava",
+     "Han Yuan",
+     "Vikram Agarwal",
+     "David R. Kelley"
+    ],
+    "doi": "10.1038/s41588-024-02053-6",
+    "note": null,
+    "paper_id": "10.1038/s41588-024-02053-6",
+    "role": "primary",
+    "title": "Predicting RNA-seq coverage from DNA sequence as a unifying model of gene regulation",
+    "url": "https://doi.org/10.1038/s41588-024-02053-6",
+    "venue": "Nature Genetics",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Johannes Linder",
+     "Divyanshi Srivastava",
+     "Han Yuan",
+     "Vikram Agarwal",
+     "David R. Kelley"
+    ],
+    "doi": "10.1101/2023.08.30.555582",
+    "note": null,
+    "paper_id": "10.1101/2023.08.30.555582",
+    "role": "preprint",
+    "title": "Predicting RNA-seq coverage from DNA sequence as a unifying model of gene regulation",
+    "url": "https://doi.org/10.1101/2023.08.30.555582",
+    "venue": "preprint",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Michael D. Sweeney",
+     "Hyun Min Kang"
+    ],
+    "doi": "10.64898/2026.02.04.703796",
+    "note": "Fine-mapping reproducibility vs GTEx/TOPMed/MAGE.",
+    "paper_id": "10.64898/2026.02.04.703796",
+    "role": "benchmark",
+    "title": "Practical utility of sequence-to-omics models for improving the reproducibility of genetic fine-mapping",
+    "url": "https://doi.org/10.64898/2026.02.04.703796",
+    "venue": "preprint",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Johannes C Hingerl",
+     "Alexander Karollus",
+     "Julien Gagneur"
+    ],
+    "doi": "10.1093/bioinformatics/btaf467",
+    "note": "Flashzoi -- see model:flashzoi",
+    "paper_id": "10.1093/bioinformatics/btaf467",
+    "role": "extension",
+    "title": "Flashzoi: an enhanced Borzoi for accelerated genomic analysis",
+    "url": "https://doi.org/10.1093/bioinformatics/btaf467",
+    "venue": "Bioinformatics",
+    "year": 2025
+   }
+  ],
+  "primary_paper_id": "10.1038/s41588-024-02053-6",
+  "primary_paper_title": "Predicting RNA-seq coverage from DNA sequence as a unifying model of gene regulation",
+  "status": "active",
+  "supersedes": "model:enformer",
+  "tags": [
+   "calico",
+   "unet",
+   "rna-seq",
+   "eqtl-prioritization",
+   "splicing"
+  ],
+  "task": [
+   "coverage-prediction",
+   "variant-effect-prediction",
+   "splicing-prediction",
+   "polyadenylation-prediction"
+  ],
+  "training_data": [
+   "Genentech/borzoi-data"
+  ],
+  "type": "model",
+  "year": 2023
+ },
+ {
+  "aliases": [
+   "chrombpnet"
+  ],
+  "architecture": [
+   "cnn"
+  ],
+  "assay": [
+   "ATAC-seq",
+   "DNase-seq"
+  ],
+  "availability_tier": "open-source",
+  "cell_type": [
+   "K562"
+  ],
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Base-resolution model of chromatin accessibility profiles that factorizes out assay-specific enzyme bias, letting learned cis-regulatory sequence syntax and TF motif contributions be read off the prediction directly.\n",
+  "entity_id": "model:chrombpnet",
+  "evidence_tier": "partially-independent",
+  "fate_axis": [
+   "where"
+  ],
+  "genome_build": [
+   "hg38",
+   "mm10"
+  ],
+  "input_context_bp": 2114,
+  "input_type": "genomic-interval",
+  "license": "MIT",
+  "model_family": "interval-model",
+  "name": "ChromBPNet",
+  "notes": "Narrow input window compared with the Enformer/Borzoi line -- it models local accessibility syntax rather than long-range regulation, which is why it answers a different `where` question despite sharing the axis. Evaluated as an ab initio baseline in DART-Eval, whose author list overlaps with this one through Kundaje, so the derivation should land it at `partially-independent` rather than `externally-benchmarked`.\n",
+  "organism": [
+   "human",
+   "mouse"
+  ],
+  "output_resolution_bp": 1,
+  "output_type": [
+   "coverage-track",
+   "variant-effect"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Anusri Pampari",
+     "Anna Shcherbina",
+     "Evgeny Z. Kvon",
+     "Michael Kosicki",
+     "Surag Nair",
+     "Soumya Kundu",
+     "Arwa S. Kathiria",
+     "Viviana I. Risca",
+     "Kristiina Kuningas",
+     "Kaur Alasoo",
+     "William James Greenleaf",
+     "Len A. Pennacchio",
+     "Anshul Kundaje"
+    ],
+    "doi": "10.1101/2024.12.25.630221",
+    "note": null,
+    "paper_id": "10.1101/2024.12.25.630221",
+    "role": "primary",
+    "title": "ChromBPNet: bias factorized, base-resolution deep learning models of chromatin accessibility reveal cis-regulatory sequence syntax, transcription factor footprints and regulatory variants",
+    "url": "https://doi.org/10.1101/2024.12.25.630221",
+    "venue": "preprint",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Aman Patel",
+     "Arpita Singhal",
+     "Austin Wang",
+     "Anusri Pampari",
+     "Maya Kasowski",
+     "Anshul Kundaje"
+    ],
+    "doi": "10.52202/079017-1981",
+    "note": "DART-Eval, as an ab initio baseline. Shares an author (Kundaje) with the primary paper -- the partially-independent case.\n",
+    "paper_id": "10.52202/079017-1981",
+    "role": "benchmark",
+    "title": "DART-Eval: A Comprehensive DNA Language Model Evaluation Benchmark on Regulatory DNA",
+    "url": "https://doi.org/10.52202/079017-1981",
+    "venue": "Advances in Neural Information Processing Systems 37",
+    "year": 2024
+   }
+  ],
+  "primary_paper_id": "10.1101/2024.12.25.630221",
+  "primary_paper_title": "ChromBPNet: bias factorized, base-resolution deep learning models of chromatin accessibility reveal cis-regulatory sequence syntax, transcription factor footprints and regulatory variants",
+  "status": "active",
+  "tags": [
+   "kundaje",
+   "bias-correction",
+   "base-resolution",
+   "motif-syntax"
+  ],
+  "task": [
+   "chromatin-accessibility-prediction",
+   "motif-discovery",
+   "variant-effect-prediction",
+   "tf-binding-prediction"
+  ],
+  "type": "model",
+  "year": 2024
+ },
+ {
+  "aliases": [
+   "enformer"
+  ],
+  "architecture": [
+   "cnn",
+   "transformer"
+  ],
+  "assay": [
+   "CAGE",
+   "DNase-seq",
+   "ATAC-seq",
+   "ChIP-seq"
+  ],
+  "availability_tier": "open-source",
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Predicts gene expression and chromatin tracks from DNA sequence by combining dilated convolutions with transformer blocks, integrating regulatory information from up to 100 kb away. Established the long-context interval model as the dominant architecture for sequence-to-function prediction.\n",
+  "entity_id": "model:enformer",
+  "evidence_tier": "externally-benchmarked",
+  "fate_axis": [
+   "where"
+  ],
+  "genome_build": [
+   "hg38",
+   "mm10"
+  ],
+  "input_context_bp": 196608,
+  "input_type": "genomic-interval",
+  "license": "Apache-2.0",
+  "model_family": "interval-model",
+  "name": "Enformer",
+  "notes": "The reference point the whole interval-model literature argues with. Two independent Nature Genetics analyses (Tang/Toneyan/Koo and Huang et al.) found it explains personal transcriptome variation poorly despite strong cross-locus accuracy -- the across-individual vs across-gene distinction is the single most important caveat to communicate to anyone picking it up. Replicate checkpoints and the many community ports are deliberately not separate entities; see model:flashzoi for one that is.\n",
+  "organism": [
+   "human",
+   "mouse"
+  ],
+  "output_resolution_bp": 128,
+  "output_type": [
+   "coverage-track",
+   "variant-effect"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Žiga Avsec",
+     "Vikram Agarwal",
+     "Daniel Visentin",
+     "Joseph R. Ledsam",
+     "Agnieszka Grabska-Barwinska",
+     "Kyle R. Taylor",
+     "Yannis Assael",
+     "John Jumper",
+     "Pushmeet Kohli",
+     "David R. Kelley"
+    ],
+    "doi": "10.1038/s41592-021-01252-x",
+    "note": null,
+    "paper_id": "10.1038/s41592-021-01252-x",
+    "role": "primary",
+    "title": "Effective gene expression prediction from sequence by integrating long-range interactions",
+    "url": "https://doi.org/10.1038/s41592-021-01252-x",
+    "venue": "Nature Methods",
+    "year": 2021
+   },
+   {
+    "authors": [
+     "Žiga Avsec",
+     "Vikram Agarwal",
+     "Daniel Visentin",
+     "Joseph R. Ledsam",
+     "Agnieszka Grabska-Barwinska",
+     "Kyle R. Taylor",
+     "Yannis Assael",
+     "John Jumper",
+     "Pushmeet Kohli",
+     "David R. Kelley"
+    ],
+    "doi": "10.1101/2021.04.07.438649",
+    "note": null,
+    "paper_id": "10.1101/2021.04.07.438649",
+    "role": "preprint",
+    "title": "Effective gene expression prediction from sequence by integrating long-range interactions",
+    "url": "https://doi.org/10.1101/2021.04.07.438649",
+    "venue": "preprint",
+    "year": 2021
+   },
+   {
+    "authors": [
+     "Michael D. Sweeney",
+     "Hyun Min Kang"
+    ],
+    "doi": "10.64898/2026.02.04.703796",
+    "note": "Fine-mapping reproducibility vs GTEx/TOPMed/MAGE.",
+    "paper_id": "10.64898/2026.02.04.703796",
+    "role": "benchmark",
+    "title": "Practical utility of sequence-to-omics models for improving the reproducibility of genetic fine-mapping",
+    "url": "https://doi.org/10.64898/2026.02.04.703796",
+    "venue": "preprint",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Ziqi Tang",
+     "Shushan Toneyan",
+     "Peter K. Koo"
+    ],
+    "doi": "10.1038/s41588-023-01517-5",
+    "note": "Across-individual generalization; aggregate accuracy driven by across-gene variation rather than personal variation.\n",
+    "paper_id": "10.1038/s41588-023-01517-5",
+    "role": "critique",
+    "title": "Current approaches to genomic deep learning struggle to fully capture human genetic variation",
+    "url": "https://doi.org/10.1038/s41588-023-01517-5",
+    "venue": "Nature Genetics",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Connie Huang",
+     "Richard W. Shuai",
+     "Parth Baokar",
+     "Ryan Chung",
+     "Ruchir Rastogi",
+     "Pooja Kathail",
+     "Nilah M. Ioannidis"
+    ],
+    "doi": "10.1038/s41588-023-01574-w",
+    "note": "Personal transcriptome variation poorly explained.",
+    "paper_id": "10.1038/s41588-023-01574-w",
+    "role": "critique",
+    "title": "Personal transcriptome variation is poorly explained by current genomic deep learning models",
+    "url": "https://doi.org/10.1038/s41588-023-01574-w",
+    "venue": "Nature Genetics",
+    "year": 2023
+   }
+  ],
+  "primary_paper_id": "10.1038/s41592-021-01252-x",
+  "primary_paper_title": "Effective gene expression prediction from sequence by integrating long-range interactions",
+  "status": "active",
+  "tags": [
+   "deepmind",
+   "long-range",
+   "variant-effect",
+   "enhancer-promoter"
+  ],
+  "task": [
+   "coverage-prediction",
+   "variant-effect-prediction",
+   "enhancer-promoter-linking"
+  ],
+  "type": "model",
+  "year": 2021
+ },
+ {
+  "aliases": [
+   "evo2",
+   "Evo-2"
+  ],
+  "architecture": [
+   "ssm",
+   "transformer"
+  ],
+  "availability_tier": "open-source",
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Genome language model trained on 3 trillion DNA base pairs spanning all domains of life, with 7B and 40B parameter variants, a 1 million token context window at single-nucleotide resolution, and both variant-effect scoring and genome design applications.\n",
+  "entity_id": "model:evo2",
+  "evidence_tier": "self-reported",
+  "fate_axis": [
+   "how"
+  ],
+  "input_context_bp": 1000000,
+  "input_type": "sequence",
+  "license": "Apache-2.0",
+  "model_family": "dna-lm",
+  "name": "Evo 2",
+  "notes": "Trained across all domains of life rather than one clade, so `organism` carries the local term `multi-species` -- no single NCBITaxon node says this without claiming a specific clade. Two parameter variants ship together as one release, so `n_parameters` is null; see the description for both figures.\n",
+  "organism": [
+   "multi-species",
+   "human"
+  ],
+  "output_resolution_bp": 1,
+  "output_type": [
+   "embedding",
+   "sequence",
+   "variant-effect"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Garyk Brixi",
+     "Matthew G. Durrant",
+     "Jerome Ku",
+     "Michael Poli",
+     "Greg Brockman",
+     "Daniel Chang",
+     "Gabriel A. Gonzalez",
+     "Samuel H. King",
+     "David B. Li",
+     "Aditi T. Merchant",
+     "Mohsen Naghipourfar",
+     "Eric Nguyen",
+     "Chiara Ricci-Tam",
+     "David W. Romero",
+     "Gwanggyu Sun",
+     "Ali Taghibakshi",
+     "Anton Vorontsov",
+     "Brandon Yang",
+     "Myra Deng",
+     "Liv Gorton",
+     "Nam Nguyen",
+     "Nicholas K. Wang",
+     "Etowah Adams",
+     "Stephen A. Baccus",
+     "Steven Dillmann",
+     "Stefano Ermon",
+     "Daniel Guo",
+     "Rajesh Ilango",
+     "Ken Janik",
+     "Amy X. Lu",
+     "Reshma Mehta",
+     "Mohammad R.K. Mofrad",
+     "Madelena Y. Ng",
+     "Jaspreet Pannu",
+     "Christopher Ré",
+     "Jonathan C. Schmok",
+     "John St. John",
+     "Jeremy Sullivan",
+     "Kevin Zhu",
+     "Greg Zynda",
+     "Daniel Balsam",
+     "Patrick Collison",
+     "Anthony B. Costa",
+     "Tina Hernandez-Boussard",
+     "Eric Ho",
+     "Ming-Yu Liu",
+     "Thomas McGrath",
+     "Kimberly Powell",
+     "Dave P. Burke",
+     "Hani Goodarzi",
+     "Patrick D. Hsu",
+     "Brian L. Hie"
+    ],
+    "doi": "10.1101/2025.02.18.638918",
+    "note": null,
+    "paper_id": "10.1101/2025.02.18.638918",
+    "role": "primary",
+    "title": "Genome modeling and design across all domains of life with Evo 2",
+    "url": "https://doi.org/10.1101/2025.02.18.638918",
+    "venue": "preprint",
+    "year": 2025
+   }
+  ],
+  "primary_paper_id": "10.1101/2025.02.18.638918",
+  "primary_paper_title": "Genome modeling and design across all domains of life with Evo 2",
+  "status": "active",
+  "tags": [
+   "arc-institute",
+   "striped-hyena",
+   "long-context",
+   "generative",
+   "all-domains"
+  ],
+  "task": [
+   "representation-learning",
+   "variant-effect-prediction",
+   "sequence-generation"
+  ],
+  "type": "model",
+  "year": 2025
+ },
+ {
+  "aliases": [
+   "flashzoi",
+   "borzoi-pytorch"
+  ],
+  "architecture": [
+   "cnn",
+   "transformer"
+  ],
+  "assay": [
+   "RNA-seq",
+   "DNase-seq",
+   "ATAC-seq",
+   "ChIP-seq",
+   "CAGE"
+  ],
+  "availability_tier": "open-source",
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Re-implementation of Borzoi substituting rotary positional encodings and FlashAttention-2 for relative positional encodings, giving over 3-fold faster training and inference and up to 2.4-fold lower memory use while maintaining or improving accuracy.\n",
+  "entity_id": "model:flashzoi",
+  "evidence_tier": "self-reported",
+  "fate_axis": [
+   "where"
+  ],
+  "genome_build": [
+   "hg38",
+   "mm10"
+  ],
+  "input_context_bp": 524288,
+  "input_type": "genomic-interval",
+  "license": "MIT",
+  "model_family": "interval-model",
+  "name": "Flashzoi",
+  "notes": "A port under its own name, so a separate entity with `variant_of` rather than a Borzoi link -- the granularity rule's worked case. Weights for all four Flashzoi and Borzoi replicates are published together under MIT; the replicates are one entity, not four. Licensed more permissively than Borzoi itself, which matters for downstream reuse.\n",
+  "organism": [
+   "human",
+   "mouse"
+  ],
+  "output_resolution_bp": 32,
+  "output_type": [
+   "coverage-track",
+   "variant-effect"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Johannes C Hingerl",
+     "Alexander Karollus",
+     "Julien Gagneur"
+    ],
+    "doi": "10.1093/bioinformatics/btaf467",
+    "note": null,
+    "paper_id": "10.1093/bioinformatics/btaf467",
+    "role": "primary",
+    "title": "Flashzoi: an enhanced Borzoi for accelerated genomic analysis",
+    "url": "https://doi.org/10.1093/bioinformatics/btaf467",
+    "venue": "Bioinformatics",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Johannes C. Hingerl",
+     "Alexander Karollus",
+     "Julien Gagneur"
+    ],
+    "doi": "10.1101/2024.12.18.629121",
+    "note": null,
+    "paper_id": "10.1101/2024.12.18.629121",
+    "role": "preprint",
+    "title": "Flashzoi: An enhanced Borzoi for accelerated genomic analysis",
+    "url": "https://doi.org/10.1101/2024.12.18.629121",
+    "venue": "preprint",
+    "year": 2024
+   }
+  ],
+  "primary_paper_id": "10.1093/bioinformatics/btaf467",
+  "primary_paper_title": "Flashzoi: an enhanced Borzoi for accelerated genomic analysis",
+  "status": "active",
+  "tags": [
+   "flash-attention",
+   "rotary-embedding",
+   "efficiency",
+   "gagneur"
+  ],
+  "task": [
+   "coverage-prediction",
+   "variant-effect-prediction",
+   "enhancer-promoter-linking"
+  ],
+  "type": "model",
+  "variant_of": "model:borzoi",
+  "year": 2024
+ },
+ {
+  "aliases": [
+   "gears"
+  ],
+  "architecture": [
+   "gnn"
+  ],
+  "assay": [
+   "Perturb-seq"
+  ],
+  "availability_tier": "open-source",
+  "cell_type": [
+   "K562"
+  ],
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Graph neural network predicting transcriptional outcomes of multigene perturbations, including combinations never seen in training, by combining a gene co-expression graph with a knowledge graph of gene ontology relations.\n",
+  "entity_id": "model:gears",
+  "evidence_tier": "self-reported",
+  "fate_axis": [
+   "what"
+  ],
+  "input_type": "expression-matrix",
+  "model_family": "perturbation-model",
+  "name": "GEARS",
+  "notes": "Deliberately shallow. Perturbation modelling is covered properly by the Stegle group's living catalogue (>152 methods, Nat Rev Genet 2026) and CFCR points outward rather than competing -- see the `website` link. GEARS is here as the representative entry so the `what` axis is not empty, not as the start of a perturbation index. `architecture` required a new vocabulary term: GNN is absent from the schema §3.1 enum, and it is the dominant architecture on this axis.\n",
+  "organism": [
+   "human"
+  ],
+  "output_type": [
+   "cell-state"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Yusuf Roohani",
+     "Kexin Huang",
+     "Jure Leskovec"
+    ],
+    "doi": "10.1038/s41587-023-01905-6",
+    "note": null,
+    "paper_id": "10.1038/s41587-023-01905-6",
+    "role": "primary",
+    "title": "Predicting transcriptional outcomes of novel multigene perturbations with GEARS",
+    "url": "https://doi.org/10.1038/s41587-023-01905-6",
+    "venue": "Nature Biotechnology",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Yusuf Roohani",
+     "Kexin Huang",
+     "Jure Leskovec"
+    ],
+    "doi": "10.1101/2022.07.12.499735",
+    "note": null,
+    "paper_id": "10.1101/2022.07.12.499735",
+    "role": "preprint",
+    "title": "GEARS: Predicting transcriptional outcomes of novel multi-gene perturbations",
+    "url": "https://doi.org/10.1101/2022.07.12.499735",
+    "venue": "preprint",
+    "year": 2022
+   },
+   {
+    "authors": [
+     "Daniel Dimitrov",
+     "Stefan Schrod",
+     "Martin Rohbeck",
+     "Oliver Stegle"
+    ],
+    "doi": "10.1038/s41576-025-00920-4",
+    "note": "Nat Rev Genet perturbation-modelling catalogue and ontology.",
+    "paper_id": "10.1038/s41576-025-00920-4",
+    "role": "review",
+    "title": "Interpretation, extrapolation and perturbation of single cells",
+    "url": "https://doi.org/10.1038/s41576-025-00920-4",
+    "venue": "Nature Reviews Genetics",
+    "year": 2026
+   }
+  ],
+  "primary_paper_id": "10.1038/s41587-023-01905-6",
+  "primary_paper_title": "Predicting transcriptional outcomes of novel multigene perturbations with GEARS",
+  "status": "active",
+  "tags": [
+   "perturbation",
+   "gnn",
+   "combinatorial",
+   "leskovec",
+   "shallow-by-design"
+  ],
+  "task": [
+   "perturbation-response-prediction"
+  ],
+  "type": "model",
+  "year": 2022
+ },
+ {
+  "aliases": [
+   "NT",
+   "nucleotide-transformer",
+   "SegmentNT"
+  ],
+  "architecture": [
+   "transformer"
+  ],
+  "assay": [
+   "ATAC-seq",
+   "DNase-seq",
+   "ChIP-seq"
+  ],
+  "availability_tier": "open-weights",
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Family of transformer DNA language models pretrained on human and multi-species genomes, released as a set of checkpoints from 50M to 2.5B parameters and evaluated by probing on downstream regulatory tasks.\n",
+  "entity_id": "model:nucleotide-transformer",
+  "evidence_tier": "externally-benchmarked",
+  "fate_axis": [
+   "how"
+  ],
+  "genome_build": [
+   "hg38"
+  ],
+  "input_context_bp": 12288,
+  "input_type": "sequence",
+  "license": "CC-BY-NC-SA-4.0",
+  "model_family": "dna-lm",
+  "name": "Nucleotide Transformer",
+  "notes": "The `open-weights` case, and the reason that tier is distinct from `open-source`: inference code is on GitHub, but the published checkpoints carry CC-BY-NC-SA-4.0, which forbids commercial use and imposes share-alike on derivatives. Anyone building a product on this needs to read the license before the paper. Checkpoint sizes span two orders of magnitude, so `n_parameters` is left null -- the entity is the family, not one checkpoint.\n",
+  "organism": [
+   "human",
+   "multi-species"
+  ],
+  "output_type": [
+   "embedding",
+   "scalar"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Hugo Dalla-Torre",
+     "Liam Gonzalez",
+     "Javier Mendoza-Revilla",
+     "Nicolas Lopez Carranza",
+     "Adam Henryk Grzywaczewski",
+     "Francesco Oteri",
+     "Christian Dallago",
+     "Evan Trop",
+     "Bernardo P. de Almeida",
+     "Hassan Sirelkhatim",
+     "Guillaume Richard",
+     "Marcin Skwark",
+     "Karim Beguir",
+     "Marie Lopez",
+     "Thomas Pierrot"
+    ],
+    "doi": "10.1038/s41592-024-02523-z",
+    "note": null,
+    "paper_id": "10.1038/s41592-024-02523-z",
+    "role": "primary",
+    "title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+    "url": "https://doi.org/10.1038/s41592-024-02523-z",
+    "venue": "Nature Methods",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Hugo Dalla-Torre",
+     "Liam Gonzalez",
+     "Javier Mendoza Revilla",
+     "Nicolas Lopez Carranza",
+     "Adam Henryk Grywaczewski",
+     "Francesco Oteri",
+     "Christian Dallago",
+     "Evan Trop",
+     "Bernardo P De Almeida",
+     "Hassan Sirelkhatim",
+     "Guillaume Richard",
+     "Marcin Skwark",
+     "Karim Beguir",
+     "Marie Lopez",
+     "Thomas Pierrot"
+    ],
+    "doi": "10.1101/2023.01.11.523679",
+    "note": null,
+    "paper_id": "10.1101/2023.01.11.523679",
+    "role": "preprint",
+    "title": "The Nucleotide Transformer: Building and Evaluating Robust Foundation Models for Human Genomics",
+    "url": "https://doi.org/10.1101/2023.01.11.523679",
+    "venue": "preprint",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Aman Patel",
+     "Arpita Singhal",
+     "Austin Wang",
+     "Anusri Pampari",
+     "Maya Kasowski",
+     "Anshul Kundaje"
+    ],
+    "doi": "10.52202/079017-1981",
+    "note": "DART-Eval -- regulatory DNA, zero-shot/probed/fine-tuned vs ab initio.",
+    "paper_id": "10.52202/079017-1981",
+    "role": "benchmark",
+    "title": "DART-Eval: A Comprehensive DNA Language Model Evaluation Benchmark on Regulatory DNA",
+    "url": "https://doi.org/10.52202/079017-1981",
+    "venue": "Advances in Neural Information Processing Systems 37",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Frederikke Isa Marin",
+     "Felix Teufel",
+     "Marc Horlacher",
+     "Dennis Madsen",
+     "Dennis Pultz",
+     "Ole Winther",
+     "Wouter Boomsma"
+    ],
+    "doi": null,
+    "note": "BEND -- biologically meaningful genome annotation tasks.",
+    "paper_id": "arxiv:2311.12570",
+    "role": "benchmark",
+    "title": "BEND: Benchmarking DNA Language Models on biologically meaningful tasks",
+    "url": "https://arxiv.org/abs/2311.12570",
+    "venue": null,
+    "year": 2023
+   }
+  ],
+  "primary_paper_id": "10.1038/s41592-024-02523-z",
+  "primary_paper_title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+  "status": "active",
+  "tags": [
+   "instadeep",
+   "foundation-model",
+   "probing",
+   "non-commercial-license"
+  ],
+  "task": [
+   "representation-learning",
+   "chromatin-accessibility-prediction",
+   "histone-modification-prediction",
+   "splicing-prediction"
+  ],
+  "type": "model",
+  "year": 2023
+ },
+ {
+  "aliases": [
+   "DelRosso effector domains"
+  ],
+  "assay": [
+   "HT-recruit"
+  ],
+  "assay_format": "HT-recruit",
+  "cell_type": [
+   "K562"
+  ],
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Large-scale mapping and systematic mutagenesis of human transcriptional effector domains by HT-recruit, establishing sequence determinants of activation and repression across a broad survey of annotated domains.\n",
+  "dominant_validation_level": "screen-validated",
+  "ecr_lib_source_key": "DelRosso_2023",
+  "entity_id": "module:delrosso-2023-effector-domains",
+  "fate_axis": [
+   "with-what"
+  ],
+  "integrated_in_ecr_lib": "1",
+  "module_types": [
+   "ED"
+  ],
+  "name": "DelRosso 2023 human transcriptional effector domains",
+  "notes": "The mutagenesis arm is what distinguishes this from a pure discovery screen: it reports which residues matter, not only which domains work, which is the difference between a parts list and a design rule. `n_records` is null -- the domain count is reported across several screen arms in the paper and was not confirmable from open metadata.\n",
+  "organism": [
+   "human"
+  ],
+  "organism_scope": [
+   "human"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Nicole DelRosso",
+     "Josh Tycko",
+     "Peter Suzuki",
+     "Cecelia Andrews",
+     "Aradhana",
+     "Adi Mukund",
+     "Ivan Liongson",
+     "Connor Ludwig",
+     "Kaitlyn Spees",
+     "Polly Fordyce",
+     "Michael C. Bassik",
+     "Lacramioara Bintu"
+    ],
+    "doi": "10.1038/s41586-023-05906-y",
+    "note": null,
+    "paper_id": "10.1038/s41586-023-05906-y",
+    "role": "primary",
+    "title": "Large-scale mapping and mutagenesis of human transcriptional effector domains",
+    "url": "https://doi.org/10.1038/s41586-023-05906-y",
+    "venue": "Nature",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Nicole DelRosso",
+     "Josh Tycko",
+     "Peter Suzuki",
+     "Cecelia Andrews",
+     "Aradhana",
+     "Adi Mukund",
+     "Ivan Liongson",
+     "Connor Ludwig",
+     "Kaitlyn Spees",
+     "Polly Fordyce",
+     "Michael C. Bassik",
+     "Lacramioara Bintu"
+    ],
+    "doi": "10.1101/2022.08.26.505496",
+    "note": null,
+    "paper_id": "10.1101/2022.08.26.505496",
+    "role": "preprint",
+    "title": "Large-scale mapping and systematic mutagenesis of human transcriptional effector domains",
+    "url": "https://doi.org/10.1101/2022.08.26.505496",
+    "venue": "preprint",
+    "year": 2022
+   }
+  ],
+  "primary_paper_id": "10.1038/s41586-023-05906-y",
+  "primary_paper_title": "Large-scale mapping and mutagenesis of human transcriptional effector domains",
+  "status": "active",
+  "tags": [
+   "ht-recruit",
+   "mutagenesis",
+   "activation-domain",
+   "repression-domain",
+   "sequence-determinants"
+  ],
+  "task": [
+   "effector-domain-discovery"
+  ],
+  "type": "module",
+  "year": 2023
+ },
+ {
+  "aliases": [
+   "EpiFactors",
+   "EpiFactors 2.0"
+  ],
+  "assay_format": "curated-annotation",
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "Curated database of human epigenetic regulators, protein complexes and their functional annotation, covering chromatin-modifying enzymes, remodelers and reader domains.\n",
+  "dominant_validation_level": "predicted",
+  "ecr_lib_source_key": "EpiFactors_2022",
+  "entity_id": "module:epifactors-2022-chromatin-regulators",
+  "fate_axis": [
+   "with-what"
+  ],
+  "integrated_in_ecr_lib": "1",
+  "module_types": [
+   "CR"
+  ],
+  "name": "EpiFactors 2022 epigenetic regulators",
+  "notes": "Curated annotation rather than a screen, so `dominant_validation_level` is `predicted` -- the entries are literature-asserted functional assignments, not measurements in a recruitment assay. That difference is exactly what the validation-level vocabulary exists to carry, and it matters when picking a chromatin remodeler to build an eCR from.\n",
+  "organism": [
+   "human"
+  ],
+  "organism_scope": [
+   "human"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Daria Marakulina",
+     "Ilya E Vorontsov",
+     "Ivan V Kulakovskiy",
+     "Andreas Lennartsson",
+     "Finn Drabløs",
+     "Yulia A Medvedeva"
+    ],
+    "doi": "10.1093/nar/gkac989",
+    "note": null,
+    "paper_id": "10.1093/nar/gkac989",
+    "role": "primary",
+    "title": "EpiFactors 2022: expansion and enhancement of a curated database of human epigenetic factors and complexes",
+    "url": "https://doi.org/10.1093/nar/gkac989",
+    "venue": "Nucleic Acids Research",
+    "year": 2022
+   }
+  ],
+  "primary_paper_id": "10.1093/nar/gkac989",
+  "primary_paper_title": "EpiFactors 2022: expansion and enhancement of a curated database of human epigenetic factors and complexes",
+  "status": "active",
+  "tags": [
+   "chromatin-remodeler",
+   "curated-annotation",
+   "complexes",
+   "epigenetic-enzyme"
+  ],
+  "task": [
+   "effector-domain-discovery"
+  ],
+  "type": "module",
+  "year": 2022
+ },
+ {
+  "aliases": [
+   "Tycko compact effectors"
+  ],
+  "assay": [
+   "HT-recruit"
+  ],
+  "assay_format": "HT-recruit",
+  "cell_type": [
+   "K562"
+  ],
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "HT-recruit screen of compact activation and repression domains measured across multiple cellular contexts; 38 CD2 activation domains and 1,223 CD43 repression domains.\n",
+  "dominant_validation_level": "screen-validated",
+  "ecr_lib_source_key": "Tycko_2025",
+  "entity_id": "module:tycko-2025-compact-effectors",
+  "fate_axis": [
+   "with-what"
+  ],
+  "integrated_in_ecr_lib": "1",
+  "module_types": [
+   "ED"
+  ],
+  "n_records": 1261,
+  "name": "Tycko 2025 compact effector domains",
+  "notes": "`year: 2024` is the verified Nature Biotechnology issue year. The collection is known in the lab as \"Tycko 2025\" and `ecr_lib_source_key: Tycko_2025` is kept unchanged because it is the join key into eCR_mod_lib's `source_screen` column -- changing it would break the deep link for cosmetic consistency.\n",
+  "organism": [
+   "human"
+  ],
+  "organism_scope": [
+   "human"
+  ],
+  "papers": [
+   {
+    "authors": [
+     "Josh Tycko",
+     "Mike V. Van",
+     "Aradhana",
+     "Nicole DelRosso",
+     "Hanrong Ye",
+     "David Yao",
+     "Raeline Valbuena",
+     "Alun Vaughan-Jackson",
+     "Xiaoshu Xu",
+     "Connor Ludwig",
+     "Kaitlyn Spees",
+     "Katherine Liu",
+     "Mingxin Gu",
+     "Venya Khare",
+     "Adi Xiyal Mukund",
+     "Peter H. Suzuki",
+     "Sophia Arana",
+     "Catherine Zhang",
+     "Peter P. Du",
+     "Thea S. Ornstein",
+     "Gaelen T. Hess",
+     "Roarke A. Kamber",
+     "Lei S. Qi",
+     "Ahmad S. Khalil",
+     "Lacramioara Bintu",
+     "Michael C. Bassik"
+    ],
+    "doi": "10.1038/s41587-024-02442-6",
+    "note": null,
+    "paper_id": "10.1038/s41587-024-02442-6",
+    "role": "primary",
+    "title": "Development of compact transcriptional effectors using high-throughput measurements in diverse contexts",
+    "url": "https://doi.org/10.1038/s41587-024-02442-6",
+    "venue": "Nature Biotechnology",
+    "year": 2024
+   }
+  ],
+  "primary_paper_id": "10.1038/s41587-024-02442-6",
+  "primary_paper_title": "Development of compact transcriptional effectors using high-throughput measurements in diverse contexts",
+  "status": "active",
+  "tags": [
+   "ht-recruit",
+   "compact-effector",
+   "crispri",
+   "context-dependence"
+  ],
+  "task": [
+   "effector-domain-discovery"
+  ],
+  "type": "module",
+  "year": 2024
+ },
+ {
+  "aliases": [
+   "CUT&RUN",
+   "Janssens CUT&RUN"
+  ],
+  "assay": [
+   "CUT&RUN"
+  ],
+  "canonical_host": "protocols.io",
+  "category": [
+   "cutrun"
+  ],
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "The reference CUT&RUN protocol for targeted in situ chromatin profiling at high efficiency from low cell numbers, hosted on protocols.io by the originating lab.\n",
+  "difficulty": "moderate",
+  "entity_id": "protocol:cutrun-janssens-henikoff",
+  "fate_axis": [
+   "where"
+  ],
+  "key_reagents": [
+   "pA-MNase",
+   "Concanavalin A beads",
+   "digitonin"
+  ],
+  "name": "CUT&RUN targeted in situ genome-wide profiling",
+  "notes": "The `external` origin case, and the model for how protocols should be catalogued: a real protocols.io DOI, maintained by the authors, versioned upstream. CFCR adds discovery and trust metadata, nothing else.\n",
+  "organism": [
+   "human",
+   "mouse"
+  ],
+  "origin": "external",
+  "papers": [
+   {
+    "authors": [
+     "Derek Janssens",
+     "Steven Henikoff"
+    ],
+    "doi": "10.17504/protocols.io.zcpf2vn",
+    "note": null,
+    "paper_id": "10.17504/protocols.io.zcpf2vn",
+    "role": "primary",
+    "title": "CUT&amp;RUN: Targeted in situ genome-wide profiling with high efficiency for low cell numbers v3",
+    "url": "https://doi.org/10.17504/protocols.io.zcpf2vn",
+    "venue": null,
+    "year": 2019
+   }
+  ],
+  "primary_paper_id": "10.17504/protocols.io.zcpf2vn",
+  "primary_paper_title": "CUT&amp;RUN: Targeted in situ genome-wide profiling with high efficiency for low cell numbers v3",
+  "protocol_doi": "10.17504/protocols.io.zcpf2vn",
+  "status": "active",
+  "tags": [
+   "cutrun",
+   "chromatin-profiling",
+   "low-input",
+   "henikoff"
+  ],
+  "type": "protocol",
+  "validation_tier": "published-peer-reviewed",
+  "year": 2019
+ },
+ {
+  "assay": [
+   "CUT&RUN"
+  ],
+  "canonical_host": "protocols.io",
+  "category": [
+   "cutrun",
+   "qc"
+  ],
+  "cell_type": [
+   "mouse embryonic fibroblast"
+  ],
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-16",
+  "date_updated": "2026-10-16",
+  "description": "CUT&RUN adapted for 5,000-20,000 sorted cells, optimized for histone marks during MEF reprogramming timecourses.\n",
+  "difficulty": "moderate",
+  "duration_hours": 30,
+  "entity_id": "protocol:lowinput-cutrun-v2",
+  "fate_axis": [
+   "where"
+  ],
+  "key_reagents": [
+   "pA-MNase",
+   "Concanavalin A beads",
+   "digitonin"
+  ],
+  "name": "Low-input CUT&RUN for sorted MEF populations",
+  "notes": "The `cfc-lab` origin case. `protocol_doi` is null: schema §9 shows 10.17504/protocols.io.xxxxx, which is a placeholder, and no real DOI has been minted yet. This entity is therefore the one seed record that will fail the \"every entity has a primary paper\" QC check -- it is the whitelisted exception the check needs to support, since an unpublished in-house protocol has no paper by definition.\n",
+  "organism": [
+   "mouse"
+  ],
+  "origin": "cfc-lab",
+  "papers": [],
+  "status": "active",
+  "tags": [
+   "low-input",
+   "reprogramming",
+   "timecourse",
+   "histone-marks"
+  ],
+  "type": "protocol",
+  "validation_tier": "lab-validated",
+  "version": "2.1",
+  "year": 2026
+ }
+]

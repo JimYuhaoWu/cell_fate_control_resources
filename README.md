@@ -110,6 +110,54 @@ python scripts/05_validate.py --check-links   # adds the link-rot sweep
 `db/cfcr.db` is git-ignored; `db/entities.tsv`, `db/papers.tsv` and
 `db/entity_paper.tsv` are committed, and are what the loader reads.
 
+## The site
+
+Plain HTML, CSS and vanilla JavaScript in `site/` — no framework, no bundler,
+no build step. `fate_axis` is the primary navigation, and every model card
+carries its `evidence_tier` badge with the evaluating papers listed
+underneath, so the derivation is auditable from the page.
+
+```bash
+python scripts/07_export_site.py   # db/*.tsv (via the cfcr package) -> site/data/*.json
+python -m http.server -d site      # then open http://localhost:8000
+```
+
+`07_export_site.py` writes three files, all committed:
+
+| file | contents |
+|---|---|
+| `site/data/entities.json` | one object per entity, flattened, with its papers inlined |
+| `site/data/facets.json` | `cfcr.facets()` verbatim — the filter panel is built from this, not hardcoded |
+| `site/data/papers.json` | one object per paper, with the entities that cite it and in what role |
+
+It reads the committed TSVs through the `cfcr` package rather than SQLite, so
+it runs on a fresh clone, and it sorts keys and writes a stable layout so
+re-running on unchanged records is a no-op in `git diff`.
+
+### Search
+
+`site/js/search.js` scores a query with Okapi BM25 over each entity's name,
+aliases, tags, description, curator notes and the titles and abstracts of its
+attached papers, after the facet filters have pre-selected candidates.
+
+**Adding a second ranker.** Schema §7 specifies dense embeddings and rank
+fusion as well. They are not built: with 20 records there is no way to measure
+whether they help, and they would cost a dependency plus a binary blob in the
+repository. The seam is two lines — register the ranker with
+`CFCRSearch.registerRanker(name, impl)`, where an `impl` is
+`{ build(docs), score(queryTokens, candidateIds) }`, then combine the lists at
+the `SEAM` comment in `rank()`, which today returns the first one unchanged.
+Add it when there is a corpus big enough to evaluate it on.
+
+### Deploying
+
+`.github/workflows/pages.yml` deploys `site/` to GitHub Pages on every push to
+`main` that touches it. Classic Pages publishes only the repository root or a
+folder named `docs/`, and `docs/` holds the schema draft and the landscape
+research — deploying from Actions keeps those documents off the web and lets
+`site/` be the published root. Enable it once under *Settings → Pages →
+Source → GitHub Actions*.
+
 ## Repository layout
 
 ```
@@ -120,7 +168,7 @@ literature/  papers.yaml: harvested open paper metadata
 scripts/     schema.py, 04_build.py, 05_validate.py
 db/          SQLite (ignored) + committed TSV snapshots + manifests
 reports/     QC output for the curator
-site/        GitHub Pages front-end (not yet built)
+site/        GitHub Pages front-end: plain HTML/CSS/JS + exported JSON
 ```
 
 ## Contributing
