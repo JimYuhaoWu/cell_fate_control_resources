@@ -8,6 +8,5 @@ INFO	evidence-tier	model:flashzoi	self-reported [no benchmark/critique papers]
 INFO	evidence-tier	model:gears	self-reported [no benchmark/critique papers]	
 INFO	evidence-tier	model:nucleotide-transformer	externally-benchmarked [arxiv:2311.12570 -> independent; 10.52202/079017-1981 -> independent]	
 INFO	link-rot	-	29 links not checked (pass --check-links to sweep)	
-INFO	primary-paper	protocol:lowinput-cutrun-v2	"no primary paper; whitelisted (CFC lab in-house protocol, not published and no protocols.io DOI minted yet. Remove this entry once a DOI exists.
-)"	
+INFO	primary-paper	protocol:lowinput-cutrun-v2	no primary paper; whitelisted (CFC lab in-house protocol, not published and no protocols.io DOI minted yet. Remove this entry once a DOI exists. )	
 INFO	vocab-coverage	protocol_ext.category	schema §3 calls this column controlled, but no vocab/protocol_category.yaml exists, so its values are unvalidated	create vocab/protocol_category.yaml to validate it, or accept the column as free text and remove it from CONTROLLED

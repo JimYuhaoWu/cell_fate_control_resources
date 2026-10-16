@@ -76,8 +76,13 @@ class Report:
 
     def add(self, severity: str, check: str, subject: str, message: str,
             fix: str = "") -> None:
+        # Collapse whitespace: reasons read out of YAML folded scalars arrive
+        # with embedded newlines, which would make qc_report.tsv rows span
+        # lines and defeat grep/awk over it.
+        flat = lambda s: " ".join(str(s).split())      # noqa: E731
         self.rows.append({"severity": severity, "check": check,
-                          "subject": subject, "message": message, "fix": fix})
+                          "subject": flat(subject), "message": flat(message),
+                          "fix": flat(fix)})
 
     @property
     def n_errors(self) -> int:
