@@ -171,6 +171,14 @@
  "n_models_evaluated": [
   40.0
  ],
+ "n_parameters_max": [
+  2500000000.0,
+  40000000000.0
+ ],
+ "n_parameters_min": [
+  50000000.0,
+  7000000000.0
+ ],
  "n_records": [
   1261.0
  ],

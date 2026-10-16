@@ -1113,8 +1113,10 @@
   "input_type": "sequence",
   "license": "Apache-2.0",
   "model_family": "dna-lm",
+  "n_parameters_max": 40000000000,
+  "n_parameters_min": 7000000000,
   "name": "Evo 2",
-  "notes": "Trained across all domains of life rather than one clade, so `organism` carries the local term `multi-species` -- no single NCBITaxon node says this without claiming a specific clade. Two parameter variants ship together as one release, so `n_parameters` is null; see the description for both figures.\n",
+  "notes": "Trained across all domains of life rather than one clade, so `organism` carries the local term `multi-species` -- no single NCBITaxon node says this without claiming a specific clade. Two parameter variants ship together as one release, carried as the 7B-40B range rather than collapsed to a single figure.\n",
   "organism": [
    "multi-species",
    "human"
@@ -1432,8 +1434,10 @@
   "input_type": "sequence",
   "license": "CC-BY-NC-SA-4.0",
   "model_family": "dna-lm",
+  "n_parameters_max": 2500000000,
+  "n_parameters_min": 50000000,
   "name": "Nucleotide Transformer",
-  "notes": "The `open-weights` case, and the reason that tier is distinct from `open-source`: inference code is on GitHub, but the published checkpoints carry CC-BY-NC-SA-4.0, which forbids commercial use and imposes share-alike on derivatives. Anyone building a product on this needs to read the license before the paper. Checkpoint sizes span two orders of magnitude, so `n_parameters` is left null -- the entity is the family, not one checkpoint.\n",
+  "notes": "The `open-weights` case, and the reason that tier is distinct from `open-source`: inference code is on GitHub, but the published checkpoints carry CC-BY-NC-SA-4.0, which forbids commercial use and imposes share-alike on derivatives. Anyone building a product on this needs to read the license before the paper. Checkpoint sizes span two orders of magnitude, which is what `n_parameters_min`/`_max` exist to carry: the entity is the family, not one checkpoint, so filtering on size means filtering on the range.\n",
   "organism": [
    "human",
    "multi-species"
