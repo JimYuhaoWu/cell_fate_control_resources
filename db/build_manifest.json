@@ -1,0 +1,97 @@
+{
+  "build_date": "2026-10-16",
+  "db_path": "db/cfcr.db",
+  "inputs": {
+    "literature/papers.yaml": "b1bed890d5fd60d7a8b24d5b253513378a2c307160e6043e2e36b42e7d970187",
+    "records/benchmarks.yaml": "3ac0e794241e47b9b29c46c9992d9f507c891d566b948539487d6c4202f4fe4e",
+    "records/databases.yaml": "9f535b2111526c2621d07d3d6579daee2ba683b1556da77597f1add783d0b435",
+    "records/datasets.yaml": "a87d0c75fbd053bde364931a3df9ff1c5d73bd780749fef088739613dbab1b2c",
+    "records/models.yaml": "4375b5fb6e060a10f29edcc6f249dd9b869db1020a6ca0a18fd6e0d5c718866d",
+    "records/module_libraries.yaml": "b57d8218f2b40cfa2d4a42b5ea683f1bfffd349e25b73b8468f8cebd59ea9024",
+    "records/protocols.yaml": "3247a230459f596973686e6ba5edbfc709d8931e9c712755ef513206c5c6890a",
+    "vocab/architecture.yaml": "287c121e51fb652f7c527937d81304d31fece7abbc7094ca6b62846067738ff8",
+    "vocab/assay.yaml": "c449a1589daec90e56aa61be102d0810ed0f92f704de2116c9b4ff908516c803",
+    "vocab/cell_type.yaml": "018cdf102d25782037bdf824b56d96505eeb0edab89077d4e899a1670deff2be",
+    "vocab/modality.yaml": "7fc967ff36d777b31bfd40343eb118d91015819c21f57fd52e1268d27b799a32",
+    "vocab/organism.yaml": "f1653c9060b1b954022157bf4cac1552cbea93469be2f18a4e66125e36523680",
+    "vocab/task.yaml": "20c508b9344c3a4f1c99c165ad8924ee7ccc73f3df8144ed38ec2852071a60bb"
+  },
+  "script": "scripts/04_build.py",
+  "snapshots": {
+    "entities.tsv": 20,
+    "entity_paper.tsv": 37,
+    "papers.tsv": 30
+  },
+  "summary": {
+    "by_evidence_tier": {
+      "externally-benchmarked": 4,
+      "partially-independent": 1,
+      "self-reported": 3
+    },
+    "by_paper_role": {
+      "benchmark": 6,
+      "critique": 2,
+      "extension": 1,
+      "preprint": 8,
+      "primary": 19,
+      "review": 1
+    },
+    "by_type": {
+      "benchmark": 3,
+      "database": 1,
+      "dataset": 3,
+      "model": 8,
+      "module": 3,
+      "protocol": 2
+    },
+    "n_entities": 20,
+    "n_links": 29,
+    "n_papers": 30
+  },
+  "upserts": {
+    "benchmark_ext": {
+      "inserted": 3,
+      "updated": 0
+    },
+    "database_ext": {
+      "inserted": 1,
+      "updated": 0
+    },
+    "dataset_ext": {
+      "inserted": 3,
+      "updated": 0
+    },
+    "entity": {
+      "inserted": 20,
+      "updated": 0
+    },
+    "entity_paper": {
+      "inserted": 37,
+      "updated": 0
+    },
+    "link": {
+      "inserted": 29,
+      "updated": 0
+    },
+    "model_ext": {
+      "inserted": 8,
+      "updated": 0
+    },
+    "module_collection_ext": {
+      "inserted": 3,
+      "updated": 0
+    },
+    "paper": {
+      "inserted": 30,
+      "updated": 0
+    },
+    "protocol_ext": {
+      "inserted": 2,
+      "updated": 0
+    },
+    "vocab": {
+      "inserted": 44,
+      "updated": 0
+    }
+  }
+}

@@ -1,0 +1,40 @@
+entity_id	paper_id	role	note
+benchmark:bend	arxiv:2311.12570	primary	
+benchmark:dart-eval	10.52202/079017-1981	primary	
+benchmark:geneb	arxiv:2606.04525	primary	
+database:jaspar-2024	10.1093/nar/gkad1059	primary	
+dataset:borzoi-data	10.1038/s41588-024-02053-6	primary	
+dataset:enformer-data	10.1038/s41592-021-01252-x	primary	
+dataset:replogle-2022-perturb-seq	10.1016/j.cell.2022.05.013	primary	
+dataset:replogle-2022-perturb-seq	10.1101/2021.12.16.473013	preprint	
+model:alphagenome	10.1038/s41586-025-10014-0	primary	
+model:alphagenome	10.1101/2025.06.25.661532	preprint	
+model:alphagenome	10.64898/2026.02.04.703796	benchmark	Fine-mapping reproducibility vs GTEx/TOPMed/MAGE.
+model:borzoi	10.1038/s41588-024-02053-6	primary	
+model:borzoi	10.1093/bioinformatics/btaf467	extension	Flashzoi -- see model:flashzoi
+model:borzoi	10.1101/2023.08.30.555582	preprint	
+model:borzoi	10.64898/2026.02.04.703796	benchmark	Fine-mapping reproducibility vs GTEx/TOPMed/MAGE.
+model:chrombpnet	10.1101/2024.12.25.630221	primary	
+model:chrombpnet	10.52202/079017-1981	benchmark	"DART-Eval, as an ab initio baseline. Shares an author (Kundaje) with the primary paper -- the partially-independent case.
+"
+model:enformer	10.1038/s41588-023-01517-5	critique	"Across-individual generalization; aggregate accuracy driven by across-gene variation rather than personal variation.
+"
+model:enformer	10.1038/s41588-023-01574-w	critique	Personal transcriptome variation poorly explained.
+model:enformer	10.1038/s41592-021-01252-x	primary	
+model:enformer	10.1101/2021.04.07.438649	preprint	
+model:enformer	10.64898/2026.02.04.703796	benchmark	Fine-mapping reproducibility vs GTEx/TOPMed/MAGE.
+model:evo2	10.1101/2025.02.18.638918	primary	
+model:flashzoi	10.1093/bioinformatics/btaf467	primary	
+model:flashzoi	10.1101/2024.12.18.629121	preprint	
+model:gears	10.1038/s41576-025-00920-4	review	Nat Rev Genet perturbation-modelling catalogue and ontology.
+model:gears	10.1038/s41587-023-01905-6	primary	
+model:gears	10.1101/2022.07.12.499735	preprint	
+model:nucleotide-transformer	10.1038/s41592-024-02523-z	primary	
+model:nucleotide-transformer	10.1101/2023.01.11.523679	preprint	
+model:nucleotide-transformer	10.52202/079017-1981	benchmark	DART-Eval -- regulatory DNA, zero-shot/probed/fine-tuned vs ab initio.
+model:nucleotide-transformer	arxiv:2311.12570	benchmark	BEND -- biologically meaningful genome annotation tasks.
+module:delrosso-2023-effector-domains	10.1038/s41586-023-05906-y	primary	
+module:delrosso-2023-effector-domains	10.1101/2022.08.26.505496	preprint	
+module:epifactors-2022-chromatin-regulators	10.1093/nar/gkac989	primary	
+module:tycko-2025-compact-effectors	10.1038/s41587-024-02442-6	primary	
+protocol:cutrun-janssens-henikoff	10.17504/protocols.io.zcpf2vn	primary	

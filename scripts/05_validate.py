@@ -381,7 +381,7 @@ def check_duplicates(entities, rep):
                         "port or replicate, set variant_of instead")
 
 
-def check_links(db, rep, do_sweep):
+def check_links(db, rep, do_sweep, timeout=8.0):
     links = db.fetch("link")
     if not do_sweep:
         rep.add(INFO, "link-rot", "-",
@@ -398,7 +398,7 @@ def check_links(db, rep, do_sweep):
             req = urllib.request.Request(
                 url, method="HEAD",
                 headers={"User-Agent": "CFCR-linkcheck/0.1"})
-            with urllib.request.urlopen(req, timeout=20) as resp:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
                 alive = 200 <= resp.status < 400
         except urllib.error.HTTPError as exc:
             # 401/403 means "exists but will not answer an anonymous HEAD".
@@ -408,16 +408,30 @@ def check_links(db, rep, do_sweep):
                 alive = None
                 rep.add(INFO, "link-rot", link["entity_id"],
                         f"{url} returned {exc.code}; alive left unknown")
-            else:
+            elif exc.code in (404, 410):
+                # The server answered and said it is gone. This is link rot.
                 alive = False
                 rep.add(WARNING, "link-rot", link["entity_id"],
                         f"{url} returned HTTP {exc.code}",
                         "update or remove the link")
+            else:
+                alive = None
+                rep.add(INFO, "link-rot", link["entity_id"],
+                        f"{url} returned HTTP {exc.code}; alive left unknown")
         except Exception as exc:                  # noqa: BLE001
-            alive = False
+            # Connection-level failure: timeout, DNS, refused. This says
+            # nothing about the link -- it says the sweep could not reach it
+            # from here. PeiLab2, for one, resolves api.crossref.org but times
+            # out on github.com, so marking these dead would write alive=0 for
+            # every GitHub link in the catalogue and churn the snapshot with
+            # false deaths. Only a server that answers 404/410 is evidence of
+            # rot, so `alive` stays unknown.
+            alive = None
             rep.add(WARNING, "link-rot", link["entity_id"],
-                    f"{url} unreachable ({type(exc).__name__})",
-                    "update or remove the link")
+                    f"{url} unreachable from this host "
+                    f"({type(exc).__name__}); alive left unknown",
+                    "re-run the sweep from a host with unrestricted outbound "
+                    "access before treating this as link rot")
         updates.append({"entity_id": link["entity_id"], "kind": link["kind"],
                         "url": url, "checked": today,
                         "alive": None if alive is None else int(alive)})
@@ -487,6 +501,8 @@ def main() -> int:
     ap.add_argument("--db", default=None, type=Path)
     ap.add_argument("--check-links", action="store_true",
                     help="sweep every link.url and update link.alive")
+    ap.add_argument("--link-timeout", type=float, default=8.0,
+                    help="per-link HTTP timeout in seconds (default 8)")
     ap.add_argument("--promote-at", type=int, default=10,
                     help="tag frequency at which promotion is suggested")
     args = ap.parse_args()
@@ -517,7 +533,7 @@ def main() -> int:
         check_evidence_tier(db, papers, by_entity, rep)
         check_refs(entities, rep)
         check_duplicates(entities, rep)
-        check_links(db, rep, args.check_links)
+        check_links(db, rep, args.check_links, args.link_timeout)
         cand_path = check_tags(db, entities, rep, root, args.promote_at)
 
         tsv = root / "db" / "qc_report.tsv"
