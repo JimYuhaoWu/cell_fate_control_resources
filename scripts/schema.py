@@ -68,7 +68,25 @@ VENUE_TYPES = ("journal", "conference", "preprint", "workshop", "thesis", "other
 LINK_KINDS = ("code", "weights", "website", "dataset", "docs", "api",
               "supplementary", "demo", "container")
 
-EVIDENCE_TIERS = ("externally-benchmarked", "self-reported")
+# Degree of independence of the evaluation, and nothing else. Ordered most to
+# least independent. A model is NOT lifted by being evaluated repeatedly: one
+# group asserting the same claim n times is still one group, and rewarding
+# volume would favour the most prolific labs over the most scrutinized models.
+#
+# Derivation (05_validate.py), over every entity_paper row with
+# role IN ('benchmark','critique'), comparing its authors against the authors of
+# the `primary` paper, normalized to lastname + first initial:
+#
+#   shared == 0                                    -> independent
+#   0 < shared < 50% of the evaluating paper's authors -> partially independent
+#   shared >= 50%                                  -> same group; contributes nothing
+#
+# The model takes the most independent tier any single evaluation reaches:
+# any independent evaluation    -> externally-benchmarked
+# else any partially independent -> partially-independent
+# else                           -> self-reported
+EVIDENCE_TIERS = ("externally-benchmarked", "partially-independent",
+                  "self-reported")
 AVAILABILITY_TIERS = ("open-source", "open-weights", "api-only")
 MODEL_FAMILIES = ("interval-model", "dna-lm", "perturbation-model",
                   "module-predictor", "other")
@@ -182,7 +200,8 @@ CREATE TABLE IF NOT EXISTS model_ext (
     entity_id           TEXT PRIMARY KEY REFERENCES entity(entity_id) ON DELETE CASCADE,
     -- Derived, not asserted (schema §3.1). The YAML value is the curator's
     -- claim; 05_validate.py recomputes it from entity_paper + author overlap
-    -- and reports every disagreement.
+    -- and reports every disagreement. See EVIDENCE_TIERS for the three-way
+    -- independence rule and its threshold.
     evidence_tier       TEXT {_check('evidence_tier', EVIDENCE_TIERS)},
     availability_tier   TEXT {_check('availability_tier', AVAILABILITY_TIERS)},
     model_family        TEXT {_check('model_family', MODEL_FAMILIES)},
