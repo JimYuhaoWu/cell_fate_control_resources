@@ -52,7 +52,8 @@
     input_context_bp: 196608
     output_type: [coverage-track, variant-effect]
     output_resolution_bp: 128
-    n_parameters: null          # FLAG: not stated in the abstract; unverified
+    n_parameters_min: null      # FLAG: not stated in the abstract; unverified
+    n_parameters_max: null
     genome_build: [hg38, mm10]
     license: Apache-2.0
   links:
@@ -108,7 +109,8 @@
     input_context_bp: 524288
     output_type: [coverage-track, variant-effect]
     output_resolution_bp: 32
-    n_parameters: null          # FLAG: schema §9 asserts 235M; unverified
+    n_parameters_min: null      # FLAG: schema §9 asserts 235M; unverified
+    n_parameters_max: null
     genome_build: [hg38, mm10]
     training_data: [Genentech/borzoi-data]
     license: Apache-2.0
@@ -166,7 +168,8 @@
     input_context_bp: 524288
     output_type: [coverage-track, variant-effect]
     output_resolution_bp: 32
-    n_parameters: null          # FLAG: not stated in the abstract; unverified
+    n_parameters_min: null      # FLAG: not stated in the abstract; unverified
+    n_parameters_max: null
     genome_build: [hg38, mm10]
     license: MIT
   links:
@@ -217,7 +220,8 @@
     input_context_bp: 1000000
     output_type: [coverage-track, variant-effect]
     output_resolution_bp: 1
-    n_parameters: null          # FLAG: not disclosed
+    n_parameters_min: null      # FLAG: not disclosed
+    n_parameters_max: null
     genome_build: [hg38, mm10]
     license: null               # FLAG: API terms of use, not an SPDX license
   links:
@@ -247,8 +251,9 @@
     `open-source`: inference code is on GitHub, but the published checkpoints
     carry CC-BY-NC-SA-4.0, which forbids commercial use and imposes share-alike
     on derivatives. Anyone building a product on this needs to read the license
-    before the paper. Checkpoint sizes span two orders of magnitude, so
-    `n_parameters` is left null -- the entity is the family, not one checkpoint.
+    before the paper. Checkpoint sizes span two orders of magnitude, which is
+    what `n_parameters_min`/`_max` exist to carry: the entity is the family,
+    not one checkpoint, so filtering on size means filtering on the range.
   tags: [instadeep, foundation-model, probing, non-commercial-license]
   fate_axis: [how]
   organism: [human, multi-species]
@@ -266,7 +271,8 @@
     input_context_bp: 12288
     output_type: [embedding, scalar]
     output_resolution_bp: null
-    n_parameters: null          # FLAG: family spans 50M-2.5B; one INT cannot hold it
+    n_parameters_min: 50000000      # verified: "from 50 million up to 2.5 billion"
+    n_parameters_max: 2500000000
     genome_build: [hg38]
     license: CC-BY-NC-SA-4.0
   links:
@@ -301,8 +307,8 @@
     Trained across all domains of life rather than one clade, so `organism`
     carries the local term `multi-species` -- no single NCBITaxon node says
     this without claiming a specific clade. Two parameter variants ship
-    together as one release, so `n_parameters` is null; see the description for
-    both figures.
+    together as one release, carried as the 7B-40B range rather than collapsed
+    to a single figure.
   tags: [arc-institute, striped-hyena, long-context, generative, all-domains]
   fate_axis: [how]
   organism: [multi-species, human]
@@ -318,7 +324,8 @@
     input_context_bp: 1000000
     output_type: [embedding, sequence, variant-effect]
     output_resolution_bp: 1
-    n_parameters: null          # FLAG: 7B and 40B variants; one INT cannot hold both
+    n_parameters_min: 7000000000    # verified: "7B and 40B parameters"
+    n_parameters_max: 40000000000
     license: Apache-2.0
   links:
     - kind: code
@@ -361,7 +368,8 @@
     input_context_bp: 2114
     output_type: [coverage-track, variant-effect]
     output_resolution_bp: 1
-    n_parameters: null          # FLAG: not stated in the abstract
+    n_parameters_min: null      # FLAG: not stated in the abstract
+    n_parameters_max: null
     genome_build: [hg38, mm10]
     license: MIT
   links:
@@ -409,7 +417,8 @@
     architecture: [gnn]
     input_type: expression-matrix
     output_type: [cell-state]
-    n_parameters: null          # FLAG: not stated in the abstract
+    n_parameters_min: null      # FLAG: not stated in the abstract
+    n_parameters_max: null
     license: null               # FLAG: no LICENSE file found in the repository
   links:
     - kind: code

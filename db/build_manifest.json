@@ -6,7 +6,7 @@
     "records/benchmarks.yaml": "3ac0e794241e47b9b29c46c9992d9f507c891d566b948539487d6c4202f4fe4e",
     "records/databases.yaml": "9f535b2111526c2621d07d3d6579daee2ba683b1556da77597f1add783d0b435",
     "records/datasets.yaml": "a87d0c75fbd053bde364931a3df9ff1c5d73bd780749fef088739613dbab1b2c",
-    "records/models.yaml": "4375b5fb6e060a10f29edcc6f249dd9b869db1020a6ca0a18fd6e0d5c718866d",
+    "records/models.yaml": "6e9b55c5d3b4621cc4a17d7990b31454d81ded1e18c01f427edfc88cb1960242",
     "records/module_libraries.yaml": "b57d8218f2b40cfa2d4a42b5ea683f1bfffd349e25b73b8468f8cebd59ea9024",
     "records/protocols.yaml": "3247a230459f596973686e6ba5edbfc709d8931e9c712755ef513206c5c6890a",
     "vocab/architecture.yaml": "287c121e51fb652f7c527937d81304d31fece7abbc7094ca6b62846067738ff8",
@@ -50,48 +50,48 @@
   },
   "upserts": {
     "benchmark_ext": {
-      "inserted": 3,
-      "updated": 0
+      "inserted": 0,
+      "updated": 3
     },
     "database_ext": {
-      "inserted": 1,
-      "updated": 0
+      "inserted": 0,
+      "updated": 1
     },
     "dataset_ext": {
-      "inserted": 3,
-      "updated": 0
+      "inserted": 0,
+      "updated": 3
     },
     "entity": {
-      "inserted": 20,
-      "updated": 0
+      "inserted": 0,
+      "updated": 20
     },
     "entity_paper": {
-      "inserted": 37,
-      "updated": 0
+      "inserted": 0,
+      "updated": 37
     },
     "link": {
-      "inserted": 29,
-      "updated": 0
+      "inserted": 0,
+      "updated": 29
     },
     "model_ext": {
-      "inserted": 8,
-      "updated": 0
+      "inserted": 0,
+      "updated": 8
     },
     "module_collection_ext": {
-      "inserted": 3,
-      "updated": 0
+      "inserted": 0,
+      "updated": 3
     },
     "paper": {
-      "inserted": 30,
-      "updated": 0
+      "inserted": 0,
+      "updated": 30
     },
     "protocol_ext": {
-      "inserted": 2,
-      "updated": 0
+      "inserted": 0,
+      "updated": 2
     },
     "vocab": {
-      "inserted": 44,
-      "updated": 0
+      "inserted": 0,
+      "updated": 44
     }
   }
 }

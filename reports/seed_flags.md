@@ -31,7 +31,7 @@ lifts Borzoi to `externally-benchmarked`.
 
 | Entity / paper | Field | Why |
 |---|---|---|
-| all 8 models | `n_parameters` | Not in any abstract. Borzoi's 235M (schema §9) is unverifiable from open metadata; NT spans 50M–2.5B and Evo 2 ships 7B and 40B, which one INT column cannot hold at all |
+| 6 of 8 models | `n_parameters_min` / `_max` | Not stated in any abstract. Borzoi's 235M (schema §9) is unverifiable from open metadata. Both null for Enformer, Borzoi, Flashzoi, AlphaGenome, ChromBPNet and GEARS |
 | `model:alphagenome` | `license` | API terms of use, not an SPDX licence |
 | `model:gears` | `license` | No `LICENSE` file found in the repository |
 | `benchmark:geneb` | `leaderboard_url` | A HuggingFace Space is reported but the URL was not confirmed |
@@ -62,8 +62,14 @@ key interval-model discriminator, so they are filled and flagged here instead.
 4. **`cell_type` cannot be CL-only.** CL does not model immortalized cell
    lines, so K562 — the most common context in the effector-domain screens —
    needs EFO. The `ontology_id` column carries mixed prefixes for that facet.
-5. **`n_parameters INT` cannot represent a model family.** Three of eight seed
-   models ship multiple sizes under one name.
+5. **`n_parameters INT` could not represent a model family.** Two of eight
+   seed models ship several sizes under one name, which forced the column to
+   null and made "ships in four sizes" indistinguishable from "nobody
+   published it". **Resolved:** replaced by `n_parameters_min` /
+   `n_parameters_max` (single-size models set both equal, unknown leaves both
+   null), so model size is filterable. Both ranges now carried are verified
+   from their abstracts: Nucleotide Transformer "from 50 million up to 2.5
+   billion", Evo 2 "7B and 40B parameters".
 
 ## Link checking
 

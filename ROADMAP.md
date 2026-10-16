@@ -1,0 +1,149 @@
+# CFCR roadmap
+
+Milestones are defined by **exit criteria, not dates** — the backfill is the
+dominant cost and its rate is unknown until it starts, so a date on M4 would be
+invented. Add due dates once M3 has run a few cycles and the real throughput is
+visible.
+
+Each milestone is also a GitHub milestone, so issues can be filed against it.
+
+---
+
+## M1 — v0.1 skeleton ✅ done
+
+The data model, proved against enough real records to find its own gaps.
+
+- [x] SQLite schema + `CFCR` class mirroring `eCR_mod_lib`'s `ModuleLibrary`
+- [x] Six controlled vocabularies, ontology ids verified against EBI OLS4
+- [x] 20 seed entities across all six types; 30 papers, every DOI API-verified
+- [x] `04_build.py`, `05_validate.py`, `cfcr.load()` / `load_papers()`
+- [x] Packaging, MIT code licence, CC-BY-4.0 metadata licence
+- [x] Reproducible build: migrated and fresh databases emit byte-identical snapshots
+
+**What it cost to learn:** five spec gaps, all recorded in
+[`reports/seed_flags.md`](reports/seed_flags.md) — the `architecture` enum had
+no GNN term, `cell_type` cannot be CL-only, `n_parameters` could not represent
+a model family, `protocol_ext.category` ships no vocabulary, and `vocab.facet`
+cannot be a DDL enum at all.
+
+## M2 — public website on GitHub Pages 🔧 in progress
+
+In progress on branch `claude/loving-cohen-02b54f`.
+
+- [ ] `scripts/07_export_site.py` → `site/data/{entities,facets,papers}.json`
+- [ ] `fate_axis` as primary navigation, not a sidebar filter
+- [ ] `evidence_tier` badge on every model card, evaluating papers listed under it
+- [ ] `availability_tier` shown as orthogonal to evidence, with the licence visible
+- [ ] Faceted filtering; works at phone width
+- [ ] Client-side BM25, ranker written so a second scorer can slot in
+- [ ] GitHub Actions deploy from `site/` — *not* `/docs`, which holds the design docs
+
+**Exit:** a stranger can answer "which interval models has anyone outside the
+authoring group evaluated, and can I legally use the weights" without reading
+any YAML.
+
+## M3 — literature pipeline
+
+Adapted from `eCR_mod_lib` rather than written fresh.
+
+- [ ] `literature/01_search.py` — PubMed + Semantic Scholar + bioRxiv + arXiv
+- [ ] `literature/02_triage.py` — score candidates, emit `reviews/review_YYYY-MM-DD.md`
+- [ ] `literature/03_record.py` — validate review decisions back into `papers.yaml`
+- [ ] `search_queries.yaml` per collection; reuse the established rejection patterns
+- [ ] Retry-with-backoff on every API call
+
+**Exit:** one cycle runs end to end and a human approves or rejects a real
+candidate list. Discovery is automated; inclusion stays a human decision.
+
+**Already learned the hard way:** a single dropped request silently nulls an
+author list, and `evidence_tier` is derived from author lists. Retries are not
+optional. arXiv rate-limits; Crossref omits abstracts for Nature-family journals
+where Europe PMC has them.
+
+## M4 — backfill wave 1
+
+The dominant cost of the whole project. Landscape §3 has the seed list.
+
+- [ ] Interval models: the Basenji→Enformer→Borzoi line, Sei, ChromBPNet, scBasset, EpiGePT
+- [ ] DNA LMs: DNABERT family, HyenaDNA, Caduceus, GENA-LM, GPN/GPN-MSA, Evo, GROVER
+- [ ] The critical-evaluation thread — the `critique` papers are the differentiator, so backfill them *with* the models, not after
+- [ ] Benchmarks: GUANinE, DNALongBench, LRB, OmniGenBench, GUE
+- [ ] Module collections to ~15–30 entities, each keyed back to `eCR_mod_lib`
+- [ ] First vocabulary promotion pass once tags clear the ≥10-record threshold
+
+**Exit:** ~150 entities, and `reports/vocab_candidates.md` fires for the first
+time, which means the bottom-up vocabulary mechanism has actually been exercised.
+
+**Scope decision still open** (landscape §6): narrow to chromatin accessibility
+and regulatory elements, where domain judgment is strongest, or cover all of
+sequence-to-function. Worth settling before this milestone, not during it.
+
+## M5 — hybrid search
+
+Deliberately gated on M4. Deferred from M2 on purpose: with 20 records there is
+no way to measure whether embeddings beat BM25, and the dependency plus a
+shipped binary blob are not yet earned.
+
+- [ ] `scripts/06_embed.py` — `sentence-transformers` over title + abstract + description
+- [ ] Quantized float16 blob in `site/data/embeddings.bin`
+- [ ] Reciprocal rank fusion against the existing BM25 ranker
+- [ ] A/B the two rankers on real queries before keeping both
+
+**Exit:** a query like *"enhancer redundancy"* surfaces a relevant record that
+uses none of those words, and the comparison against BM25 alone is written down.
+
+## M6 — v0.2 schema
+
+Everything schema §11 deferred, plus what M1 and M4 turn up.
+
+- [ ] `entity_relation` table (benchmark→evaluates→model, model→trained-on→dataset),
+      replacing the `benchmarked_on` and `training_data` free-text columns
+- [ ] `model_variant` child table — one row per checkpoint. The `n_parameters`
+      min/max range is a stopgap; NT's 50M and 2.5B checkpoints differ in what
+      they are good for, and a range cannot say that
+- [ ] Decide `protocol_ext.category`: give it a vocabulary or demote it to free text
+- [ ] Contributor attribution table, for crediting co-maintainers
+- [ ] Per-paper curator override on the `evidence_tier` author-overlap threshold,
+      if the backfill shows the global 50% rule misfiring
+
+## M7 — citable release and database paper
+
+- [ ] Zenodo integration, DOI per release
+- [ ] CITATION.cff
+- [ ] Co-maintainer recruitment (landscape §6 lists this as an open question)
+- [ ] Database paper draft
+
+**Exit:** CFCR is citable, and someone other than its author has merged a record.
+
+---
+
+## Resuming on another device
+
+```bash
+git clone https://github.com/JimYuhaoWu/cell_fate_control_resources.git
+cd cell_fate_control_resources
+conda env create -f environment.yml && conda activate cfcr
+pip install -e .
+python -c "from cfcr import load; print(load(type='model')[['entity_id','evidence_tier']])"
+```
+
+Querying needs nothing but the committed TSVs. Rebuilding needs no network.
+
+**Where things live:**
+
+| What | Where |
+|---|---|
+| Canonical history | `main` on GitHub |
+| Website work in progress | branch `claude/loving-cohen-02b54f` + its PR |
+| Main-branch working copy on PeiLab2 | `/mnt3/wuyuhao/cfcr` |
+| Website working copy on PeiLab2 | `/mnt3/wuyuhao/cfcr-site` |
+| Conda interpreter on PeiLab2 | `/mnt/wuyuhao/miniconda3/envs/cfcr/bin/python` |
+
+The two server directories are deliberately separate: both sessions were
+originally pointed at `/mnt3/wuyuhao/cfcr` and overwrote each other's files
+there. Keep one working copy per branch.
+
+**Note on PeiLab2's network:** it reaches `api.crossref.org` but times out on
+`github.com`. Run `git` and `05_validate.py --check-links` from a host with
+unrestricted outbound access; the link sweep leaves `alive` unknown rather than
+false on a connection failure, precisely so this does not record false deaths.
