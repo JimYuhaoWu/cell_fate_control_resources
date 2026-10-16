@@ -1,0 +1,44 @@
+# vocab/assay.yaml — controlled facet: assay
+# Ontology: EFO where a term exists. IDs verified against EBI OLS4.
+
+- term: ATAC-seq
+  ontology_id: EFO:0007045
+  synonyms: [ATACseq, assay for transposase-accessible chromatin]
+  facet: assay
+
+- term: DNase-seq
+  ontology_id: EFO:0003752
+  synonyms: [DNase-hypersensitivity seq, DNase I hypersensitive sites sequencing, DHS-seq]
+  facet: assay
+
+- term: ChIP-seq
+  ontology_id: EFO:0002692
+  synonyms: [ChIPseq, chromatin immunoprecipitation sequencing]
+  facet: assay
+
+- term: RNA-seq
+  ontology_id: EFO:0008896
+  synonyms: [RNA-Seq, RNAseq, transcriptome sequencing]
+  facet: assay
+
+- term: CAGE
+  ontology_id: EFO:0004181
+  synonyms: [cap analysis gene expression, CAGE-seq]
+  facet: assay
+
+- term: CUT&RUN
+  ontology_id: EFO:0009973
+  synonyms: [CUT and RUN, CUTandRUN, cleavage under targets and release using nuclease]
+  facet: assay
+
+- term: Perturb-seq
+  ontology_id: EFO:0008860
+  synonyms: [Perturb-Seq, CRISPR single-cell screen, perturbation sequencing]
+  facet: assay
+
+# No ontology term exists. Local, as the screen format that underpins most
+# compact-effector collections in CFCR.
+- term: HT-recruit
+  ontology_id: null
+  synonyms: [HT-recruit screen, high-throughput recruitment]
+  facet: assay

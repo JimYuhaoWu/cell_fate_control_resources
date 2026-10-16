@@ -1,0 +1,20 @@
+# vocab/cell_type.yaml — controlled facet: cell_type
+# Ontology: Cell Ontology (CL) for primary cell types, EFO for immortalized
+# cell lines. CL deliberately does not model cell lines, so a cell_type
+# vocabulary restricted to CL (as schema §4 specifies) cannot express "K562" --
+# the single most common context in the effector-domain screens CFCR indexes.
+# The ontology_id column therefore carries mixed prefixes for this facet.
+# IDs verified against EBI OLS4.
+
+- term: K562
+  ontology_id: EFO:0002067
+  synonyms: [K-562, K562 cells]
+  facet: cell_type
+
+# CL has no mouse-specific fibroblast term; CL:2000042 "embryonic fibroblast"
+# is the nearest species-agnostic parent. Left null rather than asserting a
+# parent as if it were the term.
+- term: mouse embryonic fibroblast
+  ontology_id: null
+  synonyms: [MEF, MEFs, "embryonic fibroblast (mouse)"]
+  facet: cell_type

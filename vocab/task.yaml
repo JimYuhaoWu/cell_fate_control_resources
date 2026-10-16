@@ -1,0 +1,74 @@
+# vocab/task.yaml — controlled facet: task
+# Local vocabulary. No usable ontology exists for ML tasks in regulatory
+# genomics (schema §4), so no ontology_id is attached to any term here.
+# Also serves benchmark_ext.task_categories.
+
+- term: coverage-prediction
+  ontology_id: null
+  synonyms: [track prediction, profile prediction, signal prediction]
+  facet: task
+
+- term: variant-effect-prediction
+  ontology_id: null
+  synonyms: [VEP, variant scoring, variant impact prediction]
+  facet: task
+
+- term: enhancer-promoter-linking
+  ontology_id: null
+  synonyms: [enhancer-promoter interaction, E-P linking, regulatory linking]
+  facet: task
+
+- term: chromatin-accessibility-prediction
+  ontology_id: null
+  synonyms: [accessibility prediction, ATAC prediction, DHS prediction]
+  facet: task
+
+- term: splicing-prediction
+  ontology_id: null
+  synonyms: [splice site prediction, isoform prediction]
+  facet: task
+
+- term: polyadenylation-prediction
+  ontology_id: null
+  synonyms: [polyA prediction, APA prediction]
+  facet: task
+
+- term: gene-expression-prediction
+  ontology_id: null
+  synonyms: [expression prediction, eQTL prediction]
+  facet: task
+
+- term: tf-binding-prediction
+  ontology_id: null
+  synonyms: [TF binding, motif occupancy prediction, binding site prediction]
+  facet: task
+
+- term: motif-discovery
+  ontology_id: null
+  synonyms: [motif identification, de novo motif discovery, syntax discovery]
+  facet: task
+
+- term: sequence-generation
+  ontology_id: null
+  synonyms: [sequence design, generative design, regulatory element design]
+  facet: task
+
+- term: perturbation-response-prediction
+  ontology_id: null
+  synonyms: [perturbation prediction, genetic perturbation response]
+  facet: task
+
+- term: effector-domain-discovery
+  ontology_id: null
+  synonyms: [effector domain screening, activation domain discovery, repression domain discovery]
+  facet: task
+
+- term: representation-learning
+  ontology_id: null
+  synonyms: [embedding, pretraining, self-supervised representation]
+  facet: task
+
+- term: histone-modification-prediction
+  ontology_id: null
+  synonyms: [histone mark prediction, chromatin mark prediction]
+  facet: task

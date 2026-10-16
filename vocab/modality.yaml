@@ -1,0 +1,45 @@
+# vocab/modality.yaml — controlled facet: modality
+# Local vocabulary; serves dataset_ext.modality. Short data-type codes, kept
+# distinct from vocab/assay.yaml: `assay` says how the data was generated,
+# `modality` says what kind of signal a dataset contains. A dataset may carry
+# several modalities from one assay family.
+
+- term: atac
+  ontology_id: null
+  synonyms: [ATAC, ATAC-seq, scATAC, accessibility]
+  facet: modality
+
+- term: rna
+  ontology_id: null
+  synonyms: [RNA, RNA-seq, scRNA, expression]
+  facet: modality
+
+- term: chip
+  ontology_id: null
+  synonyms: [ChIP, ChIP-seq, TF ChIP, histone ChIP]
+  facet: modality
+
+- term: dnase
+  ontology_id: null
+  synonyms: [DNase, DNase-seq, DHS]
+  facet: modality
+
+- term: cage
+  ontology_id: null
+  synonyms: [CAGE, TSS]
+  facet: modality
+
+- term: hic
+  ontology_id: null
+  synonyms: [Hi-C, HiC, contact map, 3D genome]
+  facet: modality
+
+- term: methyl
+  ontology_id: null
+  synonyms: [methylation, WGBS, CpG methylation, bisulfite]
+  facet: modality
+
+- term: perturb-seq
+  ontology_id: null
+  synonyms: [Perturb-seq, CRISPR screen readout, perturbation]
+  facet: modality

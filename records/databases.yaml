@@ -1,0 +1,38 @@
+# records/databases.yaml
+#
+# External resources catalogued as pointers, not mirrored (schema §3.6). CFCR
+# records what they are, how current they are, and how to get data out.
+
+- entity_id: database:jaspar-2024
+  type: database
+  name: JASPAR 2024
+  aliases: [JASPAR]
+  year: 2023
+  description: >
+    Open-access database of curated, non-redundant transcription factor binding
+    profiles stored as position frequency matrices, with taxonomic coverage
+    across six groups and an API and bulk downloads.
+  notes: >
+    `year: 2023` is the Nucleic Acids Research issue year for the release
+    branded "JASPAR 2024" -- the release name and the publication year
+    disagree, which is normal for the NAR database issue and a recurring trap
+    when citing these. The name is kept as the community uses it.
+  tags: [motif, pfm, transcription-factor, nar-database-issue]
+  fate_axis: [with-what, where]
+  organism: [human, mouse, multi-species]
+  task: [tf-binding-prediction, motif-discovery]
+  status: active
+  curator: JimYuhaoWu
+  database_ext:
+    update_frequency: annual
+    last_release: null          # FLAG: exact release date not verified
+    has_api: true
+    bulk_download: true
+  links:
+    - kind: website
+      url: https://jaspar.elixir.no
+    - kind: api
+      url: https://jaspar.elixir.no/api/v1/docs/
+  papers:
+    - paper_id: 10.1093/nar/gkad1059
+      role: primary

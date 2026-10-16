@@ -1,0 +1,32 @@
+Creative Commons Attribution 4.0 International (CC-BY-4.0)
+
+The curated metadata in this repository -- the contents of records/, vocab/,
+literature/papers.yaml, and the snapshots in db/ -- is licensed under CC-BY-4.0,
+separately from the code, which is MIT (see LICENSE).
+
+You are free to share and adapt this metadata for any purpose, including
+commercially, provided you give appropriate credit:
+
+    Cell Fate Control Resources (CFCR), Yuhao Wu.
+    https://github.com/JimYuhaoWu/cell_fate_control_resources
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Scope and limits
+----------------
+This licence covers CFCR's own curation: the descriptions, curator notes, tags,
+facet assignments, evidence-role judgements and vocabulary mappings.
+
+It does not and cannot relicense:
+
+  * Paper abstracts in literature/papers.yaml. These are reproduced from open
+    metadata served by Crossref, Europe PMC and arXiv, and remain under their
+    publishers' terms. CFCR stores no full text of paywalled work.
+  * The resources being catalogued. Every model, dataset, protocol and database
+    indexed here carries its own licence, recorded per record where it could be
+    verified. Read it before use -- several entries are deliberately flagged
+    because their licences are more restrictive than the repository they live
+    in (model:nucleotide-transformer ships CC-BY-NC-SA-4.0 weights, and
+    model:alphagenome has API terms of use rather than a licence at all).
+  * Ontology terms and identifiers, which carry the terms of their source
+    ontologies (NCBITaxon, Cell Ontology, EFO).

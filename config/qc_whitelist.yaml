@@ -1,0 +1,12 @@
+# config/qc_whitelist.yaml
+#
+# Documented exceptions to QC checks that would otherwise be errors. Each entry
+# carries a reason, so a whitelist entry is a recorded curation decision rather
+# than a silenced check.
+
+# Entities with no role='primary' paper. An in-house protocol has no paper by
+# definition; a model with no paper at all should be questioned, not whitelisted.
+no_primary_paper:
+  protocol:lowinput-cutrun-v2: >
+    CFC lab in-house protocol, not published and no protocols.io DOI minted
+    yet. Remove this entry once a DOI exists.

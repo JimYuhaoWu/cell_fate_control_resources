@@ -1,0 +1,75 @@
+# records/protocols.yaml
+#
+# Metadata only (schema §3.5). Canonical protocol text lives on protocols.io
+# with a DOI; CFCR never mirrors the steps, which keeps versioning and
+# maintenance where the author controls it.
+
+- entity_id: protocol:cutrun-janssens-henikoff
+  type: protocol
+  name: CUT&RUN targeted in situ genome-wide profiling
+  aliases: [CUT&RUN, Janssens CUT&RUN]
+  year: 2019
+  description: >
+    The reference CUT&RUN protocol for targeted in situ chromatin profiling at
+    high efficiency from low cell numbers, hosted on protocols.io by the
+    originating lab.
+  notes: >
+    The `external` origin case, and the model for how protocols should be
+    catalogued: a real protocols.io DOI, maintained by the authors, versioned
+    upstream. CFCR adds discovery and trust metadata, nothing else.
+  tags: [cutrun, chromatin-profiling, low-input, henikoff]
+  fate_axis: [where]
+  organism: [human, mouse]
+  assay: [CUT&RUN]
+  status: active
+  curator: JimYuhaoWu
+  protocol_ext:
+    validation_tier: published-peer-reviewed
+    protocol_doi: 10.17504/protocols.io.zcpf2vn
+    canonical_host: protocols.io
+    version: null               # FLAG: protocols.io version not verified
+    duration_hours: null        # FLAG: not stated in retrieved metadata
+    difficulty: moderate
+    category: [cutrun]
+    key_reagents: [pA-MNase, Concanavalin A beads, digitonin]
+    origin: external
+  links:
+    - kind: docs
+      url: https://doi.org/10.17504/protocols.io.zcpf2vn
+      label: protocols.io canonical version
+  papers:
+    - paper_id: 10.17504/protocols.io.zcpf2vn
+      role: primary
+
+- entity_id: protocol:lowinput-cutrun-v2
+  type: protocol
+  name: Low-input CUT&RUN for sorted MEF populations
+  year: 2026
+  description: >
+    CUT&RUN adapted for 5,000-20,000 sorted cells, optimized for histone marks
+    during MEF reprogramming timecourses.
+  notes: >
+    The `cfc-lab` origin case. `protocol_doi` is null: schema §9 shows
+    10.17504/protocols.io.xxxxx, which is a placeholder, and no real DOI has
+    been minted yet. This entity is therefore the one seed record that will
+    fail the "every entity has a primary paper" QC check -- it is the
+    whitelisted exception the check needs to support, since an unpublished
+    in-house protocol has no paper by definition.
+  tags: [low-input, reprogramming, timecourse, histone-marks]
+  fate_axis: [where]
+  organism: [mouse]
+  cell_type: [mouse embryonic fibroblast]
+  assay: [CUT&RUN]
+  status: active
+  curator: JimYuhaoWu
+  protocol_ext:
+    validation_tier: lab-validated
+    protocol_doi: null          # FLAG: schema §9 value is a placeholder; none minted
+    canonical_host: protocols.io
+    version: "2.1"
+    duration_hours: 30
+    difficulty: moderate
+    category: [cutrun, qc]
+    key_reagents: [pA-MNase, Concanavalin A beads, digitonin]
+    origin: cfc-lab
+  papers: []

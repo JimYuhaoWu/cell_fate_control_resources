@@ -1,0 +1,42 @@
+# config/sources.yaml
+#
+# External metadata sources this pipeline reads, following the eCR_mod_lib
+# convention of recording every external URL, version and DOI in one place.
+# CFCR stores only open metadata (schema §2.2): no full text of paywalled work.
+
+metadata_apis:
+  - name: crossref
+    url: https://api.crossref.org/works
+    purpose: DOI resolution, titles, author lists, venues
+    contact_email: yuhaow9412@gmail.com   # Crossref asks for a contact in the UA
+  - name: europepmc
+    url: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+    purpose: abstracts Crossref omits, chiefly for Nature-family journals
+  - name: arxiv
+    url: http://export.arxiv.org/api/query
+    purpose: papers at venues that mint no DOI (ICLR, ICML)
+    note: rate-limited; one request every few seconds
+
+ontologies:
+  - name: NCBITaxon
+    facet: organism
+    resolver: https://www.ebi.ac.uk/ols4/api/search
+  - name: CL
+    facet: cell_type
+    resolver: https://www.ebi.ac.uk/ols4/api/search
+    note: does not model immortalized cell lines; EFO is used for those
+  - name: EFO
+    facet: [cell_type, assay]
+    resolver: https://www.ebi.ac.uk/ols4/api/search
+
+sibling_projects:
+  - name: eCR_mod_lib
+    url: https://github.com/JimYuhaoWu/eCR_mod_lib
+    purpose: >
+      Tier 2 module records (~10,800 DBD/ED/CR). Joined from CFCR via
+      module_collection_ext.ecr_lib_source_key -> eCR_mod_lib source_screen.
+  - name: interp-extrap-perturb
+    url: https://interp-extrap-perturb.readthedocs.io
+    purpose: >
+      Authoritative catalogue for the `what` axis (perturbation methods).
+      CFCR links out rather than competing.

@@ -1,0 +1,54 @@
+# vocab/architecture.yaml — controlled facet: architecture
+# Local vocabulary; serves model_ext.architecture. Terms are the enum in
+# schema §3.1 and are a closed set by design -- a model combining two of them
+# lists both rather than being tagged `hybrid`, which is reserved for designs
+# that are not decomposable into the others.
+
+- term: cnn
+  ontology_id: null
+  synonyms: [convolutional, convolutional neural network, dilated convolution, resnet]
+  facet: architecture
+
+- term: transformer
+  ontology_id: null
+  synonyms: [attention, self-attention, multi-head attention]
+  facet: architecture
+
+- term: ssm
+  ontology_id: null
+  synonyms: [state space model, mamba, hyena, striped hyena]
+  facet: architecture
+
+- term: diffusion
+  ontology_id: null
+  synonyms: [denoising diffusion, score-based model]
+  facet: architecture
+
+- term: vae
+  ontology_id: null
+  synonyms: [variational autoencoder, autoencoder]
+  facet: architecture
+
+- term: gan
+  ontology_id: null
+  synonyms: [generative adversarial network]
+  facet: architecture
+
+- term: flow
+  ontology_id: null
+  synonyms: [normalizing flow, flow matching]
+  facet: architecture
+
+# Absent from the schema §3.1 enum, which predates any perturbation-model
+# entry. Added bottom-up from records/models.yaml (model:gears): graph neural
+# networks are the dominant architecture on the `what` axis, so the closed enum
+# could not express the first record that needed it.
+- term: gnn
+  ontology_id: null
+  synonyms: [graph neural network, GNN, graph convolutional network, GCN, message passing]
+  facet: architecture
+
+- term: hybrid
+  ontology_id: null
+  synonyms: [mixed architecture]
+  facet: architecture

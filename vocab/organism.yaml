@@ -1,0 +1,24 @@
+# vocab/organism.yaml — controlled facet: organism
+# Ontology: NCBITaxon. IDs verified against EBI OLS4.
+# Seeded only with terms used by records/ — this vocabulary grows bottom-up
+# from real records (schema §4), never designed in advance.
+
+- term: human
+  ontology_id: NCBITaxon:9606
+  synonyms: [Homo sapiens, H. sapiens, hg38, hg19]
+  facet: organism
+
+- term: mouse
+  ontology_id: NCBITaxon:10090
+  synonyms: [Mus musculus, M. musculus, mm10, mm39, murine]
+  facet: organism
+
+# No single NCBITaxon node expresses "trained across many species" without
+# claiming a specific clade, and NCBITaxon:1 (root) would be actively
+# misleading for a model trained on, say, bacteria and eukaryotes but not
+# archaea. Kept as a local term with a null ID; revisit if the backfill makes
+# the specific clades worth distinguishing.
+- term: multi-species
+  ontology_id: null
+  synonyms: [pan-species, cross-species, multispecies, all domains of life]
+  facet: organism

@@ -1,0 +1,134 @@
+# records/module_libraries.yaml
+#
+# Tier 1 only: module *collections* as first-class entities (schema §6). The
+# ~10,800 individual DBD/ED/CR records stay in eCR_mod_lib behind its own
+# load(), reached from here via `ecr_lib_source_key` and a `dataset` link.
+#
+# entity_id prefix is `module:` to match `type: module`. The schema §6.1
+# worked example uses `modlib:`, which QC would reject -- prefix must equal
+# type so that type can be checked from the id.
+
+- entity_id: module:tycko-2025-compact-effectors
+  type: module
+  name: Tycko 2025 compact effector domains
+  aliases: [Tycko compact effectors]
+  year: 2024
+  description: >
+    HT-recruit screen of compact activation and repression domains measured
+    across multiple cellular contexts; 38 CD2 activation domains and 1,223 CD43
+    repression domains.
+  notes: >
+    `year: 2024` is the verified Nature Biotechnology issue year. The
+    collection is known in the lab as "Tycko 2025" and
+    `ecr_lib_source_key: Tycko_2025` is kept unchanged because it is the join
+    key into eCR_mod_lib's `source_screen` column -- changing it would break
+    the deep link for cosmetic consistency.
+  tags: [ht-recruit, compact-effector, crispri, context-dependence]
+  fate_axis: [with-what]
+  organism: [human]
+  cell_type: [K562]
+  assay: [HT-recruit]
+  task: [effector-domain-discovery]
+  status: active
+  curator: JimYuhaoWu
+  module_collection_ext:
+    module_types: [ED]
+    n_records: 1261
+    dominant_validation_level: screen-validated
+    assay_format: HT-recruit
+    organism_scope: [human]
+    integrated_in_ecr_lib: true
+    ecr_lib_source_key: Tycko_2025
+  links:
+    - kind: supplementary
+      url: https://www.nature.com/articles/s41587-024-02442-6
+      label: Supplementary Table ST3
+    - kind: dataset
+      url: https://github.com/JimYuhaoWu/eCR_mod_lib
+      label: integrated records (filter source_screen=Tycko_2025)
+  papers:
+    - paper_id: 10.1038/s41587-024-02442-6
+      role: primary
+
+- entity_id: module:delrosso-2023-effector-domains
+  type: module
+  name: DelRosso 2023 human transcriptional effector domains
+  aliases: [DelRosso effector domains]
+  year: 2023
+  description: >
+    Large-scale mapping and systematic mutagenesis of human transcriptional
+    effector domains by HT-recruit, establishing sequence determinants of
+    activation and repression across a broad survey of annotated domains.
+  notes: >
+    The mutagenesis arm is what distinguishes this from a pure discovery
+    screen: it reports which residues matter, not only which domains work,
+    which is the difference between a parts list and a design rule.
+    `n_records` is null -- the domain count is reported across several
+    screen arms in the paper and was not confirmable from open metadata.
+  tags: [ht-recruit, mutagenesis, activation-domain, repression-domain, sequence-determinants]
+  fate_axis: [with-what]
+  organism: [human]
+  cell_type: [K562]
+  assay: [HT-recruit]
+  task: [effector-domain-discovery]
+  status: active
+  curator: JimYuhaoWu
+  module_collection_ext:
+    module_types: [ED]
+    n_records: null             # FLAG: count spans several screen arms; unverified
+    dominant_validation_level: screen-validated
+    assay_format: HT-recruit
+    organism_scope: [human]
+    integrated_in_ecr_lib: true
+    ecr_lib_source_key: DelRosso_2023
+  links:
+    - kind: supplementary
+      url: https://www.nature.com/articles/s41586-023-05906-y
+      label: Supplementary tables
+    - kind: dataset
+      url: https://github.com/JimYuhaoWu/eCR_mod_lib
+      label: integrated records (filter source_screen=DelRosso_2023)
+  papers:
+    - paper_id: 10.1038/s41586-023-05906-y
+      role: primary
+    - paper_id: 10.1101/2022.08.26.505496
+      role: preprint
+
+- entity_id: module:epifactors-2022-chromatin-regulators
+  type: module
+  name: EpiFactors 2022 epigenetic regulators
+  aliases: [EpiFactors, EpiFactors 2.0]
+  year: 2022
+  description: >
+    Curated database of human epigenetic regulators, protein complexes and
+    their functional annotation, covering chromatin-modifying enzymes,
+    remodelers and reader domains.
+  notes: >
+    Curated annotation rather than a screen, so `dominant_validation_level` is
+    `predicted` -- the entries are literature-asserted functional assignments,
+    not measurements in a recruitment assay. That difference is exactly what
+    the validation-level vocabulary exists to carry, and it matters when
+    picking a chromatin remodeler to build an eCR from.
+  tags: [chromatin-remodeler, curated-annotation, complexes, epigenetic-enzyme]
+  fate_axis: [with-what]
+  organism: [human]
+  task: [effector-domain-discovery]
+  status: active
+  curator: JimYuhaoWu
+  module_collection_ext:
+    module_types: [CR]
+    n_records: null             # FLAG: release record count not verified
+    dominant_validation_level: predicted
+    assay_format: curated-annotation
+    organism_scope: [human]
+    integrated_in_ecr_lib: true
+    ecr_lib_source_key: EpiFactors_2022
+  links:
+    - kind: website
+      url: https://epifactors.autosome.org
+    - kind: dataset
+      url: https://github.com/JimYuhaoWu/eCR_mod_lib
+      label: integrated records (filter source_screen=EpiFactors_2022)
+  papers:
+    - paper_id: 10.1093/nar/gkac989
+      role: primary

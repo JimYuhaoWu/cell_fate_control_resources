@@ -71,6 +71,9 @@
     - paper_id: 10.1038/s41588-023-01574-w
       role: critique
       note: Personal transcriptome variation poorly explained.
+    - paper_id: 10.64898/2026.02.04.703796
+      role: benchmark
+      note: Fine-mapping reproducibility vs GTEx/TOPMed/MAGE.
 
 - entity_id: model:borzoi
   type: model
@@ -97,7 +100,7 @@
   supersedes: model:enformer
   curator: JimYuhaoWu
   model_ext:
-    evidence_tier: self-reported
+    evidence_tier: externally-benchmarked
     availability_tier: open-source
     model_family: interval-model
     architecture: [cnn, transformer]
@@ -126,6 +129,9 @@
     - paper_id: 10.1093/bioinformatics/btaf467
       role: extension
       note: Flashzoi -- see model:flashzoi
+    - paper_id: 10.64898/2026.02.04.703796
+      role: benchmark
+      note: Fine-mapping reproducibility vs GTEx/TOPMed/MAGE.
 
 - entity_id: model:flashzoi
   type: model
@@ -177,3 +183,245 @@
       role: primary
     - paper_id: 10.1101/2024.12.18.629121
       role: preprint
+
+- entity_id: model:alphagenome
+  type: model
+  name: AlphaGenome
+  aliases: [alphagenome]
+  year: 2025
+  description: >
+    Unified DNA sequence model taking 1 Mb of input and predicting thousands of
+    functional genomic tracks at base resolution across multiple modalities,
+    covering regulatory variant effect prediction in one model rather than a
+    per-assay family.
+  notes: >
+    The only api-only entry in the seed, and the reason that tier exists: there
+    are no weights to download and no license to read, so reproducibility and
+    long-term availability rest on Google continuing to serve the endpoint.
+    Independently evaluated for fine-mapping reproducibility by Sweeney & Kang
+    alongside Borzoi, Enformer and Sei.
+  tags: [deepmind, multimodal, base-resolution, api]
+  fate_axis: [where]
+  organism: [human, mouse]
+  assay: [RNA-seq, ATAC-seq, DNase-seq, ChIP-seq, CAGE]
+  task: [coverage-prediction, variant-effect-prediction, splicing-prediction,
+         chromatin-accessibility-prediction]
+  status: active
+  curator: JimYuhaoWu
+  model_ext:
+    evidence_tier: externally-benchmarked
+    availability_tier: api-only
+    model_family: interval-model
+    architecture: [cnn, transformer]
+    input_type: genomic-interval
+    input_context_bp: 1000000
+    output_type: [coverage-track, variant-effect]
+    output_resolution_bp: 1
+    n_parameters: null          # FLAG: not disclosed
+    genome_build: [hg38, mm10]
+    license: null               # FLAG: API terms of use, not an SPDX license
+  links:
+    - kind: api
+      url: https://deepmind.google.com/science/alphagenome
+      label: AlphaGenome API
+  papers:
+    - paper_id: 10.1038/s41586-025-10014-0
+      role: primary
+    - paper_id: 10.1101/2025.06.25.661532
+      role: preprint
+    - paper_id: 10.64898/2026.02.04.703796
+      role: benchmark
+      note: Fine-mapping reproducibility vs GTEx/TOPMed/MAGE.
+
+- entity_id: model:nucleotide-transformer
+  type: model
+  name: Nucleotide Transformer
+  aliases: [NT, nucleotide-transformer, SegmentNT]
+  year: 2023
+  description: >
+    Family of transformer DNA language models pretrained on human and
+    multi-species genomes, released as a set of checkpoints from 50M to 2.5B
+    parameters and evaluated by probing on downstream regulatory tasks.
+  notes: >
+    The `open-weights` case, and the reason that tier is distinct from
+    `open-source`: inference code is on GitHub, but the published checkpoints
+    carry CC-BY-NC-SA-4.0, which forbids commercial use and imposes share-alike
+    on derivatives. Anyone building a product on this needs to read the license
+    before the paper. Checkpoint sizes span two orders of magnitude, so
+    `n_parameters` is left null -- the entity is the family, not one checkpoint.
+  tags: [instadeep, foundation-model, probing, non-commercial-license]
+  fate_axis: [how]
+  organism: [human, multi-species]
+  assay: [ATAC-seq, DNase-seq, ChIP-seq]
+  task: [representation-learning, chromatin-accessibility-prediction,
+         histone-modification-prediction, splicing-prediction]
+  status: active
+  curator: JimYuhaoWu
+  model_ext:
+    evidence_tier: externally-benchmarked
+    availability_tier: open-weights
+    model_family: dna-lm
+    architecture: [transformer]
+    input_type: sequence
+    input_context_bp: 12288
+    output_type: [embedding, scalar]
+    output_resolution_bp: null
+    n_parameters: null          # FLAG: family spans 50M-2.5B; one INT cannot hold it
+    genome_build: [hg38]
+    license: CC-BY-NC-SA-4.0
+  links:
+    - kind: code
+      url: https://github.com/instadeepai/nucleotide-transformer
+    - kind: weights
+      url: https://huggingface.co/InstaDeepAI
+      label: checkpoint collection (CC-BY-NC-SA-4.0)
+  papers:
+    - paper_id: 10.1038/s41592-024-02523-z
+      role: primary
+    - paper_id: 10.1101/2023.01.11.523679
+      role: preprint
+    - paper_id: arxiv:2311.12570
+      role: benchmark
+      note: BEND -- biologically meaningful genome annotation tasks.
+    - paper_id: 10.52202/079017-1981
+      role: benchmark
+      note: DART-Eval -- regulatory DNA, zero-shot/probed/fine-tuned vs ab initio.
+
+- entity_id: model:evo2
+  type: model
+  name: Evo 2
+  aliases: [evo2, Evo-2]
+  year: 2025
+  description: >
+    Genome language model trained on 3 trillion DNA base pairs spanning all
+    domains of life, with 7B and 40B parameter variants, a 1 million token
+    context window at single-nucleotide resolution, and both variant-effect
+    scoring and genome design applications.
+  notes: >
+    Trained across all domains of life rather than one clade, so `organism`
+    carries the local term `multi-species` -- no single NCBITaxon node says
+    this without claiming a specific clade. Two parameter variants ship
+    together as one release, so `n_parameters` is null; see the description for
+    both figures.
+  tags: [arc-institute, striped-hyena, long-context, generative, all-domains]
+  fate_axis: [how]
+  organism: [multi-species, human]
+  task: [representation-learning, variant-effect-prediction, sequence-generation]
+  status: active
+  curator: JimYuhaoWu
+  model_ext:
+    evidence_tier: self-reported
+    availability_tier: open-source
+    model_family: dna-lm
+    architecture: [ssm, transformer]
+    input_type: sequence
+    input_context_bp: 1000000
+    output_type: [embedding, sequence, variant-effect]
+    output_resolution_bp: 1
+    n_parameters: null          # FLAG: 7B and 40B variants; one INT cannot hold both
+    license: Apache-2.0
+  links:
+    - kind: code
+      url: https://github.com/ArcInstitute/evo2
+  papers:
+    - paper_id: 10.1101/2025.02.18.638918
+      role: primary
+
+- entity_id: model:chrombpnet
+  type: model
+  name: ChromBPNet
+  aliases: [chrombpnet]
+  year: 2024
+  description: >
+    Base-resolution model of chromatin accessibility profiles that factorizes
+    out assay-specific enzyme bias, letting learned cis-regulatory sequence
+    syntax and TF motif contributions be read off the prediction directly.
+  notes: >
+    Narrow input window compared with the Enformer/Borzoi line -- it models
+    local accessibility syntax rather than long-range regulation, which is why
+    it answers a different `where` question despite sharing the axis.
+    Evaluated as an ab initio baseline in DART-Eval, whose author list overlaps
+    with this one through Kundaje, so the derivation should land it at
+    `partially-independent` rather than `externally-benchmarked`.
+  tags: [kundaje, bias-correction, base-resolution, motif-syntax]
+  fate_axis: [where]
+  organism: [human, mouse]
+  cell_type: [K562]
+  assay: [ATAC-seq, DNase-seq]
+  task: [chromatin-accessibility-prediction, motif-discovery,
+         variant-effect-prediction, tf-binding-prediction]
+  status: active
+  curator: JimYuhaoWu
+  model_ext:
+    evidence_tier: partially-independent
+    availability_tier: open-source
+    model_family: interval-model
+    architecture: [cnn]
+    input_type: genomic-interval
+    input_context_bp: 2114
+    output_type: [coverage-track, variant-effect]
+    output_resolution_bp: 1
+    n_parameters: null          # FLAG: not stated in the abstract
+    genome_build: [hg38, mm10]
+    license: MIT
+  links:
+    - kind: code
+      url: https://github.com/kundajelab/chrombpnet
+  papers:
+    - paper_id: 10.1101/2024.12.25.630221
+      role: primary
+    - paper_id: 10.52202/079017-1981
+      role: benchmark
+      note: >
+        DART-Eval, as an ab initio baseline. Shares an author (Kundaje) with
+        the primary paper -- the partially-independent case.
+
+- entity_id: model:gears
+  type: model
+  name: GEARS
+  aliases: [gears]
+  year: 2022
+  description: >
+    Graph neural network predicting transcriptional outcomes of multigene
+    perturbations, including combinations never seen in training, by combining
+    a gene co-expression graph with a knowledge graph of gene ontology
+    relations.
+  notes: >
+    Deliberately shallow. Perturbation modelling is covered properly by the
+    Stegle group's living catalogue (>152 methods, Nat Rev Genet 2026) and CFCR
+    points outward rather than competing -- see the `website` link. GEARS is
+    here as the representative entry so the `what` axis is not empty, not as
+    the start of a perturbation index.
+    `architecture` required a new vocabulary term: GNN is absent from the
+    schema §3.1 enum, and it is the dominant architecture on this axis.
+  tags: [perturbation, gnn, combinatorial, leskovec, shallow-by-design]
+  fate_axis: [what]
+  organism: [human]
+  cell_type: [K562]
+  assay: [Perturb-seq]
+  task: [perturbation-response-prediction]
+  status: active
+  curator: JimYuhaoWu
+  model_ext:
+    evidence_tier: self-reported
+    availability_tier: open-source
+    model_family: perturbation-model
+    architecture: [gnn]
+    input_type: expression-matrix
+    output_type: [cell-state]
+    n_parameters: null          # FLAG: not stated in the abstract
+    license: null               # FLAG: no LICENSE file found in the repository
+  links:
+    - kind: code
+      url: https://github.com/snap-stanford/GEARS
+    - kind: website
+      url: https://interp-extrap-perturb.readthedocs.io
+      label: Stegle group perturbation-method catalogue (authoritative for this axis)
+  papers:
+    - paper_id: 10.1038/s41587-023-01905-6
+      role: primary
+    - paper_id: 10.1101/2022.07.12.499735
+      role: preprint
+    - paper_id: 10.1038/s41576-025-00920-4
+      role: review
+      note: Nat Rev Genet perturbation-modelling catalogue and ontology.

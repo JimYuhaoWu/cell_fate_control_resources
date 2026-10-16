@@ -1,0 +1,127 @@
+# records/benchmarks.yaml
+#
+# CFCR indexes benchmarks; it does not run them and stores no per-model scores
+# (schema §11). GENEB owns evaluation. What this file records is what each
+# benchmark covers, how it evaluates, and whether anyone else can submit to it.
+
+- entity_id: benchmark:geneb
+  type: benchmark
+  name: GENEB
+  aliases: [geneb]
+  year: 2026
+  description: >
+    Unified probing benchmark covering 40 genomic foundation models across 100
+    tasks in 13 functional categories, with leaderboard artifacts built by CI
+    from reviewed submissions rather than hand-edited.
+  notes: >
+    The headline finding is the reason CFCR does not store scores: aggregate
+    leaderboards are unstable, rankings vary sharply across task categories,
+    and scale gives modest and inconsistent gains. Any single number CFCR
+    copied here would be misleading within a release cycle. Submission-open and
+    CI-built, so it stays current in a way a curated table cannot.
+  tags: [leaderboard, probing, foundation-model, instability]
+  fate_axis: [how, where]
+  organism: [human]
+  task: [representation-learning, variant-effect-prediction,
+         chromatin-accessibility-prediction, gene-expression-prediction]
+  status: active
+  curator: JimYuhaoWu
+  benchmark_ext:
+    n_tasks: 100
+    n_models_evaluated: 40
+    task_categories: [representation-learning, variant-effect-prediction,
+                      chromatin-accessibility-prediction,
+                      gene-expression-prediction]
+    evaluation_mode: [probed]
+    has_leaderboard: true
+    leaderboard_url: null       # FLAG: HuggingFace Space reported but URL unverified
+    submission_open: true
+    baseline_included: true
+  links:
+    - kind: code
+      url: https://github.com/darlednik/GENEB
+  papers:
+    - paper_id: arxiv:2606.04525
+      role: primary
+
+- entity_id: benchmark:bend
+  type: benchmark
+  name: BEND
+  aliases: [bend]
+  year: 2023
+  description: >
+    Benchmark of DNA language models on biologically meaningful genome
+    annotation tasks -- chromatin accessibility, histone modification, CpG
+    methylation and variant effects -- rather than on synthetic proxies.
+  notes: >
+    Finding worth carrying: DNA LM embeddings approach expert methods on some
+    tasks but capture limited long-range information. `year: 2023` is the arXiv
+    posting; the venue is ICLR 2024. No DOI -- ICLR mints none, so `paper_id`
+    falls back to the arXiv ID per schema §2.2.
+  tags: [dna-lm, genome-annotation, iclr, long-range-limits]
+  fate_axis: [how]
+  organism: [human]
+  assay: [ATAC-seq, DNase-seq, ChIP-seq]
+  task: [chromatin-accessibility-prediction, histone-modification-prediction,
+         variant-effect-prediction, representation-learning]
+  status: active
+  curator: JimYuhaoWu
+  benchmark_ext:
+    n_tasks: null               # FLAG: task count not verified from open metadata
+    n_models_evaluated: null    # FLAG: not verified
+    task_categories: [chromatin-accessibility-prediction,
+                      histone-modification-prediction,
+                      variant-effect-prediction]
+    evaluation_mode: [probed]
+    has_leaderboard: false
+    leaderboard_url: null
+    submission_open: false
+    baseline_included: true
+  links:
+    - kind: code
+      url: https://github.com/frederikkemarin/BEND
+  papers:
+    - paper_id: arxiv:2311.12570
+      role: primary
+
+- entity_id: benchmark:dart-eval
+  type: benchmark
+  name: DART-Eval
+  aliases: [DART-Eval, dart-eval]
+  year: 2024
+  description: >
+    Regulatory-DNA focused evaluation suite comparing DNA language models
+    against ab initio sequence baselines across zero-shot, probed and
+    fine-tuned regimes.
+  notes: >
+    The finding that makes this the most useful benchmark in the seed:
+    annotation-agnostic DNA LMs are inconsistent and show no compelling gain
+    over ab initio baselines. Because it includes those baselines, it functions
+    as a critique of the DNA LM programme as much as a benchmark of it.
+    Its author list overlaps with ChromBPNet's through Kundaje, which is why
+    model:chrombpnet derives as partially-independent rather than externally
+    benchmarked.
+  tags: [regulatory-dna, ab-initio-baseline, neurips, kundaje]
+  fate_axis: [how, where]
+  organism: [human]
+  assay: [ATAC-seq, DNase-seq]
+  task: [variant-effect-prediction, tf-binding-prediction,
+         chromatin-accessibility-prediction, representation-learning]
+  status: active
+  curator: JimYuhaoWu
+  benchmark_ext:
+    n_tasks: 5
+    n_models_evaluated: null    # FLAG: not verified from open metadata
+    task_categories: [variant-effect-prediction, tf-binding-prediction,
+                      chromatin-accessibility-prediction]
+    evaluation_mode: [zero-shot, probed, fine-tuned]
+    has_leaderboard: false
+    leaderboard_url: null
+    submission_open: false
+    baseline_included: true
+  links:
+    - kind: code
+      url: https://github.com/kundajelab/DART-Eval
+  papers:
+    - paper_id: 10.52202/079017-1981
+      role: primary

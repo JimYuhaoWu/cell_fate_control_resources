@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cfcr"
+version = "0.1.0"
+description = "Cell Fate Control Resources: a curated index of models, benchmarks, datasets, module collections, protocols and databases for controlling cell fate"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Yuhao Wu" }]
+keywords = ["genomics", "cell fate", "chromatin", "deep learning", "curation"]
+dependencies = [
+    "pandas",
+    "pyyaml",
+]
+
+[project.urls]
+Homepage = "https://github.com/JimYuhaoWu/cell_fate_control_resources"
+Repository = "https://github.com/JimYuhaoWu/cell_fate_control_resources"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cfcr*"]

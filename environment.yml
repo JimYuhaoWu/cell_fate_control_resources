@@ -1,0 +1,16 @@
+# Conda environment for CFCR.
+#
+# The name is `cfcr`, a sibling of the `ecr` environment used by eCR_mod_lib
+# rather than a reuse of it: `conda env create` refuses to write into an
+# existing environment, so sharing the name would make this file unusable on
+# any machine that already has `ecr` -- which is every machine that runs the
+# module library. Both environments can be active in separate shells, and
+# eCR_mod_lib stays importable from `cfcr` if it is pip-installed into it.
+name: cfcr
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pandas
+  - pyyaml
+  - pip

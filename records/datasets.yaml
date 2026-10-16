@@ -1,0 +1,118 @@
+# records/datasets.yaml
+#
+# Datasets are catalogued when they are the thing people actually need to
+# reuse -- the exact train/val/test intervals behind a model, or a reference
+# perturbation atlas. `fate_axis` is inherited from what the dataset serves
+# (schema §5).
+
+- entity_id: dataset:borzoi-data
+  type: dataset
+  name: Borzoi training intervals
+  aliases: [Genentech/borzoi-data, borzoi-data]
+  year: 2023
+  description: >
+    The genomic intervals and train/validation/test fold assignments used to
+    train Borzoi, released as TSV for human and mouse.
+  notes: >
+    Catalogued separately from model:borzoi because fold assignment is what
+    makes an independent evaluation comparable. Anyone benchmarking against
+    Borzoi who re-splits the genome themselves is not measuring the same thing.
+    Record counts are deliberately null: the landscape doc cites 55,497 human
+    and 49,369 mouse intervals, which is two numbers and one `n_records`
+    column, and neither figure was confirmable from the repository metadata.
+  tags: [training-data, folds, intervals, reproducibility]
+  fate_axis: [where]
+  organism: [human, mouse]
+  assay: [RNA-seq, ATAC-seq, DNase-seq, ChIP-seq, CAGE]
+  task: [coverage-prediction]
+  status: active
+  curator: JimYuhaoWu
+  dataset_ext:
+    n_records: null             # FLAG: per-organism split; see notes
+    record_unit: intervals
+    modality: [rna, atac, dnase, chip, cage]
+    accession: []
+    genome_build: [hg38, mm10]
+    access: open
+    license: MIT
+  links:
+    - kind: dataset
+      url: https://huggingface.co/datasets/Genentech/borzoi-data
+  papers:
+    - paper_id: 10.1038/s41588-024-02053-6
+      role: primary
+
+- entity_id: dataset:enformer-data
+  type: dataset
+  name: Enformer training intervals
+  aliases: [Genentech/enformer-data, enformer-data]
+  year: 2021
+  description: >
+    The genomic intervals and fold assignments used to train Enformer, released
+    as TSV for human and mouse.
+  notes: >
+    Same reasoning as dataset:borzoi-data. Useful mainly for like-for-like
+    comparison against the Enformer line; the landscape doc cites 38,171 human
+    and 33,521 mouse intervals, again unconfirmed from repository metadata.
+  tags: [training-data, folds, intervals, reproducibility]
+  fate_axis: [where]
+  organism: [human, mouse]
+  assay: [CAGE, DNase-seq, ChIP-seq]
+  task: [coverage-prediction]
+  status: active
+  curator: JimYuhaoWu
+  dataset_ext:
+    n_records: null             # FLAG: per-organism split; see notes
+    record_unit: intervals
+    modality: [cage, dnase, chip]
+    accession: []
+    genome_build: [hg38, mm10]
+    access: open
+    license: MIT
+  links:
+    - kind: dataset
+      url: https://huggingface.co/datasets/Genentech/enformer-data
+  papers:
+    - paper_id: 10.1038/s41592-021-01252-x
+      role: primary
+
+- entity_id: dataset:replogle-2022-perturb-seq
+  type: dataset
+  name: Replogle 2022 genome-scale Perturb-seq atlas
+  aliases: [Replogle Perturb-seq, genome-wide Perturb-seq]
+  year: 2022
+  description: >
+    Genome-scale Perturb-seq screens in human cell lines, knocking down
+    essentially all expressed genes and reading out single-cell transcriptomes,
+    providing the reference training and evaluation data for perturbation
+    response models.
+  notes: >
+    Catalogued on the `what` axis as the dataset that most perturbation models
+    in the adjacent literature are trained or evaluated on, including
+    model:gears. CFCR holds the pointer; the Stegle catalogue holds the method
+    landscape.
+  tags: [perturb-seq, crispri, genome-scale, reference-atlas]
+  fate_axis: [what]
+  organism: [human]
+  cell_type: [K562]
+  assay: [Perturb-seq]
+  task: [perturbation-response-prediction]
+  status: active
+  curator: JimYuhaoWu
+  dataset_ext:
+    n_records: null             # FLAG: cell count not verified from open metadata
+    record_unit: cells
+    modality: [perturb-seq, rna]
+    accession: []               # FLAG: GEO accession not verified
+    genome_build: [hg38]
+    access: open
+    license: null               # FLAG: not verified
+  links:
+    - kind: website
+      url: https://gwps.wi.mit.edu
+      label: Genome-wide Perturb-seq data portal
+  papers:
+    - paper_id: 10.1016/j.cell.2022.05.013
+      role: primary
+    - paper_id: 10.1101/2021.12.16.473013
+      role: preprint
