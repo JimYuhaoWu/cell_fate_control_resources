@@ -3,8 +3,23 @@
 **Cell Fate Control Resources** — data model for a curated hub of models,
 benchmarks, datasets, modules, protocols, and the papers that evidence them.
 
-**Status:** draft for review · 2026-10-16
-**Designed to extend:** `JimYuhaoWu/eCR_mod_lib` pipeline pattern, not replace it.
+**Status:** v0.1 design draft, 2026-10-16. Kept as the record of what was
+designed; the implementation has since amended it in the four places listed
+below. Where the two disagree, the code and `README.md` are authoritative.
+**Designed to extend:** the `eCR_mod_lib` pipeline pattern, not replace it.
+
+### Amendments made during implementation
+
+| § | As drafted | As built | Why |
+|---|---|---|---|
+| 3.1 | `evidence_tier` has two values | Three: `externally-benchmarked`, `partially-independent`, `self-reported` | Independence is not binary. An evaluation sharing some authors with the primary paper, but under half of its own author list, is neither independent nor a self-report, and the two-value enum discarded it |
+| 3.1 | `n_parameters INTEGER` | `n_parameters_min` / `n_parameters_max` | Several models ship as a family of checkpoints under one name, so one integer collapsed "ships in four sizes" into the same null as "nobody published the figure" |
+| 7 | Three committed snapshots | Four, adding `db/links.tsv` | Links were written to SQLite but exported nowhere, so the loader could not see them and the site could link to papers but to no actual resource |
+| 6.1 | `modlib:` entity-id prefix | `module:` | QC enforces that the id prefix equals `type`, so the type can be read from the id |
+
+Two further gaps found while building are recorded in
+`reports/seed_flags.md`: `vocab.facet` cannot be a DDL enum, and
+`protocol_ext.category` is described as controlled but ships no vocabulary.
 
 ---
 
@@ -140,7 +155,7 @@ Each joins 1:1 to `entity` on `entity_id`.
 
 ### 3.1 `model_ext`
 
-**Two orthogonal quality axes, per your spec.**
+**Two orthogonal quality axes.**
 
 | Column | Type | Notes |
 |---|---|---|

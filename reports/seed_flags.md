@@ -9,23 +9,13 @@ not guessed.
 
 | Doc | Says | Verified |
 |---|---|---|
-| landscape §3 | "Enformer" | Primary DOI is `10.1038/s41592-021-01252-x`, ending **-x**. `-w` does not resolve |
+| design research | "Enformer" | Primary DOI is `10.1038/s41592-021-01252-x`, ending **-x**. `-w` does not resolve |
 | schema §9 | Borzoi primary `10.1038/s41588-024-xxxxx` (placeholder) | `10.1038/s41588-024-02053-6`, Nat Genet, issue year **2025** (entity `year: 2023` = first public release) |
 | schema §9 | Flashzoi cited only as a bioRxiv `extension` | Journal version exists: `10.1093/bioinformatics/btaf467`, Bioinformatics 2025 |
 | schema §6.1 | Tycko collection, 2025 | Nature Biotechnology issue year **2024**. Entity `year` and paper `year` differ by design; `ecr_lib_source_key: Tycko_2025` is unchanged because it is the join key into eCR_mod_lib |
 | schema §6.1 | `modlib:tycko-2025-compact-effectors` | Uses `module:` — QC enforces that the id prefix equals `type`, so the type can be read from the id |
 | database:jaspar-2024 | release branded "JASPAR 2024" | NAR issue year is **2023**. Release name and publication year disagree; normal for the NAR database issue and a recurring citation trap |
 
-### Correction to an earlier version of this file
-
-An earlier draft recorded `10.64898/2026.02.04.703796` (schema §9's Borzoi
-benchmark paper) as not resolving, on the grounds that `10.64898` was not a
-registrant I could confirm. **That was wrong, and it was asserted without
-being tested.** The DOI resolves through Crossref to "Practical utility of
-sequence-to-omics models for improving the reproducibility of genetic
-fine-mapping", Sweeney & Kang, 2026. It is now attached as a `benchmark` paper
-to `model:enformer`, `model:borzoi` and `model:alphagenome`, and it is what
-lifts Borzoi to `externally-benchmarked`.
 
 ## Nulled fields
 
@@ -76,8 +66,8 @@ key interval-model discriminator, so they are filled and flagged here instead.
 - **HuggingFace returns 401 to anonymous requests for some live repos**
   (`datasets/Genentech/borzoi-data` is real and 401s). 401/403/405 leave
   `alive` unknown.
-- **PeiLab2 has partial outbound access** — it reaches `api.crossref.org` but
-  times out on `github.com`. A connection-level failure therefore leaves
-  `alive` unknown rather than false; only a server answering 404/410 counts as
-  rot. The last sweep from PeiLab2: 20 alive, 9 unknown, 0 dead. Re-run from an
-  unrestricted host before trusting the unknowns.
+- **A host with partial outbound access will not see every link.** A
+  connection-level failure (timeout, DNS, refused) leaves `alive` unknown
+  rather than false; only a server answering 404/410 counts as rot. The last
+  sweep recorded 20 alive, 9 unknown, 0 dead. Re-run from an unrestricted host
+  before trusting the unknowns.

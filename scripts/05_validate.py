@@ -426,11 +426,11 @@ def check_links(db, rep, do_sweep, timeout=8.0):
         except Exception as exc:                  # noqa: BLE001
             # Connection-level failure: timeout, DNS, refused. This says
             # nothing about the link -- it says the sweep could not reach it
-            # from here. PeiLab2, for one, resolves api.crossref.org but times
-            # out on github.com, so marking these dead would write alive=0 for
-            # every GitHub link in the catalogue and churn the snapshot with
-            # false deaths. Only a server that answers 404/410 is evidence of
-            # rot, so `alive` stays unknown.
+            # from here. A host behind a restrictive network may resolve one
+            # domain and time out on another, so marking these dead would
+            # write alive=0 for every link to the blocked domain and churn the
+            # snapshot with false deaths. Only a server that answers 404/410 is
+            # evidence of rot, so `alive` stays unknown.
             alive = None
             rep.add(WARNING, "link-rot", link["entity_id"],
                     f"{url} unreachable from this host "

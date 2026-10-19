@@ -155,9 +155,9 @@ Add it when there is a corpus big enough to evaluate it on.
 
 `.github/workflows/pages.yml` deploys `site/` to GitHub Pages on every push to
 `main` that touches it. Classic Pages publishes only the repository root or a
-folder named `docs/`, and `docs/` holds the schema draft and the landscape
-research — deploying from Actions keeps those documents off the web and lets
-`site/` be the published root. Enable it once under *Settings → Pages →
+folder named `docs/`, and `docs/` holds the schema draft — deploying from
+Actions keeps that document off the web and lets `site/` be the published
+root. Enable it once under *Settings → Pages →
 Source → GitHub Actions*.
 
 ## Repository layout

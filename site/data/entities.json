@@ -360,7 +360,7 @@
    "cage"
   ],
   "name": "Borzoi training intervals",
-  "notes": "Catalogued separately from model:borzoi because fold assignment is what makes an independent evaluation comparable. Anyone benchmarking against Borzoi who re-splits the genome themselves is not measuring the same thing. Record counts are deliberately null: the landscape doc cites 55,497 human and 49,369 mouse intervals, which is two numbers and one `n_records` column, and neither figure was confirmable from the repository metadata.\n",
+  "notes": "Catalogued separately from model:borzoi because fold assignment is what makes an independent evaluation comparable. Anyone benchmarking against Borzoi who re-splits the genome themselves is not measuring the same thing. Record counts are deliberately null: the source release reports 55,497 human and 49,369 mouse intervals, which is two numbers and one `n_records` column, and neither figure was confirmable from the repository metadata.\n",
   "organism": [
    "human",
    "mouse"
@@ -437,7 +437,7 @@
    "chip"
   ],
   "name": "Enformer training intervals",
-  "notes": "Same reasoning as dataset:borzoi-data. Useful mainly for like-for-like comparison against the Enformer line; the landscape doc cites 38,171 human and 33,521 mouse intervals, again unconfirmed from repository metadata.\n",
+  "notes": "Same reasoning as dataset:borzoi-data. Useful mainly for like-for-like comparison against the Enformer line; the source release reports 38,171 human and 33,521 mouse intervals, again unconfirmed from repository metadata.\n",
   "organism": [
    "human",
    "mouse"

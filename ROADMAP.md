@@ -66,10 +66,10 @@ could link to papers but not to a single resource. Affected: 11 `code`,
 6 `dataset`, 4 `website`, 2 `weights`, 2 `api`, 2 `supplementary`,
 1 `container`, 1 `docs`.
 
-This mattered more than its size suggested. Landscape §1 identifies exactly
-these links as "what make it more useful than a bibliography" — without them
-CFCR *is* the bibliography it set out not to be. It was a gap in the original
-spec (kickoff item 5 named three snapshots), not a slip in the build.
+This mattered more than its size suggested: those links are what make such an
+index more useful than a bibliography — without them CFCR *is* the
+bibliography it set out not to be. It was a gap in the original
+spec, which named three snapshots, not a slip in the build.
 
 Two ways to fix, and the choice was not obvious:
 
@@ -107,7 +107,7 @@ where Europe PMC has them.
 
 ## M4 — backfill wave 1
 
-The dominant cost of the whole project. Landscape §3 has the seed list.
+The dominant cost of the whole project.
 
 - [ ] Interval models: the Basenji→Enformer→Borzoi line, Sei, ChromBPNet, scBasset, EpiGePT
 - [ ] DNA LMs: DNABERT family, HyenaDNA, Caduceus, GENA-LM, GPN/GPN-MSA, Evo, GROVER
@@ -119,7 +119,7 @@ The dominant cost of the whole project. Landscape §3 has the seed list.
 **Exit:** ~150 entities, and `reports/vocab_candidates.md` fires for the first
 time, which means the bottom-up vocabulary mechanism has actually been exercised.
 
-**Scope decision still open** (landscape §6): narrow to chromatin accessibility
+**Scope decision still open:** narrow to chromatin accessibility
 and regulatory elements, where domain judgment is strongest, or cover all of
 sequence-to-function. Worth settling before this milestone, not during it.
 
@@ -155,46 +155,33 @@ Everything schema §11 deferred, plus what M1 and M4 turn up.
 
 - [ ] Zenodo integration, DOI per release
 - [ ] CITATION.cff
-- [ ] Co-maintainer recruitment (landscape §6 lists this as an open question)
+- [ ] Co-maintainer recruitment
 - [ ] Database paper draft
 
 **Exit:** CFCR is citable, and someone other than its author has merged a record.
 
 ---
 
-## Resuming on another device
+## Building locally
 
 ```bash
-git clone https://github.com/JimYuhaoWu/cell_fate_control_resources.git
+git clone <this repository>
 cd cell_fate_control_resources
 conda env create -f environment.yml && conda activate cfcr
 pip install -e .
 python -c "from cfcr import load; print(load(type='model')[['entity_id','evidence_tier']])"
 ```
 
-Querying needs nothing but the committed TSVs. Rebuilding needs no network.
+Querying needs nothing but the committed TSVs in `db/`. Rebuilding them needs
+no network:
 
-**Where things live:**
+```bash
+python scripts/04_build.py        # records/ + vocab/ + papers.yaml -> SQLite -> TSV
+python scripts/05_validate.py     # QC; exits 1 on any ERROR
+python scripts/07_export_site.py  # site/data/*.json for the published site
+```
 
-| What | Where |
-|---|---|
-| Canonical history | `main` on GitHub |
-| Website | merged into `main`; branch `claude/loving-cohen-02b54f` kept but dormant |
-| Main-branch working copy on PeiLab2 | `/mnt3/wuyuhao/cfcr` |
-| Website working copy on PeiLab2 | `/mnt3/wuyuhao/cfcr-site` |
-| Conda interpreter on PeiLab2 | `/mnt/wuyuhao/miniconda3/envs/cfcr/bin/python` |
-
-**Git identity:** commits so far are authored as `work_station`, the macOS
-account name, because `user.name` is unset. `user.email` is set, so GitHub
-still attributes them to the right account, but the display name is wrong. Fix
-with `git config --global user.name "Yuhao Wu"` — left for you to set, since it
-affects every repository on the machine.
-
-The two server directories are deliberately separate: both sessions were
-originally pointed at `/mnt3/wuyuhao/cfcr` and overwrote each other's files
-there. Keep one working copy per branch.
-
-**Note on PeiLab2's network:** it reaches `api.crossref.org` but times out on
-`github.com`. Run `git` and `05_validate.py --check-links` from a host with
-unrestricted outbound access; the link sweep leaves `alive` unknown rather than
-false on a connection failure, precisely so this does not record false deaths.
+`scripts/05_validate.py --check-links` additionally sweeps every catalogued URL.
+Run it from a host with unrestricted outbound access: a connection-level
+failure leaves a link's `alive` unknown rather than false, precisely so a
+restricted network does not record false link rot.

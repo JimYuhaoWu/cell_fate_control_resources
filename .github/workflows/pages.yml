@@ -1,7 +1,7 @@
 # Publishes site/ to GitHub Pages.
 #
 # Classic Pages serves only the repository root or a folder named docs/, and
-# docs/ here holds the schema draft and the landscape research — publishing
+# docs/ here holds the schema draft — publishing
 # from there would put working design documents on the web. Deploying from
 # Actions lets site/ be the published root and leaves docs/ as documents.
 #

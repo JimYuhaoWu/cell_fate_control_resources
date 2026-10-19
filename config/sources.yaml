@@ -8,7 +8,9 @@ metadata_apis:
   - name: crossref
     url: https://api.crossref.org/works
     purpose: DOI resolution, titles, author lists, venues
-    contact_email: yuhaow9412@gmail.com   # Crossref asks for a contact in the UA
+    # Crossref asks for a contact address in the User-Agent. Set this to the
+    # maintainer address before running the literature pipeline.
+    contact_email: null
   - name: europepmc
     url: https://www.ebi.ac.uk/europepmc/webservices/rest/search
     purpose: abstracts Crossref omits, chiefly for Nature-family journals
