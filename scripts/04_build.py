@@ -256,10 +256,10 @@ def main() -> int:
         manifest = {
             "build_date": today,
             "script": "scripts/04_build.py",
-            "db_path": str(db_path.relative_to(root)) if db_path.is_relative_to(root)
-                       else str(db_path),
+            "db_path": db_path.relative_to(root).as_posix()
+                       if db_path.is_relative_to(root) else str(db_path),
             "inputs": {
-                str(p.relative_to(root)): sha256(p)
+                p.relative_to(root).as_posix(): sha256(p)
                 for p in [*vocab_files, *record_files, papers_file]
             },
             "upserts": {k: {"inserted": v[0], "updated": v[1]}

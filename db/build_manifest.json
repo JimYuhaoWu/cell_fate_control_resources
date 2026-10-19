@@ -1,14 +1,14 @@
 {
-  "build_date": "2026-10-16",
+  "build_date": "2026-10-19",
   "db_path": "db/cfcr.db",
   "inputs": {
-    "literature/papers.yaml": "b1bed890d5fd60d7a8b24d5b253513378a2c307160e6043e2e36b42e7d970187",
-    "records/benchmarks.yaml": "3ac0e794241e47b9b29c46c9992d9f507c891d566b948539487d6c4202f4fe4e",
-    "records/databases.yaml": "9f535b2111526c2621d07d3d6579daee2ba683b1556da77597f1add783d0b435",
-    "records/datasets.yaml": "a87d0c75fbd053bde364931a3df9ff1c5d73bd780749fef088739613dbab1b2c",
-    "records/models.yaml": "6e9b55c5d3b4621cc4a17d7990b31454d81ded1e18c01f427edfc88cb1960242",
-    "records/module_libraries.yaml": "b57d8218f2b40cfa2d4a42b5ea683f1bfffd349e25b73b8468f8cebd59ea9024",
-    "records/protocols.yaml": "3247a230459f596973686e6ba5edbfc709d8931e9c712755ef513206c5c6890a",
+    "literature/papers.yaml": "54ac75f1a4ccb4e39484df6f70fc1eefcfbc519ac6dba319eb7d35820c139935",
+    "records/benchmarks.yaml": "8257b172b379c53ca126eb368bf41f81c574f7bd5a5758c778b39c2e5aa6ca90",
+    "records/databases.yaml": "4b8fb0e3c089ac47f23aa8f2990c5211836151ed39235fd96272bf573d282844",
+    "records/datasets.yaml": "9337e97c96fe3da4213fb9d62b455057cc1c80fb8065ad993b91cc6bf7b5720b",
+    "records/models.yaml": "b2bbf050a8678c05e4093dee81ed2e4092d324de98b1d9efa33adff7db9a3bf5",
+    "records/module_libraries.yaml": "e99ca2fc13fd6d21f86fe3464cf7c32114ff748ccd123a6a2ed041a4e3e5fa7a",
+    "records/protocols.yaml": "fe9d65734cf474158bd35b17b7411269c86aa7ff96e285f26d95880c796d51c2",
     "vocab/architecture.yaml": "287c121e51fb652f7c527937d81304d31fece7abbc7094ca6b62846067738ff8",
     "vocab/assay.yaml": "c449a1589daec90e56aa61be102d0810ed0f92f704de2116c9b4ff908516c803",
     "vocab/cell_type.yaml": "018cdf102d25782037bdf824b56d96505eeb0edab89077d4e899a1670deff2be",
@@ -20,6 +20,7 @@
   "snapshots": {
     "entities.tsv": 20,
     "entity_paper.tsv": 37,
+    "links.tsv": 29,
     "papers.tsv": 30
   },
   "summary": {
