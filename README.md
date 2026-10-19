@@ -35,6 +35,42 @@ by the Stegle group's
 [living catalogue](https://interp-extrap-perturb.readthedocs.io) of >152
 methods. CFCR points outward rather than competing.
 
+## Scope — what is in and what is out
+
+> **CFCR indexes resources you act with, not resources you observe with.**
+
+Every `fate_axis` is a verb: *where* do I act, *what* do I perturb, *how* do I
+represent and score sequence I might design, *what* do I build the actuator
+from. A resource is in scope when it answers one of those questions.
+
+**Covered in depth** — genomic/epigenomic deep-learning models that take DNA
+sequence or chromatin state as their primary input:
+
+- `where` — sequence-to-function and interval models, chromatin accessibility
+  models, and 3D genome models that predict contacts from sequence. Contact
+  prediction sits here for the same reason enhancer–promoter linking does:
+  if you are placing a regulator, the contact domain is part of *where*.
+- `how` — DNA and genome language models.
+- `with-what` — module collections for building regulators, bridged to
+  [`eCR_mod_lib`](https://github.com/JimYuhaoWu/eCR_mod_lib).
+
+**Covered deliberately shallowly**, pointing outward rather than competing:
+
+- `what` — perturbation-response models and single-cell foundation models. The
+  [Stegle group's catalogue](https://interp-extrap-perturb.readthedocs.io)
+  covers perturbation methods properly. A single-cell foundation model is in
+  scope when it predicts a *perturbation response*, which is acting; not when
+  it only embeds cells, which is observing.
+
+**Out of scope:** trajectory inference and RNA velocity. These describe where
+cells are going rather than how to send them, and admitting them would pull in
+pseudotime, lineage tracing and optimal-transport methods — a field with its
+own benchmarks and its own community. The distinction is control versus
+observation, not importance.
+
+Benchmarks, datasets, protocols and databases are in scope when they serve an
+axis that is in scope, and they inherit its `fate_axis`.
+
 ## What makes it a database rather than a list
 
 Papers are **evidence attached to entities**, not the records themselves. A

@@ -13,6 +13,12 @@
   synonyms: [VEP, variant scoring, variant impact prediction]
   facet: task
 
+- term: contact-map-prediction
+  ontology_id: null
+  synonyms: [chromatin contact prediction, Hi-C prediction, 3D genome prediction,
+             TAD prediction, chromatin folding prediction]
+  facet: task
+
 - term: enhancer-promoter-linking
   ontology_id: null
   synonyms: [enhancer-promoter interaction, E-P linking, regulatory linking]

@@ -54,6 +54,7 @@ CONTROLLED: dict[tuple[str, str], str] = {
     ("entity", "assay"): "assay",
     ("entity", "task"): "task",
     ("model_ext", "architecture"): "architecture",
+    ("model_ext", "output_type"): "output_type",
     ("dataset_ext", "modality"): "modality",
     ("benchmark_ext", "task_categories"): "task",
     ("module_collection_ext", "organism_scope"): "organism",
@@ -232,11 +233,20 @@ def check_vocab(db, entities, rep):
                                 f"'{canonical}'")
                     continue
                 near = difflib.get_close_matches(
-                    str(value).lower(), list(terms[facet]), n=3, cutoff=0.6)
+                    str(value).lower(), list(terms[facet]), n=5, cutoff=0.6)
+                # A term and its own synonyms both match and both resolve to
+                # the same canonical, so dedupe before suggesting -- otherwise
+                # the fix reads "did you mean 'contact-map', 'contact-map'?".
+                seen, canonical = set(), []
+                for n in near:
+                    term = terms[facet][n]
+                    if term not in seen:
+                        seen.add(term)
+                        canonical.append(term)
                 suggestion = (
                     "did you mean " + ", ".join(
-                        f"'{terms[facet][n]}'" for n in near) + "?"
-                    if near else
+                        f"'{t}'" for t in canonical[:3]) + "?"
+                    if canonical else
                     f"add it to vocab/{facet}.yaml, or correct the record")
                 rep.add(ERROR, "vocab", subject,
                         f"{table}.{column} value '{value}' is not a term or "

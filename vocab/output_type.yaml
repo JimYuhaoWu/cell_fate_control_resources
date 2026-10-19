@@ -1,0 +1,42 @@
+# vocab/output_type.yaml — controlled facet: output_type
+# Local vocabulary; serves model_ext.output_type. What a model emits, which is
+# the facet that answers "can this model tell me the thing I need?"
+#
+# schema §3.1 called this column controlled but shipped no vocabulary for it,
+# so its values went unvalidated. Created when `contact-map` was added, because
+# a term nothing enforces is just a string a curator has to remember.
+
+- term: coverage-track
+  ontology_id: null
+  synonyms: [coverage, signal track, profile, bigwig]
+  facet: output_type
+
+- term: contact-map
+  ontology_id: null
+  synonyms: [contact matrix, Hi-C map, chromatin contact, interaction matrix, TAD map]
+  facet: output_type
+
+- term: scalar
+  ontology_id: null
+  synonyms: [single value, score, regression output]
+  facet: output_type
+
+- term: embedding
+  ontology_id: null
+  synonyms: [representation, latent vector, feature vector]
+  facet: output_type
+
+- term: variant-effect
+  ontology_id: null
+  synonyms: [variant score, effect size, delta prediction]
+  facet: output_type
+
+- term: sequence
+  ontology_id: null
+  synonyms: [generated sequence, designed sequence, nucleotide output]
+  facet: output_type
+
+- term: cell-state
+  ontology_id: null
+  synonyms: [cell embedding, expression profile, perturbation response]
+  facet: output_type

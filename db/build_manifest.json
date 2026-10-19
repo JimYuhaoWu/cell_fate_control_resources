@@ -14,7 +14,8 @@
     "vocab/cell_type.yaml": "018cdf102d25782037bdf824b56d96505eeb0edab89077d4e899a1670deff2be",
     "vocab/modality.yaml": "7fc967ff36d777b31bfd40343eb118d91015819c21f57fd52e1268d27b799a32",
     "vocab/organism.yaml": "f1653c9060b1b954022157bf4cac1552cbea93469be2f18a4e66125e36523680",
-    "vocab/task.yaml": "20c508b9344c3a4f1c99c165ad8924ee7ccc73f3df8144ed38ec2852071a60bb"
+    "vocab/output_type.yaml": "d53c05031c068ad155d888e238415eed14191ad2b75fd69dc3830d55a9d14430",
+    "vocab/task.yaml": "93bc05dfa801b9d17dd421a50ab0eef092b1c68f68c7ba2ce760ecb75f2f2190"
   },
   "script": "scripts/04_build.py",
   "snapshots": {

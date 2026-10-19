@@ -119,9 +119,25 @@ The dominant cost of the whole project.
 **Exit:** ~150 entities, and `reports/vocab_candidates.md` fires for the first
 time, which means the bottom-up vocabulary mechanism has actually been exercised.
 
-**Scope decision still open:** narrow to chromatin accessibility
-and regulatory elements, where domain judgment is strongest, or cover all of
-sequence-to-function. Worth settling before this milestone, not during it.
+**Scope — decided.** CFCR indexes resources you act with, not resources you
+observe with; see the scope section in `README.md` for the full rule. In
+practice: `where` and `how` deep (including 3D genome contact prediction),
+`what` shallow and pointing outward (a single-cell foundation model qualifies
+when it predicts a perturbation response, not when it only embeds cells),
+trajectory inference and RNA velocity out. Target ~300-400 entities, which is
+roughly:
+
+| | |
+|---|---|
+| `where` | sequence-to-function ~80-120 · 3D genome ~15-25 · accessibility ~30 |
+| `how` | DNA language models ~60-80 |
+| `what` | ~15-25, shallow |
+| `with-what` | module collections ~15-30 |
+| serving them | benchmarks ~25-40 · datasets ~40-60 · protocols ~10-20 · databases ~15-25 |
+
+The differentiator is the evidence layer, not the taxonomy: no other resource
+records whether a genomic/epigenomic deep-learning model has been
+independently evaluated, or whether its weights can legally be reused.
 
 ## M5 — hybrid search
 
