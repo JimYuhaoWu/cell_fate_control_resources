@@ -159,7 +159,8 @@ def write_json(path: Path, payload) -> Path:
     # sort_keys + trailing newline so re-running on unchanged records is a
     # no-op in `git diff`.
     path.write_text(json.dumps(payload, indent=1, sort_keys=True,
-                               ensure_ascii=False) + "\n", encoding="utf-8")
+                               ensure_ascii=False) + "\n", encoding="utf-8",
+                    newline="")
     return path
 
 
