@@ -8,7 +8,7 @@ Reads the catalogue through the `cfcr` package, not SQLite: `db/cfcr.db` is
 git-ignored, so the TSVs are what a fresh clone and CI actually have.
 
 Writes:
-    site/data/entities.json   one object per entity, papers inlined
+    site/data/entities.json   one object per entity, papers and links inlined
     site/data/facets.json     cfcr.facets() verbatim -- the UI builds its
                               filter panel from this rather than hardcoding it
     site/data/papers.json     one object per paper, citing entities inlined
@@ -35,6 +35,11 @@ import cfcr                                   # noqa: E402
 # first, then the evaluations that determine evidence_tier.
 PAPER_ROLE_ORDER = ("primary", "preprint", "benchmark", "critique",
                     "application", "extension", "review")
+
+# Links read in the order someone reusing a resource needs them: how to run it
+# first, then what it was built from, then everything else.
+LINK_KIND_ORDER = ("code", "weights", "api", "website", "docs", "dataset",
+                   "container", "supplementary")
 
 
 def _clean(value):
@@ -75,8 +80,37 @@ def _role_key(role) -> tuple:
     return (order, str(role))
 
 
-def export_entities(joins) -> list[dict]:
-    """Flat, denormalized entity records with their full evidence trail."""
+def _kind_key(kind) -> tuple:
+    order = (LINK_KIND_ORDER.index(kind)
+             if kind in LINK_KIND_ORDER else len(LINK_KIND_ORDER))
+    return (order, str(kind))
+
+
+def read_links() -> dict[str, list[dict]]:
+    """
+    Resource links grouped by entity, in LINK_KIND_ORDER.
+
+    `checked` and `alive` are deliberately not exported: the link-rot sweep has
+    not run, so every value would be unknown, and the site has nothing to say
+    about a link it has never checked.
+    """
+    by_entity: dict[str, list[dict]] = {}
+    for row in cfcr.load_links().to_dict("records"):
+        row = {k: _clean(v) for k, v in row.items()}
+        if not row.get("url"):
+            continue
+        by_entity.setdefault(row["entity_id"], []).append({
+            "kind": row["kind"],
+            "url": row["url"],
+            "label": row["label"],
+        })
+    for links in by_entity.values():
+        links.sort(key=lambda link: _kind_key(link["kind"]))
+    return by_entity
+
+
+def export_entities(joins, links_by_entity) -> list[dict]:
+    """Flat, denormalized entity records with their evidence trail and links."""
     papers_by_entity: dict[str, list[dict]] = {}
     for row in joins:
         papers_by_entity.setdefault(row["entity_id"], []).append(row)
@@ -85,12 +119,13 @@ def export_entities(joins) -> list[dict]:
     for record in cfcr.load().to_dict("records"):
         entity = {}
         for column, value in record.items():
-            if column == "papers":
+            if column in ("papers", "links"):
                 continue
             cleaned = _clean(value)
             if cleaned is not None:
                 entity[column] = cleaned
 
+        entity["links"] = links_by_entity.get(record["entity_id"], [])
         trail = sorted(papers_by_entity.get(record["entity_id"], []),
                        key=lambda r: _role_key(r["role"]))
         entity["papers"] = [{
@@ -175,7 +210,8 @@ def main() -> int:
     out_dir = args.out or args.repo_root / "site" / "data"
 
     joins = read_joins()
-    entities = export_entities(joins)
+    links_by_entity = read_links()
+    entities = export_entities(joins, links_by_entity)
     papers = export_papers(joins)
     facets = cfcr.facets()
 
@@ -185,8 +221,9 @@ def main() -> int:
         write_json(out_dir / "papers.json", papers),
     ]
 
+    n_links = sum(len(v) for v in links_by_entity.values())
     print(f"exported {len(entities)} entities, {len(papers)} papers, "
-          f"{len(facets)} facets")
+          f"{n_links} links, {len(facets)} facets")
     for path in written:
         print(f"  {path.relative_to(args.repo_root)}"
               f"  {path.stat().st_size / 1024:.1f} KiB")

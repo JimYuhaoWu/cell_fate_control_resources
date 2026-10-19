@@ -315,7 +315,7 @@
     box.appendChild(el('summary', null, 'All catalogued fields'));
     var table = el('table', 'field-table');
     Object.keys(entity).sort().forEach(function (column) {
-      if (['papers', 'name', 'description', 'notes', 'entity_id',
+      if (['papers', 'links', 'name', 'description', 'notes', 'entity_id',
         'primary_paper_title'].indexOf(column) !== -1) { return; }
       var row = el('tr');
       row.appendChild(el('th', null, humanize(column)));
@@ -325,6 +325,19 @@
       table.appendChild(row);
     });
     box.appendChild(table);
+    return box;
+  }
+
+  function linksBlock(entity) {
+    var box = el('p', 'card-links');
+    (entity.links || []).forEach(function (link) {
+      var anchorEl = el('a', 'link-chip');
+      anchorEl.href = link.url;
+      anchorEl.rel = 'noopener';
+      anchorEl.appendChild(el('span', 'link-kind', link.kind));
+      if (link.label) { anchorEl.appendChild(el('span', 'link-label', link.label)); }
+      box.appendChild(anchorEl);
+    });
     return box;
   }
 
@@ -363,6 +376,8 @@
       notes.appendChild(el('p', null, entity.notes.trim()));
       node.appendChild(notes);
     }
+
+    if ((entity.links || []).length) { node.appendChild(linksBlock(entity)); }
 
     var tags = el('p', 'card-tags');
     (entity.tags || []).forEach(function (tag) {

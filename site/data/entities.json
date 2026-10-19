@@ -21,6 +21,13 @@
    "how"
   ],
   "has_leaderboard": "0",
+  "links": [
+   {
+    "kind": "code",
+    "label": null,
+    "url": "https://github.com/frederikkemarin/BEND"
+   }
+  ],
   "name": "BEND",
   "notes": "Finding worth carrying: DNA LM embeddings approach expert methods on some tasks but capture limited long-range information. `year: 2023` is the arXiv posting; the venue is ICLR 2024. No DOI -- ICLR mints none, so `paper_id` falls back to the arXiv ID per schema §2.2.\n",
   "organism": [
@@ -96,6 +103,13 @@
    "where"
   ],
   "has_leaderboard": "0",
+  "links": [
+   {
+    "kind": "code",
+    "label": null,
+    "url": "https://github.com/kundajelab/DART-Eval"
+   }
+  ],
   "n_tasks": 5,
   "name": "DART-Eval",
   "notes": "The finding that makes this the most useful benchmark in the seed: annotation-agnostic DNA LMs are inconsistent and show no compelling gain over ab initio baselines. Because it includes those baselines, it functions as a critique of the DNA LM programme as much as a benchmark of it. Its author list overlaps with ChromBPNet's through Kundaje, which is why model:chrombpnet derives as partially-independent rather than externally benchmarked.\n",
@@ -164,6 +178,13 @@
    "where"
   ],
   "has_leaderboard": "1",
+  "links": [
+   {
+    "kind": "code",
+    "label": null,
+    "url": "https://github.com/darlednik/GENEB"
+   }
+  ],
   "n_models_evaluated": 40,
   "n_tasks": 100,
   "name": "GENEB",
@@ -228,6 +249,18 @@
    "where"
   ],
   "has_api": "1",
+  "links": [
+   {
+    "kind": "api",
+    "label": null,
+    "url": "https://jaspar.elixir.no/api/v1/docs/"
+   },
+   {
+    "kind": "website",
+    "label": null,
+    "url": "https://jaspar.elixir.no"
+   }
+  ],
   "name": "JASPAR 2024",
   "notes": "`year: 2023` is the Nucleic Acids Research issue year for the release branded \"JASPAR 2024\" -- the release name and the publication year disagree, which is normal for the NAR database issue and a recurring trap when citing these. The name is kept as the community uses it.\n",
   "organism": [
@@ -312,6 +345,13 @@
    "mm10"
   ],
   "license": "MIT",
+  "links": [
+   {
+    "kind": "dataset",
+    "label": null,
+    "url": "https://huggingface.co/datasets/Genentech/borzoi-data"
+   }
+  ],
   "modality": [
    "rna",
    "atac",
@@ -384,6 +424,13 @@
    "mm10"
   ],
   "license": "MIT",
+  "links": [
+   {
+    "kind": "dataset",
+    "label": null,
+    "url": "https://huggingface.co/datasets/Genentech/enformer-data"
+   }
+  ],
   "modality": [
    "cage",
    "dnase",
@@ -457,6 +504,13 @@
   ],
   "genome_build": [
    "hg38"
+  ],
+  "links": [
+   {
+    "kind": "website",
+    "label": "Genome-wide Perturb-seq data portal",
+    "url": "https://gwps.wi.mit.edu"
+   }
   ],
   "modality": [
    "perturb-seq",
@@ -574,6 +628,13 @@
   ],
   "input_context_bp": 1000000,
   "input_type": "genomic-interval",
+  "links": [
+   {
+    "kind": "api",
+    "label": "AlphaGenome API",
+    "url": "https://deepmind.google.com/science/alphagenome"
+   }
+  ],
   "model_family": "interval-model",
   "name": "AlphaGenome",
   "notes": "The only api-only entry in the seed, and the reason that tier exists: there are no weights to download and no license to read, so reproducibility and long-term availability rest on Google continuing to serve the endpoint. Independently evaluated for fine-mapping reproducibility by Sweeney & Kang alongside Borzoi, Enformer and Sei.\n",
@@ -730,6 +791,23 @@
   "input_context_bp": 524288,
   "input_type": "genomic-interval",
   "license": "Apache-2.0",
+  "links": [
+   {
+    "kind": "code",
+    "label": null,
+    "url": "https://github.com/calico/borzoi"
+   },
+   {
+    "kind": "code",
+    "label": "Baskerville training framework",
+    "url": "https://github.com/calico/baskerville"
+   },
+   {
+    "kind": "dataset",
+    "label": "training/validation/test intervals",
+    "url": "https://huggingface.co/datasets/Genentech/borzoi-data"
+   }
+  ],
   "model_family": "interval-model",
   "name": "Borzoi",
   "notes": "`year: 2023` is the first public release (bioRxiv); the Nature Genetics paper carries a 2025 issue year. Trained with the Baskerville framework rather than the Enformer codebase, so the two are not drop-in comparable despite the lineage.\n",
@@ -861,6 +939,13 @@
   "input_context_bp": 2114,
   "input_type": "genomic-interval",
   "license": "MIT",
+  "links": [
+   {
+    "kind": "code",
+    "label": null,
+    "url": "https://github.com/kundajelab/chrombpnet"
+   }
+  ],
   "model_family": "interval-model",
   "name": "ChromBPNet",
   "notes": "Narrow input window compared with the Enformer/Borzoi line -- it models local accessibility syntax rather than long-range regulation, which is why it answers a different `where` question despite sharing the axis. Evaluated as an ab initio baseline in DART-Eval, whose author list overlaps with this one through Kundaje, so the derivation should land it at `partially-independent` rather than `externally-benchmarked`.\n",
@@ -967,6 +1052,13 @@
   "input_context_bp": 196608,
   "input_type": "genomic-interval",
   "license": "Apache-2.0",
+  "links": [
+   {
+    "kind": "code",
+    "label": null,
+    "url": "https://github.com/google-deepmind/deepmind-research/tree/master/enformer"
+   }
+  ],
   "model_family": "interval-model",
   "name": "Enformer",
   "notes": "The reference point the whole interval-model literature argues with. Two independent Nature Genetics analyses (Tang/Toneyan/Koo and Huang et al.) found it explains personal transcriptome variation poorly despite strong cross-locus accuracy -- the across-individual vs across-gene distinction is the single most important caveat to communicate to anyone picking it up. Replicate checkpoints and the many community ports are deliberately not separate entities; see model:flashzoi for one that is.\n",
@@ -1112,6 +1204,13 @@
   "input_context_bp": 1000000,
   "input_type": "sequence",
   "license": "Apache-2.0",
+  "links": [
+   {
+    "kind": "code",
+    "label": null,
+    "url": "https://github.com/ArcInstitute/evo2"
+   }
+  ],
   "model_family": "dna-lm",
   "n_parameters_max": 40000000000,
   "n_parameters_min": 7000000000,
@@ -1244,6 +1343,23 @@
   "input_context_bp": 524288,
   "input_type": "genomic-interval",
   "license": "MIT",
+  "links": [
+   {
+    "kind": "code",
+    "label": null,
+    "url": "https://github.com/johahi/borzoi-pytorch"
+   },
+   {
+    "kind": "weights",
+    "label": "Flashzoi and Borzoi replicate weights (MIT)",
+    "url": "https://huggingface.co/johahi"
+   },
+   {
+    "kind": "container",
+    "label": "archived code release",
+    "url": "https://zenodo.org/records/15669913"
+   }
+  ],
   "model_family": "interval-model",
   "name": "Flashzoi",
   "notes": "A port under its own name, so a separate entity with `variant_of` rather than a Borzoi link -- the granularity rule's worked case. Weights for all four Flashzoi and Borzoi replicates are published together under MIT; the replicates are one entity, not four. Licensed more permissively than Borzoi itself, which matters for downstream reuse.\n",
@@ -1330,6 +1446,18 @@
    "what"
   ],
   "input_type": "expression-matrix",
+  "links": [
+   {
+    "kind": "code",
+    "label": null,
+    "url": "https://github.com/snap-stanford/GEARS"
+   },
+   {
+    "kind": "website",
+    "label": "Stegle group perturbation-method catalogue (authoritative for this axis)",
+    "url": "https://interp-extrap-perturb.readthedocs.io"
+   }
+  ],
   "model_family": "perturbation-model",
   "name": "GEARS",
   "notes": "Deliberately shallow. Perturbation modelling is covered properly by the Stegle group's living catalogue (>152 methods, Nat Rev Genet 2026) and CFCR points outward rather than competing -- see the `website` link. GEARS is here as the representative entry so the `what` axis is not empty, not as the start of a perturbation index. `architecture` required a new vocabulary term: GNN is absent from the schema §3.1 enum, and it is the dominant architecture on this axis.\n",
@@ -1433,6 +1561,18 @@
   "input_context_bp": 12288,
   "input_type": "sequence",
   "license": "CC-BY-NC-SA-4.0",
+  "links": [
+   {
+    "kind": "code",
+    "label": null,
+    "url": "https://github.com/instadeepai/nucleotide-transformer"
+   },
+   {
+    "kind": "weights",
+    "label": "checkpoint collection (CC-BY-NC-SA-4.0)",
+    "url": "https://huggingface.co/InstaDeepAI"
+   }
+  ],
   "model_family": "dna-lm",
   "n_parameters_max": 2500000000,
   "n_parameters_min": 50000000,
@@ -1579,6 +1719,18 @@
    "with-what"
   ],
   "integrated_in_ecr_lib": "1",
+  "links": [
+   {
+    "kind": "dataset",
+    "label": "integrated records (filter source_screen=DelRosso_2023)",
+    "url": "https://github.com/JimYuhaoWu/eCR_mod_lib"
+   },
+   {
+    "kind": "supplementary",
+    "label": "Supplementary tables",
+    "url": "https://www.nature.com/articles/s41586-023-05906-y"
+   }
+  ],
   "module_types": [
    "ED"
   ],
@@ -1673,6 +1825,18 @@
    "with-what"
   ],
   "integrated_in_ecr_lib": "1",
+  "links": [
+   {
+    "kind": "website",
+    "label": null,
+    "url": "https://epifactors.autosome.org"
+   },
+   {
+    "kind": "dataset",
+    "label": "integrated records (filter source_screen=EpiFactors_2022)",
+    "url": "https://github.com/JimYuhaoWu/eCR_mod_lib"
+   }
+  ],
   "module_types": [
    "CR"
   ],
@@ -1741,6 +1905,18 @@
    "with-what"
   ],
   "integrated_in_ecr_lib": "1",
+  "links": [
+   {
+    "kind": "dataset",
+    "label": "integrated records (filter source_screen=Tycko_2025)",
+    "url": "https://github.com/JimYuhaoWu/eCR_mod_lib"
+   },
+   {
+    "kind": "supplementary",
+    "label": "Supplementary Table ST3",
+    "url": "https://www.nature.com/articles/s41587-024-02442-6"
+   }
+  ],
   "module_types": [
    "ED"
   ],
@@ -1834,6 +2010,13 @@
    "Concanavalin A beads",
    "digitonin"
   ],
+  "links": [
+   {
+    "kind": "docs",
+    "label": "protocols.io canonical version",
+    "url": "https://doi.org/10.17504/protocols.io.zcpf2vn"
+   }
+  ],
   "name": "CUT&RUN targeted in situ genome-wide profiling",
   "notes": "The `external` origin case, and the model for how protocols should be catalogued: a real protocols.io DOI, maintained by the authors, versioned upstream. CFCR adds discovery and trust metadata, nothing else.\n",
   "organism": [
@@ -1898,6 +2081,7 @@
    "Concanavalin A beads",
    "digitonin"
   ],
+  "links": [],
   "name": "Low-input CUT&RUN for sorted MEF populations",
   "notes": "The `cfc-lab` origin case. `protocol_doi` is null: schema §9 shows 10.17504/protocols.io.xxxxx, which is a placeholder, and no real DOI has been minted yet. This entity is therefore the one seed record that will fail the \"every entity has a primary paper\" QC check -- it is the whitelisted exception the check needs to support, since an unpublished in-house protocol has no paper by definition.\n",
   "organism": [

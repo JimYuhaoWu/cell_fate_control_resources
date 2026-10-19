@@ -326,6 +326,34 @@ a { color: var(--accent); }
   color: var(--ink-soft);
 }
 
+/* Outbound links to the resource itself, as opposed to its papers. */
+.card-links { margin: 10px 0 6px; }
+
+.link-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  margin: 0 6px 6px 0;
+  padding: 2px 9px;
+  font-size: 0.78rem;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.link-chip:hover, .link-chip:focus-visible {
+  border-color: var(--accent);
+  background: var(--panel);
+}
+
+.link-kind {
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+}
+
+.link-label { color: var(--accent); }
+
 .axis-chip {
   background: var(--ink);
   border-color: var(--ink);
