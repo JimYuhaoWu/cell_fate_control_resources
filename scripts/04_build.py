@@ -14,6 +14,7 @@ Writes:
     db/entities.tsv         committed snapshot
     db/papers.tsv           committed snapshot
     db/entity_paper.tsv     committed snapshot
+    db/links.tsv            committed snapshot
     db/build_manifest.json  provenance
 
 Usage:
@@ -250,6 +251,7 @@ def main() -> int:
         written["papers.tsv"] = db.to_tsv("paper", out / "papers.tsv")
         written["entity_paper.tsv"] = db.to_tsv("entity_paper",
                                                 out / "entity_paper.tsv")
+        written["links.tsv"] = db.to_tsv("link", out / "links.tsv")
 
         summary = db.counts()
 
