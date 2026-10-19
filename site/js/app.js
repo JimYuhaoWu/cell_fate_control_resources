@@ -33,6 +33,10 @@
   // array in it.
   var ARRAY_COLUMNS = {};
 
+  // The paper roles evidence_tier is derived from, mirroring the pair in
+  // 05_validate.py. Keep the two in step.
+  var EVALUATING_ROLES = ['benchmark', 'critique'];
+
   var PAPER_ROLE_NOTE = {
     'primary': 'the paper the resource is from',
     'preprint': 'earlier version of the primary paper',
@@ -242,8 +246,12 @@
       entity.evidence_tier);
     box.appendChild(badge);
 
+    // Only the roles 05_validate.py derives the tier from. A review or an
+    // extension is related work, not a check by anyone: counting them here
+    // would list evaluators under a self-reported badge. Both still appear in
+    // the evidence trail below.
     var evaluating = (entity.papers || []).filter(function (p) {
-      return ['benchmark', 'critique', 'review', 'extension'].indexOf(p.role) !== -1;
+      return EVALUATING_ROLES.indexOf(p.role) !== -1;
     });
     if (!evaluating.length) {
       box.appendChild(el('p', 'ev-none',
