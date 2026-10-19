@@ -48,51 +48,5 @@
     "n_entities": 20,
     "n_links": 29,
     "n_papers": 30
-  },
-  "upserts": {
-    "benchmark_ext": {
-      "inserted": 0,
-      "updated": 3
-    },
-    "database_ext": {
-      "inserted": 0,
-      "updated": 1
-    },
-    "dataset_ext": {
-      "inserted": 0,
-      "updated": 3
-    },
-    "entity": {
-      "inserted": 0,
-      "updated": 20
-    },
-    "entity_paper": {
-      "inserted": 0,
-      "updated": 37
-    },
-    "link": {
-      "inserted": 0,
-      "updated": 29
-    },
-    "model_ext": {
-      "inserted": 0,
-      "updated": 8
-    },
-    "module_collection_ext": {
-      "inserted": 0,
-      "updated": 3
-    },
-    "paper": {
-      "inserted": 0,
-      "updated": 30
-    },
-    "protocol_ext": {
-      "inserted": 0,
-      "updated": 2
-    },
-    "vocab": {
-      "inserted": 0,
-      "updated": 44
-    }
   }
 }

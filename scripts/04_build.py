@@ -262,8 +262,6 @@ def main() -> int:
                 p.relative_to(root).as_posix(): sha256(p)
                 for p in [*vocab_files, *record_files, papers_file]
             },
-            "upserts": {k: {"inserted": v[0], "updated": v[1]}
-                        for k, v in counts.items()},
             "snapshots": written,
             "summary": summary,
         }
