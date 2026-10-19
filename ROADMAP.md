@@ -26,36 +26,52 @@ no GNN term, `cell_type` cannot be CL-only, `n_parameters` could not represent
 a model family, `protocol_ext.category` ships no vocabulary, and `vocab.facet`
 cannot be a DDL enum at all.
 
-## M2 — public website on GitHub Pages 🔧 in progress
+## M2 — public website on GitHub Pages ✅ merged, first deploy pending
 
-In progress on branch `claude/loving-cohen-02b54f`.
+Merged to `main` as PR #1 (`0ae3c73`). Pages is enabled and set to build from
+Actions, but no deploy has gone green yet — the first run failed because Pages
+had not been enabled when it fired, and the re-run is the one step left.
 
-- [ ] `scripts/07_export_site.py` → `site/data/{entities,facets,papers}.json`
-- [ ] `fate_axis` as primary navigation, not a sidebar filter
-- [ ] `evidence_tier` badge on every model card, evaluating papers listed under it
-- [ ] `availability_tier` shown as orthogonal to evidence, with the licence visible
-- [ ] Faceted filtering; works at phone width
-- [ ] Client-side BM25, ranker written so a second scorer can slot in
-- [ ] GitHub Actions deploy from `site/` — *not* `/docs`, which holds the design docs
+- [x] `scripts/07_export_site.py` → `site/data/{entities,facets,papers}.json`
+- [x] `fate_axis` as primary navigation, not a sidebar filter
+- [x] `evidence_tier` badge on every model card, evaluating papers listed under it
+- [x] `availability_tier` shown as orthogonal to evidence, with the licence visible
+- [x] Faceted filtering; works at phone width
+- [x] Client-side BM25, ranker written so a second scorer can slot in
+- [x] GitHub Actions deploy from `site/` — *not* `/docs`, which holds the design docs
 
 **Exit:** a stranger can answer "which interval models has anyone outside the
 authoring group evaluated, and can I legally use the weights" without reading
-any YAML.
+any YAML. Met in the page itself; it stops being theoretical once the deploy
+goes green.
 
-### Blocker found while building M2: entity links are not exported
+**What it cost to learn:** the evidence badge and the list under it were built
+from different sets of paper roles. The list accepted `review` and `extension`
+alongside `benchmark` and `critique`, while `05_validate.py` derives the tier
+from the latter two alone, so `model:gears` rendered a `self-reported` badge
+directly above a review captioned "Evaluated by:", and `model:borzoi` counted
+Flashzoi — its own derivative — as an outside check. The site contradicted the
+one question CFCR exists to answer, on the card that advertises the derivation
+as auditable. Fixed in `1348156` by reading both from one constant; the two
+roles stay in the evidence trail, where they are related work rather than
+evaluations. A derived field is only as trustworthy as the least careful place
+that re-derives it.
 
-`04_build.py` writes all 29 `link` rows into the SQLite `link` table, but the
-committed snapshots are only `entities.tsv`, `papers.tsv` and
-`entity_paper.tsv` — so the loader cannot see links at all, and the site can
-link to papers but not to a single resource. Affected: 11 `code`, 6 `dataset`,
-4 `website`, 2 `weights`, 2 `api`, 2 `supplementary`, 1 `container`, 1 `docs`.
+### Blocker found while building M2: entity links were not exported ✅ resolved
 
-This matters more than its size suggests. Landscape §1 identifies exactly these
-links as "what make it more useful than a bibliography" — without them CFCR
-*is* the bibliography it set out not to be. It is a gap in the original spec
-(kickoff item 5 named three snapshots), not a slip in the build.
+`04_build.py` wrote all 29 `link` rows into the SQLite `link` table, but the
+committed snapshots were only `entities.tsv`, `papers.tsv` and
+`entity_paper.tsv` — so the loader could not see links at all, and the site
+could link to papers but not to a single resource. Affected: 11 `code`,
+6 `dataset`, 4 `website`, 2 `weights`, 2 `api`, 2 `supplementary`,
+1 `container`, 1 `docs`.
 
-Two ways to fix, and the choice is not obvious:
+This mattered more than its size suggested. Landscape §1 identifies exactly
+these links as "what make it more useful than a bibliography" — without them
+CFCR *is* the bibliography it set out not to be. It was a gap in the original
+spec (kickoff item 5 named three snapshots), not a slip in the build.
+
+Two ways to fix, and the choice was not obvious:
 
 - **A fourth snapshot, `db/links.tsv`.** Consistent with `entity_paper.tsv`,
   keeps the per-link `checked` and `alive` columns where the link-rot sweep
@@ -64,8 +80,12 @@ Two ways to fix, and the choice is not obvious:
   one fetch for the site. But it duplicates the `link` table's shape, and
   `alive`/`checked` churn would then rewrite entity rows on every sweep.
 
-Recommended: the fourth snapshot. The link-rot sweep is the deciding argument —
-it rewrites link state on a schedule, and that should not touch entity rows.
+Taken: the fourth snapshot, on the link-rot argument — the sweep rewrites link
+state on a schedule, and that should not touch entity rows. `c35a985` added
+`db/links.tsv` and `cfcr.load_links()`; `690a435` put the links on the cards,
+where 19 of the 20 entities now carry at least one. `checked` and `alive` are
+deliberately not exported to the site: the sweep has never run, so every value
+would be unknown. Closed as issue #2.
 
 ## M3 — literature pipeline
 
@@ -159,7 +179,7 @@ Querying needs nothing but the committed TSVs. Rebuilding needs no network.
 | What | Where |
 |---|---|
 | Canonical history | `main` on GitHub |
-| Website work in progress | branch `claude/loving-cohen-02b54f` + its PR |
+| Website | merged into `main`; branch `claude/loving-cohen-02b54f` kept but dormant |
 | Main-branch working copy on PeiLab2 | `/mnt3/wuyuhao/cfcr` |
 | Website working copy on PeiLab2 | `/mnt3/wuyuhao/cfcr-site` |
 | Conda interpreter on PeiLab2 | `/mnt/wuyuhao/miniconda3/envs/cfcr/bin/python` |

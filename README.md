@@ -128,7 +128,7 @@ python -m http.server -d site      # then open http://localhost:8000
 
 | file | contents |
 |---|---|
-| `site/data/entities.json` | one object per entity, flattened, with its papers inlined |
+| `site/data/entities.json` | one object per entity, flattened, with its papers and resource links inlined |
 | `site/data/facets.json` | `cfcr.facets()` verbatim — the filter panel is built from this, not hardcoded |
 | `site/data/papers.json` | one object per paper, with the entities that cite it and in what role |
 
