@@ -46,7 +46,7 @@ def sha256(path: Path) -> str:
 
 
 def load_yaml(path: Path) -> list[dict]:
-    with path.open() as fh:
+    with path.open(encoding="utf-8") as fh:
         data = yaml.safe_load(fh)
     return data or []
 
@@ -154,7 +154,7 @@ def write_entities_tsv(db: CFCR, path: Path) -> int:
     ordered += sorted(c for c in out.columns if c not in ordered)
     out = out[[c for c in ordered if c in out.columns]]
     out = out.sort_values("entity_id").reset_index(drop=True)
-    out.to_csv(path, sep="\t", index=False)
+    out.to_csv(path, sep="\t", index=False, lineterminator="\n")
     return len(out)
 
 
@@ -270,7 +270,7 @@ def main() -> int:
             "summary": summary,
         }
         (out / "build_manifest.json").write_text(
-            json.dumps(manifest, indent=2, sort_keys=True) + "\n")
+            json.dumps(manifest, indent=2, sort_keys=True) + "\n", newline="")
 
         db.insert_provenance({
             "run_id": f"build-{today}",
