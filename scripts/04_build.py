@@ -51,7 +51,7 @@ def load_yaml(path: Path) -> list[dict]:
     return data or []
 
 
-def split_record(rec: dict, today: str, existing_added: dict[str, str]):
+def split_record(rec: dict):
     """
     Split one curated record into its table rows.
 
@@ -68,10 +68,14 @@ def split_record(rec: dict, today: str, existing_added: dict[str, str]):
             f"Known: {sorted(EXT_TABLES)}")
 
     entity = {k: v for k, v in rec.items() if k not in NESTED_KEYS}
-    # date_added is set once and preserved across rebuilds, so the TSV snapshot
-    # does not churn every build; date_updated tracks the current build.
-    entity["date_added"] = existing_added.get(entity_id, today)
-    entity["date_updated"] = today
+    # Both dates come from the record. date_added used to be read back out of
+    # db/cfcr.db to keep it stable across rebuilds, but that database is
+    # git-ignored, so a fresh clone found the table empty and restamped every
+    # record with the build date -- the snapshots could not be reproduced on
+    # any day but the one they were built. date_updated defaults to date_added
+    # instead of the build date for the same reason, and a curator who wants
+    # the two to differ sets date_updated in the record.
+    entity.setdefault("date_updated", entity.get("date_added"))
 
     ext_table = EXT_TABLES[etype]
     ext = rec.get(ext_table)
@@ -183,11 +187,6 @@ def main() -> int:
     counts: dict[str, tuple[int, int]] = {}
 
     with CFCR(db_path) as db:
-        existing_added = {
-            row["entity_id"]: row["date_added"]
-            for row in db.fetch("entity")
-        }
-
         # ── vocab ────────────────────────────────────────────────────────────
         vocab_rows = []
         for path in vocab_files:
@@ -217,8 +216,7 @@ def main() -> int:
         for path in record_files:
             for rec in load_yaml(path):
                 try:
-                    e, ext_table, ext_row, lrows, eprows = split_record(
-                        rec, today, existing_added)
+                    e, ext_table, ext_row, lrows, eprows = split_record(rec)
                 except (ValueError, KeyError) as exc:
                     print(f"error in {path.name}: {exc}", file=sys.stderr)
                     return 1

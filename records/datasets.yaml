@@ -27,6 +27,7 @@
   task: [coverage-prediction]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   dataset_ext:
     n_records: null             # FLAG: per-organism split; see notes
     record_unit: intervals
@@ -61,6 +62,7 @@
   task: [coverage-prediction]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   dataset_ext:
     n_records: null             # FLAG: per-organism split; see notes
     record_unit: intervals
@@ -99,6 +101,7 @@
   task: [perturbation-response-prediction]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   dataset_ext:
     n_records: null             # FLAG: cell count not verified from open metadata
     record_unit: cells

@@ -43,6 +43,7 @@
   task: [coverage-prediction, variant-effect-prediction, enhancer-promoter-linking]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   model_ext:
     evidence_tier: externally-benchmarked
     availability_tier: open-source
@@ -100,6 +101,7 @@
   status: active
   supersedes: model:enformer
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   model_ext:
     evidence_tier: externally-benchmarked
     availability_tier: open-source
@@ -159,6 +161,7 @@
   status: active
   variant_of: model:borzoi
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   model_ext:
     evidence_tier: self-reported
     availability_tier: open-source
@@ -211,6 +214,7 @@
          chromatin-accessibility-prediction]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   model_ext:
     evidence_tier: externally-benchmarked
     availability_tier: api-only
@@ -262,6 +266,7 @@
          histone-modification-prediction, splicing-prediction]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   model_ext:
     evidence_tier: externally-benchmarked
     availability_tier: open-weights
@@ -315,6 +320,7 @@
   task: [representation-learning, variant-effect-prediction, sequence-generation]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   model_ext:
     evidence_tier: self-reported
     availability_tier: open-source
@@ -359,6 +365,7 @@
          variant-effect-prediction, tf-binding-prediction]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   model_ext:
     evidence_tier: partially-independent
     availability_tier: open-source
@@ -410,6 +417,7 @@
   task: [perturbation-response-prediction]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   model_ext:
     evidence_tier: self-reported
     availability_tier: open-source

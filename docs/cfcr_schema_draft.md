@@ -52,8 +52,8 @@ The spine. Every catalogued object gets exactly one row.
 | `status` | TEXT | enum: `active` `deprecated` `superseded` `unmaintained` |
 | `supersedes` | TEXT | FK → `entity.entity_id`, nullable |
 | `variant_of` | TEXT | FK → `entity.entity_id`, nullable (replicates, ports, forks) |
-| `date_added` | DATE | |
-| `date_updated` | DATE | |
+| `date_added` | DATE | **Curated.** Written by hand; the build does not stamp it |
+| `date_updated` | DATE | **Curated**, optional — defaults to `date_added` |
 | `curator` | TEXT | Who made the call |
 
 **Entity granularity rule (write this down, enforce in QC):**
@@ -77,7 +77,7 @@ The spine. Every catalogued object gets exactly one row.
 | `abstract` | TEXT | **Free text.** Source for BM25 + embeddings |
 | `url` | TEXT | |
 | `preprint_of` | TEXT | FK → `paper.paper_id` — links preprint to journal version |
-| `date_added` | DATE | |
+| `date_added` | DATE | **Curated**, as for `entity` |
 
 > **Only open metadata is stored.** Abstracts from Europe PMC / Crossref /
 > bioRxiv. No full text of paywalled work.
