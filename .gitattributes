@@ -1,0 +1,9 @@
+# Normalise line endings in the repository rather than relying on every
+# curator's local git config. 04_build.py hashes the raw bytes of records/,
+# vocab/ and literature/ into db/build_manifest.json, and reading raw bytes
+# bypasses git's own CRLF handling -- so with Git for Windows' default
+# core.autocrlf=true, those files check out as CRLF and every input hash in the
+# manifest differs from the committed one. The committed TSV snapshots are
+# written with an explicit LF terminator, but pinning them here keeps a
+# worktree checkout matching the blob as well.
+* text=auto eol=lf
