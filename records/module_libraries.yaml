@@ -31,6 +31,7 @@
   task: [effector-domain-discovery]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   module_collection_ext:
     module_types: [ED]
     n_records: 1261
@@ -73,6 +74,7 @@
   task: [effector-domain-discovery]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   module_collection_ext:
     module_types: [ED]
     n_records: null             # FLAG: count spans several screen arms; unverified
@@ -115,6 +117,7 @@
   task: [effector-domain-discovery]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   module_collection_ext:
     module_types: [CR]
     n_records: null             # FLAG: release record count not verified

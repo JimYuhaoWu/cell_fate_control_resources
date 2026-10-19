@@ -23,6 +23,7 @@
   assay: [CUT&RUN]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   protocol_ext:
     validation_tier: published-peer-reviewed
     protocol_doi: 10.17504/protocols.io.zcpf2vn
@@ -62,6 +63,7 @@
   assay: [CUT&RUN]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   protocol_ext:
     validation_tier: lab-validated
     protocol_doi: null          # FLAG: schema §9 value is a placeholder; none minted

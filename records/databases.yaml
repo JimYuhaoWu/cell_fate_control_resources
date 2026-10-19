@@ -23,6 +23,7 @@
   task: [tf-binding-prediction, motif-discovery]
   status: active
   curator: JimYuhaoWu
+  date_added: 2026-10-16
   database_ext:
     update_frequency: annual
     last_release: null          # FLAG: exact release date not verified
