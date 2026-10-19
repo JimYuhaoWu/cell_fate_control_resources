@@ -8,9 +8,10 @@ metadata_apis:
   - name: crossref
     url: https://api.crossref.org/works
     purpose: DOI resolution, titles, author lists, venues
-    # Crossref asks for a contact address in the User-Agent. Set this to the
-    # maintainer address before running the literature pipeline.
-    contact_email: null
+    # Crossref's "polite pool": sending a contact address in the User-Agent
+    # gets faster, more predictable service than the shared anonymous pool.
+    # OpenAlex uses the same convention, so one address serves both.
+    contact_email: yuhaow9412@gmail.com
   - name: europepmc
     url: https://www.ebi.ac.uk/europepmc/webservices/rest/search
     purpose: abstracts Crossref omits, chiefly for Nature-family journals
