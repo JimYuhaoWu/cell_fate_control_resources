@@ -1,0 +1,288 @@
+{
+ "access": [
+  "open"
+ ],
+ "aliases": [
+  "CUT&RUN",
+  "DART-Eval",
+  "DelRosso effector domains",
+  "EpiFactors",
+  "EpiFactors 2.0",
+  "Evo-2",
+  "Genentech/borzoi-data",
+  "Genentech/enformer-data",
+  "JASPAR",
+  "Janssens CUT&RUN",
+  "NT",
+  "Replogle Perturb-seq",
+  "SegmentNT",
+  "Tycko compact effectors",
+  "alphagenome",
+  "bend",
+  "borzoi",
+  "borzoi-data",
+  "borzoi-pytorch",
+  "chrombpnet",
+  "dart-eval",
+  "enformer",
+  "enformer-data",
+  "evo2",
+  "flashzoi",
+  "gears",
+  "geneb",
+  "genome-wide Perturb-seq",
+  "nucleotide-transformer"
+ ],
+ "architecture": [
+  "cnn",
+  "gnn",
+  "ssm",
+  "transformer"
+ ],
+ "assay": [
+  "ATAC-seq",
+  "CAGE",
+  "CUT&RUN",
+  "ChIP-seq",
+  "DNase-seq",
+  "HT-recruit",
+  "Perturb-seq",
+  "RNA-seq"
+ ],
+ "assay_format": [
+  "HT-recruit",
+  "curated-annotation"
+ ],
+ "availability_tier": [
+  "api-only",
+  "open-source",
+  "open-weights"
+ ],
+ "baseline_included": [
+  "1"
+ ],
+ "bulk_download": [
+  "1"
+ ],
+ "canonical_host": [
+  "protocols.io"
+ ],
+ "category": [
+  "cutrun",
+  "qc"
+ ],
+ "cell_type": [
+  "K562",
+  "mouse embryonic fibroblast"
+ ],
+ "curator": [
+  "JimYuhaoWu"
+ ],
+ "date_added": [
+  "2026-10-16"
+ ],
+ "date_updated": [
+  "2026-10-16"
+ ],
+ "difficulty": [
+  "moderate"
+ ],
+ "dominant_validation_level": [
+  "predicted",
+  "screen-validated"
+ ],
+ "duration_hours": [
+  30.0
+ ],
+ "ecr_lib_source_key": [
+  "DelRosso_2023",
+  "EpiFactors_2022",
+  "Tycko_2025"
+ ],
+ "evaluation_mode": [
+  "fine-tuned",
+  "probed",
+  "zero-shot"
+ ],
+ "evidence_tier": [
+  "externally-benchmarked",
+  "partially-independent",
+  "self-reported"
+ ],
+ "fate_axis": [
+  "how",
+  "what",
+  "where",
+  "with-what"
+ ],
+ "genome_build": [
+  "hg38",
+  "mm10"
+ ],
+ "has_api": [
+  "1"
+ ],
+ "has_leaderboard": [
+  "0",
+  "1"
+ ],
+ "input_context_bp": [
+  1000000.0,
+  12288.0,
+  196608.0,
+  2114.0,
+  524288.0
+ ],
+ "input_type": [
+  "expression-matrix",
+  "genomic-interval",
+  "sequence"
+ ],
+ "integrated_in_ecr_lib": [
+  "1"
+ ],
+ "key_reagents": [
+  "Concanavalin A beads",
+  "digitonin",
+  "pA-MNase"
+ ],
+ "license": [
+  "Apache-2.0",
+  "CC-BY-NC-SA-4.0",
+  "MIT"
+ ],
+ "modality": [
+  "atac",
+  "cage",
+  "chip",
+  "dnase",
+  "perturb-seq",
+  "rna"
+ ],
+ "model_family": [
+  "dna-lm",
+  "interval-model",
+  "perturbation-model"
+ ],
+ "module_types": [
+  "CR",
+  "ED"
+ ],
+ "n_models_evaluated": [
+  40.0
+ ],
+ "n_parameters_max": [
+  2500000000.0,
+  40000000000.0
+ ],
+ "n_parameters_min": [
+  50000000.0,
+  7000000000.0
+ ],
+ "n_records": [
+  1261.0
+ ],
+ "n_tasks": [
+  100.0,
+  5.0
+ ],
+ "organism": [
+  "human",
+  "mouse",
+  "multi-species"
+ ],
+ "organism_scope": [
+  "human"
+ ],
+ "origin": [
+  "cfc-lab",
+  "external"
+ ],
+ "output_resolution_bp": [
+  1.0,
+  128.0,
+  32.0
+ ],
+ "output_type": [
+  "cell-state",
+  "coverage-track",
+  "embedding",
+  "scalar",
+  "sequence",
+  "variant-effect"
+ ],
+ "protocol_doi": [
+  "10.17504/protocols.io.zcpf2vn"
+ ],
+ "record_unit": [
+  "cells",
+  "intervals"
+ ],
+ "status": [
+  "active"
+ ],
+ "submission_open": [
+  "0",
+  "1"
+ ],
+ "supersedes": [
+  "model:enformer"
+ ],
+ "task": [
+  "chromatin-accessibility-prediction",
+  "coverage-prediction",
+  "effector-domain-discovery",
+  "enhancer-promoter-linking",
+  "gene-expression-prediction",
+  "histone-modification-prediction",
+  "motif-discovery",
+  "perturbation-response-prediction",
+  "polyadenylation-prediction",
+  "representation-learning",
+  "sequence-generation",
+  "splicing-prediction",
+  "tf-binding-prediction",
+  "variant-effect-prediction"
+ ],
+ "task_categories": [
+  "chromatin-accessibility-prediction",
+  "gene-expression-prediction",
+  "histone-modification-prediction",
+  "representation-learning",
+  "tf-binding-prediction",
+  "variant-effect-prediction"
+ ],
+ "training_data": [
+  "Genentech/borzoi-data"
+ ],
+ "type": [
+  "benchmark",
+  "database",
+  "dataset",
+  "model",
+  "module",
+  "protocol"
+ ],
+ "update_frequency": [
+  "annual"
+ ],
+ "validation_tier": [
+  "lab-validated",
+  "published-peer-reviewed"
+ ],
+ "variant_of": [
+  "model:borzoi"
+ ],
+ "version": [
+  "2.1"
+ ],
+ "year": [
+  2019,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025,
+  2026
+ ]
+}
