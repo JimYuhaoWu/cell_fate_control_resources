@@ -658,7 +658,7 @@ class CFCR:
                      if c in df.columns]
         if sort_cols:
             df = df.sort_values(sort_cols).reset_index(drop=True)
-        df.to_csv(out_path, sep="\t", index=False)
+        df.to_csv(out_path, sep="\t", index=False, lineterminator="\n")
         return len(df)
 
     # ── utils ────────────────────────────────────────────────────────────────

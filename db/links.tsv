@@ -1,0 +1,30 @@
+entity_id	kind	url	label	checked	alive
+benchmark:bend	code	https://github.com/frederikkemarin/BEND			
+benchmark:dart-eval	code	https://github.com/kundajelab/DART-Eval			
+benchmark:geneb	code	https://github.com/darlednik/GENEB			
+database:jaspar-2024	website	https://jaspar.elixir.no			
+database:jaspar-2024	api	https://jaspar.elixir.no/api/v1/docs/			
+dataset:borzoi-data	dataset	https://huggingface.co/datasets/Genentech/borzoi-data			
+dataset:enformer-data	dataset	https://huggingface.co/datasets/Genentech/enformer-data			
+dataset:replogle-2022-perturb-seq	website	https://gwps.wi.mit.edu	Genome-wide Perturb-seq data portal		
+model:alphagenome	api	https://deepmind.google.com/science/alphagenome	AlphaGenome API		
+model:borzoi	code	https://github.com/calico/borzoi			
+model:borzoi	code	https://github.com/calico/baskerville	Baskerville training framework		
+model:borzoi	dataset	https://huggingface.co/datasets/Genentech/borzoi-data	training/validation/test intervals		
+model:chrombpnet	code	https://github.com/kundajelab/chrombpnet			
+model:enformer	code	https://github.com/google-deepmind/deepmind-research/tree/master/enformer			
+model:evo2	code	https://github.com/ArcInstitute/evo2			
+model:flashzoi	container	https://zenodo.org/records/15669913	archived code release		
+model:flashzoi	weights	https://huggingface.co/johahi	Flashzoi and Borzoi replicate weights (MIT)		
+model:flashzoi	code	https://github.com/johahi/borzoi-pytorch			
+model:gears	code	https://github.com/snap-stanford/GEARS			
+model:gears	website	https://interp-extrap-perturb.readthedocs.io	Stegle group perturbation-method catalogue (authoritative for this axis)		
+model:nucleotide-transformer	code	https://github.com/instadeepai/nucleotide-transformer			
+model:nucleotide-transformer	weights	https://huggingface.co/InstaDeepAI	checkpoint collection (CC-BY-NC-SA-4.0)		
+module:delrosso-2023-effector-domains	supplementary	https://www.nature.com/articles/s41586-023-05906-y	Supplementary tables		
+module:delrosso-2023-effector-domains	dataset	https://github.com/JimYuhaoWu/eCR_mod_lib	integrated records (filter source_screen=DelRosso_2023)		
+module:epifactors-2022-chromatin-regulators	website	https://epifactors.autosome.org			
+module:epifactors-2022-chromatin-regulators	dataset	https://github.com/JimYuhaoWu/eCR_mod_lib	integrated records (filter source_screen=EpiFactors_2022)		
+module:tycko-2025-compact-effectors	supplementary	https://www.nature.com/articles/s41587-024-02442-6	Supplementary Table ST3		
+module:tycko-2025-compact-effectors	dataset	https://github.com/JimYuhaoWu/eCR_mod_lib	integrated records (filter source_screen=Tycko_2025)		
+protocol:cutrun-janssens-henikoff	docs	https://doi.org/10.17504/protocols.io.zcpf2vn	protocols.io canonical version		

@@ -493,7 +493,7 @@ def check_tags(db, entities, rep, root, promote_at):
         lines += ["", "| tag | records |", "|---|---|"]
         lines += [f"| {t} | {n} |" for t, n in counts.most_common(15)]
     lines.append("")
-    out.write_text("\n".join(lines))
+    out.write_text("\n".join(lines), newline="")
     return out
 
 
@@ -522,7 +522,7 @@ def main() -> int:
     wl_path = root / "config" / "qc_whitelist.yaml"
     whitelist = {}
     if wl_path.exists():
-        loaded = yaml.safe_load(wl_path.read_text()) or {}
+        loaded = yaml.safe_load(wl_path.read_text(encoding="utf-8")) or {}
         whitelist = (loaded.get("no_primary_paper") or {})
 
     rep = Report()

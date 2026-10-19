@@ -6,7 +6,7 @@ Reader API for the Cell Fate Control Resources catalogue (schema §8).
 The loader hides the schema: callers get flat pandas DataFrames with papers
 denormalized, and never see the entity/ext/join split.
 
-    from cfcr import load, load_papers
+    from cfcr import load, load_papers, load_links
 
     load(type="model")
     load(type="model", organism="mouse", assay="ATAC-seq")
@@ -14,6 +14,7 @@ denormalized, and never see the entity/ext/join split.
     load(type="model", evidence_tier="externally-benchmarked")
     load(type="protocol", validation_tier="published-peer-reviewed")
     load_papers("model:borzoi", role="critique")
+    load_links("model:borzoi", kind="code")
 
 Data source
 -----------
@@ -31,7 +32,7 @@ from typing import Any
 
 import pandas as pd
 
-__all__ = ["load", "load_papers", "facets", "ENTITY_TYPES"]
+__all__ = ["load", "load_papers", "load_links", "facets", "ENTITY_TYPES"]
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _DB_DIR = _REPO_ROOT / "db"
@@ -197,6 +198,32 @@ def load_papers(entity_id: str | None = None, *, role: str | None = None
 
     out = joins.merge(papers, on="paper_id", how="left")
     return _coerce_numeric(out).reset_index(drop=True)
+
+
+def load_links(entity_id: str | None = None, *, kind: str | None = None
+               ) -> pd.DataFrame:
+    """
+    Return resource links, optionally restricted to one entity and/or one kind.
+
+    With no arguments, returns every link in the catalogue with its entity_id
+    and kind.
+
+    >>> load_links("model:borzoi", kind="code")
+    """
+    links = _read_tsv("links.tsv")
+
+    if entity_id is not None:
+        links = links[links["entity_id"] == entity_id]
+        if links.empty:
+            known = set(_read_tsv("entities.tsv")["entity_id"])
+            if entity_id not in known:
+                raise ValueError(
+                    f"unknown entity_id {entity_id!r}. "
+                    f"Use load() to list entities.")
+    if kind is not None:
+        links = links[links["kind"] == kind]
+
+    return links.reset_index(drop=True)
 
 
 def facets(type: str | None = None) -> dict[str, list]:

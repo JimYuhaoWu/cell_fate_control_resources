@@ -84,7 +84,7 @@ pip install -e .
 Reading the catalogue needs nothing but the committed snapshots in `db/`:
 
 ```python
-from cfcr import load, load_papers, facets
+from cfcr import load, load_papers, load_links, facets
 
 load(type="model")                                     # all models, flat frame
 load(type="model", fate_axis="where", organism="mouse")
@@ -92,6 +92,7 @@ load(type="model", availability_tier="open-weights")   # check the licence!
 load(type="protocol", validation_tier="published-peer-reviewed")
 
 load_papers("model:enformer", role="critique")         # the evidence trail
+load_links("model:enformer")                           # code, weights, docs
 facets("model")                                        # what filters accept
 ```
 
@@ -107,8 +108,9 @@ python scripts/05_validate.py     # QC; exits 1 on any ERROR
 python scripts/05_validate.py --check-links   # adds the link-rot sweep
 ```
 
-`db/cfcr.db` is git-ignored; `db/entities.tsv`, `db/papers.tsv` and
-`db/entity_paper.tsv` are committed, and are what the loader reads.
+`db/cfcr.db` is git-ignored; `db/entities.tsv`, `db/papers.tsv`,
+`db/entity_paper.tsv` and `db/links.tsv` are committed, and are what the loader
+reads.
 
 ## The site
 
