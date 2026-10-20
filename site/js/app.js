@@ -124,8 +124,8 @@
   }
 
   function label(value) {
-    if (value === '1') { return 'yes'; }
-    if (value === '0') { return 'no'; }
+    if (value === true) { return 'yes'; }
+    if (value === false) { return 'no'; }
     return String(value);
   }
 

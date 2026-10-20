@@ -59,10 +59,10 @@
   "open-weights"
  ],
  "baseline_included": [
-  "1"
+  true
  ],
  "bulk_download": [
-  "1"
+  true
  ],
  "canonical_host": [
   "protocols.io"
@@ -120,11 +120,11 @@
   "mm10"
  ],
  "has_api": [
-  "1"
+  true
  ],
  "has_leaderboard": [
-  "0",
-  "1"
+  false,
+  true
  ],
  "input_context_bp": [
   1000000.0,
@@ -139,7 +139,7 @@
   "sequence"
  ],
  "integrated_in_ecr_lib": [
-  "1"
+  true
  ],
  "key_reagents": [
   "Concanavalin A beads",
@@ -222,8 +222,8 @@
   "active"
  ],
  "submission_open": [
-  "0",
-  "1"
+  false,
+  true
  ],
  "supersedes": [
   "model:enformer"

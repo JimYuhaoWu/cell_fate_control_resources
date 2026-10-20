@@ -41,6 +41,16 @@ PAPER_ROLE_ORDER = ("primary", "preprint", "benchmark", "critique",
 LINK_KIND_ORDER = ("code", "weights", "api", "website", "docs", "dataset",
                    "container", "supplementary")
 
+# Columns the schema stores as INTEGER 0/1 and the TSVs therefore carry as the
+# strings "0" and "1". They are exported as real JSON booleans: the published
+# metadata is CC-BY-4.0 and served at a public URL, and `"0"` is truthy in
+# JavaScript, so `if (entity.has_leaderboard)` would be wrong for exactly the
+# records where it matters.
+BOOLEAN_COLUMNS = frozenset((
+    "has_leaderboard", "submission_open", "baseline_included",
+    "integrated_in_ecr_lib", "has_api", "bulk_download",
+))
+
 
 def _clean(value):
     """Drop NaN/empty, leave everything else as the loader decoded it."""
@@ -58,6 +68,11 @@ def _clean(value):
     if hasattr(value, "item"):              # numpy scalar -> JSON-able
         value = value.item()
     return value
+
+
+def _as_bool(value) -> bool:
+    """Integer-backed boolean -> real bool, whether it arrived as 1 or "1"."""
+    return bool(int(value))
 
 
 def _paper_url(paper_id: str, doi, url):
@@ -123,6 +138,8 @@ def export_entities(joins, links_by_entity) -> list[dict]:
                 continue
             cleaned = _clean(value)
             if cleaned is not None:
+                if column in BOOLEAN_COLUMNS:
+                    cleaned = _as_bool(cleaned)
                 entity[column] = cleaned
 
         entity["links"] = links_by_entity.get(record["entity_id"], [])
@@ -214,6 +231,8 @@ def main() -> int:
     entities = export_entities(joins, links_by_entity)
     papers = export_papers(joins)
     facets = cfcr.facets()
+    for column in BOOLEAN_COLUMNS & facets.keys():
+        facets[column] = sorted({_as_bool(v) for v in facets[column]})
 
     written = [
         write_json(out_dir / "entities.json", entities),
@@ -225,8 +244,11 @@ def main() -> int:
     print(f"exported {len(entities)} entities, {len(papers)} papers, "
           f"{n_links} links, {len(facets)} facets")
     for path in written:
-        print(f"  {path.relative_to(args.repo_root)}"
-              f"  {path.stat().st_size / 1024:.1f} KiB")
+        try:
+            shown = path.relative_to(args.repo_root)
+        except ValueError:          # --out outside the repo; show it in full
+            shown = path
+        print(f"  {shown}  {path.stat().st_size / 1024:.1f} KiB")
     return 0
 
 

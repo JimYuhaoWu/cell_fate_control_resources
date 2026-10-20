@@ -8,7 +8,7 @@
    "DNase-seq",
    "ChIP-seq"
   ],
-  "baseline_included": "1",
+  "baseline_included": true,
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-16",
   "date_updated": "2026-10-16",
@@ -20,7 +20,7 @@
   "fate_axis": [
    "how"
   ],
-  "has_leaderboard": "0",
+  "has_leaderboard": false,
   "links": [
    {
     "kind": "code",
@@ -57,7 +57,7 @@
   "primary_paper_id": "arxiv:2311.12570",
   "primary_paper_title": "BEND: Benchmarking DNA Language Models on biologically meaningful tasks",
   "status": "active",
-  "submission_open": "0",
+  "submission_open": false,
   "tags": [
    "dna-lm",
    "genome-annotation",
@@ -87,7 +87,7 @@
    "ATAC-seq",
    "DNase-seq"
   ],
-  "baseline_included": "1",
+  "baseline_included": true,
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-16",
   "date_updated": "2026-10-16",
@@ -102,7 +102,7 @@
    "how",
    "where"
   ],
-  "has_leaderboard": "0",
+  "has_leaderboard": false,
   "links": [
    {
     "kind": "code",
@@ -139,7 +139,7 @@
   "primary_paper_id": "10.52202/079017-1981",
   "primary_paper_title": "DART-Eval: A Comprehensive DNA Language Model Evaluation Benchmark on Regulatory DNA",
   "status": "active",
-  "submission_open": "0",
+  "submission_open": false,
   "tags": [
    "regulatory-dna",
    "ab-initio-baseline",
@@ -164,7 +164,7 @@
   "aliases": [
    "geneb"
   ],
-  "baseline_included": "1",
+  "baseline_included": true,
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-16",
   "date_updated": "2026-10-16",
@@ -177,7 +177,7 @@
    "how",
    "where"
   ],
-  "has_leaderboard": "1",
+  "has_leaderboard": true,
   "links": [
    {
     "kind": "code",
@@ -212,7 +212,7 @@
   "primary_paper_id": "arxiv:2606.04525",
   "primary_paper_title": "GENEB: Why Genomic Models Are Hard to Compare",
   "status": "active",
-  "submission_open": "1",
+  "submission_open": true,
   "tags": [
    "leaderboard",
    "probing",
@@ -238,7 +238,7 @@
   "aliases": [
    "JASPAR"
   ],
-  "bulk_download": "1",
+  "bulk_download": true,
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-16",
   "date_updated": "2026-10-16",
@@ -248,7 +248,7 @@
    "with-what",
    "where"
   ],
-  "has_api": "1",
+  "has_api": true,
   "links": [
    {
     "kind": "api",
@@ -1718,7 +1718,7 @@
   "fate_axis": [
    "with-what"
   ],
-  "integrated_in_ecr_lib": "1",
+  "integrated_in_ecr_lib": true,
   "links": [
    {
     "kind": "dataset",
@@ -1824,7 +1824,7 @@
   "fate_axis": [
    "with-what"
   ],
-  "integrated_in_ecr_lib": "1",
+  "integrated_in_ecr_lib": true,
   "links": [
    {
     "kind": "website",
@@ -1904,7 +1904,7 @@
   "fate_axis": [
    "with-what"
   ],
-  "integrated_in_ecr_lib": "1",
+  "integrated_in_ecr_lib": true,
   "links": [
    {
     "kind": "dataset",

@@ -5,16 +5,17 @@
 # from there would put working design documents on the web. Deploying from
 # Actions lets site/ be the published root and leaves docs/ as documents.
 #
-# site/data/*.json is committed, so this workflow only uploads; regenerate it
-# with `python scripts/07_export_site.py` and commit the result.
+# site/data/*.json is committed, so this workflow uploads rather than builds.
+# It does re-run the exporter first and fail if the result differs from what is
+# committed: a curation change that forgets `scripts/07_export_site.py` would
+# otherwise keep serving the previous export with nothing reporting a problem.
+# That check is why there is no `paths:` filter -- the staleness it catches is
+# caused by commits that touch no file under site/.
 name: pages
 
 on:
   push:
     branches: [main]
-    paths:
-      - 'site/**'
-      - '.github/workflows/pages.yml'
   workflow_dispatch:
 
 permissions:
@@ -34,6 +35,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - run: pip install -e .
+      - name: site/data matches the committed records
+        run: |
+          python scripts/07_export_site.py
+          git diff --exit-code -- site/data
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
