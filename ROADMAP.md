@@ -169,12 +169,70 @@ Everything schema §11 deferred, plus what M1 and M4 turn up.
 
 ## M7 — citable release and database paper
 
-- [ ] Zenodo integration, DOI per release
+Target venue: the **Nucleic Acids Research Database Issue**.
+
+- [ ] Archival DOI per release — see the Figshare/Zenodo question below
 - [ ] CITATION.cff
 - [ ] Co-maintainer recruitment
 - [ ] Database paper draft
 
 **Exit:** CFCR is citable, and someone other than its author has merged a record.
+
+### The NAR timeline
+
+These are the only dates in this file, and they are not an exception to the
+rule at the top: they are **imposed from outside**, not estimates of our own
+throughput. Verified from NAR's author pages on 2026-10-20.
+
+Submission is **by invitation only**, on a yearly cycle:
+
+| When | What |
+|---|---|
+| **1 July** | Pre-submission inquiry to Prof. Daniel J. Rigden, Executive Editor — the hard gate |
+| 1 June | Earliest a manuscript may be submitted |
+| **15 August** | New-database manuscript deadline |
+| January | The issue publishes |
+
+1 July 2026 has passed, so the realistic target is the **1 July 2027 inquiry
+for the January 2028 issue**. No 2027-specific call was findable; confirm with
+the editor. An invitation does not guarantee acceptance — everything is peer
+reviewed.
+
+The inquiry must carry a URL to a *fully functional* database and explain how
+it is "different from, and substantially better than, all similar resources".
+That argument is drafted; it is what the backfill should be shaped around,
+because the editor will open the site.
+
+### What must be true before the inquiry
+
+- **M4 is done.** 20 entities will not survive comparison with Kipoi's 2,000+
+  or the Stegle catalogue's 156. This, not the website, is what gates the
+  submission.
+- **At least one co-maintainer.** NAR states that "retirement or graduation of
+  developers is not a valid reason to terminate the database", which turns the
+  checkbox above into part of the case rather than a nicety.
+- **The domain is held through ~2033.** The database must stay at the same URL
+  for five years after publication — the reason cellfatecontrol.com exists
+  rather than a `github.io` address.
+- **An archival DOI.** NAR's data page names **Figshare** and rules out GitHub
+  as a primary archive; this roadmap said Zenodo. Mint both, or settle it in
+  the inquiry.
+
+### Easy to forget at submission time
+
+- A **graphical abstract is mandatory**: 5:2 ratio, min 127×50 mm, TIF/EPS or
+  editable PDF, 300–600 dpi, landscape, sans-serif, no trademarked logos.
+- **Six suggested referees**, independent of the authors and not from the same
+  institution or city.
+- 4–5 typeset pages; database name first in the title; a working URL in the
+  abstract.
+- A narrow topic must be argued to benefit the wider NAR readership — the
+  evidence-independence mechanism is the general-interest claim.
+
+**Already satisfied:** free with no login or registration, HTTPS enforced, bulk
+download in open formats with licence terms stated, mobile support (worth
+mentioning in the manuscript — NAR asks for it), and no new experimental or
+computational results, which the Database Issue does not accept.
 
 ---
 
