@@ -267,10 +267,17 @@ a weight.
    can never appear in any `cites:` result, whatever the scoring does. This caps
    recall at 6/8 (75%) on today's ground truth, and the cap is a property of the
    citation graph, not of this design. Conference proceedings are the systematic
-   gap: the mitigation is to keep the `benchmarks` discovery query, which found
-   DART-Eval by keyword, rather than letting the citation sweep replace it.
-   `search_queries.yaml` currently floats exactly that replacement as an option
-   for fixing the query's breadth; this measurement argues against it.
+   gap: the mitigation is to keep the `benchmarks` discovery query rather than
+   letting the citation sweep replace it, and `search_queries.yaml` floated
+   exactly that replacement as an option for fixing the query's breadth, so this
+   measurement argues against it.
+   **Narrowed on 2026-10-20, and the mitigation is arXiv's half, not Europe
+   PMC's.** Checked while implementing `01_search.py`: DART-Eval is absent from
+   Europe PMC entirely — 0 hits for its own title — so only the query's `arxiv`
+   key can reach it, at rank 11 of 50. The Europe PMC side was narrowed from
+   2,326 hits to 61 on §1.6.2; the arXiv side was deliberately left alone,
+   because tightening it to the DNA-language-model phrasings puts DART-Eval at
+   rank 1 but drops the query to 3 hits.
 2. **A missing abstract cannot be backfilled.** Checked, not assumed: Europe PMC
    returns the title of `10.1038/s41588-023-01517-5` and no `abstractText`,
    despite being the source `config/sources.yaml` relies on for the abstracts

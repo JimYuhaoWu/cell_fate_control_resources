@@ -95,13 +95,33 @@ queries:
   # The one query whose hits are mostly *not* new entities: a benchmark paper
   # usually evaluates models already catalogued, which is why it also feeds the
   # citation sweep below.
+  #
+  # Narrowed 2026-10-20 on docs/triage_design.md §1.6.2, which measured the
+  # first version at 2,326 Europe PMC hits with a median score of 2.50 and
+  # toxicology, breast-cancer imaging, bibliometrics and crop breeding in the
+  # top 50. Two changes: "benchmark" moved from TITLE_ABS to TITLE, since every
+  # methods paper benchmarks something in its abstract, and the second clause
+  # now has to name something in scope instead of the bare word "model". The
+  # result is 61 hits. The arXiv side is left alone on purpose -- see below.
   - id: benchmarks
     fate_axis: null
     expect_type: benchmark
     europepmc: >
-      (TITLE_ABS:"benchmark" OR TITLE_ABS:"benchmarking" OR TITLE_ABS:"evaluation suite")
-      AND (TITLE_ABS:"genomic" OR TITLE_ABS:"regulatory" OR TITLE_ABS:"DNA")
-      AND (TITLE_ABS:"deep learning" OR TITLE_ABS:"language model" OR TITLE_ABS:"model")
+      (TITLE:"benchmark" OR TITLE:"benchmarking" OR TITLE_ABS:"evaluation suite"
+       OR TITLE_ABS:"systematic evaluation" OR TITLE_ABS:"head-to-head comparison")
+      AND (TITLE_ABS:"genomic language model" OR TITLE_ABS:"DNA language model"
+           OR TITLE_ABS:"sequence-to-function" OR TITLE_ABS:"regulatory DNA"
+           OR TITLE_ABS:"chromatin accessibility"
+           OR TITLE_ABS:"gene expression prediction"
+           OR TITLE_ABS:"variant effect prediction")
+    # Not narrowed, and this is the load-bearing half. docs/triage_design.md
+    # §2.6.1 names this query as the mitigation for DART-Eval, whose OpenAlex
+    # record has one reference deposited so no citation sweep can ever reach
+    # it. Checked: DART-Eval is absent from Europe PMC entirely (0 hits for its
+    # own title), so arXiv is the only route to it -- and this query finds it at
+    # rank 11 of 50 out of 60 total. Tightening it to the DNA-language-model
+    # phrasings puts DART-Eval at rank 1 but drops the query to 3 hits, which
+    # trades the mitigation for precision the scoring already provides.
     arxiv: 'ti:"benchmark" AND abs:"genomic"'
 
   - id: module_collections
