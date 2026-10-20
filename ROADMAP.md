@@ -92,9 +92,9 @@ would be unknown. Closed as issue #2.
 Adapted from `eCR_mod_lib` rather than written fresh.
 
 - [ ] `literature/01_search.py` — Europe PMC + arXiv for discovery, OpenAlex for citations
-- [ ] `literature/02_triage.py` — score candidates, emit `reviews/review_YYYY-MM-DD.md`
+- [ ] `literature/02_triage.py` — score candidates, emit `literature/reviews/review_YYYY-MM-DD.md`
 - [ ] `literature/03_record.py` — validate review decisions back into `papers.yaml`
-- [ ] `search_queries.yaml` per collection; reuse the established rejection patterns
+- [x] `literature/search_queries.yaml` per collection, every query run against the live APIs
 - [ ] Retry-with-backoff on every API call
 
 **Exit:** one cycle runs end to end and a human approves or rejects a real
@@ -118,6 +118,28 @@ measured reasons:
   for the two catalogued critiques of Enformer, OpenAlex returned each in one
   filtered call; keyless Semantic Scholar gave a null citation count, found one
   of the two inside the first 1,000 of 1,325 citations, and did not have BEND.
+
+**Settled with it.** Three things M3 could not start without:
+
+- **`requests`, in an extra rather than the package.** eCR_mod_lib's pipeline
+  already retries on a plain `requests.Session` — three attempts, `Retry-After`
+  honoured, `2**n` backoff — so matching it beats porting to `httpx` or a retry
+  library. It is `pip install -e ".[literature]"`, not a runtime dependency of
+  `cfcr`, because querying the committed snapshots touches no network and the
+  README says so. Worth fixing while adapting: that `_get` returns `None` on
+  total failure, which is precisely how a dropped request nulls an author list.
+- **`literature/reviews/` is committed; `literature/candidates/*.json` is not.**
+  The raw dumps are bulky and reproducible. The review file is neither: it is
+  the only record of which candidates a human rejected and why, and a rejection
+  that is not written down returns as a candidate every cycle. The roadmap said
+  `reviews/` and `.gitignore` said `literature/candidates/`; both now agree with
+  eCR_mod_lib's layout.
+- **`literature/search_queries.yaml` exists**, eight collection queries keyed to
+  Europe PMC and arXiv instead of the sibling's PubMed and Semantic Scholar. All
+  fifteen were run against the live APIs before being committed, and the
+  measured breadth is recorded in the file — including the two queries that are
+  visibly mistuned and are left that way until `02_triage.py` can say what good
+  looks like.
 
 The reason a citation source is on the list at all: **no keyword query finds a
 paper that criticises a model.** `critique` is the role the whole evidence layer

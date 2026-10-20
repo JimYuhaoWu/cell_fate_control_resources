@@ -15,6 +15,14 @@ dependencies = [
     "pyyaml",
 ]
 
+# The literature pipeline is the only thing here that touches the network, and
+# `pip install cfcr` is for querying the committed snapshots -- which needs no
+# network at all. Keeping `requests` out of the runtime dependencies is what
+# makes that claim in README true, so it goes in an extra:
+#     pip install -e ".[literature]"
+[project.optional-dependencies]
+literature = ["requests"]
+
 [project.urls]
 Homepage = "https://github.com/JimYuhaoWu/cell_fate_control_resources"
 Repository = "https://github.com/JimYuhaoWu/cell_fate_control_resources"

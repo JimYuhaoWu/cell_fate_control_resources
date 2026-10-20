@@ -3,8 +3,12 @@ db/cfcr.db
 db/cfcr.db-wal
 db/cfcr.db-shm
 
-# Literature pipeline staging
-literature/candidates/
+# Literature pipeline staging. The raw API dumps are bulky and reproducible, so
+# they stay out -- but the directory itself is committed, and
+# literature/reviews/ is committed in full: a review file records which
+# candidates a human rejected and why, and nothing else can recover that. A
+# rejection that is not written down comes back as a candidate every cycle.
+literature/candidates/*.json
 
 # Site build output
 site/data/embeddings.bin

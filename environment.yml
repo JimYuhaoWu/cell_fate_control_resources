@@ -13,4 +13,9 @@ dependencies:
   - python=3.10
   - pandas
   - pyyaml
+  # For literature/01_search.py only. `requests` rather than httpx or a retry
+  # library because eCR_mod_lib's pipeline, which M3 adapts, already retries on
+  # a plain requests.Session -- three attempts, Retry-After honoured, 2**n
+  # backoff -- and matching it is cheaper than porting it to something else.
+  - requests
   - pip

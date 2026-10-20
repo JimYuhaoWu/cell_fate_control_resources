@@ -1,0 +1,156 @@
+# literature/search_queries.yaml
+#
+# Queries sent by literature/01_search.py, one block per collection the
+# backfill is organised around (ROADMAP M4). Adapted from eCR_mod_lib's file of
+# the same name, with the per-source keys changed: that pipeline queried PubMed
+# and Semantic Scholar, and CFCR queries Europe PMC and arXiv -- see
+# config/sources.yaml for why.
+#
+# Every query here was run against the live APIs before being committed, so the
+# syntax is known to work: Europe PMC takes TITLE_ABS, boolean AND/OR/NOT,
+# SRC:PPR for preprints and FIRST_PDATE ranges; arXiv takes ti:, abs:, all:
+# and cat:. Hit counts are deliberately not recorded -- they change daily.
+#
+# `fate_axis` and `expect_type` are triage hints, not assertions: they say what
+# a hit from this query is likely to be, so 02_triage.py can rank and group.
+# The curator still decides, and the decision is written into
+# literature/reviews/review_YYYY-MM-DD.md.
+
+# Appended to every Europe PMC query. CFCR's organism scope is human, mouse and
+# multi-species models (vocab/organism.yaml), but the filter is on *publication
+# type*, not organism: a model trained on plant genomes is out of scope by the
+# scope rule in README, and a negative organism keyword would also throw away
+# the multi-species DNA language models that are squarely in scope.
+europepmc_exclude: "NOT (PUB_TYPE:\"Editorial\" OR PUB_TYPE:\"Comment\")"
+
+# arXiv categories worth searching. cs.LG is here because the `how` axis lives
+# at ML venues: BEND (ICLR 2024) is a catalogued benchmark and is absent from
+# Europe PMC entirely.
+arxiv_categories: ["q-bio.GN", "cs.LG", "q-bio.QM"]
+
+queries:
+  # ── `where`: sequence-to-function ──────────────────────────────────────────
+  - id: interval_models
+    fate_axis: where
+    expect_type: model
+    europepmc: >
+      (TITLE_ABS:"gene expression prediction" OR TITLE_ABS:"sequence-to-function"
+       OR TITLE_ABS:"sequence to expression" OR TITLE_ABS:"regulatory activity prediction")
+      AND (TITLE_ABS:"deep learning" OR TITLE_ABS:"neural network"
+           OR TITLE_ABS:"convolutional" OR TITLE_ABS:"transformer")
+    arxiv: 'abs:"gene expression prediction" AND abs:"genomic sequence"'
+
+  - id: variant_effect
+    fate_axis: where
+    expect_type: model
+    europepmc: >
+      TITLE_ABS:"variant effect prediction"
+      AND (TITLE_ABS:"non-coding" OR TITLE_ABS:"noncoding" OR TITLE_ABS:"regulatory")
+      AND (TITLE_ABS:"deep learning" OR TITLE_ABS:"model")
+    arxiv: 'abs:"variant effect" AND abs:"regulatory"'
+
+  - id: accessibility
+    fate_axis: where
+    expect_type: model
+    europepmc: >
+      (TITLE_ABS:"chromatin accessibility prediction" OR TITLE_ABS:"ATAC-seq prediction"
+       OR TITLE_ABS:"open chromatin prediction")
+      AND (TITLE_ABS:"deep learning" OR TITLE_ABS:"model" OR TITLE_ABS:"single-cell")
+    arxiv: 'abs:"chromatin accessibility" AND abs:"deep learning"'
+
+  # Admitted to scope by b9483d4; `contact-map` in vocab/output_type.yaml is
+  # waiting on the first record from this query (issue #7).
+  - id: genome_3d
+    fate_axis: where
+    expect_type: model
+    europepmc: >
+      (TITLE_ABS:"chromatin interaction prediction" OR TITLE_ABS:"contact map prediction"
+       OR TITLE_ABS:"Hi-C prediction" OR TITLE_ABS:"3D genome prediction")
+      AND (TITLE_ABS:"deep learning" OR TITLE_ABS:"sequence")
+    arxiv: 'abs:"Hi-C" AND abs:"deep learning"'
+
+  # ── `how`: DNA language models ─────────────────────────────────────────────
+  - id: dna_language_models
+    fate_axis: how
+    expect_type: model
+    europepmc: >
+      (TITLE_ABS:"DNA language model" OR TITLE_ABS:"genomic language model"
+       OR TITLE_ABS:"genome language model" OR TITLE_ABS:"nucleotide transformer"
+       OR TITLE_ABS:"genomic foundation model")
+    arxiv: 'all:"DNA language model" OR all:"genomic language model"'
+
+  # ── `what`: shallow and pointing outward (README scope rule) ───────────────
+  # Narrow on purpose: a single-cell foundation model qualifies only when it
+  # predicts a perturbation response, so the query demands the prediction, not
+  # the embedding. The interp-extrap-perturb catalogue owns this axis.
+  - id: perturbation_response
+    fate_axis: what
+    expect_type: model
+    europepmc: >
+      TITLE_ABS:"perturbation response prediction"
+      AND (TITLE_ABS:"single-cell" OR TITLE_ABS:"transcriptional")
+    arxiv: 'abs:"perturbation response" AND abs:"single-cell"'
+
+  # ── Resources that serve the models ────────────────────────────────────────
+  # The one query whose hits are mostly *not* new entities: a benchmark paper
+  # usually evaluates models already catalogued, which is why it also feeds the
+  # citation sweep below.
+  - id: benchmarks
+    fate_axis: null
+    expect_type: benchmark
+    europepmc: >
+      (TITLE_ABS:"benchmark" OR TITLE_ABS:"benchmarking" OR TITLE_ABS:"evaluation suite")
+      AND (TITLE_ABS:"genomic" OR TITLE_ABS:"regulatory" OR TITLE_ABS:"DNA")
+      AND (TITLE_ABS:"deep learning" OR TITLE_ABS:"language model" OR TITLE_ABS:"model")
+    arxiv: 'ti:"benchmark" AND abs:"genomic"'
+
+  - id: module_collections
+    fate_axis: with-what
+    expect_type: module
+    europepmc: >
+      (TITLE_ABS:"effector domain" OR TITLE_ABS:"activation domain"
+       OR TITLE_ABS:"repression domain" OR TITLE_ABS:"chromatin regulator")
+      AND (TITLE_ABS:"high-throughput" OR TITLE_ABS:"screen" OR TITLE_ABS:"tiling"
+           OR TITLE_ABS:"compendium")
+    arxiv: null
+
+# How the `benchmark` and `critique` roles are actually found.
+#
+# This is not a query, and that is the point: no keyword search finds a paper
+# that criticises a model. Asked for papers matching "fail" and "enformer",
+# Europe PMC returns three hits, none of them either of the two critiques of
+# Enformer already catalogued here. They are reached by walking the citations
+# of the primary paper and judging which citing papers are evaluations --
+# OpenAlex supplies the edges, a human supplies the judgement.
+citation_sweep:
+  source: openalex
+  # Entities whose primary paper gets swept. `all` means every entity with a
+  # `primary` paper; the sweep is the expensive step, so a cycle may narrow it.
+  entities: all
+  # A paper citing the primary is a candidate for `benchmark` or `critique`.
+  # evidence_tier is then derived by 05_validate.py from author overlap, never
+  # from anything decided here -- triage proposes the role, QC decides the tier.
+  candidate_roles: ["benchmark", "critique"]
+
+# Shared limits.
+#
+# min_year is 2015 rather than the field's recent boom: DeepSEA (2015) and the
+# Basenji line that M4 names are the start of the `where` axis, and a later cut
+# would silently amputate the lineage that `supersedes` and `variant_of` link.
+min_year: 2015
+max_results_per_query: 50
+
+# Breadth as measured on 2026-10-20, Europe PMC / arXiv, so the first cycle
+# starts from numbers rather than guesses:
+#
+#   interval_models 264/1 · variant_effect 39/6 · accessibility 15/1
+#   genome_3d 69/2 · dna_language_models 213/58 · perturbation_response 37/33
+#   benchmarks 2326/60 · module_collections 249/-
+#
+# Two of these are wrong and left wrong on purpose, because the right fix
+# depends on 02_triage.py's scoring, which does not exist yet:
+#   - `benchmarks` is far too broad. "benchmark" is a word every methods paper
+#     uses, and at 2,326 hits a 50-result cap samples noise rather than the
+#     head. Narrow it, or let the citation sweep carry this role instead.
+#   - `accessibility` and the tighter arXiv phrases may be too narrow -- 15
+#     hits for a subfield M4 budgets ~30 entities to is suspicious.
