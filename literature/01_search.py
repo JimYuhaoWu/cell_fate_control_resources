@@ -52,7 +52,11 @@ OPENALEX = "https://api.openalex.org/works"
 
 # What 02_triage.py scores a citing work on (docs/triage_design.md §2.2):
 # title, abstract, type, and the reference list the model-count signal reads.
-OA_SELECT = ("id,doi,title,publication_year,type,primary_location,"
+# `authorships` is here for display only: docs/triage_design.md §2.4 wants the
+# review file to show author overlap with the primary paper as context, while
+# the score ignores it -- scoring it would make the derived evidence_tier
+# measure triage's own filter instead of the literature.
+OA_SELECT = ("id,doi,title,publication_year,type,primary_location,authorships,"
              "referenced_works,referenced_works_count,abstract_inverted_index")
 
 ATOM = {"a": "http://www.w3.org/2005/Atom",
@@ -295,10 +299,17 @@ def run_sweep(cfg: dict, primary: dict, titles: dict, linked: set,
                 out.append({
                     "cites_entity": entity,
                     "cites_paper_id": paper_id,
+                    # The id the sweep queried. Recorded so triage can match
+                    # reference lists against catalogued primaries without
+                    # resolving every DOI again.
+                    "cites_openalex_id": short_id,
                     "openalex_id": (w.get("id") or "").rsplit("/", 1)[-1],
                     "doi": doi,
                     "title": w.get("title"),
                     "abstract": flatten_abstract(w),
+                    "authors": [a["author"]["display_name"]
+                                for a in (w.get("authorships") or [])
+                                if (a.get("author") or {}).get("display_name")],
                     "year": w.get("publication_year"),
                     "oa_type": w.get("type"),
                     "venue": source.get("display_name"),

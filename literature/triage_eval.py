@@ -19,14 +19,15 @@ which .gitignore excludes.
 
 from __future__ import annotations
 
-import csv
 import json
-import re
 import sys
 import time
 from pathlib import Path
 
 import requests
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import triage_rules as rules                      # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "literature" / "candidates"
@@ -40,43 +41,6 @@ SELECT = ("id,doi,title,publication_year,type,primary_location,referenced_works,
 # much a curator is asked to read -- nothing is discarded by QC on this basis.
 MIN_A = 3.0
 MIN_B = 3.0
-
-
-# ── vocabularies ─────────────────────────────────────────────────────────────
-# "Names a model class rather than a model" is the whole reason list B exists:
-# the two catalogued critiques of Enformer never write the word "Enformer".
-CLASS_TERMS = [
-    "genomic deep learning", "sequence-to-function", "sequence to function",
-    "dna language model", "genomic language model", "genome language model",
-    "genomic foundation model", "dna foundation model", "foundation model",
-    "state-of-the-art model", "current model", "current approaches",
-    "deep learning model", "sequence model",
-]
-BENCH_TITLE = [
-    "benchmark", "benchmarking", "evaluation", "evaluating", "evaluate",
-    "comparison", "comparative", "compare", "assessment", "assessing", "assess",
-    "baseline", "leaderboard", "head-to-head", "systematic",
-]
-BENCH_ABSTRACT = BENCH_TITLE + [
-    "we evaluate", "we compare", "we benchmark", "we assess", "across models",
-    "evaluated on", "four state-of-the-art", "three state-of-the-art",
-]
-CRIT_TITLE = [
-    "fail", "fails", "struggle", "struggles", "poorly", "overestimat",
-    "underestimat", "limitation", "caveat", "cannot", "pitfall", "overstate",
-    "illusion", "spurious", "confound", "underperform", "inflated",
-    "misleading", "hard to compare", "not generalize", "questioning",
-    "reassess", "overlooked",
-]
-CRIT_ABSTRACT = CRIT_TITLE + [
-    "fails to", "struggle to", "poorly explained", "limited performance",
-    "no better than", "worse than", "artifact", "remains unexplored",
-    "often fail", "incorrect direction",
-]
-# `review` is a legitimate entity_paper role, so these demote rather than
-# exclude: a review that evaluates models is still worth a curator's glance.
-DEMOTE_TITLE = ["review", "perspective", "primer", "roadmap", "erratum",
-                "correction", "retraction"]
 
 
 # ── OpenAlex ─────────────────────────────────────────────────────────────────
@@ -134,113 +98,35 @@ def cached_citing(label: str, short_id: str) -> list[dict]:
     return works
 
 
-# ── scoring ──────────────────────────────────────────────────────────────────
+# ── shared scoring ───────────────────────────────────────────────
+# The tables and scorers live in triage_rules.py, which 02_triage.py also
+# imports. They were duplicated here first; two copies make this script's whole
+# promise -- that it says what a scoring change cost -- false the moment one
+# copy moves.
 
-def abstract_of(work: dict) -> str:
+def as_record(work: dict) -> dict:
+    """OpenAlex work -> the normalized shape triage_rules scores."""
     inv = work.get("abstract_inverted_index")
-    if not inv:
-        return ""
-    return " ".join(w for _, w in sorted((i, w) for w, idx in inv.items() for i in idx))
-
-
-def hits(terms: list[str], text: str) -> list[str]:
-    return [t for t in terms if re.search(r"(?<![a-z])" + re.escape(t), text)]
-
-
-def names(forms: set[str], text: str) -> bool:
-    return any(re.search(r"(?<![a-z0-9])" + re.escape(f.lower()) + r"(?![a-z0-9])", text)
-               for f in forms)
-
-
-def lexicon(title: str, abstract: str) -> tuple[float, float]:
-    bench = (min(2.0 * len(hits(BENCH_TITLE, title)), 4.0)
-             + min(0.5 * len(hits(BENCH_ABSTRACT, abstract)), 2.0))
-    crit = (min(2.5 * len(hits(CRIT_TITLE, title)), 5.0)
-            + min(0.75 * len(hits(CRIT_ABSTRACT, abstract)), 3.0))
-    return bench, crit
-
-
-def propose_role(bench: float, crit: float) -> str:
-    if crit > bench:
-        return "critique"
-    return "benchmark" if bench > 0 else "unclear"
-
-
-def _context(work: dict, primaries: dict, entity: str | None):
-    title = (work.get("title") or "").lower()
-    abstract = abstract_of(work).lower()
-    refs = {r.rsplit("/", 1)[-1] for r in (work.get("referenced_works") or [])}
-    own = primaries.get(entity) if entity else None
-    cited = sorted(e for e, oa in primaries.items() if oa and oa in refs)
-    n_shared = len({primaries[e] for e in cited if primaries[e] != own})
-    return title, abstract, f"{title} || {abstract}", cited, n_shared
+    abstract = ("" if not inv else
+                " ".join(w for _, w in sorted((i, w) for w, ixs in inv.items()
+                                              for i in ixs)))
+    return {"title": work.get("title") or "", "abstract": abstract,
+            "referenced_works": work.get("referenced_works") or [],
+            "oa_type": work.get("type") or ""}
 
 
 def score_named(work, entity, primaries, model_forms, all_forms):
-    """List A: the citing paper names this entity."""
-    title, abstract, both, _, n_shared = _context(work, primaries, entity)
-    parts = {}
-    if names(all_forms.get(entity, set()), title):
-        parts["name_title"] = 3.0
-    elif names(all_forms.get(entity, set()), abstract):
-        parts["name_abstract"] = 1.5
-    else:
-        return None
-    bench, crit = lexicon(title, abstract)
-    parts["bench_lex"], parts["crit_lex"] = bench, crit
-    others = sum(1 for e, f in model_forms.items() if e != entity and names(f, both))
-    parts["multi_model"] = {0: 0.0, 1: 0.5, 2: 1.5}.get(others, 3.0)
-    parts["ref_overlap"] = min(0.75 * n_shared, 3.0)
-    if hits(DEMOTE_TITLE, title):
-        parts["demote_title"] = -3.0
-    if (work.get("type") or "") == "review":
-        parts["demote_type"] = -3.0
-    return round(sum(parts.values()), 2), propose_role(bench, crit), parts
+    return rules.score_named(as_record(work), entity, primaries, model_forms,
+                             all_forms)
 
 
 def score_class(work, primaries, model_forms):
-    """List B: names no catalogued model, but talks like an evaluation of a class."""
-    title, abstract, both, cited, n_shared = _context(work, primaries, None)
-    if any(names(f, both) for f in model_forms.values()):
-        return None
-    if not hits(CLASS_TERMS, both):
-        return None
-    bench, crit = lexicon(title, abstract)
-    if bench + crit < 2.0:
-        return None
-    parts = {"class_term": 1.0, "bench_lex": bench, "crit_lex": crit,
-             "ref_overlap": min(0.75 * n_shared, 4.5)}
-    if hits(DEMOTE_TITLE, title):
-        parts["demote_title"] = -3.0
-    if (work.get("type") or "") == "review":
-        parts["demote_type"] = -3.0
-    return round(sum(parts.values()), 2), propose_role(bench, crit), cited, bool(abstract)
+    return rules.score_class(as_record(work), primaries, model_forms)
 
-
-# ── repository inputs ────────────────────────────────────────────────────────
 
 def read_repo():
-    rows = lambda p: list(csv.DictReader(open(ROOT / p, encoding="utf-8"), delimiter="\t"))
-    titles = {r["paper_id"]: r["title"] for r in rows("db/papers.tsv")}
-    all_forms, model_forms = {}, {}
-    for r in rows("db/entities.tsv"):
-        forms = {r["name"]}
-        try:
-            forms |= set(json.loads(r["aliases"] or "[]"))
-        except (ValueError, TypeError):
-            pass
-        # Aliases under four characters are dropped: "NT" matches every abstract.
-        forms = {f for f in forms if len(f) >= 4}
-        if forms:
-            all_forms[r["entity_id"]] = forms
-            if r["entity_id"].startswith("model:"):
-                model_forms[r["entity_id"]] = forms
-    primary, truth = {}, []
-    for ep in rows("db/entity_paper.tsv"):
-        if ep["role"] == "primary":
-            primary[ep["entity_id"]] = ep["paper_id"]
-        elif ep["role"] in ("benchmark", "critique"):
-            truth.append((ep["entity_id"], ep["paper_id"], ep["role"]))
+    """Drops `linked`, which this script does not use."""
+    titles, all_forms, model_forms, primary, _linked, truth = rules.read_repo()
     return titles, all_forms, model_forms, primary, truth
 
 

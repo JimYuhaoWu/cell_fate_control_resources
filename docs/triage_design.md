@@ -81,6 +81,43 @@ paper at −2.25. The clade waiver works as intended: Evo 2 keeps its 4.25 becau
 its title says "across all domains of life", while `BOTANIC-1: a series of
 long-context plant genomic foundation models` is pushed below every in-scope hit.
 
+**Re-measured against the committed implementation, 2026-10-20.** The tables
+above were specified here before they were written; `literature/triage_rules.py`
+is their first committed form, and it is a reimplementation from this section
+rather than the prototype the numbers above came from. It does not reproduce
+them exactly, and the difference is recorded rather than smoothed over:
+
+| | n | min | median | max |
+|---|---|---|---|---|
+| catalogued papers, prototype | 30 | 0.00 | 5.50 | 14.50 |
+| catalogued papers, committed | 30 | 0.00 | 4.50 | 13.50 |
+
+Same shape, slightly flatter, and 7 zeros instead of 5. The separation that
+matters survives: AlphaGenome 13.50, Enformer 12.00, and on the 463 candidates
+of the first real `01_search.py` run the floor is **CloneOT**, a
+clone-specific perturbation model using lineage tracing and optimal transport,
+at −7.50, followed by a protein-structure-prediction review at −6.50 and two
+single-clade language models at −4.00. The exclusion tables are doing the work
+they were written for.
+
+Per-query medians from that run, which is what a curator actually faces:
+
+| query | n | median | ≥ 3.0 |
+|---|---|---|---|
+| `accessibility` | 16 | 8.00 | 14 |
+| `benchmarks` | 89 | 6.00 | 83 |
+| `interval_models` | 51 | 6.00 | 43 |
+| `module_collections` | 48 | 5.00 | 39 |
+| `variant_effect` | 42 | 5.00 | 24 |
+| `perturbation_response` | 70 | 3.50 | 40 |
+| `genome_3d` | 52 | 3.00 | 27 |
+| `dna_language_models` | 95 | 2.00 | 21 |
+
+`dna_language_models` is the one to watch: a median of 2.00 against 95 hits
+means the query is pulling in plant, plasmid and phage language models that the
+single-clade table then sinks. That is the scoring working and the query being
+lazy, and the cheaper fix is in the query.
+
 ### 1.4 The finding that changes the design: one table cannot serve six types
 
 Five of the 30 catalogued papers score **exactly 0.00**:
