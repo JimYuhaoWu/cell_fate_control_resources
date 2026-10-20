@@ -91,7 +91,7 @@ would be unknown. Closed as issue #2.
 
 Adapted from `eCR_mod_lib` rather than written fresh.
 
-- [ ] `literature/01_search.py` — PubMed + Semantic Scholar + bioRxiv + arXiv
+- [ ] `literature/01_search.py` — Europe PMC + arXiv for discovery, OpenAlex for citations
 - [ ] `literature/02_triage.py` — score candidates, emit `reviews/review_YYYY-MM-DD.md`
 - [ ] `literature/03_record.py` — validate review decisions back into `papers.yaml`
 - [ ] `search_queries.yaml` per collection; reuse the established rejection patterns
@@ -99,6 +99,32 @@ Adapted from `eCR_mod_lib` rather than written fresh.
 
 **Exit:** one cycle runs end to end and a human approves or rejects a real
 candidate list. Discovery is automated; inclusion stays a human decision.
+
+**Sources — decided.** Four APIs, one job each, recorded with their reasons in
+`config/sources.yaml`. Europe PMC and arXiv do discovery, OpenAlex supplies the
+citation graph, Crossref resolves DOIs. This replaces the PubMed + Semantic
+Scholar + bioRxiv + arXiv list this milestone was first written with, for three
+measured reasons:
+
+- **PubMed and bioRxiv are subsumed.** Europe PMC holds every PubMed/MEDLINE
+  abstract and indexes 31+ preprint servers including bioRxiv and medRxiv. More
+  decisively, bioRxiv's API has no keyword search endpoint — date-range listing
+  only, 30 records a call — so searching it directly means crawling a window
+  and filtering locally.
+- **arXiv is not subsumed.** BEND (arXiv:2311.12570, ICLR 2024) is already a
+  `benchmark` record here and returns no match in Europe PMC. The ML venues are
+  where the `how` axis lives, so this is a standing gap, not an edge case.
+- **Semantic Scholar loses to OpenAlex at the one job it was there for.** Asked
+  for the two catalogued critiques of Enformer, OpenAlex returned each in one
+  filtered call; keyless Semantic Scholar gave a null citation count, found one
+  of the two inside the first 1,000 of 1,325 citations, and did not have BEND.
+
+The reason a citation source is on the list at all: **no keyword query finds a
+paper that criticises a model.** `critique` is the role the whole evidence layer
+rests on, and it is discovered by walking the citations of the primary paper.
+That makes `02_triage.py`'s hardest decision — which citing papers are
+evaluations — the thing to design before writing `01_search.py`, because it
+determines what the search step has to fetch.
 
 **Already learned the hard way:** a single dropped request silently nulls an
 author list, and `evidence_tier` is derived from author lists. Retries are not

@@ -4,21 +4,54 @@
 # convention of recording every external URL, version and DOI in one place.
 # CFCR stores only open metadata (schema §2.2): no full text of paywalled work.
 
+# Four APIs, one job each. The split is the point: M3's triage has to find the
+# papers that *evaluate* a model, and no keyword query finds those. They are
+# reached by walking the citation graph of the primary paper, which is a
+# different capability from search, so it gets its own source.
 metadata_apis:
+  - name: europepmc
+    url: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+    role: discovery
+    purpose: keyword search over the life-science literature, preprints included
+    # Stands in for separate PubMed and bioRxiv clients rather than sitting
+    # beside them: Europe PMC indexes every PubMed/MEDLINE abstract and 31+
+    # preprint servers, bioRxiv and medRxiv among them and filterable as
+    # SRC:PPR, under one query language and with no API key. bioRxiv's own API
+    # has no keyword search endpoint at all -- only date-range listing, 30
+    # records a call -- so querying it directly would mean crawling every
+    # preprint posted in a window and filtering locally.
+    note: also supplies the abstracts Crossref omits for Nature-family journals
+  - name: arxiv
+    url: https://export.arxiv.org/api/query
+    role: discovery
+    purpose: machine-learning venues Europe PMC does not index (ICLR, ICML, NeurIPS)
+    # Checked, not assumed: BEND (arXiv:2311.12570, ICLR 2024), already a
+    # `benchmark` record here, returns no match in Europe PMC, while arXiv
+    # gives its title, seven authors and a 1,109-character abstract.
+    note: rate-limited, one request every few seconds; http:// 301s to https
+  - name: openalex
+    url: https://api.openalex.org/works
+    role: citations
+    purpose: >
+      The papers citing a primary paper -- the candidate pool for the
+      `benchmark` and `critique` roles that evidence_tier is derived from.
+    # Preferred to Semantic Scholar on a test against the two Enformer
+    # critiques already catalogued here: filter=cites:W3203588026,doi:<doi>
+    # returns each of them in a single call. Keyless Semantic Scholar answered
+    # the same lookup with a null citationCount, surfaced one of the two inside
+    # the first 1,000 of Enformer's 1,325 citations, and did not find BEND.
+    contact_email: yuhaow9412@gmail.com
+    note: >
+      Ten requests a second keyless, against a daily budget reported in the
+      X-RateLimit-Limit header; a free key raises that budget tenfold and is
+      required for cursor paging past the first page.
   - name: crossref
     url: https://api.crossref.org/works
+    role: resolution
     purpose: DOI resolution, titles, author lists, venues
     # Crossref's "polite pool": sending a contact address in the User-Agent
     # gets faster, more predictable service than the shared anonymous pool.
-    # OpenAlex uses the same convention, so one address serves both.
     contact_email: yuhaow9412@gmail.com
-  - name: europepmc
-    url: https://www.ebi.ac.uk/europepmc/webservices/rest/search
-    purpose: abstracts Crossref omits, chiefly for Nature-family journals
-  - name: arxiv
-    url: http://export.arxiv.org/api/query
-    purpose: papers at venues that mint no DOI (ICLR, ICML)
-    note: rate-limited; one request every few seconds
 
 ontologies:
   - name: NCBITaxon
