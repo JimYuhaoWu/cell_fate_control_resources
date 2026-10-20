@@ -88,6 +88,138 @@
 
 </main>
 
+<section class="docs wrap" aria-labelledby="about-head">
+
+  <h2 id="about-head">About CFCR</h2>
+  <p>
+    CFCR is a curated index of the models, benchmarks, datasets, module
+    collections, protocols and databases used to <strong>control</strong> cell
+    fate. It indexes resources you act <em>with</em>, not resources you observe
+    <em>with</em>: trajectory inference and RNA velocity are out of scope
+    because they describe where cells are going rather than how to send them.
+  </p>
+  <p>
+    Each resource is filed under the question it answers — its
+    <code>fate_axis</code> — rather than under its model architecture:
+    <em>where</em> on the genome do I act, <em>what</em> do I perturb,
+    <em>how</em> do I represent and score sequence, <em>with what</em> do I
+    build the actuator. The axis is multi-valued, and datasets, benchmarks and
+    protocols inherit the axis of whatever they serve.
+  </p>
+  <p>
+    The one thing that distinguishes it from a list: <strong>
+    <code>evidence_tier</code> is derived, never asserted by a curator.</strong>
+    QC recomputes it from the attached evaluation papers and their author
+    overlap with the primary paper, and fails the build if a record claims
+    otherwise. It measures independence only — a model is not promoted for
+    being evaluated repeatedly by the same group — and every evaluating paper
+    is listed under the badge, so the derivation is auditable from this page.
+  </p>
+
+  <h2 id="download-head">Download</h2>
+  <p>
+    Everything behind this page is open and downloadable. The committed TSV
+    snapshots in <code>db/</code> are the source the loader and this site both
+    read; the JSON files are what the site itself fetches.
+  </p>
+  <table class="dl-table">
+    <thead>
+      <tr><th scope="col">What</th><th scope="col">Format</th><th scope="col">Terms</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><a href="https://github.com/JimYuhaoWu/cell_fate_control_resources/blob/main/db/entities.tsv">db/entities.tsv</a> — one row per resource</th>
+        <td>TSV</td><td>CC-BY-4.0</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://github.com/JimYuhaoWu/cell_fate_control_resources/blob/main/db/papers.tsv">db/papers.tsv</a> — paper metadata</th>
+        <td>TSV</td><td>CC-BY-4.0</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://github.com/JimYuhaoWu/cell_fate_control_resources/blob/main/db/entity_paper.tsv">db/entity_paper.tsv</a> — the evidence joins, with roles</th>
+        <td>TSV</td><td>CC-BY-4.0</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://github.com/JimYuhaoWu/cell_fate_control_resources/blob/main/db/links.tsv">db/links.tsv</a> — outbound resource links</th>
+        <td>TSV</td><td>CC-BY-4.0</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://github.com/JimYuhaoWu/cell_fate_control_resources/blob/main/site/data/entities.json">site/data/entities.json</a> — entities with papers and links inlined</th>
+        <td>JSON</td><td>CC-BY-4.0</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://github.com/JimYuhaoWu/cell_fate_control_resources/blob/main/site/data/papers.json">site/data/papers.json</a> — papers with their citing entities</th>
+        <td>JSON</td><td>CC-BY-4.0</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://github.com/JimYuhaoWu/cell_fate_control_resources/blob/main/site/data/facets.json">site/data/facets.json</a> — the filter vocabulary</th>
+        <td>JSON</td><td>CC-BY-4.0</td>
+      </tr>
+      <tr>
+        <th scope="row">the <code>cfcr</code> loader — filtered queries over the snapshots</th>
+        <td>Python package</td><td>MIT</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    The whole repository, data and code together, is one
+    <a href="https://github.com/JimYuhaoWu/cell_fate_control_resources/archive/refs/heads/main.zip">zip archive</a>.
+    The loader installs from the repository:
+  </p>
+  <pre class="cmd"><code>pip install git+https://github.com/JimYuhaoWu/cell_fate_control_resources.git</code></pre>
+  <pre class="cmd"><code>from cfcr import load
+load(type="model", evidence_tier="externally-benchmarked")</code></pre>
+  <p class="terms">
+    <strong>Terms.</strong> Code is
+    <a href="https://github.com/JimYuhaoWu/cell_fate_control_resources/blob/main/LICENSE">MIT</a>;
+    the curated metadata is
+    <a href="https://github.com/JimYuhaoWu/cell_fate_control_resources/blob/main/LICENSE-DATA">CC-BY-4.0</a>.
+    Neither covers the resources being catalogued, which keep their own
+    licences, nor the paper abstracts, which remain under their publishers'
+    terms. CFCR stores only open metadata and no full text of paywalled work.
+  </p>
+
+  <h2 id="cite-head">How to cite</h2>
+  <p>
+    No DOI has been minted yet, so cite the repository and the exact commit or
+    release you used — the TSV snapshots are committed, so a commit hash pins
+    the data you saw:
+  </p>
+  <p class="cite">
+    Wu, Y. <em>CFCR: Cell Fate Control Resources</em>. Version 0.1.0.
+    <a href="https://github.com/JimYuhaoWu/cell_fate_control_resources">https://github.com/JimYuhaoWu/cell_fate_control_resources</a>
+    (commit <code>&lt;hash&gt;</code>, accessed <code>&lt;date&gt;</code>).
+  </p>
+  <p>
+    If you used a single record rather than the catalogue, cite the resource's
+    own primary paper, listed on its card. A DOI will be added here when one is
+    minted; until then the commit hash is the stable identifier.
+  </p>
+
+  <h2 id="contact-head">Corrections and additions</h2>
+  <p>
+    Curation is the product, so inclusion is a human decision and every change
+    is reviewable. Two routes, and the first is preferred:
+  </p>
+  <ul class="contact-list">
+    <li>
+      <strong><a href="https://github.com/JimYuhaoWu/cell_fate_control_resources/issues">Open an issue</a></strong>
+      — for a missing resource, a wrong field, or a dead link. Name the
+      resource, what it lets someone do, and its <code>fate_axis</code>; for a
+      model, say whether anyone outside the authoring group has evaluated it.
+      Public, so the correction and its reasoning stay attached to the record.
+      The <a href="https://github.com/JimYuhaoWu/cell_fate_control_resources#contributing">contributing guide</a>
+      states the conventions QC enforces.
+    </li>
+    <li>
+      <strong>Email</strong> <a href="mailto:yuhaow9412@gmail.com">yuhaow9412@gmail.com</a>
+      — for anything that does not belong in public, or if you would rather not
+      use GitHub.
+    </li>
+  </ul>
+
+</section>
+
 <footer class="foot">
   <div class="wrap">
     <p>
