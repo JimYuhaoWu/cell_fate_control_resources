@@ -46,6 +46,28 @@ CANDIDATES_DIR = ROOT / "literature" / "candidates"
 REVIEWS_DIR = ROOT / "literature" / "reviews"
 
 
+def _rel(path: Path) -> str:
+    """Repo-relative for display, falling back to the full path outside it."""
+    try:
+        return path.relative_to(ROOT).as_posix()
+    except ValueError:
+        return str(path)
+
+
+def _has_decisions(path: Path) -> bool:
+    """
+    Whether a review file has been worked on. Re-running triage on an untouched
+    file is harmless and routine -- a second 01_search run the same day, or a
+    different --min-score -- but the write is to a date-stamped name, so without
+    this check the second run silently replaces a curator's ticks with blank
+    boxes. A rejection that is not recorded comes back next cycle, which is the
+    whole reason literature/reviews/ is committed.
+    """
+    if not path.exists():
+        return False
+    return "[x]" in path.read_text(encoding="utf-8").lower()
+
+
 def latest_candidates() -> Path:
     files = sorted(CANDIDATES_DIR.glob("*.json"))
     files = [f for f in files if not f.name.startswith("triage_eval_")]
@@ -232,9 +254,17 @@ def main() -> int:
                         help="candidates JSON (default: the most recent)")
     parser.add_argument("--min-score", type=float, default=3.0,
                         help="section boundary, not a filter (default: 3.0)")
+    parser.add_argument("--force", action="store_true",
+                        help="overwrite today's review file even if it carries "
+                             "ticked decisions")
     args = parser.parse_args()
 
-    path = Path(args.candidates) if args.candidates else latest_candidates()
+    # Resolved, because `--candidates literature/candidates/2026-10-20.json`
+    # is the natural way to type it and relative_to() below rejects a relative
+    # path outright. Same defect as issue #6 in 07_export_site.py, reintroduced
+    # here in a new file.
+    path = (Path(args.candidates).resolve() if args.candidates
+            else latest_candidates())
     data = json.loads(path.read_text(encoding="utf-8"))
     print(f"reading {path.name}: {data['counts']}")
 
@@ -251,7 +281,7 @@ def main() -> int:
     primary_authors = _primary_authors(primary)
 
     lines = [f"# Candidate review — {date.today().isoformat()}", "",
-             f"From `{path.relative_to(ROOT).as_posix()}` "
+             f"From `{_rel(path)}` "
              f"({data['counts']['discovery']} discovery, "
              f"{data['counts']['citing']} citing). Section boundary at "
              f"`--min-score {args.min_score}`.", "",
@@ -269,8 +299,13 @@ def main() -> int:
 
     REVIEWS_DIR.mkdir(parents=True, exist_ok=True)
     out = REVIEWS_DIR / f"review_{date.today().isoformat()}.md"
+    if not args.force and _has_decisions(out):
+        raise SystemExit(
+            f"{_rel(out)} already carries ticked decisions; refusing to "
+            f"overwrite them.\nRun 03_record.py on it first, move it aside, "
+            f"or pass --force to discard them.")
     out.write_text("\n".join(lines), encoding="utf-8")
-    print(f"wrote {out.relative_to(ROOT)}")
+    print(f"wrote {_rel(out)}")
     print("next: work through it, then python literature/03_record.py")
     return 0
 
