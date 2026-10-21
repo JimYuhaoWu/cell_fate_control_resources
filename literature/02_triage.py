@@ -257,6 +257,10 @@ def _block_a(lines, score, role, parts, rec, entity, primary_authors, why,
                 f"**Decision:** `[ ] accepted as {role}` / "
                 f"`[ ] accepted as other role` / `[ ] rejected`")
     block(lines, f"[{score:+.2f}] {rec['title']}", [
+        # The openalex id is what 03_record.py joins this block back to its
+        # metadata on. A doi is not enough: 10 of 6994 citing works have none,
+        # and 1626 share a title with another work in the same run.
+        f"**openalex:** `{rec['openalex_id']}`  "
         f"**doi:** `{rec.get('doi') or '—'}`  **year:** "
         f"{rec.get('year')}  **venue:** {rec.get('venue') or '—'}",
         f"**proposed role:** `{role}`  "
@@ -341,6 +345,7 @@ def render_list_b(citing: list[dict], primaries, model_forms, state,
                             f"**Decision:** recorded as `{role}` for the "
                             f"entities above — `[ ] veto` only if that is wrong")
                 block(lines, f"[{score:+.2f}] {rec['title']}", [
+                    f"**openalex:** `{rec['openalex_id']}`  "
                     f"**doi:** `{rec.get('doi') or '—'}`  **year:** "
                     f"{rec.get('year')}  **venue:** {rec.get('venue') or '—'}",
                     f"**proposed role:** `{role}`",
@@ -395,7 +400,24 @@ def main() -> int:
              "is derived by `scripts/05_validate.py`, never set here.", "",
              "---", ""]
 
-    lines += render_discovery(data["discovery"], args.min_score)
+    # Recorded rejections are suppressed; recorded deferrals are not. A no that
+    # comes back every cycle costs the curator the same decision twice, which
+    # is what the ledger exists to stop -- but the review file promises a
+    # deferred candidate returns if the scoring changes, so only `rejected`
+    # is filtered. The count is printed above rather than silently dropped.
+    decided = rules.read_decisions()
+    rejected = {k for k, v in decided.items()
+                if any(d.get("decision") == "rejected" for d in v)}
+    keep = [c for c in data["discovery"]
+            if rules.ledger_key(c) not in rejected]
+    n_suppressed = len(data["discovery"]) - len(keep)
+    if n_suppressed:
+        lines += [f"**{n_suppressed} candidate(s) are not in this file**, "
+                  f"because a previous cycle rejected them. The decisions, "
+                  f"with their reasons, are in `literature/decisions.yaml`.",
+                  "", "---", ""]
+
+    lines += render_discovery(keep, args.min_score)
     tier_state = rules.read_tier_state()
     lines += render_list_a(data["citing"], primaries_oa, model_forms, all_forms,
                            primary_authors, tier_state, args.min_score)

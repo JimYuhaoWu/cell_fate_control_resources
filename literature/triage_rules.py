@@ -34,7 +34,8 @@ sys.path.insert(0, str(ROOT / "scripts"))
 # one definition, and scripts/05_validate.py derives the committed tiers from
 # the same three functions. A second copy here would let the number a curator is
 # shown drift from the number QC will compute.
-from schema import classify_overlap, derive_tier, norm_author  # noqa: E402
+from schema import (PAPER_ROLES, classify_overlap, derive_tier,  # noqa: E402,F401
+                    norm_author)
 
 
 # ══ Part 1: discovery hits, scored for scope (design §1.2) ═══════════════════
@@ -494,3 +495,76 @@ def tier_effect(state: dict, candidate_authors: list[str] | None) -> tuple[str, 
     if after != before:
         return "needs-human", f"would move {before} to {after}"
     return "no-effect", f"{kind}; tier stays {before}"
+
+
+# ══ The decision ledger ═════════════════════════════════════════════════════
+#
+# literature/decisions.yaml: every decision a curator made in a review file,
+# keyed by paper. It lives here beside read_repo() and read_tier_state()
+# because two scripts need it and neither may keep its own copy of the key --
+# 03_record.py writes the ledger, 02_triage.py reads the rejections back so a
+# recorded no is not re-proposed from scratch next cycle.
+#
+# Deferrals are deliberately NOT suppressed: the review file promises they
+# return if the scoring changes or a vocabulary grows, and that promise is the
+# reason a low score defers rather than rejects.
+
+DECISIONS_FILE = ROOT / "literature" / "decisions.yaml"
+
+DECISIONS_HEADER = """\
+# literature/decisions.yaml
+#
+# The ledger. Every decision made in a review file, keyed by paper, written by
+# literature/03_record.py and read back by literature/02_triage.py.
+#
+# It exists so a rejection is recorded once. An unrecorded no comes back as a
+# candidate every cycle, and the curator pays for it again -- which is why
+# `rejected` entries are suppressed from the next review file and the count is
+# printed in its header. `deferred` entries are not suppressed: a low score is
+# not a no, and the review file promises they return if the scoring changes.
+#
+# The key is the paper's `paper_id` (a DOI) where it has one, else
+# `europepmc:<PMCID>` or `openalex:<W-id>`. Those two prefixes are ledger keys
+# only -- schema.py keys a paper on a DOI or an `arxiv:` id, and a candidate
+# with neither cannot become a record until someone finds its DOI.
+#
+# The value is a LIST, because one paper carries more than one decision: it
+# reaches discovery as a candidate and list A as a role proposal for each
+# entity it names. Each entry says which list it came from and, for a role
+# decision, which entities it was attached to.
+"""
+
+
+def ledger_key(rec: dict) -> str:
+    """The ledger's key for a discovery hit or a citing work."""
+    if rec.get("paper_id"):
+        return rec["paper_id"]
+    if rec.get("doi"):
+        return rec["doi"]
+    if rec.get("europepmc_id"):
+        return f"europepmc:{rec['europepmc_id']}"
+    return f"openalex:{rec['openalex_id']}"
+
+
+def read_decisions() -> dict[str, dict]:
+    if not DECISIONS_FILE.exists():
+        return {}
+    import yaml
+    return yaml.safe_load(DECISIONS_FILE.read_text(encoding="utf-8")) or {}
+
+
+def write_decisions(new: dict[str, dict]) -> int:
+    """
+    Merge entries into the ledger, newest wins, sorted by key.
+
+    Sorted so the file's diff shows what a cycle decided rather than where it
+    appended, and rewritten whole because a mapping cannot be appended to.
+    """
+    import yaml
+    merged = read_decisions()
+    merged.update(new)
+    body = yaml.safe_dump(merged, sort_keys=True, allow_unicode=True,
+                          default_flow_style=False, width=76)
+    DECISIONS_FILE.write_text(DECISIONS_HEADER + "\n" + body, encoding="utf-8",
+                              newline="")
+    return len(merged)
