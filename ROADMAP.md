@@ -87,18 +87,55 @@ where 19 of the 20 entities now carry at least one. `checked` and `alive` are
 deliberately not exported to the site: the sweep has never run, so every value
 would be unknown. Closed as issue #2.
 
-## M3 — literature pipeline
+## M3 — literature pipeline ✅ built, one real cycle run
 
 Adapted from `eCR_mod_lib` rather than written fresh.
 
-- [ ] `literature/01_search.py` — Europe PMC + arXiv for discovery, OpenAlex for citations
-- [ ] `literature/02_triage.py` — score candidates, emit `literature/reviews/review_YYYY-MM-DD.md`
-- [ ] `literature/03_record.py` — validate review decisions back into `papers.yaml`
+- [x] `literature/01_search.py` — Europe PMC + arXiv for discovery, OpenAlex for citations
+- [x] `literature/02_triage.py` — score candidates, emit `literature/reviews/review_YYYY-MM-DD.md`
+- [x] `literature/03_record.py` — validate review decisions back into `papers.yaml`
 - [x] `literature/search_queries.yaml` per collection, every query run against the live APIs
-- [ ] Retry-with-backoff on every API call
+- [x] Retry-with-backoff on every API call
+- [x] `literature/04_audit.py` — sample what the pipeline decided alone and measure it
 
 **Exit:** one cycle runs end to end and a human approves or rejects a real
 candidate list. Discovery is automated; inclusion stays a human decision.
+**Met mechanically** — a cycle produced 464 discovery candidates and 6,994
+citing works, triage wrote a review file, and recording four ticked decisions
+took the catalogue to 22 entities and 155 papers with QC still at 0 errors. The
+human half is not met until someone works a real review file through, which is
+M4's first task rather than this one's.
+
+**What a cycle costs a human, which is the number that mattered.** The first
+review file asked for **769 decisions**, which is not a review, it is a wall.
+Four changes brought that down, each measured rather than argued:
+
+| | asked | recorded without a decision |
+|---|---|---|
+| first cycle | 769 | 0 |
+| ask only where a tier can move | 620 | 149 |
+| query fixes, cap 100, defer low scorers | 478 | 351 |
+| tables for the four blind entity types | 518 | 351 |
+
+The last row goes up on purpose: covering `dataset`, `protocol`, `database` and
+the `what` axis took catalogued entities scoring below 3.0 on their own primary
+paper from 6 of 19 to 1 of 19, and found 21 perturbation-model candidates that
+had been falling below the line. Recall bought with questions.
+
+**The limit, measured so it is not re-argued.** A score cannot decide admission
+at any threshold: at ≥ 3.0 it retains 17 of 29 curated resources, at ≥ 8.0 nine
+of them. It ranks; it does not classify, and scope has no ground truth to
+classify against — the rule is prose in `README.md`. The one judgement that is
+safely automatable is the one with a derivation behind it: `evidence_tier`, from
+author overlap. That is why role proposals are routed by whether they can move
+a tier and nothing else is decided for the curator, and why `04_audit.py`
+exists — automating more has to be earned with a measured error rate rather
+than asserted.
+
+**Already learned the hard way, the second time:** `arXiv` 429s for longer than
+four retries, and a source that fails must not take the run with it. One
+exhausted request used to discard a whole cycle; both halves now cache as they
+fetch and a failed source is recorded in the candidates file instead of fatal.
 
 **Sources — decided.** Four APIs, one job each, recorded with their reasons in
 `config/sources.yaml`. Europe PMC and arXiv do discovery, OpenAlex supplies the
