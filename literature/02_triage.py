@@ -431,7 +431,13 @@ def main() -> int:
             f"{_rel(out)} already carries ticked decisions; refusing to "
             f"overwrite them.\nRun 03_record.py on it first, move it aside, "
             f"or pass --force to discard them.")
-    out.write_text("\n".join(lines), encoding="utf-8")
+    # newline="" like 03_record.py and 07_export_site.py: this repository is
+    # LF-only (core.autocrlf false, core.eol lf) because CRLF once got inside
+    # multi-line TSV field values and corrupted the data. Without it Python
+    # translates every newline to CRLF on Windows -- 13,410 of them in one
+    # review file, which git then renormalises on the way in, so the file
+    # committed is not byte-for-byte the file generated.
+    out.write_text("\n".join(lines), encoding="utf-8", newline="")
     print(f"wrote {_rel(out)}")
     print("next: work through it, then python literature/03_record.py")
     return 0
