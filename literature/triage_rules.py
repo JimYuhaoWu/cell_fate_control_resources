@@ -199,6 +199,63 @@ EVALUATION_TERMS = {
     "zero-shot": 1.0, "fine-tuned": 1.0, "probing": 1.0,
 }
 
+# `dataset`, `protocol` and `database` had no table at all and fell back to the
+# model one, which is why six of the nineteen catalogued entities score below
+# 3.0 on their own primary paper: the Replogle Perturb-seq atlas, GEARS,
+# EpiFactors, the CUT&RUN protocol and JASPAR all at 0.00-1.50. A dataset paper
+# describes a resource's extent, a protocol paper describes a bench procedure,
+# and a database paper describes a release -- none of them use
+# sequence-model vocabulary, and no amount of tuning the model table reaches
+# them. These three tables are docs/triage_design.md §1.4 finished rather than
+# restated.
+#
+# Built from the catalogued papers' own text, not from imagination, and
+# weighted so a paper needs two or three of these words rather than one: every
+# term here appears in ordinary methods papers too.
+DATASET_TERMS = {
+    "atlas": 2.0, "genome-scale": 2.0, "genome-wide": 1.0,
+    "resource": 1.0, "compendium": 2.0, "catalogue": 1.5, "catalog": 1.5,
+    "landscape": 1.5, "genotype-phenotype": 2.0,
+    "screen": 1.5, "screens": 1.5, "perturb-seq": 2.5,
+    "single-cell": 1.0, "profiling": 1.0, "measurements": 1.0,
+    "publicly available": 1.5, "accession": 2.0, "deposited": 1.5,
+    "million cells": 2.0, "training data": 1.5, "held-out": 1.5,
+}
+PROTOCOL_TERMS = {
+    "protocol": 2.5, "step-by-step": 2.5, "procedure": 1.5,
+    "in situ": 1.5, "antibody": 1.5, "nuclease": 1.5, "bead": 1.0,
+    "incubat": 1.0, "buffer": 1.0, "reagent": 1.5, "titrat": 1.0,
+    "troubleshoot": 2.0, "hands-on": 2.0, "bench": 1.0,
+    "high efficiency": 1.0, "low cell number": 2.0, "input material": 1.5,
+}
+DATABASE_TERMS = {
+    "database": 2.5, "open-access": 2.0, "web server": 2.0,
+    "web interface": 2.0, "release": 1.5, "update": 1.5, "updated": 1.0,
+    "curated": 2.0, "manually curated": 2.5, "annotation": 1.0,
+    "api": 1.5, "rest api": 2.0, "bulk download": 2.0,
+    "profiles": 1.0, "collection": 1.0, "anniversary": 1.5,
+    "track hub": 2.0, "browser": 1.0,
+}
+
+# The `what` axis -- perturbation-response models -- is the third case of the
+# same finding. GEARS scores 0.00 on its own primary paper, "Predicting
+# transcriptional outcomes of novel multigene perturbations", because TASK holds
+# the phrases `perturbation-response-prediction` and `genetic perturbation
+# response` and that title uses none of them. README keeps this axis
+# deliberately shallow -- a single-cell foundation model counts when it predicts
+# a perturbation response, not when it only embeds cells -- so the table leads
+# on the prediction and gives the embedding nothing.
+PERTURBATION_TERMS = {
+    "transcriptional outcome": 2.5, "transcriptional response": 2.0,
+    "perturbation response": 2.5, "perturbation effect": 2.0,
+    "multigene": 2.0, "combinatorial perturbation": 2.5,
+    "genetic perturbation": 2.0, "gene knockout": 1.5, "knockdown": 1.0,
+    "crispri": 1.5, "crispra": 1.5, "crispr screen": 1.5,
+    "unseen perturbation": 2.5, "novel perturbation": 2.5,
+    "dose": 1.0, "drug response": 1.5, "chemical perturbation": 2.0,
+    "cell state": 1.5, "post-perturbation": 2.0,
+}
+
 # (expect_type, fate_axis) -> the tables that score it, each with its cap. Both
 # fields are declared by every query in search_queries.yaml already (design
 # §1.4: the triage hint becomes the table selector). The axis is part of the key
@@ -209,9 +266,17 @@ TABLES: dict[tuple[str, str | None], list[tuple[str, dict, float]]] = {
                       ("arch", ARCHITECTURE, 2.5), ("output", OUTPUT_TYPE, 3.0)],
     ("model", "how"): [("dna_lm", DNA_LM, 2.0), ("input", INPUT_GATE, 6.0),
                        ("task", TASK, 8.0), ("output", OUTPUT_TYPE, 3.0)],
+    ("model", "what"): [("perturbation", PERTURBATION_TERMS, 6.0),
+                        ("task", TASK, 6.0), ("output", OUTPUT_TYPE, 3.0)],
     ("benchmark", None): [("eval", EVALUATION_TERMS, 6.0),
                           ("input", INPUT_GATE, 6.0), ("task", TASK, 4.0)],
     ("module", None): [("module", MODULE_TERMS, 8.0), ("input", INPUT_GATE, 2.0)],
+    ("dataset", None): [("dataset", DATASET_TERMS, 8.0), ("task", TASK, 4.0),
+                        ("input", INPUT_GATE, 4.0)],
+    ("protocol", None): [("protocol", PROTOCOL_TERMS, 8.0),
+                         ("assay", MODULE_TERMS, 2.0)],
+    ("database", None): [("database", DATABASE_TERMS, 8.0),
+                         ("input", INPUT_GATE, 4.0), ("task", TASK, 4.0)],
 }
 
 
