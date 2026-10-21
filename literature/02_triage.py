@@ -34,6 +34,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -69,8 +70,19 @@ def _has_decisions(path: Path) -> bool:
 
 
 def latest_candidates() -> Path:
-    files = sorted(CANDIDATES_DIR.glob("*.json"))
-    files = [f for f in files if not f.name.startswith("triage_eval_")]
+    """
+    The most recent run file, selected by name shape rather than by excluding
+    the prefixes known today.
+
+    literature/candidates/ holds three other kinds of file -- 01_search.py's
+    per-day `discovery_*` and per-paper `sweep_*` caches, and triage_eval.py's
+    `triage_eval_*` dumps -- and the old exclusion list took the lexically last
+    *.json, so `sweep_W3203588026.json` sorting after `2026-10-21.json` would
+    silently become "the most recent candidates". A run file is a date and
+    nothing else.
+    """
+    files = sorted(f for f in CANDIDATES_DIR.glob("*.json")
+                   if re.fullmatch(r"\d{4}-\d{2}-\d{2}", f.stem))
     if not files:
         raise SystemExit("no candidates file; run literature/01_search.py first")
     return files[-1]
@@ -92,7 +104,6 @@ def author_overlap(rec: dict, primary_authors: list[str]) -> str:
 
 def norm_author(name: str) -> str:
     """Kept in step with scripts/05_validate.py:norm_author."""
-    import re
     import unicodedata
     n = unicodedata.normalize("NFKD", name)
     n = "".join(c for c in n if not unicodedata.combining(c)).lower()

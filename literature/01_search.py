@@ -20,6 +20,14 @@ config/sources.yaml for why CFCR's are not), and its `_get` returns None when
 every retry fails. That silence is how a dropped request nulls an author list,
 and evidence_tier is derived from author lists -- so this one raises.
 
+Both halves are cached under literature/candidates/ as they are fetched, so a
+run that dies partway through is resumed by running it again rather than
+started over. To force a fresh fetch, delete the caches:
+
+    rm literature/candidates/discovery_*.json literature/candidates/sweep_*.json
+
+Deleting one of them re-fetches just that query or that paper.
+
 Run from project root (needs the [literature] extra and network):
     python literature/01_search.py [--config literature/search_queries.yaml]
                                    [--dry-run] [--discovery-only]
@@ -65,6 +73,10 @@ ATOM = {"a": "http://www.w3.org/2005/Atom",
 
 # ── HTTP ─────────────────────────────────────────────────────────────────────
 
+class FetchError(RuntimeError):
+    """One source gave up after its retries. Recorded, not fatal."""
+
+
 def _get(url: str, params: dict, parse: str = "json"):
     """
     Four attempts, then give up loudly. Honours Retry-After when the server
@@ -85,7 +97,7 @@ def _get(url: str, params: dict, parse: str = "json"):
         except Exception as exc:                        # noqa: BLE001
             print(f"    retry {attempt + 1}: {exc}", file=sys.stderr)
             time.sleep(3 * (attempt + 1))
-    raise SystemExit(f"no answer from {url} after 4 attempts: {params}")
+    raise FetchError(f"no answer from {url} after 4 attempts: {params}")
 
 
 # ── Europe PMC ───────────────────────────────────────────────────────────────
@@ -186,6 +198,34 @@ def citing_works(short_id: str) -> list[dict]:
         time.sleep(0.2)
 
 
+def cached_citing(short_id: str) -> list[dict]:
+    """
+    `citing_works`, through a per-paper cache under literature/candidates/.
+
+    The sweep is ~38 OpenAlex pages over four minutes and `_get` raises when a
+    request exhausts its retries, which used to throw away everything fetched
+    so far -- including the discovery half, which had already succeeded. Each
+    paper's citing set is written as soon as it arrives, so a failed run is
+    resumed by running the script again and only the paper in flight is lost.
+
+    The cache is keyed on the OpenAlex id, not the date: the citing set of a
+    2021 paper does not change meaningfully between two runs an hour apart, and
+    a cycle that wants it fresh deletes literature/candidates/sweep_*.json.
+    """
+    f = CANDIDATES_DIR / f"sweep_{short_id}.json"
+    if f.exists():
+        cached = json.loads(f.read_text(encoding="utf-8"))
+        print(f"    cached: {len(cached['citing'])} works", file=sys.stderr)
+        return cached["citing"]
+    works = citing_works(short_id)
+    CANDIDATES_DIR.mkdir(parents=True, exist_ok=True)
+    f.write_text(json.dumps({"root": short_id,
+                             "fetched": datetime.now(timezone.utc).isoformat(),
+                             "citing": works}, ensure_ascii=False),
+                 encoding="utf-8")
+    return works
+
+
 def flatten_abstract(work: dict) -> str | None:
     """
     OpenAlex ships abstracts as a word -> positions index. Reconstructed here
@@ -227,10 +267,32 @@ def read_repo() -> tuple[set[str], dict[str, str], dict[str, str], set[tuple[str
 
 # ── Main ─────────────────────────────────────────────────────────────────────
 
-def run_discovery(cfg: dict, known: set[str], dry_run: bool) -> list[dict]:
+def _fetch_europepmc(q, min_year, cap, exclude):
+    query = f"{' '.join(q['europepmc'].split())} {exclude}".strip()
+    return search_europepmc(query, min_year, cap)
+
+
+def _fetch_arxiv(q, min_year, cap, exclude):
+    got = search_arxiv(q["arxiv"], min_year, cap)
+    time.sleep(3)                           # arXiv asks for a few seconds
+    return got
+
+
+def run_discovery(cfg: dict, known: set[str], dry_run: bool,
+                  failures: list) -> list[dict]:
+    """
+    The eight queries, cached one file per query.
+
+    Per query rather than per run, because that is where it actually broke: a
+    cold run died 5m44 in when arXiv refused the `accessibility` query four
+    times, and a whole-run cache would have thrown away the two queries that
+    had already succeeded. Now a failure costs the query in flight and nothing
+    else, and running the script again picks up where it stopped.
+    """
     min_year = cfg["min_year"]
     cap = cfg["max_results_per_query"]
     exclude = cfg.get("europepmc_exclude", "")
+    stamp = date.today().isoformat()
 
     seen: set[str] = set()
     out: list[dict] = []
@@ -243,16 +305,34 @@ def run_discovery(cfg: dict, known: set[str], dry_run: bool) -> list[dict]:
                 print("  arxiv    :", q["arxiv"])
             continue
 
-        hits: list[dict] = []
-        if q.get("europepmc"):
-            ep = f"{' '.join(q['europepmc'].split())} {exclude}".strip()
-            hits += search_europepmc(ep, min_year, cap)
-            print(f"  europepmc: {len(hits)}")
-        if q.get("arxiv"):
-            ax = search_arxiv(q["arxiv"], min_year, cap)
-            print(f"  arxiv:     {len(ax)}")
-            hits += ax
-            time.sleep(3)                       # arXiv asks for a few seconds
+        hits = []
+        for source, fetch in (("europepmc", _fetch_europepmc),
+                              ("arxiv", _fetch_arxiv)):
+            if not q.get(source):
+                continue
+            cache = CANDIDATES_DIR / f"discovery_{stamp}_{q['id']}_{source}.json"
+            if cache.exists():
+                got = json.loads(cache.read_text(encoding="utf-8"))
+                print(f"  {source}: {len(got)} (cached)")
+            else:
+                try:
+                    got = fetch(q, min_year, cap, exclude)
+                except FetchError as exc:
+                    # Recorded and carried in the output rather than aborting:
+                    # arXiv refused twice in one afternoon, and each time it
+                    # discarded minutes of Europe PMC results that had already
+                    # arrived. The gap is printed, listed in the candidates
+                    # file and reflected in the exit status, so it is still
+                    # loud -- it just is not destructive.
+                    print(f"  {source}: FAILED -- {exc}")
+                    failures.append({"query_id": q["id"], "source": source,
+                                     "error": str(exc)})
+                    continue
+                print(f"  {source}: {len(got)}")
+                CANDIDATES_DIR.mkdir(parents=True, exist_ok=True)
+                cache.write_text(json.dumps(got, ensure_ascii=False),
+                                 encoding="utf-8")
+            hits += got
 
         for h in hits:
             key = (h["paper_id"] or h["title"].lower()[:80])
@@ -265,7 +345,7 @@ def run_discovery(cfg: dict, known: set[str], dry_run: bool) -> list[dict]:
 
 
 def run_sweep(cfg: dict, primary: dict, titles: dict, linked: set,
-              dry_run: bool) -> list[dict]:
+              dry_run: bool, failures: list) -> list[dict]:
     wanted = cfg["citation_sweep"]["entities"]
     entities = sorted(primary) if wanted == "all" else [
         e for e in sorted(primary) if e in wanted]
@@ -286,11 +366,18 @@ def run_sweep(cfg: dict, primary: dict, titles: dict, linked: set,
     out = []
     for paper_id, sharers in by_paper.items():
         print(f"\n[citation_sweep] {paper_id} -> {', '.join(sharers)}")
-        short_id = resolve_openalex(paper_id, titles.get(paper_id))
-        if not short_id:
+        try:
+            short_id = resolve_openalex(paper_id, titles.get(paper_id))
+            works = cached_citing(short_id) if short_id else None
+        except FetchError as exc:
+            print(f"  FAILED -- {exc}")
+            failures.append({"paper_id": paper_id, "source": "openalex",
+                             "error": str(exc)})
+            continue
+        if not works:
             print("  unresolved in OpenAlex; skipped")
             continue
-        for w in citing_works(short_id):
+        for w in works:
             doi = (w.get("doi") or "").replace("https://doi.org/", "").lower() or None
             source = (w.get("primary_location") or {}).get("source") or {}
             for entity in sharers:
@@ -333,9 +420,11 @@ def main() -> int:
     print(f"known papers: {len(known)} ids; "
           f"{len(primary)} entities carry a primary paper")
 
-    discovery = run_discovery(cfg, known, args.dry_run)
+    failures: list[dict] = []
+    discovery = run_discovery(cfg, known, args.dry_run, failures)
     citing = ([] if args.discovery_only
-              else run_sweep(cfg, primary, titles, linked, args.dry_run))
+              else run_sweep(cfg, primary, titles, linked, args.dry_run,
+                             failures))
     if args.discovery_only:
         print("\n[citation_sweep] skipped (--discovery-only)")
 
@@ -349,6 +438,7 @@ def main() -> int:
         "run_date": datetime.now(timezone.utc).isoformat(),
         "config": args.config,
         "counts": {"discovery": len(discovery), "citing": len(citing)},
+        "failures": failures,
         "discovery": discovery,
         "citing": citing,
     }, indent=1, ensure_ascii=False), encoding="utf-8")
@@ -356,6 +446,14 @@ def main() -> int:
     print(f"\n{len(discovery)} new discovery candidates, "
           f"{len(citing)} citing works")
     print(f"wrote {out_path.relative_to(ROOT)}")
+    if failures:
+        print(f"\n{len(failures)} source fetch(es) failed and are recorded in "
+              f"the file:")
+        for f in failures:
+            print(f"  {f.get('query_id') or f.get('paper_id')} / {f['source']}")
+        print("Re-run to fill the gaps; everything already fetched is cached.")
+        print("next: python literature/02_triage.py (on an incomplete set)")
+        return 1
     print("next: python literature/02_triage.py")
     return 0
 

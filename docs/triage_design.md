@@ -2,9 +2,26 @@
 
 **Status:** design, 2026-10-20. Written before `01_search.py`, `02_triage.py` and
 `03_record.py`, because the critique-detection design decides what the search
-step has to fetch. Every number below was measured on 2026-10-20 against
-committed repository data or a live API call; the citation half is reproducible
-with `python literature/triage_eval.py`.
+step has to fetch.
+
+**Which numbers here can be checked, and how.** The scheduled review of
+2026-10-21 could verify none of the citation-half figures, because its sandbox
+had no network — the proxy refused OpenAlex — and an unverifiable number reads
+the same as a wrong one. So each kind now says what it rests on:
+
+| numbers | source | offline? |
+|---|---|---|
+| §1.3 discovery scores | `db/papers.tsv` through `literature/triage_rules.py` | yes |
+| §2.5 recall and ranks | `reports/triage_eval.md`, committed and dated | the artifact, yes; re-running it, no |
+| §1.6, §2.6 live query counts | Europe PMC, arXiv and OpenAlex at a stated date | no |
+
+The §1.3 figures are reproducible from committed data alone, so a reviewer
+without network can recompute them. The §2.5 figures need OpenAlex, which is
+why `literature/triage_eval.py` now writes `reports/triage_eval.md` and that
+file is committed: the measurement itself is in the repository, dated, and
+`git diff` on it says whether a scoring change moved the recall. The live query
+counts cannot be made offline at all, and are dated wherever they appear so a
+reader knows how stale they are rather than assuming they still hold.
 
 ---
 
@@ -378,6 +395,39 @@ python literature/triage_eval.py
 ```
 
 Reads `db/entity_paper.tsv`, `db/entities.tsv` and `db/papers.tsv`, caches the
-OpenAlex dumps under `literature/candidates/` (git-ignored), and prints where
-every committed `benchmark`/`critique` row lands. Run it after any change to the
-weights in §2.2: it is the only thing that says what the change cost.
+OpenAlex dumps under `literature/candidates/` (git-ignored), prints where every
+committed `benchmark`/`critique` row lands, and writes the same report to
+`reports/triage_eval.md`.
+
+**Commit that file with the change.** It is the only thing that says what a
+change to the weights in §2.2 cost, and because the script needs OpenAlex it is
+also the only form in which the §2.5 numbers can be checked by a reviewer
+without network — which is how these numbers went unverified in the first
+place. Run it after any scoring change and read the diff.
+
+The discovery half of the scoring has no such dependency. It can be recomputed
+from `db/papers.tsv` with no network at all:
+
+```bash
+python - <<'EOF'
+import csv, statistics, sys
+sys.path.insert(0, "literature")
+import triage_rules as rules
+
+def rows(p):
+    return list(csv.DictReader(open(p, encoding="utf-8"), delimiter="\t"))
+
+# expect_type has to come from the entity the paper is attached to. Scoring all
+# 30 with the `model` table instead gives median 2.00, not 4.50 -- which is
+# §1.4's finding restated as a reproduction trap.
+etype = {r["entity_id"]: r["type"] for r in rows("db/entities.tsv")}
+of_paper = {}
+for j in rows("db/entity_paper.tsv"):
+    of_paper.setdefault(j["paper_id"], etype.get(j["entity_id"], "model"))
+
+v = sorted(rules.score_discovery({"title": r["title"], "abstract": r["abstract"],
+                                  "expect_type": of_paper.get(r["paper_id"], "model")})[0]
+           for r in rows("db/papers.tsv"))
+print(len(v), min(v), statistics.median(v), max(v))   # 30 0.0 4.5 13.5
+EOF
+```
