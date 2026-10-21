@@ -70,6 +70,28 @@ queries:
     arxiv: 'abs:"Hi-C" AND abs:"deep learning"'
 
   # ── `how`: DNA language models ─────────────────────────────────────────────
+  # Left alone deliberately on 2026-10-21, after trying to narrow it. This is
+  # the query with the worst signal-to-noise -- 74 of 96 hits score below 3.0 --
+  # and none of the three obvious fixes works:
+  #
+  #   * Narrowing to TITLE, or adding a scope clause, drops Nucleotide
+  #     Transformer out of the results. The query currently finds 2 of the 5
+  #     DNA LMs it is responsible for; narrowing takes that to 1.
+  #   * Widening to catch the rest (adding "sequence modeling", "genome
+  #     modeling" and "foundation model" clauses) does find Evo 2 and Caduceus,
+  #     but takes the query to 494 hits, where Europe PMC's relevance order puts
+  #     Nucleotide Transformer at rank 76 -- past `max_results_per_query`. With
+  #     cursor paging all four come back.
+  #   * Even then the scoring under-ranks them: Evo 2 and GROVER score 2.00 and
+  #     Nucleotide Transformer 3.50, because the `model` table is
+  #     interval-model vocabulary and a DNA language model paper does not use
+  #     it. Caduceus scores 9.00, so this is not uniform.
+  #
+  # The noise is not query breadth. Surveys, security papers and plant language
+  # models legitimately use the same phrases as the models in scope, so no
+  # keyword query separates them -- the scoring already does, correctly. Fixing
+  # this needs paging past the result cap and a table for the `how` axis, which
+  # is docs/triage_design.md §1.4's finding one level deeper.
   - id: dna_language_models
     fate_axis: how
     expect_type: model
@@ -80,15 +102,41 @@ queries:
     arxiv: 'all:"DNA language model" OR all:"genomic language model"'
 
   # ── `what`: shallow and pointing outward (README scope rule) ───────────────
-  # Narrow on purpose: a single-cell foundation model qualifies only when it
-  # predicts a perturbation response, so the query demands the prediction, not
-  # the embedding. The interp-extrap-perturb catalogue owns this axis.
+  # A single-cell foundation model qualifies only when it predicts a
+  # perturbation response, not when it only embeds cells; the
+  # interp-extrap-perturb catalogue owns this axis properly.
+  #
+  # Widened and filtered on 2026-10-21, after measurement went the opposite way
+  # to expectation. The first version asked for the exact phrase
+  # "perturbation response prediction" and **did not find GEARS** -- the one
+  # perturbation model in the catalogue, whose paper is titled "Predicting
+  # transcriptional outcomes of novel multigene perturbations". A query that
+  # misses the resource it exists for is not narrow, it is wrong. Four phrasings
+  # now, and GEARS comes back.
+  #
+  # The NOT clause is the other half. 16 of this query's 30 below-threshold hits
+  # were optimal-transport, flow-matching and trajectory papers -- the cluster
+  # README puts explicitly out of scope. They were arriving and then being sunk
+  # by the scoring table, which is work done twice; excluding them in the query
+  # is cheaper and says the same thing. This is an exclusion by the project's
+  # own stated rule, unlike an organism filter, which is why it belongs here and
+  # a clade filter does not.
+  #
+  # Net: 37 hits -> 109, finding what it must and no longer fetching the
+  # category that dominated its noise.
   - id: perturbation_response
     fate_axis: what
     expect_type: model
     europepmc: >
-      TITLE_ABS:"perturbation response prediction"
-      AND (TITLE_ABS:"single-cell" OR TITLE_ABS:"transcriptional")
+      (TITLE_ABS:"perturbation response prediction"
+       OR TITLE_ABS:"perturbation prediction"
+       OR TITLE_ABS:"predicting transcriptional outcomes"
+       OR TITLE_ABS:"genetic perturbation response")
+      AND (TITLE_ABS:"single-cell" OR TITLE_ABS:"transcriptional"
+           OR TITLE_ABS:"CRISPR")
+      NOT (TITLE_ABS:"optimal transport" OR TITLE_ABS:"flow matching"
+           OR TITLE_ABS:"trajectory inference" OR TITLE_ABS:"RNA velocity"
+           OR TITLE_ABS:"pseudotime" OR TITLE_ABS:"lineage tracing")
     arxiv: 'abs:"perturbation response" AND abs:"single-cell"'
 
   # ── Resources that serve the models ────────────────────────────────────────
@@ -158,7 +206,18 @@ citation_sweep:
 # Basenji line that M4 names are the start of the `where` axis, and a later cut
 # would silently amputate the lineage that `supersedes` and `variant_of` link.
 min_year: 2015
-max_results_per_query: 50
+# Raised from 50 on 2026-10-21, because 50 was losing the resources the queries
+# exist to find. Measured: the widened `perturbation_response` query returns
+# GEARS -- the only perturbation model in the catalogue -- at rank 89 of 109 in
+# Europe PMC's relevance order, and `dna_language_models` puts Nucleotide
+# Transformer at rank 76. Both fell off the end. 100 is Europe PMC's own page
+# size, so it is one request either way.
+#
+# The cost is rows, not requests: a broader fetch means more low-scoring
+# candidates in the review file's below-threshold section. That is the right
+# trade only because scoring, not the API's relevance order, decides what a
+# curator reads -- see docs/triage_design.md §1.5.
+max_results_per_query: 100
 
 # Breadth as measured on 2026-10-20, Europe PMC / arXiv, so the first cycle
 # starts from numbers rather than guesses:

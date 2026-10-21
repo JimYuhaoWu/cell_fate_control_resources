@@ -142,17 +142,28 @@ def render_discovery(cands: list[dict], min_score: float) -> list[str]:
              "Scored for scope, with the table chosen by the query's "
              "`expect_type` — a database and a sequence model cannot share one "
              "(design §1.4).", ""]
-    for label, keep in (("Above threshold", True), ("Below threshold", False)):
+    n_hi = sum(1 for t in scored if t[0] >= min_score)
+    n_lo = len(scored) - n_hi
+    lines += [f"**{n_hi} need a decision. {n_lo} do not** — a candidate below "
+              f"`--min-score {min_score}` is recorded as deferred rather than "
+              "asked about. It is still written down in full: §1.5 measured "
+              "that a filter discards more known-good papers than noise, and "
+              "an unrecorded rejection returns as a candidate next cycle. What "
+              "changed is only whose attention it needs, which is the same "
+              "argument as list A's saturated roles.", ""]
+
+    for label, keep in (("Needs a decision", True),
+                        ("Recorded as deferred", False)):
         group = [t for t in scored if (t[0] >= min_score) == keep]
         if not group:
             continue
         lines += [f"### {label} — score "
                   f"{'≥' if keep else '<'} {min_score} ({len(group)})", ""]
         if not keep:
-            lines += ["Listed, not discarded. At every useful threshold a "
-                      "filter drops more known-good papers than noise "
-                      "(design §1.5), and an unrecorded rejection returns next "
-                      "cycle.", ""]
+            lines += ["Deferred, not rejected: these come back if the scoring "
+                      "changes or a vocabulary grows, and `03_record.py` "
+                      "records the deferral so the next cycle does not "
+                      "re-propose them from scratch.", ""]
         for score, parts, c in group:
             ident = c.get("paper_id") or c.get("europepmc_id") or "no id"
             block(lines, f"[{score:+.2f}] {c['title']}", [
@@ -162,7 +173,9 @@ def render_discovery(cands: list[dict], min_score: float) -> list[str]:
                 f"{c['expect_type']}  **fate_axis:** {c.get('fate_axis')}",
                 f"**score:** {fmt_parts(parts) or 'nothing matched'}",
             ], c.get("abstract"),
-                "**Decision:** `[ ] accepted` / `[ ] rejected`")
+                "**Decision:** `[ ] accepted` / `[ ] rejected`" if keep else
+                "**Decision:** deferred — `[ ] promote` if this should be a "
+                "record after all")
     return lines
 
 
