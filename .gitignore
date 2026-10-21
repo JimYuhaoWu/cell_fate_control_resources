@@ -8,6 +8,8 @@ db/cfcr.db-shm
 # literature/reviews/ is committed in full: a review file records which
 # candidates a human rejected and why, and nothing else can recover that. A
 # rejection that is not written down comes back as a candidate every cycle.
+# literature/audits/ is committed for the same reason -- an answered audit file
+# is the evidence behind the rates in reports/audit_history.md.
 literature/candidates/*.json
 
 # Site build output
