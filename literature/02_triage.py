@@ -167,8 +167,18 @@ def render_discovery(cands: list[dict], min_score: float) -> list[str]:
 
 
 def render_list_a(citing: list[dict], primaries, model_forms, all_forms,
-                  primary_authors, min_score: float) -> list[str]:
-    by_entity: dict[str, list] = {}
+                  primary_authors, state, min_score: float) -> list[str]:
+    """
+    List A, split by whether a decision can change a derived tier.
+
+    Both halves are written out in full. The split is about whose attention a
+    proposal needs, not about what gets kept: a `benchmark` row on a model that
+    is already `externally-benchmarked` is still related work worth recording,
+    it just cannot move the one number the catalogue is judged on, so asking a
+    human about it spends the scarcest thing in the project on a foregone
+    conclusion.
+    """
+    buckets: dict[str, dict[str, list]] = {"needs-human": {}, "no-effect": {}}
     for rec in citing:
         got = rules.score_named(rec, rec["cites_entity"], primaries,
                                 model_forms, all_forms)
@@ -177,37 +187,77 @@ def render_list_a(citing: list[dict], primaries, model_forms, all_forms,
         score, role, parts = got
         if score < min_score:
             continue
-        by_entity.setdefault(rec["cites_entity"], []).append(
-            (score, role, parts, rec))
+        entity = rec["cites_entity"]
+        if entity in state:
+            verdict, why = rules.tier_effect(state[entity], rec.get("authors"))
+        else:
+            verdict, why = "needs-human", "entity carries no primary paper"
+        buckets[verdict].setdefault(entity, []).append(
+            (score, role, parts, rec, why))
 
-    total = sum(len(v) for v in by_entity.values())
-    lines = [f"## List A — names the entity ({total})", "",
+    n_human = sum(len(v) for v in buckets["needs-human"].values())
+    n_auto = sum(len(v) for v in buckets["no-effect"].values())
+
+    lines = [f"## List A — names the entity ({n_human + n_auto})", "",
              "Papers citing a catalogued `primary` paper *and* naming the "
-             "entity. Read these first: tight, per entity, high confidence. "
-             "The two lexicon sub-scores are printed next to every proposed "
-             "role, because the split is sometimes a coin-flip (design §2.6.4).",
-             ""]
-    for entity in sorted(by_entity):
-        group = sorted(by_entity[entity], key=lambda t: -t[0])
-        lines += [f"### {entity} ({len(group)})", ""]
-        for score, role, parts, rec in group:
-            block(lines, f"[{score:+.2f}] {rec['title']}", [
-                f"**doi:** `{rec.get('doi') or '—'}`  **year:** "
-                f"{rec.get('year')}  **venue:** {rec.get('venue') or '—'}",
-                f"**proposed role:** `{role}`  "
-                f"(benchmark {parts.get('bench_lex', 0):.2f} vs critique "
-                f"{parts.get('crit_lex', 0):.2f})",
-                f"**author overlap:** "
-                f"{author_overlap(rec, primary_authors.get(entity, []))} "
-                f"— shown only; the score ignores it (§2.4)",
-                f"**score:** {fmt_parts(parts)}",
-            ], rec.get("abstract"),
-                f"**Decision:** `[ ] accepted as {role}` / "
-                f"`[ ] accepted as other role` / `[ ] rejected`")
+             "entity. The two lexicon sub-scores are printed next to every "
+             "proposed role, because the split is sometimes a coin-flip "
+             "(design §2.6.4).", "",
+             f"**{n_human} need a decision. {n_auto} do not** — "
+             "`evidence_tier` saturates, so once an entity has one independent "
+             "evaluation no further row can move it. Author overlap decides "
+             "which half a proposal lands in; it is still not an input to any "
+             "score (§2.4). A proposal with no author list always needs a "
+             "human, because independence cannot be computed from nothing.", ""]
+
+    lines += [f"### Needs a decision ({n_human})", ""]
+    for entity in sorted(buckets["needs-human"]):
+        group = sorted(buckets["needs-human"][entity], key=lambda t: -t[0])
+        tier = state.get(entity, {}).get("tier")
+        lines += [f"#### {entity} — tier now: "
+                  f"{tier or 'none yet, so the first evaluation sets it'} "
+                  f"({len(group)})", ""]
+        for score, role, parts, rec, why in group:
+            _block_a(lines, score, role, parts, rec, entity, primary_authors,
+                     why, auto=False)
+
+    lines += [f"### Recorded without a decision ({n_auto})", "",
+              "Nothing here is dropped — each is recorded as the role shown, "
+              "and `03_record.py` will attach it. They appear so the catalogue "
+              "stays complete and so a curator can veto one, not so one has to "
+              "be approved.", ""]
+    for entity in sorted(buckets["no-effect"]):
+        group = sorted(buckets["no-effect"][entity], key=lambda t: -t[0])
+        tier = state.get(entity, {}).get("tier")
+        lines += [f"#### {entity} — tier now: {tier} ({len(group)})", ""]
+        for score, role, parts, rec, why in group:
+            _block_a(lines, score, role, parts, rec, entity, primary_authors,
+                     why, auto=True)
     return lines
 
 
-def render_list_b(citing: list[dict], primaries, model_forms,
+def _block_a(lines, score, role, parts, rec, entity, primary_authors, why,
+             auto: bool) -> None:
+    decision = (f"**Decision:** recorded as `{role}` — "
+                f"`[ ] veto` only if that is wrong"
+                if auto else
+                f"**Decision:** `[ ] accepted as {role}` / "
+                f"`[ ] accepted as other role` / `[ ] rejected`")
+    block(lines, f"[{score:+.2f}] {rec['title']}", [
+        f"**doi:** `{rec.get('doi') or '—'}`  **year:** "
+        f"{rec.get('year')}  **venue:** {rec.get('venue') or '—'}",
+        f"**proposed role:** `{role}`  "
+        f"(benchmark {parts.get('bench_lex', 0):.2f} vs critique "
+        f"{parts.get('crit_lex', 0):.2f})",
+        f"**tier effect:** {why}",
+        f"**author overlap:** "
+        f"{author_overlap(rec, primary_authors.get(entity, []))} "
+        f"— routes this decision; never scored (§2.4)",
+        f"**score:** {fmt_parts(parts)}",
+    ], rec.get("abstract"), decision)
+
+
+def render_list_b(citing: list[dict], primaries, model_forms, state,
                   min_score: float) -> list[str]:
     seen: dict[str, tuple] = {}
     for rec in citing:
@@ -220,11 +270,18 @@ def render_list_b(citing: list[dict], primaries, model_forms,
         score, role, cited, has_abstract = got
         if score < min_score:
             continue
-        seen[key] = (score, role, cited, has_abstract, rec)
+        # Same saturation test as list A, over every entity this paper could
+        # attach to: if none of their tiers can move, the proposal is recorded
+        # rather than asked about.
+        targets = [e for e in cited if e in state]
+        whys = [(e, *rules.tier_effect(state[e], rec.get("authors")))
+                for e in targets]
+        needs = (not targets) or any(v == "needs-human" for _, v, _ in whys)
+        seen[key] = (score, role, cited, has_abstract, rec, needs, whys)
 
     rows = sorted(seen.values(), key=lambda t: -t[0])
-    with_abs = [r for r in rows if r[3]]
-    title_only = [r for r in rows if not r[3]]
+    human = [r for r in rows if r[5]]
+    auto = [r for r in rows if not r[5]]
 
     lines = [f"## List B — names a class, no catalogued model ({len(rows)})", "",
              "Deduplicated and global, because one such paper is evidence for "
@@ -232,30 +289,53 @@ def render_list_b(citing: list[dict], primaries, model_forms,
              "ranks named cases well discards **both** catalogued critiques of "
              "Enformer: neither names it (design §2.3). Each entry lists the "
              "catalogued primary papers it cites, so a curator can see which "
-             "entities it might attach to.", ""]
+             "entities it might attach to.", "",
+             f"**{len(human)} need a decision. {len(auto)} do not** — the same "
+             "saturation test as list A, applied across every entity the paper "
+             "could attach to. One target whose tier could move is enough to "
+             "need a human.", ""]
+
     for label, group, note in (
-        ("With an abstract", with_abs, None),
-        ("Title only", title_only,
-         "No abstract in OpenAlex, so only the title was scored. One of "
-         "Enformer's two catalogued critiques lands here — the gap is not "
-         "backfillable from any source in `config/sources.yaml` (§2.6.2)."),
+        ("Needs a decision", human, None),
+        ("Recorded without a decision", auto,
+         "Every target entity is already at a tier this paper cannot move. "
+         "Recorded, not dropped — veto one if the proposed role is wrong."),
     ):
         if not group:
             continue
         lines += [f"### {label} ({len(group)})", ""]
         if note:
             lines += [note, ""]
-        for score, role, cited, _, rec in group:
-            block(lines, f"[{score:+.2f}] {rec['title']}", [
-                f"**doi:** `{rec.get('doi') or '—'}`  **year:** "
-                f"{rec.get('year')}  **venue:** {rec.get('venue') or '—'}",
-                f"**proposed role:** `{role}`",
-                f"**cites catalogued primaries:** "
-                f"{', '.join(f'`{e}`' for e in cited) if cited else 'none matched'}",
-                f"**reached via:** `{rec['cites_entity']}`",
-            ], rec.get("abstract"),
-                f"**Decision:** `[ ] accepted as {role} for: "
-                f"<entity_id>` / `[ ] rejected`")
+        with_abs = [r for r in group if r[3]]
+        title_only = [r for r in group if not r[3]]
+        for sub, subgroup, subnote in (
+            ("With an abstract", with_abs, None),
+            ("Title only", title_only,
+             "No abstract in OpenAlex, so only the title was scored. One of "
+             "Enformer's two catalogued critiques lands here — the gap is not "
+             "backfillable from any source in `config/sources.yaml` (§2.6.2)."),
+        ):
+            if not subgroup:
+                continue
+            lines += [f"#### {sub} ({len(subgroup)})", ""]
+            if subnote:
+                lines += [subnote, ""]
+            for score, role, cited, _abs, rec, needs, whys in subgroup:
+                effect = ("; ".join(f"{e}: {why}" for e, _v, why in whys)
+                          or "cites no catalogued primary")
+                decision = (f"**Decision:** `[ ] accepted as {role} for: "
+                            f"<entity_id>` / `[ ] rejected`" if needs else
+                            f"**Decision:** recorded as `{role}` for the "
+                            f"entities above — `[ ] veto` only if that is wrong")
+                block(lines, f"[{score:+.2f}] {rec['title']}", [
+                    f"**doi:** `{rec.get('doi') or '—'}`  **year:** "
+                    f"{rec.get('year')}  **venue:** {rec.get('venue') or '—'}",
+                    f"**proposed role:** `{role}`",
+                    f"**cites catalogued primaries:** "
+                    f"{', '.join(f'`{e}`' for e in cited) if cited else 'none matched'}",
+                    f"**tier effect:** {effect}",
+                    f"**reached via:** `{rec['cites_entity']}`",
+                ], rec.get("abstract"), decision)
     return lines
 
 
@@ -303,10 +383,11 @@ def main() -> int:
              "---", ""]
 
     lines += render_discovery(data["discovery"], args.min_score)
+    tier_state = rules.read_tier_state()
     lines += render_list_a(data["citing"], primaries_oa, model_forms, all_forms,
-                           primary_authors, args.min_score)
+                           primary_authors, tier_state, args.min_score)
     lines += render_list_b(data["citing"], primaries_oa, model_forms,
-                           args.min_score)
+                           tier_state, args.min_score)
 
     REVIEWS_DIR.mkdir(parents=True, exist_ok=True)
     out = REVIEWS_DIR / f"review_{date.today().isoformat()}.md"

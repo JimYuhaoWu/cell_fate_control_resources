@@ -41,7 +41,9 @@ from pathlib import Path
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from schema import CFCR, EXT_TABLES, VOCAB_FACETS    # noqa: E402
+from schema import (CFCR, EXT_TABLES, PARTIAL_MAX,   # noqa: E402
+                    VOCAB_FACETS, classify_overlap, derive_tier,
+                    norm_author)
 
 ERROR, WARNING, INFO = "ERROR", "WARNING", "INFO"
 
@@ -60,10 +62,6 @@ CONTROLLED: dict[tuple[str, str], str] = {
     ("module_collection_ext", "organism_scope"): "organism",
     ("protocol_ext", "category"): "protocol_category",
 }
-
-# Fraction of the EVALUATING paper's authors that may be shared with the
-# primary paper before the evaluation is treated as coming from the same group.
-PARTIAL_MAX = 0.50
 
 # Similarity above which two entity names are reported as possible duplicates.
 DUPLICATE_RATIO = 0.90
@@ -119,53 +117,11 @@ class Report:
 
 # ── helpers ──────────────────────────────────────────────────────────────────
 
-def norm_author(name: str) -> str:
-    """
-    Normalize to `lastname|first-initial`, accent- and case-folded.
-
-    Deliberately lossy and therefore conservative: two different people who
-    share a surname and initial collide, which counts as author overlap and
-    biases the derivation toward the LOWER (less independent) tier. Reporting a
-    model as less externally validated than it is, is the safe direction.
-    """
-    n = unicodedata.normalize("NFKD", name)
-    n = "".join(c for c in n if not unicodedata.combining(c)).lower()
-    parts = [p for p in re.split(r"[\s.\-,]+", n) if p]
-    if not parts:
-        return ""
-    return f"{parts[-1]}|{parts[0][0]}"
-
-
 def norm_name(name: str) -> str:
     """Fold a display name for duplicate detection."""
     n = unicodedata.normalize("NFKD", name or "")
     n = "".join(c for c in n if not unicodedata.combining(c)).lower()
     return re.sub(r"[^a-z0-9]+", "", n)
-
-
-def classify_overlap(primary: set[str], evaluating: set[str]) -> tuple[str, set[str]]:
-    shared = primary & evaluating
-    if not shared:
-        return "independent", shared
-    if not evaluating:
-        return "unknown", shared
-    if len(shared) / len(evaluating) < PARTIAL_MAX:
-        return "partial", shared
-    return "same-group", shared
-
-
-def derive_tier(primary: set[str],
-                evaluations: list[tuple[str, set[str]]]) -> tuple[str, list]:
-    verdicts = [(pid, *classify_overlap(primary, authors))
-                for pid, authors in evaluations]
-    kinds = {v[1] for v in verdicts}
-    if "independent" in kinds:
-        tier = "externally-benchmarked"
-    elif "partial" in kinds:
-        tier = "partially-independent"
-    else:
-        tier = "self-reported"
-    return tier, verdicts
 
 
 def find_cycle(edges: dict[str, str]) -> list[str] | None:

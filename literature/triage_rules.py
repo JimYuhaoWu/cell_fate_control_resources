@@ -24,9 +24,17 @@ from __future__ import annotations
 import csv
 import json
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+sys.path.insert(0, str(ROOT / "scripts"))
+# The tier arithmetic is imported, never reimplemented: scripts/schema.py is the
+# one definition, and scripts/05_validate.py derives the committed tiers from
+# the same three functions. A second copy here would let the number a curator is
+# shown drift from the number QC will compute.
+from schema import classify_overlap, derive_tier, norm_author  # noqa: E402
 
 
 # ══ Part 1: discovery hits, scored for scope (design §1.2) ═══════════════════
@@ -353,3 +361,87 @@ def read_repo():
         elif ep["role"] in ("benchmark", "critique"):
             truth.append((ep["entity_id"], ep["paper_id"], ep["role"]))
     return titles, all_forms, model_forms, primary, linked, truth
+
+
+# ══ Routing: which role proposals can change a derived tier ═════════════════
+#
+# The point of this section is to cut what a human must decide without deciding
+# anything for them. `evidence_tier` is derived from the `benchmark` and
+# `critique` rows attached to an entity, and the derivation saturates: once one
+# independent evaluation exists, the tier is `externally-benchmarked` and no
+# further row can move it. A proposal that cannot move the tier still gets
+# recorded -- leaving out related work is not the goal and never has been -- it
+# just does not need to interrupt anyone.
+#
+# Author overlap is what decides this, and it is still absent from every score
+# in this module. It routes the question; it does not answer it. The difference
+# matters, because a score that used overlap would pre-filter the rows reaching
+# QC and the derived tier would then measure this file instead of the
+# literature (design §2.4).
+
+
+def read_tier_state() -> dict[str, dict]:
+    """
+    entity -> {primary_authors, evaluations, tier} from the committed snapshots.
+
+    `tier` is None for an entity that carries no evaluation yet: there is no
+    tier to preserve, so the first accepted evaluation always changes something.
+    """
+    def rows(path: str) -> list[dict]:
+        with (ROOT / path).open(encoding="utf-8") as fh:
+            return list(csv.DictReader(fh, delimiter="\t"))
+
+    authors = {}
+    for r in rows("db/papers.tsv"):
+        authors[r["paper_id"]] = {norm_author(a) for a
+                                  in json.loads(r["authors"] or "[]")} - {""}
+
+    primary, evals = {}, {}
+    for j in rows("db/entity_paper.tsv"):
+        if j["role"] == "primary":
+            primary[j["entity_id"]] = j["paper_id"]
+        elif j["role"] in ("benchmark", "critique"):
+            evals.setdefault(j["entity_id"], []).append(j["paper_id"])
+
+    state = {}
+    for entity, pid in primary.items():
+        evaluations = [(x, authors.get(x, set())) for x in evals.get(entity, [])]
+        state[entity] = {
+            "primary_authors": authors.get(pid, set()),
+            "evaluations": evaluations,
+            "tier": (derive_tier(authors.get(pid, set()), evaluations)[0]
+                     if evaluations else None),
+        }
+    return state
+
+
+def tier_effect(state: dict, candidate_authors: list[str] | None) -> tuple[str, str]:
+    """
+    What accepting this proposal would do to the entity's tier.
+
+    Returns (verdict, explanation) where verdict is:
+      "needs-human"  the tier would change, or cannot be computed
+      "no-effect"    the tier is already what it would be afterwards
+
+    An author list we do not have is **never** treated as no-effect. With no
+    authors, `classify_overlap` sees an empty intersection and returns
+    "independent", which would read as the strongest possible evidence from the
+    weakest possible data -- a missing abstract's harmless cousin turned into a
+    tier promotion. Those go to a human.
+    """
+    if not candidate_authors:
+        return "needs-human", "no author list; independence cannot be computed"
+
+    theirs = {norm_author(a) for a in candidate_authors} - {""}
+    if not theirs:
+        return "needs-human", "author list did not normalize to anything"
+
+    before = state["tier"]
+    after = derive_tier(state["primary_authors"],
+                        state["evaluations"] + [("candidate", theirs)])[0]
+    kind = classify_overlap(state["primary_authors"], theirs)[0]
+    if before is None:
+        return "needs-human", f"first evaluation; would set tier to {after}"
+    if after != before:
+        return "needs-human", f"would move {before} to {after}"
+    return "no-effect", f"{kind}; tier stays {before}"

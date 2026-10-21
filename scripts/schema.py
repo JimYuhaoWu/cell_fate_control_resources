@@ -47,6 +47,8 @@ Usage
 from __future__ import annotations
 
 import json
+import re
+import unicodedata
 import sqlite3
 from contextlib import contextmanager
 from pathlib import Path
@@ -87,6 +89,59 @@ LINK_KINDS = ("code", "weights", "website", "dataset", "docs", "api",
 # else                           -> self-reported
 EVIDENCE_TIERS = ("externally-benchmarked", "partially-independent",
                   "self-reported")
+
+# Fraction of the EVALUATING paper's authors that may be shared with the primary
+# paper before the evaluation is treated as coming from the same group.
+PARTIAL_MAX = 0.50
+
+
+def norm_author(name: str) -> str:
+    """
+    Normalize to `lastname|first-initial`, accent- and case-folded.
+
+    Deliberately lossy and therefore conservative: two different people who
+    share a surname and initial collide, which counts as author overlap and
+    biases the derivation toward the LOWER (less independent) tier. Reporting a
+    model as less externally validated than it is, is the safe direction.
+    """
+    n = unicodedata.normalize("NFKD", name)
+    n = "".join(c for c in n if not unicodedata.combining(c)).lower()
+    parts = [p for p in re.split(r"[\s.\-,]+", n) if p]
+    if not parts:
+        return ""
+    return f"{parts[-1]}|{parts[0][0]}"
+
+
+def classify_overlap(primary: set[str], evaluating: set[str]) -> tuple[str, set[str]]:
+    shared = primary & evaluating
+    if not shared:
+        return "independent", shared
+    if not evaluating:
+        return "unknown", shared
+    if len(shared) / len(evaluating) < PARTIAL_MAX:
+        return "partial", shared
+    return "same-group", shared
+
+
+def derive_tier(primary: set[str],
+                evaluations: list[tuple[str, set[str]]]) -> tuple[str, list]:
+    verdicts = [(pid, *classify_overlap(primary, authors))
+                for pid, authors in evaluations]
+    kinds = {v[1] for v in verdicts}
+    if "independent" in kinds:
+        tier = "externally-benchmarked"
+    elif "partial" in kinds:
+        tier = "partially-independent"
+    else:
+        tier = "self-reported"
+    return tier, verdicts
+
+
+# These three live here, beside the tier vocabulary they produce, rather than in
+# 05_validate.py where they started. `evidence_tier` is the one claim CFCR rests
+# on, and literature/02_triage.py needs the same arithmetic to decide which role
+# proposals could move a tier and therefore need a human. Two copies of this
+# would be the worst possible thing in this repository to let drift.
 AVAILABILITY_TIERS = ("open-source", "open-weights", "api-only")
 MODEL_FAMILIES = ("interval-model", "dna-lm", "perturbation-model",
                   "module-predictor", "other")
