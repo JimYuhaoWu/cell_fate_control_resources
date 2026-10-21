@@ -64,6 +64,18 @@ import pandas as pd
 ENTITY_TYPES = ("model", "benchmark", "dataset", "module", "protocol", "database")
 FATE_AXES = ("where", "what", "how", "with-what")
 ENTITY_STATUS = ("active", "deprecated", "superseded", "unmaintained")
+
+# Whether a human has signed off on the record, which is a different question
+# from whether the resource is alive (`status`). The literature pipeline admits
+# records automatically so the backlog stops being a gate, and this is what
+# keeps an unvetted record off the published site: 07_export_site.py exports
+# only `reviewed` rows, so an unreviewed record is queryable from the snapshots
+# and fully checked by QC, but invisible at cellfatecontrol.com until someone
+# has looked at it.
+#
+# The DDL defaults to `reviewed`, so the twenty hand-curated records say nothing
+# and mean what they always did. Only 03_record.py writes `unreviewed`.
+REVIEW_STATES = ("reviewed", "unreviewed")
 PAPER_ROLES = ("primary", "preprint", "benchmark", "critique", "application",
                "extension", "review")
 VENUE_TYPES = ("journal", "conference", "preprint", "workshop", "thesis", "other")
@@ -192,6 +204,8 @@ CREATE TABLE IF NOT EXISTS entity (
     assay           TEXT,           -- JSON array, controlled
     task            TEXT,           -- JSON array, controlled
     status          TEXT    {_check('status', ENTITY_STATUS)},
+    review_state    TEXT    NOT NULL DEFAULT 'reviewed'
+                            {_check('review_state', REVIEW_STATES, nullable=False)},
     supersedes      TEXT    REFERENCES entity(entity_id),
     variant_of      TEXT    REFERENCES entity(entity_id),
     date_added      TEXT    NOT NULL,
@@ -593,6 +607,15 @@ class CFCR:
         return inserted, updated
 
     def upsert_entities(self, records: list[dict]) -> tuple[int, int]:
+        # `review_state` is defaulted here rather than left to the DDL, because
+        # _upsert only writes the columns a record carries: a record that
+        # omitted the field would keep whatever the database already held, so
+        # removing `review_state: unreviewed` from a YAML file would not
+        # un-stage the record and it would stay off the published site
+        # silently. Defaulting on every upsert makes records/ authoritative for
+        # this column, as it is meant to be for all of them.
+        records = [dict(r, review_state=r.get("review_state") or "reviewed")
+                   for r in records]
         return self._upsert("entity", records, ("entity_id",),
                             self.REQUIRED_ENTITY_FIELDS)
 

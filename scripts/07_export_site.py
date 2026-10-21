@@ -131,10 +131,17 @@ def export_entities(joins, links_by_entity) -> list[dict]:
         papers_by_entity.setdefault(row["entity_id"], []).append(row)
 
     out = []
-    for record in cfcr.load().to_dict("records"):
+    # Reviewed records only. 03_record.py admits candidates as `unreviewed` so
+    # that the review backlog stops gating the pipeline; this is what stops the
+    # backlog reaching the public site. An unreviewed record is in the
+    # committed snapshots and fully checked by QC -- it is simply not published.
+    for record in cfcr.load(review_state="reviewed").to_dict("records"):
         entity = {}
         for column, value in record.items():
-            if column in ("papers", "links"):
+            # `review_state` is a constant in the published set -- the export
+            # is filtered to `reviewed` -- so it would be a field on every card
+            # and a one-value facet.
+            if column in ("papers", "links", "review_state"):
                 continue
             cleaned = _clean(value)
             if cleaned is not None:
@@ -164,7 +171,7 @@ def export_entities(joins, links_by_entity) -> list[dict]:
     return out
 
 
-def export_papers(joins) -> list[dict]:
+def export_papers(joins, published: set[str]) -> list[dict]:
     """
     One object per paper, with the entities that cite it and in what role.
 
@@ -173,6 +180,8 @@ def export_papers(joins) -> list[dict]:
     """
     by_paper: dict[str, dict] = {}
     for row in joins:
+        if row["entity_id"] not in published:
+            continue        # an unreviewed entity must not appear on a card
         paper = by_paper.setdefault(row["paper_id"], {
             "paper_id": row["paper_id"],
             "doi": row["doi"],
@@ -229,8 +238,10 @@ def main() -> int:
     joins = read_joins()
     links_by_entity = read_links()
     entities = export_entities(joins, links_by_entity)
-    papers = export_papers(joins)
-    facets = cfcr.facets()
+    published = {e["entity_id"] for e in entities}
+    papers = export_papers(joins, published)
+    facets = cfcr.facets(review_state="reviewed")
+    facets.pop("review_state", None)
     for column in BOOLEAN_COLUMNS & facets.keys():
         facets[column] = sorted({_as_bool(v) for v in facets[column]})
 
@@ -241,8 +252,12 @@ def main() -> int:
     ]
 
     n_links = sum(len(v) for v in links_by_entity.values())
+    held = len(cfcr.load(with_papers=False)) - len(entities)
     print(f"exported {len(entities)} entities, {len(papers)} papers, "
           f"{n_links} links, {len(facets)} facets")
+    if held:
+        print(f"  held back {held} unreviewed record(s); "
+              f"they are in db/ but not on the site")
     for path in written:
         try:
             shown = path.relative_to(args.repo_root)

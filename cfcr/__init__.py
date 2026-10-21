@@ -226,12 +226,17 @@ def load_links(entity_id: str | None = None, *, kind: str | None = None
     return links.reset_index(drop=True)
 
 
-def facets(type: str | None = None) -> dict[str, list]:
+def facets(type: str | None = None, **filters: Any) -> dict[str, list]:
     """
     Distinct values available for each filterable column, for building a UI or
     for finding out what a filter accepts.
+
+    Takes the same `**filters` as `load`, because a caller that shows a subset
+    of the catalogue needs the facet panel to describe that subset: the site
+    publishes only `review_state="reviewed"` rows, and a facet value that
+    matches nothing visible is a filter that returns an empty page.
     """
-    df = load(type=type, with_papers=False)
+    df = load(type=type, with_papers=False, **filters)
     out: dict[str, list] = {}
     for column in df.columns:
         if column in ("entity_id", "name", "description", "notes"):

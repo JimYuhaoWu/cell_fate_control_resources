@@ -151,6 +151,44 @@ MODULE_TERMS = {
     "synthetic transcription factor": 2.0, "crispra": 1.5, "crispri": 1.5,
 }
 
+# The `how` axis -- DNA and genome language models -- has its own vocabulary and
+# the interval-model tables cannot see it. Measured on five of them: under the
+# `model` table Evo 2 and GROVER score 2.00 and DNABERT-2 scores 0.00, because a
+# language-model paper talks about pretraining and context length, not about
+# gene expression prediction. Only 2 of 5 cleared 3.0.
+#
+# The weights are low and the cap is 2.0 on purpose, and that is the whole
+# difficulty of this table: the vocabulary is shared with everything else the
+# query returns -- surveys, security papers, plant and plasmid models -- so
+# raising it buys recall and spends precision almost one for one:
+#
+#   current (no `how` table)   2 of 5 positives    16 of 93 candidates >= 3.0
+#   cap 2.0                    4 of 5              35
+#   cap 3.0                    5 of 5              61
+#   cap 6.0                    5 of 5              63
+#
+# 2.0 is the balanced point and it is a choice, not a fact. Its measured cost is
+# DNABERT-2 at +2.00, which lands in the review file's deferred section rather
+# than its decision section -- recorded, and it returns if these weights change.
+# Nothing is left out either way.
+#
+# One idea that does not work, so nobody retries it: adding a table for
+# "introduces a resource" (`we introduce`, `we release`, `we pretrain`) against
+# one for "uses or surveys a resource" (`survey`, `we apply`, `explainable ai`).
+# It reads like the right discriminator and measures worse -- DNABERT-2 falls to
+# +1.00 and candidates rise to 68 of 93, because a paper introducing a model
+# describes applying it too.
+DNA_LM = {
+    "language model": 1.0, "foundation model": 1.0,
+    "genome modeling": 1.5, "genomic modeling": 1.5, "sequence modeling": 1.0,
+    "pretrain": 0.75, "pre-train": 0.75, "pretrained": 0.75,
+    "pre-trained": 0.75, "self-supervised": 0.75, "masked language": 1.0,
+    "autoregressive": 0.75, "tokeniz": 0.75, "byte-pair": 1.0,
+    "nucleotide-level": 1.0, "single-nucleotide resolution": 1.0,
+    "zero-shot": 1.0, "downstream task": 1.0, "context length": 1.0,
+    "long-context": 1.0, "perplexity": 1.0, "scaling law": 1.0,
+}
+
 # A benchmark paper is scored on evaluation language, not model language:
 # docs/triage_design.md §1.4 measured that one table cannot serve six types.
 EVALUATION_TERMS = {
@@ -160,16 +198,27 @@ EVALUATION_TERMS = {
     "zero-shot": 1.0, "fine-tuned": 1.0, "probing": 1.0,
 }
 
-# expect_type -> the tables that score it, each with its cap. Selected from the
-# `expect_type` field every query in search_queries.yaml already declares
-# (design §1.4: the triage hint becomes the table selector).
-TABLES: dict[str, list[tuple[str, dict, float]]] = {
-    "model": [("input", INPUT_GATE, 6.0), ("task", TASK, 8.0),
-              ("arch", ARCHITECTURE, 2.5), ("output", OUTPUT_TYPE, 3.0)],
-    "benchmark": [("eval", EVALUATION_TERMS, 6.0), ("input", INPUT_GATE, 6.0),
-                  ("task", TASK, 4.0)],
-    "module": [("module", MODULE_TERMS, 8.0), ("input", INPUT_GATE, 2.0)],
+# (expect_type, fate_axis) -> the tables that score it, each with its cap. Both
+# fields are declared by every query in search_queries.yaml already (design
+# §1.4: the triage hint becomes the table selector). The axis is part of the key
+# because `model` covers an interval model and a DNA language model, and those
+# two do not share a vocabulary -- see DNA_LM above.
+TABLES: dict[tuple[str, str | None], list[tuple[str, dict, float]]] = {
+    ("model", None): [("input", INPUT_GATE, 6.0), ("task", TASK, 8.0),
+                      ("arch", ARCHITECTURE, 2.5), ("output", OUTPUT_TYPE, 3.0)],
+    ("model", "how"): [("dna_lm", DNA_LM, 2.0), ("input", INPUT_GATE, 6.0),
+                       ("task", TASK, 8.0), ("output", OUTPUT_TYPE, 3.0)],
+    ("benchmark", None): [("eval", EVALUATION_TERMS, 6.0),
+                          ("input", INPUT_GATE, 6.0), ("task", TASK, 4.0)],
+    ("module", None): [("module", MODULE_TERMS, 8.0), ("input", INPUT_GATE, 2.0)],
 }
+
+
+def tables_for(expect_type, fate_axis):
+    """Most specific first: (type, axis), then (type, None), then the model table."""
+    return (TABLES.get((expect_type, fate_axis))
+            or TABLES.get((expect_type, None))
+            or TABLES[("model", None)])
 
 
 # ══ Part 2: citing works, scored for what they do to a catalogued model ══════
@@ -238,7 +287,7 @@ def score_discovery(rec: dict) -> tuple[float, dict]:
     """
     title = (rec.get("title") or "").lower()
     abstract = (rec.get("abstract") or "").lower()
-    tables = TABLES.get(rec.get("expect_type") or "", TABLES["model"])
+    tables = tables_for(rec.get("expect_type"), rec.get("fate_axis"))
 
     parts = {name: _table(tbl, title, abstract, cap)
              for name, tbl, cap in tables}

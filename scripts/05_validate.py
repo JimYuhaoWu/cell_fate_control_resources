@@ -42,8 +42,8 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from schema import (CFCR, EXT_TABLES, PARTIAL_MAX,   # noqa: E402
-                    VOCAB_FACETS, classify_overlap, derive_tier,
-                    norm_author)
+                    REVIEW_STATES, VOCAB_FACETS, classify_overlap,
+                    derive_tier, norm_author)
 
 ERROR, WARNING, INFO = "ERROR", "WARNING", "INFO"
 
