@@ -872,6 +872,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/bieyl/DGP-LA"
   papers:
     - paper_id: 10.1093/bioinformatics/btag747
       role: primary
@@ -963,6 +966,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/pinellolab/EPInformer"
   papers:
     - paper_id: 10.1101/2024.08.01.606099
       role: primary
@@ -1145,6 +1151,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/minxueric/ismb2017_lstm"
   papers:
     - paper_id: 10.1093/bioinformatics/btx234
       role: primary
@@ -1158,6 +1167,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/kundajelab/regulatory_lm"
   papers:
     - paper_id: 10.64898/2026.02.05.703637
       role: primary
@@ -1184,6 +1196,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/RasmussenLab/SLIM"
+  model_ext:
+    license: MIT
   papers:
     - paper_id: 10.64898/2026.08.07.743481
       role: primary
@@ -1210,6 +1227,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/ttruan2426-dot/scBIG"
+  model_ext:
+    license: MIT
   papers:
     - paper_id: arxiv:2602.04901
       role: primary
@@ -1431,6 +1453,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/Laineyoulu/V3Cell"
   papers:
     - paper_id: 10.64898/2026.06.23.734130
       role: primary
@@ -1535,6 +1560,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/BaiDing1234/PertAdapt"
   papers:
     - paper_id: 10.1093/bioinformatics/btag307
       role: primary
@@ -1561,6 +1589,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/difra100/PT-RAG_NIPS"
   papers:
     - paper_id: arxiv:2603.07233
       role: primary
@@ -1613,6 +1644,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/samrogers1233/scLDM"
+  model_ext:
+    license: MIT
   papers:
     - paper_id: 10.1093/bioinformatics/btag727
       role: primary
@@ -1717,6 +1753,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/wenwenmin/SpaDiT"
   papers:
     - paper_id: 10.1093/bib/bbae571
       role: primary
@@ -1730,6 +1769,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/deepgenomics/enigma"
   papers:
     - paper_id: 10.64898/2025.12.18.694875
       role: primary
@@ -1886,6 +1928,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/souryacs/3CExpr"
+  model_ext:
+    license: MIT
   papers:
     - paper_id: 10.64898/2026.02.06.704509
       role: primary
@@ -2016,6 +2063,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/kundajelab/DART-Eval"
   papers:
     - paper_id: arxiv:2412.05430
       role: primary
@@ -2237,6 +2287,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/rrkhan/HGE"
   papers:
     - paper_id: arxiv:2507.21648
       role: primary
@@ -2341,6 +2394,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/boooooogey/ATAConv"
   papers:
     - paper_id: 10.1093/bioinformatics/btad271
       role: primary
@@ -2757,6 +2813,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/DongjoonLim/GraphyloVar"
+  model_ext:
+    license: MIT
   papers:
     - paper_id: 10.1093/bioinformatics/btag426
       role: primary
@@ -2952,6 +3013,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/zou-group/GenePert"
   papers:
     - paper_id: 10.1101/2024.10.27.620513
       role: primary
@@ -3017,6 +3081,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/LFfocus/DFCE-KanT"
   papers:
     - paper_id: 10.1093/bioinformatics/btag502
       role: primary
@@ -3173,6 +3240,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/BiomedicalMachineLearning/DeepHis2Exp"
   papers:
     - paper_id: 10.1093/bioadv/vbag202
       role: primary
@@ -3238,6 +3308,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/yrjia1015/THItoGene"
   papers:
     - paper_id: 10.1093/bib/bbad464
       role: primary
@@ -3264,6 +3337,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/amyfrancis-science/DrivR-Base"
+  model_ext:
+    license: GPL-3.0
   papers:
     - paper_id: 10.1093/bioinformatics/btae197
       role: primary
@@ -3290,6 +3368,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/GoodGuy398/GraphLoc"
   papers:
     - paper_id: 10.1007/s12539-022-00529-9
       role: primary
@@ -3355,6 +3436,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/bliulab/DECANT"
+  model_ext:
+    license: MIT
   papers:
     - paper_id: 10.1093/bioinformatics/btag662
       role: primary
@@ -3576,6 +3662,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/jhhung/EpiVerse"
   papers:
     - paper_id: 10.1038/s41467-025-58481-3
       role: primary
@@ -3654,6 +3743,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/DavuluriLab/DNABERT-Enhancer"
+  model_ext:
+    license: Apache-2.0
   papers:
     - paper_id: 10.1093/bioinformatics/btag456
       role: primary
@@ -3667,6 +3761,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/PanosAntoniadis/RAGenome"
+  model_ext:
+    license: MIT
   papers:
     - paper_id: arxiv:2610.11761
       role: primary
@@ -3784,6 +3883,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/ysngrmz/graph_unet_ss"
   papers:
     - paper_id: 10.1016/j.compbiomed.2026.111598
       role: primary
@@ -3797,6 +3899,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/nathanyl/DeepSGE"
   papers:
     - paper_id: 10.1186/s12864-026-12568-3
       role: primary
@@ -3836,6 +3941,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/AnonymousISCBConf/Win-Win-Privacy-Utility-Analysis"
+  model_ext:
+    license: Apache-2.0
   papers:
     - paper_id: 10.1093/bioinformatics/btag311
       role: primary
@@ -3862,6 +3972,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/splicebox/SpliSync"
+  model_ext:
+    license: GPL-3.0
   papers:
     - paper_id: 10.64898/2026.07.04.736518
       role: primary
@@ -4070,6 +4185,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/HN020719/EvoLen"
   papers:
     - paper_id: arxiv:2604.08698
       role: primary
@@ -4135,6 +4253,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/zaixizhang/GeneBreaker"
+  model_ext:
+    license: CC0-1.0
   papers:
     - paper_id: arxiv:2505.23839
       role: primary
@@ -4161,6 +4284,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/aglabx/dnaBPE"
+  model_ext:
+    license: MIT
   papers:
     - paper_id: arxiv:2505.08918
       role: primary
@@ -4174,6 +4302,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/bioscan-ml/BarcodeBERT"
+  model_ext:
+    license: MIT
   papers:
     - paper_id: arxiv:2311.02401
       role: primary
@@ -4239,6 +4372,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/Panda-myj/PertDiff"
   papers:
     - paper_id: 10.1093/bioinformatics/btag482
       role: primary
@@ -4343,6 +4479,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/jas-preet/SPOT-Contact-LM"
+  model_ext:
+    license: MPL-2.0
   papers:
     - paper_id: 10.1093/bioinformatics/btac053
       role: primary
@@ -4356,6 +4497,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/jas-preet/SPOT-Contact-LM"
+  model_ext:
+    license: MPL-2.0
   papers:
     - paper_id: 10.1101/2021.06.19.449089
       role: primary
@@ -4720,6 +4866,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/HazyResearch/hyena-dna"
+  model_ext:
+    license: Apache-2.0
   papers:
     - paper_id: arxiv:2306.15794
       role: primary
@@ -4733,6 +4884,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/AIRI-Institute/GENA_LM"
+  model_ext:
+    license: MIT
   papers:
     - paper_id: 10.1093/nar/gkae1310
       role: primary

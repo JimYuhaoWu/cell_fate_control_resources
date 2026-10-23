@@ -296,7 +296,17 @@ def check_evidence_tier(db, papers, by_entity, rep):
                                   if shared else "")
             for pid, kind, shared in verdicts) or "no benchmark/critique papers"
 
-        if claimed != derived:
+        if claimed is None:
+            # A `model_ext` block that carries no tier is not asserting a null
+            # one: it is a record that holds some other model field -- a
+            # licence, a parameter count -- and leaves the tier to be derived,
+            # which is what the catalogue says it does everywhere else. Reading
+            # absence as an assertion made any script that writes a non-tier
+            # model field have to assert the one number it is forbidden to
+            # touch (03_record.py §"It never writes evidence_tier").
+            rep.add(INFO, "evidence-tier", eid,
+                    f"{derived} [{detail}] -- derived, not asserted")
+        elif claimed != derived:
             rep.add(ERROR, "evidence-tier", eid,
                     f"asserted evidence_tier '{claimed}' but derivation gives "
                     f"'{derived}' [{detail}]",

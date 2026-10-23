@@ -203,6 +203,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/CMU-SAFARI/SequenceLab"
   papers:
     - paper_id: arxiv:2310.16908
       role: primary
@@ -275,6 +278,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/malikmtahir/EPI"
   papers:
     - paper_id: arxiv:2504.00306
       role: primary
@@ -347,6 +353,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/kundajelab/interpret-benchmark"
   papers:
     - paper_id: 10.1101/2021.12.26.474224
       role: primary
@@ -491,6 +500,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/Graylab/FLAb"
   papers:
     - paper_id: 10.64898/2025.12.27.696706
       role: primary
@@ -515,6 +527,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/Graylab/FLAb"
   papers:
     - paper_id: 10.1101/2024.01.13.575504
       role: primary
@@ -659,6 +674,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/microsoft/scene_graph_benchmark"
   papers:
     - paper_id: arxiv:2107.12604
       role: primary
@@ -719,6 +737,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/Liu-Hy/GenoTEX"
   papers:
     - paper_id: arxiv:2406.15341
       role: primary
@@ -767,6 +788,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/SII-AGI4S/ViroBench"
   papers:
     - paper_id: arxiv:2605.25388
       role: primary
@@ -851,6 +875,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/zhuang-li/FactualSceneGraph"
   papers:
     - paper_id: arxiv:2305.17497
       role: primary
@@ -947,6 +974,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/LUNAProject22/Know-Show"
   papers:
     - paper_id: arxiv:2512.05513
       role: primary
@@ -959,6 +989,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/MuhammadMuneeb007/CAGI7_Annotate_All_Missense"
   papers:
     - paper_id: arxiv:2605.24520
       role: primary
@@ -971,6 +1004,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/theislab/deconvATAC"
   papers:
     - paper_id: 10.1093/bioinformatics/btaf268
       role: primary
@@ -1151,6 +1187,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/nathanhollet/idh-status-prediction"
   papers:
     - paper_id: arxiv:2606.23172
       role: primary
