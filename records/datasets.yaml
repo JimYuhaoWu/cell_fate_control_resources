@@ -42,6 +42,44 @@
   papers:
     - paper_id: 10.1038/s41588-024-02053-6
       role: primary
+    - paper_id: 10.1186/s13059-025-03674-8
+      role: benchmark
+    - paper_id: 10.1007/s00122-025-04973-1
+      role: critique
+    - paper_id: 10.3389/frai.2026.1886470
+      role: benchmark
+    - paper_id: 10.1093/bib/bbaf724
+      role: benchmark
+    - paper_id: 10.1101/2025.09.09.675195
+      role: benchmark
+    - paper_id: 10.64898/2026.01.20.700723
+      role: benchmark
+    - paper_id: 10.62329/hxkk6249
+      role: critique
+    - paper_id: 10.1101/2025.11.28.691095
+      role: critique
+    - paper_id: 10.3389/fmolb.2026.1761673
+      role: critique
+    - paper_id: 10.64898/2026.05.13.724757
+      role: benchmark
+    - paper_id: 10.3390/biology15171527
+      role: benchmark
+    - paper_id: 10.1101/2024.11.25.624002
+      role: critique
+    - paper_id: 10.64898/2026.08.02.742309
+      role: benchmark
+    - paper_id: 10.1038/s41467-026-77381-8
+      role: benchmark
+    - paper_id: 10.64898/2026.09.08.750126
+      role: critique
+    - paper_id: 10.1038/s41592-026-03124-8
+      role: critique
+    - paper_id: 10.1093/insilicoplants/diag012
+      role: critique
+    - paper_id: 10.1101/2024.04.11.589024
+      role: benchmark
+    - paper_id: 10.1101/2024.01.03.574012
+      role: critique
 
 - entity_id: dataset:enformer-data
   type: dataset
@@ -77,6 +115,94 @@
   papers:
     - paper_id: 10.1038/s41592-021-01252-x
       role: primary
+    - paper_id: 10.3390/insects17090928
+      role: benchmark
+    - paper_id: 10.1101/2025.03.01.641000
+      role: benchmark
+    - paper_id: 10.1038/s41588-023-01574-w
+      role: critique
+    - paper_id: 10.48550/arxiv.2311.12570
+      role: benchmark
+    - paper_id: 10.1101/2025.01.06.631405
+      role: benchmark
+    - paper_id: 10.64898/2026.01.27.702015
+      role: benchmark
+    - paper_id: 10.1002/advs.202514490
+      role: benchmark
+    - paper_id: 10.1101/2023.10.12.562113
+      role: benchmark
+    - paper_id: 10.1186/s12859-024-05869-5
+      role: benchmark
+    - paper_id: 10.1016/j.xgen.2025.100879
+      role: benchmark
+    - paper_id: 10.64898/2026.07.18.739304
+      role: benchmark
+    - paper_id: 10.1093/bib/bbae560
+      role: benchmark
+    - paper_id: 10.1093/dnares/dsaf024
+      role: critique
+    - paper_id: 10.1101/2023.12.21.572780
+      role: benchmark
+    - paper_id: 10.3389/fmolb.2023.1257550
+      role: benchmark
+    - paper_id: 10.1093/bioinformatics/btaf317
+      role: benchmark
+    - paper_id: 10.1093/bib/bbag162
+      role: critique
+    - paper_id: 10.1101/2025.01.22.634321
+      role: critique
+    - paper_id: 10.1093/bib/bbaf129
+      role: benchmark
+    - paper_id: 10.3389/fgene.2025.1614222
+      role: benchmark
+    - paper_id: 10.1109/bibm66473.2025.11357206
+      role: benchmark
+    - paper_id: 10.1016/j.biotechadv.2026.109039
+      role: benchmark
+    - paper_id: 10.3389/fpls.2026.1968878
+      role: benchmark
+    - paper_id: 10.1016/j.crmeth.2023.100599
+      role: benchmark
+    - paper_id: 10.1002/qub2.100
+      role: benchmark
+    - paper_id: 10.1101/2024.10.30.621013
+      role: benchmark
+    - paper_id: 10.1007/s10489-025-06607-x
+      role: benchmark
+    - paper_id: 10.64898/2026.02.27.708524
+      role: benchmark
+    - paper_id: 10.3390/plants15172603
+      role: benchmark
+    - paper_id: 10.3390/genes17091156
+      role: benchmark
+    - paper_id: 10.1093/bib/bbag550
+      role: benchmark
+    - paper_id: 10.1093/bioinformatics/btae461
+      role: benchmark
+    - paper_id: 10.1021/acs.jcim.5c00205
+      role: benchmark
+    - paper_id: 10.1126/science.adf7044
+      role: benchmark
+    - paper_id: 10.1093/gigascience/giad085
+      role: benchmark
+    - paper_id: 10.1002/qub2.68
+      role: benchmark
+    - paper_id: 10.14202/vetworld.2025.1922-1935
+      role: benchmark
+    - paper_id: 10.1101/2025.06.30.662437
+      role: benchmark
+    - paper_id: 10.3389/fcimb.2023.1182567
+      role: benchmark
+    - paper_id: 10.1109/trustcom60117.2023.00388
+      role: benchmark
+    - paper_id: 10.1016/j.atech.2026.102223
+      role: benchmark
+    - paper_id: 10.1038/s41588-023-01517-5
+      role: critique
+    - paper_id: 10.1007/978-3-032-37444-8_53
+      role: benchmark
+    - paper_id: 10.1007/978-3-032-28466-2_43
+      role: benchmark
 
 - entity_id: dataset:replogle-2022-perturb-seq
   type: dataset
@@ -119,3 +245,49 @@
       role: primary
     - paper_id: 10.1101/2021.12.16.473013
       role: preprint
+    - paper_id: 10.64898/2026.03.27.714658
+      role: benchmark
+    - paper_id: 10.1101/2025.06.11.659105
+      role: application
+    - paper_id: 10.1101/2023.09.18.558211
+      role: application
+    - paper_id: 10.1101/2025.10.20.683304
+      role: benchmark
+    - paper_id: 10.1186/s12864-025-11600-2
+      role: benchmark
+    - paper_id: 10.1126/sciadv.aed3414
+      role: benchmark
+    - paper_id: 10.1101/2024.10.02.616248
+      role: benchmark
+    - paper_id: 10.1101/2024.12.23.630036
+      role: benchmark
+    - paper_id: 10.1093/nargab/lqag095
+      role: benchmark
+    - paper_id: 10.1038/s41592-025-02772-6
+      role: benchmark
+    - paper_id: 10.64898/2026.08.04.732812
+      role: critique
+    - paper_id: 10.1360/csb-2025-0682
+      role: benchmark
+    - paper_id: 10.64898/2026.08.07.743481
+      role: benchmark
+    - paper_id: 10.64898/2025.12.11.693702
+      role: benchmark
+    - paper_id: 10.64898/2026.02.18.706454
+      role: benchmark
+    - paper_id: 10.1016/j.jare.2026.06.012
+      role: benchmark
+    - paper_id: 10.1371/journal.pcbi.1013194
+      role: critique
+    - paper_id: 10.1101/2024.04.06.588168
+      role: benchmark
+    - paper_id: 10.1101/2023.01.23.525198
+      role: benchmark
+    - paper_id: 10.64898/2026.03.04.709607
+      role: benchmark
+    - paper_id: 10.64898/2026.06.28.735106
+      role: benchmark
+    - paper_id: 10.1016/j.compbiolchem.2026.109480
+      role: benchmark
+    - paper_id: 10.1038/s41592-026-03120-y
+      role: benchmark

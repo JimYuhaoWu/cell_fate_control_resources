@@ -1,14 +1,14 @@
 {
-  "build_date": "2026-10-19",
+  "build_date": "2026-10-23",
   "db_path": "db/cfcr.db",
   "inputs": {
-    "literature/papers.yaml": "54ac75f1a4ccb4e39484df6f70fc1eefcfbc519ac6dba319eb7d35820c139935",
-    "records/benchmarks.yaml": "8257b172b379c53ca126eb368bf41f81c574f7bd5a5758c778b39c2e5aa6ca90",
-    "records/databases.yaml": "4b8fb0e3c089ac47f23aa8f2990c5211836151ed39235fd96272bf573d282844",
-    "records/datasets.yaml": "0b7e88b288e25415a058adf3535eef0718747f30b775930610c87517c00d694c",
-    "records/models.yaml": "b2bbf050a8678c05e4093dee81ed2e4092d324de98b1d9efa33adff7db9a3bf5",
-    "records/module_libraries.yaml": "e99ca2fc13fd6d21f86fe3464cf7c32114ff748ccd123a6a2ed041a4e3e5fa7a",
-    "records/protocols.yaml": "fe9d65734cf474158bd35b17b7411269c86aa7ff96e285f26d95880c796d51c2",
+    "literature/papers.yaml": "22903eacbc79880da649a529b8e134b99804c57fe3f435c5d5d6d62f24175e3e",
+    "records/benchmarks.yaml": "9f73392f1847792a85f8a69b0388545d7f832cca4e6aba47a12106c858a083d9",
+    "records/databases.yaml": "a1a614251c8f6576e2117455e0bc3d722fb5488074c08a2084d539466571566b",
+    "records/datasets.yaml": "7f778016659d3ec427ff60c5b4eeee3b5000c29723937cebe7ea9a314e96e656",
+    "records/models.yaml": "e19f7ad420d26de67ee2b72f9ad8498dc5862809efac912776dbbfe0b6efd845",
+    "records/module_libraries.yaml": "0bfd474014054b5425f0859200b07509c7ab6dc92a31750167e9aabcd5ea53c1",
+    "records/protocols.yaml": "2b8e9e02bb8b62511fb7c08d412e900356963730ed442550f375a26d9b5d64d9",
     "vocab/architecture.yaml": "287c121e51fb652f7c527937d81304d31fece7abbc7094ca6b62846067738ff8",
     "vocab/assay.yaml": "c449a1589daec90e56aa61be102d0810ed0f92f704de2116c9b4ff908516c803",
     "vocab/cell_type.yaml": "018cdf102d25782037bdf824b56d96505eeb0edab89077d4e899a1670deff2be",
@@ -19,35 +19,34 @@
   },
   "script": "scripts/04_build.py",
   "snapshots": {
-    "entities.tsv": 20,
-    "entity_paper.tsv": 37,
+    "entities.tsv": 464,
+    "entity_paper.tsv": 773,
     "links.tsv": 29,
-    "papers.tsv": 30
+    "papers.tsv": 718
   },
   "summary": {
     "by_evidence_tier": {
-      "externally-benchmarked": 4,
-      "partially-independent": 1,
-      "self-reported": 3
+      "externally-benchmarked": 8
     },
     "by_paper_role": {
-      "benchmark": 6,
-      "critique": 2,
+      "application": 9,
+      "benchmark": 229,
+      "critique": 62,
       "extension": 1,
       "preprint": 8,
-      "primary": 19,
+      "primary": 463,
       "review": 1
     },
     "by_type": {
-      "benchmark": 3,
+      "benchmark": 90,
       "database": 1,
       "dataset": 3,
-      "model": 8,
-      "module": 3,
+      "model": 310,
+      "module": 58,
       "protocol": 2
     },
-    "n_entities": 20,
+    "n_entities": 464,
     "n_links": 29,
-    "n_papers": 30
+    "n_papers": 718
   }
 }

@@ -52,6 +52,188 @@
     "url": "https://arxiv.org/abs/2311.12570",
     "venue": null,
     "year": 2023
+   },
+   {
+    "authors": [
+     "Wenduo Cheng",
+     "Zhenqiao Song",
+     "Yang Zhang",
+     "Shike Wang",
+     "Danqing Wang",
+     "Muyu Yang",
+     "Lei Li",
+     "Jian Ma"
+    ],
+    "doi": "10.1038/s41467-025-65077-4",
+    "note": null,
+    "paper_id": "10.1038/s41467-025-65077-4",
+    "role": "benchmark",
+    "title": "DNALONGBENCH: a benchmark suite for long-range DNA prediction tasks",
+    "url": "https://doi.org/10.1038/s41467-025-65077-4",
+    "venue": "Nature Communications",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Yuchen Ren",
+     "Zhiyuan Chen",
+     "Lifeng Qiao",
+     "Hongtai Jing",
+     "Y. Cai",
+     "Sheng Yong Xu",
+     "Peng Ye",
+     "Xinzhu Ma",
+     "Siqi Sun",
+     "Hong-Liang Yan",
+     "Dong Yuan",
+     "Wanli Ouyang",
+     "Xihui Liu"
+    ],
+    "doi": "10.1101/2024.06.22.600190",
+    "note": null,
+    "paper_id": "10.1101/2024.06.22.600190",
+    "role": "benchmark",
+    "title": "BEACON: Benchmark for Comprehensive RNA Tasks and Language Models",
+    "url": "https://doi.org/10.1101/2024.06.22.600190",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Pedro Tomaz da Silva",
+     "Alexander Karollus",
+     "Johannes Hingerl",
+     "Gihanna Galindez",
+     "Nils Wagner",
+     "Xavier Hernandez‐Alias",
+     "Danny Incarnato",
+     "Julien Gagneur"
+    ],
+    "doi": "10.1101/2024.07.27.605418",
+    "note": null,
+    "paper_id": "10.1101/2024.07.27.605418",
+    "role": "benchmark",
+    "title": "Nucleotide dependency analysis of DNA language models reveals genomic functional elements",
+    "url": "https://doi.org/10.1101/2024.07.27.605418",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Courtney A. Shearer",
+     "Rose Orenbuch",
+     "Felix Teufel",
+     "Christian J. Steinmetz",
+     "Daniel Ritter",
+     "Erik Xie",
+     "Artem Gazizov",
+     "Aviv Spinner",
+     "Jonathan Frazer",
+     "Mafalda Dias",
+     "Pascal Notin",
+     "Debora S. Marks"
+    ],
+    "doi": "10.1101/2024.11.11.623015",
+    "note": null,
+    "paper_id": "10.1101/2024.11.11.623015",
+    "role": "benchmark",
+    "title": "A Genomic Language Model for Zero-Shot Prediction of Promoter Variant Effects",
+    "url": "https://doi.org/10.1101/2024.11.11.623015",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Qiuyi Li",
+     "Wei Wu",
+     "Yiheng Zhu",
+     "Fuli Feng",
+     "Jieping Ye",
+     "Zheng Wang"
+    ],
+    "doi": "10.1101/2025.06.04.656517",
+    "note": null,
+    "paper_id": "10.1101/2025.06.04.656517",
+    "role": "benchmark",
+    "title": "Gener anno : A Genomic Foundation Model for Metagenomic Annotation",
+    "url": "https://doi.org/10.1101/2025.06.04.656517",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Yihui Wang",
+     "Zhiyuan Cai",
+     "Qian Zeng",
+     "Yihang Gao",
+     "Jiarui Ouyang",
+     "Yingxue Xu",
+     "Shu Yang",
+     "Sunan He",
+     "Yuxiang Nie",
+     "Yu Cai",
+     "Fengtao Zhou",
+     "Cheng Jin",
+     "Xi Wang",
+     "Zhi Xie",
+     "Danqing Zhu",
+     "Ting Xie",
+     "Kwang-Ting Tim Cheng",
+     "Can Yang",
+     "Xi Fu",
+     "Jiguang Wang",
+     "Kang Zhang",
+     "Jianhua Yao",
+     "Raúl Rabadán",
+     "Hao Chen"
+    ],
+    "doi": "10.1101/2025.06.25.661622",
+    "note": null,
+    "paper_id": "10.1101/2025.06.25.661622",
+    "role": "benchmark",
+    "title": "Genomic Touchstone: Benchmarking Genomic Language Models in the Context of the Central Dogma",
+    "url": "https://doi.org/10.1101/2025.06.25.661622",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Ruian Shi",
+     "Taykhoom Dalal",
+     "Philip Fradkin",
+     "Divya Koyyalagunta",
+     "Simran Chhabria",
+     "Andrew Jung",
+     "Cyrus L. Tam",
+     "Defne Ceyhan",
+     "Jessica Lin",
+     "Kaitlin U. Laverty",
+     "Ilyes Baali",
+     "Bo Wang",
+     "Quaid Morris"
+    ],
+    "doi": "10.1101/2025.07.05.662870",
+    "note": null,
+    "paper_id": "10.1101/2025.07.05.662870",
+    "role": "benchmark",
+    "title": "mRNABench: A curated benchmark for mature mRNA property and function prediction",
+    "url": "https://doi.org/10.1101/2025.07.05.662870",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Marcell Veiner",
+     "Fran Supek"
+    ],
+    "doi": "10.1038/s44320-025-00184-4",
+    "note": null,
+    "paper_id": "10.1038/s44320-025-00184-4",
+    "role": "critique",
+    "title": "The DNA dialect: a comprehensive guide to pretrained genomic language models",
+    "url": "https://doi.org/10.1038/s44320-025-00184-4",
+    "venue": "Molecular Systems Biology",
+    "year": 2026
    }
   ],
   "primary_paper_id": "arxiv:2311.12570",
@@ -134,6 +316,51 @@
     "url": "https://doi.org/10.52202/079017-1981",
     "venue": "Advances in Neural Information Processing Systems 37",
     "year": 2024
+   },
+   {
+    "authors": [
+     "Nikita Gryzunov",
+     "Dmitry Penzar",
+     "Vasilii Kamenets",
+     "Valery Vyaltsev",
+     "Ivan Kozin",
+     "Irina A. Eliseeva",
+     "Vladimir Nozdrin",
+     "Ilya E. Vorontsov",
+     "Sergey Bushuev",
+     "Vadim V. Strekalovskikh",
+     "Arsenii O. Zinkevich",
+     "Gregory Andrews",
+     "Matwej Bedarew",
+     "Ido Blass",
+     "Dmitry Frolov",
+     "Iuliia Lariushina",
+     "Jill Moore",
+     "Yaron Orenstein",
+     "German Roev",
+     "Danil Salimov",
+     "Noam Shimshoviz",
+     "Ido Tziony",
+     "Zhiping Weng",
+     "Philipp Bücher",
+     "Bart Deplancke",
+     "Oriol Fornés",
+     "Jan Grau",
+     "Ivo Große",
+     "Arttu Jolma",
+     "Fedor A. Kolpakov",
+     "Vsevolod J. Makeev",
+     "Timothy R. Hughes",
+     "Ivan V. Kulakovskiy"
+    ],
+    "doi": "10.1016/j.celrep.2026.118025",
+    "note": null,
+    "paper_id": "10.1016/j.celrep.2026.118025",
+    "role": "benchmark",
+    "title": "Inferring binding specificities of human transcription factors with the wisdom of crowds",
+    "url": "https://doi.org/10.1016/j.celrep.2026.118025",
+    "venue": "Cell Reports",
+    "year": 2026
    }
   ],
   "primary_paper_id": "10.52202/079017-1981",
@@ -300,6 +527,180 @@
     "url": "https://doi.org/10.1093/nar/gkad1059",
     "venue": "Nucleic Acids Research",
     "year": 2023
+   },
+   {
+    "authors": [
+     "Ihor Kendiukhov"
+    ],
+    "doi": "10.1016/j.compbiolchem.2026.109438",
+    "note": null,
+    "paper_id": "10.1016/j.compbiolchem.2026.109438",
+    "role": "benchmark",
+    "title": "Mechanistic interpretability of a plant genomic foundation model: Data probes, causal interventions, and motif-grounded features",
+    "url": "https://doi.org/10.1016/j.compbiolchem.2026.109438",
+    "venue": "Computational Biology and Chemistry",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Marco Stock",
+     "Corinna Losert",
+     "Matteo Zambon",
+     "Niclas Popp",
+     "Gabriele Lubatti",
+     "Eva Hörmanseder",
+     "Matthias Heinig",
+     "Antonio Scialdone"
+    ],
+    "doi": "10.1038/s44320-025-00088-3",
+    "note": null,
+    "paper_id": "10.1038/s44320-025-00088-3",
+    "role": "benchmark",
+    "title": "Leveraging prior knowledge to infer gene regulatory networks from single-cell RNA-sequencing data",
+    "url": "https://doi.org/10.1038/s44320-025-00088-3",
+    "venue": "Molecular Systems Biology",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "LeAnn M. Lindsey",
+     "Nicole L. Pershing",
+     "A K M Rubaiyat Reza Habib",
+     "Keith Dufault‐Thompson",
+     "W. Zac Stephens",
+     "Anne J. Blaschke",
+     "Xiaofang Jiang",
+     "Hari Sundar"
+    ],
+    "doi": "10.1093/bioinformatics/btaf456",
+    "note": null,
+    "paper_id": "10.1093/bioinformatics/btaf456",
+    "role": "benchmark",
+    "title": "The impact of tokenizer selection in genomic language models",
+    "url": "https://doi.org/10.1093/bioinformatics/btaf456",
+    "venue": "Bioinformatics",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Andrew D. Bates",
+     "Dawid P. Grzela",
+     "Maciej Studzian",
+     "Louise Brennan",
+     "Moli Williams",
+     "Conor J. Fawcett",
+     "Beth Hammond",
+     "Manreen Grewal",
+     "Marcin Ratajewski",
+     "Łukasz Pułaski",
+     "Urszula Lucja McClurg"
+    ],
+    "doi": "10.1101/gr.281154.125",
+    "note": null,
+    "paper_id": "10.1101/gr.281154.125",
+    "role": "benchmark",
+    "title": "A systematic guide for identifying transcription factors that directly regulate the expression of a gene of interest",
+    "url": "https://doi.org/10.1101/gr.281154.125",
+    "venue": "Genome Research",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Dinithi V. Wanniarachchi",
+     "Sameera Viswakula",
+     "Anushka M. Wickramasuriya"
+    ],
+    "doi": "10.1186/s12859-024-05995-0",
+    "note": null,
+    "paper_id": "10.1186/s12859-024-05995-0",
+    "role": "benchmark",
+    "title": "The evaluation of transcription factor binding site prediction tools in human and Arabidopsis genomes",
+    "url": "https://doi.org/10.1186/s12859-024-05995-0",
+    "venue": "BMC Bioinformatics",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Seppe De Winter",
+     "Camiel C. A. Mannens",
+     "Valerie Christiaens",
+     "Roel Vandepoel",
+     "Lijuan Hu",
+     "Sten Linnarsson",
+     "Stein Aerts"
+    ],
+    "doi": "10.64898/2026.01.14.699402",
+    "note": null,
+    "paper_id": "10.64898/2026.01.14.699402",
+    "role": "benchmark",
+    "title": "System-wide extraction of cis-regulatory rules from sequence-to-function models in human neural development",
+    "url": "https://doi.org/10.64898/2026.01.14.699402",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Junhao Liu",
+     "Pengpeng Zhang",
+     "Siwei Xu",
+     "Shushrruth Sai Srinivasan",
+     "Yongxian Wu",
+     "Jing Zhang"
+    ],
+    "doi": "10.1109/icip55913.2025.11084625",
+    "note": null,
+    "paper_id": "10.1109/icip55913.2025.11084625",
+    "role": "critique",
+    "title": "Multimodal Cell Context Instruction Tuning for Conditional DNA Regulatory Sequence Generation with Large Language Models",
+    "url": "https://doi.org/10.1109/icip55913.2025.11084625",
+    "venue": "Proceedings - International Conference on Image Processing",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Damla Ovek",
+     "Ieva Rauluševičiūtė",
+     "Dina Ruud Aronsen",
+     "Romain Blanc‐Mathieu",
+     "Ine Bonthuis",
+     "Herman De Beukelaer",
+     "Katalin Ferenc",
+     "Alice Jegou",
+     "Vipin Kumar",
+     "Roza Berhanu Lemma",
+     "Jérémy Lucas",
+     "Mathis Pochon",
+     "Chang Min Yun",
+     "Vivekanandan Ramalingam",
+     "Salil Deshpande",
+     "Aman Patel",
+     "Georgi K. Marinov",
+     "Austin T Wang",
+     "Alejandro Aguirre",
+     "Jaime Abraham Castro-Mondragon",
+     "Damir Baranas̆ić",
+     "Jeanne Chèneby",
+     "Sveinung Gundersen",
+     "Morten Johansen",
+     "Aziz Khan",
+     "Marieke L. Kuijjer",
+     "Eivind J. Hovig",
+     "Boris Lenhard",
+     "Albin Sandelin",
+     "Klaas Vandepoele",
+     "Wyeth W. Wasserman",
+     "François Parcy",
+     "Anshul Bharat Kundaje",
+     "Anthony Mathelier"
+    ],
+    "doi": "10.1093/nar/gkaf1209",
+    "note": null,
+    "paper_id": "10.1093/nar/gkaf1209",
+    "role": "application",
+    "title": "JASPAR 2026: expansion of transcription factor binding profiles and integration of deep learning models",
+    "url": "https://doi.org/10.1093/nar/gkaf1209",
+    "venue": "Nucleic Acids Research",
+    "year": 2025
    }
   ],
   "primary_paper_id": "10.1093/nar/gkad1059",
@@ -382,6 +783,339 @@
     "url": "https://doi.org/10.1038/s41588-024-02053-6",
     "venue": "Nature Genetics",
     "year": 2025
+   },
+   {
+    "authors": [
+     "Claudia Skok Gibbs",
+     "Angelica Chen",
+     "Richard Bonneau",
+     "Kyunghyun Cho"
+    ],
+    "doi": "10.1038/s41467-026-77381-8",
+    "note": null,
+    "paper_id": "10.1038/s41467-026-77381-8",
+    "role": "benchmark",
+    "title": "GLM-Prior: a genomic language model for transferable sequence-derived priors in gene regulatory network inference",
+    "url": "https://doi.org/10.1038/s41467-026-77381-8",
+    "venue": "Nature Communications",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Liu Shu",
+     "Jiao Tang",
+     "Xiaoyu Guan",
+     "Daoqiang Zhang"
+    ],
+    "doi": "10.1093/bib/bbaf724",
+    "note": null,
+    "paper_id": "10.1093/bib/bbaf724",
+    "role": "benchmark",
+    "title": "A comprehensive survey of genome language models in bioinformatics",
+    "url": "https://doi.org/10.1093/bib/bbaf724",
+    "venue": "Briefings in Bioinformatics",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Travis Wrightsman",
+     "Taylor H. Ferebee",
+     "M. Cinta Romay",
+     "Arun Somwarpet Seetharam",
+     "Taylor AuBuchon‐Elder",
+     "Alyssa R. Phillips",
+     "Michael Syring",
+     "Matthew B. Hufford",
+     "Elizabeth Anne Kellogg",
+     "Edward S. Buckler"
+    ],
+    "doi": "10.1101/2024.04.11.589024",
+    "note": null,
+    "paper_id": "10.1101/2024.04.11.589024",
+    "role": "benchmark",
+    "title": "Current genomic deep learning architectures generalize across grass species but not alleles",
+    "url": "https://doi.org/10.1101/2024.04.11.589024",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Wanjun Gu",
+     "Erin N. Gilbertson",
+     "Sergio E. Baranzini",
+     "Rany S. Salem",
+     "John A. Capra"
+    ],
+    "doi": "10.1101/2025.09.09.675195",
+    "note": null,
+    "paper_id": "10.1101/2025.09.09.675195",
+    "role": "benchmark",
+    "title": "Evaluating the contribution of genome 3D folding to variation in human height using machine learning",
+    "url": "https://doi.org/10.1101/2025.09.09.675195",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Ziqi Tang",
+     "Nirali Somia",
+     "Yiyang Yu",
+     "Peter K. Koo"
+    ],
+    "doi": "10.1186/s13059-025-03674-8",
+    "note": null,
+    "paper_id": "10.1186/s13059-025-03674-8",
+    "role": "benchmark",
+    "title": "Evaluating the representational power of pre-trained DNA language models for regulatory genomics",
+    "url": "https://doi.org/10.1186/s13059-025-03674-8",
+    "venue": "Genome biology",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Yogesh Kumar",
+     "Inderpreet Kaur",
+     "Nandini Modi",
+     "Priya Bhardwaj",
+     "Jaeyoung Choi",
+     "Muhammad Fazal Ijaz"
+    ],
+    "doi": "10.3389/frai.2026.1886470",
+    "note": null,
+    "paper_id": "10.3389/frai.2026.1886470",
+    "role": "benchmark",
+    "title": "A comparative evaluation of deep learning models for the classification of encoded splice-junction sequences",
+    "url": "https://doi.org/10.3389/frai.2026.1886470",
+    "venue": "Frontiers in Artificial Intelligence",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Tiana Noll-Walker",
+     "Yong Chen"
+    ],
+    "doi": "10.3390/biology15171527",
+    "note": null,
+    "paper_id": "10.3390/biology15171527",
+    "role": "benchmark",
+    "title": "Biological Foundation Models for Complex Disease Research and Clinical Translation",
+    "url": "https://doi.org/10.3390/biology15171527",
+    "venue": "Biology",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Jianyu Yang",
+     "Shaun Mahony"
+    ],
+    "doi": "10.64898/2026.01.20.700723",
+    "note": null,
+    "paper_id": "10.64898/2026.01.20.700723",
+    "role": "benchmark",
+    "title": "TPCAV: Interpreting deep learning genomics models via concept attribution",
+    "url": "https://doi.org/10.64898/2026.01.20.700723",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Jiaqi Li",
+     "Ti Qin",
+     "Jingyu Li",
+     "Zhiwei Bao"
+    ],
+    "doi": "10.64898/2026.05.13.724757",
+    "note": null,
+    "paper_id": "10.64898/2026.05.13.724757",
+    "role": "benchmark",
+    "title": "S2F-Agent: Harnessing sequence-to-function models for verifiable genome interpretation",
+    "url": "https://doi.org/10.64898/2026.05.13.724757",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Zhirui Hu",
+     "Jason Ku",
+     "Katherine Snowden Pollard"
+    ],
+    "doi": "10.64898/2026.08.02.742309",
+    "note": null,
+    "paper_id": "10.64898/2026.08.02.742309",
+    "role": "benchmark",
+    "title": "Contrastive Regulatory Embeddings Attention Model for Differential Expression Prediction with Personalized Genomes: Insights and Challenges",
+    "url": "https://doi.org/10.64898/2026.08.02.742309",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Janek Sendrowski",
+     "Thomas M Bataillon",
+     "Guillaume P. Ramstein"
+    ],
+    "doi": "10.1007/s00122-025-04973-1",
+    "note": null,
+    "paper_id": "10.1007/s00122-025-04973-1",
+    "role": "critique",
+    "title": "In silico prediction of variant effects: promises and limitations for precision plant breeding",
+    "url": "https://doi.org/10.1007/s00122-025-04973-1",
+    "venue": "Theoretical and Applied Genetics",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Anna E. Spiro",
+     "Xinming Tu",
+     "Yilun Sheng",
+     "Alexander Sasse",
+     "Rezwan Hosseini",
+     "Maria D. Chikina",
+     "Sara Mostafavi"
+    ],
+    "doi": "10.1038/s41592-026-03124-8",
+    "note": null,
+    "paper_id": "10.1038/s41592-026-03124-8",
+    "role": "critique",
+    "title": "A scalable approach to investigating sequence-to-function predictions from personal genomes",
+    "url": "https://doi.org/10.1038/s41592-026-03124-8",
+    "venue": "Nature Methods",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Jordi Alonso Esteve",
+     "Niels Aerts",
+     "Saskia C. M. Van Wees",
+     "Dick de Ridder",
+     "Aalt D. J. van Dijk"
+    ],
+    "doi": "10.1093/insilicoplants/diag012",
+    "note": null,
+    "paper_id": "10.1093/insilicoplants/diag012",
+    "role": "critique",
+    "title": "Can deep learning predict inducibility of stress-responsive gene expression from DNA sequence in Arabidopsis thaliana?",
+    "url": "https://doi.org/10.1093/insilicoplants/diag012",
+    "venue": "in silico Plants",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Paola Cornejo‐Páramo",
+     "Xuan Zhang",
+     "Lithin Louis",
+     "Yihua Yang",
+     "Zelun Li",
+     "David T. Humphreys",
+     "Emily S. W. Wong"
+    ],
+    "doi": "10.1101/2024.01.03.574012",
+    "note": null,
+    "paper_id": "10.1101/2024.01.03.574012",
+    "role": "critique",
+    "title": "A Bag-Of-Motif Model Captures Cell States at Distal Regulatory Sequences",
+    "url": "https://doi.org/10.1101/2024.01.03.574012",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Shibo Qiu"
+    ],
+    "doi": "10.1101/2024.11.25.624002",
+    "note": null,
+    "paper_id": "10.1101/2024.11.25.624002",
+    "role": "critique",
+    "title": "Limitations and Enhancements in Genomic Language Models: Dynamic Selection Approach",
+    "url": "https://doi.org/10.1101/2024.11.25.624002",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Alice Del Vecchio",
+     "Chantriolnt-Andreas Kapourani",
+     "Abdullah M Athar",
+     "Agnieszka Dobrowolska",
+     "Andrew Anighoro",
+     "Benjamin Tenmann",
+     "Lindsay Edwards",
+     "Cristian Regep"
+    ],
+    "doi": "10.1101/2025.11.28.691095",
+    "note": null,
+    "paper_id": "10.1101/2025.11.28.691095",
+    "role": "critique",
+    "title": "PatchDNA: A Flexible and Biologically-Informed alternative to Tokenization for DNA",
+    "url": "https://doi.org/10.1101/2025.11.28.691095",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Beibei Wang",
+     "Siyuan Song",
+     "Cheng SONG",
+     "Yihang Lin",
+     "Liang Yu",
+     "Yan Li",
+     "Xin Chen"
+    ],
+    "doi": "10.3389/fmolb.2026.1761673",
+    "note": null,
+    "paper_id": "10.3389/fmolb.2026.1761673",
+    "role": "critique",
+    "title": "Evolving computational paradigms for noncoding variant pathogenicity prediction",
+    "url": "https://doi.org/10.3389/fmolb.2026.1761673",
+    "venue": "Frontiers in Molecular Biosciences",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Chengxiang Qiu",
+     "Riza M. Daza",
+     "Ian C. Welsh",
+     "Rupali P Patwardhan",
+     "Beth K. Martin",
+     "Tony W. Li",
+     "Shizhao Yang",
+     "Camiel C. A. Mannens",
+     "Seppe De Winter",
+     "Niklas Kempynck",
+     "Megan L. Taylor",
+     "Olivia Fulton",
+     "Truc-Mai Le",
+     "Diana R. O’Day",
+     "Jean‐Benoît Lalanne",
+     "Silvia Domcke",
+     "Stephen A. Murray",
+     "Stein Aerts",
+     "Cole Trapnell",
+     "Jay Shendure"
+    ],
+    "doi": "10.62329/hxkk6249",
+    "note": null,
+    "paper_id": "10.62329/hxkk6249",
+    "role": "critique",
+    "title": "Evolutionary transfer learning enables organism-wide inference of mammalian enhancer landscapes",
+    "url": "https://doi.org/10.62329/hxkk6249",
+    "venue": null,
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Ceren Yıldırım",
+     "Nurdan Kuru",
+     "Ogün Adebalı"
+    ],
+    "doi": "10.64898/2026.09.08.750126",
+    "note": null,
+    "paper_id": "10.64898/2026.09.08.750126",
+    "role": "critique",
+    "title": "PHACTn enables training-free, context-independent inference of nucleotide variant tolerance across the genome",
+    "url": "https://doi.org/10.64898/2026.09.08.750126",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
    }
   ],
   "primary_paper_id": "10.1038/s41588-024-02053-6",
@@ -464,6 +1198,847 @@
     "url": "https://doi.org/10.1038/s41592-021-01252-x",
     "venue": "Nature Methods",
     "year": 2021
+   },
+   {
+    "authors": [
+     "Tianyu Liu",
+     "Kexing Li",
+     "Yuge Wang",
+     "Hongyu Li",
+     "Hongyu Zhao"
+    ],
+    "doi": "10.1002/advs.202514490",
+    "note": null,
+    "paper_id": "10.1002/advs.202514490",
+    "role": "benchmark",
+    "title": "Evaluating the Utilities of Foundation Models in Single‐Cell Data Analysis",
+    "url": "https://doi.org/10.1002/advs.202514490",
+    "venue": "Advanced Science",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Yujia Cheng",
+     "Xiaoyong Pan",
+     "Yang Yang"
+    ],
+    "doi": "10.1002/qub2.100",
+    "note": null,
+    "paper_id": "10.1002/qub2.100",
+    "role": "benchmark",
+    "title": "Loc4Lnc: Accurate prediction of long noncoding RNA subcellular localization via enhanced RNA sequence representation",
+    "url": "https://doi.org/10.1002/qub2.100",
+    "venue": "Quantitative Biology",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Christina V. Theodoris"
+    ],
+    "doi": "10.1002/qub2.68",
+    "note": null,
+    "paper_id": "10.1002/qub2.68",
+    "role": "benchmark",
+    "title": "Perspectives on benchmarking foundation models for network biology",
+    "url": "https://doi.org/10.1002/qub2.68",
+    "venue": "Quantitative Biology",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Aadit Kapoor",
+     "Wendy Lee"
+    ],
+    "doi": "10.1007/978-3-032-28466-2_43",
+    "note": null,
+    "paper_id": "10.1007/978-3-032-28466-2_43",
+    "role": "benchmark",
+    "title": "In-Context Learning in Genomic Language Models as an Evaluation Task",
+    "url": "https://doi.org/10.1007/978-3-032-28466-2_43",
+    "venue": "Communications in computer and information science",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Claudia Fernanda Muñoz-Hernández",
+     "Alberto León",
+     "María Hernández-Rizo",
+     "José Alejandro Morales",
+     "Adriana Patricia Mendizabal-Ruiz",
+     "Moises Sotelo-Rodriguez"
+    ],
+    "doi": "10.1007/978-3-032-37444-8_53",
+    "note": null,
+    "paper_id": "10.1007/978-3-032-37444-8_53",
+    "role": "benchmark",
+    "title": "Do Genomic Language Models Learn siRNA Design Rules? A Zero-Shot Evaluation of Evo on E. coli Coding Sequences",
+    "url": "https://doi.org/10.1007/978-3-032-37444-8_53",
+    "venue": "Communications in computer and information science",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Jing Meng",
+     "Jiangyuan Wang",
+     "Jingze Liu",
+     "Wenkai Song",
+     "Ming Li",
+     "Aiping Wu",
+     "Taijiao Jiang"
+    ],
+    "doi": "10.1007/s10489-025-06607-x",
+    "note": null,
+    "paper_id": "10.1007/s10489-025-06607-x",
+    "role": "benchmark",
+    "title": "TransSSVs: a Transformer-based deep learning model for accurate detection of somatic small variants in paired tumor and normal sequencing data",
+    "url": "https://doi.org/10.1007/s10489-025-06607-x",
+    "venue": "Applied Intelligence",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Huan Liu",
+     "Jie Zhang",
+     "Jian Wang",
+     "Guomin Zhou"
+    ],
+    "doi": "10.1016/j.atech.2026.102223",
+    "note": null,
+    "paper_id": "10.1016/j.atech.2026.102223",
+    "role": "benchmark",
+    "title": "CBS: a hybrid deep-learning framework and online platform for plant promoter activity prediction and candidate screening",
+    "url": "https://doi.org/10.1016/j.atech.2026.102223",
+    "venue": "Smart Agricultural Technology",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Fahimeh Palizban",
+     "Mohammad mahdi Sarbishegi",
+     "Huiqi Qu",
+     "Amir Hossein Saeidian",
+     "Mahya Mehrmohamadi",
+     "Joseph Glessner",
+     "Hakon H. Hakonarson"
+    ],
+    "doi": "10.1016/j.biotechadv.2026.109039",
+    "note": null,
+    "paper_id": "10.1016/j.biotechadv.2026.109039",
+    "role": "benchmark",
+    "title": "Deep generative models in biological sequence and structure analysis and design",
+    "url": "https://doi.org/10.1016/j.biotechadv.2026.109039",
+    "venue": "Biotechnology Advances",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Paul Bertin",
+     "Jarrid Rector-Brooks",
+     "Deepak Kumar Sharma",
+     "Thomas Gaudelet",
+     "Andrew Anighoro",
+     "Torsten Groß",
+     "Francisco Martínez‐Peña",
+     "Eileen L. Tang",
+     "M S Suraj",
+     "Cristian Regep",
+     "Jeremy B. R. Hayter",
+     "Maksym Korablyov",
+     "Nicholas M. Valiante",
+     "Almer M. van der Sloot",
+     "Mike Tyers",
+     "Charles E.S. Roberts",
+     "Michael M. Bronstein",
+     "Luke L. Lairson",
+     "Jake P. Taylor‐King",
+     "Yoshua Bengio"
+    ],
+    "doi": "10.1016/j.crmeth.2023.100599",
+    "note": null,
+    "paper_id": "10.1016/j.crmeth.2023.100599",
+    "role": "benchmark",
+    "title": "RECOVER identifies synergistic drug combinations in vitro through sequential model optimization",
+    "url": "https://doi.org/10.1016/j.crmeth.2023.100599",
+    "venue": "Cell Reports Methods",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Nelson Johansen",
+     "Niklas Kempynck",
+     "Nathan R. Zemke",
+     "Saroja Somasundaram",
+     "Seppe De Winter",
+     "Marcus J. Hooper",
+     "Deepanjali Dwivedi",
+     "Ruchi Lohia",
+     "Fabien Wehbe",
+     "Bocheng Li",
+     "Darina Abaffyová",
+     "Ethan J. Armand",
+     "Julie De Man",
+     "Eren Can Ekşi",
+     "Nikolai Hecker",
+     "Gert J. Hulselmans",
+     "Vasileios Konstantakos",
+     "David Mauduit",
+     "John K. Mich",
+     "Gabriele Partel",
+     "Tanya L. Daigle",
+     "Boaz P. Levi",
+     "Kai Zhang",
+     "Yoshiaki Tanaka",
+     "Jesse A Gillis",
+     "Jonathan T. Ting",
+     "Yoav Ben‐Simon",
+     "Jeremy A. Miller",
+     "Joseph R. Ecker",
+     "Bing Ren",
+     "Stein Aerts",
+     "Ed S. Lein",
+     "Bosiljka Tasic",
+     "Trygve E. Bakken"
+    ],
+    "doi": "10.1016/j.xgen.2025.100879",
+    "note": null,
+    "paper_id": "10.1016/j.xgen.2025.100879",
+    "role": "benchmark",
+    "title": "Evaluating methods for the prediction of cell-type-specific enhancers in the mammalian cortex",
+    "url": "https://doi.org/10.1016/j.xgen.2025.100879",
+    "venue": "Cell Genomics",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Akash Pandey",
+     "Wei Chen",
+     "Sinan Keten"
+    ],
+    "doi": "10.1021/acs.jcim.5c00205",
+    "note": null,
+    "paper_id": "10.1021/acs.jcim.5c00205",
+    "role": "benchmark",
+    "title": "COLOR: A Compositional Linear Operation-Based Representation of Protein Sequences for Identification of Monomer Contributions to Properties",
+    "url": "https://doi.org/10.1021/acs.jcim.5c00205",
+    "venue": "Journal of Chemical Information and Modeling",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Han Phan",
+     "Céline Brouard",
+     "Raphaël Mourad"
+    ],
+    "doi": "10.1093/bib/bbae560",
+    "note": null,
+    "paper_id": "10.1093/bib/bbae560",
+    "role": "benchmark",
+    "title": "Semi-supervised learning with pseudo-labeling compares favorably with large language models for regulatory sequence prediction",
+    "url": "https://doi.org/10.1093/bib/bbae560",
+    "venue": "Briefings in Bioinformatics",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Oleksandr Cherednichenko",
+     "Maria S. Poptsova"
+    ],
+    "doi": "10.1093/bib/bbaf129",
+    "note": null,
+    "paper_id": "10.1093/bib/bbaf129",
+    "role": "benchmark",
+    "title": "Kolmogorov–Arnold networks for genomic tasks",
+    "url": "https://doi.org/10.1093/bib/bbaf129",
+    "venue": "Briefings in Bioinformatics",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Taiyu Zhu",
+     "Upamanyu Ghose",
+     "Héctor Climente-González",
+     "Joanna M. M. Howson",
+     "Sile Hu",
+     "Alejo J. Nevado‐Holgado"
+    ],
+    "doi": "10.1093/bib/bbag550",
+    "note": null,
+    "paper_id": "10.1093/bib/bbag550",
+    "role": "benchmark",
+    "title": "Multimodal deep learning enhances genomic risk prediction for cardiometabolic diseases",
+    "url": "https://doi.org/10.1093/bib/bbag550",
+    "venue": "Briefings in Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Hanyu Luo",
+     "Li Jie Tang",
+     "Min Zeng",
+     "Rui Yin",
+     "Pingjian Ding",
+     "Lingyun Luo",
+     "Min Li"
+    ],
+    "doi": "10.1093/bioinformatics/btae461",
+    "note": null,
+    "paper_id": "10.1093/bioinformatics/btae461",
+    "role": "benchmark",
+    "title": "BertSNR: an interpretable deep learning framework for single-nucleotide resolution identification of transcription factor binding sites based on DNA language model",
+    "url": "https://doi.org/10.1093/bioinformatics/btae461",
+    "venue": "Bioinformatics",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Daniel Wong",
+     "Abby S. Hill",
+     "Rob Moccia"
+    ],
+    "doi": "10.1093/bioinformatics/btaf317",
+    "note": null,
+    "paper_id": "10.1093/bioinformatics/btaf317",
+    "role": "benchmark",
+    "title": "Simple controls exceed best deep learning algorithms and reveal foundation model effectiveness for predicting genetic perturbations",
+    "url": "https://doi.org/10.1093/bioinformatics/btaf317",
+    "venue": "Bioinformatics",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Pedro Barbosa",
+     "Rosina Savisaar",
+     "Maria Carmo‐Fonseca",
+     "Alcides Fonseca"
+    ],
+    "doi": "10.1093/gigascience/giad085",
+    "note": null,
+    "paper_id": "10.1093/gigascience/giad085",
+    "role": "benchmark",
+    "title": "Computational prediction of human deep intronic variation",
+    "url": "https://doi.org/10.1093/gigascience/giad085",
+    "venue": "GigaScience",
+    "year": 2022
+   },
+   {
+    "authors": [
+     "Eyes S Robson",
+     "Nilah M. Ioannidis"
+    ],
+    "doi": "10.1101/2023.10.12.562113",
+    "note": null,
+    "paper_id": "10.1101/2023.10.12.562113",
+    "role": "benchmark",
+    "title": "GUANinE v1.0: Benchmark Datasets for Genomic AI Sequence-to-Function Models",
+    "url": "https://doi.org/10.1101/2023.10.12.562113",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Raphaël Mourad"
+    ],
+    "doi": "10.1101/2023.12.21.572780",
+    "note": null,
+    "paper_id": "10.1101/2023.12.21.572780",
+    "role": "benchmark",
+    "title": "Pre-training with pseudo-labeling compares favorably with large language models for regulatory sequence prediction",
+    "url": "https://doi.org/10.1101/2023.12.21.572780",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Kejun Ying",
+     "Jinyeop Song",
+     "Haotian Cui",
+     "Yikun Zhang",
+     "Siyuan Li",
+     "Xingyu Chen",
+     "Hanna Liu",
+     "Alec Eames",
+     "Daniel L. McCartney",
+     "Riccardo Emilio Marioni",
+     "Jesse R. Poganik",
+     "Mahdi Moqri",
+     "Bo Wang",
+     "Vadim N. Gladyshev"
+    ],
+    "doi": "10.1101/2024.10.30.621013",
+    "note": null,
+    "paper_id": "10.1101/2024.10.30.621013",
+    "role": "benchmark",
+    "title": "MethylGPT: a foundation model for the DNA methylome",
+    "url": "https://doi.org/10.1101/2024.10.30.621013",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Canzhuang Sun",
+     "Yu Sun",
+     "Kang Xu",
+     "Zhijie He",
+     "Zhengwei Li",
+     "Yaru Li",
+     "YU Zong-yuan",
+     "Yuyang Wang",
+     "Xuanwei Lin",
+     "Xiang Shang Xu",
+     "Pengzhen Hu",
+     "Xiaochen Bo",
+     "Mingzhi Liao",
+     "Hebing Chen"
+    ],
+    "doi": "10.1101/2025.01.06.631405",
+    "note": null,
+    "paper_id": "10.1101/2025.01.06.631405",
+    "role": "benchmark",
+    "title": "A comprehensive benchmark and guide for sequence-function interpretable deep learning models in genomics",
+    "url": "https://doi.org/10.1101/2025.01.06.631405",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Aayush Grover",
+     "Till Muser",
+     "Liine Kasak",
+     "Lin Zhang",
+     "Ekaterina Krymova",
+     "Valentina Boeva"
+    ],
+    "doi": "10.1101/2025.03.01.641000",
+    "note": null,
+    "paper_id": "10.1101/2025.03.01.641000",
+    "role": "benchmark",
+    "title": "Early feature extraction drives model performance in high-resolution chromatin accessibility prediction: A systematic evaluation of deep learning architectures",
+    "url": "https://doi.org/10.1101/2025.03.01.641000",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Caleb N. Ellington",
+     "Dian Li",
+     "Shuxian Zou",
+     "Elijah Cole",
+     "Ning Sun",
+     "Sohan Addagudi",
+     "Le Song",
+     "Eric P. Xing"
+    ],
+    "doi": "10.1101/2025.06.30.662437",
+    "note": null,
+    "paper_id": "10.1101/2025.06.30.662437",
+    "role": "benchmark",
+    "title": "Rapid and Reproducible Multimodal Biological Foundation Model Development with AIDO.ModelGenerator",
+    "url": "https://doi.org/10.1101/2025.06.30.662437",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Wei Wang",
+     "Zhichao Hou",
+     "Tianfu Wu",
+     "Xiaorui Liu",
+     "Xinxia Peng"
+    ],
+    "doi": "10.1109/bibm66473.2025.11357206",
+    "note": null,
+    "paper_id": "10.1109/bibm66473.2025.11357206",
+    "role": "benchmark",
+    "title": "Exploratory Analysis of the Regulation of Long Non-Coding RNA Transcription with Nucleotide Large Language Models",
+    "url": "https://doi.org/10.1109/bibm66473.2025.11357206",
+    "venue": "IEEE International Conference on Bioinformatics and Biomedicine (BIBM)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Tian Cheng",
+     "Song Liu",
+     "Jinbao Li",
+     "Guangchen Wang",
+     "Luyue Kong"
+    ],
+    "doi": "10.1109/trustcom60117.2023.00388",
+    "note": null,
+    "paper_id": "10.1109/trustcom60117.2023.00388",
+    "role": "benchmark",
+    "title": "A residual attention-based privacy-preserving biometrics model of transcriptome prediction from genome",
+    "url": "https://doi.org/10.1109/trustcom60117.2023.00388",
+    "venue": "IEEE International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom)",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Yang Eric Li",
+     "Sebastian Preißl",
+     "Michael Miller",
+     "Nicholas D. Johnson",
+     "Zihan Wang",
+     "Henry Jiao",
+     "Chenxu Zhu",
+     "Zhaoning Wang",
+     "Yang Xie",
+     "Olivier Poirion",
+     "Colin Kern",
+     "António Pinto‐Duarte",
+     "Wei Tian",
+     "Kimberly Siletti",
+     "Nora Emerson",
+     "Julia K. Osteen",
+     "Jacinta D. Lucero",
+     "Lin Lin",
+     "Qian Yang",
+     "Quan Zhu",
+     "Nathan R. Zemke",
+     "Sarah G. Espinoza",
+     "Anna Marie Yanny",
+     "Julie K. Nyhus",
+     "Nick Dee",
+     "Tamara Casper",
+     "Nadiya V. Shapovalova",
+     "Daniel Hirschstein",
+     "Rebecca D. Hodge",
+     "Sten Linnarsson",
+     "Trygve E. Bakken",
+     "Boaz P. Levi",
+     "Christopher Dirk Keene",
+     "Jingbo Shang",
+     "Ed S. Lein",
+     "Allen Wang",
+     "M. Margarita Behrens",
+     "Joseph R. Ecker",
+     "Bing Ren"
+    ],
+    "doi": "10.1126/science.adf7044",
+    "note": null,
+    "paper_id": "10.1126/science.adf7044",
+    "role": "benchmark",
+    "title": "A comparative atlas of single-cell chromatin accessibility in the human brain",
+    "url": "https://doi.org/10.1126/science.adf7044",
+    "venue": "Science",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Melissa Sanabria",
+     "Jonas Hirsch",
+     "Anna R. Poetsch"
+    ],
+    "doi": "10.1186/s12859-024-05869-5",
+    "note": null,
+    "paper_id": "10.1186/s12859-024-05869-5",
+    "role": "benchmark",
+    "title": "Distinguishing word identity and sequence context in DNA language models",
+    "url": "https://doi.org/10.1186/s12859-024-05869-5",
+    "venue": "BMC Bioinformatics",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Thanida Sananmuang",
+     "Denis Puthier",
+     "Kaj Chokeshaiusaha"
+    ],
+    "doi": "10.14202/vetworld.2025.1922-1935",
+    "note": null,
+    "paper_id": "10.14202/vetworld.2025.1922-1935",
+    "role": "benchmark",
+    "title": "A hybrid 1DCNN-GRU deep learning framework for classifying caprine granulosa cell fertility potential using single-cell transcriptomics",
+    "url": "https://doi.org/10.14202/vetworld.2025.1922-1935",
+    "venue": "Veterinary World",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Ronald J. Nowling",
+     "Kimani Njoya",
+     "John G. Peters",
+     "Michelle M. Riehle"
+    ],
+    "doi": "10.3389/fcimb.2023.1182567",
+    "note": null,
+    "paper_id": "10.3389/fcimb.2023.1182567",
+    "role": "benchmark",
+    "title": "Prediction accuracy of regulatory elements from sequence varies by functional sequencing technique",
+    "url": "https://doi.org/10.3389/fcimb.2023.1182567",
+    "venue": "Frontiers in Cellular and Infection Microbiology",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Ao Zhang",
+     "Jianhua Jia",
+     "Mingwei Sun",
+     "Xin Wei"
+    ],
+    "doi": "10.3389/fgene.2025.1614222",
+    "note": null,
+    "paper_id": "10.3389/fgene.2025.1614222",
+    "role": "benchmark",
+    "title": "EPI-DynFusion: enhancer-promoter interaction prediction model based on sequence features and dynamic fusion mechanisms",
+    "url": "https://doi.org/10.3389/fgene.2025.1614222",
+    "venue": "Frontiers in Genetics",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Emma Bohn",
+     "Tammy T. Y. Lau",
+     "Omar Wagih",
+     "Tehmina Masud",
+     "Daniele Merico"
+    ],
+    "doi": "10.3389/fmolb.2023.1257550",
+    "note": null,
+    "paper_id": "10.3389/fmolb.2023.1257550",
+    "role": "benchmark",
+    "title": "A curated census of pathogenic and likely pathogenic UTR variants and evaluation of deep learning models for variant effect prediction",
+    "url": "https://doi.org/10.3389/fmolb.2023.1257550",
+    "venue": "Frontiers in Molecular Biosciences",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Mingfang Zhan",
+     "Ruigang Wu"
+    ],
+    "doi": "10.3389/fpls.2026.1968878",
+    "note": null,
+    "paper_id": "10.3389/fpls.2026.1968878",
+    "role": "benchmark",
+    "title": "From reference-genome prediction to causal generalization: sequence-to-function models for plant regulatory genomics",
+    "url": "https://doi.org/10.3389/fpls.2026.1968878",
+    "venue": "Frontiers in Plant Science",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Qingjie Liu",
+     "Xin‐Wei Yao",
+     "Jinyan Ma",
+     "Huilin Cheng",
+     "Huahao Zhou",
+     "Licong DING",
+     "Songyang Huai",
+     "Xu Liu"
+    ],
+    "doi": "10.3390/genes17091156",
+    "note": null,
+    "paper_id": "10.3390/genes17091156",
+    "role": "benchmark",
+    "title": "BiMSGP: A Bidirectional Mamba-Based Model for Scalable and Accurate Genomic Prediction in Plants",
+    "url": "https://doi.org/10.3390/genes17091156",
+    "venue": "Genes",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Huiqin Li",
+     "Dian Zhou",
+     "Wei Pu",
+     "Guoxing Wu",
+     "Xiao Chun",
+     "Xi Gao",
+     "Junfu Yu"
+    ],
+    "doi": "10.3390/insects17090928",
+    "note": null,
+    "paper_id": "10.3390/insects17090928",
+    "role": "benchmark",
+    "title": "Evaluating Sequence Foundation Models for Insect Olfactory Gene Discovery: Failure Modes, Evidence Standards, and a Benchmark Agenda",
+    "url": "https://doi.org/10.3390/insects17090928",
+    "venue": "Insects",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Zhimeng Zhao",
+     "Sixuan Huang",
+     "Shilong Zhang",
+     "Chunfang Li",
+     "Haoyu Chao",
+     "Zixuan Wang",
+     "Xiaoying Zheng",
+     "Cong Feng",
+     "Ming Chen"
+    ],
+    "doi": "10.3390/plants15172603",
+    "note": null,
+    "paper_id": "10.3390/plants15172603",
+    "role": "benchmark",
+    "title": "Deep Learning for Deciphering the Plant Cis-Regulatory Code",
+    "url": "https://doi.org/10.3390/plants15172603",
+    "venue": "Plants",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Frederikke Isa Marin",
+     "Felix Teufel",
+     "Marc Horlacher",
+     "Dennis Madsen",
+     "Dennis Pultz",
+     "Ole Winther",
+     "Wouter Boomsma"
+    ],
+    "doi": "10.48550/arxiv.2311.12570",
+    "note": null,
+    "paper_id": "10.48550/arxiv.2311.12570",
+    "role": "benchmark",
+    "title": "BEND: Benchmarking DNA Language Models on biologically meaningful tasks",
+    "url": "https://doi.org/10.48550/arxiv.2311.12570",
+    "venue": "arXiv (Cornell University)",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Qiuyi Li",
+     "Zhihao Zhan",
+     "Shikun Feng",
+     "Yiheng Zhu",
+     "Yuan He",
+     "Wei Wu",
+     "Zhenghang Shi",
+     "Shengjie Wang",
+     "Zongyong Hu",
+     "Zhao Yang",
+     "Jiaoyang Li",
+     "Jian Tang",
+     "Haiguang Liu",
+     "Tao Qin"
+    ],
+    "doi": "10.64898/2026.01.27.702015",
+    "note": null,
+    "paper_id": "10.64898/2026.01.27.702015",
+    "role": "benchmark",
+    "title": "GENERator-v2: Reconciling Coarse Tokenization with Single-Nucleotide Resolution in Genomic Language Modeling",
+    "url": "https://doi.org/10.64898/2026.01.27.702015",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Behrooz Vahedi Torghabeh",
+     "Camous Moslemi",
+     "Julie D. Jensen",
+     "Stephan Hentrup",
+     "Tianyi Li",
+     "Xiaqing Yu",
+     "Hao Wang",
+     "T Asp",
+     "Guillaume P. Ramstein"
+    ],
+    "doi": "10.64898/2026.02.27.708524",
+    "note": null,
+    "paper_id": "10.64898/2026.02.27.708524",
+    "role": "benchmark",
+    "title": "Genomic language models improve cross-species gene expression prediction and accurately capture regulatory variant effects in Brachypodium mutant lines",
+    "url": "https://doi.org/10.64898/2026.02.27.708524",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Nikola Janakievski",
+     "Pierre M. Joubert",
+     "Anna R. Poetsch"
+    ],
+    "doi": "10.64898/2026.07.18.739304",
+    "note": null,
+    "paper_id": "10.64898/2026.07.18.739304",
+    "role": "benchmark",
+    "title": "Using Deep Learning to predict replication timing reveals baseline control of genomic DNA sequence",
+    "url": "https://doi.org/10.64898/2026.07.18.739304",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Ziqi Tang",
+     "Shushan Toneyan",
+     "Peter K. Koo"
+    ],
+    "doi": "10.1038/s41588-023-01517-5",
+    "note": null,
+    "paper_id": "10.1038/s41588-023-01517-5",
+    "role": "critique",
+    "title": "Current approaches to genomic deep learning struggle to fully capture human genetic variation",
+    "url": "https://doi.org/10.1038/s41588-023-01517-5",
+    "venue": "Nature Genetics",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Connie Huang",
+     "Richard W. Shuai",
+     "Parth Baokar",
+     "Ryan Chung",
+     "Ruchir Rastogi",
+     "Pooja Kathail",
+     "Nilah M. Ioannidis"
+    ],
+    "doi": "10.1038/s41588-023-01574-w",
+    "note": null,
+    "paper_id": "10.1038/s41588-023-01574-w",
+    "role": "critique",
+    "title": "Personal transcriptome variation is poorly explained by current genomic deep learning models",
+    "url": "https://doi.org/10.1038/s41588-023-01574-w",
+    "venue": "Nature Genetics",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Yi-Xuan Qi",
+     "Hao-Jiang Zhang",
+     "Hao-Xiang Tang",
+     "Zi-xuan Zhang",
+     "Kai-Yuan Han",
+     "Zheng Zhang",
+     "Hui Ding",
+     "Li Liu",
+     "You-Yu Wang"
+    ],
+    "doi": "10.1093/bib/bbag162",
+    "note": null,
+    "paper_id": "10.1093/bib/bbag162",
+    "role": "critique",
+    "title": "TF-loop: deciphering the transcription factor regulatory language for CTCF-mediated chromatin loop based on BERT",
+    "url": "https://doi.org/10.1093/bib/bbag162",
+    "venue": "Briefings in Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Liyin Chen"
+    ],
+    "doi": "10.1093/dnares/dsaf024",
+    "note": null,
+    "paper_id": "10.1093/dnares/dsaf024",
+    "role": "critique",
+    "title": "Can classical statistics and deep learning converge on explainable, causally driven target discovery?",
+    "url": "https://doi.org/10.1093/dnares/dsaf024",
+    "venue": "DNA Research",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Abdul Muntakim Rafi",
+     "Brett Kiyota",
+     "Nozomu Yachie",
+     "Carl G. de Boer"
+    ],
+    "doi": "10.1101/2025.01.22.634321",
+    "note": null,
+    "paper_id": "10.1101/2025.01.22.634321",
+    "role": "critique",
+    "title": "Characterizing homology-induced data leakage and memorization in genome-trained sequence models",
+    "url": "https://doi.org/10.1101/2025.01.22.634321",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
    }
   ],
   "primary_paper_id": "10.1038/s41592-021-01252-x",
@@ -579,6 +2154,483 @@
     "url": "https://doi.org/10.1101/2021.12.16.473013",
     "venue": "preprint",
     "year": 2021
+   },
+   {
+    "authors": [
+     "Jie Ni",
+     "Xinting Zhang",
+     "Mingyang Li",
+     "Yuhan Cai",
+     "Zhuoying Xie",
+     "Yun Liu"
+    ],
+    "doi": "10.1016/j.compbiolchem.2026.109480",
+    "note": null,
+    "paper_id": "10.1016/j.compbiolchem.2026.109480",
+    "role": "benchmark",
+    "title": "Benchmarking biological knowledge-graph priors against single-cell foundation models for Perturb-seq prediction",
+    "url": "https://doi.org/10.1016/j.compbiolchem.2026.109480",
+    "venue": "Computational Biology and Chemistry",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Yaozhi Zhang",
+     "Junyang Huang",
+     "Yang Li",
+     "Tianyuan Liu",
+     "Liping Ren",
+     "Jian Hua Huang",
+     "Hao Lin",
+     "Juan Feng",
+     "Yang Zhang"
+    ],
+    "doi": "10.1016/j.jare.2026.06.012",
+    "note": null,
+    "paper_id": "10.1016/j.jare.2026.06.012",
+    "role": "benchmark",
+    "title": "Charting the computational landscape of single-cell genetic perturbation",
+    "url": "https://doi.org/10.1016/j.jare.2026.06.012",
+    "venue": "Journal of Advanced Research",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Constantin Ahlmann-Eltze",
+     "Wolfgang K. Huber",
+     "Simon Anders"
+    ],
+    "doi": "10.1038/s41592-025-02772-6",
+    "note": null,
+    "paper_id": "10.1038/s41592-025-02772-6",
+    "role": "benchmark",
+    "title": "Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines",
+    "url": "https://doi.org/10.1038/s41592-025-02772-6",
+    "venue": "Nature Methods",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Alan DenAdel",
+     "Madeline Hughes",
+     "Akshaya Thoutam",
+     "Anay Gupta",
+     "Andrew W. Navia",
+     "Nicolò Fusi",
+     "Srivatsan Raghavan",
+     "Peter S. Winter",
+     "Ava P. Amini",
+     "Lorin A. Crawford"
+    ],
+    "doi": "10.1038/s41592-026-03120-y",
+    "note": null,
+    "paper_id": "10.1038/s41592-026-03120-y",
+    "role": "benchmark",
+    "title": "Evaluating the role of pretraining dataset size and diversity on single-cell foundation model performance",
+    "url": "https://doi.org/10.1038/s41592-026-03120-y",
+    "venue": "Nature Methods",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Gaetan De Waele",
+     "Gerben Menschaert",
+     "Willem Waegeman"
+    ],
+    "doi": "10.1093/nargab/lqag095",
+    "note": null,
+    "paper_id": "10.1093/nargab/lqag095",
+    "role": "benchmark",
+    "title": "A systematic assessment of single-cell language model configurations",
+    "url": "https://doi.org/10.1093/nargab/lqag095",
+    "venue": "NAR Genomics and Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Kathryn Geiger-Schuller",
+     "Basak Eraslan",
+     "Olena Kuksenko",
+     "Kushal K. Dey",
+     "Karthik A. Jagadeesh",
+     "Pratiksha I. Thakore",
+     "Özge Karayel",
+     "Andrea R. Yung",
+     "Anugraha R. Rajagopalan",
+     "Ana M. Meireles",
+     "Karren Yang",
+     "Liat Amir-Zilberstein",
+     "Toni Marie Delorey",
+     "Devan Phillips",
+     "Raktima Raychowdhury",
+     "Christine Moussion",
+     "Alkes L. Price",
+     "Nir Hacohen",
+     "John G. Doench",
+     "Caroline Uhler",
+     "Orit Rozenblatt–Rosen",
+     "Aviv Regev"
+    ],
+    "doi": "10.1101/2023.01.23.525198",
+    "note": null,
+    "paper_id": "10.1101/2023.01.23.525198",
+    "role": "benchmark",
+    "title": "Systematically characterizing the roles of E3-ligase family members in inflammatory responses with massively parallel Perturb-seq",
+    "url": "https://doi.org/10.1101/2023.01.23.525198",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Rebecca J. Carlson",
+     "J. J. Patten",
+     "George Stefanakis",
+     "Brian Y. Soong",
+     "Adityanarayanan Radhakrishnan",
+     "Avtar K Singh",
+     "Naveen Thakur",
+     "Gaya K. Amarasinghe",
+     "Nir Hacohen",
+     "Christopher F. Basler",
+     "Daisy W. Leung",
+     "Caroline Uhler",
+     "Robert A. Davey",
+     "Paul C. Blainey"
+    ],
+    "doi": "10.1101/2024.04.06.588168",
+    "note": null,
+    "paper_id": "10.1101/2024.04.06.588168",
+    "role": "benchmark",
+    "title": "Single-cell image-based genetic screens systematically identify regulators of Ebola virus subcellular infection dynamics",
+    "url": "https://doi.org/10.1101/2024.04.06.588168",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Aaron Wenteler",
+     "Martina Occhetta",
+     "Nikhil Branson",
+     "Victor Curean",
+     "Magdalena Huebner",
+     "William Dee",
+     "William Connell",
+     "Siu Pui Chung",
+     "Alex Hawkins‐Hooker",
+     "Yasha Ektefaie",
+     "Cesar Miguel Valdez Cordova",
+     "Amaya Gallagher-Syed"
+    ],
+    "doi": "10.1101/2024.10.02.616248",
+    "note": null,
+    "paper_id": "10.1101/2024.10.02.616248",
+    "role": "benchmark",
+    "title": "PertEval-scFM: Benchmarking Single-Cell Foundation Models for Perturbation Effect Prediction",
+    "url": "https://doi.org/10.1101/2024.10.02.616248",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Lanxiang Li",
+     "Yue You",
+     "Yunlin Fu",
+     "Wenyu Liao",
+     "Xueying Fan",
+     "Shihong Lu",
+     "Ye Cao",
+     "Bo Li",
+     "Wenle Ren",
+     "Jiaming Kong",
+     "Shuangjia Zheng",
+     "Jizheng Chen",
+     "Xiaodong Liu",
+     "Luyi Tian"
+    ],
+    "doi": "10.1101/2024.12.23.630036",
+    "note": null,
+    "paper_id": "10.1101/2024.12.23.630036",
+    "role": "benchmark",
+    "title": "A Systematic Comparison of Single-Cell Perturbation Response Prediction Models",
+    "url": "https://doi.org/10.1101/2024.12.23.630036",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Henry E. Miller",
+     "Gabriel Mejia",
+     "Francis Leblanc",
+     "Bo Wang",
+     "Brendan Swain",
+     "Lucas Paulo de Lima Camillo"
+    ],
+    "doi": "10.1101/2025.10.20.683304",
+    "note": null,
+    "paper_id": "10.1101/2025.10.20.683304",
+    "role": "benchmark",
+    "title": "Deep Learning-Based Genetic Perturbation Models Do Outperform Uninformative Baselines on Well-Calibrated Metrics",
+    "url": "https://doi.org/10.1101/2025.10.20.683304",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Lanxiang Li",
+     "Yue You",
+     "Yunlin Fu",
+     "Wenyu Liao",
+     "Xueying Fan",
+     "Shihong Lu",
+     "Ye Cao",
+     "Bo Li",
+     "Wenle Ren",
+     "Jiaming Kong",
+     "Shuangjia Zheng",
+     "Jizheng Chen",
+     "Xiaodong Liu",
+     "Luyi Tian"
+    ],
+    "doi": "10.1126/sciadv.aed3414",
+    "note": null,
+    "paper_id": "10.1126/sciadv.aed3414",
+    "role": "benchmark",
+    "title": "A systematic comparison of single-cell perturbation response prediction models",
+    "url": "https://doi.org/10.1126/sciadv.aed3414",
+    "venue": "Science Advances",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Gerold Csendes",
+     "Gema Sanz",
+     "Kristóf Z. Szalay",
+     "Bence Szalai"
+    ],
+    "doi": "10.1186/s12864-025-11600-2",
+    "note": null,
+    "paper_id": "10.1186/s12864-025-11600-2",
+    "role": "benchmark",
+    "title": "Benchmarking foundation cell models for post-perturbation RNA-seq prediction",
+    "url": "https://doi.org/10.1186/s12864-025-11600-2",
+    "venue": "BMC Genomics",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Xiaoning Qi",
+     "Lianhe Zhao",
+     "Runsheng Chen",
+     "Yi Chen Zhao"
+    ],
+    "doi": "10.1360/csb-2025-0682",
+    "note": null,
+    "paper_id": "10.1360/csb-2025-0682",
+    "role": "benchmark",
+    "title": "Advances in single-cell perturbation modeling",
+    "url": "https://doi.org/10.1360/csb-2025-0682",
+    "venue": "Chinese Science Bulletin (Chinese Version)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Jérémie Kalfon",
+     "Gabriel Peyré A",
+     "Laura Cantini"
+    ],
+    "doi": "10.64898/2025.12.11.693702",
+    "note": null,
+    "paper_id": "10.64898/2025.12.11.693702",
+    "role": "benchmark",
+    "title": "scPRINT-2: Towards the next-generation of cell foundation models and benchmarks",
+    "url": "https://doi.org/10.64898/2025.12.11.693702",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Elijah Cole",
+     "Geert-Jan Huizing",
+     "Sohan Addagudi",
+     "Nicholas Ho",
+     "Euxhen Hasanaj",
+     "Merel Kuijs",
+     "Toby Johnstone",
+     "Maria Carilli",
+     "Alec Davi",
+     "Caleb N. Ellington",
+     "Christoph Feinauer",
+     "Pan Li",
+     "Romain Menegaux",
+     "Shahin Mohammadi",
+     "Yanjun Shao",
+     "Josiah Zhang",
+     "Emma K. Lundberg",
+     "Le Song",
+     "Ziv Bar‐Joseph",
+     "Eric P. Xing"
+    ],
+    "doi": "10.64898/2026.02.18.706454",
+    "note": null,
+    "paper_id": "10.64898/2026.02.18.706454",
+    "role": "benchmark",
+    "title": "Foundation Models Improve Perturbation Response Prediction",
+    "url": "https://doi.org/10.64898/2026.02.18.706454",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Daniel R. Wong",
+     "Mary E. Piper",
+     "Jiao Qiao",
+     "Max Russo",
+     "Pierre Jean",
+     "Djork-Arné Clevert",
+     "Jason D. Arroyo",
+     "Evanthia E. Pashos"
+    ],
+    "doi": "10.64898/2026.03.04.709607",
+    "note": null,
+    "paper_id": "10.64898/2026.03.04.709607",
+    "role": "benchmark",
+    "title": "Phenotypic reversion and target prioritization for cellular inflammation via representation learning with foundation models",
+    "url": "https://doi.org/10.64898/2026.03.04.709607",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Austin Hartman",
+     "John D. Blair",
+     "Thao P. Nguyen",
+     "Kyle A. Dyson",
+     "Alexandra Bradu",
+     "Oliver Takacsi-Nagy",
+     "Katherine E. Santostefano",
+     "Theresa Boade",
+     "Matthew Bolaños",
+     "Ronghui Zhu",
+     "Emma Dann",
+     "Alexander Marson",
+     "Aaron D. Gitler",
+     "Rahul Satija",
+     "Ansuman T. Satpathy",
+     "Theodore L. Roth"
+    ],
+    "doi": "10.64898/2026.03.27.714658",
+    "note": null,
+    "paper_id": "10.64898/2026.03.27.714658",
+    "role": "benchmark",
+    "title": "Systematic identification of seed-driven off-target effects in Perturb-seq experiments",
+    "url": "https://doi.org/10.64898/2026.03.27.714658",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Giovanni Palla",
+     "Alexander V. Hillsley",
+     "Yang Joon Kim",
+     "Löıc A. Royer"
+    ],
+    "doi": "10.64898/2026.06.28.735106",
+    "note": null,
+    "paper_id": "10.64898/2026.06.28.735106",
+    "role": "benchmark",
+    "title": "Tabular Foundation Models Are Competitive Cellular Perturbation Predictors Across Biological Scales",
+    "url": "https://doi.org/10.64898/2026.06.28.735106",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Dewei Hu",
+     "Marc Pielies Avelli",
+     "Lars Juhl Jensen",
+     "Simon Rasmussen"
+    ],
+    "doi": "10.64898/2026.08.07.743481",
+    "note": null,
+    "paper_id": "10.64898/2026.08.07.743481",
+    "role": "benchmark",
+    "title": "SLIM: A small linear model with STRING embeddings for single-cell genetic perturbation prediction",
+    "url": "https://doi.org/10.64898/2026.08.07.743481",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Emily Liu",
+     "Jiaqi Zhang",
+     "Caroline Uhler"
+    ],
+    "doi": "10.1371/journal.pcbi.1013194",
+    "note": null,
+    "paper_id": "10.1371/journal.pcbi.1013194",
+    "role": "critique",
+    "title": "Learning genetic perturbation effects with variational causal inference",
+    "url": "https://doi.org/10.1371/journal.pcbi.1013194",
+    "venue": "PLoS Computational Biology",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Ru Qiu",
+     "Max Mingqian Zhao"
+    ],
+    "doi": "10.64898/2026.08.04.732812",
+    "note": null,
+    "paper_id": "10.64898/2026.08.04.732812",
+    "role": "critique",
+    "title": "A confound-diagnostic toolkit for in silico perturbation with single-cell foundation models",
+    "url": "https://doi.org/10.64898/2026.08.04.732812",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Omer F. Kuzu",
+     "Fahri Saatcioglu"
+    ],
+    "doi": "10.1101/2023.09.18.558211",
+    "note": null,
+    "paper_id": "10.1101/2023.09.18.558211",
+    "role": "application",
+    "title": "GeneSetR: A web server for gene set analysis based on genome-wide Perturb-Seq data",
+    "url": "https://doi.org/10.1101/2023.09.18.558211",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Ann C Huang",
+     "Tsung-Han S. Hsieh",
+     "Jiang Zhu",
+     "Jackson Michuda",
+     "Ashton Teng",
+     "Soohong Kim",
+     "Elizabeth M Rumsey",
+     "Sharon K Lam",
+     "Ikenna Anigbogu",
+     "Philip Wright",
+     "Mohamed Ameen",
+     "Kwontae You",
+     "Christopher J Graves",
+     "Hyunsung John Kim",
+     "Adam J. Litterman",
+     "Rene V. Sit",
+     "A Blocker",
+     "Ci Chu"
+    ],
+    "doi": "10.1101/2025.06.11.659105",
+    "note": null,
+    "paper_id": "10.1101/2025.06.11.659105",
+    "role": "application",
+    "title": "X-Atlas/Orion: Genome-wide Perturb-seq Datasets via a Scalable Fix-Cryopreserve Platform for Training Dose-Dependent Biological Foundation Models",
+    "url": "https://doi.org/10.1101/2025.06.11.659105",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
    }
   ],
   "primary_paper_id": "10.1016/j.cell.2022.05.013",
@@ -728,6 +2780,312 @@
    },
    {
     "authors": [
+     "Shiyu Jiang",
+     "X Q Liu",
+     "Zitong Jerry Wang"
+    ],
+    "doi": "10.1021/acssynbio.6c00024",
+    "note": null,
+    "paper_id": "10.1021/acssynbio.6c00024",
+    "role": "benchmark",
+    "title": "Evaluating DNA Function Understanding in Genomic Language Models Using Evolutionarily Implausible Sequences",
+    "url": "https://doi.org/10.1021/acssynbio.6c00024",
+    "venue": "ACS Synthetic Biology",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Julio Sáez-Rodríguez",
+     "Philipp Sven Lars Schäfer",
+     "Nikolaos Kalavros",
+     "Gustavo A. Stolovitzky"
+    ],
+    "doi": "10.1038/s41592-026-03182-y",
+    "note": null,
+    "paper_id": "10.1038/s41592-026-03182-y",
+    "role": "benchmark",
+    "title": "Benchmarking biomedical foundation models",
+    "url": "https://doi.org/10.1038/s41592-026-03182-y",
+    "venue": "Nature Methods",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Liang Yuxuan",
+     "Sebastian A. Dziadowicz",
+     "Lei Wang",
+     "Gangqing Hu",
+     "Pingkun Yan",
+     "Ge Wang"
+    ],
+    "doi": "10.1093/bib/bbag422",
+    "note": null,
+    "paper_id": "10.1093/bib/bbag422",
+    "role": "benchmark",
+    "title": "Functional motif detection via in silico ablation using AlphaGenome",
+    "url": "https://doi.org/10.1093/bib/bbag422",
+    "venue": "Briefings in Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Adi Lin",
+     "Bin Xie",
+     "Ye Cheng",
+     "Cheng Wang",
+     "Duoyuan Chen",
+     "Ercheng Wang",
+     "Fan Lü",
+     "Gui-Rong Xue",
+     "Haiqiang Zhang",
+     "Jiajie Zhan",
+     "Jianfeng Zhang",
+     "Jiangshuan Pang",
+     "Jianqiang Liang",
+     "Jiawei Lin",
+     "Jiaxin Ma",
+     "Jie Hu",
+     "Jing Ma",
+     "Jinni Dong",
+     "Jiongzhen Li",
+     "Junchen Liu",
+     "Junhong Chen",
+     "Junyou Li",
+     "Kai Ding",
+     "Kaiwen Deng",
+     "Chen Kui",
+     "Lihui Wang",
+     "Longqi Liu",
+     "Ling Guo",
+     "Liwen Xiong",
+     "Luhao Yang",
+     "Ming Y. Cheng",
+     "Ning Chen",
+     "Renzhong Chen",
+     "Shanxin Sun",
+     "Shaoshuai Li",
+     "Shicheng Chen",
+     "Shiping Liu",
+     "Siwei Xie",
+     "Suyan Liu",
+     "Tao Zhou",
+     "Wangyang Tang",
+     "Weiqiang Zhang",
+     "Xianyue Jiang",
+     "Xin Qi",
+     "Xin Jin",
+     "Xinjiang Tan",
+     "Xinyue Hu",
+     "Xun Xu",
+     "Xuyang Feng",
+     "Yafei Lü",
+     "Yifan Gao",
+     "Yong Shang",
+     "Youzhe He",
+     "Yue Yuan",
+     "Yufan Wang",
+     "Yuqi Liu",
+     "Zhan Xiao",
+     "Zhangyuan Meng",
+     "Zhaorong Li",
+     "Zhe Zhao",
+     "Zheng Yang",
+     "Zilin Wang"
+    ],
+    "doi": "10.1093/gigascience/giaf132",
+    "note": null,
+    "paper_id": "10.1093/gigascience/giaf132",
+    "role": "benchmark",
+    "title": "Genos: a human-centric genomic foundation model",
+    "url": "https://doi.org/10.1093/gigascience/giaf132",
+    "venue": "GigaScience",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Shumin Li",
+     "Ruibang Luo",
+     "Yuanhua Huang"
+    ],
+    "doi": "10.1101/2025.07.09.664024",
+    "note": null,
+    "paper_id": "10.1101/2025.07.09.664024",
+    "role": "benchmark",
+    "title": "Assessing large-scale genomic language models in predicting personal gene expression: promises and limitations",
+    "url": "https://doi.org/10.1101/2025.07.09.664024",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Guoxia Wen",
+     "Jiaqi Li",
+     "Hanyu Wu",
+     "Jialing Fang",
+     "Yuting Fu",
+     "Mengmeng Jiang",
+     "Yuqing Mei",
+     "Rui Xu",
+     "Yuxuan Du",
+     "Siran Chu",
+     "Guoji Guo",
+     "Xiaoping Han",
+     "Jingjing Wang"
+    ],
+    "doi": "10.1111/cpr.70274",
+    "note": null,
+    "paper_id": "10.1111/cpr.70274",
+    "role": "benchmark",
+    "title": "A Comprehensive Comparative Analysis of Sequence‐Based Deep Learning Models for Single‐Cell Genomics",
+    "url": "https://doi.org/10.1111/cpr.70274",
+    "venue": "Cell Proliferation",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Fanyu Meng",
+     "Ling Chen",
+     "M Li",
+     "Qingqing Zhang",
+     "Peiying Wang",
+     "Ruifeng Lin",
+     "Jiani Liu",
+     "Zhao Yuan",
+     "Kexin Chen",
+     "Zhaoxia Li",
+     "Yetong Xie",
+     "Abuduwahapu Aierken",
+     "Furkat Yalkun",
+     "Chengyu Li",
+     "Yuan Ma",
+     "Jianhui Chen",
+     "Ziwen Xu",
+     "Fei Zhong"
+    ],
+    "doi": "10.3389/fimmu.2026.1859310",
+    "note": null,
+    "paper_id": "10.3389/fimmu.2026.1859310",
+    "role": "benchmark",
+    "title": "Multi-layered functional genomics prioritizes candidate effectors and regulatory mechanisms of ankylosing spondylitis",
+    "url": "https://doi.org/10.3389/fimmu.2026.1859310",
+    "venue": "Frontiers in Immunology",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Andreas Jung",
+     "Helen Zhu",
+     "Roujia Li",
+     "Alice Jiexin Gao",
+     "Tammy Lau",
+     "Vivian S. Chu",
+     "Declan Lim",
+     "Christopher B. Cole",
+     "Leo J. Lee",
+     "Albi Celaj",
+     "Brendan J. Frey"
+    ],
+    "doi": "10.64898/2025.12.18.694875",
+    "note": null,
+    "paper_id": "10.64898/2025.12.18.694875",
+    "role": "benchmark",
+    "title": "Enigma: An Efficient Model for Deciphering Regulatory Genomics",
+    "url": "https://doi.org/10.64898/2025.12.18.694875",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Geraldene Munsamy",
+     "Gavin Ayres",
+     "Carla Greco",
+     "Keith Y K Kam",
+     "Gus Minto-Cowcher",
+     "John St John",
+     "Tanggis Bohnuud",
+     "Matthew H. Bakalar",
+     "William Chow",
+     "Robert J. Pecoraro",
+     "Marcelo D. T. Torres",
+     "Aaron W. Kollasch",
+     "Marcus H. Y. Leung",
+     "Hassan Sirelkhatim",
+     "Francesco Farina",
+     "Connor McGinnis",
+     "Srijani Sridhar",
+     "Daniel Anderson",
+     "Francesco Oteri",
+     "Ali Taghibakhshi",
+     "Jérémie Donà",
+     "Tyler C. Shimko",
+     "Cedric Steenbeke",
+     "Alexandros Papadopoulos",
+     "Malcolm Krolick",
+     "Fabian C. Spoendlin",
+     "Purba Gupta",
+     "Sandeep Kumar",
+     "Anne M. Bara",
+     "Jared Wilbur",
+     "Noelia Ferruz",
+     "Timur M. Rvachov",
+     "Fangping Wang",
+     "Hanqun Cao",
+     "Hyun-Su Lee",
+     "Japan B. Mehta",
+     "Raphaël A. G. Chaleil",
+     "Valerio Pereno",
+     "Sid Potti",
+     "Chris Emerson",
+     "Roy Tal Dew",
+     "Kevin K Yang",
+     "Eric Nguyen",
+     "Neha Tadimeti",
+     "Jillian F. Banfield",
+     "Alicia Frame",
+     "Emma Bolton",
+     "David Ruau",
+     "Rory Kelleher",
+     "Anthony Beardsworth Costa",
+     "Kimberley Powell",
+     "César de la Fuente‐Núñez",
+     "Glen-Oliver F. Gowers",
+     "Oliver Vince",
+     "Jonathan D. Finn",
+     "Philipp Lorenz"
+    ],
+    "doi": "10.64898/2026.01.12.699009",
+    "note": null,
+    "paper_id": "10.64898/2026.01.12.699009",
+    "role": "benchmark",
+    "title": "Designing AI-programmable therapeutics with the EDEN family of foundation models",
+    "url": "https://doi.org/10.64898/2026.01.12.699009",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Miao Liu",
+     "Ziyang Shen",
+     "You Kyeong Jeong",
+     "Na Li Yu",
+     "Shang‐Chuen Wu",
+     "Andre Wittig",
+     "Danielle E. Tenen",
+     "Yanjing Liu",
+     "Jun Liu",
+     "Li Chai"
+    ],
+    "doi": "10.64898/2026.01.21.700828",
+    "note": null,
+    "paper_id": "10.64898/2026.01.21.700828",
+    "role": "benchmark",
+    "title": "AlphaGenome-enabled analysis of non-coding regulatory variants underlying RHD expression with wet-lab validation",
+    "url": "https://doi.org/10.64898/2026.01.21.700828",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
      "Michael D. Sweeney",
      "Hyun Min Kang"
     ],
@@ -738,6 +3096,290 @@
     "title": "Practical utility of sequence-to-omics models for improving the reproducibility of genetic fine-mapping",
     "url": "https://doi.org/10.64898/2026.02.04.703796",
     "venue": "preprint",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Zitong He",
+     "Liliana Florea"
+    ],
+    "doi": "10.64898/2026.02.22.707219",
+    "note": null,
+    "paper_id": "10.64898/2026.02.22.707219",
+    "role": "benchmark",
+    "title": "Benchmarking foundation models for splice site and exon annotation",
+    "url": "https://doi.org/10.64898/2026.02.22.707219",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Neythen J. Treloar",
+     "Saif Ur-Rehman",
+     "Jenny Yang"
+    ],
+    "doi": "10.64898/2026.05.02.722381",
+    "note": null,
+    "paper_id": "10.64898/2026.05.02.722381",
+    "role": "benchmark",
+    "title": "Learning the Language of the Microbiome with Transformers",
+    "url": "https://doi.org/10.64898/2026.05.02.722381",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Arthur Fischbach"
+    ],
+    "doi": "10.64898/2026.05.10.724136",
+    "note": null,
+    "paper_id": "10.64898/2026.05.10.724136",
+    "role": "benchmark",
+    "title": "Testing the mutation accumulation hypothesis in aging with AlphaGenome",
+    "url": "https://doi.org/10.64898/2026.05.10.724136",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Subhajit Dutta"
+    ],
+    "doi": "10.64898/2026.05.16.26353369",
+    "note": null,
+    "paper_id": "10.64898/2026.05.16.26353369",
+    "role": "benchmark",
+    "title": "A pan-cancer regulatory atlas of 6,983 GWAS variants prioritizes recurrent regulatory annotations and candidate programs at cancer risk loci",
+    "url": "https://doi.org/10.64898/2026.05.16.26353369",
+    "venue": "medRxiv",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Dan Ofer",
+     "Stav Zok",
+     "Michal Linial B"
+    ],
+    "doi": "10.64898/2026.05.31.729117",
+    "note": null,
+    "paper_id": "10.64898/2026.05.31.729117",
+    "role": "benchmark",
+    "title": "MAGI: Mechanistic Consequences of Genetic Variants via Genomic Foundation Models",
+    "url": "https://doi.org/10.64898/2026.05.31.729117",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Yafan Zhang",
+     "Arunkumar Ganesan",
+     "Xingcheng Lin"
+    ],
+    "doi": "10.64898/2026.06.01.729367",
+    "note": null,
+    "paper_id": "10.64898/2026.06.01.729367",
+    "role": "benchmark",
+    "title": "R-loop Prediction Reveals Generalization Limits of DNA Foundation Models Beyond Regulatory Genomics",
+    "url": "https://doi.org/10.64898/2026.06.01.729367",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Aleksei Shmelev",
+     "Artem Shadskiy",
+     "Yuri Kuratov",
+     "Mikhail Burtsev",
+     "Olga L. Kardymon",
+     "Veniamin Fishman"
+    ],
+    "doi": "10.64898/2026.06.17.732686",
+    "note": null,
+    "paper_id": "10.64898/2026.06.17.732686",
+    "role": "benchmark",
+    "title": "GENATATORs: ab initio Gene Annotation With DNA Language Models",
+    "url": "https://doi.org/10.64898/2026.06.17.732686",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Xinyu Sun",
+     "Makaela Mews",
+     "Nicholas R. Wheeler",
+     "Penelope H. Benchek",
+     "Tianjie Gu",
+     "Lissette Gomez",
+     "Yousef Mustafa",
+     "L Wang",
+     "Yuk Yee Leung",
+     "Gerard D. Schellenberg",
+     "Margaret Ann Pericak‐Vance",
+     "Jonathan L. Haines",
+     "Anthony J. Griswold",
+     "William S. Bush"
+    ],
+    "doi": "10.64898/2026.06.22.730889",
+    "note": null,
+    "paper_id": "10.64898/2026.06.22.730889",
+    "role": "benchmark",
+    "title": "Evaluating sequence-to-function deep learning models for ancestry-stratified regulatory variant effect prediction using multi-ancestry blood eQTLs",
+    "url": "https://doi.org/10.64898/2026.06.22.730889",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Linxiao Nie"
+    ],
+    "doi": "10.64898/2026.06.28.735069",
+    "note": null,
+    "paper_id": "10.64898/2026.06.28.735069",
+    "role": "benchmark",
+    "title": "Directed evolution of compact synthetic promoters via AlphaGenome and genetic algorithms",
+    "url": "https://doi.org/10.64898/2026.06.28.735069",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Zhongwei Huang",
+     "Ruohan Huang",
+     "Jinquan Han"
+    ],
+    "doi": "10.64898/2026.08.14.744988",
+    "note": null,
+    "paper_id": "10.64898/2026.08.14.744988",
+    "role": "benchmark",
+    "title": "Response representation shapes AlphaGenome enhancer-gene prediction in human astrocytes",
+    "url": "https://doi.org/10.64898/2026.08.14.744988",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Rasika Venkatesh",
+     "Rajat Deo",
+     "Thomas P. Cappola",
+     "Penn Medicine Biobank",
+     "Marylyn DeRiggi Ritchie",
+     "Dokyoon Kim"
+    ],
+    "doi": "10.64898/2026.08.25.26361369",
+    "note": null,
+    "paper_id": "10.64898/2026.08.25.26361369",
+    "role": "benchmark",
+    "title": "Pathway Modeling of Genomic and Tissue-Specific Transcriptomic Architecture Identifies Personalized Mechanisms of Atrial Fibrillation Risk †",
+    "url": "https://doi.org/10.64898/2026.08.25.26361369",
+    "venue": "medRxiv",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Moonwon Choi",
+     "Bokeum Cho",
+     "Seunggeun Lee"
+    ],
+    "doi": "10.1101/2025.11.09.687505",
+    "note": null,
+    "paper_id": "10.1101/2025.11.09.687505",
+    "role": "critique",
+    "title": "Preference-Based Fine-Tuning of Genomic Sequence Models for Personal Expression Prediction with Data Augmentation",
+    "url": "https://doi.org/10.1101/2025.11.09.687505",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Simon Liu",
+     "Wenjing Zhang",
+     "Oded Regev"
+    ],
+    "doi": "10.1186/s13059-026-04124-9",
+    "note": null,
+    "paper_id": "10.1186/s13059-026-04124-9",
+    "role": "critique",
+    "title": "Interpretable distillation reveals that deep learning splicing models suffer from pervasive confounders and blind spots",
+    "url": "https://doi.org/10.1186/s13059-026-04124-9",
+    "venue": "Genome biology",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Patricio Astudillo"
+    ],
+    "doi": "10.5281/zenodo.19590762",
+    "note": null,
+    "paper_id": "10.5281/zenodo.19590762",
+    "role": "critique",
+    "title": "AlphaGenome Cardiovascular Non-Coding Variant Analysis — Data Deposit",
+    "url": "https://doi.org/10.5281/zenodo.19590762",
+    "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Singh Anil Prakash"
+    ],
+    "doi": "10.5281/zenodo.20491294",
+    "note": null,
+    "paper_id": "10.5281/zenodo.20491294",
+    "role": "critique",
+    "title": "Calibration and Selective Prediction of AlphaGenome Confidence on Non-Coding Variants of Known Effect (working draft v0.1)",
+    "url": "https://doi.org/10.5281/zenodo.20491294",
+    "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Elizabeth Gilfeather",
+     "Maria D. Chikina",
+     "Dennis Kostka"
+    ],
+    "doi": "10.64898/2026.01.21.700827",
+    "note": null,
+    "paper_id": "10.64898/2026.01.21.700827",
+    "role": "critique",
+    "title": "When Less Is Enough: Low-Rank Structure in DNA Sequence-to-Function Models",
+    "url": "https://doi.org/10.64898/2026.01.21.700827",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Maddy Comerford",
+     "Isabela Alvim",
+     "Timothy M. Johanson",
+     "Danat Yermakovich",
+     "Christopher Kinipi",
+     "Matthew Leavesley",
+     "François‐Xavier Ricaut",
+     "Michael Dannemann",
+     "Murray P. Cox",
+     "Rhys S. Allan",
+     "Nicolas Brucato",
+     "Irene Gallego Romero"
+    ],
+    "doi": "10.64898/2026.08.31.748430",
+    "note": null,
+    "paper_id": "10.64898/2026.08.31.748430",
+    "role": "critique",
+    "title": "Using sequence-to-function models to interpret archaic hominin introgression",
+    "url": "https://doi.org/10.64898/2026.08.31.748430",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Shiron Drusinsky",
+     "Katherine Snowden Pollard"
+    ],
+    "doi": "10.64898/2026.09.08.750172",
+    "note": null,
+    "paper_id": "10.64898/2026.09.08.750172",
+    "role": "critique",
+    "title": "Causal variant underestimation is a major overlooked driver of sequence-to-function model underperformance",
+    "url": "https://doi.org/10.64898/2026.09.08.750172",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
     "year": 2026
    }
   ],
@@ -857,6 +3499,157 @@
    },
    {
     "authors": [
+     "Niklas Kempynck",
+     "Seppe De Winter",
+     "Casper H. Blaauw",
+     "Vasileios Konstantakos",
+     "Eren Can Ekşi",
+     "Sam Dieltiens",
+     "Darina Abaffyová",
+     "Valérie Bercier",
+     "Ibrahim Ihsan Taskiran",
+     "Gert J. Hulselmans",
+     "Katina I. Spanier",
+     "Valerie Christiaens",
+     "Ludo Van Den Bosch",
+     "Lukas Mahieu",
+     "Stein Aerts"
+    ],
+    "doi": "10.1038/s41592-026-03057-2",
+    "note": null,
+    "paper_id": "10.1038/s41592-026-03057-2",
+    "role": "benchmark",
+    "title": "CREsted: modeling genomic and synthetic cell-type-specific enhancers across tissues and species",
+    "url": "https://doi.org/10.1038/s41592-026-03057-2",
+    "venue": "Nature Methods",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Ian Holmes",
+     "Johannes Linder",
+     "David R. Kelley"
+    ],
+    "doi": "10.1101/2025.02.13.638190",
+    "note": null,
+    "paper_id": "10.1101/2025.02.13.638190",
+    "role": "benchmark",
+    "title": "Selective State Space Models Outperform Transformers at Predicting RNA-Seq Read Coverage",
+    "url": "https://doi.org/10.1101/2025.02.13.638190",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Tijs van Lieshout",
+     "Carlos G. Urzúa-Traslaviña",
+     "Lucía Barbadilla-Martínez",
+     "Minh Chau Luong Boi",
+     "Harm-Jan Westra",
+     "Noud H.M. Klaassen",
+     "Vinícius H. Franceschini-Santos",
+     "Miguel Parra-Martinez",
+     "Jeroen de Ridder",
+     "Bas van Steensel",
+     "Emile E. Voest",
+     "Lude Franke"
+    ],
+    "doi": "10.1101/2025.05.06.25327057",
+    "note": null,
+    "paper_id": "10.1101/2025.05.06.25327057",
+    "role": "benchmark",
+    "title": "Identification of (ultra-)rare functional promoter mutations in cancer using sequence-based deep learning models",
+    "url": "https://doi.org/10.1101/2025.05.06.25327057",
+    "venue": "medRxiv",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Han Yuan",
+     "Johannes Linder",
+     "David R. Kelley"
+    ],
+    "doi": "10.1101/2025.05.26.656171",
+    "note": null,
+    "paper_id": "10.1101/2025.05.26.656171",
+    "role": "benchmark",
+    "title": "Parameter-Efficient Fine-Tuning of a Supervised Regulatory Sequence Model",
+    "url": "https://doi.org/10.1101/2025.05.26.656171",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Eduarda Vaz",
+     "Lena Wang",
+     "Jake Galvin",
+     "Rebecca Keener",
+     "Alexis J. Battle"
+    ],
+    "doi": "10.1101/2025.09.26.678908",
+    "note": null,
+    "paper_id": "10.1101/2025.09.26.678908",
+    "role": "benchmark",
+    "title": "Fine-tuning sequence to function deep learning models on large-scale proteomic data improves the accuracy of variant effect prediction",
+    "url": "https://doi.org/10.1101/2025.09.26.678908",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Han Yuan",
+     "Johannes Linder",
+     "David R. Kelley"
+    ],
+    "doi": "10.1186/s13059-026-03935-0",
+    "note": null,
+    "paper_id": "10.1186/s13059-026-03935-0",
+    "role": "benchmark",
+    "title": "Parameter-efficient fine-tuning enables scalable transfer of regulatory sequence models to novel contexts",
+    "url": "https://doi.org/10.1186/s13059-026-03935-0",
+    "venue": "Genome biology",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Gaetano Manzo",
+     "Kathryn Borkowski",
+     "Ivan Ovcharenko"
+    ],
+    "doi": "10.3390/genes16101223",
+    "note": null,
+    "paper_id": "10.3390/genes16101223",
+    "role": "benchmark",
+    "title": "Comparative Analysis of Deep Learning Models for Predicting Causative Regulatory Variants",
+    "url": "https://doi.org/10.3390/genes16101223",
+    "venue": "Genes",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Andreas Jung",
+     "Helen Zhu",
+     "Roujia Li",
+     "Alice Jiexin Gao",
+     "Tammy Lau",
+     "Vivian S. Chu",
+     "Declan Lim",
+     "Christopher B. Cole",
+     "Leo J. Lee",
+     "Albi Celaj",
+     "Brendan J. Frey"
+    ],
+    "doi": "10.64898/2025.12.18.694875",
+    "note": null,
+    "paper_id": "10.64898/2025.12.18.694875",
+    "role": "benchmark",
+    "title": "Enigma: An Efficient Model for Deciphering Regulatory Genomics",
+    "url": "https://doi.org/10.64898/2025.12.18.694875",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
      "Michael D. Sweeney",
      "Hyun Min Kang"
     ],
@@ -867,6 +3660,176 @@
     "title": "Practical utility of sequence-to-omics models for improving the reproducibility of genetic fine-mapping",
     "url": "https://doi.org/10.64898/2026.02.04.703796",
     "venue": "preprint",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Kalin Vetsigian",
+     "Jenessa Lancaster",
+     "Ioan Ieremie",
+     "Caleb M. Radens",
+     "Paul Smyth",
+     "Stephen Young"
+    ],
+    "doi": "10.64898/2026.02.18.706660",
+    "note": null,
+    "paper_id": "10.64898/2026.02.18.706660",
+    "role": "benchmark",
+    "title": "Pan-cell-type prediction of splicing patterns from sequence and splicing factor expression",
+    "url": "https://doi.org/10.64898/2026.02.18.706660",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Zitong He",
+     "Liliana Florea"
+    ],
+    "doi": "10.64898/2026.02.22.707219",
+    "note": null,
+    "paper_id": "10.64898/2026.02.22.707219",
+    "role": "benchmark",
+    "title": "Benchmarking foundation models for splice site and exon annotation",
+    "url": "https://doi.org/10.64898/2026.02.22.707219",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Xinyu Sun",
+     "Makaela Mews",
+     "Nicholas R. Wheeler",
+     "Penelope H. Benchek",
+     "Tianjie Gu",
+     "Lissette Gomez",
+     "Yousef Mustafa",
+     "L Wang",
+     "Yuk Yee Leung",
+     "Gerard D. Schellenberg",
+     "Margaret Ann Pericak‐Vance",
+     "Jonathan L. Haines",
+     "Anthony J. Griswold",
+     "William S. Bush"
+    ],
+    "doi": "10.64898/2026.06.22.730889",
+    "note": null,
+    "paper_id": "10.64898/2026.06.22.730889",
+    "role": "benchmark",
+    "title": "Evaluating sequence-to-function deep learning models for ancestry-stratified regulatory variant effect prediction using multi-ancestry blood eQTLs",
+    "url": "https://doi.org/10.64898/2026.06.22.730889",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Mehran Karimzadeh",
+     "Lisa Fish",
+     "Heather M. Karner",
+     "Johannes Linder",
+     "Ali Emadi",
+     "Aldo Hernández-Corchado",
+     "Fatima Zohra Smaili",
+     "Khashayar Ghavami",
+     "Edna S. Stewart",
+     "David R. Kelley",
+     "Bo Wang",
+     "Hamed Shateri Najafabadi",
+     "Manuel D. Leonetti",
+     "Hani Goodarzi"
+    ],
+    "doi": "10.64898/2026.10.12.758580",
+    "note": null,
+    "paper_id": "10.64898/2026.10.12.758580",
+    "role": "benchmark",
+    "title": "A high-resolution protein-RNA binding atlas for structure-aware interaction prediction and post-transcriptional regulatory modeling",
+    "url": "https://doi.org/10.64898/2026.10.12.758580",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Johannes Hingerl",
+     "Laura D. Martens",
+     "Alexander Karollus",
+     "Trevor Manz",
+     "Jason Daniel Buenrostro",
+     "Fabian Joachim Theis",
+     "Julien Gagneur"
+    ],
+    "doi": "10.1038/s41592-025-02854-5",
+    "note": null,
+    "paper_id": "10.1038/s41592-025-02854-5",
+    "role": "critique",
+    "title": "scooby: modeling multimodal genomic profiles from DNA sequence at single-cell resolution",
+    "url": "https://doi.org/10.1038/s41592-025-02854-5",
+    "venue": "Nature Methods",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Anna Korsakova",
+     "Divyanshi Srivastava",
+     "David R. Kelley"
+    ],
+    "doi": "10.1101/2025.04.07.647656",
+    "note": null,
+    "paper_id": "10.1101/2025.04.07.647656",
+    "role": "critique",
+    "title": "Shift augmentation improves DNA convolutional neural network indel effect predictions",
+    "url": "https://doi.org/10.1101/2025.04.07.647656",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Andreas Jung",
+     "Helen Zhu",
+     "Alice Jiexin Gao",
+     "Roujia Li",
+     "Mykhaylo Slobodyanyuk",
+     "Vivian Chu",
+     "Declan Lim",
+     "Leo J. Lee",
+     "Albi Celaj",
+     "Brendan J. Frey"
+    ],
+    "doi": "10.1101/2025.10.14.682350",
+    "note": null,
+    "paper_id": "10.1101/2025.10.14.682350",
+    "role": "critique",
+    "title": "FlashRNA: An Efficient Model for Regulatory Genomics",
+    "url": "https://doi.org/10.1101/2025.10.14.682350",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Moonwon Choi",
+     "Bokeum Cho",
+     "Seunggeun Lee"
+    ],
+    "doi": "10.1101/2025.11.09.687505",
+    "note": null,
+    "paper_id": "10.1101/2025.11.09.687505",
+    "role": "critique",
+    "title": "Preference-Based Fine-Tuning of Genomic Sequence Models for Personal Expression Prediction with Data Augmentation",
+    "url": "https://doi.org/10.1101/2025.11.09.687505",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Elizabeth Gilfeather",
+     "Maria D. Chikina",
+     "Dennis Kostka"
+    ],
+    "doi": "10.64898/2026.01.21.700827",
+    "note": null,
+    "paper_id": "10.64898/2026.01.21.700827",
+    "role": "critique",
+    "title": "When Less Is Enough: Low-Rank Structure in DNA Sequence-to-Function Models",
+    "url": "https://doi.org/10.64898/2026.01.21.700827",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
     "year": 2026
    },
    {
@@ -928,7 +3891,7 @@
   "date_updated": "2026-10-16",
   "description": "Base-resolution model of chromatin accessibility profiles that factorizes out assay-specific enzyme bias, letting learned cis-regulatory sequence syntax and TF motif contributions be read off the prediction directly.\n",
   "entity_id": "model:chrombpnet",
-  "evidence_tier": "partially-independent",
+  "evidence_tier": "externally-benchmarked",
   "fate_axis": [
    "where"
   ],
@@ -986,6 +3949,46 @@
    },
    {
     "authors": [
+     "Hannah Dickmänken",
+     "Marta Wojno",
+     "Lukas Mahieu",
+     "Koen Theunis",
+     "Eren Can Ekşi",
+     "Valerie Christiaens",
+     "Niklas Kempynck",
+     "Florian V. De Rop",
+     "Natalie Roels",
+     "Katina I. Spanier",
+     "Roel Vandepoel",
+     "Gert J. Hulselmans",
+     "Suresh Kumar Poovathingal",
+     "Stein Aerts"
+    ],
+    "doi": "10.1038/s41467-026-68742-4",
+    "note": null,
+    "paper_id": "10.1038/s41467-026-68742-4",
+    "role": "benchmark",
+    "title": "Evaluating single-cell ATAC-seq atlasing technologies using sequence-to-function modeling",
+    "url": "https://doi.org/10.1038/s41467-026-68742-4",
+    "venue": "Nature Communications",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Doruk Cakmakci",
+     "Yue Li"
+    ],
+    "doi": "10.1093/bioinformatics/btag266",
+    "note": null,
+    "paper_id": "10.1093/bioinformatics/btag266",
+    "role": "benchmark",
+    "title": "DNA-aware evaluation and debiasing of sequence-to-function models",
+    "url": "https://doi.org/10.1093/bioinformatics/btag266",
+    "venue": "Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
      "Aman Patel",
      "Arpita Singhal",
      "Austin Wang",
@@ -1001,6 +4004,20 @@
     "url": "https://doi.org/10.52202/079017-1981",
     "venue": "Advances in Neural Information Processing Systems 37",
     "year": 2024
+   },
+   {
+    "authors": [
+     "Liu Wang",
+     "Zong Wei"
+    ],
+    "doi": "10.64898/2026.09.25.753922",
+    "note": null,
+    "paper_id": "10.64898/2026.09.25.753922",
+    "role": "critique",
+    "title": "Genetic risk and inflammatory signaling converge on cell type-specific regulatory programs in type 1 diabetes",
+    "url": "https://doi.org/10.64898/2026.09.25.753922",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
    }
   ],
   "primary_paper_id": "10.1101/2024.12.25.630221",
@@ -1118,6 +4135,212 @@
    },
    {
     "authors": [
+     "Srijan Chatterjee",
+     "Manojit Bhattacharya",
+     "Sang‐Soo Lee",
+     "Chiranjib Chakraborty"
+    ],
+    "doi": "10.1016/j.omtn.2023.06.019",
+    "note": null,
+    "paper_id": "10.1016/j.omtn.2023.06.019",
+    "role": "benchmark",
+    "title": "Can artificial intelligence-strengthened ChatGPT or other large language models transform nucleic acid research?",
+    "url": "https://doi.org/10.1016/j.omtn.2023.06.019",
+    "venue": "Molecular Therapy — Nucleic Acids",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Pratik Ramprasad",
+     "Nidhi Pai",
+     "Wei Pan"
+    ],
+    "doi": "10.1016/j.xhgg.2024.100347",
+    "note": null,
+    "paper_id": "10.1016/j.xhgg.2024.100347",
+    "role": "benchmark",
+    "title": "Enhancing personalized gene expression prediction from DNA sequences using genomic foundation models",
+    "url": "https://doi.org/10.1016/j.xhgg.2024.100347",
+    "venue": "Human Genetics and Genomics Advances",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Dongmei Han",
+     "Yurun Li",
+     "Linxiao Wang",
+     "Xuan Liang",
+     "Yuanyuan Miao",
+     "Wenran Li",
+     "Sijia Wang",
+     "Zhen Wang"
+    ],
+    "doi": "10.1093/bib/bbae110",
+    "note": null,
+    "paper_id": "10.1093/bib/bbae110",
+    "role": "benchmark",
+    "title": "Comparative analysis of models in predicting the effects of SNPs on TF-DNA binding using large-scale in vitro and in vivo data",
+    "url": "https://doi.org/10.1093/bib/bbae110",
+    "venue": "Briefings in Bioinformatics",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Pooja Kathail",
+     "Richard W. Shuai",
+     "Ryan Chung",
+     "Chun Ye",
+     "Gabriel B. Loeb",
+     "Nilah M. Ioannidis"
+    ],
+    "doi": "10.1101/2024.07.05.602265",
+    "note": null,
+    "paper_id": "10.1101/2024.07.05.602265",
+    "role": "benchmark",
+    "title": "Current genomic deep learning models display decreased performance in cell type specific accessible regions",
+    "url": "https://doi.org/10.1101/2024.07.05.602265",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Han Yuan",
+     "Johannes Linder",
+     "David R. Kelley"
+    ],
+    "doi": "10.1101/2025.05.26.656171",
+    "note": null,
+    "paper_id": "10.1101/2025.05.26.656171",
+    "role": "benchmark",
+    "title": "Parameter-Efficient Fine-Tuning of a Supervised Regulatory Sequence Model",
+    "url": "https://doi.org/10.1101/2025.05.26.656171",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Tejaswi Vemuri",
+     "Trung Hoa Dinh",
+     "Zonglin Yang",
+     "Thiruvarangan Ramaraj",
+     "Joann Mudge",
+     "Brendan Mumey",
+     "Indika Kahanda"
+    ],
+    "doi": "10.1109/icmla66185.2025.00201",
+    "note": null,
+    "paper_id": "10.1109/icmla66185.2025.00201",
+    "role": "benchmark",
+    "title": "Genotype-to-Phenotype Associations in Yeast with Frequented Region Variants and Deep Learning",
+    "url": "https://doi.org/10.1109/icmla66185.2025.00201",
+    "venue": "International Conference on Machine Learning and Applications",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Yin Shen",
+     "Xuan Xu",
+     "Shuaibin Wang",
+     "Tong Chen",
+     "Zihao Zhang",
+     "Qiaoyu Sun",
+     "Xuan Sun",
+     "Zhen Liang",
+     "Junxiang Gao"
+    ],
+    "doi": "10.1109/tcbbio.2026.3657361",
+    "note": null,
+    "paper_id": "10.1109/tcbbio.2026.3657361",
+    "role": "benchmark",
+    "title": "TransSE: A Transfer Learning-Based Predictive Model for Distinguishing Super Enhancers and Typical Enhancers",
+    "url": "https://doi.org/10.1109/tcbbio.2026.3657361",
+    "venue": "IEEE Transactions on Computational Biology and Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Pooja Kathail",
+     "Richard W. Shuai",
+     "Ryan Chung",
+     "Chun Ye",
+     "Gabriel B. Loeb",
+     "Nilah M. Ioannidis"
+    ],
+    "doi": "10.1186/s13059-024-03335-2",
+    "note": null,
+    "paper_id": "10.1186/s13059-024-03335-2",
+    "role": "benchmark",
+    "title": "Current genomic deep learning models display decreased performance in cell type-specific accessible regions",
+    "url": "https://doi.org/10.1186/s13059-024-03335-2",
+    "venue": "Genome biology",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Han Yuan",
+     "Johannes Linder",
+     "David R. Kelley"
+    ],
+    "doi": "10.1186/s13059-026-03935-0",
+    "note": null,
+    "paper_id": "10.1186/s13059-026-03935-0",
+    "role": "benchmark",
+    "title": "Parameter-efficient fine-tuning enables scalable transfer of regulatory sequence models to novel contexts",
+    "url": "https://doi.org/10.1186/s13059-026-03935-0",
+    "venue": "Genome biology",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Zhaoxi Zhang",
+     "Lijuan Jia",
+     "Xiaoya Fan",
+     "Zengyou He",
+     "Juan Wang",
+     "Zi Wang"
+    ],
+    "doi": "10.3389/fgene.2026.1896629",
+    "note": null,
+    "paper_id": "10.3389/fgene.2026.1896629",
+    "role": "benchmark",
+    "title": "mwHIT: accelerated and accurate histone modification imputation using multi-scale window attention",
+    "url": "https://doi.org/10.3389/fgene.2026.1896629",
+    "venue": "Frontiers in Genetics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Cheng Song",
+     "Irfan Ali Sabir",
+     "Wanli Zhao",
+     "Yunpeng Cao"
+    ],
+    "doi": "10.3389/fpls.2025.1678483",
+    "note": null,
+    "paper_id": "10.3389/fpls.2025.1678483",
+    "role": "benchmark",
+    "title": "Decoding the mystery: AI-assisted bioinformatics and functional genomics technologies in medicinal plants",
+    "url": "https://doi.org/10.3389/fpls.2025.1678483",
+    "venue": "Frontiers in Plant Science",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Megha Hegde",
+     "Jean‐Christophe Nebel",
+     "Farzana Rahman"
+    ],
+    "doi": "10.3390/genes16111358",
+    "note": null,
+    "paper_id": "10.3390/genes16111358",
+    "role": "benchmark",
+    "title": "Reaping the Fruits of LLM Pruning: Towards Small Language Models for Efficient Non-Coding Variant Effect Prediction",
+    "url": "https://doi.org/10.3390/genes16111358",
+    "venue": "Genes",
+    "year": 2025
+   },
+   {
+    "authors": [
      "Michael D. Sweeney",
      "Hyun Min Kang"
     ],
@@ -1129,6 +4352,132 @@
     "url": "https://doi.org/10.64898/2026.02.04.703796",
     "venue": "preprint",
     "year": 2026
+   },
+   {
+    "authors": [
+     "Zitong He",
+     "Liliana Florea"
+    ],
+    "doi": "10.64898/2026.02.22.707219",
+    "note": null,
+    "paper_id": "10.64898/2026.02.22.707219",
+    "role": "benchmark",
+    "title": "Benchmarking foundation models for splice site and exon annotation",
+    "url": "https://doi.org/10.64898/2026.02.22.707219",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Alessandra Capitanio",
+     "Nicolò Stranieri",
+     "Alessio Enderti",
+     "Simone G. Riva",
+     "Jim R. Hughes"
+    ],
+    "doi": "10.64898/2026.06.05.730316",
+    "note": null,
+    "paper_id": "10.64898/2026.06.05.730316",
+    "role": "benchmark",
+    "title": "Enformer-Based Phylogenetic Tree Reconstruction",
+    "url": "https://doi.org/10.64898/2026.06.05.730316",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Alan J. Aw",
+     "Lionel Chentian Jin",
+     "Nilah M. Ioannidis",
+     "Yun S. Song"
+    ],
+    "doi": "10.7554/elife.88039",
+    "note": null,
+    "paper_id": "10.7554/elife.88039",
+    "role": "benchmark",
+    "title": "The impact of stability considerations on genetic fine-mapping",
+    "url": "https://doi.org/10.7554/elife.88039",
+    "venue": "eLife",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Alan J. Aw",
+     "Lionel Chentian Jin",
+     "Nilah M. Ioannidis",
+     "Yun S. Song"
+    ],
+    "doi": "10.7554/elife.88039.1",
+    "note": null,
+    "paper_id": "10.7554/elife.88039.1",
+    "role": "benchmark",
+    "title": "The Impact of Stability Considerations on Genetic Fine-Mapping",
+    "url": "https://doi.org/10.7554/elife.88039.1",
+    "venue": "eLife",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Alan J. Aw",
+     "Lionel Chentian Jin",
+     "Nilah M. Ioannidis",
+     "Yun S. Song"
+    ],
+    "doi": "10.7554/elife.88039.2",
+    "note": null,
+    "paper_id": "10.7554/elife.88039.2",
+    "role": "benchmark",
+    "title": "The Impact of Stability Considerations on Genetic Fine-mapping",
+    "url": "https://doi.org/10.7554/elife.88039.2",
+    "venue": "eLife",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Alan J. Aw",
+     "Lionel Chentian Jin",
+     "Nilah M. Ioannidis",
+     "Yun S. Song"
+    ],
+    "doi": "10.7554/elife.88039.3",
+    "note": null,
+    "paper_id": "10.7554/elife.88039.3",
+    "role": "benchmark",
+    "title": "The impact of stability considerations on genetic fine-mapping",
+    "url": "https://doi.org/10.7554/elife.88039.3",
+    "venue": "eLife",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Satoshi Kodera",
+     "Norihiko Takeda"
+    ],
+    "doi": "10.1016/j.jjcc.2026.06.007",
+    "note": null,
+    "paper_id": "10.1016/j.jjcc.2026.06.007",
+    "role": "critique",
+    "title": "From DNA to drug discovery AI models for cardiovascular precision medicine",
+    "url": "https://doi.org/10.1016/j.jjcc.2026.06.007",
+    "venue": "Journal of Cardiology",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Alan E Murphy",
+     "William Beardall",
+     "Marek Rei",
+     "Mike Phuycharoen",
+     "Nathan Skene"
+    ],
+    "doi": "10.1038/s41467-024-54441-5",
+    "note": null,
+    "paper_id": "10.1038/s41467-024-54441-5",
+    "role": "critique",
+    "title": "Predicting cell type-specific epigenomic profiles accounting for distal genetic effects",
+    "url": "https://doi.org/10.1038/s41467-024-54441-5",
+    "venue": "Nature Communications",
+    "year": 2024
    },
    {
     "authors": [
@@ -1163,6 +4512,102 @@
     "url": "https://doi.org/10.1038/s41588-023-01574-w",
     "venue": "Nature Genetics",
     "year": 2023
+   },
+   {
+    "authors": [
+     "Zhaowei Yu",
+     "Yong Zhang"
+    ],
+    "doi": "10.1093/nsr/nwae355",
+    "note": null,
+    "paper_id": "10.1093/nsr/nwae355",
+    "role": "critique",
+    "title": "Foundation model for comprehensive transcriptional regulation analysis",
+    "url": "https://doi.org/10.1093/nsr/nwae355",
+    "venue": "National Science Review",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Alexander Karollus",
+     "Thomas Mauermeier",
+     "Julien Gagneur"
+    ],
+    "doi": "10.1101/2022.09.15.508087",
+    "note": null,
+    "paper_id": "10.1101/2022.09.15.508087",
+    "role": "critique",
+    "title": "Current sequence-based models capture gene expression determinants in promoters but mostly ignore distal enhancers",
+    "url": "https://doi.org/10.1101/2022.09.15.508087",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2022
+   },
+   {
+    "authors": [
+     "Александр Владимирович Медведев",
+     "Karthik Viswanathan",
+     "Praveenkumar Kanithi",
+     "Kirill Vishniakov",
+     "Prateek Munjal",
+     "Clément Christophe",
+     "Tiago R Magalhães",
+     "Marco AF Pimentel",
+     "Ronnie Rajan",
+     "Shadab Khan"
+    ],
+    "doi": "10.1101/2025.03.27.645711",
+    "note": null,
+    "paper_id": "10.1101/2025.03.27.645711",
+    "role": "critique",
+    "title": "BioToken and BioFM – Biologically-Informed Tokenization Enables Accurate and Efficient Genomic Foundation Models",
+    "url": "https://doi.org/10.1101/2025.03.27.645711",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Moonwon Choi",
+     "Bokeum Cho",
+     "Seunggeun Lee"
+    ],
+    "doi": "10.1101/2025.11.09.687505",
+    "note": null,
+    "paper_id": "10.1101/2025.11.09.687505",
+    "role": "critique",
+    "title": "Preference-Based Fine-Tuning of Genomic Sequence Models for Personal Expression Prediction with Data Augmentation",
+    "url": "https://doi.org/10.1101/2025.11.09.687505",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Alexander Karollus",
+     "Thomas Mauermeier",
+     "Julien Gagneur"
+    ],
+    "doi": "10.1186/s13059-023-02899-9",
+    "note": null,
+    "paper_id": "10.1186/s13059-023-02899-9",
+    "role": "critique",
+    "title": "Current sequence-based models capture gene expression determinants in promoters but mostly ignore distal enhancers",
+    "url": "https://doi.org/10.1186/s13059-023-02899-9",
+    "venue": "Genome biology",
+    "year": 2023
+   },
+   {
+    "authors": [
+     "Elizabeth Gilfeather",
+     "Maria D. Chikina",
+     "Dennis Kostka"
+    ],
+    "doi": "10.64898/2026.01.21.700827",
+    "note": null,
+    "paper_id": "10.64898/2026.01.21.700827",
+    "role": "critique",
+    "title": "When Less Is Enough: Low-Rank Structure in DNA Sequence-to-Function Models",
+    "url": "https://doi.org/10.64898/2026.01.21.700827",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
    }
   ],
   "primary_paper_id": "10.1038/s41592-021-01252-x",
@@ -1197,7 +4642,7 @@
   "date_updated": "2026-10-16",
   "description": "Genome language model trained on 3 trillion DNA base pairs spanning all domains of life, with 7B and 40B parameter variants, a 1 million token context window at single-nucleotide resolution, and both variant-effect scoring and genome design applications.\n",
   "entity_id": "model:evo2",
-  "evidence_tier": "self-reported",
+  "evidence_tier": "externally-benchmarked",
   "fate_axis": [
    "how"
   ],
@@ -1290,6 +4735,355 @@
     "url": "https://doi.org/10.1101/2025.02.18.638918",
     "venue": "preprint",
     "year": 2025
+   },
+   {
+    "authors": [
+     "Mohammad S. Refahi",
+     "Hyunwoo Yoo",
+     "Gavin Hearne",
+     "Chaz Allegra",
+     "James R. Brown",
+     "Bahrad Ali Sokhansanj",
+     "Stephen Woloszynek",
+     "Keyush Ramjattun",
+     "Shanmukha Rao Allipilli",
+     "Robi Polikar A",
+     "GAIL L. ROSEN"
+    ],
+    "doi": "10.1007/978-3-032-18509-9_3",
+    "note": null,
+    "paper_id": "10.1007/978-3-032-18509-9_3",
+    "role": "benchmark",
+    "title": "Evaluating Genomic Language Models: Experimental Validation, Multi-Omics Integration, and Ethical-Legal Challenges",
+    "url": "https://doi.org/10.1007/978-3-032-18509-9_3",
+    "venue": "Springer eBooks",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Shae McLaughlin",
+     "Daniel A. Lim"
+    ],
+    "doi": "10.1093/bib/bbag011",
+    "note": null,
+    "paper_id": "10.1093/bib/bbag011",
+    "role": "benchmark",
+    "title": "Probing genomic language models: Nucleotide Generative Pretrained Transformer and the role of pretraining in learned representations",
+    "url": "https://doi.org/10.1093/bib/bbag011",
+    "venue": "Briefings in Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "LeAnn M. Lindsey",
+     "Nicole L. Pershing",
+     "Keith Dufault‐Thompson",
+     "Ho‐Jin Gwak",
+     "Anisa Habib",
+     "Aaron Schindler",
+     "Arjun Rakheja",
+     "June L. Round",
+     "W. Zac Stephens",
+     "Anne J. Blaschke",
+     "HARI SUNDAR",
+     "Xiaofang Jiang"
+    ],
+    "doi": "10.1093/nargab/lqag103",
+    "note": null,
+    "paper_id": "10.1093/nargab/lqag103",
+    "role": "benchmark",
+    "title": "LAMBDA: a prophage detection benchmark for genomic language models",
+    "url": "https://doi.org/10.1093/nargab/lqag103",
+    "venue": "NAR Genomics and Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Kirill Vishniakov",
+     "Karthik Viswanathan",
+     "Александр Владимирович Медведев",
+     "Praveenkumar Kanithi",
+     "Marco AF Pimentel",
+     "Ronnie Rajan",
+     "Shadab Khan"
+    ],
+    "doi": "10.1101/2024.12.18.628606",
+    "note": null,
+    "paper_id": "10.1101/2024.12.18.628606",
+    "role": "benchmark",
+    "title": "Tokenization to Transfer: Do Genomic Foundation Models Learn Good Representations?",
+    "url": "https://doi.org/10.1101/2024.12.18.628606",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Shumin Li",
+     "Ruibang Luo",
+     "Yuanhua Huang"
+    ],
+    "doi": "10.1101/2025.07.09.664024",
+    "note": null,
+    "paper_id": "10.1101/2025.07.09.664024",
+    "role": "benchmark",
+    "title": "Assessing large-scale genomic language models in predicting personal gene expression: promises and limitations",
+    "url": "https://doi.org/10.1101/2025.07.09.664024",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Jingjing Zhai",
+     "Aaron Gokaslan",
+     "Sheng‐Kai Hsu",
+     "Szu-Ping Chen",
+     "Zong-Yan Liu",
+     "Edgar Marroquin",
+     "Eric Czech",
+     "B. R. Cannon",
+     "Ana Berthel",
+     "M. Cinta Romay",
+     "Matt Pennell",
+     "Volodymyr Kuleshov",
+     "Edward S. Buckler"
+    ],
+    "doi": "10.1101/2025.08.27.672609",
+    "note": null,
+    "paper_id": "10.1101/2025.08.27.672609",
+    "role": "benchmark",
+    "title": "PlantCAD2: a DNA foundation model for interpreting genomes across flowering plants",
+    "url": "https://doi.org/10.1101/2025.08.27.672609",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Huimin Li",
+     "Hongyi Ji",
+     "Yuchen Zeng",
+     "Wei Lv",
+     "Jianmin Wu",
+     "Sheng Liu",
+     "Chunhua Lin",
+     "Huanming Yang",
+     "Zhaorong Li",
+     "Yubao Chen",
+     "Wei Dong"
+    ],
+    "doi": "10.1101/2025.09.10.675279",
+    "note": null,
+    "paper_id": "10.1101/2025.09.10.675279",
+    "role": "benchmark",
+    "title": "A Benchmark of Evo2 Genomic AI Models for Efficient and Practical Deployment",
+    "url": "https://doi.org/10.1101/2025.09.10.675279",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Pablo Arozarena Donelli",
+     "Simone Rancati",
+     "Giovanna Nicora",
+     "Riccardo Bellazzi",
+     "Enea Parimbelli",
+     "Luigi Portinale"
+    ],
+    "doi": "10.1145/3807503.3819436",
+    "note": null,
+    "paper_id": "10.1145/3807503.3819436",
+    "role": "benchmark",
+    "title": "Exploring the Evolutionary Landscape of AI-Generated Viral Sequences: a Case Study on HIV-1",
+    "url": "https://doi.org/10.1145/3807503.3819436",
+    "venue": "ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Radim Krupička",
+     "Mariana Komárková",
+     "Bohuslav Dvorský",
+     "Kateřina Kollinová",
+     "Ondřej Klempíř"
+    ],
+    "doi": "10.1186/s13040-026-00553-1",
+    "note": null,
+    "paper_id": "10.1186/s13040-026-00553-1",
+    "role": "benchmark",
+    "title": "Benchmarking genomic foundation models for binary classification of gene fusion breakpoints from DNA sequences",
+    "url": "https://doi.org/10.1186/s13040-026-00553-1",
+    "venue": "BioData Mining",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Archit Kalra",
+     "Luis F. Paulin",
+     "Fritz Joachim Sedlazeck"
+    ],
+    "doi": "10.64898/2026.01.27.702059",
+    "note": null,
+    "paper_id": "10.64898/2026.01.27.702059",
+    "role": "benchmark",
+    "title": "A systematic assessment of machine learning for structural variant filtering",
+    "url": "https://doi.org/10.64898/2026.01.27.702059",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Mahbuba Tasmin",
+     "Saishradha Mohanty",
+     "Sanjana G. Kulkarni",
+     "Maha R Farhat",
+     "Anna G. Green"
+    ],
+    "doi": "10.64898/2026.01.30.702134",
+    "note": null,
+    "paper_id": "10.64898/2026.01.30.702134",
+    "role": "benchmark",
+    "title": "BIG-TB: A benchmark for prediction and interpretability of sequence-based machine learning using Mycobacterium tuberculosis genomes",
+    "url": "https://doi.org/10.64898/2026.01.30.702134",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Micaela Elisa Consens",
+     "Kevin K. Yang",
+     "Jimmy Hall",
+     "Ashley Mae Conard",
+     "Bo Wang",
+     "Lorin A. Crawford",
+     "Alan M Moses",
+     "Alex Xijie Lu"
+    ],
+    "doi": "10.64898/2026.02.02.703275",
+    "note": null,
+    "paper_id": "10.64898/2026.02.02.703275",
+    "role": "benchmark",
+    "title": "Predicting evolutionary rate as a pretraining task improves genome language model representations",
+    "url": "https://doi.org/10.64898/2026.02.02.703275",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Ariel Larey",
+     "Elay Dahan",
+     "Amit Bleiweiss",
+     "Raizy Kellerman",
+     "Guy Leib",
+     "Omri Nayshool",
+     "Dan Ofer",
+     "Tal Zinger",
+     "Dan Dominissini",
+     "Gideon Rechavi",
+     "Nicole Bussola",
+     "Simon Lee",
+     "Shane O’Connell",
+     "Dung T. Hoang",
+     "Marissa Wirth",
+     "Alexander W. Charney",
+     "Yoli Shavit",
+     "Nati Daniel"
+    ],
+    "doi": "10.64898/2026.02.19.706811",
+    "note": null,
+    "paper_id": "10.64898/2026.02.19.706811",
+    "role": "benchmark",
+    "title": "GFMBench-API: A Standardized Interface for Benchmarking Genomic Foundation Models",
+    "url": "https://doi.org/10.64898/2026.02.19.706811",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Yanjie Huang",
+     "Guangye Lv",
+     "Anyue Cheng",
+     "Wei Xie",
+     "Mengyan Chen",
+     "Xinyi Ma",
+     "Yijun Huang",
+     "Yueyang Tang",
+     "Qingya Shi",
+     "Jiahao Wang",
+     "Junxi Wang",
+     "Junxi Wang",
+     "Yunpeng Xia",
+     "Lu Zhao",
+     "Yifang Cai",
+     "Jack X. Chen",
+     "Shuangjia Zheng"
+    ],
+    "doi": "10.64898/2026.03.17.712398",
+    "note": null,
+    "paper_id": "10.64898/2026.03.17.712398",
+    "role": "benchmark",
+    "title": "A Long-Context Generative Foundation Model Deciphers RNA Design Principles",
+    "url": "https://doi.org/10.64898/2026.03.17.712398",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Feng Xu",
+     "Tianhao Wu",
+     "Cheng Qian",
+     "Xiangfeng Wang",
+     "Jun Yan"
+    ],
+    "doi": "10.3389/fpls.2025.1611992",
+    "note": null,
+    "paper_id": "10.3389/fpls.2025.1611992",
+    "role": "critique",
+    "title": "Foundation models in plant molecular biology: advances, challenges, and future directions",
+    "url": "https://doi.org/10.3389/fpls.2025.1611992",
+    "venue": "Frontiers in Plant Science",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Babatope Afolabi"
+    ],
+    "doi": "10.5281/zenodo.19228701",
+    "note": null,
+    "paper_id": "10.5281/zenodo.19228701",
+    "role": "critique",
+    "title": "Neuroresonance Theory as a Physical Substrate for Genomic Foundation Model Emergence: AUF Predictions Validated by Evo 2",
+    "url": "https://doi.org/10.5281/zenodo.19228701",
+    "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Micaela Elisa Consens",
+     "Ben Li",
+     "Anna R. Poetsch",
+     "Stephen Gilbert"
+    ],
+    "doi": "10.1038/s41746-025-01603-4",
+    "note": null,
+    "paper_id": "10.1038/s41746-025-01603-4",
+    "role": "application",
+    "title": "Genomic language models could transform medicine but not yet",
+    "url": "https://doi.org/10.1038/s41746-025-01603-4",
+    "venue": "npj Digital Medicine",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Kim Minseo",
+     "Jae‐Ho Shin"
+    ],
+    "doi": "10.64898/2026.07.02.736037",
+    "note": null,
+    "paper_id": "10.64898/2026.07.02.736037",
+    "role": "application",
+    "title": "Context-dependent calibration of Evo2 likelihood with bacterial fitness: a quantitative characterization across five E. coli datasets",
+    "url": "https://doi.org/10.64898/2026.07.02.736037",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
    }
   ],
   "primary_paper_id": "10.1101/2025.02.18.638918",
@@ -1332,7 +5126,7 @@
   "date_updated": "2026-10-16",
   "description": "Re-implementation of Borzoi substituting rotary positional encodings and FlashAttention-2 for relative positional encodings, giving over 3-fold faster training and inference and up to 2.4-fold lower memory use while maintaining or improving accuracy.\n",
   "entity_id": "model:flashzoi",
-  "evidence_tier": "self-reported",
+  "evidence_tier": "externally-benchmarked",
   "fate_axis": [
    "where"
   ],
@@ -1402,6 +5196,28 @@
     "url": "https://doi.org/10.1101/2024.12.18.629121",
     "venue": "preprint",
     "year": 2024
+   },
+   {
+    "authors": [
+     "Andreas Jung",
+     "Helen Zhu",
+     "Alice Jiexin Gao",
+     "Roujia Li",
+     "Mykhaylo Slobodyanyuk",
+     "Vivian Chu",
+     "Declan Lim",
+     "Leo J. Lee",
+     "Albi Celaj",
+     "Brendan J. Frey"
+    ],
+    "doi": "10.1101/2025.10.14.682350",
+    "note": null,
+    "paper_id": "10.1101/2025.10.14.682350",
+    "role": "critique",
+    "title": "FlashRNA: An Efficient Model for Regulatory Genomics",
+    "url": "https://doi.org/10.1101/2025.10.14.682350",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
    }
   ],
   "primary_paper_id": "10.1093/bioinformatics/btaf467",
@@ -1441,7 +5257,7 @@
   "date_updated": "2026-10-16",
   "description": "Graph neural network predicting transcriptional outcomes of multigene perturbations, including combinations never seen in training, by combining a gene co-expression graph with a knowledge graph of gene ontology relations.\n",
   "entity_id": "model:gears",
-  "evidence_tier": "self-reported",
+  "evidence_tier": "externally-benchmarked",
   "fate_axis": [
    "what"
   ],
@@ -1497,6 +5313,403 @@
     "url": "https://doi.org/10.1101/2022.07.12.499735",
     "venue": "preprint",
     "year": 2022
+   },
+   {
+    "authors": [
+     "Ihor Kendiukhov"
+    ],
+    "doi": "10.1016/j.compbiolchem.2026.109079",
+    "note": null,
+    "paper_id": "10.1016/j.compbiolchem.2026.109079",
+    "role": "benchmark",
+    "title": "Adversarial validation of in silico perturbation profiles for intelligence-associated genes in human prefrontal cortex",
+    "url": "https://doi.org/10.1016/j.compbiolchem.2026.109079",
+    "venue": "Computational Biology and Chemistry",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Ihor Kendiukhov"
+    ],
+    "doi": "10.1016/j.jbi.2026.105080",
+    "note": null,
+    "paper_id": "10.1016/j.jbi.2026.105080",
+    "role": "benchmark",
+    "title": "Causal intervention validation of gene regulatory signals in scGPT",
+    "url": "https://doi.org/10.1016/j.jbi.2026.105080",
+    "venue": "Journal of Biomedical Informatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Xiong Liu",
+     "James Boylan",
+     "Theophile Bouiller",
+     "Elizaveta M. Solovyeva",
+     "Bulent Ataman",
+     "Sebastian Hoersch",
+     "Jeremy L. Jenkins",
+     "Murthy V Devarakonda"
+    ],
+    "doi": "10.1101/2025.05.11.653338",
+    "note": null,
+    "paper_id": "10.1101/2025.05.11.653338",
+    "role": "benchmark",
+    "title": "Evaluating Foundation Models for In-Silico Perturbation",
+    "url": "https://doi.org/10.1101/2025.05.11.653338",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Euxhen Hasanaj",
+     "Elijah Cole",
+     "Shahin Mohammadi",
+     "Sohan Addagudi",
+     "Xingyi Zhang",
+     "Le Song",
+     "Eric P. Xing"
+    ],
+    "doi": "10.1101/2025.06.26.661186",
+    "note": null,
+    "paper_id": "10.1101/2025.06.26.661186",
+    "role": "benchmark",
+    "title": "Multimodal Benchmarking of Foundation Model Representations for Cellular Perturbation Response Prediction",
+    "url": "https://doi.org/10.1101/2025.06.26.661186",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Livnat Jerby‐Arnon",
+     "Livnat Jerby‐Arnon"
+    ],
+    "doi": "10.1101/2025.10.03.680360",
+    "note": null,
+    "paper_id": "10.1101/2025.10.03.680360",
+    "role": "benchmark",
+    "title": "Gradient-aware modeling advances AI-driven prediction of genetic perturbation effects",
+    "url": "https://doi.org/10.1101/2025.10.03.680360",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Xiang Lin",
+     "Zhenglun Kong",
+     "Boyang Fu",
+     "Soumya Ghosh",
+     "M Kellis",
+     "Marinka Žitnik"
+    ],
+    "doi": "10.1101/2025.11.08.686890",
+    "note": null,
+    "paper_id": "10.1101/2025.11.08.686890",
+    "role": "benchmark",
+    "title": "Generative modeling of spatially resolved perturbation responses with CONCERT",
+    "url": "https://doi.org/10.1101/2025.11.08.686890",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Sajib Acharjee Dip",
+     "Liqing Zhang"
+    ],
+    "doi": "10.1145/3807503.3820871",
+    "note": null,
+    "paper_id": "10.1145/3807503.3820871",
+    "role": "benchmark",
+    "title": "Stable-Shift: Predicting Transcriptional Responses of Unseen Gene Perturbations Using Graph Neural Networks with Biological Priors",
+    "url": "https://doi.org/10.1145/3807503.3820871",
+    "venue": "ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Yu Yan",
+     "Xutao Wang",
+     "Dongyuan Song"
+    ],
+    "doi": "10.1186/s12864-026-12975-6",
+    "note": null,
+    "paper_id": "10.1186/s12864-026-12975-6",
+    "role": "benchmark",
+    "title": "Evaluating the learnability of single-cell large language models on multiple tasks",
+    "url": "https://doi.org/10.1186/s12864-026-12975-6",
+    "venue": "BMC Genomics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Haijun Tang",
+     "Hening Li",
+     "Qinghao Zhao",
+     "Xiang Zhou",
+     "Lei Peng",
+     "Yangjie Cai",
+     "Roxane Lin",
+     "Yufeng Li",
+     "Yiyi Yuan",
+     "Wenyu Feng",
+     "Yun Liu",
+     "Zezheng Liu",
+     "Qingchu Li"
+    ],
+    "doi": "10.1186/s12864-026-13270-0",
+    "note": null,
+    "paper_id": "10.1186/s12864-026-13270-0",
+    "role": "benchmark",
+    "title": "scGPA: an LLM-assisted workflow for directional virtual gene perturbation analysis from single-cell transcriptomes",
+    "url": "https://doi.org/10.1186/s12864-026-13270-0",
+    "venue": "BMC Genomics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Junfan Chen",
+     "Fabian Schmidt",
+     "Ricardo Henao"
+    ],
+    "doi": "10.1371/journal.pcbi.1013701",
+    "note": null,
+    "paper_id": "10.1371/journal.pcbi.1013701",
+    "role": "benchmark",
+    "title": "Assessing scale and predictive diversity in models for single-cell transcriptomics based on Geneformer",
+    "url": "https://doi.org/10.1371/journal.pcbi.1013701",
+    "venue": "PLoS Computational Biology",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Xudong Liu",
+     "Bo Zhang",
+     "Kefei Zou",
+     "Ruikai Wan",
+     "Qiangyuan Zhu"
+    ],
+    "doi": "10.3390/bios16100581",
+    "note": null,
+    "paper_id": "10.3390/bios16100581",
+    "role": "benchmark",
+    "title": "Single-Cell Whole-Transcriptome Detection Expands the Observable RNA Space for AI Virtual-Cell Models",
+    "url": "https://doi.org/10.3390/bios16100581",
+    "venue": "Biosensors",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Valentyna Zinchenko",
+     "Andreas Schlicker",
+     "Roman Kurilov",
+     "Alison Pouplin",
+     "Santiago Villalba",
+     "Marc Horlacher"
+    ],
+    "doi": "10.64898/2025.12.15.694331",
+    "note": null,
+    "paper_id": "10.64898/2025.12.15.694331",
+    "role": "benchmark",
+    "title": "Benchmarking Chemical, Genetic, and Cell Line Encodings for Cancer Perturbation Response Prediction",
+    "url": "https://doi.org/10.64898/2025.12.15.694331",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Jean-Baptiste Morlot",
+     "Thomaz Lüscher Dias",
+     "Sébastien Légaré",
+     "Alessandro Romualdi",
+     "Elie Hatem",
+     "Yann Abraham"
+    ],
+    "doi": "10.64898/2026.01.29.702072",
+    "note": null,
+    "paper_id": "10.64898/2026.01.29.702072",
+    "role": "benchmark",
+    "title": "TwinCell: Large Causal Cell Model for Reliable and Interpretable Therapeutic Target Prioritisation",
+    "url": "https://doi.org/10.64898/2026.01.29.702072",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Mahshid Heidari",
+     "Mina Karimpour",
+     "Sumana Srivatsa",
+     "Hesam Montazeri"
+    ],
+    "doi": "10.64898/2026.02.14.705879",
+    "note": null,
+    "paper_id": "10.64898/2026.02.14.705879",
+    "role": "benchmark",
+    "title": "Evaluating Single-Cell Perturbation Response Models Is Far from Straightforward",
+    "url": "https://doi.org/10.64898/2026.02.14.705879",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Bo Li",
+     "Qing Wang",
+     "Shihang Wang",
+     "Bob Zhang",
+     "Yuzhong Peng",
+     "Pinxian Zeng",
+     "Chengliang Liu",
+     "Mengran Li",
+     "Ziyang Tang",
+     "Xiaojun Yao",
+     "Chu‐Xia Deng",
+     "Qianqian Song"
+    ],
+    "doi": "10.64898/2026.04.22.720110",
+    "note": null,
+    "paper_id": "10.64898/2026.04.22.720110",
+    "role": "benchmark",
+    "title": "MVCBench: A Multimodal Benchmark for Drug-induced Virtual Cell Phenotypes",
+    "url": "https://doi.org/10.64898/2026.04.22.720110",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Muhammad Haroon Shakeel",
+     "Mengyuan Shen",
+     "Stefano Mangiola"
+    ],
+    "doi": "10.64898/2026.06.04.730272",
+    "note": null,
+    "paper_id": "10.64898/2026.06.04.730272",
+    "role": "benchmark",
+    "title": "Re-evaluating the benefit of pretraining scale in cell foundation models",
+    "url": "https://doi.org/10.64898/2026.06.04.730272",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Luni Hu",
+     "Hua Qin",
+     "Y S Zhang",
+     "Yilin Zhang",
+     "Yi Lu",
+     "Ping Qiu",
+     "Zhihan Guo",
+     "Lei Cao",
+     "Wenjian Jiang",
+     "Qianqian Chen",
+     "Qianqian Chen",
+     "Yanbang Shang",
+     "Tianyi Xia",
+     "Ziqing Deng",
+     "Xun Xu",
+     "Hansheng Zhao",
+     "Shuangsang Fang",
+     "Yuxiang Li",
+     "Yong Zhang",
+     "Yong Zhang"
+    ],
+    "doi": "10.1038/s41467-026-72198-x",
+    "note": null,
+    "paper_id": "10.1038/s41467-026-72198-x",
+    "role": "critique",
+    "title": "RegFormer: a single-cell foundation model powered by gene regulatory hierarchies",
+    "url": "https://doi.org/10.1038/s41467-026-72198-x",
+    "venue": "Nature Communications",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Haiyang Bian",
+     "Yixin Chen",
+     "Erpai Luo",
+     "Xinze Wu",
+     "Minsheng Hao",
+     "Lei Wei",
+     "Xuegong Zhang"
+    ],
+    "doi": "10.1093/nsr/nwae340",
+    "note": null,
+    "paper_id": "10.1093/nsr/nwae340",
+    "role": "critique",
+    "title": "General-purpose pre-trained large cellular models for single-cell transcriptomics",
+    "url": "https://doi.org/10.1093/nsr/nwae340",
+    "venue": "National Science Review",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Chenyu Li",
+     "Elias Mark Ziyadeh",
+     "Yash Sharma",
+     "Bernhard Dumoulin",
+     "Jonathan L. Levinsohn",
+     "Eunji Ha",
+     "Siyu Pan",
+     "Vishwanatha Rao",
+     "Madhav Subramaniyam",
+     "Márió Szegedy",
+     "Nancy Ruonan Zhang",
+     "Katalin Suszták"
+    ],
+    "doi": "10.1101/2025.09.30.679471",
+    "note": null,
+    "paper_id": "10.1101/2025.09.30.679471",
+    "role": "critique",
+    "title": "Nephrobase Cell+: Multimodal Single-Cell Foundation Model for Decoding Kidney Biology",
+    "url": "https://doi.org/10.1101/2025.09.30.679471",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Yang Li",
+     "Rui Chen",
+     "Yuting J. Tan",
+     "Xue Yun Zhong",
+     "Bingshan Li",
+     "Zhijun Yin"
+    ],
+    "doi": "10.1109/bibm62325.2024.10822049",
+    "note": null,
+    "paper_id": "10.1109/bibm62325.2024.10822049",
+    "role": "critique",
+    "title": "Improving Genetic Perturbation Response Prediction with an Enhanced Biological Knowledge Graph",
+    "url": "https://doi.org/10.1109/bibm62325.2024.10822049",
+    "venue": "IEEE International Conference on Bioinformatics and Biomedicine (BIBM)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Huan Liang",
+     "Rohit Singh"
+    ],
+    "doi": "10.64898/2026.08.03.742643",
+    "note": null,
+    "paper_id": "10.64898/2026.08.03.742643",
+    "role": "critique",
+    "title": "COMPASS: Component-Wise Inference of Shared and Gene-Specific Perturbation Response",
+    "url": "https://doi.org/10.64898/2026.08.03.742643",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Marjan BaghGolshani",
+     "Amin Beheshti",
+     "M. A. Hakim Newton",
+     "Hamid Alinejad-Rokny"
+    ],
+    "doi": "10.1109/icdh72779.2026.00041",
+    "note": null,
+    "paper_id": "10.1109/icdh72779.2026.00041",
+    "role": "application",
+    "title": "GRN-GEARS: Interpretable Gene Regulatory Modelling for Single-Cell Perturbation Response Prediction in Precision Oncology",
+    "url": "https://doi.org/10.1109/icdh72779.2026.00041",
+    "venue": "IEEE International Conference on Digital Health (ICDH)",
+    "year": 2026
    },
    {
     "authors": [
@@ -1643,6 +5856,751 @@
    },
    {
     "authors": [
+     "Pablo Arozarena Donelli",
+     "Simone Rancati",
+     "Giovanna Nicora",
+     "Riccardo Bellazzi",
+     "Enea Parimbelli",
+     "Luigi Portinale"
+    ],
+    "doi": "10.1007/978-3-032-30813-9_47",
+    "note": null,
+    "paper_id": "10.1007/978-3-032-30813-9_47",
+    "role": "benchmark",
+    "title": "Biological Plausibility Assessment of Viral Sequences Generated by a Genomic Language Model",
+    "url": "https://doi.org/10.1007/978-3-032-30813-9_47",
+    "venue": "Lecture notes in computer science",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Siqi Zhan",
+     "ZhiZhan Xu",
+     "TaoTao Wang",
+     "FangLi Li"
+    ],
+    "doi": "10.1007/s44443-026-00555-3",
+    "note": null,
+    "paper_id": "10.1007/s44443-026-00555-3",
+    "role": "benchmark",
+    "title": "iEnhancer-XLNet3D: an enhancer identification method based on 3-mer tokenization optimization and encoder deep perception",
+    "url": "https://doi.org/10.1007/s44443-026-00555-3",
+    "venue": "Journal of King Saud University - Computer and Information Sciences",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Ahmed Hamid Ahmed",
+     "Nesrin Aydın Atasoy"
+    ],
+    "doi": "10.1016/j.jestch.2026.102479",
+    "note": null,
+    "paper_id": "10.1016/j.jestch.2026.102479",
+    "role": "benchmark",
+    "title": "A hybrid sequence–annotation framework for clinvar variant pathogenicity prediction",
+    "url": "https://doi.org/10.1016/j.jestch.2026.102479",
+    "venue": "Engineering Science and Technology an International Journal",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Pratik Ramprasad",
+     "Nidhi Pai",
+     "Wei Pan"
+    ],
+    "doi": "10.1016/j.xhgg.2024.100347",
+    "note": null,
+    "paper_id": "10.1016/j.xhgg.2024.100347",
+    "role": "benchmark",
+    "title": "Enhancing personalized gene expression prediction from DNA sequences using genomic foundation models",
+    "url": "https://doi.org/10.1016/j.xhgg.2024.100347",
+    "venue": "Human Genetics and Genomics Advances",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Raşit Dinç",
+     "Nurittin Ardıç"
+    ],
+    "doi": "10.1038/s41392-026-02946-4",
+    "note": null,
+    "paper_id": "10.1038/s41392-026-02946-4",
+    "role": "benchmark",
+    "title": "Artificial intelligence in biomarker discovery for diseases: diagnostic and therapeutic prospects",
+    "url": "https://doi.org/10.1038/s41392-026-02946-4",
+    "venue": "Signal Transduction and Targeted Therapy",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Haonan Feng",
+     "Lang Wu",
+     "Bingxin Zhao",
+     "Chad Daniel Huff",
+     "Jianjun J. Zhang",
+     "Jia Wu",
+     "Lifeng Lin",
+     "Peng Wei",
+     "Chong Wu"
+    ],
+    "doi": "10.1038/s41467-025-65823-8",
+    "note": null,
+    "paper_id": "10.1038/s41467-025-65823-8",
+    "role": "benchmark",
+    "title": "Benchmarking DNA foundation models for genomic and genetic tasks",
+    "url": "https://doi.org/10.1038/s41467-025-65823-8",
+    "venue": "Nature Communications",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Ningyuan You",
+     "Chang Liu",
+     "Hai Bo Lin",
+     "Sai Wu",
+     "Gang Chen",
+     "Ning Shen"
+    ],
+    "doi": "10.1038/s41467-025-66899-y",
+    "note": null,
+    "paper_id": "10.1038/s41467-025-66899-y",
+    "role": "benchmark",
+    "title": "Benchmarking pre-trained genomic language models for RNA sequence-related predictive applications",
+    "url": "https://doi.org/10.1038/s41467-025-66899-y",
+    "venue": "Nature Communications",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Ameliia Alaeva",
+     "Natalya Mikhaylovskaya",
+     "Anna Lapteva",
+     "Vladislav Malkov",
+     "Alan G. Herbert",
+     "Andrey Borevskiy",
+     "Maria S. Poptsova"
+    ],
+    "doi": "10.1038/s41598-026-62633-w",
+    "note": null,
+    "paper_id": "10.1038/s41598-026-62633-w",
+    "role": "benchmark",
+    "title": "OmiXAI: An ensemble XAI pipeline for interpretable deep learning in omics data",
+    "url": "https://doi.org/10.1038/s41598-026-62633-w",
+    "venue": "Scientific Reports",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Javier Mendoza‐Revilla",
+     "Evan Trop",
+     "Liam Gonzalez",
+     "Maša Roller",
+     "Hugo Dalla-Torre",
+     "Bernardo P. de Almeida",
+     "Guillaume Richard",
+     "Jonathan Caton",
+     "Nicolás López Carranza",
+     "Marcin J. Skwark",
+     "Alexandre Laterre",
+     "Karim Beguir",
+     "Thomas Pierrot",
+     "Marie Lopez"
+    ],
+    "doi": "10.1038/s42003-024-06465-2",
+    "note": null,
+    "paper_id": "10.1038/s42003-024-06465-2",
+    "role": "benchmark",
+    "title": "A foundational large language model for edible plant genomes",
+    "url": "https://doi.org/10.1038/s42003-024-06465-2",
+    "venue": "Communications Biology",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Radha G",
+     "Sivakumar B"
+    ],
+    "doi": "10.1051/itmconf/20269001011",
+    "note": null,
+    "paper_id": "10.1051/itmconf/20269001011",
+    "role": "benchmark",
+    "title": "Evaluating DNA Sequence Encoding Methods for Taxonomic Classification Using Deep Learning Techniques: One-Hot Encoding, k-mer, and Embedding Schemes",
+    "url": "https://doi.org/10.1051/itmconf/20269001011",
+    "venue": "ITM Web of Conferences",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Thi Lan Nguyen",
+     "Hien Quang Kha",
+     "Phat Ky Nguyen",
+     "Le Huu Nhat Minh",
+     "Duc-Trong Le",
+     "Nguyen Quoc Khanh Le"
+    ],
+    "doi": "10.1093/bib/bbag064",
+    "note": null,
+    "paper_id": "10.1093/bib/bbag064",
+    "role": "benchmark",
+    "title": "EPINTLM: enhancer–promoter prediction with pretrained k-mer embeddings and residual cross-attention",
+    "url": "https://doi.org/10.1093/bib/bbag064",
+    "venue": "Briefings in Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "He Wang",
+     "Yikun Zhang",
+     "Jie Chen",
+     "Jian Zhan",
+     "Yaoqi Zhou"
+    ],
+    "doi": "10.1093/bib/bbag098",
+    "note": null,
+    "paper_id": "10.1093/bib/bbag098",
+    "role": "benchmark",
+    "title": "Zero-shot benchmarking of RNA language models in structural, functional, and evolutionary learning",
+    "url": "https://doi.org/10.1093/bib/bbag098",
+    "venue": "Briefings in Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Judit Juhász",
+     "Noémi Ligeti-Nagy",
+     "Babett Bodnár",
+     "János Juhász",
+     "Sándor Pongor",
+     "Balázs Ligeti"
+    ],
+    "doi": "10.1093/bioadv/vbaf188",
+    "note": null,
+    "paper_id": "10.1093/bioadv/vbaf188",
+    "role": "benchmark",
+    "title": "ProkBERT PhaStyle: accurate phage lifestyle prediction with pretrained genomic language models",
+    "url": "https://doi.org/10.1093/bioadv/vbaf188",
+    "venue": "Bioinformatics Advances",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Pablo Millán Arias",
+     "Niousha Sadjadi",
+     "Monireh Safari",
+     "ZeMing Gong",
+     "Austin T. Wang",
+     "Joakim Bruslund Haurum",
+     "Iuliia Zarubiieva",
+     "Dirk Steinke",
+     "Lila Kari A",
+     "Angel X Chang",
+     "Scott Lowe",
+     "Graham W. Taylor"
+    ],
+    "doi": "10.1093/bioadv/vbag054",
+    "note": null,
+    "paper_id": "10.1093/bioadv/vbag054",
+    "role": "benchmark",
+    "title": "BarcodeBERT: transformers for biodiversity analyses",
+    "url": "https://doi.org/10.1093/bioadv/vbag054",
+    "venue": "Bioinformatics Advances",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Sam Boshar",
+     "Evan Trop",
+     "Bernardo P. de Almeida",
+     "Liviu Copoiu",
+     "Thomas Pierrot"
+    ],
+    "doi": "10.1093/bioinformatics/btae529",
+    "note": null,
+    "paper_id": "10.1093/bioinformatics/btae529",
+    "role": "benchmark",
+    "title": "Are genomic language models all you need? Exploring genomic language models on protein downstream tasks",
+    "url": "https://doi.org/10.1093/bioinformatics/btae529",
+    "venue": "Bioinformatics",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Mahdi Baghbanzadeh",
+     "B Mann",
+     "Keith A. Crandall",
+     "Ali Rahnavard"
+    ],
+    "doi": "10.1093/molbev/msag139",
+    "note": null,
+    "paper_id": "10.1093/molbev/msag139",
+    "role": "benchmark",
+    "title": "seqLens: Optimizing Language Models for Genomic Predictions",
+    "url": "https://doi.org/10.1093/molbev/msag139",
+    "venue": "Molecular Biology and Evolution",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Сергей Андреевич Вилов",
+     "Matthias Heinig"
+    ],
+    "doi": "10.1093/nar/gkaf871",
+    "note": null,
+    "paper_id": "10.1093/nar/gkaf871",
+    "role": "benchmark",
+    "title": "Investigating the performance of foundation models on human 3′UTR sequences",
+    "url": "https://doi.org/10.1093/nar/gkaf871",
+    "venue": "Nucleic Acids Research",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Mark Ebbert",
+     "Anna Ho",
+     "Madeline L. Page",
+     "Bram Dutch",
+     "Blake K Byer",
+     "Kristen L. Hankins",
+     "Hady W. Sabra",
+     "Bernardo Aguzzoli Heberle",
+     "Mark E. Wadsworth",
+     "Grant A Fox",
+     "Bikram Karki",
+     "Caylin D. Hickey",
+     "David W. Fardo",
+     "Cody Bumgardner",
+     "Yasminka A. Jakubek",
+     "Cody J. Steely",
+     "Justin B. Miller"
+    ],
+    "doi": "10.1093/nar/gkag704",
+    "note": null,
+    "paper_id": "10.1093/nar/gkag704",
+    "role": "benchmark",
+    "title": "Systematic contextual biases in SegmentNT potentially relevant to other nucleotide transformer models",
+    "url": "https://doi.org/10.1093/nar/gkag704",
+    "venue": "Nucleic Acids Research",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Eyal Hadad",
+     "Noia Kogman",
+     "Lina Golan",
+     "Anva Avraham",
+     "Reut Ben-Hamo",
+     "Zhi Wei",
+     "Lior Rokach",
+     "Isana Veksler‐Lublinsky"
+    ],
+    "doi": "10.1093/nargab/lqag025",
+    "note": null,
+    "paper_id": "10.1093/nargab/lqag025",
+    "role": "benchmark",
+    "title": "Optimizing genomic language models for promoter prediction: a comparative study of tokenization and cross-species learning",
+    "url": "https://doi.org/10.1093/nargab/lqag025",
+    "venue": "NAR Genomics and Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Sajib Acharjee Dip",
+     "Uddip Acharjee Shuvo",
+     "Tran Chau",
+     "Haoqiu Song",
+     "Petra Choi",
+     "Xuan Wang",
+     "Liqing Zhang"
+    ],
+    "doi": "10.1101/2024.06.18.599629",
+    "note": null,
+    "paper_id": "10.1101/2024.06.18.599629",
+    "role": "benchmark",
+    "title": "PathoLM: Identifying pathogenicity from the DNA sequence through the Genome Foundation Model",
+    "url": "https://doi.org/10.1101/2024.06.18.599629",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Jacob A. West-Roberts",
+     "Joshua Kravitz",
+     "Nishant Jha",
+     "Andre Cornman",
+     "Yunha Hwang"
+    ],
+    "doi": "10.1101/2024.07.10.602933",
+    "note": null,
+    "paper_id": "10.1101/2024.07.10.602933",
+    "role": "benchmark",
+    "title": "Diverse Genomic Embedding Benchmark for functional evaluation across the tree of life",
+    "url": "https://doi.org/10.1101/2024.07.10.602933",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Ilaria Alfisi",
+     "Francesca Ciapi",
+     "Marta Baragli",
+     "Alberto Magi"
+    ],
+    "doi": "10.1101/2025.06.15.659748",
+    "note": null,
+    "paper_id": "10.1101/2025.06.15.659748",
+    "role": "benchmark",
+    "title": "Benchmarking DNA Foundation Models for zero-shot variant effect prediction: the role of context, training, and architecture",
+    "url": "https://doi.org/10.1101/2025.06.15.659748",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Maryam Haghani",
+     "Krishna Vamsi Dhulipalla",
+     "Song Li"
+    ],
+    "doi": "10.1101/2025.07.14.664780",
+    "note": null,
+    "paper_id": "10.1101/2025.07.14.664780",
+    "role": "benchmark",
+    "title": "Harnessing DNA Foundation Models for Cross-Species Transcription Factor Binding Site Prediction in Plant Genomes",
+    "url": "https://doi.org/10.1101/2025.07.14.664780",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Ke Ding",
+     "Brian John Parker",
+     "Jiayu Wen"
+    ],
+    "doi": "10.1101/2025.08.17.670700",
+    "note": null,
+    "paper_id": "10.1101/2025.08.17.670700",
+    "role": "benchmark",
+    "title": "NucEL: Single-Nucleotide ELECTRA-Style Genomic Pre-training for Efficient and Interpretable Representations",
+    "url": "https://doi.org/10.1101/2025.08.17.670700",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Daniel Berman",
+     "Daniel Jimenez",
+     "Stanley Ta",
+     "Brian B. Merritt",
+     "Jeremy D. Ratcliff",
+     "Vijay Narayan"
+    ],
+    "doi": "10.1101/2025.08.21.671544",
+    "note": null,
+    "paper_id": "10.1101/2025.08.21.671544",
+    "role": "benchmark",
+    "title": "Evaluating the Effectiveness of Parameter-Efficient Fine-Tuning in Genomic Classification Tasks",
+    "url": "https://doi.org/10.1101/2025.08.21.671544",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Hussin El Rashidy",
+     "Ali Saadat",
+     "Jacques Fellay"
+    ],
+    "doi": "10.1101/2025.11.19.689326",
+    "note": null,
+    "paper_id": "10.1101/2025.11.19.689326",
+    "role": "benchmark",
+    "title": "Zygosity-Aware DNA Language Modeling Improves Ancestry and Gene Expression Prediction",
+    "url": "https://doi.org/10.1101/2025.11.19.689326",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "M P Anjana",
+     "K S Arun"
+    ],
+    "doi": "10.1109/aicaps68631.2026.11452691",
+    "note": null,
+    "paper_id": "10.1109/aicaps68631.2026.11452691",
+    "role": "benchmark",
+    "title": "Enhancing Genetic Variant Pathogenicity Classification using Mutation-Aware Transformer Architectures",
+    "url": "https://doi.org/10.1109/aicaps68631.2026.11452691",
+    "venue": "International Conference on Advances in Intelligent Computing and Applications (AICAPS)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Xiaotai Huang",
+     "C. L. Philip Chen",
+     "Jiayue Wang",
+     "Bingbo Wang",
+     "Xingli Guo",
+     "Lin Gao"
+    ],
+    "doi": "10.1109/bibm66473.2025.11356346",
+    "note": null,
+    "paper_id": "10.1109/bibm66473.2025.11356346",
+    "role": "benchmark",
+    "title": "DCAM: A Deep Context-Aware Model for Predicting the Function of Genomic Regulatory Regions",
+    "url": "https://doi.org/10.1109/bibm66473.2025.11356346",
+    "venue": "IEEE International Conference on Bioinformatics and Biomedicine (BIBM)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Kepeng Lin",
+     "Qizhe Zhang",
+     "Rui Wang",
+     "Xuehai Hu",
+     "Wei Min Xu"
+    ],
+    "doi": "10.1109/bibm66473.2025.11356776",
+    "note": null,
+    "paper_id": "10.1109/bibm66473.2025.11356776",
+    "role": "benchmark",
+    "title": "PlantBiMoE: A Bidirectional Foundation Model with Sparsemoe for Plant Genomes",
+    "url": "https://doi.org/10.1109/bibm66473.2025.11356776",
+    "venue": "IEEE International Conference on Bioinformatics and Biomedicine (BIBM)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Dung Tri Nguyen",
+     "Anh Thi Minh Tran",
+     "Quan Trung Do",
+     "Dat Huu Ngo",
+     "Nguyen Doan Hieu Nguyen",
+     "Duc Ngoc Minh Dang"
+    ],
+    "doi": "10.1109/ecti-con68836.2026.11608505",
+    "note": null,
+    "paper_id": "10.1109/ecti-con68836.2026.11608505",
+    "role": "benchmark",
+    "title": "Benchmarking DNA Foundation Models for Splice Site Prediction Across Varying Context Lengths",
+    "url": "https://doi.org/10.1109/ecti-con68836.2026.11608505",
+    "venue": "International Conference on Electrical Engineering/Electronics, Computer, Telecommunications and Information Technology (ECTI-CON)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Reem Al-Saidi"
+    ],
+    "doi": "10.1109/icdew71238.2026.00031",
+    "note": null,
+    "paper_id": "10.1109/icdew71238.2026.00031",
+    "role": "benchmark",
+    "title": "How Private Are Genomic Embeddings? Assessing and Mitigating Reconstruction Attacks on Transformer-Based DNA Language Models Embeddings",
+    "url": "https://doi.org/10.1109/icdew71238.2026.00031",
+    "venue": "IEEE International Conference on Data Engineering Workshops (ICDEW)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Yitong Ma",
+     "Zilin Ma",
+     "Yujie Jia",
+     "Kun Bi",
+     "Gang Yan"
+    ],
+    "doi": "10.1145/3770855.3818839",
+    "note": null,
+    "paper_id": "10.1145/3770855.3818839",
+    "role": "benchmark",
+    "title": "ANCHOR: Aligned Non-contextual and Contextual Hybridization with On-condition Calibration for Per-Base Risk Prediction",
+    "url": "https://doi.org/10.1145/3770855.3818839",
+    "venue": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Alexander Nemecek",
+     "Wenbiao Li",
+     "Xiaoqian Jiang",
+     "Jaideep S. Vaidya",
+     "Erman Ayday"
+    ],
+    "doi": "10.1145/3807503.3819470",
+    "note": null,
+    "paper_id": "10.1145/3807503.3819470",
+    "role": "benchmark",
+    "title": "Quantifying Memorization and Privacy Risks in Genomic Language Models",
+    "url": "https://doi.org/10.1145/3807503.3819470",
+    "venue": "ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Mpho Mokoatle",
+     "Vukosi N. Marivate",
+     "Darlington S. Mapiye",
+     "Riana M. S. Bornman",
+     "Vanessa M. Hayes"
+    ],
+    "doi": "10.1186/s12859-025-06291-1",
+    "note": null,
+    "paper_id": "10.1186/s12859-025-06291-1",
+    "role": "benchmark",
+    "title": "Fine-tuning a sentence transformer for DNA",
+    "url": "https://doi.org/10.1186/s12859-025-06291-1",
+    "venue": "BMC Bioinformatics",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Zohreh Piroozeh",
+     "İldem Akerman",
+     "Olga V. Kalinina",
+     "Stefan Kesselheim",
+     "Alina Bazarova"
+    ],
+    "doi": "10.1186/s12859-026-06562-5",
+    "note": null,
+    "paper_id": "10.1186/s12859-026-06562-5",
+    "role": "benchmark",
+    "title": "Interpretable prediction of DNA replication origins in S. cerevisiae using DNABERT and DNABERT-2",
+    "url": "https://doi.org/10.1186/s12859-026-06562-5",
+    "venue": "BMC Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Raghav Awasthi",
+     "Gayan Samuditha Mend Mend Arachchige",
+     "Xiaofeng Zhu"
+    ],
+    "doi": "10.1186/s12864-025-11913-2",
+    "note": null,
+    "paper_id": "10.1186/s12864-025-11913-2",
+    "role": "benchmark",
+    "title": "Unsupervised evaluation of pre-trained DNA language model embeddings",
+    "url": "https://doi.org/10.1186/s12864-025-11913-2",
+    "venue": "BMC Genomics",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Radim Krupička",
+     "Mariana Komárková",
+     "Bohuslav Dvorský",
+     "Kateřina Kollinová",
+     "Ondřej Klempíř"
+    ],
+    "doi": "10.1186/s13040-026-00553-1",
+    "note": null,
+    "paper_id": "10.1186/s13040-026-00553-1",
+    "role": "benchmark",
+    "title": "Benchmarking genomic foundation models for binary classification of gene fusion breakpoints from DNA sequences",
+    "url": "https://doi.org/10.1186/s13040-026-00553-1",
+    "venue": "BioData Mining",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Chang Lei"
+    ],
+    "doi": "10.14293/pr2199.003545.v1",
+    "note": null,
+    "paper_id": "10.14293/pr2199.003545.v1",
+    "role": "benchmark",
+    "title": "Counterfactual Consistency as a Metric for Biological Foundation Models",
+    "url": "https://doi.org/10.14293/pr2199.003545.v1",
+    "venue": null,
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Chang Lei"
+    ],
+    "doi": "10.14293/pr2199.003545.v2",
+    "note": null,
+    "paper_id": "10.14293/pr2199.003545.v2",
+    "role": "benchmark",
+    "title": "Counterfactual Consistency as a Metric for Biological Foundation Models",
+    "url": "https://doi.org/10.14293/pr2199.003545.v2",
+    "venue": null,
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Kazuki Nakamae",
+     "Hidemasa Bono"
+    ],
+    "doi": "10.21769/bioprotoc.5676",
+    "note": null,
+    "paper_id": "10.21769/bioprotoc.5676",
+    "role": "benchmark",
+    "title": "Workflow for Fine-Tuning and Evaluating DNA Language Models for Specific Genomics Issues",
+    "url": "https://doi.org/10.21769/bioprotoc.5676",
+    "venue": "BIO-PROTOCOL",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Soumyadeep Roy",
+     "Shamik Sural",
+     "Niloy Ganguly"
+    ],
+    "doi": "10.3233/faia240864",
+    "note": null,
+    "paper_id": "10.3233/faia240864",
+    "role": "benchmark",
+    "title": "Unlocking Efficiency: Adaptive Masking for Gene Transformer Models",
+    "url": "https://doi.org/10.3233/faia240864",
+    "venue": "Frontiers in artificial intelligence and applications",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Xiaosheng Gao",
+     "Shunyao Wu",
+     "Weihua Pan"
+    ],
+    "doi": "10.3390/app16041745",
+    "note": null,
+    "paper_id": "10.3390/app16041745",
+    "role": "benchmark",
+    "title": "Benchmark of Genomic Language Models on Human and Rice Genomic Tasks",
+    "url": "https://doi.org/10.3390/app16041745",
+    "venue": "Applied Sciences",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Megha Hegde",
+     "Jean‐Christophe Nebel",
+     "Farzana Rahman"
+    ],
+    "doi": "10.3390/genes16111358",
+    "note": null,
+    "paper_id": "10.3390/genes16111358",
+    "role": "benchmark",
+    "title": "Reaping the Fruits of LLM Pruning: Towards Small Language Models for Efficient Non-Coding Variant Effect Prediction",
+    "url": "https://doi.org/10.3390/genes16111358",
+    "venue": "Genes",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Xu Yang",
+     "Weiwei Shen",
+     "Yixue Li",
+     "Liucun Zhu",
+     "Tao Huang"
+    ],
+    "doi": "10.3390/ijms27177565",
+    "note": null,
+    "paper_id": "10.3390/ijms27177565",
+    "role": "benchmark",
+    "title": "Cross-Virus RNA Language Models for Within-Family RNA–RNA Interaction Prediction in SARS-CoV-2 and Porcine Deltacoronavirus",
+    "url": "https://doi.org/10.3390/ijms27177565",
+    "venue": "International Journal of Molecular Sciences",
+    "year": 2026
+   },
+   {
+    "authors": [
      "Aman Patel",
      "Arpita Singhal",
      "Austin Wang",
@@ -1658,6 +6616,251 @@
     "url": "https://doi.org/10.52202/079017-1981",
     "venue": "Advances in Neural Information Processing Systems 37",
     "year": 2024
+   },
+   {
+    "authors": [
+     "Shiwen Ni",
+     "Shuaimin Li",
+     "Shijian Wang",
+     "Wenzhi Xue",
+     "Luoxi Zhang",
+     "Liyang Fan",
+     "Xinping Bi",
+     "Yitai Li",
+     "Chengguang Gan",
+     "iarui Jin",
+     "Yuan Lu",
+     "Ahmadreza Argha",
+     "Hamid Alinejad-Rokny",
+     "Tong Si",
+     "Min Yang",
+     "Teng Wang"
+    ],
+    "doi": "10.64898/2025.12.03.692003",
+    "note": null,
+    "paper_id": "10.64898/2025.12.03.692003",
+    "role": "benchmark",
+    "title": "Decoding Prokaryotic Whole Genomes with a Product-Contextualized Large Language Model",
+    "url": "https://doi.org/10.64898/2025.12.03.692003",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Simone Rancati",
+     "Pablo Arozarena Donelli",
+     "Giovanna Nicora",
+     "Laura Bergomi",
+     "Tommaso Mario Buonocore",
+     "Michael Aaron Sy",
+     "Sakshi Pandey",
+     "Mattia Prosperi",
+     "Marco Salemi",
+     "Riccardo Bellazzi",
+     "Christina A. Boucher",
+     "Enea Parimbelli",
+     "Simone Marini"
+    ],
+    "doi": "10.64898/2025.12.12.693901",
+    "note": null,
+    "paper_id": "10.64898/2025.12.12.693901",
+    "role": "benchmark",
+    "title": "Vir2vec: A Genome-Wide Viral Embedding",
+    "url": "https://doi.org/10.64898/2025.12.12.693901",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Pratik Dutta",
+     "Jack Vaska",
+     "Pallavi Surana",
+     "Rekha Sathian",
+     "Max Chao",
+     "Zhihan Zhou",
+     "Han Liu",
+     "Ramana V. Davuluri"
+    ],
+    "doi": "10.64898/2026.03.18.712700",
+    "note": null,
+    "paper_id": "10.64898/2026.03.18.712700",
+    "role": "benchmark",
+    "title": "HViLM: A Foundation Model for Viral Genomics Enables Multi-Task Prediction of Pathogenicity, Transmissibility, and Host Tropism",
+    "url": "https://doi.org/10.64898/2026.03.18.712700",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Alena Aspidova",
+     "Yuri Kuratov",
+     "Artem Shadskiy",
+     "Mikhail Burtsev",
+     "Veniamin Fishman"
+    ],
+    "doi": "10.64898/2026.04.21.719816",
+    "note": null,
+    "paper_id": "10.64898/2026.04.21.719816",
+    "role": "benchmark",
+    "title": "Back to BERT in 2026: ModernGENA as a Strong, Efficient Baseline for DNA Foundation Models",
+    "url": "https://doi.org/10.64898/2026.04.21.719816",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Keisuke Hirota",
+     "Koichi Higashi",
+     "Ken Kurokawa",
+     "Takuji Yamada"
+    ],
+    "doi": "10.64898/2026.05.12.724296",
+    "note": null,
+    "paper_id": "10.64898/2026.05.12.724296",
+    "role": "benchmark",
+    "title": "Benchmarking long-context genome language models on biosynthetic gene clusters",
+    "url": "https://doi.org/10.64898/2026.05.12.724296",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Eliot Kmiec",
+     "Samuel O'Brien",
+     "Matthew McCoy"
+    ],
+    "doi": "10.64898/2026.05.13.725007",
+    "note": null,
+    "paper_id": "10.64898/2026.05.13.725007",
+    "role": "benchmark",
+    "title": "Hidden State Genomics: Graph-Based Analysis of Sparse Auto-Encoder Feature Activity in Genomic Language Models",
+    "url": "https://doi.org/10.64898/2026.05.13.725007",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "McClain Thiel",
+     "Chris P. Barnes"
+    ],
+    "doi": "10.64898/2026.05.19.725242",
+    "note": null,
+    "paper_id": "10.64898/2026.05.19.725242",
+    "role": "benchmark",
+    "title": "PlasmidLM: A Promptable DNA Language Model via Verifiable-Reward Post-Training",
+    "url": "https://doi.org/10.64898/2026.05.19.725242",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Chao Fang",
+     "Fangming Yang",
+     "Hao Hou",
+     "Huahui Ren",
+     "Huanzi Zhong",
+     "Huinan Xu",
+     "Jiahao Zhang",
+     "Jianxin Su",
+     "Jielun Cai",
+     "Jingnan Yuan",
+     "Leo Jingyu Lee",
+     "Junhua Li",
+     "Kui Wu",
+     "Lihui Wang",
+     "Liwen Xiong",
+     "Long Hou",
+     "Meng Ni",
+     "Shida Zhu",
+     "Shiping Liu",
+     "Sirong Liu",
+     "Ting Zhu",
+     "Xiaofang Chen",
+     "Xiaofeng Wang",
+     "Zhan Xiao",
+     "Xin Jin",
+     "Xinting Liu",
+     "Xuyang Feng",
+     "Yinbin Qiu",
+     "Yujing Liu",
+     "Yupeng Zhou",
+     "Yuxiang Lin",
+     "Zhaorong Li",
+     "黃周明",
+     "Zhun Shi"
+    ],
+    "doi": "10.64898/2026.05.21.726868",
+    "note": null,
+    "paper_id": "10.64898/2026.05.21.726868",
+    "role": "benchmark",
+    "title": "Genos-m: a foundation model for human-associated microbial genomes",
+    "url": "https://doi.org/10.64898/2026.05.21.726868",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Dan Ofer",
+     "Stav Zok",
+     "Michal Linial B"
+    ],
+    "doi": "10.64898/2026.05.31.729117",
+    "note": null,
+    "paper_id": "10.64898/2026.05.31.729117",
+    "role": "benchmark",
+    "title": "MAGI: Mechanistic Consequences of Genetic Variants via Genomic Foundation Models",
+    "url": "https://doi.org/10.64898/2026.05.31.729117",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Yafan Zhang",
+     "Arunkumar Ganesan",
+     "Xingcheng Lin"
+    ],
+    "doi": "10.64898/2026.06.01.729367",
+    "note": null,
+    "paper_id": "10.64898/2026.06.01.729367",
+    "role": "benchmark",
+    "title": "R-loop Prediction Reveals Generalization Limits of DNA Foundation Models Beyond Regulatory Genomics",
+    "url": "https://doi.org/10.64898/2026.06.01.729367",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Vojtěch Máčala",
+     "Petr Šimeček"
+    ],
+    "doi": "10.64898/2026.06.10.731316",
+    "note": null,
+    "paper_id": "10.64898/2026.06.10.731316",
+    "role": "benchmark",
+    "title": "DNA Compression with Genomic Language Models: Tokenization, Benchmarking, and an Information-Content Map",
+    "url": "https://doi.org/10.64898/2026.06.10.731316",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Fabiana Rodrigues de Góes",
+     "Makanaka Mazheke",
+     "Amanda Piveta Schnepper",
+     "Aparajita Karmakar",
+     "Nayane de Souza",
+     "Robson Francisco Carvalho",
+     "Mark Basham",
+     "Alexandre Rossi Paschoal"
+    ],
+    "doi": "10.64898/2026.06.16.732659",
+    "note": null,
+    "paper_id": "10.64898/2026.06.16.732659",
+    "role": "benchmark",
+    "title": "Systematic Evaluation of Feature Representations for Cancer-Associated sORF Prediction in Non-coding RNA",
+    "url": "https://doi.org/10.64898/2026.06.16.732659",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
    },
    {
     "authors": [
@@ -1677,6 +6880,241 @@
     "url": "https://arxiv.org/abs/2311.12570",
     "venue": null,
     "year": 2023
+   },
+   {
+    "authors": [
+     "Bernardo P. de Almeida",
+     "Guillaume Richard",
+     "Hugo Dalla-Torre",
+     "Christopher Frederik Blum",
+     "Lorenz Hexemer",
+     "Priyanka Pandey",
+     "Stefan Laurent",
+     "Chandana Rajesh",
+     "Marie Lopez",
+     "Alexandre Laterre",
+     "Maren Lang",
+     "Uğur Şahin",
+     "Karim Beguir",
+     "Thomas Pierrot"
+    ],
+    "doi": "10.1038/s42256-025-01047-1",
+    "note": null,
+    "paper_id": "10.1038/s42256-025-01047-1",
+    "role": "critique",
+    "title": "A multimodal conversational agent for DNA, RNA and protein tasks",
+    "url": "https://doi.org/10.1038/s42256-025-01047-1",
+    "venue": "Nature Machine Intelligence",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Xu Yang",
+     "Qingfa Xiao",
+     "Yucheng Xu",
+     "Jixin Yang",
+     "Yusen Hou",
+     "Weicai Long",
+     "Miaojun Huang",
+     "Yanlin Zhang"
+    ],
+    "doi": "10.1093/bib/bbag182",
+    "note": null,
+    "paper_id": "10.1093/bib/bbag182",
+    "role": "critique",
+    "title": "NyxBind: enhancing deep neural representations for transcription factor binding site prediction via contrastive learning",
+    "url": "https://doi.org/10.1093/bib/bbag182",
+    "venue": "Briefings in Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Lluis Borràs Ferrís",
+     "Riccardo Fratti",
+     "Valerio Nucera",
+     "Valentin Oreiller",
+     "Barbara Di Camillo",
+     "Manfredo Atzori",
+     "Henning Müller"
+    ],
+    "doi": "10.1093/bib/bbag380",
+    "note": null,
+    "paper_id": "10.1093/bib/bbag380",
+    "role": "critique",
+    "title": "An overview of self-supervised deep learning applications to molecular data",
+    "url": "https://doi.org/10.1093/bib/bbag380",
+    "venue": "Briefings in Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Weicai Long",
+     "Houcheng Su",
+     "Jiaqi Xiong",
+     "Yanlin Zhang"
+    ],
+    "doi": "10.1093/bioinformatics/btaf229",
+    "note": null,
+    "paper_id": "10.1093/bioinformatics/btaf229",
+    "role": "critique",
+    "title": "MutBERT: probabilistic genome representation improves genomics foundation models",
+    "url": "https://doi.org/10.1093/bioinformatics/btaf229",
+    "venue": "Bioinformatics",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Vlastimil Martinek",
+     "Andrea Gariboldi",
+     "Dimosthenis Tzimotoudis",
+     "Mark Galea",
+     "Elissavet Zacharopoulou",
+     "Aitor Alberdi Escudero",
+     "Edward Blake",
+     "David Čechák",
+     "Luke Cassar",
+     "Alessandro Balestrucci",
+     "Panagiotis Alexiou"
+    ],
+    "doi": "10.1093/bioinformatics/btag250",
+    "note": null,
+    "paper_id": "10.1093/bioinformatics/btag250",
+    "role": "critique",
+    "title": "Agentomics: an agentic system that autonomously develops novel state-of-the-art solutions for biomedical machine learning tasks",
+    "url": "https://doi.org/10.1093/bioinformatics/btag250",
+    "venue": "Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Guillaume Richard",
+     "Bernardo P. de Almeida",
+     "Hugo Dalla-Torre",
+     "Christopher Frederik Blum",
+     "Lorenz Hexemer",
+     "Priyanka Pandey",
+     "Stefan Laurent",
+     "M. Lopez",
+     "Alexandre Laterre",
+     "Maren Lang",
+     "Uğur Şahin",
+     "Karim Beguir",
+     "Thomas Pierrot"
+    ],
+    "doi": "10.1101/2024.04.30.591835",
+    "note": null,
+    "paper_id": "10.1101/2024.04.30.591835",
+    "role": "critique",
+    "title": "ChatNT: A Multimodal Conversational Agent for DNA, RNA and Protein Tasks",
+    "url": "https://doi.org/10.1101/2024.04.30.591835",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Zanyi Wang",
+     "Qinze Yu",
+     "Yu Li"
+    ],
+    "doi": "10.1101/2024.11.12.623150",
+    "note": null,
+    "paper_id": "10.1101/2024.11.12.623150",
+    "role": "critique",
+    "title": "VIRALpre: Genomic Foundation Model Embedding Fused with K-mer Feature for Virus Identification",
+    "url": "https://doi.org/10.1101/2024.11.12.623150",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2024
+   },
+   {
+    "authors": [
+     "Leo Tianlai Chen",
+     "Rishab Pulugurta",
+     "Pranay Vure",
+     "Pranam Chatterjee"
+    ],
+    "doi": "10.1101/2025.05.14.654102",
+    "note": null,
+    "paper_id": "10.1101/2025.05.14.654102",
+    "role": "critique",
+    "title": "DPAC: Prediction and Design of Protein-DNA Interactions via Sequence-Based Contrastive Learning",
+    "url": "https://doi.org/10.1101/2025.05.14.654102",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Srijan Atti",
+     "Shankar Subramaniam"
+    ],
+    "doi": "10.1101/2025.06.26.661767",
+    "note": null,
+    "paper_id": "10.1101/2025.06.26.661767",
+    "role": "critique",
+    "title": "Fundamental Limitations of Foundation Models in Single-Cell Transcriptomics",
+    "url": "https://doi.org/10.1101/2025.06.26.661767",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Xin Wang",
+     "SiCheng Xiang",
+     "Yuhai Zhao",
+     "Qiaoming Liu",
+     "Benzhi Dong",
+     "Guohua Wang"
+    ],
+    "doi": "10.1109/bibm66473.2025.11356602",
+    "note": null,
+    "paper_id": "10.1109/bibm66473.2025.11356602",
+    "role": "critique",
+    "title": "HGANTLDA: A Hybrid Framework Integrating Sequence Language Modeling and Heterogeneous Graph Attention for lncRNA–Disease Association Prediction",
+    "url": "https://doi.org/10.1109/bibm66473.2025.11356602",
+    "venue": "IEEE International Conference on Bioinformatics and Biomedicine (BIBM)",
+    "year": 2025
+   },
+   {
+    "authors": [
+     "Samad Zabihi",
+     "Sattar Hashemi",
+     "Eghbal G. Mansoori"
+    ],
+    "doi": "10.1186/s12859-026-06367-6",
+    "note": null,
+    "paper_id": "10.1186/s12859-026-06367-6",
+    "role": "critique",
+    "title": "EDEN: multiscale expected density of nucleotide encoding for enhanced DNA sequence classification with hybrid deep learning",
+    "url": "https://doi.org/10.1186/s12859-026-06367-6",
+    "venue": "BMC Bioinformatics",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Jayson Gutiérrez",
+     "J. Alvarez"
+    ],
+    "doi": "10.64898/2026.04.26.720952",
+    "note": null,
+    "paper_id": "10.64898/2026.04.26.720952",
+    "role": "critique",
+    "title": "Whole-Proteome ESM-2 Embeddings Recover Taxonomy and Enable Geometry-Aware Triage of Foodborne Bacterial Genomes",
+    "url": "https://doi.org/10.64898/2026.04.26.720952",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
+   },
+   {
+    "authors": [
+     "Yaqi Su",
+     "Yu-Jen Lin"
+    ],
+    "doi": "10.64898/2026.05.06.723362",
+    "note": null,
+    "paper_id": "10.64898/2026.05.06.723362",
+    "role": "critique",
+    "title": "A fine-tuned genomic language model captures nucleotide-level information overlooked by missense variant impact predictors",
+    "url": "https://doi.org/10.64898/2026.05.06.723362",
+    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+    "year": 2026
    }
   ],
   "primary_paper_id": "10.1038/s41592-024-02523-z",
@@ -1866,6 +7304,22 @@
     "url": "https://doi.org/10.1093/nar/gkac989",
     "venue": "Nucleic Acids Research",
     "year": 2022
+   },
+   {
+    "authors": [
+     "Javier Guerrero-Flores",
+     "Barbara Viegas",
+     "Marian A. Martínez‐Balbás",
+     "Xavier de la Cruz"
+    ],
+    "doi": "10.1186/s13148-026-02176-z",
+    "note": null,
+    "paper_id": "10.1186/s13148-026-02176-z",
+    "role": "benchmark",
+    "title": "CRONDEX: a web-based platform for exploring links between chromatin-related genes and neurodevelopmental disorders",
+    "url": "https://doi.org/10.1186/s13148-026-02176-z",
+    "venue": "Clinical Epigenetics",
+    "year": 2026
    }
   ],
   "primary_paper_id": "10.1093/nar/gkac989",
@@ -2038,6 +7492,84 @@
     "url": "https://doi.org/10.17504/protocols.io.zcpf2vn",
     "venue": null,
     "year": 2019
+   },
+   {
+    "authors": [
+     "Riward Campelo Morillo",
+     "Chantal T. Harris",
+     "Kit Kennedy",
+     "Samuel R Henning",
+     "Björn F.C. Kafsack"
+    ],
+    "doi": "10.26508/lsa.202201778",
+    "note": null,
+    "paper_id": "10.26508/lsa.202201778",
+    "role": "benchmark",
+    "title": "Genome-wide profiling of histone modifications in Plasmodium falciparum using CUT&RUN",
+    "url": "https://doi.org/10.26508/lsa.202201778",
+    "venue": "Life Science Alliance",
+    "year": 2022
+   },
+   {
+    "authors": [
+     "Felicity J. Emerson",
+     "Siu Sylvia Lee"
+    ],
+    "doi": "10.1002/cpz1.445",
+    "note": null,
+    "paper_id": "10.1002/cpz1.445",
+    "role": "application",
+    "title": "CUT&RUN for Chromatin Profiling in Caenorhabditis elegans",
+    "url": "https://doi.org/10.1002/cpz1.445",
+    "venue": "Current Protocols",
+    "year": 2022
+   },
+   {
+    "authors": [
+     "Srinivasa Abishek Prakash",
+     "Joan Barau"
+    ],
+    "doi": "10.1007/978-1-0716-0958-3_17",
+    "note": null,
+    "paper_id": "10.1007/978-1-0716-0958-3_17",
+    "role": "application",
+    "title": "Chromatin Profiling in Mouse Embryonic Germ Cells by CUT&RUN",
+    "url": "https://doi.org/10.1007/978-1-0716-0958-3_17",
+    "venue": "Methods in molecular biology",
+    "year": 2020
+   },
+   {
+    "authors": [
+     "Tessa M. Firestone",
+     "Bryan J. Venters",
+     "Katherine Novitzky",
+     "Liz Marie Albertorio-Sáez",
+     "Courtney A. Barnes",
+     "Karlie N. Fedder-Semmes",
+     "Nathan W Hall",
+     "Allison R. Hickman",
+     "Mark Kaderli",
+     "Carolina P. Lin",
+     "Matthew R. Marunde",
+     "Danielle N Maryanski",
+     "Kelsey E. Noll",
+     "Leslie Lewis",
+     "Jennifer A. Spengler",
+     "Martis W. Cowles",
+     "Zu‐Wen Sun",
+     "Michael‐Christopher Keogh",
+     "Andrea L. Johnstone",
+     "Ellen N Weinzapfel",
+     "Lu Sun"
+    ],
+    "doi": "10.1007/978-1-0716-5072-1_5",
+    "note": null,
+    "paper_id": "10.1007/978-1-0716-5072-1_5",
+    "role": "application",
+    "title": "High-Efficiency Genomic Mapping of Chromatin-Associated Targets with CUT&RUN",
+    "url": "https://doi.org/10.1007/978-1-0716-5072-1_5",
+    "venue": "Methods in molecular biology",
+    "year": 2026
    }
   ],
   "primary_paper_id": "10.17504/protocols.io.zcpf2vn",

@@ -1,0 +1,49 @@
+# Resources ROADMAP.md M4 names, that the discovery queries did not surface.
+#
+# Of the ~25 resources M4 lists by name, a search over 675 candidates found
+# only six. These are the rest: canonical, heavily cited, and invisible to a
+# keyword query because the queries look for the language of new work.
+#
+# `name`, `type` and `fate_axis` are curation calls and are written here.
+# `paper` is a DOI, an `arxiv:` id, or a title -- a title has to come back
+# matching, so a wrong one is reported rather than admitted.
+
+- name: Basenji
+  type: model
+  fate_axis: [where]
+  paper: 10.1101/gr.227819.117
+
+- name: Sei
+  type: model
+  fate_axis: [where]
+  paper: 10.1038/s41588-022-01102-2
+
+- name: scBasset
+  type: model
+  fate_axis: [where]
+  paper: 10.1038/s41592-022-01562-8
+
+- name: EpiGePT
+  type: model
+  fate_axis: [where]
+  paper: 10.1186/s13059-024-03449-7
+
+- name: HyenaDNA
+  type: model
+  fate_axis: [how]
+  paper: arxiv:2306.15794
+
+- name: GENA-LM
+  type: model
+  fate_axis: [how]
+  paper: 10.1093/nar/gkae1310
+
+- name: DNALongBench
+  type: benchmark
+  fate_axis: [where]
+  paper: "DNALONGBENCH: A Benchmark Suite for Long-Range DNA Prediction Tasks"
+
+- name: GUE
+  type: benchmark
+  fate_axis: [how]
+  paper: arxiv:2306.15006

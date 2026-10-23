@@ -76,6 +76,58 @@
     - paper_id: 10.64898/2026.02.04.703796
       role: benchmark
       note: Fine-mapping reproducibility vs GTEx/TOPMed/MAGE.
+    - paper_id: 10.64898/2026.02.22.707219
+      role: benchmark
+    - paper_id: 10.64898/2026.01.21.700827
+      role: critique
+    - paper_id: 10.1101/2025.11.09.687505
+      role: critique
+    - paper_id: 10.3390/genes16111358
+      role: benchmark
+    - paper_id: 10.1186/s13059-026-03935-0
+      role: benchmark
+    - paper_id: 10.1101/2025.05.26.656171
+      role: benchmark
+    - paper_id: 10.1093/bib/bbae110
+      role: benchmark
+    - paper_id: 10.3389/fpls.2025.1678483
+      role: benchmark
+    - paper_id: 10.7554/elife.88039
+      role: benchmark
+    - paper_id: 10.7554/elife.88039.2
+      role: benchmark
+    - paper_id: 10.1016/j.omtn.2023.06.019
+      role: benchmark
+    - paper_id: 10.1186/s13059-024-03335-2
+      role: benchmark
+    - paper_id: 10.1101/2025.03.27.645711
+      role: critique
+    - paper_id: 10.64898/2026.06.05.730316
+      role: benchmark
+    - paper_id: 10.7554/elife.88039.3
+      role: benchmark
+    - paper_id: 10.7554/elife.88039.1
+      role: benchmark
+    - paper_id: 10.1038/s41467-024-54441-5
+      role: critique
+    - paper_id: 10.1016/j.jjcc.2026.06.007
+      role: critique
+    - paper_id: 10.1101/2024.07.05.602265
+      role: benchmark
+    - paper_id: 10.1109/tcbbio.2026.3657361
+      role: benchmark
+    - paper_id: 10.3389/fgene.2026.1896629
+      role: benchmark
+    - paper_id: 10.1016/j.xhgg.2024.100347
+      role: benchmark
+    - paper_id: 10.1186/s13059-023-02899-9
+      role: critique
+    - paper_id: 10.1093/nsr/nwae355
+      role: critique
+    - paper_id: 10.1101/2022.09.15.508087
+      role: critique
+    - paper_id: 10.1109/icmla66185.2025.00201
+      role: benchmark
 
 - entity_id: model:borzoi
   type: model
@@ -136,6 +188,40 @@
     - paper_id: 10.64898/2026.02.04.703796
       role: benchmark
       note: Fine-mapping reproducibility vs GTEx/TOPMed/MAGE.
+    - paper_id: 10.64898/2026.02.22.707219
+      role: benchmark
+    - paper_id: 10.3390/genes16101223
+      role: benchmark
+    - paper_id: 10.64898/2026.06.22.730889
+      role: benchmark
+    - paper_id: 10.64898/2026.01.21.700827
+      role: critique
+    - paper_id: 10.1038/s41592-026-03057-2
+      role: benchmark
+    - paper_id: 10.64898/2025.12.18.694875
+      role: benchmark
+    - paper_id: 10.1101/2025.11.09.687505
+      role: critique
+    - paper_id: 10.1101/2025.10.14.682350
+      role: critique
+    - paper_id: 10.1186/s13059-026-03935-0
+      role: benchmark
+    - paper_id: 10.1101/2025.05.26.656171
+      role: benchmark
+    - paper_id: 10.1038/s41592-025-02854-5
+      role: critique
+    - paper_id: 10.1101/2025.02.13.638190
+      role: benchmark
+    - paper_id: 10.1101/2025.04.07.647656
+      role: critique
+    - paper_id: 10.1101/2025.09.26.678908
+      role: benchmark
+    - paper_id: 10.64898/2026.02.18.706660
+      role: benchmark
+    - paper_id: 10.1101/2025.05.06.25327057
+      role: benchmark
+    - paper_id: 10.64898/2026.10.12.758580
+      role: benchmark
 
 - entity_id: model:flashzoi
   type: model
@@ -163,7 +249,7 @@
   curator: JimYuhaoWu
   date_added: 2026-10-16
   model_ext:
-    evidence_tier: self-reported
+    evidence_tier: externally-benchmarked
     availability_tier: open-source
     model_family: interval-model
     architecture: [cnn, transformer]
@@ -189,6 +275,8 @@
       role: primary
     - paper_id: 10.1101/2024.12.18.629121
       role: preprint
+    - paper_id: 10.1101/2025.10.14.682350
+      role: critique
 
 - entity_id: model:alphagenome
   type: model
@@ -240,6 +328,62 @@
     - paper_id: 10.64898/2026.02.04.703796
       role: benchmark
       note: Fine-mapping reproducibility vs GTEx/TOPMed/MAGE.
+    - paper_id: 10.64898/2026.09.08.750172
+      role: critique
+    - paper_id: 10.1101/2025.07.09.664024
+      role: benchmark
+    - paper_id: 10.64898/2026.02.22.707219
+      role: benchmark
+    - paper_id: 10.64898/2026.06.22.730889
+      role: benchmark
+    - paper_id: 10.64898/2026.01.21.700827
+      role: critique
+    - paper_id: 10.64898/2025.12.18.694875
+      role: benchmark
+    - paper_id: 10.1101/2025.11.09.687505
+      role: critique
+    - paper_id: 10.1093/bib/bbag422
+      role: benchmark
+    - paper_id: 10.64898/2026.08.14.744988
+      role: benchmark
+    - paper_id: 10.64898/2026.08.31.748430
+      role: critique
+    - paper_id: 10.64898/2026.06.28.735069
+      role: benchmark
+    - paper_id: 10.64898/2026.01.21.700828
+      role: benchmark
+    - paper_id: 10.5281/zenodo.19590762
+      role: critique
+    - paper_id: 10.5281/zenodo.20491294
+      role: critique
+    - paper_id: 10.64898/2026.05.10.724136
+      role: benchmark
+    - paper_id: 10.64898/2026.08.25.26361369
+      role: benchmark
+    - paper_id: 10.64898/2026.05.16.26353369
+      role: benchmark
+    - paper_id: 10.3389/fimmu.2026.1859310
+      role: benchmark
+    - paper_id: 10.64898/2026.06.17.732686
+      role: benchmark
+    - paper_id: 10.1093/gigascience/giaf132
+      role: benchmark
+    - paper_id: 10.64898/2026.01.12.699009
+      role: benchmark
+    - paper_id: 10.64898/2026.05.02.722381
+      role: benchmark
+    - paper_id: 10.1186/s13059-026-04124-9
+      role: critique
+    - paper_id: 10.1021/acssynbio.6c00024
+      role: benchmark
+    - paper_id: 10.1111/cpr.70274
+      role: benchmark
+    - paper_id: 10.64898/2026.05.31.729117
+      role: benchmark
+    - paper_id: 10.64898/2026.06.01.729367
+      role: benchmark
+    - paper_id: 10.1038/s41592-026-03182-y
+      role: benchmark
 
 - entity_id: model:nucleotide-transformer
   type: model
@@ -297,6 +441,144 @@
     - paper_id: 10.52202/079017-1981
       role: benchmark
       note: DART-Eval -- regulatory DNA, zero-shot/probed/fine-tuned vs ab initio.
+    - paper_id: 10.1038/s41467-025-65823-8
+      role: benchmark
+    - paper_id: 10.1186/s13040-026-00553-1
+      role: benchmark
+    - paper_id: 10.64898/2026.04.21.719816
+      role: benchmark
+    - paper_id: 10.1186/s12864-025-11913-2
+      role: benchmark
+    - paper_id: 10.1093/nar/gkag704
+      role: benchmark
+    - paper_id: 10.1093/bioinformatics/btaf229
+      role: critique
+    - paper_id: 10.3390/genes16111358
+      role: benchmark
+    - paper_id: 10.1051/itmconf/20269001011
+      role: benchmark
+    - paper_id: 10.1038/s42256-025-01047-1
+      role: critique
+    - paper_id: 10.1101/2024.06.18.599629
+      role: benchmark
+    - paper_id: 10.3233/faia240864
+      role: benchmark
+    - paper_id: 10.1101/2024.04.30.591835
+      role: critique
+    - paper_id: 10.1101/2025.11.19.689326
+      role: benchmark
+    - paper_id: 10.64898/2026.05.13.725007
+      role: benchmark
+    - paper_id: 10.1093/nar/gkaf871
+      role: benchmark
+    - paper_id: 10.1186/s12859-025-06291-1
+      role: benchmark
+    - paper_id: 10.1109/bibm66473.2025.11356602
+      role: critique
+    - paper_id: 10.1007/s44443-026-00555-3
+      role: benchmark
+    - paper_id: 10.1109/aicaps68631.2026.11452691
+      role: benchmark
+    - paper_id: 10.3390/ijms27177565
+      role: benchmark
+    - paper_id: 10.1038/s42003-024-06465-2
+      role: benchmark
+    - paper_id: 10.1093/bioinformatics/btae529
+      role: benchmark
+    - paper_id: 10.1016/j.xhgg.2024.100347
+      role: benchmark
+    - paper_id: 10.1101/2025.08.17.670700
+      role: benchmark
+    - paper_id: 10.1093/bioadv/vbaf188
+      role: benchmark
+    - paper_id: 10.1093/bib/bbag064
+      role: benchmark
+    - paper_id: 10.1093/bib/bbag380
+      role: critique
+    - paper_id: 10.1101/2025.06.26.661767
+      role: critique
+    - paper_id: 10.1093/bib/bbag098
+      role: benchmark
+    - paper_id: 10.1101/2024.07.10.602933
+      role: benchmark
+    - paper_id: 10.1101/2025.06.15.659748
+      role: benchmark
+    - paper_id: 10.64898/2026.06.10.731316
+      role: benchmark
+    - paper_id: 10.1038/s41467-025-66899-y
+      role: benchmark
+    - paper_id: 10.64898/2026.05.12.724296
+      role: benchmark
+    - paper_id: 10.64898/2026.06.16.732659
+      role: benchmark
+    - paper_id: 10.1093/nargab/lqag025
+      role: benchmark
+    - paper_id: 10.64898/2026.05.06.723362
+      role: critique
+    - paper_id: 10.3390/app16041745
+      role: benchmark
+    - paper_id: 10.21769/bioprotoc.5676
+      role: benchmark
+    - paper_id: 10.1093/bioinformatics/btag250
+      role: critique
+    - paper_id: 10.1101/2025.08.21.671544
+      role: benchmark
+    - paper_id: 10.1109/bibm66473.2025.11356346
+      role: benchmark
+    - paper_id: 10.64898/2026.05.31.729117
+      role: benchmark
+    - paper_id: 10.64898/2026.06.01.729367
+      role: benchmark
+    - paper_id: 10.1038/s41598-026-62633-w
+      role: benchmark
+    - paper_id: 10.1101/2024.11.12.623150
+      role: critique
+    - paper_id: 10.14293/pr2199.003545.v1
+      role: benchmark
+    - paper_id: 10.14293/pr2199.003545.v2
+      role: benchmark
+    - paper_id: 10.1186/s12859-026-06367-6
+      role: critique
+    - paper_id: 10.1109/bibm66473.2025.11356776
+      role: benchmark
+    - paper_id: 10.1101/2025.07.14.664780
+      role: benchmark
+    - paper_id: 10.1038/s41392-026-02946-4
+      role: benchmark
+    - paper_id: 10.1093/bioadv/vbag054
+      role: benchmark
+    - paper_id: 10.1093/molbev/msag139
+      role: benchmark
+    - paper_id: 10.1101/2025.05.14.654102
+      role: critique
+    - paper_id: 10.64898/2026.05.21.726868
+      role: benchmark
+    - paper_id: 10.64898/2025.12.12.693901
+      role: benchmark
+    - paper_id: 10.64898/2026.04.26.720952
+      role: critique
+    - paper_id: 10.64898/2025.12.03.692003
+      role: benchmark
+    - paper_id: 10.64898/2026.03.18.712700
+      role: benchmark
+    - paper_id: 10.1093/bib/bbag182
+      role: critique
+    - paper_id: 10.64898/2026.05.19.725242
+      role: benchmark
+    - paper_id: 10.1016/j.jestch.2026.102479
+      role: benchmark
+    - paper_id: 10.1186/s12859-026-06562-5
+      role: benchmark
+    - paper_id: 10.1145/3807503.3819470
+      role: benchmark
+    - paper_id: 10.1145/3770855.3818839
+      role: benchmark
+    - paper_id: 10.1109/icdew71238.2026.00031
+      role: benchmark
+    - paper_id: 10.1007/978-3-032-30813-9_47
+      role: benchmark
+    - paper_id: 10.1109/ecti-con68836.2026.11608505
+      role: benchmark
 
 - entity_id: model:evo2
   type: model
@@ -322,7 +604,7 @@
   curator: JimYuhaoWu
   date_added: 2026-10-16
   model_ext:
-    evidence_tier: self-reported
+    evidence_tier: externally-benchmarked
     availability_tier: open-source
     model_family: dna-lm
     architecture: [ssm, transformer]
@@ -339,6 +621,42 @@
   papers:
     - paper_id: 10.1101/2025.02.18.638918
       role: primary
+    - paper_id: 10.1101/2025.07.09.664024
+      role: benchmark
+    - paper_id: 10.1186/s13040-026-00553-1
+      role: benchmark
+    - paper_id: 10.64898/2026.01.27.702059
+      role: benchmark
+    - paper_id: 10.1101/2025.09.10.675279
+      role: benchmark
+    - paper_id: 10.1101/2025.08.27.672609
+      role: benchmark
+    - paper_id: 10.5281/zenodo.19228701
+      role: critique
+    - paper_id: 10.64898/2026.07.02.736037
+      role: application
+    - paper_id: 10.1145/3807503.3819436
+      role: benchmark
+    - paper_id: 10.1038/s41746-025-01603-4
+      role: application
+    - paper_id: 10.3389/fpls.2025.1611992
+      role: critique
+    - paper_id: 10.64898/2026.02.19.706811
+      role: benchmark
+    - paper_id: 10.64898/2026.01.30.702134
+      role: benchmark
+    - paper_id: 10.1093/nargab/lqag103
+      role: benchmark
+    - paper_id: 10.64898/2026.02.02.703275
+      role: benchmark
+    - paper_id: 10.1101/2024.12.18.628606
+      role: benchmark
+    - paper_id: 10.1093/bib/bbag011
+      role: benchmark
+    - paper_id: 10.64898/2026.03.17.712398
+      role: benchmark
+    - paper_id: 10.1007/978-3-032-18509-9_3
+      role: benchmark
 
 - entity_id: model:chrombpnet
   type: model
@@ -367,7 +685,7 @@
   curator: JimYuhaoWu
   date_added: 2026-10-16
   model_ext:
-    evidence_tier: partially-independent
+    evidence_tier: externally-benchmarked
     availability_tier: open-source
     model_family: interval-model
     architecture: [cnn]
@@ -390,6 +708,12 @@
       note: >
         DART-Eval, as an ab initio baseline. Shares an author (Kundaje) with
         the primary paper -- the partially-independent case.
+    - paper_id: 10.1093/bioinformatics/btag266
+      role: benchmark
+    - paper_id: 10.64898/2026.09.25.753922
+      role: critique
+    - paper_id: 10.1038/s41467-026-68742-4
+      role: benchmark
 
 - entity_id: model:gears
   type: model
@@ -419,7 +743,7 @@
   curator: JimYuhaoWu
   date_added: 2026-10-16
   model_ext:
-    evidence_tier: self-reported
+    evidence_tier: externally-benchmarked
     availability_tier: open-source
     model_family: perturbation-model
     architecture: [gnn]
@@ -442,3 +766,3973 @@
     - paper_id: 10.1038/s41576-025-00920-4
       role: review
       note: Nat Rev Genet perturbation-modelling catalogue and ontology.
+    - paper_id: 10.1101/2025.05.11.653338
+      role: benchmark
+    - paper_id: 10.1145/3807503.3820871
+      role: benchmark
+    - paper_id: 10.1101/2025.10.03.680360
+      role: benchmark
+    - paper_id: 10.1109/icdh72779.2026.00041
+      role: application
+    - paper_id: 10.1109/bibm62325.2024.10822049
+      role: critique
+    - paper_id: 10.1186/s12864-026-13270-0
+      role: benchmark
+    - paper_id: 10.64898/2026.08.03.742643
+      role: critique
+    - paper_id: 10.1101/2025.06.26.661186
+      role: benchmark
+    - paper_id: 10.1371/journal.pcbi.1013701
+      role: benchmark
+    - paper_id: 10.64898/2026.02.14.705879
+      role: benchmark
+    - paper_id: 10.64898/2025.12.15.694331
+      role: benchmark
+    - paper_id: 10.64898/2026.04.22.720110
+      role: benchmark
+    - paper_id: 10.1186/s12864-026-12975-6
+      role: benchmark
+    - paper_id: 10.64898/2026.06.04.730272
+      role: benchmark
+    - paper_id: 10.1038/s41467-026-72198-x
+      role: critique
+    - paper_id: 10.1093/nsr/nwae340
+      role: critique
+    - paper_id: 10.1101/2025.09.30.679471
+      role: critique
+    - paper_id: 10.1016/j.compbiolchem.2026.109079
+      role: benchmark
+    - paper_id: 10.1101/2025.11.08.686890
+      role: benchmark
+    - paper_id: 10.64898/2026.01.29.702072
+      role: benchmark
+    - paper_id: 10.1016/j.jbi.2026.105080
+      role: benchmark
+    - paper_id: 10.3390/bios16100581
+      role: benchmark
+
+- entity_id: model:variantformer
+  type: model
+  name: VariantFormer
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.10.31.685862
+      role: primary
+
+- entity_id: model:an-explainable-deep-learning-framework-integrating-dna-sequence-and-transcription-initiation-signals-for-gene-expression-prediction
+  type: model
+  name: An Explainable Deep Learning Framework Integrating DNA Sequence and Transcription Initiation Signals for Gene Expression Prediction
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1021/acssynbio.6c00275
+      role: primary
+
+- entity_id: model:perturbbridge
+  type: model
+  name: PerturbBridge
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.09.24.754259
+      role: primary
+
+- entity_id: model:pertdiffbench
+  type: model
+  name: PertDiffBench
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.06.13.732013
+      role: primary
+
+- entity_id: model:dynamic-graph-prior-guided-latent-adaptation-for-generalizable-single-cell-perturbation-response-prediction
+  type: model
+  name: Dynamic Graph Prior-Guided Latent Adaptation for Generalizable Single-Cell Perturbation Response Prediction
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btag747
+      role: primary
+
+- entity_id: model:systema
+  type: model
+  name: Systema
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41587-025-02777-8
+      role: primary
+
+- entity_id: model:benchmarking-algorithms-for-generalizable-single-cell-perturbation-response-prediction
+  type: model
+  name: Benchmarking algorithms for generalizable single-cell perturbation response prediction
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41592-025-02980-0
+      role: primary
+
+- entity_id: model:hierarchical-refinements-of-cis-regulatory-inputs-improve-scalable-gene-expression-prediction
+  type: model
+  name: Hierarchical refinements of cis-regulatory inputs improve scalable gene expression prediction
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.05.31.729151
+      role: primary
+
+- entity_id: model:enhancing-personalized-gene-expression-prediction-from-dna-sequences-using-genomic-foundation-models
+  type: model
+  name: Enhancing personalized gene expression prediction from DNA sequences using genomic foundation models
+  year: 2024
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.xhgg.2024.100347
+      role: primary
+
+- entity_id: model:synergy-aware-residual-flow-matching-for-single-cell-perturbation-prediction
+  type: model
+  name: Synergy-Aware Residual Flow Matching for Single-Cell Perturbation Prediction
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2610.25021
+      role: primary
+
+- entity_id: model:genomic-language-models-improve-cross-species-gene-expression-prediction-and-accurately-capture-regulatory-variant-effects-in-brachypodium-mutant-lines
+  type: model
+  name: Genomic language models improve cross-species gene expression prediction and accurately capture regulatory variant effects in Brachypodium mutant lines
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.02.27.708524
+      role: primary
+
+- entity_id: model:epinformer
+  type: model
+  name: EPInformer
+  year: 2024
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2024.08.01.606099
+      role: primary
+
+- entity_id: model:xchrom
+  type: model
+  name: XChrom
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.11.18.689149
+      role: primary
+
+- entity_id: model:a-systematic-comparison-of-single-cell-perturbation-response-prediction-models
+  type: model
+  name: A systematic comparison of single-cell perturbation response prediction models
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1126/sciadv.aed3414
+      role: primary
+
+- entity_id: model:biodsnn
+  type: model
+  name: BioDSNN
+  year: 2024
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bib/bbae617
+      role: primary
+
+- entity_id: model:fine-tuning-sequence-to-function-deep-learning-models-on-large-scale-proteomic-data-improves-the-accuracy-of-variant-effect-prediction
+  type: model
+  name: Fine-tuning sequence to function deep learning models on large-scale proteomic data improves the accuracy of variant effect prediction
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.09.26.678908
+      role: primary
+
+- entity_id: model:perttf
+  type: model
+  name: pertTF
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.03.12.711379
+      role: primary
+
+- entity_id: model:cistranscell
+  type: model
+  name: CisTransCell
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2606.13713
+      role: primary
+
+- entity_id: model:multimodal-benchmarking-of-foundation-model-representations-for-cellular-perturbation-response-prediction
+  type: model
+  name: Multimodal Benchmarking of Foundation Model Representations for Cellular Perturbation Response Prediction
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.06.26.661186
+      role: primary
+
+- entity_id: model:ocoo-t
+  type: model
+  name: OCOO-T
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2606.12838
+      role: primary
+
+- entity_id: model:mtmixg-net
+  type: model
+  name: MTMixG-Net
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.3389/fpls.2025.1718258
+      role: primary
+
+- entity_id: model:zygosity-aware-dna-language-modeling-improves-ancestry-and-gene-expression-prediction
+  type: model
+  name: Zygosity-Aware DNA Language Modeling Improves Ancestry and Gene Expression Prediction
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.11.19.689326
+      role: primary
+
+- entity_id: model:kidzoi-enables-cell-type-specific-regulatory-activity-and-variant-effect-prediction-in-kidney
+  type: model
+  name: Kidzoi Enables Cell-Type-Specific Regulatory Activity and Variant Effect Prediction in Kidney
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.09.28.746288
+      role: primary
+
+- entity_id: model:chromatin-accessibility-prediction-via-a-hybrid-deep-convolutional-neural-network
+  type: model
+  name: Chromatin accessibility prediction via a hybrid deep convolutional neural network
+  year: 2018
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btx679
+      role: primary
+
+- entity_id: model:hycoseq
+  type: model
+  name: HyCoSeq
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2609.16925
+      role: primary
+
+- entity_id: model:chromatin-accessibility-prediction-via-convolutional-long-short-term-memory-networks-with-k-mer-embedding
+  type: model
+  name: Chromatin accessibility prediction via convolutional long short-term memory networks with k-mer embedding
+  year: 2017
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btx234
+      role: primary
+
+- entity_id: model:arsenal
+  type: model
+  name: ARSENAL
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.02.05.703637
+      role: primary
+
+- entity_id: model:a-metric-calibrated-replay-framework-for-single-cell-genetic-perturbation-prediction
+  type: model
+  name: A Metric-Calibrated Replay Framework for Single-Cell Genetic Perturbation Prediction
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-9955756/v1
+      role: primary
+
+- entity_id: model:slim
+  type: model
+  name: SLIM
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.08.07.743481
+      role: primary
+
+- entity_id: model:demixpert
+  type: model
+  name: DeMixPert
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2608.23114
+      role: primary
+
+- entity_id: model:beyond-independent-genes
+  type: model
+  name: Beyond Independent Genes
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2602.04901
+      role: primary
+
+- entity_id: model:evaluating-sequence-to-function-deep-learning-models-for-ancestry-stratified-regulatory-variant-effect-prediction-using-multi-ancestry-blood-eqtls
+  type: model
+  name: Evaluating sequence-to-function deep learning models for ancestry-stratified regulatory variant effect prediction using multi-ancestry blood eQTLs
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.06.22.730889
+      role: primary
+
+- entity_id: model:grelu
+  type: model
+  name: gReLU
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41592-025-02868-z
+      role: primary
+
+- entity_id: model:pre-training-genomic-language-model-with-variants-for-better-modeling-functional-genomics
+  type: model
+  name: Pre-training genomic language model with variants for better modeling functional genomics
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s44387-026-00103-4
+      role: primary
+
+- entity_id: model:perturbation-response-decomposition-enables-biologically-aligned-generalization-to-unseen-perturbations-and-cellular-contexts
+  type: model
+  name: Perturbation response decomposition enables biologically aligned generalization to unseen perturbations and cellular contexts
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.07.24.740459
+      role: primary
+
+- entity_id: model:gpo-vae
+  type: model
+  name: GPO-VAE
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btaf256
+      role: primary
+
+- entity_id: model:pretraining-enhances-megabase-scale-gene-expression-prediction-with-geneunet
+  type: model
+  name: Pretraining Enhances Megabase-Scale Gene Expression Prediction with GeneUnet
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.08.13.744387
+      role: primary
+
+- entity_id: model:integrating-histology-and-spatial-transcriptomics-via-multimodal-transformers-and-contrastive-representation-learning-for-accurate-gene-expression-prediction
+  type: model
+  name: Integrating histology and spatial transcriptomics via multimodal transformers and contrastive representation learning for accurate gene expression prediction
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.jbi.2026.105003
+      role: primary
+
+- entity_id: model:a-multi-modal-transformer-for-cell-type-agnostic-regulatory-predictions
+  type: model
+  name: A multi-modal transformer for cell type-agnostic regulatory predictions
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.xgen.2025.100762
+      role: primary
+
+- entity_id: model:deepcis
+  type: model
+  name: DeepCis
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-8988269/v1
+      role: primary
+
+- entity_id: model:toward-generalizable-and-interpretable-ai-in-regulatory-genomics
+  type: model
+  name: Toward generalizable and interpretable AI in regulatory genomics
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41588-026-02670-3
+      role: primary
+
+- entity_id: model:generator
+  type: model
+  name: GENERator
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-8686063/v1
+      role: primary
+
+- entity_id: model:toward-interpretable-and-generalizable-ai-in-regulatory-genomics
+  type: model
+  name: Toward Interpretable and Generalizable AI in Regulatory Genomics
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2602.01230
+      role: primary
+
+- entity_id: model:early-feature-extraction-drives-model-performance-in-high-resolution-chromatin-accessibility-prediction
+  type: model
+  name: Early feature extraction drives model performance in high-resolution chromatin accessibility prediction
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/gr.281042.125
+      role: primary
+
+- entity_id: model:early-feature-extraction-drives-model-performance-in-high-resolution-chromatin-accessibility-prediction-a-systematic-evaluation-of-deep-learning-architectures
+  type: model
+  name: "Early feature extraction drives model performance in high-resolution chromatin accessibility prediction: A systematic evaluation of deep learning architectures"
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.03.01.641000
+      role: primary
+
+- entity_id: model:evaluation-of-deep-learning-tools-for-chromatin-contact-prediction
+  type: model
+  name: Evaluation of deep learning tools for chromatin contact prediction
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.02.27.708323
+      role: primary
+
+- entity_id: model:caduceus
+  type: model
+  name: Caduceus
+  year: 2024
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2403.03234
+      role: primary
+
+- entity_id: model:v3cell
+  type: model
+  name: V3Cell
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.06.23.734130
+      role: primary
+
+- entity_id: model:disease-relevance-and-replicability-of-deep-learning-gene-expression-prediction
+  type: model
+  name: Disease relevance and replicability of deep learning gene expression prediction
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.09.24.753534
+      role: primary
+
+- entity_id: model:personalized-gene-expression-prediction-in-the-era-of-deep-learning-a-review
+  type: model
+  name: "Personalized gene expression prediction in the era of deep learning: a review"
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bib/bbag022
+      role: primary
+
+- entity_id: model:long-range-gene-expression-prediction-with-token-alignment-of-large-language-model
+  type: model
+  name: Long-range gene expression prediction with token alignment of large language model
+  year: 2024
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2410.01858
+      role: primary
+
+- entity_id: model:a-framework-to-detect-positive-selection-using-variant-effect-predictions-reveals-widespread-adaptive-evolution-of-human-neurons
+  type: model
+  name: A framework to detect positive selection using variant effect predictions reveals widespread adaptive evolution of human neurons
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.09.11.675696
+      role: primary
+
+- entity_id: model:genetic-perturbation-prediction-models-fail-out-of-distribution-a-rigorous-benchmark-and-systematic-evaluation
+  type: model
+  name: "Genetic Perturbation Prediction Models Fail Out-of-Distribution: A Rigorous Benchmark and Systematic Evaluation"
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.10.16.759604
+      role: primary
+
+- entity_id: model:a-biological-response-compound-representation-allows-chemical-perturbation-prediction-across-cell-lines
+  type: model
+  name: A biological-response compound representation allows chemical perturbation prediction across cell lines
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.09.28.755146
+      role: primary
+
+- entity_id: model:signals-in-the-cells
+  type: model
+  name: Signals in the Cells
+  year: 2024
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2024.06.12.598655
+      role: primary
+
+- entity_id: model:pertadapt
+  type: model
+  name: PertAdapt
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btag307
+      role: primary
+
+- entity_id: model:tracking-biological-hallucinations-in-single-cell-perturbation-predictions-using-scarchon-a-comprehensive-benchmarking-platform
+  type: model
+  name: "Tracking biological hallucinations in single-cell perturbation predictions using scArchon, a comprehensive benchmarking platform"
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.06.23.661046
+      role: primary
+
+- entity_id: model:differentiable-retrieval-augmented-generation-for-predicting-cellular-responses-to-gene-perturbation
+  type: model
+  name: Differentiable Retrieval-Augmented Generation for Predicting Cellular Responses to Gene Perturbation
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2603.07233
+      role: primary
+
+- entity_id: model:completing-spatial-transcriptomics-data-for-gene-expression-prediction-benchmarking
+  type: model
+  name: Completing spatial transcriptomics data for gene expression prediction benchmarking
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.media.2025.103754
+      role: primary
+
+- entity_id: model:scooby
+  type: model
+  name: scooby
+  year: 2024
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2024.09.19.613754
+      role: primary
+
+- entity_id: model:interpretable-variant-effect-prediction-from-genomic-foundation-model-representations
+  type: model
+  name: Interpretable variant effect prediction from genomic foundation model representations
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.04.10.717844
+      role: primary
+
+- entity_id: model:scldm
+  type: model
+  name: scLDM
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btag727
+      role: primary
+
+- entity_id: model:a-structured-study-of-cross-condition-prediction-of-transcriptional-responses-to-gene-perturbations
+  type: model
+  name: A structured study of cross-condition prediction of transcriptional responses to gene perturbations
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.07.30.741892
+      role: primary
+
+- entity_id: model:x-cell
+  type: model
+  name: X-Cell
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.03.18.712807
+      role: primary
+
+- entity_id: model:predicting-drug-responses-of-unseen-cell-types-through-transfer-learning-with-foundation-models
+  type: model
+  name: Predicting drug responses of unseen cell types through transfer learning with foundation models
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s43588-025-00887-6
+      role: primary
+
+- entity_id: model:what-makes-a-representation-good-for-single-cell-perturbation-prediction
+  type: model
+  name: "What Makes a Representation Good for Single-Cell Perturbation Prediction?"
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2605.19343
+      role: primary
+
+- entity_id: model:catlearning
+  type: model
+  name: CatLearning
+  year: 2024
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bib/bbae373
+      role: primary
+
+- entity_id: model:independent-benchmark-of-h-e-based-gene-expression-prediction-in-skin
+  type: model
+  name: "Independent benchmark of H&E-based gene expression prediction in skin"
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.09.07.749926
+      role: primary
+
+- entity_id: model:causal-variant-underestimation-is-a-major-overlooked-driver-of-sequence-to-function-model-underperformance
+  type: model
+  name: Causal variant underestimation is a major overlooked driver of sequence-to-function model underperformance
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.09.08.750172
+      role: primary
+
+- entity_id: model:spadit
+  type: model
+  name: SpaDiT
+  year: 2024
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bib/bbae571
+      role: primary
+
+- entity_id: model:enigma
+  type: model
+  name: Enigma
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2025.12.18.694875
+      role: primary
+
+- entity_id: model:vegn
+  type: model
+  name: VEGN
+  year: 2021
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2106.13642
+      role: primary
+
+- entity_id: model:vclmu
+  type: model
+  name: VCLMU
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2610.04475
+      role: primary
+
+- entity_id: model:an-end-to-end-generalizable-deep-learning-framework-to-comprehensively-analyze-transcriptional-regulation
+  type: model
+  name: An end-to-end generalizable deep learning framework to comprehensively analyze transcriptional regulation
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-026-70070-6
+      role: primary
+
+- entity_id: model:enhancing-gene-expression-predictions-using-deep-learning-and-functional-annotations
+  type: model
+  name: Enhancing Gene Expression Predictions Using Deep Learning and Functional Annotations
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1002/gepi.22595
+      role: primary
+
+- entity_id: model:effective-gene-expression-prediction-and-optimization-from-protein-sequences
+  type: model
+  name: Effective Gene Expression Prediction and Optimization from Protein Sequences
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1002/advs.202407664
+      role: primary
+
+- entity_id: model:scarchon
+  type: model
+  name: scArchon
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1186/s13059-026-04104-z
+      role: primary
+
+- entity_id: model:vcbench
+  type: model
+  name: VCBench
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.06.18.733146
+      role: primary
+
+- entity_id: model:leveraging-biological-networks-for-robust-gene-perturbation-prediction
+  type: model
+  name: Leveraging Biological Networks for Robust Gene Perturbation Prediction
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.20944/preprints202511.1380.v1
+      role: primary
+
+- entity_id: model:multipert
+  type: model
+  name: MultiPert
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1371/journal.pcbi.1014054
+      role: primary
+
+- entity_id: model:map
+  type: model
+  name: MAP
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.02.25.708091
+      role: primary
+
+- entity_id: model:leveraging-genomic-deep-learning-models-for-the-prediction-of-non-coding-variant-effects
+  type: model
+  name: Leveraging genomic deep learning models for the prediction of non-coding variant effects
+  year: 2024
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2411.11158
+      role: primary
+
+- entity_id: model:epiexpr
+  type: model
+  name: EpiExpr
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.02.06.704509
+      role: primary
+
+- entity_id: model:an-enhanced-variant-aware-deep-learning-model-for-individual-gene-expression-prediction
+  type: model
+  name: An Enhanced Variant-Aware Deep Learning Model for Individual Gene Expression Prediction
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.11.12.688070
+      role: primary
+
+- entity_id: model:gene-expression-prediction-based-on-neighbour-connection-neural-network-utilizing-gene-interaction-graphs
+  type: model
+  name: Gene expression prediction based on neighbour connection neural network utilizing gene interaction graphs
+  year: 2023
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1371/journal.pone.0281286
+      role: primary
+
+- entity_id: model:reaping-the-fruits-of-llm-pruning-towards-small-language-models-for-efficient-non-coding-variant-effect-prediction
+  type: model
+  name: "Reaping the Fruits of LLM Pruning: Towards Small Language Models for Efficient Non-Coding Variant Effect Prediction"
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.3390/genes16111358
+      role: primary
+
+- entity_id: model:multi-modal-data-integration-for-machine-learning-applications
+  type: model
+  name: Multi-modal data integration for machine learning applications
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.10.10.681692
+      role: primary
+
+- entity_id: model:semanticcap
+  type: model
+  name: SemanticCAP
+  year: 2022
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.3390/genes13040568
+      role: primary
+
+- entity_id: model:computational-modeling-of-chromatin-accessibility-identified-important-epigenomic-regulators
+  type: model
+  name: Computational modeling of chromatin accessibility identified important epigenomic regulators
+  year: 2022
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1186/s12864-021-08234-5
+      role: primary
+
+- entity_id: model:benchmarking-genomic-foundation-models-for-gene-fusion-detection-from-dna-sequences
+  type: model
+  name: Benchmarking Genomic Foundation Models for Gene Fusion Detection from DNA Sequences
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-8360344/v1
+      role: primary
+
+- entity_id: model:dna-augmentations-for-semi-supervised-learning-in-genomic-sequence-classification
+  type: model
+  name: DNA augmentations for semi-supervised learning in genomic sequence classification
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/nargab/lqag123
+      role: primary
+
+- entity_id: model:findings-from-sparse-autoencoders-for-dna-sequence-models-motif-detectors-reading-frame-features-and-the-scarcity-of-regulatory-logic
+  type: model
+  name: "Findings from Sparse Autoencoders for DNA Sequence Models: Motif Detectors, Reading-Frame Features, and the Scarcity of Regulatory Logic"
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-10434163/v1
+      role: primary
+
+- entity_id: model:dart-eval
+  type: model
+  name: DART-Eval
+  year: 2024
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2412.05430
+      role: primary
+
+- entity_id: model:dnamotiftokenizer
+  type: model
+  name: DNAMotifTokenizer
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2512.17126
+      role: primary
+
+- entity_id: model:perturbation-curve-models-continuous-transcriptional-response-trajectories-and-improves-prediction-of-genetic-modulations
+  type: model
+  name: Perturbation Curve models continuous transcriptional response trajectories and improves prediction of genetic modulations
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.06.16.732192
+      role: primary
+
+- entity_id: model:capra-predicts-single-cell-transcriptional-responses-to-genetic-perturbations-with-response-anchoring-and-residual-correction
+  type: model
+  name: CAPRA predicts single-cell transcriptional responses to genetic perturbations with response anchoring and residual correction
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-10231666/v1
+      role: primary
+
+- entity_id: model:charting-the-computational-landscape-of-single-cell-genetic-perturbation
+  type: model
+  name: Charting the computational landscape of single-cell genetic perturbation
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.jare.2026.06.012
+      role: primary
+
+- entity_id: model:adaptive-resampling-for-improved-machine-learning-in-imbalanced-single-cell-datasets
+  type: model
+  name: Adaptive resampling for improved machine learning in imbalanced single-cell datasets
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.11.04.686583
+      role: primary
+
+- entity_id: model:on-the-robustness-of-scrna-seq-foundation-models-for-plant-perturbation-response-prediction-under-cross-experiment-shift
+  type: model
+  name: On the robustness of scRNA-seq foundation models for plant perturbation response prediction under cross-experiment shift
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.08.21.746324
+      role: primary
+
+- entity_id: model:explicit-mechanistic-operators-in-predictive-virtual-cells-evidence-failure-modes-and-a-minimum-falsification-framework-for-single-cell-perturbation-prediction
+  type: model
+  name: "Explicit Mechanistic Operators in Predictive Virtual Cells: Evidence, Failure Modes, and a Minimum Falsification Framework for Single-Cell Perturbation Prediction"
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.3390/cells15181711
+      role: primary
+
+- entity_id: model:toward-subtask-decomposition-based-learning-and-benchmarking-for-genetic-perturbation-outcome-prediction-and-beyond
+  type: model
+  name: Toward subtask decomposition-based learning and benchmarking for genetic perturbation outcome prediction and beyond
+  year: 2024
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2024.01.17.576034
+      role: primary
+
+- entity_id: model:deepscenic
+  type: model
+  name: DeepSCENIC
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.09.18.752607
+      role: primary
+
+- entity_id: model:prot-vae
+  type: model
+  name: ProT-VAE
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1073/pnas.2408737122
+      role: primary
+
+- entity_id: model:deep-learning-approaches-for-non-coding-genetic-variant-effect-prediction-current-progress-and-future-prospects
+  type: model
+  name: "Deep learning approaches for non-coding genetic variant effect prediction: current progress and future prospects"
+  year: 2024
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bib/bbae446
+      role: primary
+
+- entity_id: model:gpn-msa
+  type: model
+  name: GPN-MSA
+  year: 2023
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2023.10.10.561776
+      role: primary
+
+- entity_id: model:human-5-utr-design-and-variant-effect-prediction-from-a-massively-parallel-translation-assay
+  type: model
+  name: "Human 5' UTR design and variant effect prediction from a massively parallel translation assay"
+  year: 2019
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41587-019-0164-5
+      role: primary
+
+- entity_id: model:a-unified-deep-learning-framework-for-single-cell-atac-seq-analysis-based-on-proddep-transformer-encoder
+  type: model
+  name: A Unified Deep Learning Framework for Single-Cell ATAC-Seq Analysis Based on ProdDep Transformer Encoder
+  year: 2023
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.3390/ijms24054784
+      role: primary
+
+- entity_id: model:the-evolution-of-logic-circuits-for-the-purpose-of-protein-contact-map-prediction
+  type: model
+  name: The evolution of logic circuits for the purpose of protein contact map prediction
+  year: 2017
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.7717/peerj.3139
+      role: primary
+
+- entity_id: model:advances-in-protein-contact-map-prediction-based-on-machine-learning
+  type: model
+  name: Advances in protein contact map prediction based on machine learning
+  year: 2015
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.2174/1573406411666141230095427
+      role: primary
+
+- entity_id: model:hyperbolic-genome-embeddings
+  type: model
+  name: Hyperbolic Genome Embeddings
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2507.21648
+      role: primary
+
+- entity_id: model:do-gene-perturbation-predictions-match-real-effects-a-computational-test-using-public-data
+  type: model
+  name: "Do Gene Perturbation Predictions Match Real Effects? A Computational Test Using Public Data"
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.14293/pr2199.003573.v2
+      role: primary
+
+- entity_id: model:learning-perturbation-effects-through-contrastive-alignment-of-multimodal-biological-embeddings
+  type: model
+  name: Learning Perturbation Effects Through Contrastive Alignment of Multimodal Biological Embeddings
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.06.23.734145
+      role: primary
+
+- entity_id: model:an-empirical-comparison-of-virtual-cell-models-perturbation-prediction-representation-and-the-baseline-gap
+  type: model
+  name: "An Empirical Comparison of Virtual Cell Models: Perturbation Prediction, Representation, and the Baseline Gap"
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-10434123/v1
+      role: primary
+
+- entity_id: model:assessing-scale-and-predictive-diversity-in-models-for-single-cell-transcriptomics-based-on-geneformer
+  type: model
+  name: Assessing Scale and Predictive Diversity in Models for Single-Cell Transcriptomics based on Geneformer
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.11.04.686458
+      role: primary
+
+- entity_id: model:latent-causal-diffusions-for-single-cell-perturbation-modeling
+  type: model
+  name: Latent Causal Diffusions for Single-Cell Perturbation Modeling
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2601.15341
+      role: primary
+
+- entity_id: model:lingshu-cell
+  type: model
+  name: Lingshu-Cell
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2603.25240
+      role: primary
+
+- entity_id: model:prestige-st
+  type: model
+  name: PRESTIGE-ST
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.08.11.669796
+      role: primary
+
+- entity_id: model:an-intrinsically-interpretable-neural-network-architecture-for-sequence-to-function-learning
+  type: model
+  name: An intrinsically interpretable neural network architecture for sequence-to-function learning
+  year: 2023
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btad271
+      role: primary
+
+- entity_id: model:puget-predicts-gene-expression-across-cell-types-using-sequence-and-3d-chromatin-organization-data
+  type: model
+  name: Puget predicts gene expression across cell types using sequence and 3D chromatin organization data
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.11.19.689320
+      role: primary
+
+- entity_id: model:genomic-foundation-model-derived-disruption-profiling-links-somatic-mutations-to-cancer-biology-and-clinical-outcomes
+  type: model
+  name: Genomic foundation model-derived disruption profiling links somatic mutations to cancer biology and clinical outcomes
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.09.15.26363174
+      role: primary
+
+- entity_id: model:spurious-correlation-inflates-performance-in-single-cell-perturbation-prediction
+  type: model
+  name: Spurious correlation inflates performance in single-cell perturbation prediction
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.05.07.723486
+      role: primary
+
+- entity_id: model:spavgn
+  type: model
+  name: SpaVGN
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1371/journal.pone.0329122
+      role: primary
+
+- entity_id: model:deepgep
+  type: model
+  name: DeepGEP
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.ygeno.2026.111285
+      role: primary
+
+- entity_id: model:foundation-models-in-cancer-pathology
+  type: model
+  name: Foundation Models in Cancer Pathology
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.34133/research.1332
+      role: primary
+
+- entity_id: model:deep-learning-prediction-of-gene-expression-from-personal-genomes
+  type: model
+  name: Deep-learning prediction of gene expression from personal genomes
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1186/s13059-025-03926-7
+      role: primary
+
+- entity_id: model:a-generative-virtual-tissue-model-enables-computational-design-of-therapeutic-perturbation-strategies
+  type: model
+  name: A Generative Virtual Tissue Model Enables Computational Design of Therapeutic Perturbation Strategies
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.08.12.743536
+      role: primary
+
+- entity_id: model:oyster
+  type: model
+  name: Oyster
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.11.01.686014
+      role: primary
+
+- entity_id: model:trust-aware-sequence-to-function-modelling-in-regulatory-genomics
+  type: model
+  name: Trust-Aware Sequence-to-Function Modelling in Regulatory Genomics
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.08.20.745945
+      role: primary
+
+- entity_id: model:discovery-of-microbial-intergenic-features-with-genomic-language-modeling-and-multimodal-search
+  type: model
+  name: Discovery of microbial intergenic features with genomic language modeling and multimodal search
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.09.15.751765
+      role: primary
+
+- entity_id: model:evaluating-evo-2-for-plant-variant-effect-prediction
+  type: model
+  name: Evaluating Evo 2 for plant variant effect prediction
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.03.24.714098
+      role: primary
+
+- entity_id: model:generative-design-of-new-to-nature-biosynthetic-assembly-lines-with-genomic-language-modeling
+  type: model
+  name: Generative Design of New-to-nature Biosynthetic Assembly Lines with Genomic Language Modeling
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.09.11.750945
+      role: primary
+
+- entity_id: model:generative-design-and-construction-of-functional-plasmids-with-a-dna-language-model
+  type: model
+  name: Generative design and construction of functional plasmids with a DNA language model
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2025.12.06.692736
+      role: primary
+
+- entity_id: model:hybridna
+  type: model
+  name: HybriDNA
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2502.10807
+      role: primary
+
+- entity_id: model:poisoning-the-genome
+  type: model
+  name: Poisoning the Genome
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2603.27465
+      role: primary
+
+- entity_id: model:lucacell
+  type: model
+  name: LucaCell
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-11151765/v1
+      role: primary
+
+- entity_id: model:scaling-large-language-models-for-next-generation-single-cell-analysis
+  type: model
+  name: Scaling Large Language Models for Next-Generation Single-Cell Analysis
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.04.14.648850
+      role: primary
+
+- entity_id: model:a-standardized-framework-for-evaluating-gene-expression-generative-models
+  type: model
+  name: A Standardized Framework For Evaluating Gene Expression Generative Models
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2603.11244
+      role: primary
+
+- entity_id: model:scaling-an-autoregressive-transformer-for-single-cell-generation
+  type: model
+  name: Scaling an Autoregressive Transformer for Single-Cell Generation
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2608.02961
+      role: primary
+
+- entity_id: model:calmflow
+  type: model
+  name: CaLMFlow
+  year: 2024
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2410.05292
+      role: primary
+
+- entity_id: model:sequence-to-function-deep-learning-decodes-human-i-cis-i-regulatory-evolution
+  type: model
+  name: "Sequence-to-function deep learning decodes human  <i>cis</i>  -regulatory evolution"
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.08.24.746818
+      role: primary
+
+- entity_id: model:evaluation-of-multiple-sclerosis-risk-loci-reveals-that-genomic-oracles-fail-to-generalise-sequence-effects-across-host-contexts
+  type: model
+  name: Evaluation of multiple sclerosis risk loci reveals that genomic oracles fail to generalise sequence effects across host contexts
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-10850103/v1
+      role: primary
+
+- entity_id: model:daniodecima
+  type: model
+  name: DanioDecima
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.05.29.728876
+      role: primary
+
+- entity_id: model:deep-learning-the-tf-regulatory-code-for-gene-expression
+  type: model
+  name: Deep learning the TF regulatory code for gene expression
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/gr.281425.125
+      role: primary
+
+- entity_id: model:positional-interpretation-of-cis-regulatory-code-and-nucleosome-organization-with-deep-learning-models
+  type: model
+  name: Positional interpretation of cis-regulatory code and nucleosome organization with deep learning models
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-026-74807-1
+      role: primary
+
+- entity_id: model:evaluating-single-cell-atac-seq-atlasing-technologies-using-sequence-to-function-modeling
+  type: model
+  name: Evaluating single-cell ATAC-seq atlasing technologies using sequence-to-function modeling
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-026-68742-4
+      role: primary
+
+- entity_id: model:predicting-cell-state-specific-gene-regulation-from-dna-across-species
+  type: model
+  name: Predicting cell-state-specific gene regulation from DNA across species
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.10.19.760026
+      role: primary
+
+- entity_id: model:evaluating-the-cross-species-transferability-and-scaling-of-sequence-to-function-predictions-in-alphagenome
+  type: model
+  name: Evaluating the cross-species transferability and scaling of sequence-to-function predictions in AlphaGenome
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.07.10.737654
+      role: primary
+
+- entity_id: model:deep-learning-guided-identification-and-in-vivo-validation-of-compact-cis-regulatory-elements-for-the-zebrafish-habenula
+  type: model
+  name: Deep Learning-Guided Identification and In Vivo Validation of Compact Cis-Regulatory Elements for the Zebrafish Habenula
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.3390/genes17091079
+      role: primary
+
+- entity_id: model:single-cell-multiome-analysis-of-chromatin-state-and-transcriptome-in-the-human-basal-ganglia
+  type: model
+  name: Single-cell Multiome Analysis of Chromatin State and Transcriptome in the Human Basal Ganglia
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.02.03.703645
+      role: primary
+
+- entity_id: model:graphylovar
+  type: model
+  name: GraphyloVar
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btag426
+      role: primary
+
+- entity_id: model:cluster-based-data-balancing-for-protein-contact-map-prediction-using-mlp-neural-networks
+  type: model
+  name: Cluster-Based Data Balancing for Protein Contact Map Prediction Using MLP Neural Networks
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-7528788/v1
+      role: primary
+
+- entity_id: model:chromatin-interaction-neural-network-chinn
+  type: model
+  name: "Chromatin interaction neural network (ChINN)"
+  year: 2021
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1186/s13059-021-02453-5
+      role: primary
+
+- entity_id: model:epintlm
+  type: model
+  name: EPINTLM
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bib/bbag064
+      role: primary
+
+- entity_id: model:adapting-generative-genome-foundation-model-evo-for-functional-genomics-prediction-via-progressive-fine-tuning
+  type: model
+  name: Adapting Generative Genome Foundation Model Evo for Functional Genomics Prediction via Progressive Fine-Tuning
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1109/tcbbio.2026.3705107
+      role: primary
+
+- entity_id: model:decoding-promoter-activity-from-dna-sequence-using-pre-trained-language-models
+  type: model
+  name: Decoding promoter activity from DNA sequence using pre-trained language models
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41598-026-61483-w
+      role: primary
+
+- entity_id: model:wisteria
+  type: model
+  name: Wisteria
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2605.05913
+      role: primary
+
+- entity_id: model:genomic-language-models
+  type: model
+  name: Genomic Language Models
+  year: 2024
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2407.11435
+      role: primary
+
+- entity_id: model:dna-language-models
+  type: model
+  name: DNA Language Models
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2606.30140
+      role: primary
+
+- entity_id: model:vqdna
+  type: model
+  name: VQDNA
+  year: 2024
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2405.10812
+      role: primary
+
+- entity_id: model:a-split-control-criterion-for-few-shot-adaptation-in-single-cell-perturbation-prediction
+  type: model
+  name: A split-control criterion for few-shot adaptation in single-cell perturbation prediction
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.10.05.756906
+      role: primary
+
+- entity_id: model:pop-corn
+  type: model
+  name: Pop-Corn
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.09.25.754560
+      role: primary
+
+- entity_id: model:scouter
+  type: model
+  name: Scouter
+  year: 2024
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2024.12.06.627290
+      role: primary
+
+- entity_id: model:scape
+  type: model
+  name: ScAPE
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.09.08.674873
+      role: primary
+
+- entity_id: model:scdisinfact
+  type: model
+  name: scDisInFact
+  year: 2024
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-024-45227-w
+      role: primary
+
+- entity_id: model:genepert
+  type: model
+  name: GenePert
+  year: 2024
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2024.10.27.620513
+      role: primary
+
+- entity_id: model:generation-powered-inference-for-distribution-valued-outcomes
+  type: model
+  name: Generation-Powered Inference for Distribution-Valued Outcomes
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2608.14542
+      role: primary
+
+- entity_id: model:stochastic-flow-map-for-count-data
+  type: model
+  name: Stochastic Flow Map for Count Data
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2609.23290
+      role: primary
+
+- entity_id: model:a-systematic-review
+  type: model
+  name: A Systematic Review
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.22541/au.174584549.90714325/v1
+      role: primary
+
+- entity_id: model:benchmarking-dna-foundation-models-for-genomic-and-genetic-tasks
+  type: model
+  name: Benchmarking DNA foundation models for genomic and genetic tasks
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-025-65823-8
+      role: primary
+
+- entity_id: model:dfce-kant
+  type: model
+  name: DFCE-KanT
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btag502
+      role: primary
+
+- entity_id: model:fmh2st
+  type: model
+  name: FmH2ST
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/nar/gkaf865
+      role: primary
+
+- entity_id: model:evolution-and-mechanism-of-i-meis2-i-mediated-forelimb-specialization-in-bats
+  type: model
+  name: "Evolution and mechanism of  <i>MEIS2</i>  -mediated forelimb specialization in bats"
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.06.03.729816
+      role: primary
+
+- entity_id: model:a-high-resolution-protein-rna-binding-atlas-for-structure-aware-interaction-prediction-and-post-transcriptional-regulatory-modeling
+  type: model
+  name: A high-resolution protein-RNA binding atlas for structure-aware interaction prediction and post-transcriptional regulatory modeling
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.10.12.758580
+      role: primary
+
+- entity_id: model:parnet
+  type: model
+  name: PARNET
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.08.08.743506
+      role: primary
+
+- entity_id: model:scauto-as-a-comprehensive-framework-for-single-cell-chromatin-accessibility-data-analysis
+  type: model
+  name: scAuto as a comprehensive framework for single-cell chromatin accessibility data analysis
+  year: 2024
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.compbiomed.2024.108230
+      role: primary
+
+- entity_id: model:oryzag3
+  type: model
+  name: OryzaG3
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.05.22.727045
+      role: primary
+
+- entity_id: model:tabular-foundation-models-are-competitive-cellular-perturbation-predictors-across-biological-scales
+  type: model
+  name: Tabular Foundation Models Are Competitive Cellular Perturbation Predictors Across Biological Scales
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.06.28.735106
+      role: primary
+
+- entity_id: model:scrgp
+  type: model
+  name: scRGP
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.09.30.679477
+      role: primary
+
+- entity_id: model:sparse-integrative-dictionary-learning-resolves-conserved-drug-response-states-in-multiple-myeloma-mm
+  type: model
+  name: "Sparse integrative dictionary learning resolves conserved drug-response states in multiple myeloma (MM)"
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.cancergen.2026.08.002
+      role: primary
+
+- entity_id: model:elucidating-the-design-space-of-generative-models-for-single-cell-perturbation-prediction
+  type: model
+  name: Elucidating the Design Space of Generative Models for Single-Cell Perturbation Prediction
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.06.15.732063
+      role: primary
+
+- entity_id: model:auc-pr-is-a-more-informative-metric-for-assessing-the-biological-relevance-of-in-silico-cellular-perturbation-prediction-models
+  type: model
+  name: AUC-PR is a More Informative Metric for Assessing the Biological Relevance of In Silico Cellular Perturbation Prediction Models
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.03.06.641935
+      role: primary
+
+- entity_id: model:performance-of-deep-learning-methods-for-spatial-gene-expression-prediction-from-histology-images-a-comprehensive-assessment
+  type: model
+  name: "Performance of deep learning methods for spatial gene expression prediction from histology images: a comprehensive assessment"
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioadv/vbag202
+      role: primary
+
+- entity_id: model:hespotex
+  type: model
+  name: HESpotEx
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s43588-026-00992-0
+      role: primary
+
+- entity_id: model:pgst
+  type: model
+  name: PGST
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1109/jbhi.2026.3666148
+      role: primary
+
+- entity_id: model:deepwheat
+  type: model
+  name: DeepWheat
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1186/s13059-025-03809-x
+      role: primary
+
+- entity_id: model:deep-genomic-models-of-allele-specific-measurements
+  type: model
+  name: Deep genomic models of allele-specific measurements
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/gr.282189.126
+      role: primary
+
+- entity_id: model:thitogene
+  type: model
+  name: THItoGene
+  year: 2023
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bib/bbad464
+      role: primary
+
+- entity_id: model:carbon
+  type: model
+  name: Carbon
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.05.22.727119
+      role: primary
+
+- entity_id: model:drivr-base
+  type: model
+  name: DrivR-Base
+  year: 2024
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btae197
+      role: primary
+
+- entity_id: model:rapid-and-interpretable-protein-contact-map-prediction-using-a-pattern-matching-strategy
+  type: model
+  name: Rapid and interpretable protein contact map prediction using a pattern-matching strategy
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1088/1478-3975/ae443c
+      role: primary
+
+- entity_id: model:protein-subcellular-localization-prediction-model-based-on-graph-convolutional-network
+  type: model
+  name: Protein Subcellular Localization Prediction Model Based on Graph Convolutional Network
+  year: 2022
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1007/s12539-022-00529-9
+      role: primary
+
+- entity_id: model:protein-contact-map-prediction-using-multiple-sequence-alignment-dropout-and-consistency-learning-for-sequences-with-fewer-homologs
+  type: model
+  name: Protein contact map prediction using multiple sequence alignment dropout and consistency learning for sequences with fewer homologs
+  year: 2021
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2021.05.12.443740
+      role: primary
+
+- entity_id: model:fupred
+  type: model
+  name: FUpred
+  year: 2020
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btaa217
+      role: primary
+
+- entity_id: model:accurate-prediction-of-protein-contact-maps-by-coupling-residual-two-dimensional-bidirectional-long-short-term-memory-with-convolutional-neural-networks
+  type: model
+  name: Accurate prediction of protein contact maps by coupling residual two-dimensional bidirectional long short-term memory with convolutional neural networks
+  year: 2018
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/bty481
+      role: primary
+
+- entity_id: model:genomic-foundation-models-do-not-yet-boost-common-variant-discovery-beyond-standard-functional-annotations
+  type: model
+  name: Genomic foundation models do not yet boost common variant discovery beyond standard functional annotations
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.10.13.758880
+      role: primary
+
+- entity_id: model:decant
+  type: model
+  name: DECANT
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btag662
+      role: primary
+
+- entity_id: model:a-transcription-factor-regulatory-atlas-for-activity-inference-and-perturbation-prediction
+  type: model
+  name: A transcription factor regulatory atlas for activity inference and perturbation prediction
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/nar/gkag897
+      role: primary
+
+- entity_id: model:systematic-evaluation-of-single-cell-foundation-model-interpretability-reveals-attention-captures-co-expression-rather-than-unique-regulatory-signal
+  type: model
+  name: Systematic evaluation of single-cell foundation model interpretability reveals attention captures co-expression rather than unique regulatory signal
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-9082476/v1
+      role: primary
+
+- entity_id: model:scmomer
+  type: model
+  name: scMomer
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.08.04.668374
+      role: primary
+
+- entity_id: model:scgenept
+  type: model
+  name: scGenePT
+  year: 2024
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2024.10.23.619972
+      role: primary
+
+- entity_id: model:estimating-genotype-tissue-specific-gene-expression-using-hybrid-deep-learning
+  type: model
+  name: Estimating genotype-tissue specific gene expression using hybrid deep learning
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s42003-026-10251-7
+      role: primary
+
+- entity_id: model:application-of-deep-learning-in-crop-research-from-genomics-to-phenomics
+  type: model
+  name: "Application of deep learning in crop research: From genomics to phenomics"
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1002/tpg2.70268
+      role: primary
+
+- entity_id: model:overcoming-extrapolation-challenges-of-deep-learning-by-incorporating-physics-in-protein-sequence-function-modeling
+  type: model
+  name: Overcoming extrapolation challenges of deep learning by incorporating physics in protein sequence-function modeling
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1371/journal.pcbi.1013728
+      role: primary
+
+- entity_id: model:a-deep-learning-based-multiscale-integration-of-spatial-omics-with-tumor-morphology
+  type: model
+  name: A deep learning-based multiscale integration of spatial omics with tumor morphology
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-025-66691-y
+      role: primary
+
+- entity_id: model:impact-of-data-quality-on-deep-learning-prediction-of-spatial-transcriptomics-from-histology-images
+  type: model
+  name: Impact of Data Quality on Deep Learning Prediction of Spatial Transcriptomics from Histology Images
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.09.04.674228
+      role: primary
+
+- entity_id: model:spatial-transcriptomics-prediction-from-histology-jointly-through-transformer-and-graph-neural-networks
+  type: model
+  name: Spatial transcriptomics prediction from histology jointly through Transformer and graph neural networks
+  year: 2022
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bib/bbac297
+      role: primary
+
+- entity_id: model:agep-twas
+  type: model
+  name: AGEP_TWAS
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1109/tcbbio.2026.3663364
+      role: primary
+
+- entity_id: model:inference-of-spatial-chromatin-accessibility-via-integration-of-spatial-transcriptomics-and-single-cell-multi-omics-data
+  type: model
+  name: Inference of spatial chromatin accessibility via integration of spatial transcriptomics and single-cell multi-omics data
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-026-73948-7
+      role: primary
+
+- entity_id: model:benchmarking-algorithms-for-single-cell-multi-omics-prediction-and-integration
+  type: model
+  name: Benchmarking algorithms for single-cell multi-omics prediction and integration
+  year: 2024
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41592-024-02429-w
+      role: primary
+
+- entity_id: model:fveocrs-a-database-for-open-chromatin-prediction-in-wild-strawberry-based-on-a-large-language-model
+  type: model
+  name: FveOCRs - a database for open chromatin prediction in wild strawberry based on a large language model
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.10.22.683913
+      role: primary
+
+- entity_id: model:attcon
+  type: model
+  name: AttCON
+  year: 2024
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.compbiomed.2023.107822
+      role: primary
+
+- entity_id: model:exploring-the-alternative-conformation-of-a-known-protein-structure-based-on-contact-map-prediction
+  type: model
+  name: Exploring the Alternative Conformation of a Known Protein Structure Based on Contact Map Prediction
+  year: 2024
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1021/acs.jcim.3c01381
+      role: primary
+
+- entity_id: model:unveiling-chromatin-dynamics-with-virtual-epigenome
+  type: model
+  name: Unveiling chromatin dynamics with virtual epigenome
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-025-58481-3
+      role: primary
+
+- entity_id: model:hi-compass-resolves-cell-type-chromatin-interactions-by-single-cell-and-spatial-atac-seq-data-across-biological-scales
+  type: model
+  name: Hi-Compass resolves cell-type chromatin interactions by single-cell and spatial ATAC-seq data across biological scales
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.05.14.654019
+      role: primary
+
+- entity_id: model:enhancing-protein-contact-map-prediction-accuracy-via-ensembles-of-inter-residue-distance-predictors
+  type: model
+  name: Enhancing protein contact map prediction accuracy via ensembles of inter-residue distance predictors
+  year: 2022
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.compbiolchem.2022.107700
+      role: primary
+
+- entity_id: model:cgan-cmap
+  type: model
+  name: CGAN-Cmap
+  year: 2022
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2022.07.26.501607
+      role: primary
+
+- entity_id: model:nebcon
+  type: model
+  name: NeBcon
+  year: 2017
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btx164
+      role: primary
+
+- entity_id: model:predicting-dynamic-expression-patterns-in-budding-yeast-with-a-fungal-dna-language-model
+  type: model
+  name: Predicting dynamic expression patterns in budding yeast with a fungal DNA language model
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-7681940/v1
+      role: primary
+
+- entity_id: model:genomic-language-model-for-predicting-enhancers-and-their-allele-specific-activity-in-the-human-genome
+  type: model
+  name: Genomic language model for predicting enhancers and their allele-specific activity in the human genome
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btag456
+      role: primary
+
+- entity_id: model:ragenome
+  type: model
+  name: RAGenome
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2610.11761
+      role: primary
+
+- entity_id: model:c3p
+  type: model
+  name: C3P
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2605.25242
+      role: primary
+
+- entity_id: model:regfm
+  type: model
+  name: RegFM
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.08.17.744355
+      role: primary
+
+- entity_id: model:doformer
+  type: model
+  name: DoFormer
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.05.02.722054
+      role: primary
+
+- entity_id: model:predictive-prioritization-of-enhancers-associated-with-pancreas-disease-risk
+  type: model
+  name: Predictive Prioritization of Enhancers Associated with Pancreas Disease Risk
+  year: 2024
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2024.09.07.611794
+      role: primary
+
+- entity_id: model:scgpt
+  type: model
+  name: scGPT
+  year: 2024
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41592-024-02201-0
+      role: primary
+
+- entity_id: model:transcoder-based-circuit-analysis-for-interpretable-single-cell-foundation-models
+  type: model
+  name: Transcoder-based Circuit Analysis for Interpretable Single-Cell Foundation Models
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2509.14723
+      role: primary
+
+- entity_id: model:cellxpert
+  type: model
+  name: CellxPert
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2605.00930
+      role: primary
+
+- entity_id: model:scdiva
+  type: model
+  name: ScDiVa
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2602.03477
+      role: primary
+
+- entity_id: model:graphunet-ss
+  type: model
+  name: GraphUnet-SS
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.compbiomed.2026.111598
+      role: primary
+
+- entity_id: model:deepsge
+  type: model
+  name: DeepSGE
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1186/s12864-026-12568-3
+      role: primary
+
+- entity_id: model:fine-tuning-sequence-to-expression-models-on-personal-genome-and-transcriptome-data
+  type: model
+  name: Fine-tuning sequence-to-expression models on personal genome and transcriptome data
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1186/s13059-026-04091-1
+      role: primary
+
+- entity_id: model:ceno
+  type: model
+  name: CENO
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.07.28.741284
+      role: primary
+
+- entity_id: model:is-a-win-win-possible-achieving-pareto-optimal-privacy-utility-balance-in-fine-tuned-genome-language-model-embeddings-against-embedding-reconstruction-attacks
+  type: model
+  name: "Is a Win-Win possible? Achieving pareto-optimal privacy-utility balance in fine-tuned genome language model embeddings against embedding reconstruction attacks"
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btag311
+      role: primary
+
+- entity_id: model:hidden-state-genomics
+  type: model
+  name: Hidden State Genomics
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.05.13.725007
+      role: primary
+
+- entity_id: model:splisync
+  type: model
+  name: SpliSync
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.07.04.736518
+      role: primary
+
+- entity_id: model:a-fine-tuned-genomic-language-model-captures-nucleotide-level-information-overlooked-by-missense-variant-impact-predictors
+  type: model
+  name: A fine-tuned genomic language model captures nucleotide-level information overlooked by missense variant impact predictors
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.05.06.723362
+      role: primary
+
+- entity_id: model:using-the-dna-language-model-grover-to-parse-effects-of-sequence-chromatin-and-regulatory-features-on-genome-stability
+  type: model
+  name: "Using the DNA language model, GROVER, to parse effects of sequence, chromatin and regulatory features on genome stability"
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btag602
+      role: primary
+
+- entity_id: model:genart
+  type: model
+  name: GenART
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.crmeth.2026.101516
+      role: primary
+
+- entity_id: model:pretrained-on-animals-deployed-on-plants-why-rna-foundation-models-have-not-decoded-plant-regulation-or-genome-editing
+  type: model
+  name: "Pretrained on Animals, Deployed on Plants: Why RNA Foundation Models Have Not Decoded Plant Regulation or Genome Editing"
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.20944/preprints202610.0255.v1
+      role: primary
+
+- entity_id: model:semantic-design-of-functional-de-novo-genes-from-a-genomic-language-model
+  type: model
+  name: Semantic design of functional de novo genes from a genomic language model
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41586-025-09749-7
+      role: primary
+
+- entity_id: model:a-benchmark-of-evo2-genomic-ai-models-for-efficient-and-practical-deployment
+  type: model
+  name: A Benchmark of Evo2 Genomic AI Models for Efficient and Practical Deployment
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.09.10.675279
+      role: primary
+
+- entity_id: model:analyzing-genomic-foundation-models-for-viral-sequence-identification
+  type: model
+  name: Analyzing Genomic Foundation Models for Viral Sequence Identification
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.09.25.754388
+      role: primary
+
+- entity_id: model:back-to-bert-in-2026
+  type: model
+  name: Back to BERT in 2026
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.04.21.719816
+      role: primary
+
+- entity_id: model:genomic-properties-representing-plant-sex-chromosome-evolution-interpreted-with-genome-language-models
+  type: model
+  name: Genomic properties representing plant sex chromosome evolution interpreted with genome language models
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.05.25.727704
+      role: primary
+
+- entity_id: model:phylotune
+  type: model
+  name: PhyloTune
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-025-61684-3
+      role: primary
+
+- entity_id: model:fp8-inference-in-genomic-foundation-models-theoretical-vs-realized-speedups-on-genomeocean
+  type: model
+  name: "FP8 Inference in Genomic Foundation Models: Theoretical vs. Realized Speedups on GenomeOcean"
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.08.09.743676
+      role: primary
+
+- entity_id: model:dnachunker
+  type: model
+  name: DNACHUNKER
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2601.03019
+      role: primary
+
+- entity_id: model:dnabert-2
+  type: model
+  name: DNABERT-2
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2509.25274
+      role: primary
+
+- entity_id: model:hybrid-tokenization-strategy-for-dna-language-model-using-byte-pair-encoding-and-k-mer-methods
+  type: model
+  name: Hybrid Tokenization Strategy for DNA Language Model using Byte Pair Encoding and K-MER Methods
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2507.18570
+      role: primary
+
+- entity_id: model:exploring-adversarial-robustness-in-classification-tasks-using-dna-language-models
+  type: model
+  name: Exploring Adversarial Robustness in Classification tasks using DNA Language Models
+  year: 2024
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2409.19788
+      role: primary
+
+- entity_id: model:evolen
+  type: model
+  name: EvoLen
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2604.08698
+      role: primary
+
+- entity_id: model:genomeharness
+  type: model
+  name: GenomeHarness
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2608.21916
+      role: primary
+
+- entity_id: model:securing-the-language-of-life
+  type: model
+  name: Securing the Language of Life
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2509.18207
+      role: primary
+
+- entity_id: model:quantifying-memorization-and-privacy-risks-in-genomic-language-models
+  type: model
+  name: Quantifying Memorization and Privacy Risks in Genomic Language Models
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2603.08913
+      role: primary
+
+- entity_id: model:evaluating-dna-function-understanding-in-genomic-language-models-using-evolutionarily-implausible-sequences
+  type: model
+  name: Evaluating DNA function understanding in genomic language models using evolutionarily implausible sequences
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2506.10271
+      role: primary
+
+- entity_id: model:genebreaker
+  type: model
+  name: GeneBreaker
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2505.23839
+      role: primary
+
+- entity_id: model:recent-advances-in-deep-learning-and-language-models-for-studying-the-microbiome
+  type: model
+  name: Recent advances in deep learning and language models for studying the microbiome
+  year: 2024
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2409.10579
+      role: primary
+
+- entity_id: model:when-repeats-drive-the-vocabulary
+  type: model
+  name: When repeats drive the vocabulary
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2505.08918
+      role: primary
+
+- entity_id: model:barcodebert
+  type: model
+  name: BarcodeBERT
+  year: 2023
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2311.02401
+      role: primary
+
+- entity_id: model:scyeast
+  type: model
+  name: scYeast
+  year: 2027
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.synbio.2026.05.014
+      role: primary
+
+- entity_id: model:a-mechanism-annotated-benchmark-reveals-limited-fidelity-to-drug-response-signatures-in-single-cell-perturbation-models
+  type: model
+  name: A mechanism-annotated benchmark reveals limited fidelity to drug-response signatures in single-cell perturbation models
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.08.19.745729
+      role: primary
+
+- entity_id: model:reference-cell-design-shapes-model-evaluation-in-single-cell-perturbation-prediction
+  type: model
+  name: Reference-cell design shapes model evaluation in single-cell perturbation prediction
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-11119348/v1
+      role: primary
+
+- entity_id: model:towards-principled-evaluation-of-single-cell-perturbation-prediction-models
+  type: model
+  name: Towards Principled Evaluation of Single-Cell Perturbation Prediction Models
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.07.23.740433
+      role: primary
+
+- entity_id: model:enhancing-cross-context-generalization-in-drug-perturbation-prediction-with-a-multimodal-conditional-diffusion-framework
+  type: model
+  name: Enhancing cross-context generalization in drug perturbation prediction with a multimodal conditional diffusion framework
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btag482
+      role: primary
+
+- entity_id: model:scale
+  type: model
+  name: SCALE
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.03.17.712536
+      role: primary
+
+- entity_id: model:learning-biophysical-models-of-gene-regulation-with-probability-flow-matching
+  type: model
+  name: Learning biophysical models of gene regulation with probability flow matching
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2604.25062
+      role: primary
+
+- entity_id: model:sc-otgm
+  type: model
+  name: sc-OTGM
+  year: 2024
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2405.03726
+      role: primary
+
+- entity_id: model:diversity-by-design
+  type: model
+  name: Diversity by Design
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2506.22641
+      role: primary
+
+- entity_id: model:cellscientist
+  type: model
+  name: CellScientist
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2605.07335
+      role: primary
+
+- entity_id: model:conditional-out-of-sample-generation-for-unpaired-data-using-trvae
+  type: model
+  name: Conditional out-of-sample generation for unpaired data using trVAE
+  year: 2019
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:1910.01791
+      role: primary
+
+- entity_id: model:membrain-contact-2-0
+  type: model
+  name: MemBrain-contact 2.0
+  year: 2018
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btx593
+      role: primary
+
+- entity_id: model:spot-contact-lm
+  type: model
+  name: SPOT-Contact-LM
+  year: 2022
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btac053
+      role: primary
+
+- entity_id: model:spot-contact-single
+  type: model
+  name: SPOT-Contact-Single
+  year: 2021
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2021.06.19.449089
+      role: primary
+
+- entity_id: model:sequence-optimization-targeting-mrna-stability-enhances-monoclonal-antibody-titers-in-cho-cells
+  type: model
+  name: Sequence optimization targeting mRNA stability enhances monoclonal antibody titers in CHO cells
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.nbt.2026.09.004
+      role: primary
+
+- entity_id: model:probing-3d-chromatin-structure-awareness-in-evo2-dna-language-model
+  type: model
+  name: Probing 3D Chromatin Structure Awareness in Evo2 DNA Language Model
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2604.07196
+      role: primary
+
+- entity_id: model:reverse-complement-consistency-for-dna-language-models
+  type: model
+  name: Reverse-Complement Consistency for DNA Language Models
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2509.18529
+      role: primary
+
+- entity_id: model:causal-dictionary-learning-reveals-and-validates-transcription-factor-binding-features-in-genomic-language-models
+  type: model
+  name: Causal dictionary learning reveals and validates transcription-factor binding features in genomic language models
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2607.19618
+      role: primary
+
+- entity_id: model:toward-ai-virtual-cells-for-hepatology-representation-generation-dynamics-and-intervention-in-single-cell-models
+  type: model
+  name: "Toward AI Virtual Cells for Hepatology: Representation, Generation, Dynamics, and Intervention in Single-Cell Models"
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.3350/cmh.2026.0820
+      role: primary
+
+- entity_id: model:benchmarking-gene-expression-reconstruction-from-single-cell-latent-representations
+  type: model
+  name: Benchmarking gene expression reconstruction from single-cell latent representations
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.06.15.731445
+      role: primary
+
+- entity_id: model:genejepa
+  type: model
+  name: GeneJepa
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.10.14.682378
+      role: primary
+
+- entity_id: model:biom-jepa
+  type: model
+  name: BioM-JEPA
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2608.05928
+      role: primary
+
+- entity_id: model:towards-generalizable-single-cell-perturbation-modeling-via-the-conditional-monge-gap
+  type: model
+  name: Towards generalizable single-cell perturbation modeling via the Conditional Monge Gap
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2504.08328
+      role: primary
+
+- entity_id: model:a-multi-tissue-epigenomic-atlas-links-the-sheep-non-coding-genome-to-domestication-and-complex-traits
+  type: model
+  name: A multi-tissue epigenomic atlas links the sheep non-coding genome to domestication and complex traits
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.08.22.746371
+      role: primary
+
+- entity_id: model:computational-navigation-of-constrained-multidimensional-protein-fitness-landscapes
+  type: model
+  name: Computational navigation of constrained multidimensional protein fitness landscapes
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1002/1873-3468.70442
+      role: primary
+
+- entity_id: model:stamps
+  type: model
+  name: STAMPS
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.11.20.689577
+      role: primary
+
+- entity_id: model:amplicon-protein-bead-display-enables-quantitative-i-in-vitro-i-biochemistry-at-scale
+  type: model
+  name: "Amplicon/Protein Bead Display enables quantitative  <i>in vitro</i>  biochemistry at scale"
+  year: 2026
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.05.28.728566
+      role: primary
+
+- entity_id: model:sequence-based-chromatin-activity-modeling-and-regulatory-impact-prediction-of-genetic-variants-in-farmed-animals-using-deep-learning
+  type: model
+  name: Sequence-based chromatin activity modeling and regulatory impact prediction of genetic variants in farmed animals using deep learning
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/nargab/lqaf139
+      role: primary
+
+- entity_id: model:deep-homology-based-protein-contact-map-prediction
+  type: model
+  name: Deep Homology-Based Protein Contact-Map Prediction
+  year: 2020
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2020.10.04.325274
+      role: primary
+
+- entity_id: model:iedgedta
+  type: model
+  name: iEdgeDTA
+  year: 2023
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1039/d3ra03796g
+      role: primary
+
+- entity_id: model:protein-secondary-structure-assignment-using-residual-networks
+  type: model
+  name: Protein secondary structure assignment using residual networks
+  year: 2022
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1007/s00894-022-05271-z
+      role: primary
+
+- entity_id: model:highly-accurate-ab-initio-gene-annotation-with-annevo
+  type: model
+  name: Highly accurate ab initio gene annotation with ANNEVO
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41592-026-03036-7
+      role: primary
+
+- entity_id: model:tracing-model-generated-dna-with-position-independent-watermarking
+  type: model
+  name: Tracing model-generated DNA with position-independent watermarking
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2610.04763
+      role: primary
+
+- entity_id: model:set-aggregated-genome-embeddings-for-microbiome-abundance-prediction
+  type: model
+  name: Set-Aggregated Genome Embeddings for Microbiome Abundance Prediction
+  year: 2026
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2605.12286
+      role: primary
+
+- entity_id: model:virtual-cell-construction-for-artificial-intelligence-driven-drug-discovery
+  type: model
+  name: Virtual cell construction for artificial intelligence-driven drug discovery
+  year: 2026
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1111/bph.70585
+      role: primary
+
+- entity_id: model:drugpt
+  type: model
+  name: DrugPT
+  year: 2025
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.07.25.665130
+      role: primary
+
+- entity_id: model:contrastive-mixture-of-posteriors-for-counterfactual-inference-data-integration-and-fairness
+  type: model
+  name: "Contrastive Mixture of Posteriors for Counterfactual Inference, Data Integration and Fairness"
+  year: 2021
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2106.08161
+      role: primary
+
+- entity_id: model:basenji
+  type: model
+  name: Basenji
+  year: 2018
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/gr.227819.117
+      role: primary
+
+- entity_id: model:sei
+  type: model
+  name: Sei
+  year: 2022
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41588-022-01102-2
+      role: primary
+
+- entity_id: model:scbasset
+  type: model
+  name: scBasset
+  year: 2022
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41592-022-01562-8
+      role: primary
+
+- entity_id: model:epigept
+  type: model
+  name: EpiGePT
+  year: 2024
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1186/s13059-024-03449-7
+      role: primary
+
+- entity_id: model:hyenadna
+  type: model
+  name: HyenaDNA
+  year: 2023
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2306.15794
+      role: primary
+
+- entity_id: model:gena-lm
+  type: model
+  name: GENA-LM
+  year: 2025
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/nar/gkae1310
+      role: primary

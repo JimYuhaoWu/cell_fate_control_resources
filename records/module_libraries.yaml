@@ -135,3 +135,720 @@
   papers:
     - paper_id: 10.1093/nar/gkac989
       role: primary
+    - paper_id: 10.1186/s13148-026-02176-z
+      role: benchmark
+
+- entity_id: module:compendium-of-human-transcription-factor-effector-domains
+  type: module
+  name: Compendium of human transcription factor effector domains
+  year: 2022
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.molcel.2021.11.007
+      role: primary
+
+- entity_id: module:using-high-throughput-measurements-to-identify-principles-of-transcriptional-and-epigenetic-regulators
+  type: module
+  name: Using High-Throughput Measurements to Identify Principles of Transcriptional and Epigenetic Regulators
+  year: 2024
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1007/978-1-0716-4051-7_4
+      role: primary
+
+- entity_id: module:high-throughput-discovery-and-characterization-of-viral-transcriptional-effectors-in-human-cells
+  type: module
+  name: High-throughput discovery and characterization of viral transcriptional effectors in human cells
+  year: 2023
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.cels.2023.05.008
+      role: primary
+
+- entity_id: module:the-enigma-of-transcriptional-activation-domains
+  type: module
+  name: The Enigma of Transcriptional Activation Domains
+  year: 2024
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.jmb.2024.168766
+      role: primary
+
+- entity_id: module:high-throughput-affinity-measurements-of-direct-interactions-between-activation-domains-and-co-activators
+  type: module
+  name: High-throughput affinity measurements of direct interactions between activation domains and co-activators
+  year: 2024
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2024.08.19.608698
+      role: primary
+
+- entity_id: module:high-throughput-functional-characterization-of-combinations-of-transcriptional-activators-and-repressors
+  type: module
+  name: High-throughput functional characterization of combinations of transcriptional activators and repressors
+  year: 2023
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.cels.2023.07.001
+      role: primary
+
+- entity_id: module:directed-mutational-scanning-reveals-a-balance-between-acidic-and-hydrophobic-residues-in-strong-human-activation-domains
+  type: module
+  name: Directed mutational scanning reveals a balance between acidic and hydrophobic residues in strong human activation domains
+  year: 2022
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.cels.2022.01.002
+      role: primary
+
+- entity_id: module:a-deep-mutational-scan-of-an-acidic-activation-domain
+  type: module
+  name: A deep mutational scan of an acidic activation domain
+  year: 2017
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/230987
+      role: primary
+
+- entity_id: module:dry-and-wet-approaches-for-genome-wide-functional-annotation-of-conventional-and-unconventional-transcriptional-activators
+  type: module
+  name: Dry and wet approaches for genome-wide functional annotation of conventional and unconventional transcriptional activators
+  year: 2016
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.csbj.2016.06.004
+      role: primary
+
+- entity_id: module:histone-acetyltransferase-activity-of-mof-is-required-for-i-mll-af9-i-leukemogenesis
+  type: module
+  name: "Histone Acetyltransferase Activity of MOF Is Required for <i>MLL-AF9</i> Leukemogenesis"
+  year: 2017
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1158/0008-5472.can-16-2374
+      role: primary
+
+- entity_id: module:condensates-of-the-chromatin-regulator-ankrd11-restrict-hypertranscribed-genes-to-safeguard-development
+  type: module
+  name: Condensates of the chromatin regulator ANKRD11 restrict hypertranscribed genes to safeguard development
+  year: 2026
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.cell.2026.07.006
+      role: primary
+
+- entity_id: module:decoding-chromatin-regulator-lair1-lt-sup-gt-lt-sup-gt-m2-like-macrophage-patterns-in-atherosclerosis-and-clinical-outcomes-of-lung-adenocarcinoma-patients-evidence-from-artificial-intelligence-driven-multi-omics-and-in-vitro-validation
+  type: module
+  name: "Decoding chromatin regulator-LAIR1&lt;sup&gt;+&lt;/sup&gt; M2 like macrophage patterns in atherosclerosis and clinical outcomes of Lung adenocarcinoma patients: evidence from artificial intelligence-driven multi omics and in vitro validation"
+  year: 2026
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1007/s10238-026-02217-0
+      role: primary
+
+- entity_id: module:chromatin-regulator-smarca4-is-essential-for-mhv-induced-inflammatory-cell-death-panoptosis
+  type: module
+  name: "Chromatin Regulator SMARCA4 Is Essential for MHV-Induced Inflammatory Cell Death, PANoptosis"
+  year: 2024
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.3390/v16081261
+      role: primary
+
+- entity_id: module:high-throughput-identification-of-synthetic-riboswitches-by-barcode-free-amplicon-sequencing-in-human-cells
+  type: module
+  name: High-throughput identification of synthetic riboswitches by barcode-free amplicon-sequencing in human cells
+  year: 2020
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-020-14491-x
+      role: primary
+
+- entity_id: module:identification-of-a-chromatin-regulator-signature-for-predicting-prognosis-of-prostate-cancer-patient
+  type: module
+  name: Identification of a chromatin regulator signature for predicting prognosis of prostate cancer patient
+  year: 2023
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.26355/eurrev_202301_30901
+      role: primary
+
+- entity_id: module:development-of-a-novel-immunoassay-to-detect-interactions-with-the-transactivation-domain-of-p53-application-to-screening-of-new-drugs
+  type: module
+  name: "Development of a novel immunoassay to detect interactions with the transactivation domain of p53: application to screening of new drugs"
+  year: 2017
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41598-017-09574-7
+      role: primary
+
+- entity_id: module:a-novel-chromatin-regulator-related-immune-checkpoint-related-gene-prognostic-signature-and-potential-candidate-drugs-for-endometrial-cancer-patients
+  type: module
+  name: A novel chromatin regulator-related immune checkpoint related gene prognostic signature and potential candidate drugs for endometrial cancer patients
+  year: 2022
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1186/s41065-022-00253-w
+      role: primary
+
+- entity_id: module:identification-of-a-chromatin-regulator-signature-and-potential-candidate-drugs-for-bladder-cancer
+  type: module
+  name: Identification of a chromatin regulator signature and potential candidate drugs for bladder cancer
+  year: 2022
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1186/s41065-021-00212-x
+      role: primary
+
+- entity_id: module:a-major-chromatin-regulator-determines-resistance-of-tumor-cells-to-t-cell-mediated-killing
+  type: module
+  name: A major chromatin regulator determines resistance of tumor cells to T cell-mediated killing
+  year: 2018
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1126/science.aao1710
+      role: primary
+
+- entity_id: module:synergistic-upregulation-of-target-genes-by-tet1-and-vp64-in-the-dcas9-suntag-platform
+  type: module
+  name: Synergistic Upregulation of Target Genes by TET1 and VP64 in the dCas9-SunTag Platform
+  year: 2020
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.3390/ijms21051574
+      role: primary
+
+- entity_id: module:atrx-inactivation-disrupts-global-chromatin-state-and-topology-to-dysregulate-neurodevelopmental-pathways-in-glioma-pathogenesis
+  type: module
+  name: ATRX inactivation disrupts global chromatin state and topology to dysregulate neurodevelopmental pathways in glioma pathogenesis
+  year: 2026
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/nar/gkag644
+      role: primary
+
+- entity_id: module:simple-biochemical-features-underlie-transcriptional-activation-domain-diversity-and-dynamic-fuzzy-binding-to-mediator
+  type: module
+  name: "Simple biochemical features underlie transcriptional activation domain diversity and dynamic, fuzzy binding to Mediator"
+  year: 2021
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.7554/elife.68068
+      role: primary
+
+- entity_id: module:a-high-throughput-mutational-scan-of-an-intrinsically-disordered-acidic-transcriptional-activation-domain
+  type: module
+  name: A High-Throughput Mutational Scan of an Intrinsically Disordered Acidic Transcriptional Activation Domain
+  year: 2018
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.cels.2018.01.015
+      role: primary
+
+- entity_id: module:occupancy-maps-of-208-chromatin-associated-proteins-in-one-human-cell-type
+  type: module
+  name: Occupancy maps of 208 chromatin-associated proteins in one human cell type
+  year: 2020
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41586-020-2023-4
+      role: primary
+
+- entity_id: module:the-epigenetic-factor-phf13-governs-trophoblast-stemness-and-differentiation
+  type: module
+  name: The Epigenetic Factor PHF13 Governs Trophoblast Stemness and Differentiation
+  year: 2026
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.03.14.711150
+      role: primary
+
+- entity_id: module:hierarchy-in-regulator-interactions-with-distant-transcriptional-activation-domains-empowers-rheostatic-regulation
+  type: module
+  name: Hierarchy in regulator interactions with distant transcriptional activation domains empowers rheostatic regulation
+  year: 2025
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1002/pro.70142
+      role: primary
+
+- entity_id: module:a-novel-method-for-inhibiting-transcriptional-autoactivation-by-fusion-of-srdx-repression-domain
+  type: module
+  name: A novel method for inhibiting transcriptional autoactivation by fusion of SRDX repression domain
+  year: 2024
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-4387794/v1
+      role: primary
+
+- entity_id: module:a-genetic-screen-identifies-bend3-as-a-regulator-of-bivalent-gene-expression-and-global-dna-methylation
+  type: module
+  name: A genetic screen identifies BEND3 as a regulator of bivalent gene expression and global DNA methylation
+  year: 2023
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/nar/gkad719
+      role: primary
+
+- entity_id: module:peptidomimetics-designed-to-bind-to-ras-effector-domain-are-promising-cancer-therapeutic-compounds
+  type: module
+  name: Peptidomimetics designed to bind to RAS effector domain are promising cancer therapeutic compounds
+  year: 2022
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41598-022-19703-6
+      role: primary
+
+- entity_id: module:a-fret-based-biosensor-for-the-src-n-terminal-regulatory-element
+  type: module
+  name: A FRET-Based Biosensor for the Src N-Terminal Regulatory Element
+  year: 2022
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.3390/bios12020096
+      role: primary
+
+- entity_id: module:piggybac-transposon-tools-for-recessive-screening-identify-b-cell-lymphoma-drivers-in-mice
+  type: module
+  name: PiggyBac transposon tools for recessive screening identify B-cell lymphoma drivers in mice
+  year: 2019
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-019-09180-3
+      role: primary
+
+- entity_id: module:identification-of-functional-features-of-synthetic-sineups-antisense-lncrnas-that-specifically-enhance-protein-translation
+  type: module
+  name: "Identification of functional features of synthetic SINEUPs, antisense lncRNAs that specifically enhance protein translation"
+  year: 2018
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1371/journal.pone.0183229
+      role: primary
+
+- entity_id: module:actin-activates-pseudomonas-aeruginosa-exoy-nucleotidyl-cyclase-toxin-and-exoy-like-effector-domains-from-martx-toxins
+  type: module
+  name: Actin activates Pseudomonas aeruginosa ExoY nucleotidyl cyclase toxin and ExoY-like effector domains from MARTX toxins
+  year: 2016
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/ncomms13582
+      role: primary
+
+- entity_id: module:development-of-a-synthetic-transcription-factor-based-s-adenosylmethionine-biosensor-in-saccharomyces-cerevisiae
+  type: module
+  name: Development of a synthetic transcription factor-based S-adenosylmethionine biosensor in Saccharomyces cerevisiae
+  year: 2023
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1007/s10529-022-03338-8
+      role: primary
+
+- entity_id: module:systematic-identification-of-transcriptional-activator-domains-from-non-transcription-factor-proteins-in-plants-and-yeast
+  type: module
+  name: Systematic identification of transcriptional activator domains from non-transcription factor proteins in plants and yeast
+  year: 2023
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2023.09.12.557247
+      role: primary
+
+- entity_id: module:improving-understanding-of-chromatin-regulatory-proteins-and-potential-implications-for-drug-discovery
+  type: module
+  name: Improving understanding of chromatin regulatory proteins and potential implications for drug discovery
+  year: 2016
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1586/14789450.2016.1159960
+      role: primary
+
+- entity_id: module:dynamic-changes-of-dna-methylation-and-transcriptome-expression-in-porcine-ovaries-during-aging
+  type: module
+  name: Dynamic Changes of DNA Methylation and Transcriptome Expression in Porcine Ovaries during Aging
+  year: 2019
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1155/2019/8732023
+      role: primary
+
+- entity_id: module:cell-based-assays-of-sineup-non-coding-rnas-that-can-specifically-enhance-mrna-translation
+  type: module
+  name: Cell Based Assays of SINEUP Non-coding RNAs That Can Specifically Enhance mRNA Translation
+  year: 2019
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.3791/58627
+      role: primary
+
+- entity_id: module:chromatin-regulator-perturbation-causes-heme-pathway-imbalance-in-yeast-and-human-cells
+  type: module
+  name: Chromatin regulator perturbation causes heme pathway imbalance in yeast and human cells
+  year: 2026
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-10369837/v1
+      role: primary
+
+- entity_id: module:targeting-oncogenic-sox2-condensates-suppresses-squamous-cell-carcinoma-progression
+  type: module
+  name: Targeting oncogenic SOX2 condensates suppresses squamous cell carcinoma progression
+  year: 2026
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.xcrm.2026.103117
+      role: primary
+
+- entity_id: module:mecp2-interacts-with-the-super-elongation-complex-to-regulate-transcription
+  type: module
+  name: MeCP2 interacts with the super elongation complex to regulate transcription
+  year: 2025
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1126/sciadv.adt5937
+      role: primary
+
+- entity_id: module:efficient-multitool-multiplex-gene-engineering-with-tale-be
+  type: module
+  name: Efficient multitool/multiplex gene engineering with TALE-BE
+  year: 2022
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.3389/fbioe.2022.1033669
+      role: primary
+
+- entity_id: module:mevalonate-kinase-inhibits-anti-tumor-immunity-by-impairing-the-tumor-cell-intrinsic-interferon-response-in-microsatellite-instability-colorectal-cancer
+  type: module
+  name: Mevalonate kinase inhibits anti-tumor immunity by impairing the tumor cell-intrinsic interferon response in microsatellite instability colorectal cancer
+  year: 2024
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-4819905/v1
+      role: primary
+
+- entity_id: module:comprehensive-analysis-identified-and-validated-brd4-chd1-and-kdm7a-as-potential-biomarkers-for-osteoarthritis
+  type: module
+  name: "Comprehensive analysis identified and validated BRD4, CHD1, and KDM7A as potential biomarkers for osteoarthritis"
+  year: 2022
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-2312000/v1
+      role: primary
+
+- entity_id: module:coiled-coil-heterodimers-with-increased-stability-for-cellular-regulation-and-sensing-sars-cov-2-spike-protein-mediated-cell-fusion
+  type: module
+  name: Coiled-coil heterodimers with increased stability for cellular regulation and sensing SARS-CoV-2 spike protein-mediated cell fusion
+  year: 2020
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2020.12.10.419440
+      role: primary
+
+- entity_id: module:maturation-of-lipophagic-organelles-in-hepatocytes-is-dependent-upon-a-rab10-dynamin-2-complex
+  type: module
+  name: Maturation of Lipophagic Organelles in Hepatocytes Is Dependent Upon a Rab10/Dynamin-2 Complex
+  year: 2020
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1002/hep.31059
+      role: primary
+
+- entity_id: module:transcriptomic-rationale-for-synthetic-lethality-targeting-ercc1-and-cdkn1a-in-chronic-myelomonocytic-leukaemia
+  type: module
+  name: Transcriptomic rationale for synthetic lethality-targeting ERCC1 and CDKN1A in chronic myelomonocytic leukaemia
+  year: 2018
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1111/bjh.15408
+      role: primary
+
+- entity_id: module:transmembrane-prolines-mediate-signal-sensing-and-decoding-in-bacillus-subtilis-desk-histidine-kinase
+  type: module
+  name: Transmembrane Prolines Mediate Signal Sensing and Decoding in Bacillus subtilis DesK Histidine Kinase
+  year: 2019
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1128/mbio.02564-19
+      role: primary
+
+- entity_id: module:fact-sets-a-barrier-for-cell-fate-reprogramming-in-i-c-elegans-i-and-human
+  type: module
+  name: "FACT sets a barrier for cell fate reprogramming in  <i>C. elegans</i>  and Human"
+  year: 2017
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/185116
+      role: primary
+
+- entity_id: module:inducible-bcl-2-gene-rna-interference-mediated-by-aptamer-integrated-hdv-ribozyme-switch
+  type: module
+  name: Inducible Bcl-2 gene RNA interference mediated by aptamer-integrated HDV ribozyme switch
+  year: 2017
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1039/c7ib00029d
+      role: primary
+
+- entity_id: module:setd1a-modulates-cell-cycle-progression-through-a-mirna-network-that-regulates-p53-target-genes
+  type: module
+  name: SETD1A modulates cell cycle progression through a miRNA network that regulates p53 target genes
+  year: 2015
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/ncomms9257
+      role: primary
+
+- entity_id: module:small-molecule-perturbation-of-the-cand1-cullin1-ubiquitin-cycle-stabilizes-p53-and-triggers-epstein-barr-virus-reactivation
+  type: module
+  name: Small molecule perturbation of the CAND1-Cullin1-ubiquitin cycle stabilizes p53 and triggers Epstein-Barr virus reactivation
+  year: 2017
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1371/journal.ppat.1006517
+      role: primary
+
+- entity_id: module:versatile-in-vivo-regulation-of-tumor-phenotypes-by-dcas9-mediated-transcriptional-perturbation
+  type: module
+  name: Versatile in vivo regulation of tumor phenotypes by dCas9-mediated transcriptional perturbation
+  year: 2016
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1073/pnas.1600582113
+      role: primary
+
+- entity_id: module:pkc-marcks-signaling-promotes-intracellular-survival-of-unopsonized-i-burkholderia-thailandensis-i
+  type: module
+  name: "PKC-η-MARCKS Signaling Promotes Intracellular Survival of Unopsonized <i>Burkholderia thailandensis</i>"
+  year: 2017
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.3389/fcimb.2017.00231
+      role: primary
+
+- entity_id: module:inhibiting-fungal-multidrug-resistance-by-disrupting-an-activator-mediator-interaction
+  type: module
+  name: Inhibiting fungal multidrug resistance by disrupting an activator-Mediator interaction
+  year: 2016
+  fate_axis: [with-what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/nature16963
+      role: primary

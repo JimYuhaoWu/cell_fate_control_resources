@@ -105,9 +105,7 @@
   "zero-shot"
  ],
  "evidence_tier": [
-  "externally-benchmarked",
-  "partially-independent",
-  "self-reported"
+  "externally-benchmarked"
  ],
  "fate_axis": [
   "how",

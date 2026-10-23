@@ -85,6 +85,22 @@
   papers:
     - paper_id: arxiv:2311.12570
       role: primary
+    - paper_id: 10.1101/2025.06.25.661622
+      role: benchmark
+    - paper_id: 10.1101/2025.07.05.662870
+      role: benchmark
+    - paper_id: 10.1038/s41467-025-65077-4
+      role: benchmark
+    - paper_id: 10.1038/s44320-025-00184-4
+      role: critique
+    - paper_id: 10.1101/2024.06.22.600190
+      role: benchmark
+    - paper_id: 10.1101/2025.06.04.656517
+      role: benchmark
+    - paper_id: 10.1101/2024.11.11.623015
+      role: benchmark
+    - paper_id: 10.1101/2024.07.27.605418
+      role: benchmark
 
 - entity_id: benchmark:dart-eval
   type: benchmark
@@ -127,4 +143,1052 @@
       url: https://github.com/kundajelab/DART-Eval
   papers:
     - paper_id: 10.52202/079017-1981
+      role: primary
+    - paper_id: 10.1016/j.celrep.2026.118025
+      role: benchmark
+
+- entity_id: benchmark:guanine-v1-0
+  type: benchmark
+  name: GUANinE v1.0
+  year: 2023
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2023.10.12.562113
+      role: primary
+
+- entity_id: benchmark:regdesign-bench
+  type: benchmark
+  name: RegDesign-Bench
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.10.18.759890
+      role: primary
+
+- entity_id: benchmark:benchmarking-dna-foundation-models-for-zero-shot-variant-effect-prediction-the-role-of-context-training-and-architecture
+  type: benchmark
+  name: "Benchmarking DNA Foundation Models for zero-shot variant effect prediction: the role of context, training, and architecture"
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.21203/rs.3.rs-6988910/v1
+      role: primary
+
+- entity_id: benchmark:benchmarking-dna-sequence-models-for-causal-regulatory-variant-prediction-in-human-genetics
+  type: benchmark
+  name: Benchmarking DNA Sequence Models for Causal Regulatory Variant Prediction in Human Genetics
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.02.11.637758
+      role: primary
+
+- entity_id: benchmark:sequencelab
+  type: benchmark
+  name: SequenceLab
+  year: 2023
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2310.16908
+      role: primary
+
+- entity_id: benchmark:genomeqa
+  type: benchmark
+  name: GenomeQA
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2604.05774
+      role: primary
+
+- entity_id: benchmark:benchmarking-foundation-cell-models-for-post-perturbation-rna-seq-prediction
+  type: benchmark
+  name: Benchmarking foundation cell models for post-perturbation RNA-seq prediction
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1186/s12864-025-11600-2
+      role: primary
+
+- entity_id: benchmark:benchmarking-the-translational-potential-of-spatial-gene-expression-prediction-from-histology
+  type: benchmark
+  name: Benchmarking the translational potential of spatial gene expression prediction from histology
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-025-56618-y
+      role: primary
+
+- entity_id: benchmark:benchmarking-dna-foundation-models-for-genomic-and-genetic-tasks
+  type: benchmark
+  name: Benchmarking DNA Foundation Models for Genomic and Genetic Tasks
+  year: 2024
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2024.08.16.608288
+      role: primary
+
+- entity_id: benchmark:benchmarking-a-foundational-cell-model-for-post-perturbation-rnaseq-prediction
+  type: benchmark
+  name: Benchmarking a foundational cell model for post-perturbation RNAseq prediction
+  year: 2024
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2024.09.30.615843
+      role: primary
+
+- entity_id: benchmark:loco-epi
+  type: benchmark
+  name: LOCO-EPI
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2504.00306
+      role: primary
+
+- entity_id: benchmark:ambimodbench
+  type: benchmark
+  name: AmbiModBench
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2609.32527
+      role: primary
+
+- entity_id: benchmark:table2vec
+  type: benchmark
+  name: Table2Vec
+  year: 2021
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2112.01830
+      role: primary
+
+- entity_id: benchmark:a-comprehensive-benchmark-and-guide-for-sequence-function-interpretable-deep-learning-models-in-genomics
+  type: benchmark
+  name: A comprehensive benchmark and guide for sequence-function interpretable deep learning models in genomics
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2025.01.06.631405
+      role: primary
+
+- entity_id: benchmark:scalable-embedding-fusion-with-protein-language-models-insights-from-benchmarking-text-integrated-representations
+  type: benchmark
+  name: "Scalable embedding fusion with protein language models: insights from benchmarking text-integrated representations"
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bib/bbag014
+      role: primary
+
+- entity_id: benchmark:mvcbench
+  type: benchmark
+  name: MVCBench
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.04.22.720110
+      role: primary
+
+- entity_id: benchmark:towards-more-realistic-simulated-datasets-for-benchmarking-deep-learning-models-in-regulatory-genomics
+  type: benchmark
+  name: Towards More Realistic Simulated Datasets for Benchmarking Deep Learning Models in Regulatory Genomics
+  year: 2021
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2021.12.26.474224
+      role: primary
+
+- entity_id: benchmark:enhanced-tf-binding-site-maps-improve-regulatory-networks-learned-from-accessible-chromatin-data
+  type: benchmark
+  name: Enhanced TF binding site maps improve regulatory networks learned from accessible chromatin data
+  year: 2019
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/545780
+      role: primary
+
+- entity_id: benchmark:omnigenbench
+  type: benchmark
+  name: OmniGenBench
+  year: 2024
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2410.01784
+      role: primary
+
+- entity_id: benchmark:rawbench
+  type: benchmark
+  name: RawBench
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2510.03629
+      role: primary
+
+- entity_id: benchmark:benchmarking-large-language-models-for-polymer-property-predictions
+  type: benchmark
+  name: Benchmarking Large Language Models for Polymer Property Predictions
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2506.02129
+      role: primary
+
+- entity_id: benchmark:hifi-st
+  type: benchmark
+  name: HiFi-ST
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.06.29.735170
+      role: primary
+
+- entity_id: benchmark:benchmarking-dna-foundation-models
+  type: benchmark
+  name: Benchmarking DNA Foundation Models
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.03.10.710786
+      role: primary
+
+- entity_id: benchmark:benchmarking-three-simple-dna-staining-based-image-metrics-for-live-cell-tracking-of-chromatin-organization
+  type: benchmark
+  name: Benchmarking three simple DNA staining-based image metrics for live-cell tracking of chromatin organization
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1080/19491034.2026.2721777
+      role: primary
+
+- entity_id: benchmark:benchmarking-genome-choice-in-functional-genomics-analyses
+  type: benchmark
+  name: Benchmarking genome choice in functional genomics analyses
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-026-73663-3
+      role: primary
+
+- entity_id: benchmark:benchmark-averages-hide-the-failures-that-matter-quantizing-esm-2-for-protein-variant-effect-prediction
+  type: benchmark
+  name: "Benchmark Averages Hide the Failures That Matter: Quantizing ESM-2 for Protein Variant-Effect Prediction"
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.08.10.744024
+      role: primary
+
+- entity_id: benchmark:systematic-evaluation-of-feature-representations-for-cancer-associated-sorf-prediction-in-non-coding-rna
+  type: benchmark
+  name: Systematic Evaluation of Feature Representations for Cancer-Associated sORF Prediction in Non-coding RNA
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.06.16.732659
+      role: primary
+
+- entity_id: benchmark:benchmarking-computational-methods-for-single-cell-chromatin-data-analysis
+  type: benchmark
+  name: Benchmarking computational methods for single-cell chromatin data analysis
+  year: 2024
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1186/s13059-024-03356-x
+      role: primary
+
+- entity_id: benchmark:fitness-landscape-for-antibodies-2
+  type: benchmark
+  name: Fitness Landscape for Antibodies 2
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2025.12.27.696706
+      role: primary
+
+- entity_id: benchmark:a-benchmark-of-computational-methods-for-correcting-biases-of-established-and-unknown-origin-in-crispr-cas9-screening-data
+  type: benchmark
+  name: A benchmark of computational methods for correcting biases of established and unknown origin in CRISPR-Cas9 screening data
+  year: 2024
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1186/s13059-024-03336-1
+      role: primary
+
+- entity_id: benchmark:flab
+  type: benchmark
+  name: FLAb
+  year: 2024
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2024.01.13.575504
+      role: primary
+
+- entity_id: benchmark:benchmarking-atlas-level-data-integration-in-single-cell-genomics
+  type: benchmark
+  name: Benchmarking atlas-level data integration in single-cell genomics
+  year: 2022
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41592-021-01336-8
+      role: primary
+
+- entity_id: benchmark:comprehensive-benchmarking-of-cite-seq-versus-dogma-seq-single-cell-multimodal-omics
+  type: benchmark
+  name: Comprehensive Benchmarking of CITE-seq versus DOGMA-seq Single Cell Multimodal Omics
+  year: 2021
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2021.12.15.472792
+      role: primary
+
+- entity_id: benchmark:benchngs
+  type: benchmark
+  name: benchNGS
+  year: 2015
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:1504.06659
+      role: primary
+
+- entity_id: benchmark:benchmarking-database-performance-for-genomic-data
+  type: benchmark
+  name: Benchmarking database performance for genomic data
+  year: 2020
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2008.06835
+      role: primary
+
+- entity_id: benchmark:genbench
+  type: benchmark
+  name: GenBench
+  year: 2024
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2406.01627
+      role: primary
+
+- entity_id: benchmark:dnabert-2
+  type: benchmark
+  name: DNABERT-2
+  year: 2023
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2306.15006
+      role: primary
+
+- entity_id: benchmark:scisafeeval
+  type: benchmark
+  name: SciSafeEval
+  year: 2024
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2410.03769
+      role: primary
+
+- entity_id: benchmark:ideas-have-genomes
+  type: benchmark
+  name: Ideas Have Genomes
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2607.08758
+      role: primary
+
+- entity_id: benchmark:the-tcga-meta-dataset-clinical-benchmark
+  type: benchmark
+  name: The TCGA Meta-Dataset Clinical Benchmark
+  year: 2019
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:1910.08636
+      role: primary
+
+- entity_id: benchmark:prostate-varbench
+  type: benchmark
+  name: Prostate-VarBench
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2511.09576
+      role: primary
+
+- entity_id: benchmark:biosecbench-surveillance
+  type: benchmark
+  name: BioSecBench-Surveillance
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2607.19262
+      role: primary
+
+- entity_id: benchmark:image-scene-graph-generation-sgg-benchmark
+  type: benchmark
+  name: "Image Scene Graph Generation (SGG) Benchmark"
+  year: 2021
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2107.12604
+      role: primary
+
+- entity_id: benchmark:benchmarking-end-to-end-genotype-to-phenotype-prediction-workflows-across-80-opensnp-phenotypes
+  type: benchmark
+  name: Benchmarking end-to-end genotype-to-phenotype prediction workflows across 80 openSNP phenotypes
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2603.06768
+      role: primary
+
+- entity_id: benchmark:benchmarking-machine-learning-models-for-multi-omics-based-breast-cancer-prediction
+  type: benchmark
+  name: Benchmarking Machine Learning Models for Multi-Omics-Based Breast Cancer Prediction
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2607.16250
+      role: primary
+
+- entity_id: benchmark:does-your-model-understand-genes-a-benchmark-of-gene-properties-for-biological-and-text-models
+  type: benchmark
+  name: "Does your model understand genes? A benchmark of gene properties for biological and text models"
+  year: 2024
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2412.04075
+      role: primary
+
+- entity_id: benchmark:benchmarking-large-language-models-for-biomedical-relation-extraction
+  type: benchmark
+  name: Benchmarking Large Language Models for Biomedical Relation Extraction
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2609.19071
+      role: primary
+
+- entity_id: benchmark:genotex
+  type: benchmark
+  name: GenoTEX
+  year: 2024
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2406.15341
+      role: primary
+
+- entity_id: benchmark:agqa-2-0
+  type: benchmark
+  name: AGQA 2.0
+  year: 2022
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2204.06105
+      role: primary
+
+- entity_id: benchmark:a-rigorous-benchmarking-of-methods-for-sars-cov-2-lineage-abundance-estimation-in-wastewater
+  type: benchmark
+  name: A rigorous benchmarking of methods for SARS-CoV-2 lineage abundance estimation in wastewater
+  year: 2023
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2309.16994
+      role: primary
+
+- entity_id: benchmark:benchmarking-machine-learning-robustness-in-covid-19-genome-sequence-classification
+  type: benchmark
+  name: Benchmarking Machine Learning Robustness in Covid-19 Genome Sequence Classification
+  year: 2022
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2207.08898
+      role: primary
+
+- entity_id: benchmark:virobench
+  type: benchmark
+  name: ViroBench
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2605.25388
+      role: primary
+
+- entity_id: benchmark:towards-complex-query-referring-image-segmentation
+  type: benchmark
+  name: Towards Complex-query Referring Image Segmentation
+  year: 2023
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2309.17205
+      role: primary
+
+- entity_id: benchmark:uncertainty-in-gnn-learning-evaluations
+  type: benchmark
+  name: Uncertainty in GNN Learning Evaluations
+  year: 2023
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2305.06026
+      role: primary
+
+- entity_id: benchmark:agqa
+  type: benchmark
+  name: AGQA
+  year: 2021
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2103.16002
+      role: primary
+
+- entity_id: benchmark:benchmark-problems-for-numerical-implementations-of-phase-field-models
+  type: benchmark
+  name: Benchmark Problems for Numerical Implementations of Phase Field Models
+  year: 2016
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:1610.00622
+      role: primary
+
+- entity_id: benchmark:benchmarking-embedding-aggregation-methods-in-computational-pathology-a-clinical-data-perspective
+  type: benchmark
+  name: "Benchmarking Embedding Aggregation Methods in Computational Pathology: A Clinical Data Perspective"
+  year: 2024
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2407.07841
+      role: primary
+
+- entity_id: benchmark:lassobench
+  type: benchmark
+  name: LassoBench
+  year: 2021
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2111.02790
+      role: primary
+
+- entity_id: benchmark:factual
+  type: benchmark
+  name: FACTUAL
+  year: 2023
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2305.17497
+      role: primary
+
+- entity_id: benchmark:a-biologically-plausible-benchmark-for-contextual-bandit-algorithms-in-precision-oncology-using-in-vitro-data
+  type: benchmark
+  name: A Biologically Plausible Benchmark for Contextual Bandit Algorithms in Precision Oncology Using in vitro Data
+  year: 2019
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:1911.04389
+      role: primary
+
+- entity_id: benchmark:reefknot
+  type: benchmark
+  name: Reefknot
+  year: 2024
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2408.09429
+      role: primary
+
+- entity_id: benchmark:mattools
+  type: benchmark
+  name: MatTools
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2505.10852
+      role: primary
+
+- entity_id: benchmark:benchmarking-and-evaluation-of-ai-models-in-biology-outcomes-and-recommendations-from-the-czi-virtual-cells-workshop
+  type: benchmark
+  name: "Benchmarking and Evaluation of AI Models in Biology: Outcomes and Recommendations from the CZI Virtual Cells Workshop"
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2507.10502
+      role: primary
+
+- entity_id: benchmark:large-scale-benchmark-study-of-survival-prediction-methods-using-multi-omics-data
+  type: benchmark
+  name: Large-scale benchmark study of survival prediction methods using multi-omics data
+  year: 2020
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2003.03621
+      role: primary
+
+- entity_id: benchmark:rainnet
+  type: benchmark
+  name: RainNet
+  year: 2020
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2012.09700
+      role: primary
+
+- entity_id: benchmark:oncotraj
+  type: benchmark
+  name: OncoTraj
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2606.11144
+      role: primary
+
+- entity_id: benchmark:know-show
+  type: benchmark
+  name: Know-Show
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2512.05513
+      role: primary
+
+- entity_id: benchmark:annotatemissense
+  type: benchmark
+  name: AnnotateMissense
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2605.24520
+      role: primary
+
+- entity_id: benchmark:spatial-transcriptomics-deconvolution-methods-generalize-well-to-spatial-chromatin-accessibility-data
+  type: benchmark
+  name: Spatial transcriptomics deconvolution methods generalize well to spatial chromatin accessibility data
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btaf268
+      role: primary
+
+- entity_id: benchmark:evaluation-and-optimization-of-sequence-based-gene-regulatory-deep-learning-models
+  type: benchmark
+  name: Evaluation and optimization of sequence-based gene regulatory deep learning models
+  year: 2023
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/2023.04.26.538471
+      role: primary
+
+- entity_id: benchmark:3cdb
+  type: benchmark
+  name: 3CDB
+  year: 2016
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/database/baw044
+      role: primary
+
+- entity_id: benchmark:plato-bio
+  type: benchmark
+  name: Plato-Bio
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2607.23975
+      role: primary
+
+- entity_id: benchmark:iaode-for-benchmarking-and-continuum-modeling-of-single-cell-chromatin-accessibility
+  type: benchmark
+  name: iAODE for benchmarking and continuum modeling of single-cell chromatin accessibility
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s42003-026-09768-8
+      role: primary
+
+- entity_id: benchmark:beyond-chromatin-accessibility
+  type: benchmark
+  name: Beyond chromatin accessibility
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/nargab/lqag046
+      role: primary
+
+- entity_id: benchmark:a-comprehensive-benchmarking-study-on-computational-tools-for-cross-omics-label-transfer-from-single-cell-rna-to-atac-data
+  type: benchmark
+  name: A comprehensive benchmarking study on computational tools for cross-omics label transfer from single-cell RNA to ATAC data
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/g3journal/jkag026
+      role: primary
+
+- entity_id: benchmark:benchmark-of-chromatin-protein-interaction-methods-in-haploid-round-spermatids
+  type: benchmark
+  name: Benchmark of chromatin-protein interaction methods in haploid round spermatids
+  year: 2025
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.3389/fcell.2025.1572405
+      role: primary
+
+- entity_id: benchmark:benchmarking-algorithms-for-joint-integration-of-unpaired-and-paired-single-cell-rna-seq-and-atac-seq-data
+  type: benchmark
+  name: Benchmarking algorithms for joint integration of unpaired and paired single-cell RNA-seq and ATAC-seq data
+  year: 2023
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1186/s13059-023-03073-x
+      role: primary
+
+- entity_id: benchmark:enhanced-maps-of-transcription-factor-binding-sites-improve-regulatory-networks-learned-from-accessible-chromatin-data
+  type: benchmark
+  name: Enhanced Maps of Transcription Factor Binding Sites Improve Regulatory Networks Learned from Accessible Chromatin Data
+  year: 2019
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1104/pp.19.00605
+      role: primary
+
+- entity_id: benchmark:jump-lite
+  type: benchmark
+  name: JUMP-lite
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2608.07632
+      role: primary
+
+- entity_id: benchmark:supporting-supervised-learning-in-fungal-biosynthetic-gene-cluster-discovery-new-benchmark-datasets
+  type: benchmark
+  name: "Supporting supervised learning in fungal Biosynthetic Gene Cluster discovery: new benchmark datasets"
+  year: 2020
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2001.03260
+      role: primary
+
+- entity_id: benchmark:aster
+  type: benchmark
+  name: ASTER
+  year: 2023
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bioinformatics/btac842
+      role: primary
+
+- entity_id: benchmark:a-comprehensive-benchmark-of-publicly-available-image-foundation-models-for-their-usability-to-predict-gene-expression-from-whole-slide-images
+  type: benchmark
+  name: A comprehensive benchmark of publicly available image foundation models for their usability to predict gene expression from whole slide images
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.64898/2026.03.02.709012
+      role: primary
+
+- entity_id: benchmark:are-dropout-imputation-methods-for-scrna-seq-effective-for-scatac-seq-data
+  type: benchmark
+  name: "Are dropout imputation methods for scRNA-seq effective for scATAC-seq data?"
+  year: 2022
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/bib/bbab442
+      role: primary
+
+- entity_id: benchmark:a-benchmark-of-mri-foundation-models-to-predict-idh-mutational-status-in-glioma
+  type: benchmark
+  name: "A Benchmark of (MRI-) Foundation Models to Predict IDH Mutational Status in Glioma"
+  year: 2026
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2606.23172
+      role: primary
+
+- entity_id: benchmark:time-to-embrace-natural-language-processing-nlp-based-digital-pathology-benchmarking-nlp-and-convolutional-neural-network-based-deep-learning-pipelines
+  type: benchmark
+  name: "Time to Embrace Natural Language Processing (NLP)-based Digital Pathology: Benchmarking NLP- and Convolutional Neural Network-based Deep Learning Pipelines"
+  year: 2023
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2302.10406
+      role: primary
+
+- entity_id: benchmark:dnalongbench
+  type: benchmark
+  name: DNALongBench
+  year: 2025
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-025-65077-4
+      role: primary
+
+- entity_id: benchmark:gue
+  type: benchmark
+  name: GUE
+  year: 2023
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: arxiv:2306.15006
       role: primary

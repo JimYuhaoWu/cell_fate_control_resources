@@ -41,6 +41,14 @@
   papers:
     - paper_id: 10.17504/protocols.io.zcpf2vn
       role: primary
+    - paper_id: 10.26508/lsa.202201778
+      role: benchmark
+    - paper_id: 10.1002/cpz1.445
+      role: application
+    - paper_id: 10.1007/978-1-0716-0958-3_17
+      role: application
+    - paper_id: 10.1007/978-1-0716-5072-1_5
+      role: application
 
 - entity_id: protocol:lowinput-cutrun-v2
   type: protocol
