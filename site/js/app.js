@@ -37,6 +37,12 @@
   // 05_validate.py. Keep the two in step.
   var EVALUATING_ROLES = ['benchmark', 'critique'];
 
+  // Rows of an evidence list shown before the rest are folded away.
+  // model:nucleotide-transformer carries 71 evaluations and 73 trail rows,
+  // which is the whole card by length, so the tier badge and the first few
+  // evaluators scroll off the top of what a reader sees.
+  var ROWS_SHOWN = 5;
+
   var PAPER_ROLE_NOTE = {
     'primary': 'the paper the resource is from',
     'preprint': 'earlier version of the primary paper',
@@ -240,6 +246,35 @@
     return authors.length > 1 ? authors[0] + ' et al.' : authors[0];
   }
 
+  /**
+   * Fold a populated list down to ROWS_SHOWN rows and return the control that
+   * unfolds it, or null when the list is short enough to leave alone. The
+   * button is returned rather than appended so each caller puts it where that
+   * block wants it, and `hidden` is used rather than a class so a row stays
+   * out of the page's find-in-page and tab order while folded.
+   */
+  function foldList(list, noun) {
+    var rows = list.children;
+    if (rows.length <= ROWS_SHOWN) { return null; }
+    var folded = rows.length - ROWS_SHOWN;
+    var more = 'Show ' + folded + ' more ' + noun + (folded === 1 ? '' : 's');
+    var toggle = el('button', 'fold-toggle', more);
+    toggle.type = 'button';
+    toggle.setAttribute('aria-expanded', 'false');
+
+    function apply(open) {
+      for (var i = ROWS_SHOWN; i < rows.length; i++) { rows[i].hidden = !open; }
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.textContent = open ? 'Show fewer' : more;
+    }
+
+    apply(false);
+    toggle.addEventListener('click', function () {
+      apply(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+    return toggle;
+  }
+
   function evidenceBlock(entity) {
     var box = el('div', 'evidence');
     var badge = el('span', 'badge ev ' + entity.evidence_tier,
@@ -274,6 +309,8 @@
       list.appendChild(item);
     });
     box.appendChild(list);
+    var toggle = foldList(list, 'evaluation');
+    if (toggle) { box.appendChild(toggle); }
     return box;
   }
 
@@ -307,6 +344,8 @@
       list.appendChild(item);
     });
     box.appendChild(list);
+    var toggle = foldList(list, 'paper');
+    if (toggle) { box.appendChild(toggle); }
     return box;
   }
 

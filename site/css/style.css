@@ -425,6 +425,21 @@ a { color: var(--accent); }
 
 .ev-list li, .trail-list li { margin-bottom: 8px; }
 
+.fold-toggle {
+  margin-top: 2px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.fold-toggle:hover { color: var(--ink); }
+
 .role {
   display: inline-block;
   margin-right: 6px;
