@@ -297,7 +297,6 @@
   name: Norman 2019 combinatorial Perturb-seq
   year: 2019
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -310,7 +309,6 @@
   name: Adamson 2016 Perturb-seq UPR screen
   year: 2016
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -323,7 +321,6 @@
   name: Dixit 2016 Perturb-seq
   year: 2016
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -336,7 +333,6 @@
   name: sci-Plex
   year: 2020
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23

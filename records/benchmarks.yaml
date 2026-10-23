@@ -151,7 +151,6 @@
   type: benchmark
   name: GUANinE v1.0
   year: 2023
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -163,7 +162,6 @@
   type: benchmark
   name: RegDesign-Bench
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -199,7 +197,6 @@
   type: benchmark
   name: SequenceLab
   year: 2023
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -214,7 +211,6 @@
   type: benchmark
   name: GenomeQA
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -277,7 +273,6 @@
   type: benchmark
   name: LOCO-EPI
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -292,7 +287,6 @@
   type: benchmark
   name: AmbiModBench
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -304,7 +298,6 @@
   type: benchmark
   name: Table2Vec
   year: 2021
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -343,7 +336,6 @@
   type: benchmark
   name: MVCBench
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -382,7 +374,6 @@
   type: benchmark
   name: OmniGenBench
   year: 2024
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -394,7 +385,6 @@
   type: benchmark
   name: RawBench
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -418,7 +408,6 @@
   type: benchmark
   name: HiFi-ST
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -430,7 +419,6 @@
   type: benchmark
   name: Benchmarking DNA Foundation Models
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -505,7 +493,6 @@
   type: benchmark
   name: Fitness Landscape for Antibodies 2
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -532,7 +519,6 @@
   type: benchmark
   name: FLAb
   year: 2024
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -571,7 +557,6 @@
   type: benchmark
   name: benchNGS
   year: 2015
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -595,7 +580,6 @@
   type: benchmark
   name: GenBench
   year: 2024
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -607,7 +591,6 @@
   type: benchmark
   name: DNABERT-2
   year: 2023
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -619,7 +602,6 @@
   type: benchmark
   name: SciSafeEval
   year: 2024
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -631,7 +613,6 @@
   type: benchmark
   name: Ideas Have Genomes
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -643,7 +624,6 @@
   type: benchmark
   name: The TCGA Meta-Dataset Clinical Benchmark
   year: 2019
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -655,7 +635,6 @@
   type: benchmark
   name: Prostate-VarBench
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -667,7 +646,6 @@
   type: benchmark
   name: BioSecBench-Surveillance
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -742,7 +720,6 @@
   type: benchmark
   name: GenoTEX
   year: 2024
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -757,7 +734,6 @@
   type: benchmark
   name: AGQA 2.0
   year: 2022
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -793,7 +769,6 @@
   type: benchmark
   name: ViroBench
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -820,7 +795,6 @@
   type: benchmark
   name: Uncertainty in GNN Learning Evaluations
   year: 2023
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -832,7 +806,6 @@
   type: benchmark
   name: AGQA
   year: 2021
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -868,7 +841,6 @@
   type: benchmark
   name: LassoBench
   year: 2021
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -880,7 +852,6 @@
   type: benchmark
   name: FACTUAL
   year: 2023
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -907,7 +878,6 @@
   type: benchmark
   name: Reefknot
   year: 2024
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -919,7 +889,6 @@
   type: benchmark
   name: MatTools
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -955,7 +924,6 @@
   type: benchmark
   name: RainNet
   year: 2020
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -967,7 +935,6 @@
   type: benchmark
   name: OncoTraj
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -979,7 +946,6 @@
   type: benchmark
   name: Know-Show
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -994,7 +960,6 @@
   type: benchmark
   name: AnnotateMissense
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1036,7 +1001,6 @@
   type: benchmark
   name: 3CDB
   year: 2016
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1048,7 +1012,6 @@
   type: benchmark
   name: Plato-Bio
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1075,7 +1038,6 @@
   type: benchmark
   name: Beyond chromatin accessibility
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1138,7 +1100,6 @@
   type: benchmark
   name: JUMP-lite
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1162,7 +1123,6 @@
   type: benchmark
   name: ASTER
   year: 2023
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1229,7 +1189,6 @@
   name: DNALongBench
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1245,7 +1204,6 @@
   name: GUE
   year: 2023
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23

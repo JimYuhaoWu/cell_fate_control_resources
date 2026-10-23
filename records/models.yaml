@@ -816,7 +816,6 @@
   name: VariantFormer
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -842,7 +841,6 @@
   name: PerturbBridge
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -855,7 +853,6 @@
   name: PertDiffBench
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -884,7 +881,6 @@
   name: Systema
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -965,7 +961,6 @@
   name: EPInformer
   year: 2024
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -981,7 +976,6 @@
   name: XChrom
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1010,7 +1004,6 @@
   name: BioDSNN
   year: 2024
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1039,7 +1032,6 @@
   name: pertTF
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1052,7 +1044,6 @@
   name: CisTransCell
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1078,7 +1069,6 @@
   name: OCOO-T
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1091,7 +1081,6 @@
   name: MTMixG-Net
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1143,7 +1132,6 @@
   name: HyCoSeq
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1172,7 +1160,6 @@
   name: ARSENAL
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1201,7 +1188,6 @@
   name: SLIM
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1219,7 +1205,6 @@
   name: DeMixPert
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1232,7 +1217,6 @@
   name: Beyond Independent Genes
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1263,7 +1247,6 @@
   name: gReLU
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1305,7 +1288,6 @@
   name: GPO-VAE
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1360,7 +1342,6 @@
   name: DeepCis
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1386,7 +1367,6 @@
   name: GENERator
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1451,7 +1431,6 @@
   name: Caduceus
   year: 2024
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1464,7 +1443,6 @@
   name: V3Cell
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1563,7 +1541,6 @@
   name: Signals in the Cells
   year: 2024
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1576,7 +1553,6 @@
   name: PertAdapt
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1634,7 +1610,6 @@
   name: scooby
   year: 2024
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1660,7 +1635,6 @@
   name: scLDM
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1691,7 +1665,6 @@
   name: X-Cell
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1730,7 +1703,6 @@
   name: CatLearning
   year: 2024
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1769,7 +1741,6 @@
   name: SpaDiT
   year: 2024
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1785,7 +1756,6 @@
   name: Enigma
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1801,7 +1771,6 @@
   name: VEGN
   year: 2021
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1814,7 +1783,6 @@
   name: VCLMU
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1877,7 +1845,6 @@
   name: scArchon
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1890,7 +1857,6 @@
   name: VCBench
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1916,7 +1882,6 @@
   name: MultiPert
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1932,7 +1897,6 @@
   name: MAP
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1958,7 +1922,6 @@
   name: EpiExpr
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2034,7 +1997,6 @@
   name: SemanticCAP
   year: 2022
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2102,7 +2064,6 @@
   name: DART-Eval
   year: 2024
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2118,7 +2079,6 @@
   name: DNAMotifTokenizer
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2222,7 +2182,6 @@
   name: DeepSCENIC
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2235,7 +2194,6 @@
   name: ProT-VAE
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2261,7 +2219,6 @@
   name: GPN-MSA
   year: 2023
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2332,7 +2289,6 @@
   name: Hyperbolic Genome Embeddings
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2413,7 +2369,6 @@
   name: Lingshu-Cell
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2426,7 +2381,6 @@
   name: PRESTIGE-ST
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2494,7 +2448,6 @@
   name: SpaVGN
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2507,7 +2460,6 @@
   name: DeepGEP
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2520,7 +2472,6 @@
   name: Foundation Models in Cancer Pathology
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2559,7 +2510,6 @@
   name: Oyster
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2637,7 +2587,6 @@
   name: HybriDNA
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2650,7 +2599,6 @@
   name: Poisoning the Genome
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2663,7 +2611,6 @@
   name: LucaCell
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2715,7 +2662,6 @@
   name: CaLMFlow
   year: 2024
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2754,7 +2700,6 @@
   name: DanioDecima
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2858,7 +2803,6 @@
   name: GraphyloVar
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2907,7 +2851,6 @@
   name: EPINTLM
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2954,7 +2897,6 @@
   name: Wisteria
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2967,7 +2909,6 @@
   name: Genomic Language Models
   year: 2024
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2980,7 +2921,6 @@
   name: DNA Language Models
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2993,7 +2933,6 @@
   name: VQDNA
   year: 2024
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3019,7 +2958,6 @@
   name: Pop-Corn
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3032,7 +2970,6 @@
   name: Scouter
   year: 2024
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3045,7 +2982,6 @@
   name: ScAPE
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3058,7 +2994,6 @@
   name: scDisInFact
   year: 2024
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3071,7 +3006,6 @@
   name: GenePert
   year: 2024
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3100,7 +3034,6 @@
   name: Stochastic Flow Map for Count Data
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3113,7 +3046,6 @@
   name: A Systematic Review
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3142,7 +3074,6 @@
   name: DFCE-KanT
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3158,7 +3089,6 @@
   name: FmH2ST
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3197,7 +3127,6 @@
   name: PARNET
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3223,7 +3152,6 @@
   name: OryzaG3
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3249,7 +3177,6 @@
   name: scRGP
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3317,7 +3244,6 @@
   name: HESpotEx
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3330,7 +3256,6 @@
   name: PGST
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3343,7 +3268,6 @@
   name: DeepWheat
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3369,7 +3293,6 @@
   name: THItoGene
   year: 2023
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3385,7 +3308,6 @@
   name: Carbon
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3398,7 +3320,6 @@
   name: DrivR-Base
   year: 2024
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3458,7 +3379,6 @@
   name: FUpred
   year: 2020
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3497,7 +3417,6 @@
   name: DECANT
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3546,7 +3465,6 @@
   name: scMomer
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3559,7 +3477,6 @@
   name: scGenePT
   year: 2024
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3655,7 +3572,6 @@
   name: AGEP_TWAS
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3712,7 +3628,6 @@
   name: AttCON
   year: 2024
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3780,7 +3695,6 @@
   name: CGAN-Cmap
   year: 2022
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3793,7 +3707,6 @@
   name: NeBcon
   year: 2017
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3837,7 +3750,6 @@
   name: RAGenome
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3855,7 +3767,6 @@
   name: C3P
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3868,7 +3779,6 @@
   name: RegFM
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3881,7 +3791,6 @@
   name: DoFormer
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3907,7 +3816,6 @@
   name: scGPT
   year: 2024
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3933,7 +3841,6 @@
   name: CellxPert
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3946,7 +3853,6 @@
   name: ScDiVa
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3959,7 +3865,6 @@
   name: GraphUnet-SS
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3975,7 +3880,6 @@
   name: DeepSGE
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4004,7 +3908,6 @@
   name: CENO
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4035,7 +3938,6 @@
   name: Hidden State Genomics
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4048,7 +3950,6 @@
   name: SpliSync
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4095,7 +3996,6 @@
   name: GenART
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4165,7 +4065,6 @@
   name: Back to BERT in 2026
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4191,7 +4090,6 @@
   name: PhyloTune
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4217,7 +4115,6 @@
   name: DNACHUNKER
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4230,7 +4127,6 @@
   name: DNABERT-2
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4269,7 +4165,6 @@
   name: EvoLen
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4285,7 +4180,6 @@
   name: GenomeHarness
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4298,7 +4192,6 @@
   name: Securing the Language of Life
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4337,7 +4230,6 @@
   name: GeneBreaker
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4368,7 +4260,6 @@
   name: When repeats drive the vocabulary
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4386,7 +4277,6 @@
   name: BarcodeBERT
   year: 2023
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4404,7 +4294,6 @@
   name: scYeast
   year: 2027
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4475,7 +4364,6 @@
   name: SCALE
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4501,7 +4389,6 @@
   name: sc-OTGM
   year: 2024
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4514,7 +4401,6 @@
   name: Diversity by Design
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4527,7 +4413,6 @@
   name: CellScientist
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4553,7 +4438,6 @@
   name: MemBrain-contact 2.0
   year: 2018
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4566,7 +4450,6 @@
   name: SPOT-Contact-LM
   year: 2022
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4584,7 +4467,6 @@
   name: SPOT-Contact-Single
   year: 2021
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4680,7 +4562,6 @@
   name: GeneJepa
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4693,7 +4574,6 @@
   name: BioM-JEPA
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4745,7 +4625,6 @@
   name: STAMPS
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4797,7 +4676,6 @@
   name: iEdgeDTA
   year: 2023
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4878,7 +4756,6 @@
   name: DrugPT
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4904,7 +4781,6 @@
   name: Basenji
   year: 2018
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4917,7 +4793,6 @@
   name: Sei
   year: 2022
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4930,7 +4805,6 @@
   name: scBasset
   year: 2022
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4943,7 +4817,6 @@
   name: EpiGePT
   year: 2024
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4961,7 +4834,6 @@
   name: HyenaDNA
   year: 2023
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4979,7 +4851,6 @@
   name: GENA-LM
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
