@@ -4868,7 +4868,6 @@
   name: DeepSEA
   year: 2015
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4881,7 +4880,6 @@
   name: Basset
   year: 2016
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4894,7 +4892,6 @@
   name: ExPecto
   year: 2018
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4907,7 +4904,6 @@
   name: Xpresso
   year: 2020
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4920,7 +4916,6 @@
   name: BPNet
   year: 2021
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4933,7 +4928,6 @@
   name: Akita
   year: 2020
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4946,7 +4940,6 @@
   name: Orca
   year: 2022
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4959,7 +4952,6 @@
   name: DNABERT
   year: 2021
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4977,7 +4969,6 @@
   name: Evo
   year: 2024
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4990,7 +4981,6 @@
   name: GPN
   year: 2023
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23

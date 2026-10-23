@@ -1216,7 +1216,6 @@
   name: Genomic Benchmarks
   year: 2023
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23

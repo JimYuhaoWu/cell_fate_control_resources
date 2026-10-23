@@ -89,7 +89,6 @@
   name: "CUT&Tag"
   year: 2019
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -102,7 +101,6 @@
   name: ATAC-seq
   year: 2013
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -115,7 +113,6 @@
   name: Omni-ATAC
   year: 2017
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23

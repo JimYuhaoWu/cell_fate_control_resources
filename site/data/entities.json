@@ -1036,6 +1036,46 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "entity_id": "benchmark:genomic-benchmarks",
+  "fate_axis": [
+   "how"
+  ],
+  "links": [
+   {
+    "kind": "code",
+    "label": null,
+    "url": "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks"
+   }
+  ],
+  "name": "Genomic Benchmarks",
+  "papers": [
+   {
+    "authors": [
+     "Grešová K",
+     "Martinek V",
+     "Čechák D",
+     "Šimeček P",
+     "Alexiou P"
+    ],
+    "doi": "10.1186/s12863-023-01123-8",
+    "note": null,
+    "paper_id": "10.1186/s12863-023-01123-8",
+    "role": "primary",
+    "title": "Genomic benchmarks: a collection of datasets for genomic sequence classification",
+    "url": "https://doi.org/10.1186/s12863-023-01123-8",
+    "venue": null,
+    "year": 2023
+   }
+  ],
+  "primary_paper_id": "10.1186/s12863-023-01123-8",
+  "primary_paper_title": "Genomic benchmarks: a collection of datasets for genomic sequence classification",
+  "type": "benchmark",
+  "year": 2023
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
   "entity_id": "benchmark:genotex",
   "links": [
    {
@@ -1869,6 +1909,64 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "entity_id": "database:cis-bp",
+  "fate_axis": [
+   "with-what",
+   "where"
+  ],
+  "links": [],
+  "name": "CIS-BP",
+  "papers": [
+   {
+    "authors": [
+     "Weirauch MT",
+     "Yang A",
+     "Albu M",
+     "Cote AG",
+     "Montenegro-Montero A",
+     "Drewe P",
+     "Najafabadi HS",
+     "Lambert SA",
+     "Mann I",
+     "Cook K",
+     "Zheng H",
+     "Goity A",
+     "van Bakel H",
+     "Lozano JC",
+     "Galli M",
+     "Lewsey MG",
+     "Huang E",
+     "Mukherjee T",
+     "Chen X",
+     "Reece-Hoyes JS",
+     "Govindarajan S",
+     "Shaulsky G",
+     "Walhout AJM",
+     "Bouget FY",
+     "Ratsch G",
+     "Larrondo LF",
+     "Ecker JR",
+     "Hughes TR"
+    ],
+    "doi": "10.1016/j.cell.2014.08.009",
+    "note": null,
+    "paper_id": "10.1016/j.cell.2014.08.009",
+    "role": "primary",
+    "title": "Determination and inference of eukaryotic transcription factor sequence specificity",
+    "url": "https://doi.org/10.1016/j.cell.2014.08.009",
+    "venue": null,
+    "year": 2014
+   }
+  ],
+  "primary_paper_id": "10.1016/j.cell.2014.08.009",
+  "primary_paper_title": "Determination and inference of eukaryotic transcription factor sequence specificity",
+  "type": "database",
+  "year": 2014
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
   "entity_id": "database:encode-screen-ccres",
   "fate_axis": [
    "where"
@@ -1956,6 +2054,46 @@
   "primary_paper_title": "Expanded encyclopaedias of DNA elements in the human and mouse genomes",
   "type": "database",
   "year": 2020
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
+  "entity_id": "database:ensembl-regulatory-build",
+  "fate_axis": [
+   "where"
+  ],
+  "links": [
+   {
+    "kind": "code",
+    "label": null,
+    "url": "https://github.com/Ensembl/ensembl-funcgen"
+   }
+  ],
+  "name": "Ensembl Regulatory Build",
+  "papers": [
+   {
+    "authors": [
+     "Zerbino DR",
+     "Wilder SP",
+     "Johnson N",
+     "Juettemann T",
+     "Flicek PR"
+    ],
+    "doi": "10.1186/s13059-015-0621-5",
+    "note": null,
+    "paper_id": "10.1186/s13059-015-0621-5",
+    "role": "primary",
+    "title": "The ensembl regulatory build",
+    "url": "https://doi.org/10.1186/s13059-015-0621-5",
+    "venue": null,
+    "year": 2015
+   }
+  ],
+  "primary_paper_id": "10.1186/s13059-015-0621-5",
+  "primary_paper_title": "The ensembl regulatory build",
+  "type": "database",
+  "year": 2015
  },
  {
   "curator": "JimYuhaoWu",
@@ -2843,6 +2981,34 @@
   "primary_paper_title": "Perturb-Seq: Dissecting Molecular Circuits with Scalable Single-Cell RNA Profiling of Pooled Genetic Screens",
   "type": "dataset",
   "year": 2016
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
+  "entity_id": "dataset:encode",
+  "fate_axis": [
+   "where"
+  ],
+  "links": [],
+  "name": "ENCODE",
+  "papers": [
+   {
+    "authors": null,
+    "doi": "10.1038/nature11247",
+    "note": null,
+    "paper_id": "10.1038/nature11247",
+    "role": "primary",
+    "title": "An integrated encyclopedia of DNA elements in the human genome",
+    "url": "https://doi.org/10.1038/nature11247",
+    "venue": null,
+    "year": 2012
+   }
+  ],
+  "primary_paper_id": "10.1038/nature11247",
+  "primary_paper_title": "An integrated encyclopedia of DNA elements in the human genome",
+  "type": "dataset",
+  "year": 2012
  },
  {
   "access": "open",
@@ -4400,6 +4566,130 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "entity_id": "dataset:roadmap-epigenomics",
+  "fate_axis": [
+   "where"
+  ],
+  "links": [],
+  "name": "Roadmap Epigenomics",
+  "papers": [
+   {
+    "authors": [
+     "Kundaje A",
+     "Meuleman W",
+     "Ernst J",
+     "Bilenky M",
+     "Yen A",
+     "Heravi-Moussavi A",
+     "Kheradpour P",
+     "Zhang Z",
+     "Wang J",
+     "Ziller MJ",
+     "Amin V",
+     "Whitaker JW",
+     "Schultz MD",
+     "Ward LD",
+     "Sarkar A",
+     "Quon G",
+     "Sandstrom RS",
+     "Eaton ML",
+     "Wu YC",
+     "Pfenning AR",
+     "Wang X",
+     "Claussnitzer M",
+     "Liu Y",
+     "Coarfa C",
+     "Harris RA",
+     "Shoresh N",
+     "Epstein CB",
+     "Gjoneska E",
+     "Leung D",
+     "Xie W",
+     "Hawkins RD",
+     "Lister R",
+     "Hong C",
+     "Gascard P",
+     "Mungall AJ",
+     "Moore R",
+     "Chuah E",
+     "Tam A",
+     "Canfield TK",
+     "Hansen RS",
+     "Kaul R",
+     "Sabo PJ",
+     "Bansal MS",
+     "Carles A",
+     "Dixon JR",
+     "Farh KH",
+     "Feizi S",
+     "Karlic R",
+     "Kim AR",
+     "Kulkarni A",
+     "Li D",
+     "Lowdon R",
+     "Elliott G",
+     "Mercer TR",
+     "Neph SJ",
+     "Onuchic V",
+     "Polak P",
+     "Rajagopal N",
+     "Ray P",
+     "Sallari RC",
+     "Siebenthall KT",
+     "Sinnott-Armstrong NA",
+     "Stevens M",
+     "Thurman RE",
+     "Wu J",
+     "Zhang B",
+     "Zhou X",
+     "Beaudet AE",
+     "Boyer LA",
+     "De Jager PL",
+     "Farnham PJ",
+     "Fisher SJ",
+     "Haussler D",
+     "Jones SJ",
+     "Li W",
+     "Marra MA",
+     "McManus MT",
+     "Sunyaev S",
+     "Thomson JA",
+     "Tlsty TD",
+     "Tsai LH",
+     "Wang W",
+     "Waterland RA",
+     "Zhang MQ",
+     "Chadwick LH",
+     "Bernstein BE",
+     "Costello JF",
+     "Ecker JR",
+     "Hirst M",
+     "Meissner A",
+     "Milosavljevic A",
+     "Ren B",
+     "Stamatoyannopoulos JA",
+     "Wang T",
+     "Kellis M"
+    ],
+    "doi": "10.1038/nature14248",
+    "note": null,
+    "paper_id": "10.1038/nature14248",
+    "role": "primary",
+    "title": "Integrative analysis of 111 reference human epigenomes",
+    "url": "https://doi.org/10.1038/nature14248",
+    "venue": null,
+    "year": 2015
+   }
+  ],
+  "primary_paper_id": "10.1038/nature14248",
+  "primary_paper_title": "Integrative analysis of 111 reference human epigenomes",
+  "type": "dataset",
+  "year": 2015
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
   "entity_id": "dataset:sci-plex",
   "fate_axis": [
    "what"
@@ -4508,6 +4798,38 @@
   "primary_paper_title": "AGEP_TWAS: A Deep Learning-Based Framework for Predicting Gene Expression Levels in Tissues",
   "type": "model",
   "year": 2026
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
+  "entity_id": "model:akita",
+  "fate_axis": [
+   "where"
+  ],
+  "links": [],
+  "name": "Akita",
+  "papers": [
+   {
+    "authors": [
+     "Fudenberg G",
+     "Kelley DR",
+     "Pollard KS"
+    ],
+    "doi": "10.1038/s41592-020-0958-x",
+    "note": null,
+    "paper_id": "10.1038/s41592-020-0958-x",
+    "role": "primary",
+    "title": "Predicting 3D genome folding from DNA sequence with Akita",
+    "url": "https://doi.org/10.1038/s41592-020-0958-x",
+    "venue": null,
+    "year": 2020
+   }
+  ],
+  "primary_paper_id": "10.1038/s41592-020-0958-x",
+  "primary_paper_title": "Predicting 3D genome folding from DNA sequence with Akita",
+  "type": "model",
+  "year": 2020
  },
  {
   "aliases": [
@@ -5450,6 +5772,38 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "entity_id": "model:basset",
+  "fate_axis": [
+   "where"
+  ],
+  "links": [],
+  "name": "Basset",
+  "papers": [
+   {
+    "authors": [
+     "Kelley DR",
+     "Snoek J",
+     "Rinn JL"
+    ],
+    "doi": "10.1101/gr.200535.115",
+    "note": null,
+    "paper_id": "10.1101/gr.200535.115",
+    "role": "primary",
+    "title": "Basset: learning the regulatory code of the accessible genome with deep convolutional neural networks",
+    "url": "https://doi.org/10.1101/gr.200535.115",
+    "venue": null,
+    "year": 2016
+   }
+  ],
+  "primary_paper_id": "10.1101/gr.200535.115",
+  "primary_paper_title": "Basset: learning the regulatory code of the accessible genome with deep convolutional neural networks",
+  "type": "model",
+  "year": 2016
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
   "entity_id": "model:beyond-independent-genes",
   "fate_axis": [
    "what"
@@ -6031,6 +6385,46 @@
   ],
   "type": "model",
   "year": 2023
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
+  "entity_id": "model:bpnet",
+  "fate_axis": [
+   "where"
+  ],
+  "links": [],
+  "name": "BPNet",
+  "papers": [
+   {
+    "authors": [
+     "Avsec Ž",
+     "Weilert M",
+     "Shrikumar A",
+     "Krueger S",
+     "Alexandari A",
+     "Dalal K",
+     "Fropf R",
+     "McAnany C",
+     "Gagneur J",
+     "Kundaje A",
+     "Zeitlinger J"
+    ],
+    "doi": "10.1038/s41588-021-00782-6",
+    "note": null,
+    "paper_id": "10.1038/s41588-021-00782-6",
+    "role": "primary",
+    "title": "Base-resolution models of transcription-factor binding reveal soft motif syntax",
+    "url": "https://doi.org/10.1038/s41588-021-00782-6",
+    "venue": null,
+    "year": 2021
+   }
+  ],
+  "primary_paper_id": "10.1038/s41588-021-00782-6",
+  "primary_paper_title": "Base-resolution models of transcription-factor binding reveal soft motif syntax",
+  "type": "model",
+  "year": 2021
  },
  {
   "curator": "JimYuhaoWu",
@@ -6803,6 +7197,37 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "entity_id": "model:deepsea",
+  "fate_axis": [
+   "where"
+  ],
+  "links": [],
+  "name": "DeepSEA",
+  "papers": [
+   {
+    "authors": [
+     "Zhou J",
+     "Troyanskaya OG"
+    ],
+    "doi": "10.1038/nmeth.3547",
+    "note": null,
+    "paper_id": "10.1038/nmeth.3547",
+    "role": "primary",
+    "title": "Predicting effects of noncoding variants with deep learning-based sequence model",
+    "url": "https://doi.org/10.1038/nmeth.3547",
+    "venue": null,
+    "year": 2015
+   }
+  ],
+  "primary_paper_id": "10.1038/nmeth.3547",
+  "primary_paper_title": "Predicting effects of noncoding variants with deep learning-based sequence model",
+  "type": "model",
+  "year": 2015
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
   "entity_id": "model:deepsge",
   "fate_axis": [
    "where"
@@ -7018,6 +7443,46 @@
   "primary_paper_title": "DNA Language Models: An Assessment of Pre-Training for Fine-Tuning Tasks",
   "type": "model",
   "year": 2026
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
+  "entity_id": "model:dnabert",
+  "fate_axis": [
+   "how"
+  ],
+  "license": "Apache-2.0",
+  "links": [
+   {
+    "kind": "code",
+    "label": null,
+    "url": "https://github.com/jerryji1993/DNABERT"
+   }
+  ],
+  "name": "DNABERT",
+  "papers": [
+   {
+    "authors": [
+     "Ji Y",
+     "Zhou Z",
+     "Liu H",
+     "Davuluri RV"
+    ],
+    "doi": "10.1093/bioinformatics/btab083",
+    "note": null,
+    "paper_id": "10.1093/bioinformatics/btab083",
+    "role": "primary",
+    "title": "DNABERT: pre-trained Bidirectional Encoder Representations from Transformers model for DNA-language in genome",
+    "url": "https://doi.org/10.1093/bioinformatics/btab083",
+    "venue": null,
+    "year": 2021
+   }
+  ],
+  "primary_paper_id": "10.1093/bioinformatics/btab083",
+  "primary_paper_title": "DNABERT: pre-trained Bidirectional Encoder Representations from Transformers model for DNA-language in genome",
+  "type": "model",
+  "year": 2021
  },
  {
   "curator": "JimYuhaoWu",
@@ -8017,6 +8482,55 @@
   "year": 2026
  },
  {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
+  "entity_id": "model:evo",
+  "fate_axis": [
+   "how"
+  ],
+  "links": [],
+  "name": "Evo",
+  "papers": [
+   {
+    "authors": [
+     "Nguyen E",
+     "Poli M",
+     "Durrant MG",
+     "Kang B",
+     "Katrekar D",
+     "Li DB",
+     "Bartie LJ",
+     "Thomas AW",
+     "King SH",
+     "Brixi G",
+     "Sullivan J",
+     "Ng MY",
+     "Lewis A",
+     "Lou A",
+     "Ermon S",
+     "Baccus SA",
+     "Hernandez-Boussard T",
+     "Ré C",
+     "Hsu PD",
+     "Hie BL"
+    ],
+    "doi": "10.1126/science.ado9336",
+    "note": null,
+    "paper_id": "10.1126/science.ado9336",
+    "role": "primary",
+    "title": "Sequence modeling and design from molecular to genome scale with Evo",
+    "url": "https://doi.org/10.1126/science.ado9336",
+    "venue": null,
+    "year": 2024
+   }
+  ],
+  "primary_paper_id": "10.1126/science.ado9336",
+  "primary_paper_title": "Sequence modeling and design from molecular to genome scale with Evo",
+  "type": "model",
+  "year": 2024
+ },
+ {
   "aliases": [
    "evo2",
    "Evo-2"
@@ -8534,6 +9048,41 @@
   "primary_paper_title": "EvoLen: Evolution-Guided Tokenization for DNA Language Model",
   "type": "model",
   "year": 2026
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
+  "entity_id": "model:expecto",
+  "fate_axis": [
+   "where"
+  ],
+  "links": [],
+  "name": "ExPecto",
+  "papers": [
+   {
+    "authors": [
+     "Zhou J",
+     "Theesfeld CL",
+     "Yao K",
+     "Chen KM",
+     "Wong AK",
+     "Troyanskaya OG"
+    ],
+    "doi": "10.1038/s41588-018-0160-6",
+    "note": null,
+    "paper_id": "10.1038/s41588-018-0160-6",
+    "role": "primary",
+    "title": "Deep learning sequence-based ab initio prediction of variant effects on expression and disease risk",
+    "url": "https://doi.org/10.1038/s41588-018-0160-6",
+    "venue": null,
+    "year": 2018
+   }
+  ],
+  "primary_paper_id": "10.1038/s41588-018-0160-6",
+  "primary_paper_title": "Deep learning sequence-based ab initio prediction of variant effects on expression and disease risk",
+  "type": "model",
+  "year": 2018
  },
  {
   "aliases": [
@@ -9596,6 +10145,45 @@
   "primary_paper_title": "Genomic Language Models: Opportunities and Challenges",
   "type": "model",
   "year": 2024
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
+  "entity_id": "model:gpn",
+  "fate_axis": [
+   "how"
+  ],
+  "license": "MIT",
+  "links": [
+   {
+    "kind": "code",
+    "label": null,
+    "url": "https://github.com/songlab-cal/gpn"
+   }
+  ],
+  "name": "GPN",
+  "papers": [
+   {
+    "authors": [
+     "Benegas G",
+     "Batra SS",
+     "Song YS"
+    ],
+    "doi": "10.1073/pnas.2311219120",
+    "note": null,
+    "paper_id": "10.1073/pnas.2311219120",
+    "role": "primary",
+    "title": "DNA language models are powerful predictors of genome-wide variant effects",
+    "url": "https://doi.org/10.1073/pnas.2311219120",
+    "venue": null,
+    "year": 2023
+   }
+  ],
+  "primary_paper_id": "10.1073/pnas.2311219120",
+  "primary_paper_title": "DNA language models are powerful predictors of genome-wide variant effects",
+  "type": "model",
+  "year": 2023
  },
  {
   "curator": "JimYuhaoWu",
@@ -11735,6 +12323,36 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "entity_id": "model:orca",
+  "fate_axis": [
+   "where"
+  ],
+  "links": [],
+  "name": "Orca",
+  "papers": [
+   {
+    "authors": [
+     "Zhou J"
+    ],
+    "doi": "10.1038/s41588-022-01065-4",
+    "note": null,
+    "paper_id": "10.1038/s41588-022-01065-4",
+    "role": "primary",
+    "title": "Sequence-based modeling of three-dimensional genome architecture from kilobase to chromosome scale",
+    "url": "https://doi.org/10.1038/s41588-022-01065-4",
+    "venue": null,
+    "year": 2022
+   }
+  ],
+  "primary_paper_id": "10.1038/s41588-022-01065-4",
+  "primary_paper_title": "Sequence-based modeling of three-dimensional genome architecture from kilobase to chromosome scale",
+  "type": "model",
+  "year": 2022
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
   "entity_id": "model:oryzag3",
   "fate_axis": [
    "how"
@@ -13748,6 +14366,37 @@
   "year": 2025
  },
  {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
+  "entity_id": "model:xpresso",
+  "fate_axis": [
+   "where"
+  ],
+  "links": [],
+  "name": "Xpresso",
+  "papers": [
+   {
+    "authors": [
+     "Agarwal V",
+     "Shendure J"
+    ],
+    "doi": "10.1016/j.celrep.2020.107663",
+    "note": null,
+    "paper_id": "10.1016/j.celrep.2020.107663",
+    "role": "primary",
+    "title": "Predicting mRNA Abundance Directly from Genomic Sequence Using Deep Convolutional Neural Networks",
+    "url": "https://doi.org/10.1016/j.celrep.2020.107663",
+    "venue": null,
+    "year": 2020
+   }
+  ],
+  "primary_paper_id": "10.1016/j.celrep.2020.107663",
+  "primary_paper_title": "Predicting mRNA Abundance Directly from Genomic Sequence Using Deep Convolutional Neural Networks",
+  "type": "model",
+  "year": 2020
+ },
+ {
   "aliases": [
    "DelRosso effector domains"
   ],
@@ -14051,6 +14700,77 @@
   "year": 2024
  },
  {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
+  "entity_id": "protocol:atac-seq",
+  "fate_axis": [
+   "where"
+  ],
+  "links": [],
+  "name": "ATAC-seq",
+  "papers": [
+   {
+    "authors": [
+     "Buenrostro JD",
+     "Giresi PG",
+     "Zaba LC",
+     "Chang HY",
+     "Greenleaf WJ"
+    ],
+    "doi": "10.1038/nmeth.2688",
+    "note": null,
+    "paper_id": "10.1038/nmeth.2688",
+    "role": "primary",
+    "title": "Transposition of native chromatin for fast and sensitive epigenomic profiling of open chromatin, DNA-binding proteins and nucleosome position",
+    "url": "https://doi.org/10.1038/nmeth.2688",
+    "venue": null,
+    "year": 2013
+   }
+  ],
+  "primary_paper_id": "10.1038/nmeth.2688",
+  "primary_paper_title": "Transposition of native chromatin for fast and sensitive epigenomic profiling of open chromatin, DNA-binding proteins and nucleosome position",
+  "type": "protocol",
+  "year": 2013
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
+  "entity_id": "protocol:cut-tag",
+  "fate_axis": [
+   "where"
+  ],
+  "links": [],
+  "name": "CUT&Tag",
+  "papers": [
+   {
+    "authors": [
+     "Kaya-Okur HS",
+     "Wu SJ",
+     "Codomo CA",
+     "Pledger ES",
+     "Bryson TD",
+     "Henikoff JG",
+     "Ahmad K",
+     "Henikoff S"
+    ],
+    "doi": "10.1038/s41467-019-09982-5",
+    "note": null,
+    "paper_id": "10.1038/s41467-019-09982-5",
+    "role": "primary",
+    "title": "CUT&Tag for efficient epigenomic profiling of small samples and single cells",
+    "url": "https://doi.org/10.1038/s41467-019-09982-5",
+    "venue": null,
+    "year": 2019
+   }
+  ],
+  "primary_paper_id": "10.1038/s41467-019-09982-5",
+  "primary_paper_title": "CUT&Tag for efficient epigenomic profiling of small samples and single cells",
+  "type": "protocol",
+  "year": 2019
+ },
+ {
   "aliases": [
    "CUT&RUN",
    "Janssens CUT&RUN"
@@ -14244,5 +14964,56 @@
   "validation_tier": "lab-validated",
   "version": "2.1",
   "year": 2026
+ },
+ {
+  "curator": "JimYuhaoWu",
+  "date_added": "2026-10-23",
+  "date_updated": "2026-10-23",
+  "entity_id": "protocol:omni-atac",
+  "fate_axis": [
+   "where"
+  ],
+  "links": [],
+  "name": "Omni-ATAC",
+  "papers": [
+   {
+    "authors": [
+     "Corces MR",
+     "Trevino AE",
+     "Hamilton EG",
+     "Greenside PG",
+     "Sinnott-Armstrong NA",
+     "Vesuna S",
+     "Satpathy AT",
+     "Rubin AJ",
+     "Montine KS",
+     "Wu B",
+     "Kathiria A",
+     "Cho SW",
+     "Mumbach MR",
+     "Carter AC",
+     "Kasowski M",
+     "Orloff LA",
+     "Risca VI",
+     "Kundaje A",
+     "Khavari PA",
+     "Montine TJ",
+     "Greenleaf WJ",
+     "Chang HY"
+    ],
+    "doi": "10.1038/nmeth.4396",
+    "note": null,
+    "paper_id": "10.1038/nmeth.4396",
+    "role": "primary",
+    "title": "An improved ATAC-seq protocol reduces background and enables interrogation of frozen tissues",
+    "url": "https://doi.org/10.1038/nmeth.4396",
+    "venue": null,
+    "year": 2017
+   }
+  ],
+  "primary_paper_id": "10.1038/nmeth.4396",
+  "primary_paper_title": "An improved ATAC-seq protocol reduces background and enables interrogation of frozen tissues",
+  "type": "protocol",
+  "year": 2017
  }
 ]

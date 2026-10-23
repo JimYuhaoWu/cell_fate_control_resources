@@ -345,7 +345,6 @@
   name: ENCODE
   year: 2012
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -358,7 +357,6 @@
   name: Roadmap Epigenomics
   year: 2015
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
