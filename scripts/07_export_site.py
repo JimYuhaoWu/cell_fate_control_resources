@@ -124,7 +124,12 @@ def read_links() -> dict[str, list[dict]]:
             "label": row["label"],
         })
     for links in by_entity.values():
-        links.sort(key=lambda link: _kind_key(link["kind"]))
+        # The URL breaks the tie, so two links of one kind always come out in
+        # the same order. Sorting on kind alone left them in database row
+        # order, which a rebuilt db/cfcr.db does not preserve -- model:borzoi's
+        # two `code` links swapped places on a from-scratch build, and the
+        # pages workflow diffs this file against the committed one.
+        links.sort(key=lambda link: (_kind_key(link["kind"]), link["url"]))
     return by_entity
 
 

@@ -3436,13 +3436,13 @@
   "links": [
    {
     "kind": "code",
-    "label": null,
-    "url": "https://github.com/calico/borzoi"
+    "label": "Baskerville training framework",
+    "url": "https://github.com/calico/baskerville"
    },
    {
     "kind": "code",
-    "label": "Baskerville training framework",
-    "url": "https://github.com/calico/baskerville"
+    "label": null,
+    "url": "https://github.com/calico/borzoi"
    },
    {
     "kind": "dataset",

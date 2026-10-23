@@ -230,6 +230,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/turbine-ai/PerturbSeqPredBenchmark"
   papers:
     - paper_id: 10.1186/s12864-025-11600-2
       role: primary
@@ -329,6 +332,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/Wang-lab-UCSD/Benchmarking-tpLMs"
   papers:
     - paper_id: 10.1093/bib/bbag014
       role: primary
@@ -440,6 +446,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/hrthiam-lab/Kang_etal_2026"
   papers:
     - paper_id: 10.1080/19491034.2026.2721777
       role: primary
@@ -1055,6 +1064,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/PeterPonyu/iAODE"
   papers:
     - paper_id: 10.1038/s42003-026-09768-8
       role: primary
@@ -1103,6 +1115,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/myylee/benchmark_sc_multiomic_integration"
   papers:
     - paper_id: 10.1186/s13059-023-03073-x
       role: primary
@@ -1151,6 +1166,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/BioX-NKU/ASTER"
   papers:
     - paper_id: 10.1093/bioinformatics/btac842
       role: primary
@@ -1215,6 +1233,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/ma-compbio/DNALONGBENCH"
   papers:
     - paper_id: 10.1038/s41467-025-65077-4
       role: primary

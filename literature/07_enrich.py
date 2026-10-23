@@ -11,9 +11,24 @@ name, type, year, axis, primary paper. Promoting one publishes a card that says
 half of what CFCR claims to be for. This script closes that gap where a machine
 honestly can.
 
-    links            the repository URL printed in the primary abstract
+    links            the repository URL, from the primary abstract where it is
+                     printed and otherwise from the open-access full text
     <type>_ext       `license`, read from that repository's own LICENSE file
                      via the GitHub API
+
+The abstract is a thin source: 397 of 452 staged records print no GitHub URL in
+one. The full text is where a paper actually states its code availability, so
+it is read when the abstract has nothing -- **read for the URL and never
+stored**, which keeps `literature/papers.yaml` to publisher-released abstracts
+as the standing rule requires. Only the Europe PMC open-access subset is
+fetched; nothing paywalled is requested at all. Preprints are not covered,
+measured rather than assumed: Europe PMC indexes them but serves no full text
+for them, 404 on every one tried, and 124 of the link-less records are
+preprints.
+
+A paper naming more than one repository is left for a human. The second one is
+as often a dataset it compares against as a second home for its own code, and
+a card that links the wrong repository is worse than a card that links none.
 
 Both are facts with a source. Nothing else here is, and the difference is the
 whole design:
@@ -77,6 +92,69 @@ REPO_URL = re.compile(
     re.I)
 
 
+search = None          # literature/01_search.py, loaded on first full-text use
+
+
+def _search_module():
+    """
+    01_search.py holds the retrying `_get` and the one User-Agent built from
+    config/sources.yaml. Loaded lazily so a run that finds every URL in the
+    abstracts opens no Europe PMC connection at all.
+    """
+    global search
+    if search is None:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location(
+            "cfcr_search", ROOT / "literature" / "01_search.py")
+        search = importlib.util.module_from_spec(spec)
+        sys.modules["cfcr_search"] = search
+        spec.loader.exec_module(search)
+    return search
+
+
+def open_access(doi: str) -> str | None:
+    """
+    The PMCID for a DOI Europe PMC holds open-access, or None.
+
+    The PMCID and not the record's own `id`: `fullTextXML` is served under the
+    PMC identifier, and asking for it under MED/<id> 404s even when the article
+    is in the open-access subset.
+    """
+    s = _search_module()
+    data = s._get(s.EUROPEPMC, {"query": f'DOI:"{doi}"', "format": "json",
+                                "resultType": "core", "pageSize": 1})
+    hit = (data.get("resultList", {}).get("result") or [None])[0]
+    if not hit or hit.get("isOpenAccess") != "Y":
+        return None
+    return hit.get("pmcid")
+
+
+def full_text_repos(pmcid: str) -> list[str]:
+    """
+    Distinct `owner/name` repositories named anywhere in the full text.
+
+    The XML is walked for element text and for the xlink:href on <ext-link>,
+    because a code availability statement puts the URL in either. Nothing from
+    the document is kept beyond the repository names.
+    """
+    s = _search_module()
+    try:
+        root = s._get(f"{s.EUROPEPMC.rsplit('/', 1)[0]}/{pmcid}/fullTextXML",
+                      {}, parse="xml")
+    except s.FetchError:
+        # Open-access in the search index does not guarantee a full text to
+        # serve, and a missing one is an absence rather than a failed run.
+        return []
+    found: list[str] = []
+    for node in root.iter():
+        for blob in [node.text or ""] + [v for v in node.attrib.values()]:
+            for m in REPO_URL.finditer(blob):
+                name = f"{m.group(1)}/{m.group(2).rstrip('.')}"
+                if name not in found:
+                    found.append(name)
+    return found
+
+
 def _rel(path: Path) -> str:
     try:
         return path.resolve().relative_to(ROOT).as_posix()
@@ -123,6 +201,8 @@ def main() -> int:
               in yaml.safe_load(PAPERS_YAML.read_text(encoding="utf-8")) or []}
 
     found, enriched, no_url, gone = 0, 0, 0, []
+    ambiguous: list[str] = []
+    from_full_text = 0
     proposals: list[str] = []
 
     for path in sorted(RECORDS_DIR.glob("*.yaml")):
@@ -144,11 +224,23 @@ def main() -> int:
                             if p["role"] == "primary"), None)
             abstract = (papers.get(primary) or {}).get("abstract") or ""
             m = REPO_URL.search(abstract)
-            if not m:
-                no_url += 1
-                continue
+            if m:
+                owner, name = m.group(1), m.group(2).rstrip(".")
+                source_of = "abstract"
+            else:
+                where = (None if not primary or primary.startswith("arxiv:")
+                         else open_access(primary))
+                repos = full_text_repos(where) if where else []
+                if len(repos) != 1:
+                    no_url += 1
+                    if len(repos) > 1:
+                        ambiguous.append(f"{rec['entity_id']}: names "
+                                         f"{len(repos)} repositories "
+                                         f"({', '.join(repos[:3])})")
+                    continue
+                owner, name = repos[0].split("/", 1)
+                source_of = "full text"
             found += 1
-            owner, name = m.group(1), m.group(2).rstrip(".")
             repo = gh_repo(owner, name)
             if not repo:
                 gone.append(f"{rec['entity_id']}: {owner}/{name} is not reachable")
@@ -166,8 +258,9 @@ def main() -> int:
             if not new:
                 continue
 
-            print(f"  {rec['entity_id'][:58]:58s} {spdx or '-':14s} "
-                  f"{owner}/{name}")
+            print(f"  {rec['entity_id'][:52]:52s} {source_of:10s} "
+                  f"{spdx or '-':14s} {owner}/{name}")
+            from_full_text += source_of == "full text"
             proposals.append(f"{rec['entity_id']}\t{propose_tier(repo)}"
                              + ("\tarchived" if repo.get("archived") else ""))
             enriched += 1
@@ -187,13 +280,28 @@ def main() -> int:
         if changed and not args.dry_run:
             path.write_text("\n".join(lines), encoding="utf-8", newline="")
 
+    for line in ambiguous:
+        print(f"  ambiguous: {line}", file=sys.stderr)
+    if ambiguous and not args.dry_run:
+        # Written down rather than left in a log: these are records where a
+        # repository was found and only the choice between several is missing,
+        # which is a minute of a human's time each and otherwise has to be
+        # rediscovered by fetching every full text again.
+        out = ROOT / "reports" / "repo_candidates.tsv"
+        rows = [line.split(": names ", 1) for line in ambiguous]
+        out.write_text("entity_id\trepositories_named_in_the_full_text\n"
+                       + "\n".join(f"{eid}\t{rest}" for eid, rest in rows) + "\n",
+                       encoding="utf-8", newline="")
+        print(f"  wrote {_rel(out)} -- a repository choice, for a human")
     for line in gone:
         print(f"  unreachable: {line}", file=sys.stderr)
 
-    print(f"\n  abstracts with a repository URL   {found}")
+    print(f"\n  records with a repository URL     {found}")
     print(f"  records enriched                  {enriched}")
-    print(f"  no URL in the abstract            {no_url}")
+    print(f"  no repository URL found           {no_url}")
     print(f"  repository unreachable            {len(gone)}")
+    print(f"  of those, found in the full text  {from_full_text}")
+    print(f"  left alone, several repositories  {len(ambiguous)}")
 
     if proposals and not args.dry_run:
         out = ROOT / "reports" / "availability_proposals.tsv"
