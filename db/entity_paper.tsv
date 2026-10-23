@@ -63,6 +63,7 @@ benchmark:flab	10.1101/2024.01.13.575504	primary
 benchmark:genbench	arxiv:2406.01627	primary	
 benchmark:geneb	arxiv:2606.04525	primary	
 benchmark:genomeqa	arxiv:2604.05774	primary	
+benchmark:genomic-benchmarks	10.1186/s12863-023-01123-8	primary	
 benchmark:genotex	arxiv:2406.15341	primary	
 benchmark:guanine-v1-0	10.1101/2023.10.12.562113	primary	
 benchmark:gue	arxiv:2306.15006	primary	
@@ -98,7 +99,9 @@ benchmark:towards-complex-query-referring-image-segmentation	arxiv:2309.17205	pr
 benchmark:towards-more-realistic-simulated-datasets-for-benchmarking-deep-learning-models-in-regulatory-genomics	10.1101/2021.12.26.474224	primary	
 benchmark:uncertainty-in-gnn-learning-evaluations	arxiv:2305.06026	primary	
 benchmark:virobench	arxiv:2605.25388	primary	
+database:cis-bp	10.1016/j.cell.2014.08.009	primary	
 database:encode-screen-ccres	10.1038/s41586-020-2493-4	primary	
+database:ensembl-regulatory-build	10.1186/s13059-015-0621-5	primary	
 database:hocomoco-v12	10.1093/nar/gkad1077	primary	
 database:jaspar-2024	10.1016/j.compbiolchem.2026.109438	benchmark	
 database:jaspar-2024	10.1038/s44320-025-00088-3	benchmark	
@@ -133,6 +136,7 @@ dataset:borzoi-data	10.64898/2026.05.13.724757	benchmark
 dataset:borzoi-data	10.64898/2026.08.02.742309	benchmark	
 dataset:borzoi-data	10.64898/2026.09.08.750126	critique	
 dataset:dixit-2016-perturb-seq	10.1016/j.cell.2016.11.038	primary	
+dataset:encode	10.1038/nature11247	primary	
 dataset:enformer-data	10.1002/advs.202514490	benchmark	
 dataset:enformer-data	10.1002/qub2.100	benchmark	
 dataset:enformer-data	10.1002/qub2.68	benchmark	
@@ -204,6 +208,7 @@ dataset:replogle-2022-perturb-seq	10.64898/2026.03.27.714658	benchmark
 dataset:replogle-2022-perturb-seq	10.64898/2026.06.28.735106	benchmark	
 dataset:replogle-2022-perturb-seq	10.64898/2026.08.04.732812	critique	
 dataset:replogle-2022-perturb-seq	10.64898/2026.08.07.743481	benchmark	
+dataset:roadmap-epigenomics	10.1038/nature14248	primary	
 dataset:sci-plex	10.1126/science.aax6234	primary	
 model:a-benchmark-of-evo2-genomic-ai-models-for-efficient-and-practical-deployment	10.1101/2025.09.10.675279	primary	
 model:a-biological-response-compound-representation-allows-chemical-perturbation-prediction-across-cell-lines	10.64898/2026.09.28.755146	primary	
@@ -228,6 +233,7 @@ model:adapting-generative-genome-foundation-model-evo-for-functional-genomics-pr
 model:adaptive-resampling-for-improved-machine-learning-in-imbalanced-single-cell-datasets	10.1101/2025.11.04.686583	primary	
 model:advances-in-protein-contact-map-prediction-based-on-machine-learning	10.2174/1573406411666141230095427	primary	
 model:agep-twas	10.1109/tcbbio.2026.3663364	primary	
+model:akita	10.1038/s41592-020-0958-x	primary	
 model:alphagenome	10.1021/acssynbio.6c00024	benchmark	
 model:alphagenome	10.1038/s41586-025-10014-0	primary	
 model:alphagenome	10.1038/s41592-026-03182-y	benchmark	
@@ -274,6 +280,7 @@ model:auc-pr-is-a-more-informative-metric-for-assessing-the-biological-relevance
 model:back-to-bert-in-2026	10.64898/2026.04.21.719816	primary	
 model:barcodebert	arxiv:2311.02401	primary	
 model:basenji	10.1101/gr.227819.117	primary	
+model:basset	10.1101/gr.200535.115	primary	
 model:benchmarking-algorithms-for-generalizable-single-cell-perturbation-response-prediction	10.1038/s41592-025-02980-0	primary	
 model:benchmarking-algorithms-for-single-cell-multi-omics-prediction-and-integration	10.1038/s41592-024-02429-w	primary	
 model:benchmarking-dna-foundation-models-for-genomic-and-genetic-tasks	10.1038/s41467-025-65823-8	primary	
@@ -303,6 +310,7 @@ model:borzoi	10.64898/2026.02.18.706660	benchmark
 model:borzoi	10.64898/2026.02.22.707219	benchmark	
 model:borzoi	10.64898/2026.06.22.730889	benchmark	
 model:borzoi	10.64898/2026.10.12.758580	benchmark	
+model:bpnet	10.1038/s41588-021-00782-6	primary	
 model:c3p	arxiv:2605.25242	primary	
 model:caduceus	arxiv:2403.03234	primary	
 model:calmflow	arxiv:2410.05292	primary	
@@ -345,6 +353,7 @@ model:deep-learning-the-tf-regulatory-code-for-gene-expression	10.1101/gr.281425
 model:deepcis	10.21203/rs.3.rs-8988269/v1	primary	
 model:deepgep	10.1016/j.ygeno.2026.111285	primary	
 model:deepscenic	10.64898/2026.09.18.752607	primary	
+model:deepsea	10.1038/nmeth.3547	primary	
 model:deepsge	10.1186/s12864-026-12568-3	primary	
 model:deepwheat	10.1186/s13059-025-03809-x	primary	
 model:demixpert	arxiv:2608.23114	primary	
@@ -355,6 +364,7 @@ model:disease-relevance-and-replicability-of-deep-learning-gene-expression-predi
 model:diversity-by-design	arxiv:2506.22641	primary	
 model:dna-augmentations-for-semi-supervised-learning-in-genomic-sequence-classification	10.1093/nargab/lqag123	primary	
 model:dna-language-models	arxiv:2606.30140	primary	
+model:dnabert	10.1093/bioinformatics/btab083	primary	
 model:dnabert-2	arxiv:2509.25274	primary	
 model:dnachunker	arxiv:2601.03019	primary	
 model:dnamotiftokenizer	arxiv:2512.17126	primary	
@@ -416,6 +426,7 @@ model:evaluating-single-cell-atac-seq-atlasing-technologies-using-sequence-to-fu
 model:evaluating-the-cross-species-transferability-and-scaling-of-sequence-to-function-predictions-in-alphagenome	10.64898/2026.07.10.737654	primary	
 model:evaluation-of-deep-learning-tools-for-chromatin-contact-prediction	10.64898/2026.02.27.708323	primary	
 model:evaluation-of-multiple-sclerosis-risk-loci-reveals-that-genomic-oracles-fail-to-generalise-sequence-effects-across-host-contexts	10.21203/rs.3.rs-10850103/v1	primary	
+model:evo	10.1126/science.ado9336	primary	
 model:evo2	10.1007/978-3-032-18509-9_3	benchmark	
 model:evo2	10.1038/s41746-025-01603-4	application	
 model:evo2	10.1093/bib/bbag011	benchmark	
@@ -437,6 +448,7 @@ model:evo2	10.64898/2026.03.17.712398	benchmark
 model:evo2	10.64898/2026.07.02.736037	application	
 model:evolen	arxiv:2604.08698	primary	
 model:evolution-and-mechanism-of-i-meis2-i-mediated-forelimb-specialization-in-bats	10.64898/2026.06.03.729816	primary	
+model:expecto	10.1038/s41588-018-0160-6	primary	
 model:explicit-mechanistic-operators-in-predictive-virtual-cells-evidence-failure-modes-and-a-minimum-falsification-framework-for-single-cell-perturbation-prediction	10.3390/cells15181711	primary	
 model:exploring-adversarial-robustness-in-classification-tasks-using-dna-language-models	arxiv:2409.19788	primary	
 model:exploring-the-alternative-conformation-of-a-known-protein-structure-based-on-contact-map-prediction	10.1021/acs.jcim.3c01381	primary	
@@ -494,6 +506,7 @@ model:genomic-language-model-for-predicting-enhancers-and-their-allele-specific-
 model:genomic-language-models	arxiv:2407.11435	primary	
 model:genomic-language-models-improve-cross-species-gene-expression-prediction-and-accurately-capture-regulatory-variant-effects-in-brachypodium-mutant-lines	10.64898/2026.02.27.708524	primary	
 model:genomic-properties-representing-plant-sex-chromosome-evolution-interpreted-with-genome-language-models	10.64898/2026.05.25.727704	primary	
+model:gpn	10.1073/pnas.2311219120	primary	
 model:gpn-msa	10.1101/2023.10.10.561776	primary	
 model:gpo-vae	10.1093/bioinformatics/btaf256	primary	
 model:graphunet-ss	10.1016/j.compbiomed.2026.111598	primary	
@@ -608,6 +621,7 @@ model:nucleotide-transformer	10.64898/2026.06.16.732659	benchmark
 model:nucleotide-transformer	arxiv:2311.12570	benchmark	BEND -- biologically meaningful genome annotation tasks.
 model:ocoo-t	arxiv:2606.12838	primary	
 model:on-the-robustness-of-scrna-seq-foundation-models-for-plant-perturbation-response-prediction-under-cross-experiment-shift	10.64898/2026.08.21.746324	primary	
+model:orca	10.1038/s41588-022-01065-4	primary	
 model:oryzag3	10.64898/2026.05.22.727045	primary	
 model:overcoming-extrapolation-challenges-of-deep-learning-by-incorporating-physics-in-protein-sequence-function-modeling	10.1371/journal.pcbi.1013728	primary	
 model:oyster	10.1101/2025.11.01.686014	primary	
@@ -716,6 +730,7 @@ model:when-repeats-drive-the-vocabulary	arxiv:2505.08918	primary
 model:wisteria	arxiv:2605.05913	primary	
 model:x-cell	10.64898/2026.03.18.712807	primary	
 model:xchrom	10.1101/2025.11.18.689149	primary	
+model:xpresso	10.1016/j.celrep.2020.107663	primary	
 model:zygosity-aware-dna-language-modeling-improves-ancestry-and-gene-expression-prediction	10.1101/2025.11.19.689326	primary	
 module:a-deep-mutational-scan-of-an-acidic-activation-domain	10.1101/230987	primary	
 module:a-fret-based-biosensor-for-the-src-n-terminal-regulatory-element	10.3390/bios12020096	primary	
@@ -777,8 +792,11 @@ module:transmembrane-prolines-mediate-signal-sensing-and-decoding-in-bacillus-su
 module:tycko-2025-compact-effectors	10.1038/s41587-024-02442-6	primary	
 module:using-high-throughput-measurements-to-identify-principles-of-transcriptional-and-epigenetic-regulators	10.1007/978-1-0716-4051-7_4	primary	
 module:versatile-in-vivo-regulation-of-tumor-phenotypes-by-dcas9-mediated-transcriptional-perturbation	10.1073/pnas.1600582113	primary	
+protocol:atac-seq	10.1038/nmeth.2688	primary	
+protocol:cut-tag	10.1038/s41467-019-09982-5	primary	
 protocol:cutrun-janssens-henikoff	10.1002/cpz1.445	application	
 protocol:cutrun-janssens-henikoff	10.1007/978-1-0716-0958-3_17	application	
 protocol:cutrun-janssens-henikoff	10.1007/978-1-0716-5072-1_5	application	
 protocol:cutrun-janssens-henikoff	10.17504/protocols.io.zcpf2vn	primary	
 protocol:cutrun-janssens-henikoff	10.26508/lsa.202201778	benchmark	
+protocol:omni-atac	10.1038/nmeth.4396	primary	

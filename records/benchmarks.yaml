@@ -1252,3 +1252,19 @@
   papers:
     - paper_id: arxiv:2306.15006
       role: primary
+
+- entity_id: benchmark:genomic-benchmarks
+  type: benchmark
+  name: Genomic Benchmarks
+  year: 2023
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks"
+  papers:
+    - paper_id: 10.1186/s12863-023-01123-8
+      role: primary

@@ -105,3 +105,32 @@
   papers:
     - paper_id: 10.1038/s41587-019-0140-0
       role: primary
+
+- entity_id: database:cis-bp
+  type: database
+  name: CIS-BP
+  year: 2014
+  fate_axis: [with-what, where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.cell.2014.08.009
+      role: primary
+
+- entity_id: database:ensembl-regulatory-build
+  type: database
+  name: Ensembl Regulatory Build
+  year: 2015
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/Ensembl/ensembl-funcgen"
+  papers:
+    - paper_id: 10.1186/s13059-015-0621-5
+      role: primary

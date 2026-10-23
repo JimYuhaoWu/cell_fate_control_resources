@@ -1,35 +1,5 @@
 entity_id	proposed_availability_tier	note
-benchmark:benchmarking-foundation-cell-models-for-post-perturbation-rna-seq-prediction	open-source
-benchmark:scalable-embedding-fusion-with-protein-language-models-insights-from-benchmarking-text-integrated-representations	needs a look -- no licence on the repository
-benchmark:benchmarking-three-simple-dna-staining-based-image-metrics-for-live-cell-tracking-of-chromatin-organization	open-source
-benchmark:iaode-for-benchmarking-and-continuum-modeling-of-single-cell-chromatin-accessibility	open-source
-benchmark:benchmarking-algorithms-for-joint-integration-of-unpaired-and-paired-single-cell-rna-seq-and-atac-seq-data	open-source
-benchmark:aster	open-source
-benchmark:dnalongbench	open-source
-model:systema	needs a look -- no licence on the repository
-model:a-systematic-comparison-of-single-cell-perturbation-response-prediction-models	needs a look -- no licence on the repository
-model:biodsnn	needs a look -- no licence on the repository
-model:pre-training-genomic-language-model-with-variants-for-better-modeling-functional-genomics	needs a look -- no licence on the repository
-model:gpo-vae	needs a look -- no licence on the repository
-model:personalized-gene-expression-prediction-in-the-era-of-deep-learning-a-review	open-source
-model:an-end-to-end-generalizable-deep-learning-framework-to-comprehensively-analyze-transcriptional-regulation	needs a look -- no licence on the repository
-model:enhancing-gene-expression-predictions-using-deep-learning-and-functional-annotations	needs a look -- no licence on the repository
-model:effective-gene-expression-prediction-and-optimization-from-protein-sequences	open-source
-model:multipert	needs a look -- no licence on the repository
-model:gene-expression-prediction-based-on-neighbour-connection-neural-network-utilizing-gene-interaction-graphs	needs a look -- no licence on the repository
-model:reaping-the-fruits-of-llm-pruning-towards-small-language-models-for-efficient-non-coding-variant-effect-prediction	needs a look -- no licence on the repository
-model:dna-augmentations-for-semi-supervised-learning-in-genomic-sequence-classification	needs a look -- no licence on the repository
-model:a-unified-deep-learning-framework-for-single-cell-atac-seq-analysis-based-on-proddep-transformer-encoder	needs a look -- no licence on the repository
-model:the-evolution-of-logic-circuits-for-the-purpose-of-protein-contact-map-prediction	needs a look -- no licence on the repository
-model:chromatin-interaction-neural-network-chinn	open-source
-model:epintlm	needs a look -- no licence on the repository
-model:decoding-promoter-activity-from-dna-sequence-using-pre-trained-language-models	open-source
-model:benchmarking-dna-foundation-models-for-genomic-and-genetic-tasks	needs a look -- no licence on the repository
-model:a-transcription-factor-regulatory-atlas-for-activity-inference-and-perturbation-prediction	open-source
-model:overcoming-extrapolation-challenges-of-deep-learning-by-incorporating-physics-in-protein-sequence-function-modeling	open-source
-model:inference-of-spatial-chromatin-accessibility-via-integration-of-spatial-transcriptomics-and-single-cell-multi-omics-data	open-source
-model:using-the-dna-language-model-grover-to-parse-effects-of-sequence-chromatin-and-regulatory-features-on-genome-stability	needs a look -- no licence on the repository
-model:semantic-design-of-functional-de-novo-genes-from-a-genomic-language-model	open-source
-model:scyeast	needs a look -- no licence on the repository
-model:iedgedta	needs a look -- no licence on the repository
-model:epigept	open-source
+benchmark:genomic-benchmarks	open-source
+database:ensembl-regulatory-build	open-source	archived
+model:dnabert	open-source
+model:gpn	open-source

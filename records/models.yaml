@@ -4991,3 +4991,143 @@
   papers:
     - paper_id: 10.1093/nar/gkae1310
       role: primary
+
+- entity_id: model:deepsea
+  type: model
+  name: DeepSEA
+  year: 2015
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/nmeth.3547
+      role: primary
+
+- entity_id: model:basset
+  type: model
+  name: Basset
+  year: 2016
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1101/gr.200535.115
+      role: primary
+
+- entity_id: model:expecto
+  type: model
+  name: ExPecto
+  year: 2018
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41588-018-0160-6
+      role: primary
+
+- entity_id: model:xpresso
+  type: model
+  name: Xpresso
+  year: 2020
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.celrep.2020.107663
+      role: primary
+
+- entity_id: model:bpnet
+  type: model
+  name: BPNet
+  year: 2021
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41588-021-00782-6
+      role: primary
+
+- entity_id: model:akita
+  type: model
+  name: Akita
+  year: 2020
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41592-020-0958-x
+      role: primary
+
+- entity_id: model:orca
+  type: model
+  name: Orca
+  year: 2022
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41588-022-01065-4
+      role: primary
+
+- entity_id: model:dnabert
+  type: model
+  name: DNABERT
+  year: 2021
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/jerryji1993/DNABERT"
+  model_ext:
+    license: Apache-2.0
+  papers:
+    - paper_id: 10.1093/bioinformatics/btab083
+      role: primary
+
+- entity_id: model:evo
+  type: model
+  name: Evo
+  year: 2024
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1126/science.ado9336
+      role: primary
+
+- entity_id: model:gpn
+  type: model
+  name: GPN
+  year: 2023
+  fate_axis: [how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  links:
+    - kind: code
+      url: "https://github.com/songlab-cal/gpn"
+  model_ext:
+    license: MIT
+  papers:
+    - paper_id: 10.1073/pnas.2311219120
+      role: primary

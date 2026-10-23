@@ -83,3 +83,42 @@
     key_reagents: [pA-MNase, Concanavalin A beads, digitonin]
     origin: cfc-lab
   papers: []
+
+- entity_id: protocol:cut-tag
+  type: protocol
+  name: "CUT&Tag"
+  year: 2019
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41467-019-09982-5
+      role: primary
+
+- entity_id: protocol:atac-seq
+  type: protocol
+  name: ATAC-seq
+  year: 2013
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/nmeth.2688
+      role: primary
+
+- entity_id: protocol:omni-atac
+  type: protocol
+  name: Omni-ATAC
+  year: 2017
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/nmeth.4396
+      role: primary

@@ -343,3 +343,29 @@
   papers:
     - paper_id: 10.1126/science.aax6234
       role: primary
+
+- entity_id: dataset:encode
+  type: dataset
+  name: ENCODE
+  year: 2012
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/nature11247
+      role: primary
+
+- entity_id: dataset:roadmap-epigenomics
+  type: dataset
+  name: Roadmap Epigenomics
+  year: 2015
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/nature14248
+      role: primary

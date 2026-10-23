@@ -12,6 +12,7 @@ benchmark:factual	code	https://github.com/zhuang-li/FactualSceneGraph
 benchmark:fitness-landscape-for-antibodies-2	code	https://github.com/Graylab/FLAb			
 benchmark:flab	code	https://github.com/Graylab/FLAb			
 benchmark:geneb	code	https://github.com/darlednik/GENEB			
+benchmark:genomic-benchmarks	code	https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks			
 benchmark:genotex	code	https://github.com/Liu-Hy/GenoTEX			
 benchmark:iaode-for-benchmarking-and-continuum-modeling-of-single-cell-chromatin-accessibility	code	https://github.com/PeterPonyu/iAODE			
 benchmark:image-scene-graph-generation-sgg-benchmark	code	https://github.com/microsoft/scene_graph_benchmark			
@@ -22,8 +23,9 @@ benchmark:sequencelab	code	https://github.com/CMU-SAFARI/SequenceLab
 benchmark:spatial-transcriptomics-deconvolution-methods-generalize-well-to-spatial-chromatin-accessibility-data	code	https://github.com/theislab/deconvATAC			
 benchmark:towards-more-realistic-simulated-datasets-for-benchmarking-deep-learning-models-in-regulatory-genomics	code	https://github.com/kundajelab/interpret-benchmark			
 benchmark:virobench	code	https://github.com/SII-AGI4S/ViroBench			
-database:jaspar-2024	website	https://jaspar.elixir.no			
+database:ensembl-regulatory-build	code	https://github.com/Ensembl/ensembl-funcgen			
 database:jaspar-2024	api	https://jaspar.elixir.no/api/v1/docs/			
+database:jaspar-2024	website	https://jaspar.elixir.no			
 dataset:borzoi-data	dataset	https://huggingface.co/datasets/Genentech/borzoi-data			
 dataset:enformer-data	dataset	https://huggingface.co/datasets/Genentech/enformer-data			
 dataset:replogle-2022-perturb-seq	website	https://gwps.wi.mit.edu	Genome-wide Perturb-seq data portal		
@@ -38,9 +40,9 @@ model:barcodebert	code	https://github.com/bioscan-ml/BarcodeBERT
 model:benchmarking-dna-foundation-models-for-genomic-and-genetic-tasks	code	https://github.com/ChongWuLab/dna_foundation_benchmark			
 model:beyond-independent-genes	code	https://github.com/ttruan2426-dot/scBIG			
 model:biodsnn	code	https://github.com/yyy6812/BioDSNN			
-model:borzoi	dataset	https://huggingface.co/datasets/Genentech/borzoi-data	training/validation/test intervals		
-model:borzoi	code	https://github.com/calico/baskerville	Baskerville training framework		
 model:borzoi	code	https://github.com/calico/borzoi			
+model:borzoi	code	https://github.com/calico/baskerville	Baskerville training framework		
+model:borzoi	dataset	https://huggingface.co/datasets/Genentech/borzoi-data	training/validation/test intervals		
 model:chromatin-accessibility-prediction-via-convolutional-long-short-term-memory-networks-with-k-mer-embedding	code	https://github.com/minxueric/ismb2017_lstm			
 model:chromatin-interaction-neural-network-chinn	code	https://github.com/mjflab/chinn			
 model:chrombpnet	code	https://github.com/kundajelab/chrombpnet			
@@ -51,6 +53,7 @@ model:deepsge	code	https://github.com/nathanyl/DeepSGE
 model:dfce-kant	code	https://github.com/LFfocus/DFCE-KanT			
 model:differentiable-retrieval-augmented-generation-for-predicting-cellular-responses-to-gene-perturbation	code	https://github.com/difra100/PT-RAG_NIPS			
 model:dna-augmentations-for-semi-supervised-learning-in-genomic-sequence-classification	code	https://github.com/EESI/dna-ssl-augmentations			
+model:dnabert	code	https://github.com/jerryji1993/DNABERT			
 model:drivr-base	code	https://github.com/amyfrancis-science/DrivR-Base			
 model:dynamic-graph-prior-guided-latent-adaptation-for-generalizable-single-cell-perturbation-response-prediction	code	https://github.com/bieyl/DGP-LA			
 model:effective-gene-expression-prediction-and-optimization-from-protein-sequences	code	https://github.com/Thurs-Lw/MPB-EXP-MUT			
@@ -64,9 +67,9 @@ model:epinformer	code	https://github.com/pinellolab/EPInformer
 model:epintlm	code	https://github.com/langiocn/EPINTLM			
 model:evo2	code	https://github.com/ArcInstitute/evo2			
 model:evolen	code	https://github.com/HN020719/EvoLen			
-model:flashzoi	code	https://github.com/johahi/borzoi-pytorch			
 model:flashzoi	weights	https://huggingface.co/johahi	Flashzoi and Borzoi replicate weights (MIT)		
 model:flashzoi	container	https://zenodo.org/records/15669913	archived code release		
+model:flashzoi	code	https://github.com/johahi/borzoi-pytorch			
 model:gears	website	https://interp-extrap-perturb.readthedocs.io	Stegle group perturbation-method catalogue (authoritative for this axis)		
 model:gears	code	https://github.com/snap-stanford/GEARS			
 model:gena-lm	code	https://github.com/AIRI-Institute/GENA_LM			
@@ -74,6 +77,7 @@ model:gene-expression-prediction-based-on-neighbour-connection-neural-network-ut
 model:genebreaker	code	https://github.com/zaixizhang/GeneBreaker			
 model:genepert	code	https://github.com/zou-group/GenePert			
 model:genomic-language-model-for-predicting-enhancers-and-their-allele-specific-activity-in-the-human-genome	code	https://github.com/DavuluriLab/DNABERT-Enhancer			
+model:gpn	code	https://github.com/songlab-cal/gpn			
 model:gpo-vae	code	https://github.com/dmis-lab/GPO-VAE			
 model:graphunet-ss	code	https://github.com/ysngrmz/graph_unet_ss			
 model:graphylovar	code	https://github.com/DongjoonLim/GraphyloVar			

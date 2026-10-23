@@ -91,3 +91,103 @@
   type: database
   fate_axis: [where, how]
   paper: 10.1038/s41587-019-0140-0
+
+# Wave 1 of M4's backfill: the canonical resources in scope, named rather than
+# discovered. Every one is a resource the field cites by name; none of them is
+# a judgement call about scope, which is why they belong here and not in a
+# review file.
+
+- name: DeepSEA
+  type: model
+  fate_axis: [where]
+  paper: 10.1038/nmeth.3547
+
+- name: Basset
+  type: model
+  fate_axis: [where]
+  paper: 10.1101/gr.200535.115
+
+- name: ExPecto
+  type: model
+  fate_axis: [where]
+  paper: 10.1038/s41588-018-0160-6
+
+- name: Xpresso
+  type: model
+  fate_axis: [where]
+  paper: 10.1016/j.celrep.2020.107663
+
+- name: BPNet
+  type: model
+  fate_axis: [where]
+  paper: 10.1038/s41588-021-00782-6
+
+- name: Akita
+  type: model
+  fate_axis: [where]
+  paper: 10.1038/s41592-020-0958-x
+
+- name: Orca
+  type: model
+  fate_axis: [where]
+  paper: 10.1038/s41588-022-01065-4
+
+- name: DNABERT
+  type: model
+  fate_axis: [how]
+  paper: 10.1093/bioinformatics/btab083
+
+- name: DNABERT-2
+  type: model
+  fate_axis: [how]
+  paper: arxiv:2306.15006
+
+- name: Evo
+  type: model
+  fate_axis: [how]
+  paper: 10.1126/science.ado9336
+
+- name: GPN
+  type: model
+  fate_axis: [how]
+  paper: 10.1073/pnas.2311219120
+
+- name: Genomic Benchmarks
+  type: benchmark
+  fate_axis: [how]
+  paper: 10.1186/s12863-023-01123-8
+
+- name: CUT&Tag
+  type: protocol
+  fate_axis: [where]
+  paper: 10.1038/s41467-019-09982-5
+
+- name: ATAC-seq
+  type: protocol
+  fate_axis: [where]
+  paper: 10.1038/nmeth.2688
+
+- name: Omni-ATAC
+  type: protocol
+  fate_axis: [where]
+  paper: 10.1038/nmeth.4396
+
+- name: CIS-BP
+  type: database
+  fate_axis: [with-what, where]
+  paper: 10.1016/j.cell.2014.08.009
+
+- name: Ensembl Regulatory Build
+  type: database
+  fate_axis: [where]
+  paper: 10.1186/s13059-015-0621-5
+
+- name: ENCODE
+  type: dataset
+  fate_axis: [where]
+  paper: 10.1038/nature11247
+
+- name: Roadmap Epigenomics
+  type: dataset
+  fate_axis: [where]
+  paper: 10.1038/nature14248

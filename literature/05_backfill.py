@@ -138,6 +138,26 @@ def resolve(entry: dict) -> tuple[dict | None, str | None]:
     return exact[0], None
 
 
+def primaries() -> dict[str, str]:
+    """
+    paper_id -> the entity already holding it as `primary`.
+
+    Deduplicating on `entity_id` alone is not enough once discovery has run:
+    a staged record slugged from its title carries the same paper under a
+    different id, so backfilling the resource by name would admit it twice.
+    GROVER is the case that showed it -- discovery recorded it as
+    `model:using-the-dna-language-model-grover-to-parse-…`, which no name
+    lookup collides with.
+    """
+    held = {}
+    for path in sorted((ROOT / "records").glob("*.yaml")):
+        for rec in yaml.safe_load(path.read_text(encoding="utf-8")) or []:
+            for paper in rec.get("papers") or []:
+                if paper["role"] == "primary":
+                    held.setdefault(paper["paper_id"], rec["entity_id"])
+    return held
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--file", default=str(BACKFILL_YAML))
@@ -149,6 +169,7 @@ def main() -> int:
     entries = yaml.safe_load(Path(args.file).read_text(encoding="utf-8")) or []
     homes, _, _ = record.read_records()
     known_papers = record.read_papers()
+    claimed = primaries()
     curator = args.curator or record.default_curator(homes)
     today = date.today().isoformat()
 
@@ -176,6 +197,19 @@ def main() -> int:
             if why_not:
                 failed.append(f"{entry['name']}: {why_not}")
                 continue
+            holder = claimed.get(paper["paper_id"])
+            if holder:
+                # A model and the dataset it was trained on share a primary
+                # paper on purpose (dataset:enformer-data, model:enformer), so
+                # this only blocks a second record of the same type.
+                if holder.split(":", 1)[0] == etype:
+                    skipped.append(f"{entry['name']}: `{paper['paper_id']}` is "
+                                   f"already the primary of `{holder}`"
+                                   + (" — rename that record rather than "
+                                      "adding this one"
+                                      if holder != entity_id else ""))
+                    continue
+            claimed[paper["paper_id"]] = entity_id
 
             print(f"  {entity_id:40s} {paper['paper_id']}")
             seen.add(entity_id)

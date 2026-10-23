@@ -32137,3 +32137,763 @@
   preprint_of: null
   metadata_source: "europepmc"
   date_added: 2026-10-23
+
+- paper_id: "10.1038/nmeth.3547"
+  doi: "10.1038/nmeth.3547"
+  title: "Predicting effects of noncoding variants with deep learning-based sequence model"
+  authors:
+    - "Zhou J"
+    - "Troyanskaya OG"
+  year: 2015
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    Identifying functional effects of noncoding variants is a major
+    challenge in human genetics. To predict the noncoding-variant effects de
+    novo from sequence, we developed a deep learning-based algorithmic
+    framework, DeepSEA (http://deepsea.princeton.edu/), that directly learns
+    a regulatory sequence code from large-scale chromatin-profiling data,
+    enabling prediction of chromatin effects of sequence alterations with
+    single-nucleotide sensitivity. We further used this capability to
+    improve prioritization of functional variants including expression
+    quantitative trait loci (eQTLs) and disease-associated variants.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1101/gr.200535.115"
+  doi: "10.1101/gr.200535.115"
+  title: "Basset: learning the regulatory code of the accessible genome with deep convolutional neural networks"
+  authors:
+    - "Kelley DR"
+    - "Snoek J"
+    - "Rinn JL"
+  year: 2016
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    The complex language of eukaryotic gene expression remains incompletely
+    understood. Despite the importance suggested by many noncoding variants
+    statistically associated with human disease, nearly all such variants
+    have unknown mechanisms. Here, we address this challenge using an
+    approach based on a recent machine learning advance-deep convolutional
+    neural networks (CNNs). We introduce the open source package Basset to
+    apply CNNs to learn the functional activity of DNA sequences from
+    genomics data. We trained Basset on a compendium of accessible genomic
+    sites mapped in 164 cell types by DNase-seq, and demonstrate greater
+    predictive accuracy than previous methods. Basset predictions for the
+    change in accessibility between variant alleles were far greater for
+    Genome-wide association study (GWAS) SNPs that are likely to be causal
+    relative to nearby SNPs in linkage disequilibrium with them. With
+    Basset, a researcher can perform a single sequencing assay in their cell
+    type of interest and simultaneously learn that cell's chromatin
+    accessibility code and annotate every mutation in the genome with its
+    influence on present accessibility and latent potential for
+    accessibility. Thus, Basset offers a powerful computational approach to
+    annotate and interpret the noncoding genome.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1038/s41588-018-0160-6"
+  doi: "10.1038/s41588-018-0160-6"
+  title: "Deep learning sequence-based ab initio prediction of variant effects on expression and disease risk"
+  authors:
+    - "Zhou J"
+    - "Theesfeld CL"
+    - "Yao K"
+    - "Chen KM"
+    - "Wong AK"
+    - "Troyanskaya OG"
+  year: 2018
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    Key challenges for human genetics, precision medicine and evolutionary
+    biology include deciphering the regulatory code of gene expression and
+    understanding the transcriptional effects of genome variation. However,
+    this is extremely difficult because of the enormous scale of the
+    noncoding mutation space. We developed a deep learning-based framework,
+    ExPecto, that can accurately predict, ab initio from a DNA sequence, the
+    tissue-specific transcriptional effects of mutations, including those
+    that are rare or that have not been observed. We prioritized causal
+    variants within disease- or trait-associated loci from all publicly
+    available genome-wide association studies and experimentally validated
+    predictions for four immune-related diseases. By exploiting the
+    scalability of ExPecto, we characterized the regulatory mutation space
+    for human RNA polymerase II-transcribed genes by in silico saturation
+    mutagenesis and profiled > 140 million promoter-proximal mutations. This
+    enables probing of evolutionary constraints on gene expression and ab
+    initio prediction of mutation disease effects, making ExPecto an end-to-
+    end computational framework for the in silico prediction of expression
+    and disease risk.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1016/j.celrep.2020.107663"
+  doi: "10.1016/j.celrep.2020.107663"
+  title: "Predicting mRNA Abundance Directly from Genomic Sequence Using Deep Convolutional Neural Networks"
+  authors:
+    - "Agarwal V"
+    - "Shendure J"
+  year: 2020
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    Algorithms that accurately predict gene structure from primary sequence
+    alone were transformative for annotating the human genome. Can we also
+    predict the expression levels of genes based solely on genome sequence?
+    Here, we sought to apply deep convolutional neural networks toward that
+    goal. Surprisingly, a model that includes only promoter sequences and
+    features associated with mRNA stability explains 59% and 71% of
+    variation in steady-state mRNA levels in human and mouse, respectively.
+    This model, termed Xpresso, more than doubles the accuracy of
+    alternative sequence-based models and isolates rules as predictive as
+    models relying on chromatic immunoprecipitation sequencing (ChIP-seq)
+    data. Xpresso recapitulates genome-wide patterns of transcriptional
+    activity, and its residuals can be used to quantify the influence of
+    enhancers, heterochromatic domains, and microRNAs. Model interpretation
+    reveals that promoter-proximal CpG dinucleotides strongly predict
+    transcriptional activity. Looking forward, we propose cell-type-specific
+    gene-expression predictions based solely on primary sequences as a grand
+    challenge for the field.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1038/s41588-021-00782-6"
+  doi: "10.1038/s41588-021-00782-6"
+  title: "Base-resolution models of transcription-factor binding reveal soft motif syntax"
+  authors:
+    - "Avsec Ž"
+    - "Weilert M"
+    - "Shrikumar A"
+    - "Krueger S"
+    - "Alexandari A"
+    - "Dalal K"
+    - "Fropf R"
+    - "McAnany C"
+    - "Gagneur J"
+    - "Kundaje A"
+    - "Zeitlinger J"
+  year: 2021
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    The arrangement (syntax) of transcription factor (TF) binding motifs is
+    an important part of the cis-regulatory code, yet remains elusive. We
+    introduce a deep learning model, BPNet, that uses DNA sequence to
+    predict base-resolution chromatin immunoprecipitation (ChIP)-nexus
+    binding profiles of pluripotency TFs. We develop interpretation tools to
+    learn predictive motif representations and identify soft syntax rules
+    for cooperative TF binding interactions. Strikingly, Nanog
+    preferentially binds with helical periodicity, and TFs often cooperate
+    in a directional manner, which we validate using clustered regularly
+    interspaced short palindromic repeat (CRISPR)-induced point mutations.
+    Our model represents a powerful general approach to uncover the motifs
+    and syntax of cis-regulatory sequences in genomics data.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1038/s41592-020-0958-x"
+  doi: "10.1038/s41592-020-0958-x"
+  title: "Predicting 3D genome folding from DNA sequence with Akita"
+  authors:
+    - "Fudenberg G"
+    - "Kelley DR"
+    - "Pollard KS"
+  year: 2020
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    In interphase, the human genome sequence folds in three dimensions into
+    a rich variety of locus-specific contact patterns. Cohesin and CTCF
+    (CCCTC-binding factor) are key regulators; perturbing the levels of
+    either greatly disrupts genome-wide folding as assayed by chromosome
+    conformation capture methods. Still, how a given DNA sequence encodes a
+    particular locus-specific folding pattern remains unknown. Here we
+    present a convolutional neural network, Akita, that accurately predicts
+    genome folding from DNA sequence alone. Representations learned by Akita
+    underscore the importance of an orientation-specific grammar for CTCF
+    binding sites. Akita learns predictive nucleotide-level features of
+    genome folding, revealing effects of nucleotides beyond the core CTCF
+    motif. Once trained, Akita enables rapid in silico predictions.
+    Accounting for this, we demonstrate how Akita can be used to perform in
+    silico saturation mutagenesis, interpret eQTLs, make predictions for
+    structural variants and probe species-specific genome folding.
+    Collectively, these results enable decoding genome function from
+    sequence through structure.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1038/s41588-022-01065-4"
+  doi: "10.1038/s41588-022-01065-4"
+  title: "Sequence-based modeling of three-dimensional genome architecture from kilobase to chromosome scale"
+  authors:
+    - "Zhou J"
+  year: 2022
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    To learn how genomic sequence influences multiscale three-dimensional
+    (3D) genome architecture, this manuscript presents a sequence-based
+    deep-learning approach, Orca, that predicts directly from sequence the
+    3D genome architecture from kilobase to whole-chromosome scale. Orca
+    captures the sequence dependencies of structures including chromatin
+    compartments and topologically associating domains, as well as diverse
+    types of interactions from CTCF-mediated to enhancer-promoter
+    interactions and Polycomb-mediated interactions with cell-type
+    specificity. Orca enables various applications including predicting
+    structural variant effects on multiscale genome organization and it
+    recapitulated effects of experimentally studied variants at varying
+    sizes (300 bp to 90 Mb). Moreover, Orca enables in silico virtual
+    screens to probe the sequence basis of 3D genome organization at
+    different scales. At the submegabase scale, it predicted specific
+    transcription factor motifs underlying cell-type-specific genome
+    interactions. At the compartment scale, virtual screens of sequence
+    activities suggest a model for the sequence basis of chromatin
+    compartments with a prominent role of transcription start sites.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1093/bioinformatics/btab083"
+  doi: "10.1093/bioinformatics/btab083"
+  title: "DNABERT: pre-trained Bidirectional Encoder Representations from Transformers model for DNA-language in genome"
+  authors:
+    - "Ji Y"
+    - "Zhou Z"
+    - "Liu H"
+    - "Davuluri RV"
+  year: 2021
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    <h4>Motivation</h4>Deciphering the language of non-coding DNA is one of
+    the fundamental problems in genome research. Gene regulatory code is
+    highly complex due to the existence of polysemy and distant semantic
+    relationship, which previous informatics methods often fail to capture
+    especially in data-scarce scenarios.<h4>Results</h4>To address this
+    challenge, we developed a novel pre-trained bidirectional encoder
+    representation, named DNABERT, to capture global and transferrable
+    understanding of genomic DNA sequences based on up and downstream
+    nucleotide contexts. We compared DNABERT to the most widely used
+    programs for genome-wide regulatory elements prediction and demonstrate
+    its ease of use, accuracy and efficiency. We show that the single pre-
+    trained transformers model can simultaneously achieve state-of-the-art
+    performance on prediction of promoters, splice sites and transcription
+    factor binding sites, after easy fine-tuning using small task-specific
+    labeled data. Further, DNABERT enables direct visualization of
+    nucleotide-level importance and semantic relationship within input
+    sequences for better interpretability and accurate identification of
+    conserved sequence motifs and functional genetic variant candidates.
+    Finally, we demonstrate that pre-trained DNABERT with human genome can
+    even be readily applied to other organisms with exceptional performance.
+    We anticipate that the pre-trained DNABERT model can be fined tuned to
+    many other sequence analyses tasks.<h4>Availability and
+    implementation</h4>The source code, pretrained and finetuned model for
+    DNABERT are available at GitHub
+    (https://github.com/jerryji1993/DNABERT).<h4>Supplementary
+    information</h4>Supplementary data are available at Bioinformatics
+    online.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1126/science.ado9336"
+  doi: "10.1126/science.ado9336"
+  title: "Sequence modeling and design from molecular to genome scale with Evo"
+  authors:
+    - "Nguyen E"
+    - "Poli M"
+    - "Durrant MG"
+    - "Kang B"
+    - "Katrekar D"
+    - "Li DB"
+    - "Bartie LJ"
+    - "Thomas AW"
+    - "King SH"
+    - "Brixi G"
+    - "Sullivan J"
+    - "Ng MY"
+    - "Lewis A"
+    - "Lou A"
+    - "Ermon S"
+    - "Baccus SA"
+    - "Hernandez-Boussard T"
+    - "Ré C"
+    - "Hsu PD"
+    - "Hie BL"
+  year: 2024
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    The genome is a sequence that encodes the DNA, RNA, and proteins that
+    orchestrate an organism's function. We present Evo, a long-context
+    genomic foundation model with a frontier architecture trained on
+    millions of prokaryotic and phage genomes, and report scaling laws on
+    DNA to complement observations in language and vision. Evo generalizes
+    across DNA, RNA, and proteins, enabling zero-shot function prediction
+    competitive with domain-specific language models and the generation of
+    functional CRISPR-Cas and transposon systems, representing the first
+    examples of protein-RNA and protein-DNA codesign with a language model.
+    Evo also learns how small mutations affect whole-organism fitness and
+    generates megabase-scale sequences with plausible genomic architecture.
+    These prediction and generation capabilities span molecular to genomic
+    scales of complexity, advancing our understanding and control of
+    biology.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1073/pnas.2311219120"
+  doi: "10.1073/pnas.2311219120"
+  title: "DNA language models are powerful predictors of genome-wide variant effects"
+  authors:
+    - "Benegas G"
+    - "Batra SS"
+    - "Song YS"
+  year: 2023
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    The expanding catalog of genome-wide association studies (GWAS) provides
+    biological insights across a variety of species, but identifying the
+    causal variants behind these associations remains a significant
+    challenge. Experimental validation is both labor-intensive and costly,
+    highlighting the need for accurate, scalable computational methods to
+    predict the effects of genetic variants across the entire genome.
+    Inspired by recent progress in natural language processing, unsupervised
+    pretraining on large protein sequence databases has proven successful in
+    extracting complex information related to proteins. These models
+    showcase their ability to learn variant effects in coding regions using
+    an unsupervised approach. Expanding on this idea, we here introduce the
+    Genomic Pre-trained Network (GPN), a model designed to learn genome-wide
+    variant effects through unsupervised pretraining on genomic DNA
+    sequences. Our model also successfully learns gene structure and DNA
+    motifs without any supervision. To demonstrate its utility, we train GPN
+    on unaligned reference genomes of <i>Arabidopsis thaliana</i> and seven
+    related species within the Brassicales order and evaluate its ability to
+    predict the functional impact of genetic variants in <i>A. thaliana</i>
+    by utilizing allele frequencies from the 1001 Genomes Project and a
+    comprehensive database of GWAS. Notably, GPN outperforms predictors
+    based on popular conservation scores such as phyloP and phastCons. Our
+    predictions for <i>A. thaliana</i> can be visualized as sequence logos
+    in the UCSC Genome Browser (https://genome.ucsc.edu/s/gbenegas/gpn-
+    arabidopsis). We provide code (https://github.com/songlab-cal/gpn) to
+    train GPN for any given species using its DNA sequence alone, enabling
+    unsupervised prediction of variant effects across the entire genome.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1186/s12863-023-01123-8"
+  doi: "10.1186/s12863-023-01123-8"
+  title: "Genomic benchmarks: a collection of datasets for genomic sequence classification"
+  authors:
+    - "Grešová K"
+    - "Martinek V"
+    - "Čechák D"
+    - "Šimeček P"
+    - "Alexiou P"
+  year: 2023
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    <h4>Background</h4>Recently, deep neural networks have been successfully
+    applied in many biological fields. In 2020, a deep learning model
+    AlphaFold won the protein folding competition with predicted structures
+    within the error tolerance of experimental methods. However, this
+    solution to the most prominent bioinformatic challenge of the past 50
+    years has been possible only thanks to a carefully curated benchmark of
+    experimentally predicted protein structures. In Genomics, we have
+    similar challenges (annotation of genomes and identification of
+    functional elements) but currently, we lack benchmarks similar to
+    protein folding competition.<h4>Results</h4>Here we present a collection
+    of curated and easily accessible sequence classification datasets in the
+    field of genomics. The proposed collection is based on a combination of
+    novel datasets constructed from the mining of publicly available
+    databases and existing datasets obtained from published articles. The
+    collection currently contains nine datasets that focus on regulatory
+    elements (promoters, enhancers, open chromatin region) from three model
+    organisms: human, mouse, and roundworm. A simple convolution neural
+    network is also included in a repository and can be used as a baseline
+    model. Benchmarks and the baseline model are distributed as the Python
+    package 'genomic-benchmarks', and the code is available at
+    https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks
+    .<h4>Conclusions</h4>Deep learning techniques revolutionized many
+    biological fields but mainly thanks to the carefully curated benchmarks.
+    For the field of Genomics, we propose a collection of benchmark datasets
+    for the classification of genomic sequences with an interface for the
+    most commonly used deep learning libraries, implementation of the simple
+    neural network and a training framework that can be used as a starting
+    point for future research. The main aim of this effort is to create a
+    repository for shared datasets that will make machine learning for
+    genomics more comparable and reproducible while reducing the overhead of
+    researchers who want to enter the field, leading to healthy competition
+    and new discoveries.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1038/s41467-019-09982-5"
+  doi: "10.1038/s41467-019-09982-5"
+  title: "CUT&Tag for efficient epigenomic profiling of small samples and single cells"
+  authors:
+    - "Kaya-Okur HS"
+    - "Wu SJ"
+    - "Codomo CA"
+    - "Pledger ES"
+    - "Bryson TD"
+    - "Henikoff JG"
+    - "Ahmad K"
+    - "Henikoff S"
+  year: 2019
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    Many chromatin features play critical roles in regulating gene
+    expression. A complete understanding of gene regulation will require the
+    mapping of specific chromatin features in small samples of cells at high
+    resolution. Here we describe Cleavage Under Targets and Tagmentation
+    (CUT&Tag), an enzyme-tethering strategy that provides efficient high-
+    resolution sequencing libraries for profiling diverse chromatin
+    components. In CUT&Tag, a chromatin protein is bound in situ by a
+    specific antibody, which then tethers a protein A-Tn5 transposase fusion
+    protein. Activation of the transposase efficiently generates fragment
+    libraries with high resolution and exceptionally low background. All
+    steps from live cells to sequencing-ready libraries can be performed in
+    a single tube on the benchtop or a microwell in a high-throughput
+    pipeline, and the entire procedure can be performed in one day. We
+    demonstrate the utility of CUT&Tag by profiling histone modifications,
+    RNA Polymerase II and transcription factors on low cell numbers and
+    single cells.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1038/nmeth.2688"
+  doi: "10.1038/nmeth.2688"
+  title: "Transposition of native chromatin for fast and sensitive epigenomic profiling of open chromatin, DNA-binding proteins and nucleosome position"
+  authors:
+    - "Buenrostro JD"
+    - "Giresi PG"
+    - "Zaba LC"
+    - "Chang HY"
+    - "Greenleaf WJ"
+  year: 2013
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    We describe an assay for transposase-accessible chromatin using
+    sequencing (ATAC-seq), based on direct in vitro transposition of
+    sequencing adaptors into native chromatin, as a rapid and sensitive
+    method for integrative epigenomic analysis. ATAC-seq captures open
+    chromatin sites using a simple two-step protocol with 500-50,000 cells
+    and reveals the interplay between genomic locations of open chromatin,
+    DNA-binding proteins, individual nucleosomes and chromatin compaction at
+    nucleotide resolution. We discovered classes of DNA-binding factors that
+    strictly avoided, could tolerate or tended to overlap with nucleosomes.
+    Using ATAC-seq maps of human CD4(+) T cells from a proband obtained on
+    consecutive days, we demonstrated the feasibility of analyzing an
+    individual's epigenome on a timescale compatible with clinical decision-
+    making.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1038/nmeth.4396"
+  doi: "10.1038/nmeth.4396"
+  title: "An improved ATAC-seq protocol reduces background and enables interrogation of frozen tissues"
+  authors:
+    - "Corces MR"
+    - "Trevino AE"
+    - "Hamilton EG"
+    - "Greenside PG"
+    - "Sinnott-Armstrong NA"
+    - "Vesuna S"
+    - "Satpathy AT"
+    - "Rubin AJ"
+    - "Montine KS"
+    - "Wu B"
+    - "Kathiria A"
+    - "Cho SW"
+    - "Mumbach MR"
+    - "Carter AC"
+    - "Kasowski M"
+    - "Orloff LA"
+    - "Risca VI"
+    - "Kundaje A"
+    - "Khavari PA"
+    - "Montine TJ"
+    - "Greenleaf WJ"
+    - "Chang HY"
+  year: 2017
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    We present Omni-ATAC, an improved ATAC-seq protocol for chromatin
+    accessibility profiling that works across multiple applications with
+    substantial improvement of signal-to-background ratio and information
+    content. The Omni-ATAC protocol generates chromatin accessibility
+    profiles from archival frozen tissue samples and 50-μm sections,
+    revealing the activities of disease-associated DNA elements in distinct
+    human brain structures. The Omni-ATAC protocol enables the interrogation
+    of personal regulomes in tissue context and translational studies.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1016/j.cell.2014.08.009"
+  doi: "10.1016/j.cell.2014.08.009"
+  title: "Determination and inference of eukaryotic transcription factor sequence specificity"
+  authors:
+    - "Weirauch MT"
+    - "Yang A"
+    - "Albu M"
+    - "Cote AG"
+    - "Montenegro-Montero A"
+    - "Drewe P"
+    - "Najafabadi HS"
+    - "Lambert SA"
+    - "Mann I"
+    - "Cook K"
+    - "Zheng H"
+    - "Goity A"
+    - "van Bakel H"
+    - "Lozano JC"
+    - "Galli M"
+    - "Lewsey MG"
+    - "Huang E"
+    - "Mukherjee T"
+    - "Chen X"
+    - "Reece-Hoyes JS"
+    - "Govindarajan S"
+    - "Shaulsky G"
+    - "Walhout AJM"
+    - "Bouget FY"
+    - "Ratsch G"
+    - "Larrondo LF"
+    - "Ecker JR"
+    - "Hughes TR"
+  year: 2014
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    Transcription factor (TF) DNA sequence preferences direct their
+    regulatory activity, but are currently known for only ∼1% of eukaryotic
+    TFs. Broadly sampling DNA-binding domain (DBD) types from multiple
+    eukaryotic clades, we determined DNA sequence preferences for >1,000 TFs
+    encompassing 54 different DBD classes from 131 diverse eukaryotes. We
+    find that closely related DBDs almost always have very similar DNA
+    sequence preferences, enabling inference of motifs for ∼34% of the
+    ∼170,000 known or predicted eukaryotic TFs. Sequences matching both
+    measured and inferred motifs are enriched in chromatin
+    immunoprecipitation sequencing (ChIP-seq) peaks and upstream of
+    transcription start sites in diverse eukaryotic lineages. SNPs defining
+    expression quantitative trait loci in Arabidopsis promoters are also
+    enriched for predicted TF binding sites. Importantly, our motif
+    "library" can be used to identify specific TFs whose binding may be
+    altered by human disease risk alleles. These data present a powerful
+    resource for mapping transcriptional networks across eukaryotes.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1186/s13059-015-0621-5"
+  doi: "10.1186/s13059-015-0621-5"
+  title: "The ensembl regulatory build"
+  authors:
+    - "Zerbino DR"
+    - "Wilder SP"
+    - "Johnson N"
+    - "Juettemann T"
+    - "Flicek PR"
+  year: 2015
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    Most genomic variants associated with phenotypic traits or disease do
+    not fall within gene coding regions, but in regulatory regions,
+    rendering their interpretation difficult. We collected public data on
+    epigenetic marks and transcription factor binding in human cell types
+    and used it to construct an intuitive summary of regulatory regions in
+    the human genome. We verified it against independent assays for
+    sensitivity. The Ensembl Regulatory Build will be progressively enriched
+    when more data is made available. It is freely available on the Ensembl
+    browser, from the Ensembl Regulation MySQL database server and in a
+    dedicated track hub.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1038/nature11247"
+  doi: "10.1038/nature11247"
+  title: "An integrated encyclopedia of DNA elements in the human genome"
+  authors: null
+  year: 2012
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    The human genome encodes the blueprint of life, but the function of the
+    vast majority of its nearly three billion bases is unknown. The
+    Encyclopedia of DNA Elements (ENCODE) project has systematically mapped
+    regions of transcription, transcription factor association, chromatin
+    structure and histone modification. These data enabled us to assign
+    biochemical functions for 80% of the genome, in particular outside of
+    the well-studied protein-coding regions. Many discovered candidate
+    regulatory elements are physically associated with one another and with
+    expressed genes, providing new insights into the mechanisms of gene
+    regulation. The newly identified elements also show a statistical
+    correspondence to sequence variants linked to human disease, and can
+    thereby guide interpretation of this variation. Overall, the project
+    provides new insights into the organization and regulation of our genes
+    and genome, and is an expansive resource of functional annotations for
+    biomedical research.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1038/nature14248"
+  doi: "10.1038/nature14248"
+  title: "Integrative analysis of 111 reference human epigenomes"
+  authors:
+    - "Kundaje A"
+    - "Meuleman W"
+    - "Ernst J"
+    - "Bilenky M"
+    - "Yen A"
+    - "Heravi-Moussavi A"
+    - "Kheradpour P"
+    - "Zhang Z"
+    - "Wang J"
+    - "Ziller MJ"
+    - "Amin V"
+    - "Whitaker JW"
+    - "Schultz MD"
+    - "Ward LD"
+    - "Sarkar A"
+    - "Quon G"
+    - "Sandstrom RS"
+    - "Eaton ML"
+    - "Wu YC"
+    - "Pfenning AR"
+    - "Wang X"
+    - "Claussnitzer M"
+    - "Liu Y"
+    - "Coarfa C"
+    - "Harris RA"
+    - "Shoresh N"
+    - "Epstein CB"
+    - "Gjoneska E"
+    - "Leung D"
+    - "Xie W"
+    - "Hawkins RD"
+    - "Lister R"
+    - "Hong C"
+    - "Gascard P"
+    - "Mungall AJ"
+    - "Moore R"
+    - "Chuah E"
+    - "Tam A"
+    - "Canfield TK"
+    - "Hansen RS"
+    - "Kaul R"
+    - "Sabo PJ"
+    - "Bansal MS"
+    - "Carles A"
+    - "Dixon JR"
+    - "Farh KH"
+    - "Feizi S"
+    - "Karlic R"
+    - "Kim AR"
+    - "Kulkarni A"
+    - "Li D"
+    - "Lowdon R"
+    - "Elliott G"
+    - "Mercer TR"
+    - "Neph SJ"
+    - "Onuchic V"
+    - "Polak P"
+    - "Rajagopal N"
+    - "Ray P"
+    - "Sallari RC"
+    - "Siebenthall KT"
+    - "Sinnott-Armstrong NA"
+    - "Stevens M"
+    - "Thurman RE"
+    - "Wu J"
+    - "Zhang B"
+    - "Zhou X"
+    - "Beaudet AE"
+    - "Boyer LA"
+    - "De Jager PL"
+    - "Farnham PJ"
+    - "Fisher SJ"
+    - "Haussler D"
+    - "Jones SJ"
+    - "Li W"
+    - "Marra MA"
+    - "McManus MT"
+    - "Sunyaev S"
+    - "Thomson JA"
+    - "Tlsty TD"
+    - "Tsai LH"
+    - "Wang W"
+    - "Waterland RA"
+    - "Zhang MQ"
+    - "Chadwick LH"
+    - "Bernstein BE"
+    - "Costello JF"
+    - "Ecker JR"
+    - "Hirst M"
+    - "Meissner A"
+    - "Milosavljevic A"
+    - "Ren B"
+    - "Stamatoyannopoulos JA"
+    - "Wang T"
+    - "Kellis M"
+  year: 2015
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    The reference human genome sequence set the stage for studies of genetic
+    variation and its association with human disease, but epigenomic studies
+    lack a similar reference. To address this need, the NIH Roadmap
+    Epigenomics Consortium generated the largest collection so far of human
+    epigenomes for primary cells and tissues. Here we describe the
+    integrative analysis of 111 reference human epigenomes generated as part
+    of the programme, profiled for histone modification patterns, DNA
+    accessibility, DNA methylation and RNA expression. We establish global
+    maps of regulatory elements, define regulatory modules of coordinated
+    activity, and their likely activators and repressors. We show that
+    disease- and trait-associated genetic variants are enriched in tissue-
+    specific epigenomic marks, revealing biologically relevant cell types
+    for diverse human traits, and providing a resource for interpreting the
+    molecular basis of human disease. Our results demonstrate the central
+    role of epigenomic information for understanding gene regulation,
+    cellular differentiation and human disease.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
