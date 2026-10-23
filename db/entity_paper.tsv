@@ -98,6 +98,8 @@ benchmark:towards-complex-query-referring-image-segmentation	arxiv:2309.17205	pr
 benchmark:towards-more-realistic-simulated-datasets-for-benchmarking-deep-learning-models-in-regulatory-genomics	10.1101/2021.12.26.474224	primary	
 benchmark:uncertainty-in-gnn-learning-evaluations	arxiv:2305.06026	primary	
 benchmark:virobench	arxiv:2605.25388	primary	
+database:encode-screen-ccres	10.1038/s41586-020-2493-4	primary	
+database:hocomoco-v12	10.1093/nar/gkad1077	primary	
 database:jaspar-2024	10.1016/j.compbiolchem.2026.109438	benchmark	
 database:jaspar-2024	10.1038/s44320-025-00088-3	benchmark	
 database:jaspar-2024	10.1093/bioinformatics/btaf456	benchmark	
@@ -107,6 +109,9 @@ database:jaspar-2024	10.1101/gr.281154.125	benchmark
 database:jaspar-2024	10.1109/icip55913.2025.11084625	critique	
 database:jaspar-2024	10.1186/s12859-024-05995-0	benchmark	
 database:jaspar-2024	10.64898/2026.01.14.699402	benchmark	
+database:kipoi	10.1038/s41587-019-0140-0	primary	
+database:remap-2022	10.1093/nar/gkab996	primary	
+dataset:adamson-2016-perturb-seq-upr-screen	10.1016/j.cell.2016.11.048	primary	
 dataset:borzoi-data	10.1007/s00122-025-04973-1	critique	
 dataset:borzoi-data	10.1038/s41467-026-77381-8	benchmark	
 dataset:borzoi-data	10.1038/s41588-024-02053-6	primary	
@@ -127,6 +132,7 @@ dataset:borzoi-data	10.64898/2026.01.20.700723	benchmark
 dataset:borzoi-data	10.64898/2026.05.13.724757	benchmark	
 dataset:borzoi-data	10.64898/2026.08.02.742309	benchmark	
 dataset:borzoi-data	10.64898/2026.09.08.750126	critique	
+dataset:dixit-2016-perturb-seq	10.1016/j.cell.2016.11.038	primary	
 dataset:enformer-data	10.1002/advs.202514490	benchmark	
 dataset:enformer-data	10.1002/qub2.100	benchmark	
 dataset:enformer-data	10.1002/qub2.68	benchmark	
@@ -172,6 +178,7 @@ dataset:enformer-data	10.48550/arxiv.2311.12570	benchmark
 dataset:enformer-data	10.64898/2026.01.27.702015	benchmark	
 dataset:enformer-data	10.64898/2026.02.27.708524	benchmark	
 dataset:enformer-data	10.64898/2026.07.18.739304	benchmark	
+dataset:norman-2019-combinatorial-perturb-seq	10.1126/science.aax4438	primary	
 dataset:replogle-2022-perturb-seq	10.1016/j.cell.2022.05.013	primary	
 dataset:replogle-2022-perturb-seq	10.1016/j.compbiolchem.2026.109480	benchmark	
 dataset:replogle-2022-perturb-seq	10.1016/j.jare.2026.06.012	benchmark	
@@ -197,6 +204,7 @@ dataset:replogle-2022-perturb-seq	10.64898/2026.03.27.714658	benchmark
 dataset:replogle-2022-perturb-seq	10.64898/2026.06.28.735106	benchmark	
 dataset:replogle-2022-perturb-seq	10.64898/2026.08.04.732812	critique	
 dataset:replogle-2022-perturb-seq	10.64898/2026.08.07.743481	benchmark	
+dataset:sci-plex	10.1126/science.aax6234	primary	
 model:a-benchmark-of-evo2-genomic-ai-models-for-efficient-and-practical-deployment	10.1101/2025.09.10.675279	primary	
 model:a-biological-response-compound-representation-allows-chemical-perturbation-prediction-across-cell-lines	10.64898/2026.09.28.755146	primary	
 model:a-deep-learning-based-multiscale-integration-of-spatial-omics-with-tumor-morphology	10.1038/s41467-025-66691-y	primary	

@@ -291,3 +291,55 @@
       role: benchmark
     - paper_id: 10.1038/s41592-026-03120-y
       role: benchmark
+
+- entity_id: dataset:norman-2019-combinatorial-perturb-seq
+  type: dataset
+  name: Norman 2019 combinatorial Perturb-seq
+  year: 2019
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1126/science.aax4438
+      role: primary
+
+- entity_id: dataset:adamson-2016-perturb-seq-upr-screen
+  type: dataset
+  name: Adamson 2016 Perturb-seq UPR screen
+  year: 2016
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.cell.2016.11.048
+      role: primary
+
+- entity_id: dataset:dixit-2016-perturb-seq
+  type: dataset
+  name: Dixit 2016 Perturb-seq
+  year: 2016
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1016/j.cell.2016.11.038
+      role: primary
+
+- entity_id: dataset:sci-plex
+  type: dataset
+  name: sci-Plex
+  year: 2020
+  fate_axis: [what]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1126/science.aax6234
+      role: primary

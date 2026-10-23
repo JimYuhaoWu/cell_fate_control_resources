@@ -31759,3 +31759,381 @@
   preprint_of: null
   metadata_source: "europepmc"
   date_added: 2026-10-23
+
+- paper_id: "10.1126/science.aax4438"
+  doi: "10.1126/science.aax4438"
+  title: "Exploring genetic interaction manifolds constructed from rich single-cell phenotypes"
+  authors:
+    - "Norman TM"
+    - "Horlbeck MA"
+    - "Replogle JM"
+    - "Ge AY"
+    - "Xu A"
+    - "Jost M"
+    - "Gilbert LA"
+    - "Weissman JS"
+  year: 2019
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    How cellular and organismal complexity emerges from combinatorial
+    expression of genes is a central question in biology. High-content
+    phenotyping approaches such as Perturb-seq (single-cell RNA-sequencing
+    pooled CRISPR screens) present an opportunity for exploring such genetic
+    interactions (GIs) at scale. Here, we present an analytical framework
+    for interpreting high-dimensional landscapes of cell states (manifolds)
+    constructed from transcriptional phenotypes. We applied this approach to
+    Perturb-seq profiling of strong GIs mined from a growth-based, gain-of-
+    function GI map. Exploration of this manifold enabled ordering of
+    regulatory pathways, principled classification of GIs (e.g., identifying
+    suppressors), and mechanistic elucidation of synergistic interactions,
+    including an unexpected synergy between <i>CBL</i> and <i>CNN1</i>
+    driving erythroid differentiation. Finally, we applied recommender
+    system machine learning to predict interactions, facilitating
+    exploration of vastly larger GI manifolds.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1016/j.cell.2016.11.048"
+  doi: "10.1016/j.cell.2016.11.048"
+  title: "A Multiplexed Single-Cell CRISPR Screening Platform Enables Systematic Dissection of the Unfolded Protein Response"
+  authors:
+    - "Adamson B"
+    - "Norman TM"
+    - "Jost M"
+    - "Cho MY"
+    - "Nuñez JK"
+    - "Chen Y"
+    - "Villalta JE"
+    - "Gilbert LA"
+    - "Horlbeck MA"
+    - "Hein MY"
+    - "Pak RA"
+    - "Gray AN"
+    - "Gross CA"
+    - "Dixit A"
+    - "Parnas O"
+    - "Regev A"
+    - "Weissman JS"
+  year: 2016
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    Functional genomics efforts face tradeoffs between number of
+    perturbations examined and complexity of phenotypes measured. We bridge
+    this gap with Perturb-seq, which combines droplet-based single-cell RNA-
+    seq with a strategy for barcoding CRISPR-mediated perturbations,
+    allowing many perturbations to be profiled in pooled format. We applied
+    Perturb-seq to dissect the mammalian unfolded protein response (UPR)
+    using single and combinatorial CRISPR perturbations. Two genome-scale
+    CRISPR interference (CRISPRi) screens identified genes whose repression
+    perturbs ER homeostasis. Subjecting ∼100 hits to Perturb-seq enabled
+    high-precision functional clustering of genes. Single-cell analyses
+    decoupled the three UPR branches, revealed bifurcated UPR branch
+    activation among cells subject to the same perturbation, and uncovered
+    differential activation of the branches across hits, including an
+    isolated feedback loop between the translocon and IRE1α. These studies
+    provide insight into how the three sensors of ER homeostasis monitor
+    distinct types of stress and highlight the ability of Perturb-seq to
+    dissect complex cellular responses.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1016/j.cell.2016.11.038"
+  doi: "10.1016/j.cell.2016.11.038"
+  title: "Perturb-Seq: Dissecting Molecular Circuits with Scalable Single-Cell RNA Profiling of Pooled Genetic Screens"
+  authors:
+    - "Dixit A"
+    - "Parnas O"
+    - "Li B"
+    - "Chen J"
+    - "Fulco CP"
+    - "Jerby-Arnon L"
+    - "Marjanovic ND"
+    - "Dionne D"
+    - "Burks T"
+    - "Raychowdhury R"
+    - "Adamson B"
+    - "Norman TM"
+    - "Lander ES"
+    - "Weissman JS"
+    - "Friedman N"
+    - "Regev A"
+  year: 2016
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    Genetic screens help infer gene function in mammalian cells, but it has
+    remained difficult to assay complex phenotypes-such as transcriptional
+    profiles-at scale. Here, we develop Perturb-seq, combining single-cell
+    RNA sequencing (RNA-seq) and clustered regularly interspaced short
+    palindromic repeats (CRISPR)-based perturbations to perform many such
+    assays in a pool. We demonstrate Perturb-seq by analyzing 200,000 cells
+    in immune cells and cell lines, focusing on transcription factors
+    regulating the response of dendritic cells to lipopolysaccharide (LPS).
+    Perturb-seq accurately identifies individual gene targets, gene
+    signatures, and cell states affected by individual perturbations and
+    their genetic interactions. We posit new functions for regulators of
+    differentiation, the anti-viral response, and mitochondrial function
+    during immune activation. By decomposing many high content measurements
+    into the effects of perturbations, their interactions, and diverse cell
+    metadata, Perturb-seq dramatically increases the scope of pooled genomic
+    assays.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1126/science.aax6234"
+  doi: "10.1126/science.aax6234"
+  title: "Massively multiplex chemical transcriptomics at single-cell resolution"
+  authors:
+    - "Srivatsan SR"
+    - "McFaline-Figueroa JL"
+    - "Ramani V"
+    - "Saunders L"
+    - "Cao J"
+    - "Packer J"
+    - "Pliner HA"
+    - "Jackson DL"
+    - "Daza RM"
+    - "Christiansen L"
+    - "Zhang F"
+    - "Zhang F"
+    - "Steemers F"
+    - "Shendure J"
+    - "Trapnell C"
+  year: 2020
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    High-throughput chemical screens typically use coarse assays such as
+    cell survival, limiting what can be learned about mechanisms of action,
+    off-target effects, and heterogeneous responses. Here, we introduce
+    "sci-Plex," which uses "nuclear hashing" to quantify global
+    transcriptional responses to thousands of independent perturbations at
+    single-cell resolution. As a proof of concept, we applied sci-Plex to
+    screen three cancer cell lines exposed to 188 compounds. In total, we
+    profiled ~650,000 single-cell transcriptomes across ~5000 independent
+    samples in one experiment. Our results reveal substantial intercellular
+    heterogeneity in response to specific compounds, commonalities in
+    response to families of compounds, and insight into differential
+    properties within families. In particular, our results with histone
+    deacetylase inhibitors support the view that chromatin acts as an
+    important reservoir of acetate in cancer cells.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1038/s41586-020-2493-4"
+  doi: "10.1038/s41586-020-2493-4"
+  title: "Expanded encyclopaedias of DNA elements in the human and mouse genomes"
+  authors:
+    - "Moore JE"
+    - "Purcaro MJ"
+    - "Pratt HE"
+    - "Epstein CB"
+    - "Shoresh N"
+    - "Adrian J"
+    - "Kawli T"
+    - "Davis CA"
+    - "Dobin A"
+    - "Kaul R"
+    - "Halow J"
+    - "Van Nostrand EL"
+    - "Freese P"
+    - "Gorkin DU"
+    - "Shen Y"
+    - "He Y"
+    - "Mackiewicz M"
+    - "Pauli-Behn F"
+    - "Williams BA"
+    - "Mortazavi A"
+    - "Keller CA"
+    - "Zhang XO"
+    - "Elhajjajy SI"
+    - "Huey J"
+    - "Dickel DE"
+    - "Snetkova V"
+    - "Wei X"
+    - "Wang X"
+    - "Rivera-Mulia JC"
+    - "Rozowsky J"
+    - "Zhang J"
+    - "Chhetri SB"
+    - "Zhang J"
+    - "Victorsen A"
+    - "White KP"
+    - "Visel A"
+    - "Yeo GW"
+    - "Burge CB"
+    - "Lécuyer E"
+    - "Gilbert DM"
+    - "Dekker J"
+    - "Rinn J"
+    - "Mendenhall EM"
+    - "Ecker JR"
+    - "Kellis M"
+    - "Klein RJ"
+    - "Noble WS"
+    - "Kundaje A"
+    - "Guigó R"
+    - "Farnham PJ"
+    - "Cherry JM"
+    - "Myers RM"
+    - "Ren B"
+    - "Graveley BR"
+    - "Gerstein MB"
+    - "Pennacchio LA"
+    - "Snyder MP"
+    - "Bernstein BE"
+    - "Wold B"
+    - "Hardison RC"
+    - "Gingeras TR"
+    - "Stamatoyannopoulos JA"
+    - "Weng Z"
+  year: 2020
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    The human and mouse genomes contain instructions that specify RNAs and
+    proteins and govern the timing, magnitude, and cellular context of their
+    production. To better delineate these elements, phase III of the
+    Encyclopedia of DNA Elements (ENCODE) Project has expanded analysis of
+    the cell and tissue repertoires of RNA transcription, chromatin
+    structure and modification, DNA methylation, chromatin looping, and
+    occupancy by transcription factors and RNA-binding proteins. Here we
+    summarize these efforts, which have produced 5,992 new experimental
+    datasets, including systematic determinations across mouse fetal
+    development. All data are available through the ENCODE data portal
+    (https://www.encodeproject.org), including phase II ENCODE<sup>1</sup>
+    and Roadmap Epigenomics<sup>2</sup> data. We have developed a registry
+    of 926,535 human and 339,815 mouse candidate cis-regulatory elements,
+    covering 7.9 and 3.4% of their respective genomes, by integrating
+    selected datatypes associated with gene regulation, and constructed a
+    web-based server (SCREEN; http://screen.encodeproject.org) to provide
+    flexible, user-defined access to this resource. Collectively, the ENCODE
+    data and registry provide an expansive resource for the scientific
+    community to build a better understanding of the organization and
+    function of the human and mouse genomes.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1093/nar/gkad1077"
+  doi: "10.1093/nar/gkad1077"
+  title: "HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors"
+  authors:
+    - "Vorontsov IE"
+    - "Eliseeva IA"
+    - "Zinkevich A"
+    - "Nikonov M"
+    - "Abramov S"
+    - "Boytsov A"
+    - "Kamenets V"
+    - "Kasianova A"
+    - "Kolmykov S"
+    - "Yevshin IS"
+    - "Favorov A"
+    - "Medvedeva YA"
+    - "Jolma A"
+    - "Kolpakov F"
+    - "Makeev VJ"
+    - "Kulakovskiy IV"
+  year: 2024
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    We present a major update of the HOCOMOCO collection that provides DNA
+    binding specificity patterns of 949 human transcription factors and 720
+    mouse orthologs. To make this release, we performed motif discovery in
+    peak sets that originated from 14 183 ChIP-Seq experiments and reads
+    from 2554 HT-SELEX experiments yielding more than 400 thousand candidate
+    motifs. The candidate motifs were annotated according to their
+    similarity to known motifs and the hierarchy of DNA-binding domains of
+    the respective transcription factors. Next, the motifs underwent human
+    expert curation to stratify distinct motif subtypes and remove non-
+    informative patterns and common artifacts. Finally, the curated subset
+    of 100 thousand motifs was supplied to the automated benchmarking to
+    select the best-performing motifs for each transcription factor. The
+    resulting HOCOMOCO v12 core collection contains 1443 verified position
+    weight matrices, including distinct subtypes of DNA binding motifs for
+    particular transcription factors. In addition to the core collection,
+    HOCOMOCO v12 provides motif sets optimized for the recognition of
+    binding sites in vivo and in vitro, and for annotation of regulatory
+    sequence variants. HOCOMOCO is available at
+    https://hocomoco12.autosome.org and https://hocomoco.autosome.org.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1093/nar/gkab996"
+  doi: "10.1093/nar/gkab996"
+  title: "ReMap 2022: a database of Human, Mouse, Drosophila and Arabidopsis regulatory regions from an integrative analysis of DNA-binding sequencing experiments"
+  authors:
+    - "Hammal F"
+    - "de Langen P"
+    - "Bergon A"
+    - "Lopez F"
+    - "Ballester B"
+  year: 2022
+  venue: null
+  venue_type: "journal"
+  abstract: >-
+    ReMap (https://remap.univ-amu.fr) aims to provide manually curated,
+    high-quality catalogs of regulatory regions resulting from a large-scale
+    integrative analysis of DNA-binding experiments in Human, Mouse, Fly and
+    Arabidopsis thaliana for hundreds of transcription factors and
+    regulators. In this 2022 update, we have uniformly processed >11 000
+    DNA-binding sequencing datasets from public sources across four species.
+    The updated Human regulatory atlas includes 8103 datasets covering a
+    total of 1210 transcriptional regulators (TRs) with a catalog of 182
+    million (M) peaks, while the updated Arabidopsis atlas reaches 4.8M
+    peaks, 423 TRs across 694 datasets. Also, this ReMap release is enriched
+    by two new regulatory catalogs for Mus musculus and Drosophila
+    melanogaster. First, the Mouse regulatory catalog consists of 123M peaks
+    across 648 TRs as a result of the integration and validation of 5503
+    ChIP-seq datasets. Second, the Drosophila melanogaster catalog contains
+    16.6M peaks across 550 TRs from the integration of 1205 datasets. The
+    four regulatory catalogs are browsable through track hubs at UCSC,
+    Ensembl and NCBI genome browsers. Finally, ReMap 2022 comes with a new
+    Cis Regulatory Module identification method, improved quality controls,
+    faster search results, and better user experience with an interactive
+    tour and video tutorials on browsing and filtering ReMap catalogs.
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23
+
+- paper_id: "10.1038/s41587-019-0140-0"
+  doi: "10.1038/s41587-019-0140-0"
+  title: "The Kipoi repository accelerates community exchange and reuse of predictive models for genomics"
+  authors:
+    - "Avsec Ž"
+    - "Kreuzhuber R"
+    - "Israeli J"
+    - "Xu N"
+    - "Cheng J"
+    - "Shrikumar A"
+    - "Banerjee A"
+    - "Kim DS"
+    - "Beier T"
+    - "Urban L"
+    - "Kundaje A"
+    - "Stegle O"
+    - "Gagneur J"
+  year: 2019
+  venue: null
+  venue_type: "journal"
+  abstract: null
+  url: null
+  preprint_of: null
+  metadata_source: "europepmc"
+  date_added: 2026-10-23

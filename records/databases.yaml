@@ -53,3 +53,55 @@
       role: benchmark
     - paper_id: 10.1093/bioinformatics/btaf456
       role: benchmark
+
+- entity_id: database:encode-screen-ccres
+  type: database
+  name: ENCODE SCREEN cCREs
+  year: 2020
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41586-020-2493-4
+      role: primary
+
+- entity_id: database:hocomoco-v12
+  type: database
+  name: HOCOMOCO v12
+  year: 2024
+  fate_axis: [with-what, where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/nar/gkad1077
+      role: primary
+
+- entity_id: database:remap-2022
+  type: database
+  name: ReMap 2022
+  year: 2022
+  fate_axis: [where]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1093/nar/gkab996
+      role: primary
+
+- entity_id: database:kipoi
+  type: database
+  name: Kipoi
+  year: 2019
+  fate_axis: [where, how]
+  review_state: unreviewed
+  curator: JimYuhaoWu
+  date_added: 2026-10-23
+  date_updated: 2026-10-23
+  papers:
+    - paper_id: 10.1038/s41587-019-0140-0
+      role: primary

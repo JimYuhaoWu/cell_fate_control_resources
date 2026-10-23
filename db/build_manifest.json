@@ -2,10 +2,10 @@
   "build_date": "2026-10-23",
   "db_path": "db/cfcr.db",
   "inputs": {
-    "literature/papers.yaml": "22903eacbc79880da649a529b8e134b99804c57fe3f435c5d5d6d62f24175e3e",
+    "literature/papers.yaml": "43e1fc7c5690c778b68338864b0cc1a2c587618f1ef7f21926fde8925e8d0126",
     "records/benchmarks.yaml": "9f73392f1847792a85f8a69b0388545d7f832cca4e6aba47a12106c858a083d9",
-    "records/databases.yaml": "a1a614251c8f6576e2117455e0bc3d722fb5488074c08a2084d539466571566b",
-    "records/datasets.yaml": "7f778016659d3ec427ff60c5b4eeee3b5000c29723937cebe7ea9a314e96e656",
+    "records/databases.yaml": "bea7ac207ecc1d16c8df1d011d29c2ef4e950ee0238ec57dd8e51622f5e0f993",
+    "records/datasets.yaml": "7fc33359ca27435affa86191df5cae239c239e6a051f1c435e939413e97758ed",
     "records/models.yaml": "e19f7ad420d26de67ee2b72f9ad8498dc5862809efac912776dbbfe0b6efd845",
     "records/module_libraries.yaml": "0bfd474014054b5425f0859200b07509c7ab6dc92a31750167e9aabcd5ea53c1",
     "records/protocols.yaml": "2b8e9e02bb8b62511fb7c08d412e900356963730ed442550f375a26d9b5d64d9",
@@ -19,10 +19,10 @@
   },
   "script": "scripts/04_build.py",
   "snapshots": {
-    "entities.tsv": 464,
-    "entity_paper.tsv": 773,
+    "entities.tsv": 472,
+    "entity_paper.tsv": 781,
     "links.tsv": 29,
-    "papers.tsv": 718
+    "papers.tsv": 726
   },
   "summary": {
     "by_evidence_tier": {
@@ -34,19 +34,19 @@
       "critique": 62,
       "extension": 1,
       "preprint": 8,
-      "primary": 463,
+      "primary": 471,
       "review": 1
     },
     "by_type": {
       "benchmark": 90,
-      "database": 1,
-      "dataset": 3,
+      "database": 5,
+      "dataset": 7,
       "model": 310,
       "module": 58,
       "protocol": 2
     },
-    "n_entities": 464,
+    "n_entities": 472,
     "n_links": 29,
-    "n_papers": 718
+    "n_papers": 726
   }
 }

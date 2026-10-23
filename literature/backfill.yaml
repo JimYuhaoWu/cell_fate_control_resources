@@ -47,3 +47,47 @@
   type: benchmark
   fate_axis: [how]
   paper: arxiv:2306.15006
+
+# Datasets and databases. Discovery is structurally blind to both: every query
+# in search_queries.yaml carries expect_type model, benchmark or module, so a
+# cycle cannot return one. M4 wants ~55 datasets and ~20 databases.
+
+- name: Norman 2019 combinatorial Perturb-seq
+  type: dataset
+  fate_axis: [what]
+  paper: 10.1126/science.aax4438
+
+- name: Adamson 2016 Perturb-seq UPR screen
+  type: dataset
+  fate_axis: [what]
+  paper: 10.1016/j.cell.2016.11.048
+
+- name: Dixit 2016 Perturb-seq
+  type: dataset
+  fate_axis: [what]
+  paper: 10.1016/j.cell.2016.11.038
+
+- name: sci-Plex
+  type: dataset
+  fate_axis: [what]
+  paper: 10.1126/science.aax6234
+
+- name: ENCODE SCREEN cCREs
+  type: database
+  fate_axis: [where]
+  paper: 10.1038/s41586-020-2493-4
+
+- name: HOCOMOCO v12
+  type: database
+  fate_axis: [with-what, where]
+  paper: 10.1093/nar/gkad1077
+
+- name: ReMap 2022
+  type: database
+  fate_axis: [where]
+  paper: 10.1093/nar/gkab996
+
+- name: Kipoi
+  type: database
+  fate_axis: [where, how]
+  paper: 10.1038/s41587-019-0140-0
