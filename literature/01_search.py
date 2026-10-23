@@ -51,7 +51,21 @@ ROOT = Path(__file__).resolve().parents[1]
 LIT_DIR = ROOT / "literature"
 CANDIDATES_DIR = LIT_DIR / "candidates"
 
-MAILTO = "yuhaow9412@gmail.com"
+def _contact_email() -> str:
+    """
+    The address external services are given, read from the file that declares
+    those services. config/sources.yaml is its one home on purpose: a copy in
+    a script means changing or withdrawing the address needs every copy found.
+    """
+    sources = yaml.safe_load(
+        (ROOT / "config" / "sources.yaml").read_text(encoding="utf-8"))
+    for api in sources["metadata_apis"]:
+        if api.get("contact_email"):
+            return api["contact_email"]
+    raise SystemExit("no contact_email in config/sources.yaml")
+
+
+MAILTO = _contact_email()
 UA = f"cfcr-literature/0.1 (mailto:{MAILTO})"
 
 EUROPEPMC = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"

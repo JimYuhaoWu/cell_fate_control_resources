@@ -28,13 +28,28 @@ from datetime import date
 from pathlib import Path
 
 import requests
+import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import triage_rules as rules                      # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "literature" / "candidates"
-MAILTO = "yuhaow9412@gmail.com"
+def _contact_email() -> str:
+    """
+    The address external services are given, read from the file that declares
+    those services. config/sources.yaml is its one home on purpose: a copy in
+    a script means changing or withdrawing the address needs every copy found.
+    """
+    sources = yaml.safe_load(
+        (ROOT / "config" / "sources.yaml").read_text(encoding="utf-8"))
+    for api in sources["metadata_apis"]:
+        if api.get("contact_email"):
+            return api["contact_email"]
+    raise SystemExit("no contact_email in config/sources.yaml")
+
+
+MAILTO = _contact_email()
 UA = f"cfcr-triage-eval (mailto:{MAILTO})"
 OA = "https://api.openalex.org/works"
 SELECT = ("id,doi,title,publication_year,type,primary_location,referenced_works,"
