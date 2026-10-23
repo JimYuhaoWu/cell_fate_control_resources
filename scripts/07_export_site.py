@@ -71,8 +71,12 @@ def _clean(value):
 
 
 def _as_bool(value) -> bool:
-    """Integer-backed boolean -> real bool, whether it arrived as 1 or "1"."""
-    return bool(int(value))
+    """
+    Integer-backed boolean -> real bool, whether it arrived as 1, "1" or
+    "1.0". The float spelling appears once a column has nulls in it: pandas
+    widens the whole column to float, and the snapshot then carries "1.0".
+    """
+    return bool(float(value))
 
 
 def _paper_url(paper_id: str, doi, url):
