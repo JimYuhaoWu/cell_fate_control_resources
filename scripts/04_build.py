@@ -233,6 +233,9 @@ def main() -> int:
                 counts[table] = db.upsert_ext(etype, rows)
         counts["link"] = db.upsert_links(links)
         counts["entity_paper"] = db.upsert_entity_papers(eps)
+        dropped = db.drop_missing_entities({e["entity_id"] for e in entities})
+        if dropped:
+            print(f"  dropped {dropped} entity(ies) no longer in records/")
 
         # ── snapshots ────────────────────────────────────────────────────────
         out = root / "db"

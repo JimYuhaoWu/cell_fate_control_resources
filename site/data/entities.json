@@ -4809,6 +4809,9 @@
   ],
   "links": [],
   "name": "Akita",
+  "output_type": [
+   "contact-map"
+  ],
   "papers": [
    {
     "authors": [
@@ -12329,6 +12332,9 @@
   ],
   "links": [],
   "name": "Orca",
+  "output_type": [
+   "contact-map"
+  ],
   "papers": [
    {
     "authors": [

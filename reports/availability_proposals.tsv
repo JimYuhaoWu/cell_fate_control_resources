@@ -1,5 +1,54 @@
 entity_id	proposed_availability_tier	note
-benchmark:genomic-benchmarks	open-source
-database:ensembl-regulatory-build	open-source	archived
-model:dnabert	open-source
-model:gpn	open-source
+benchmark:sequencelab	needs a look -- no licence on the repository
+benchmark:loco-epi	needs a look -- no licence on the repository
+benchmark:towards-more-realistic-simulated-datasets-for-benchmarking-deep-learning-models-in-regulatory-genomics	needs a look -- no licence on the repository
+benchmark:fitness-landscape-for-antibodies-2	needs a look -- no licence on the repository
+benchmark:flab	needs a look -- no licence on the repository
+benchmark:image-scene-graph-generation-sgg-benchmark	open-source
+benchmark:genotex	needs a look -- no licence on the repository
+benchmark:virobench	needs a look -- no licence on the repository
+benchmark:factual	needs a look -- no licence on the repository
+benchmark:know-show	needs a look -- no licence on the repository
+benchmark:annotatemissense	needs a look -- no licence on the repository
+benchmark:spatial-transcriptomics-deconvolution-methods-generalize-well-to-spatial-chromatin-accessibility-data	open-source
+benchmark:a-benchmark-of-mri-foundation-models-to-predict-idh-mutational-status-in-glioma	open-source
+model:dynamic-graph-prior-guided-latent-adaptation-for-generalizable-single-cell-perturbation-response-prediction	needs a look -- no licence on the repository
+model:epinformer	needs a look -- no licence on the repository
+model:chromatin-accessibility-prediction-via-convolutional-long-short-term-memory-networks-with-k-mer-embedding	needs a look -- no licence on the repository
+model:arsenal	needs a look -- no licence on the repository
+model:slim	open-source
+model:beyond-independent-genes	open-source
+model:v3cell	needs a look -- no licence on the repository
+model:pertadapt	needs a look -- no licence on the repository
+model:differentiable-retrieval-augmented-generation-for-predicting-cellular-responses-to-gene-perturbation	needs a look -- no licence on the repository
+model:scldm	open-source
+model:spadit	needs a look -- no licence on the repository
+model:enigma	needs a look -- no licence on the repository
+model:epiexpr	open-source
+model:dart-eval	needs a look -- no licence on the repository
+model:hyperbolic-genome-embeddings	needs a look -- no licence on the repository
+model:an-intrinsically-interpretable-neural-network-architecture-for-sequence-to-function-learning	needs a look -- no licence on the repository
+model:graphylovar	open-source
+model:genepert	needs a look -- no licence on the repository
+model:dfce-kant	needs a look -- no licence on the repository
+model:performance-of-deep-learning-methods-for-spatial-gene-expression-prediction-from-histology-images-a-comprehensive-assessment	needs a look -- no licence on the repository
+model:thitogene	needs a look -- no licence on the repository
+model:drivr-base	open-source
+model:protein-subcellular-localization-prediction-model-based-on-graph-convolutional-network	needs a look -- no licence on the repository
+model:decant	open-source
+model:unveiling-chromatin-dynamics-with-virtual-epigenome	needs a look -- no licence on the repository
+model:genomic-language-model-for-predicting-enhancers-and-their-allele-specific-activity-in-the-human-genome	open-source
+model:ragenome	open-source
+model:graphunet-ss	needs a look -- no licence on the repository
+model:deepsge	needs a look -- no licence on the repository
+model:is-a-win-win-possible-achieving-pareto-optimal-privacy-utility-balance-in-fine-tuned-genome-language-model-embeddings-against-embedding-reconstruction-attacks	open-source
+model:splisync	open-source
+model:evolen	needs a look -- no licence on the repository
+model:genebreaker	open-source
+model:when-repeats-drive-the-vocabulary	open-source
+model:barcodebert	open-source
+model:enhancing-cross-context-generalization-in-drug-perturbation-prediction-with-a-multimodal-conditional-diffusion-framework	needs a look -- no licence on the repository
+model:spot-contact-lm	open-source
+model:spot-contact-single	open-source
+model:hyenadna	open-source
+model:gena-lm	open-source

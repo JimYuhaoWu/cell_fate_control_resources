@@ -6,7 +6,7 @@
     "records/benchmarks.yaml": "ec07715d87a9111e64f9bafe6a9a213e6de9822229e974a94754075c10bdefff",
     "records/databases.yaml": "6b92d9accb1f08e436b2b8b4d0e2b285ab96a1a00077b6164efcab52d5a6f598",
     "records/datasets.yaml": "14eb80cdc99076b5da3b2ce77827fc5cc147daeb616f70b3de1233611b040b2e",
-    "records/models.yaml": "f77bdaad99749aeb95ca091e1d921ebb9339c77ecd233e6771f10c0bf65e8f55",
+    "records/models.yaml": "52d05e13f7fcdb3a2b47122fe2f781b01022a4daa09b102a17035b06b683ecb0",
     "records/module_libraries.yaml": "0bfd474014054b5425f0859200b07509c7ab6dc92a31750167e9aabcd5ea53c1",
     "records/protocols.yaml": "c7d6ddf66f15688565c973e6ac494a82d4a6f1602ff239d07544767d84bd3186",
     "vocab/architecture.yaml": "287c121e51fb652f7c527937d81304d31fece7abbc7094ca6b62846067738ff8",
@@ -27,7 +27,7 @@
   "summary": {
     "by_evidence_tier": {
       "externally-benchmarked": 8,
-      "not asserted": 29
+      "not asserted": 31
     },
     "by_paper_role": {
       "application": 9,

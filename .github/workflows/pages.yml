@@ -39,6 +39,18 @@ jobs:
         with:
           python-version: '3.10'
       - run: pip install -e .
+      # The build and QC are run, not just the exporter. 04_build.py spent
+      # three commits exiting 1 on a TypeError while every snapshot it wrote
+      # was correct, and nothing noticed, because this workflow only ever ran
+      # the export. Only the four data snapshots are diffed: build_manifest.json
+      # carries the build date and qc_report.tsv the run's own output, so both
+      # differ on any later day and would fail this for no reason.
+      - name: records build and pass QC
+        run: |
+          python scripts/04_build.py
+          python scripts/05_validate.py
+          git diff --exit-code -- db/entities.tsv db/papers.tsv \
+                                  db/entity_paper.tsv db/links.tsv
       - name: site/data matches the committed records
         run: |
           python scripts/07_export_site.py

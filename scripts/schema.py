@@ -606,6 +606,29 @@ class CFCR:
         self.conn.commit()
         return inserted, updated
 
+    def drop_missing_entities(self, keep: set[str]) -> int:
+        """
+        Delete every entity the records no longer contain, and its rows in the
+        child tables.
+
+        The build only ever upserted, so an entity_id that left `records/*.yaml`
+        stayed in db/cfcr.db for good and was exported to the site as a card
+        with no record behind it. Renaming one on promotion made that routine
+        rather than rare. The children are deleted explicitly because
+        `PRAGMA foreign_keys` is OFF for the whole build (see __enter__), so
+        the schema's ON DELETE CASCADE does not fire.
+        """
+        cur = self.conn.cursor()
+        cur.execute("SELECT entity_id FROM entity")
+        gone = [(eid,) for (eid,) in cur.fetchall() if eid not in keep]
+        if not gone:
+            return 0
+        for table in ("entity_paper", "link", *EXT_TABLES.values()):
+            cur.executemany(f"DELETE FROM {table} WHERE entity_id = ?", gone)
+        cur.executemany("DELETE FROM entity WHERE entity_id = ?", gone)
+        self.conn.commit()
+        return len(gone)
+
     def upsert_entities(self, records: list[dict]) -> tuple[int, int]:
         # `review_state` is defaulted here rather than left to the DDL, because
         # _upsert only writes the columns a record carries: a record that

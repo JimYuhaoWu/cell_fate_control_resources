@@ -157,6 +157,59 @@ def check_prefix(entities, rep):
                     f"be read from the id")
 
 
+def check_axis(entities, rep):
+    """
+    A published entity with no `fate_axis` is on the site and off its map.
+
+    `fate_axis` is the site's primary navigation -- "start from what you need
+    to do" -- and an entity without one appears only while no axis is chosen.
+    Benchmarks are where this bites: the `benchmarks` query in
+    search_queries.yaml is the one query with no axis, because the benchmarks
+    it finds span several, so every benchmark admitted from a cycle arrives
+    without one. Staged records are not reported; an axis is part of what
+    promoting a record is for.
+    """
+    for e in entities:
+        if e.get("review_state") == "unreviewed":
+            continue
+        if not (e.get("fate_axis") or []):
+            rep.add(WARNING, "fate-axis", e["entity_id"],
+                    "published with no fate_axis, so the axis navigation "
+                    "cannot reach it",
+                    "give it the axis of whatever it serves, or hold it back "
+                    "with review_state: unreviewed")
+
+
+def check_unused_vocab(db, entities, rep):
+    """
+    A controlled term no record uses.
+
+    The mirror image of the `vocab_candidates.md` promotion mechanism, which
+    reports terms used *too widely* to stay free text. Nothing reported the
+    other direction, so `contact-map` sat in vocab/output_type.yaml unused from
+    the day it was written until Akita and Orca were backfilled (issue #7).
+    A vocabulary designed ahead of the records is the thing README warns
+    against, and this is how it shows up.
+    """
+    in_use = defaultdict(set)
+    for (table, column), facet in CONTROLLED.items():
+        rows = db.fetch(table) if table != "entity" else entities
+        for row in rows:
+            values = row.get(column) or []
+            if isinstance(values, str):
+                values = [values]
+            for value in values:
+                in_use[facet].add(str(value).lower())
+
+    for row in db.fetch("vocab"):
+        facet, term = row["facet"], row["term"]
+        if facet in in_use and term.lower() not in in_use[facet]:
+            rep.add(INFO, "vocab-unused", f"{facet}.{term}",
+                    "defined in vocab/ but no record uses it",
+                    "use it on the record it was written for, or drop the "
+                    "term until a record needs it")
+
+
 def check_vocab(db, entities, rep):
     terms = defaultdict(dict)       # facet -> normalized form -> canonical term
     for row in db.fetch("vocab"):
@@ -509,7 +562,9 @@ def main() -> int:
             return 1
 
         check_prefix(entities, rep)
+        check_axis(entities, rep)
         check_vocab(db, entities, rep)
+        check_unused_vocab(db, entities, rep)
         papers, by_entity = check_papers(db, entities, rep, whitelist)
         check_evidence_tier(db, papers, by_entity, rep)
         check_refs(entities, rep)

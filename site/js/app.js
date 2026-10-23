@@ -174,6 +174,22 @@
 
   function renderFacets() {
     var host = document.getElementById('facet-list');
+
+    // The panel is rebuilt on every keystroke and every toggle, which destroys
+    // the node that was focused and re-derives each group's open state from
+    // scratch: a keyboard user lost their place on each tick, and a group
+    // opened by hand closed again. The counts do need recomputing -- they
+    // respect every filter but the facet's own -- so the rebuild stays and
+    // what the reader did is carried across it.
+    var wasOpen = {};
+    Array.prototype.forEach.call(host.querySelectorAll('.facet'), function (g) {
+      wasOpen[g.getAttribute('data-column')] = g.open;
+    });
+    var active = document.activeElement;
+    var refocus = (active && active.type === 'checkbox' && host.contains(active))
+      ? {column: active.getAttribute('data-column'), value: active.value}
+      : null;
+
     host.textContent = '';
 
     var columns = Object.keys(state.facets).filter(function (column) {
@@ -209,9 +225,12 @@
       if (!live.length) { return; }
 
       var group = el('details', 'facet');
-      if (index < 4 || (state.filters[column] || []).length) {
-        group.open = true;
-      }
+      group.setAttribute('data-column', column);
+      // A group the reader has already touched keeps whatever they left it at;
+      // one appearing for the first time takes the default.
+      group.open = wasOpen.hasOwnProperty(column)
+        ? wasOpen[column]
+        : (index < 4 || (state.filters[column] || []).length > 0);
       var head = el('summary', null, humanize(column));
       var chosen = (state.filters[column] || []).length;
       if (chosen) { head.appendChild(el('span', 'chosen', String(chosen))); }
@@ -222,6 +241,7 @@
         var box = document.createElement('input');
         box.type = 'checkbox';
         box.value = String(value);
+        box.setAttribute('data-column', column);
         box.checked = (state.filters[column] || []).indexOf(String(value)) !== -1;
         box.addEventListener('change', function () {
           var chosenValues = state.filters[column] || [];
@@ -237,6 +257,16 @@
       });
       host.appendChild(group);
     });
+
+    if (refocus) {
+      Array.prototype.some.call(host.querySelectorAll('input[type=checkbox]'),
+        function (box) {
+          if (box.getAttribute('data-column') !== refocus.column
+              || box.value !== refocus.value) { return false; }
+          box.focus();
+          return true;
+        });
+    }
   }
 
   // --- cards ---------------------------------------------------------------

@@ -4931,6 +4931,8 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  model_ext:
+    output_type: [contact-map]
   papers:
     - paper_id: 10.1038/s41592-020-0958-x
       role: primary
@@ -4943,6 +4945,8 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  model_ext:
+    output_type: [contact-map]
   papers:
     - paper_id: 10.1038/s41588-022-01065-4
       role: primary

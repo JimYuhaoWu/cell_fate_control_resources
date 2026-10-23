@@ -155,6 +155,28 @@ def full_text_repos(pmcid: str) -> list[str]:
     return found
 
 
+def merge_tsv(out: Path, header: str, rows: list[str]) -> int:
+    """
+    Add rows to a report, keyed on the entity_id in the first column.
+
+    Each run only looks at records that are still missing something, so writing
+    the file fresh dropped every row an earlier run had put there: the first
+    enrichment left 54 availability proposals and the next run cut the file to
+    5. A row for the same entity is replaced, because the newer look at it is
+    the better one.
+    """
+    merged: dict[str, str] = {}
+    if out.exists():
+        for line in out.read_text(encoding="utf-8").split("\n")[1:]:
+            if line.strip():
+                merged[line.split("\t", 1)[0]] = line
+    for row in rows:
+        merged[row.split("\t", 1)[0]] = row
+    out.write_text(header + "\n" + "\n".join(v for _, v in sorted(merged.items()))
+                   + "\n", encoding="utf-8", newline="")
+    return len(merged)
+
+
 def _rel(path: Path) -> str:
     try:
         return path.resolve().relative_to(ROOT).as_posix()
@@ -288,11 +310,10 @@ def main() -> int:
         # which is a minute of a human's time each and otherwise has to be
         # rediscovered by fetching every full text again.
         out = ROOT / "reports" / "repo_candidates.tsv"
-        rows = [line.split(": names ", 1) for line in ambiguous]
-        out.write_text("entity_id\trepositories_named_in_the_full_text\n"
-                       + "\n".join(f"{eid}\t{rest}" for eid, rest in rows) + "\n",
-                       encoding="utf-8", newline="")
-        print(f"  wrote {_rel(out)} -- a repository choice, for a human")
+        rows = [line.replace(": names ", "\t", 1) for line in ambiguous]
+        total = merge_tsv(out, "entity_id\trepositories_named_in_the_full_text",
+                          rows)
+        print(f"  wrote {_rel(out)} -- {total} repository choice(s), for a human")
     for line in gone:
         print(f"  unreachable: {line}", file=sys.stderr)
 
@@ -305,10 +326,9 @@ def main() -> int:
 
     if proposals and not args.dry_run:
         out = ROOT / "reports" / "availability_proposals.tsv"
-        out.write_text("entity_id\tproposed_availability_tier\tnote\n"
-                       + "\n".join(proposals) + "\n",
-                       encoding="utf-8", newline="")
-        print(f"  wrote {_rel(out)} -- proposals, for a human to confirm")
+        total = merge_tsv(out, "entity_id\tproposed_availability_tier\tnote",
+                          proposals)
+        print(f"  wrote {_rel(out)} -- {total} proposal(s), for a human to confirm")
     if enriched:
         print("next: python scripts/04_build.py && python scripts/05_validate.py")
     return 0
