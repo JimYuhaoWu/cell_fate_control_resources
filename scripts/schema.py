@@ -709,7 +709,14 @@ class CFCR:
         by_role = dict(cur.fetchall())
         cur.execute("SELECT evidence_tier, COUNT(*) FROM model_ext "
                     "GROUP BY evidence_tier")
-        by_tier = dict(cur.fetchall())
+        # A model_ext row with no tier is a record holding some other model
+        # field -- a licence, say -- and leaving the tier to be derived. Its
+        # key has to be a string: build_manifest.json is written with
+        # sort_keys=True, and a None among the keys raises TypeError while
+        # sorting, which took 04_build.py's exit status to 1 as soon as
+        # 07_enrich.py started writing licences.
+        by_tier = {(tier if tier is not None else "not asserted"): n
+                   for tier, n in cur.fetchall()}
         cur.execute("SELECT COUNT(*) FROM paper")
         n_papers = cur.fetchone()[0]
         cur.execute("SELECT COUNT(*) FROM link")

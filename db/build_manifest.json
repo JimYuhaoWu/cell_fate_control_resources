@@ -2,13 +2,13 @@
   "build_date": "2026-10-23",
   "db_path": "db/cfcr.db",
   "inputs": {
-    "literature/papers.yaml": "43e1fc7c5690c778b68338864b0cc1a2c587618f1ef7f21926fde8925e8d0126",
-    "records/benchmarks.yaml": "9f73392f1847792a85f8a69b0388545d7f832cca4e6aba47a12106c858a083d9",
-    "records/databases.yaml": "bea7ac207ecc1d16c8df1d011d29c2ef4e950ee0238ec57dd8e51622f5e0f993",
-    "records/datasets.yaml": "7fc33359ca27435affa86191df5cae239c239e6a051f1c435e939413e97758ed",
-    "records/models.yaml": "e19f7ad420d26de67ee2b72f9ad8498dc5862809efac912776dbbfe0b6efd845",
+    "literature/papers.yaml": "e01f8f538fe85c295971e983f0fe56b19fcb7fa0b2dce94322245d7b0d331785",
+    "records/benchmarks.yaml": "19b0637dd29a79bbf13f78cf97d2661bba38aa6efa82bbeded1efc9d8692d567",
+    "records/databases.yaml": "5e88317636a6171425e6900e83043035408f6925cc35f9ebca01c5c40ff3b4f4",
+    "records/datasets.yaml": "fc04beb0950759e725690b8747e84b463ffb034cd9472ba80322bb8a1dd26471",
+    "records/models.yaml": "c1afd2e3a859ad9b722a21304824fae910ecf80e7d53f64a335c5ca2ae1a9311",
     "records/module_libraries.yaml": "0bfd474014054b5425f0859200b07509c7ab6dc92a31750167e9aabcd5ea53c1",
-    "records/protocols.yaml": "2b8e9e02bb8b62511fb7c08d412e900356963730ed442550f375a26d9b5d64d9",
+    "records/protocols.yaml": "1cd1f40b11d73f0881d070d8d8087c2005015cac2993af7eca54d2a87f00e74e",
     "vocab/architecture.yaml": "287c121e51fb652f7c527937d81304d31fece7abbc7094ca6b62846067738ff8",
     "vocab/assay.yaml": "c449a1589daec90e56aa61be102d0810ed0f92f704de2116c9b4ff908516c803",
     "vocab/cell_type.yaml": "018cdf102d25782037bdf824b56d96505eeb0edab89077d4e899a1670deff2be",
@@ -19,14 +19,15 @@
   },
   "script": "scripts/04_build.py",
   "snapshots": {
-    "entities.tsv": 472,
-    "entity_paper.tsv": 781,
-    "links.tsv": 29,
-    "papers.tsv": 726
+    "entities.tsv": 490,
+    "entity_paper.tsv": 799,
+    "links.tsv": 120,
+    "papers.tsv": 744
   },
   "summary": {
     "by_evidence_tier": {
-      "externally-benchmarked": 8
+      "externally-benchmarked": 8,
+      "not asserted": 29
     },
     "by_paper_role": {
       "application": 9,
@@ -34,19 +35,19 @@
       "critique": 62,
       "extension": 1,
       "preprint": 8,
-      "primary": 471,
+      "primary": 489,
       "review": 1
     },
     "by_type": {
-      "benchmark": 90,
-      "database": 5,
-      "dataset": 7,
-      "model": 310,
+      "benchmark": 91,
+      "database": 7,
+      "dataset": 9,
+      "model": 320,
       "module": 58,
-      "protocol": 2
+      "protocol": 5
     },
-    "n_entities": 472,
-    "n_links": 29,
-    "n_papers": 726
+    "n_entities": 490,
+    "n_links": 120,
+    "n_papers": 744
   }
 }
