@@ -762,10 +762,18 @@ class CFCR:
         Returns the row count written.
         """
         df = pd.read_sql_query(f"SELECT * FROM {table}", self.conn)
-        sort_cols = [c for c in ("entity_id", "paper_id", "facet", "term", "role")
-                     if c in df.columns]
-        if sort_cols:
-            df = df.sort_values(sort_cols).reset_index(drop=True)
+        # Sorted on every column, not just the identifying ones, and stably.
+        # A snapshot is committed and diffed by CI against a rebuild, so its
+        # row order has to be a function of its content and nothing else. Two
+        # links on one entity share an entity_id, so sorting on that alone left
+        # them in whatever order the rows came out of SQLite -- which differs
+        # between a fresh build and an incremental one, and which pandas'
+        # default non-stable sort is free to permute again.
+        lead = [c for c in ("entity_id", "paper_id", "facet", "term", "role")
+                if c in df.columns]
+        order = lead + [c for c in df.columns if c not in lead]
+        if order:
+            df = df.sort_values(order, kind="stable").reset_index(drop=True)
         df.to_csv(out_path, sep="\t", index=False, lineterminator="\n")
         return len(df)
 

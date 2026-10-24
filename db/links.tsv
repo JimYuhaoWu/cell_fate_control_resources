@@ -38,9 +38,9 @@ model:barethiya-2026-overcoming-extrapolation-challenges	code	https://github.com
 model:beyond-independent-genes	code	https://github.com/ttruan2426-dot/scBIG			
 model:bie-2026-dynamic-graph-prior-guided	code	https://github.com/bieyl/DGP-LA			
 model:biodsnn	code	https://github.com/yyy6812/BioDSNN			
+model:borzoi	code	https://github.com/calico/baskerville	Baskerville training framework		
 model:borzoi	code	https://github.com/calico/borzoi			
 model:borzoi	dataset	https://huggingface.co/datasets/Genentech/borzoi-data	training/validation/test intervals		
-model:borzoi	code	https://github.com/calico/baskerville	Baskerville training framework		
 model:cao-2021-chromatin-interaction-neural	code	https://github.com/mjflab/chinn			
 model:chapman-2017-evolution-logic-circuits	code	https://github.com/dknoester/ealib			
 model:chrombpnet	code	https://github.com/kundajelab/chrombpnet			
@@ -61,12 +61,12 @@ model:epintlm	code	https://github.com/langiocn/EPINTLM
 model:evo2	code	https://github.com/ArcInstitute/evo2			
 model:evolen	code	https://github.com/HN020719/EvoLen			
 model:feng-2025-benchmarking-dna-foundation	code	https://github.com/ChongWuLab/dna_foundation_benchmark			
+model:flashzoi	code	https://github.com/johahi/borzoi-pytorch			
 model:flashzoi	container	https://zenodo.org/records/15669913	archived code release		
 model:flashzoi	weights	https://huggingface.co/johahi	Flashzoi and Borzoi replicate weights (MIT)		
-model:flashzoi	code	https://github.com/johahi/borzoi-pytorch			
 model:francesco-2026-differentiable-retrieval-augmented-generation	code	https://github.com/difra100/PT-RAG_NIPS			
-model:gears	website	https://interp-extrap-perturb.readthedocs.io	Stegle group perturbation-method catalogue (authoritative for this axis)		
 model:gears	code	https://github.com/snap-stanford/GEARS			
+model:gears	website	https://interp-extrap-perturb.readthedocs.io	Stegle group perturbation-method catalogue (authoritative for this axis)		
 model:gena-lm	code	https://github.com/AIRI-Institute/GENA_LM			
 model:genebreaker	code	https://github.com/zaixizhang/GeneBreaker			
 model:genepert	code	https://github.com/zou-group/GenePert			
@@ -112,8 +112,8 @@ model:xie-2026-performance-deep-learning	code	https://github.com/BiomedicalMachi
 model:yoo-2026-dna-augmentations-semi-supervised	code	https://github.com/EESI/dna-ssl-augmentations			
 model:zhang-2022-protein-subcellular-localization	code	https://github.com/GoodGuy398/GraphLoc			
 model:zhang-2026-end-to-end-deep-learning	code	https://github.com/zhichunlizzx/BioSeq2Seq			
-module:delrosso-2023-effector-domains	supplementary	https://www.nature.com/articles/s41586-023-05906-y	Supplementary tables		
 module:delrosso-2023-effector-domains	dataset	https://github.com/JimYuhaoWu/eCR_mod_lib	integrated records (filter source_screen=DelRosso_2023)		
+module:delrosso-2023-effector-domains	supplementary	https://www.nature.com/articles/s41586-023-05906-y	Supplementary tables		
 module:epifactors-2022-chromatin-regulators	dataset	https://github.com/JimYuhaoWu/eCR_mod_lib	integrated records (filter source_screen=EpiFactors_2022)		
 module:epifactors-2022-chromatin-regulators	website	https://epifactors.autosome.org			
 module:tycko-2025-compact-effectors	dataset	https://github.com/JimYuhaoWu/eCR_mod_lib	integrated records (filter source_screen=Tycko_2025)		
