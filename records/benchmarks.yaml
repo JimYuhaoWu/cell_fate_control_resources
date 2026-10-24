@@ -176,9 +176,9 @@
     - paper_id: 10.64898/2026.10.18.759890
       role: primary
 
-- entity_id: benchmark:benchmarking-dna-foundation-models-for-zero-shot-variant-effect-prediction-the-role-of-context-training-and-architecture
+- entity_id: benchmark:alfisi-2025-benchmarking-dna-foundation
   type: benchmark
-  name: "Benchmarking DNA Foundation Models for zero-shot variant effect prediction: the role of context, training, and architecture"
+  name: Alfisi 2025 Benchmarking DNA Foundation
   year: 2025
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -188,9 +188,9 @@
     - paper_id: 10.21203/rs.3.rs-6988910/v1
       role: primary
 
-- entity_id: benchmark:benchmarking-dna-sequence-models-for-causal-regulatory-variant-prediction-in-human-genetics
+- entity_id: benchmark:benegas-2025-benchmarking-dna-sequence
   type: benchmark
-  name: Benchmarking DNA Sequence Models for Causal Regulatory Variant Prediction in Human Genetics
+  name: Benegas 2025 Benchmarking DNA Sequence
   year: 2025
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -229,9 +229,9 @@
     - paper_id: arxiv:2604.05774
       role: primary
 
-- entity_id: benchmark:benchmarking-foundation-cell-models-for-post-perturbation-rna-seq-prediction
+- entity_id: benchmark:csendes-2025-benchmarking-foundation-cell
   type: benchmark
-  name: Benchmarking foundation cell models for post-perturbation RNA-seq prediction
+  name: Csendes 2025 Benchmarking foundation cell
   year: 2025
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -244,9 +244,9 @@
     - paper_id: 10.1186/s12864-025-11600-2
       role: primary
 
-- entity_id: benchmark:benchmarking-the-translational-potential-of-spatial-gene-expression-prediction-from-histology
+- entity_id: benchmark:wang-2025-benchmarking-translational-potential
   type: benchmark
-  name: Benchmarking the translational potential of spatial gene expression prediction from histology
+  name: Wang 2025 Benchmarking translational potential
   year: 2025
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -256,9 +256,9 @@
     - paper_id: 10.1038/s41467-025-56618-y
       role: primary
 
-- entity_id: benchmark:benchmarking-dna-foundation-models-for-genomic-and-genetic-tasks
+- entity_id: benchmark:feng-2024-benchmarking-dna-foundation
   type: benchmark
-  name: Benchmarking DNA Foundation Models for Genomic and Genetic Tasks
+  name: Feng 2024 Benchmarking DNA Foundation
   year: 2024
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -268,9 +268,9 @@
     - paper_id: 10.1101/2024.08.16.608288
       role: primary
 
-- entity_id: benchmark:benchmarking-a-foundational-cell-model-for-post-perturbation-rnaseq-prediction
+- entity_id: benchmark:csendes-2024-benchmarking-foundational-cell
   type: benchmark
-  name: Benchmarking a foundational cell model for post-perturbation RNAseq prediction
+  name: Csendes 2024 Benchmarking foundational cell
   year: 2024
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -324,9 +324,9 @@
     - paper_id: arxiv:2112.01830
       role: primary
 
-- entity_id: benchmark:a-comprehensive-benchmark-and-guide-for-sequence-function-interpretable-deep-learning-models-in-genomics
+- entity_id: benchmark:sun-2025-benchmark-guide-sequence-function
   type: benchmark
-  name: A comprehensive benchmark and guide for sequence-function interpretable deep learning models in genomics
+  name: Sun 2025 benchmark guide sequence-function
   year: 2025
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -336,9 +336,9 @@
     - paper_id: 10.1101/2025.01.06.631405
       role: primary
 
-- entity_id: benchmark:scalable-embedding-fusion-with-protein-language-models-insights-from-benchmarking-text-integrated-representations
+- entity_id: benchmark:ko-2026-scalable-embedding-fusion
   type: benchmark
-  name: "Scalable embedding fusion with protein language models: insights from benchmarking text-integrated representations"
+  name: Ko 2026 Scalable embedding fusion
   year: 2026
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -366,9 +366,9 @@
     - paper_id: 10.64898/2026.04.22.720110
       role: primary
 
-- entity_id: benchmark:towards-more-realistic-simulated-datasets-for-benchmarking-deep-learning-models-in-regulatory-genomics
+- entity_id: benchmark:prakash-2021-more-realistic-simulated
   type: benchmark
-  name: Towards More Realistic Simulated Datasets for Benchmarking Deep Learning Models in Regulatory Genomics
+  name: Prakash 2021 More Realistic Simulated
   year: 2021
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -381,9 +381,9 @@
     - paper_id: 10.1101/2021.12.26.474224
       role: primary
 
-- entity_id: benchmark:enhanced-tf-binding-site-maps-improve-regulatory-networks-learned-from-accessible-chromatin-data
+- entity_id: benchmark:kulkarni-2019-tf-binding-site
   type: benchmark
-  name: Enhanced TF binding site maps improve regulatory networks learned from accessible chromatin data
+  name: Kulkarni 2019 TF binding site
   year: 2019
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -415,9 +415,9 @@
     - paper_id: arxiv:2510.03629
       role: primary
 
-- entity_id: benchmark:benchmarking-large-language-models-for-polymer-property-predictions
+- entity_id: benchmark:gupta-2025-benchmarking-language-polymer
   type: benchmark
-  name: Benchmarking Large Language Models for Polymer Property Predictions
+  name: Gupta 2025 Benchmarking Language Polymer
   year: 2025
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -455,9 +455,9 @@
     - paper_id: 10.64898/2026.03.10.710786
       role: primary
 
-- entity_id: benchmark:benchmarking-three-simple-dna-staining-based-image-metrics-for-live-cell-tracking-of-chromatin-organization
+- entity_id: benchmark:kang-2026-benchmarking-three-simple
   type: benchmark
-  name: Benchmarking three simple DNA staining-based image metrics for live-cell tracking of chromatin organization
+  name: Kang 2026 Benchmarking three simple
   year: 2026
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -470,9 +470,9 @@
     - paper_id: 10.1080/19491034.2026.2721777
       role: primary
 
-- entity_id: benchmark:benchmarking-genome-choice-in-functional-genomics-analyses
+- entity_id: benchmark:macias-velasco-2026-benchmarking-genome-choice
   type: benchmark
-  name: Benchmarking genome choice in functional genomics analyses
+  name: Macias-Velasco 2026 Benchmarking genome choice
   year: 2026
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -482,9 +482,9 @@
     - paper_id: 10.1038/s41467-026-73663-3
       role: primary
 
-- entity_id: benchmark:benchmark-averages-hide-the-failures-that-matter-quantizing-esm-2-for-protein-variant-effect-prediction
+- entity_id: benchmark:shao-2026-benchmark-averages-hide
   type: benchmark
-  name: "Benchmark Averages Hide the Failures That Matter: Quantizing ESM-2 for Protein Variant-Effect Prediction"
+  name: Shao 2026 Benchmark Averages Hide
   year: 2026
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -494,9 +494,9 @@
     - paper_id: 10.64898/2026.08.10.744024
       role: primary
 
-- entity_id: benchmark:systematic-evaluation-of-feature-representations-for-cancer-associated-sorf-prediction-in-non-coding-rna
+- entity_id: benchmark:g-es-2026-evaluation-feature-representations
   type: benchmark
-  name: Systematic Evaluation of Feature Representations for Cancer-Associated sORF Prediction in Non-coding RNA
+  name: "Góes 2026 Evaluation Feature Representations"
   year: 2026
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -506,9 +506,9 @@
     - paper_id: 10.64898/2026.06.16.732659
       role: primary
 
-- entity_id: benchmark:benchmarking-computational-methods-for-single-cell-chromatin-data-analysis
+- entity_id: benchmark:luo-2024-benchmarking-computational-single-cell
   type: benchmark
-  name: Benchmarking computational methods for single-cell chromatin data analysis
+  name: Luo 2024 Benchmarking computational single-cell
   year: 2024
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -536,9 +536,9 @@
     - paper_id: 10.64898/2025.12.27.696706
       role: primary
 
-- entity_id: benchmark:a-benchmark-of-computational-methods-for-correcting-biases-of-established-and-unknown-origin-in-crispr-cas9-screening-data
+- entity_id: benchmark:vinceti-2024-benchmark-computational-correcting
   type: benchmark
-  name: A benchmark of computational methods for correcting biases of established and unknown origin in CRISPR-Cas9 screening data
+  name: Vinceti 2024 benchmark computational correcting
   year: 2024
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -562,9 +562,9 @@
     - paper_id: 10.1101/2024.01.13.575504
       role: primary
 
-- entity_id: benchmark:benchmarking-atlas-level-data-integration-in-single-cell-genomics
+- entity_id: benchmark:luecken-2022-benchmarking-atlas-level-data
   type: benchmark
-  name: Benchmarking atlas-level data integration in single-cell genomics
+  name: Luecken 2022 Benchmarking atlas-level data
   year: 2022
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -574,9 +574,9 @@
     - paper_id: 10.1038/s41592-021-01336-8
       role: primary
 
-- entity_id: benchmark:comprehensive-benchmarking-of-cite-seq-versus-dogma-seq-single-cell-multimodal-omics
+- entity_id: benchmark:xu-2021-benchmarking-cite-seq-versus
   type: benchmark
-  name: Comprehensive Benchmarking of CITE-seq versus DOGMA-seq Single Cell Multimodal Omics
+  name: Xu 2021 Benchmarking CITE-seq versus
   year: 2021
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -600,9 +600,9 @@
     - paper_id: arxiv:1504.06659
       role: primary
 
-- entity_id: benchmark:benchmarking-database-performance-for-genomic-data
+- entity_id: benchmark:khushi-2020-benchmarking-database-performance
   type: benchmark
-  name: Benchmarking database performance for genomic data
+  name: Khushi 2020 Benchmarking database performance
   year: 2020
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -696,9 +696,9 @@
     - paper_id: arxiv:2607.19262
       role: primary
 
-- entity_id: benchmark:image-scene-graph-generation-sgg-benchmark
+- entity_id: benchmark:han-2021-image-scene-graph
   type: benchmark
-  name: "Image Scene Graph Generation (SGG) Benchmark"
+  name: Han 2021 Image Scene Graph
   year: 2021
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -711,9 +711,9 @@
     - paper_id: arxiv:2107.12604
       role: primary
 
-- entity_id: benchmark:benchmarking-end-to-end-genotype-to-phenotype-prediction-workflows-across-80-opensnp-phenotypes
+- entity_id: benchmark:muneeb-2026-benchmarking-end-to-end-genotype-to-phenotype
   type: benchmark
-  name: Benchmarking end-to-end genotype-to-phenotype prediction workflows across 80 openSNP phenotypes
+  name: Muneeb 2026 Benchmarking end-to-end genotype-to-phenotype
   year: 2026
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -723,9 +723,9 @@
     - paper_id: arxiv:2603.06768
       role: primary
 
-- entity_id: benchmark:benchmarking-machine-learning-models-for-multi-omics-based-breast-cancer-prediction
+- entity_id: benchmark:paudel-2026-benchmarking-machine-learning
   type: benchmark
-  name: Benchmarking Machine Learning Models for Multi-Omics-Based Breast Cancer Prediction
+  name: Paudel 2026 Benchmarking Machine Learning
   year: 2026
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -735,9 +735,9 @@
     - paper_id: arxiv:2607.16250
       role: primary
 
-- entity_id: benchmark:does-your-model-understand-genes-a-benchmark-of-gene-properties-for-biological-and-text-models
+- entity_id: benchmark:kan-tor-2024-does-understand-genes
   type: benchmark
-  name: "Does your model understand genes? A benchmark of gene properties for biological and text models"
+  name: Kan-Tor 2024 Does understand genes
   year: 2024
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -747,9 +747,9 @@
     - paper_id: arxiv:2412.04075
       role: primary
 
-- entity_id: benchmark:benchmarking-large-language-models-for-biomedical-relation-extraction
+- entity_id: benchmark:creanga-2026-benchmarking-language-biomedical
   type: benchmark
-  name: Benchmarking Large Language Models for Biomedical Relation Extraction
+  name: Creanga 2026 Benchmarking Language Biomedical
   year: 2026
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -790,9 +790,9 @@
     - paper_id: arxiv:2204.06105
       role: primary
 
-- entity_id: benchmark:a-rigorous-benchmarking-of-methods-for-sars-cov-2-lineage-abundance-estimation-in-wastewater
+- entity_id: benchmark:munteanu-2023-rigorous-benchmarking-sars-cov-2
   type: benchmark
-  name: A rigorous benchmarking of methods for SARS-CoV-2 lineage abundance estimation in wastewater
+  name: Munteanu 2023 rigorous benchmarking SARS-CoV-2
   year: 2023
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -802,9 +802,9 @@
     - paper_id: arxiv:2309.16994
       role: primary
 
-- entity_id: benchmark:benchmarking-machine-learning-robustness-in-covid-19-genome-sequence-classification
+- entity_id: benchmark:ali-2022-benchmarking-machine-learning
   type: benchmark
-  name: Benchmarking Machine Learning Robustness in Covid-19 Genome Sequence Classification
+  name: Ali 2022 Benchmarking Machine Learning
   year: 2022
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -828,9 +828,9 @@
     - paper_id: arxiv:2605.25388
       role: primary
 
-- entity_id: benchmark:towards-complex-query-referring-image-segmentation
+- entity_id: benchmark:ji-2023-complex-query-referring-image
   type: benchmark
-  name: Towards Complex-query Referring Image Segmentation
+  name: Ji 2023 Complex-query Referring Image
   year: 2023
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -865,9 +865,9 @@
     - paper_id: arxiv:2103.16002
       role: primary
 
-- entity_id: benchmark:benchmark-problems-for-numerical-implementations-of-phase-field-models
+- entity_id: benchmark:jokisaari-2016-benchmark-problems-numerical
   type: benchmark
-  name: Benchmark Problems for Numerical Implementations of Phase Field Models
+  name: Jokisaari 2016 Benchmark Problems Numerical
   year: 2016
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -877,9 +877,9 @@
     - paper_id: arxiv:1610.00622
       role: primary
 
-- entity_id: benchmark:benchmarking-embedding-aggregation-methods-in-computational-pathology-a-clinical-data-perspective
+- entity_id: benchmark:chen-2024-benchmarking-embedding-aggregation
   type: benchmark
-  name: "Benchmarking Embedding Aggregation Methods in Computational Pathology: A Clinical Data Perspective"
+  name: Chen 2024 Benchmarking Embedding Aggregation
   year: 2024
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -917,9 +917,9 @@
     - paper_id: arxiv:2305.17497
       role: primary
 
-- entity_id: benchmark:a-biologically-plausible-benchmark-for-contextual-bandit-algorithms-in-precision-oncology-using-in-vitro-data
+- entity_id: benchmark:rindtorff-2019-biologically-plausible-benchmark
   type: benchmark
-  name: A Biologically Plausible Benchmark for Contextual Bandit Algorithms in Precision Oncology Using in vitro Data
+  name: Rindtorff 2019 Biologically Plausible Benchmark
   year: 2019
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -956,9 +956,9 @@
     - paper_id: arxiv:2505.10852
       role: primary
 
-- entity_id: benchmark:benchmarking-and-evaluation-of-ai-models-in-biology-outcomes-and-recommendations-from-the-czi-virtual-cells-workshop
+- entity_id: benchmark:fahsbender-2025-benchmarking-evaluation-ai
   type: benchmark
-  name: "Benchmarking and Evaluation of AI Models in Biology: Outcomes and Recommendations from the CZI Virtual Cells Workshop"
+  name: Fahsbender 2025 Benchmarking Evaluation AI
   year: 2025
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -968,9 +968,9 @@
     - paper_id: arxiv:2507.10502
       role: primary
 
-- entity_id: benchmark:large-scale-benchmark-study-of-survival-prediction-methods-using-multi-omics-data
+- entity_id: benchmark:herrmann-2020-large-scale-benchmark-survival
   type: benchmark
-  name: Large-scale benchmark study of survival prediction methods using multi-omics data
+  name: Herrmann 2020 Large-scale benchmark survival
   year: 2020
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -1044,9 +1044,9 @@
     - paper_id: arxiv:2605.24520
       role: primary
 
-- entity_id: benchmark:spatial-transcriptomics-deconvolution-methods-generalize-well-to-spatial-chromatin-accessibility-data
+- entity_id: benchmark:ouologuem-2025-spatial-transcriptomics-deconvolution
   type: benchmark
-  name: Spatial transcriptomics deconvolution methods generalize well to spatial chromatin accessibility data
+  name: Ouologuem 2025 Spatial transcriptomics deconvolution
   year: 2025
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -1059,9 +1059,9 @@
     - paper_id: 10.1093/bioinformatics/btaf268
       role: primary
 
-- entity_id: benchmark:evaluation-and-optimization-of-sequence-based-gene-regulatory-deep-learning-models
+- entity_id: benchmark:rafi-2023-evaluation-optimization-sequence-based
   type: benchmark
-  name: Evaluation and optimization of sequence-based gene regulatory deep learning models
+  name: Rafi 2023 Evaluation optimization sequence-based
   year: 2023
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -1098,9 +1098,9 @@
     - paper_id: arxiv:2607.23975
       role: primary
 
-- entity_id: benchmark:iaode-for-benchmarking-and-continuum-modeling-of-single-cell-chromatin-accessibility
+- entity_id: benchmark:fu-2026-iaode-benchmarking-continuum
   type: benchmark
-  name: iAODE for benchmarking and continuum modeling of single-cell chromatin accessibility
+  name: Fu 2026 iAODE benchmarking continuum
   year: 2026
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -1124,9 +1124,9 @@
     - paper_id: 10.1093/nargab/lqag046
       role: primary
 
-- entity_id: benchmark:a-comprehensive-benchmarking-study-on-computational-tools-for-cross-omics-label-transfer-from-single-cell-rna-to-atac-data
+- entity_id: benchmark:wang-2026-benchmarking-computational-tools
   type: benchmark
-  name: A comprehensive benchmarking study on computational tools for cross-omics label transfer from single-cell RNA to ATAC data
+  name: Wang 2026 benchmarking computational tools
   year: 2026
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -1136,9 +1136,9 @@
     - paper_id: 10.1093/g3journal/jkag026
       role: primary
 
-- entity_id: benchmark:benchmark-of-chromatin-protein-interaction-methods-in-haploid-round-spermatids
+- entity_id: benchmark:wang-2025-benchmark-chromatin-protein-interaction
   type: benchmark
-  name: Benchmark of chromatin-protein interaction methods in haploid round spermatids
+  name: Wang 2025 Benchmark chromatin-protein interaction
   year: 2025
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -1148,9 +1148,9 @@
     - paper_id: 10.3389/fcell.2025.1572405
       role: primary
 
-- entity_id: benchmark:benchmarking-algorithms-for-joint-integration-of-unpaired-and-paired-single-cell-rna-seq-and-atac-seq-data
+- entity_id: benchmark:myy-2023-benchmarking-algorithms-joint
   type: benchmark
-  name: Benchmarking algorithms for joint integration of unpaired and paired single-cell RNA-seq and ATAC-seq data
+  name: MYY 2023 Benchmarking algorithms joint
   year: 2023
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -1163,9 +1163,9 @@
     - paper_id: 10.1186/s13059-023-03073-x
       role: primary
 
-- entity_id: benchmark:enhanced-maps-of-transcription-factor-binding-sites-improve-regulatory-networks-learned-from-accessible-chromatin-data
+- entity_id: benchmark:kulkarni-2019-maps-transcription-factor
   type: benchmark
-  name: Enhanced Maps of Transcription Factor Binding Sites Improve Regulatory Networks Learned from Accessible Chromatin Data
+  name: Kulkarni 2019 Maps Transcription Factor
   year: 2019
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -1191,9 +1191,9 @@
     - paper_id: arxiv:2608.07632
       role: primary
 
-- entity_id: benchmark:supporting-supervised-learning-in-fungal-biosynthetic-gene-cluster-discovery-new-benchmark-datasets
+- entity_id: benchmark:almeida-2020-supporting-supervised-learning
   type: benchmark
-  name: "Supporting supervised learning in fungal Biosynthetic Gene Cluster discovery: new benchmark datasets"
+  name: Almeida 2020 Supporting supervised learning
   year: 2020
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -1220,9 +1220,9 @@
     - paper_id: 10.1093/bioinformatics/btac842
       role: primary
 
-- entity_id: benchmark:a-comprehensive-benchmark-of-publicly-available-image-foundation-models-for-their-usability-to-predict-gene-expression-from-whole-slide-images
+- entity_id: benchmark:jabin-2026-benchmark-publicly-available
   type: benchmark
-  name: A comprehensive benchmark of publicly available image foundation models for their usability to predict gene expression from whole slide images
+  name: Jabin 2026 benchmark publicly available
   year: 2026
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -1232,9 +1232,9 @@
     - paper_id: 10.64898/2026.03.02.709012
       role: primary
 
-- entity_id: benchmark:are-dropout-imputation-methods-for-scrna-seq-effective-for-scatac-seq-data
+- entity_id: benchmark:liu-2022-dropout-imputation-scrna-seq
   type: benchmark
-  name: "Are dropout imputation methods for scRNA-seq effective for scATAC-seq data?"
+  name: Liu 2022 dropout imputation scRNA-seq
   year: 2022
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -1244,9 +1244,9 @@
     - paper_id: 10.1093/bib/bbab442
       role: primary
 
-- entity_id: benchmark:a-benchmark-of-mri-foundation-models-to-predict-idh-mutational-status-in-glioma
+- entity_id: benchmark:hollet-2026-benchmark-mri-foundation
   type: benchmark
-  name: "A Benchmark of (MRI-) Foundation Models to Predict IDH Mutational Status in Glioma"
+  name: Hollet 2026 Benchmark MRI- Foundation
   year: 2026
   review_state: unreviewed
   curator: JimYuhaoWu
@@ -1259,9 +1259,9 @@
     - paper_id: arxiv:2606.23172
       role: primary
 
-- entity_id: benchmark:time-to-embrace-natural-language-processing-nlp-based-digital-pathology-benchmarking-nlp-and-convolutional-neural-network-based-deep-learning-pipelines
+- entity_id: benchmark:cen-2023-time-embrace-natural
   type: benchmark
-  name: "Time to Embrace Natural Language Processing (NLP)-based Digital Pathology: Benchmarking NLP- and Convolutional Neural Network-based Deep Learning Pipelines"
+  name: Cen 2023 Time Embrace Natural
   year: 2023
   review_state: unreviewed
   curator: JimYuhaoWu

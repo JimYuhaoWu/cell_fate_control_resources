@@ -484,17 +484,59 @@ def entity_name(candidate: dict, notes: str) -> str:
     `name:` in the notes wins. Otherwise the text before the first colon, which
     is where a tool paper conventionally puts the tool -- "VariantFormer: A
     hierarchical transformer ..." -- and only when it is short enough to be a
-    name rather than the first clause of a sentence. Failing that, the whole
-    title, which is wrong but visibly wrong, and `review_state: unreviewed`
-    keeps it off the site until someone fixes it.
+    name rather than the first clause of a sentence.
+
+    Failing that, a citation: "Kelley 2018 sequential regulatory activity".
+    Not every resource has a name, and the catalogue already handles that --
+    `module:delrosso-2023-effector-domains` and
+    `dataset:replogle-2022-perturb-seq` are both named this way by hand. The
+    whole title used to be the fallback, "wrong but visibly wrong"; it produced
+    an entity_id of 243 characters, and an id is what the site links a card by.
+    A citation is short, stable, and says the true thing about a paper that
+    named nothing.
     """
     named = note_field(notes, "name")
     if named:
         return named
-    head = candidate["title"].split(":", 1)[0].strip()
-    if head != candidate["title"].strip() and len(head.split()) <= 5:
+    title = candidate["title"].strip()
+    head = title.split(":", 1)[0].strip()
+    if head != title and len(head.split()) <= 5:
         return head
-    return candidate["title"].strip()
+    return citation_name(title, candidate.get("authors"), candidate.get("year"))
+
+
+# Words that carry no meaning in a three-word topic.
+STOPWORDS = frozenset("""
+a an the and or of for to in on with without from by via as at is are be being
+been using use used towards toward into over under between across through
+their its our your new novel improved enhanced efficient robust general
+generalizable comprehensive systematic large scale based approach method
+methods framework model models study analysis
+""".split())
+
+
+def citation_name(title: str, authors, year) -> str:
+    """
+    "<Surname> <year> <three content words>", in the style the curated records
+    already use. Every part is read off the record, so two runs agree.
+    """
+    surname = "anon"
+    if authors:
+        first = str(authors[0]).replace(",", " ").split()
+        # Europe PMC gives "He B" and Crossref "Bowen He", so the surname is at
+        # opposite ends. A trailing all-capital token of one or two letters is
+        # initials, which puts the surname first; otherwise it is last. Picking
+        # the longest token instead loses every two-letter surname -- He, Li,
+        # Xu, Wu -- to "anon", which is most of one field's authors.
+        if first:
+            initials_last = (len(first[-1].rstrip(".")) <= 2
+                             and first[-1].rstrip(".").isupper())
+            surname = first[0] if initials_last else first[-1]
+            surname = surname.strip(".")
+    topic = [w for w in re.findall(r"[A-Za-z0-9][\w'-]*", title)
+             if w.lower() not in STOPWORDS][:3]
+    parts = [surname, str(year) if year else "", " ".join(topic)]
+    return " ".join(p for p in parts if p)
 
 
 def discovery_paper(candidate: dict, today: str) -> dict:

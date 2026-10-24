@@ -1,27 +1,27 @@
 entity_id	kind	url	label	checked	alive
-benchmark:a-benchmark-of-mri-foundation-models-to-predict-idh-mutational-status-in-glioma	code	https://github.com/nathanhollet/idh-status-prediction			
 benchmark:annotatemissense	code	https://github.com/MuhammadMuneeb007/CAGI7_Annotate_All_Missense			
 benchmark:aster	code	https://github.com/BioX-NKU/ASTER			
-benchmark:benchmarking-algorithms-for-joint-integration-of-unpaired-and-paired-single-cell-rna-seq-and-atac-seq-data	code	https://github.com/myylee/benchmark_sc_multiomic_integration			
-benchmark:benchmarking-foundation-cell-models-for-post-perturbation-rna-seq-prediction	code	https://github.com/turbine-ai/PerturbSeqPredBenchmark			
-benchmark:benchmarking-three-simple-dna-staining-based-image-metrics-for-live-cell-tracking-of-chromatin-organization	code	https://github.com/hrthiam-lab/Kang_etal_2026			
 benchmark:bend	code	https://github.com/frederikkemarin/BEND			
+benchmark:csendes-2025-benchmarking-foundation-cell	code	https://github.com/turbine-ai/PerturbSeqPredBenchmark			
 benchmark:dart-eval	code	https://github.com/kundajelab/DART-Eval			
 benchmark:dnalongbench	code	https://github.com/ma-compbio/DNALONGBENCH			
 benchmark:factual	code	https://github.com/zhuang-li/FactualSceneGraph			
 benchmark:fitness-landscape-for-antibodies-2	code	https://github.com/Graylab/FLAb			
 benchmark:flab	code	https://github.com/Graylab/FLAb			
+benchmark:fu-2026-iaode-benchmarking-continuum	code	https://github.com/PeterPonyu/iAODE			
 benchmark:geneb	code	https://github.com/darlednik/GENEB			
 benchmark:genomic-benchmarks	code	https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks			
 benchmark:genotex	code	https://github.com/Liu-Hy/GenoTEX			
-benchmark:iaode-for-benchmarking-and-continuum-modeling-of-single-cell-chromatin-accessibility	code	https://github.com/PeterPonyu/iAODE			
-benchmark:image-scene-graph-generation-sgg-benchmark	code	https://github.com/microsoft/scene_graph_benchmark			
+benchmark:han-2021-image-scene-graph	code	https://github.com/microsoft/scene_graph_benchmark			
+benchmark:hollet-2026-benchmark-mri-foundation	code	https://github.com/nathanhollet/idh-status-prediction			
+benchmark:kang-2026-benchmarking-three-simple	code	https://github.com/hrthiam-lab/Kang_etal_2026			
 benchmark:know-show	code	https://github.com/LUNAProject22/Know-Show			
+benchmark:ko-2026-scalable-embedding-fusion	code	https://github.com/Wang-lab-UCSD/Benchmarking-tpLMs			
 benchmark:loco-epi	code	https://github.com/malikmtahir/EPI			
-benchmark:scalable-embedding-fusion-with-protein-language-models-insights-from-benchmarking-text-integrated-representations	code	https://github.com/Wang-lab-UCSD/Benchmarking-tpLMs			
+benchmark:myy-2023-benchmarking-algorithms-joint	code	https://github.com/myylee/benchmark_sc_multiomic_integration			
+benchmark:ouologuem-2025-spatial-transcriptomics-deconvolution	code	https://github.com/theislab/deconvATAC			
+benchmark:prakash-2021-more-realistic-simulated	code	https://github.com/kundajelab/interpret-benchmark			
 benchmark:sequencelab	code	https://github.com/CMU-SAFARI/SequenceLab			
-benchmark:spatial-transcriptomics-deconvolution-methods-generalize-well-to-spatial-chromatin-accessibility-data	code	https://github.com/theislab/deconvATAC			
-benchmark:towards-more-realistic-simulated-datasets-for-benchmarking-deep-learning-models-in-regulatory-genomics	code	https://github.com/kundajelab/interpret-benchmark			
 benchmark:virobench	code	https://github.com/SII-AGI4S/ViroBench			
 database:ensembl-regulatory-build	code	https://github.com/Ensembl/ensembl-funcgen			
 database:jaspar-2024	api	https://jaspar.elixir.no/api/v1/docs/			
@@ -29,37 +29,30 @@ database:jaspar-2024	website	https://jaspar.elixir.no
 dataset:borzoi-data	dataset	https://huggingface.co/datasets/Genentech/borzoi-data			
 dataset:enformer-data	dataset	https://huggingface.co/datasets/Genentech/enformer-data			
 dataset:replogle-2022-perturb-seq	website	https://gwps.wi.mit.edu	Genome-wide Perturb-seq data portal		
-model:a-systematic-comparison-of-single-cell-perturbation-response-prediction-models	code	https://github.com/TianGzlab/scPerturbBench			
-model:a-transcription-factor-regulatory-atlas-for-activity-inference-and-perturbation-prediction	code	https://github.com/HikaruSugimoto/tfactprofiler			
-model:a-unified-deep-learning-framework-for-single-cell-atac-seq-analysis-based-on-proddep-transformer-encoder	code	https://github.com/ZhangLab312/PROTRAIT			
+model:al-saidi-2026-win-win-possible-achieving	code	https://github.com/AnonymousISCBConf/Win-Win-Privacy-Utility-Analysis			
 model:alphagenome	api	https://deepmind.google.com/science/alphagenome	AlphaGenome API		
-model:an-end-to-end-generalizable-deep-learning-framework-to-comprehensively-analyze-transcriptional-regulation	code	https://github.com/zhichunlizzx/BioSeq2Seq			
-model:an-intrinsically-interpretable-neural-network-architecture-for-sequence-to-function-learning	code	https://github.com/boooooogey/ATAConv			
 model:arsenal	code	https://github.com/kundajelab/regulatory_lm			
+model:balc-2023-intrinsically-interpretable-neural	code	https://github.com/boooooogey/ATAConv			
 model:barcodebert	code	https://github.com/bioscan-ml/BarcodeBERT			
-model:benchmarking-dna-foundation-models-for-genomic-and-genetic-tasks	code	https://github.com/ChongWuLab/dna_foundation_benchmark			
+model:barethiya-2026-overcoming-extrapolation-challenges	code	https://github.com/SBarethiya/VEP			
 model:beyond-independent-genes	code	https://github.com/ttruan2426-dot/scBIG			
+model:bie-2026-dynamic-graph-prior-guided	code	https://github.com/bieyl/DGP-LA			
 model:biodsnn	code	https://github.com/yyy6812/BioDSNN			
 model:borzoi	code	https://github.com/calico/borzoi			
-model:borzoi	code	https://github.com/calico/baskerville	Baskerville training framework		
 model:borzoi	dataset	https://huggingface.co/datasets/Genentech/borzoi-data	training/validation/test intervals		
-model:chromatin-accessibility-prediction-via-convolutional-long-short-term-memory-networks-with-k-mer-embedding	code	https://github.com/minxueric/ismb2017_lstm			
-model:chromatin-interaction-neural-network-chinn	code	https://github.com/mjflab/chinn			
+model:borzoi	code	https://github.com/calico/baskerville	Baskerville training framework		
+model:cao-2021-chromatin-interaction-neural	code	https://github.com/mjflab/chinn			
+model:chapman-2017-evolution-logic-circuits	code	https://github.com/dknoester/ealib			
 model:chrombpnet	code	https://github.com/kundajelab/chrombpnet			
 model:dart-eval	code	https://github.com/kundajelab/DART-Eval			
+model:debnath-2026-inference-spatial-chromatin	code	https://github.com/Durenlab/ISON			
 model:decant	code	https://github.com/bliulab/DECANT			
-model:decoding-promoter-activity-from-dna-sequence-using-pre-trained-language-models	code	https://github.com/GeneCenterMunich/decoding_promoter_activity			
 model:deepsge	code	https://github.com/nathanyl/DeepSGE			
 model:dfce-kant	code	https://github.com/LFfocus/DFCE-KanT			
-model:differentiable-retrieval-augmented-generation-for-predicting-cellular-responses-to-gene-perturbation	code	https://github.com/difra100/PT-RAG_NIPS			
-model:dna-augmentations-for-semi-supervised-learning-in-genomic-sequence-classification	code	https://github.com/EESI/dna-ssl-augmentations			
 model:dnabert	code	https://github.com/jerryji1993/DNABERT			
 model:drivr-base	code	https://github.com/amyfrancis-science/DrivR-Base			
-model:dynamic-graph-prior-guided-latent-adaptation-for-generalizable-single-cell-perturbation-response-prediction	code	https://github.com/bieyl/DGP-LA			
-model:effective-gene-expression-prediction-and-optimization-from-protein-sequences	code	https://github.com/Thurs-Lw/MPB-EXP-MUT			
+model:dubey-2026-personalized-gene-expression	code	https://github.com/togethercomputer/stripedhyena			
 model:enformer	code	https://github.com/google-deepmind/deepmind-research/tree/master/enformer			
-model:enhancing-cross-context-generalization-in-drug-perturbation-prediction-with-a-multimodal-conditional-diffusion-framework	code	https://github.com/Panda-myj/PertDiff			
-model:enhancing-gene-expression-predictions-using-deep-learning-and-functional-annotations	code	https://github.com/pratik-r/dlfa			
 model:enigma	code	https://github.com/deepgenomics/enigma			
 model:epiexpr	code	https://github.com/souryacs/3CExpr			
 model:epigept	code	https://github.com/ZjGaothu/EpiGePT			
@@ -67,55 +60,62 @@ model:epinformer	code	https://github.com/pinellolab/EPInformer
 model:epintlm	code	https://github.com/langiocn/EPINTLM			
 model:evo2	code	https://github.com/ArcInstitute/evo2			
 model:evolen	code	https://github.com/HN020719/EvoLen			
-model:flashzoi	weights	https://huggingface.co/johahi	Flashzoi and Borzoi replicate weights (MIT)		
+model:feng-2025-benchmarking-dna-foundation	code	https://github.com/ChongWuLab/dna_foundation_benchmark			
 model:flashzoi	container	https://zenodo.org/records/15669913	archived code release		
+model:flashzoi	weights	https://huggingface.co/johahi	Flashzoi and Borzoi replicate weights (MIT)		
 model:flashzoi	code	https://github.com/johahi/borzoi-pytorch			
+model:francesco-2026-differentiable-retrieval-augmented-generation	code	https://github.com/difra100/PT-RAG_NIPS			
 model:gears	website	https://interp-extrap-perturb.readthedocs.io	Stegle group perturbation-method catalogue (authoritative for this axis)		
 model:gears	code	https://github.com/snap-stanford/GEARS			
 model:gena-lm	code	https://github.com/AIRI-Institute/GENA_LM			
-model:gene-expression-prediction-based-on-neighbour-connection-neural-network-utilizing-gene-interaction-graphs	code	https://github.com/xuanyu-li/NCNN			
 model:genebreaker	code	https://github.com/zaixizhang/GeneBreaker			
 model:genepert	code	https://github.com/zou-group/GenePert			
-model:genomic-language-model-for-predicting-enhancers-and-their-allele-specific-activity-in-the-human-genome	code	https://github.com/DavuluriLab/DNABERT-Enhancer			
 model:gpn	code	https://github.com/songlab-cal/gpn			
 model:gpo-vae	code	https://github.com/dmis-lab/GPO-VAE			
 model:graphunet-ss	code	https://github.com/ysngrmz/graph_unet_ss			
 model:graphylovar	code	https://github.com/DongjoonLim/GraphyloVar			
+model:hegde-2025-reaping-fruits-llm	code	https://github.com/meghegde/dna_llm_pruning			
 model:hyenadna	code	https://github.com/HazyResearch/hyena-dna			
 model:hyperbolic-genome-embeddings	code	https://github.com/rrkhan/HGE			
 model:iedgedta	code	https://github.com/cucpbioinfo/iEdgeDTA			
-model:inference-of-spatial-chromatin-accessibility-via-integration-of-spatial-transcriptomics-and-single-cell-multi-omics-data	code	https://github.com/Durenlab/ISON			
-model:is-a-win-win-possible-achieving-pareto-optimal-privacy-utility-balance-in-fine-tuned-genome-language-model-embeddings-against-embedding-reconstruction-attacks	code	https://github.com/AnonymousISCBConf/Win-Win-Privacy-Utility-Analysis			
+model:joubert-2026-dna-language-grover	code	https://github.com/ucscGenomeBrowser/kent			
+model:jung-2026-decoding-promoter-activity	code	https://github.com/GeneCenterMunich/decoding_promoter_activity			
+model:li-2023-gene-expression-prediction	code	https://github.com/xuanyu-li/NCNN			
+model:li-2026-comparison-single-cell-perturbation	code	https://github.com/TianGzlab/scPerturbBench			
+model:lin-2025-unveiling-chromatin-dynamics	code	https://github.com/jhhung/EpiVerse			
+model:liu-2025-effective-gene-expression	code	https://github.com/Thurs-Lw/MPB-EXP-MUT			
+model:liu-2026-pre-training-genomic-language	code	https://github.com/HelloWorldLTY/UKBioLM			
+model:ma-2026-enhancing-cross-context-generalization	code	https://github.com/Panda-myj/PertDiff			
+model:merchant-2026-semantic-design-functional	code	https://github.com/togethercomputer/stripedhyena			
+model:min-2017-chromatin-accessibility-prediction	code	https://github.com/minxueric/ismb2017_lstm			
 model:multipert	code	https://github.com/MengyuanZhaoo/MultiPert			
 model:nucleotide-transformer	code	https://github.com/instadeepai/nucleotide-transformer			
 model:nucleotide-transformer	weights	https://huggingface.co/InstaDeepAI	checkpoint collection (CC-BY-NC-SA-4.0)		
-model:overcoming-extrapolation-challenges-of-deep-learning-by-incorporating-physics-in-protein-sequence-function-modeling	code	https://github.com/SBarethiya/VEP			
-model:performance-of-deep-learning-methods-for-spatial-gene-expression-prediction-from-histology-images-a-comprehensive-assessment	code	https://github.com/BiomedicalMachineLearning/DeepHis2Exp			
-model:personalized-gene-expression-prediction-in-the-era-of-deep-learning-a-review	code	https://github.com/togethercomputer/stripedhyena			
 model:pertadapt	code	https://github.com/BaiDing1234/PertAdapt			
-model:pre-training-genomic-language-model-with-variants-for-better-modeling-functional-genomics	code	https://github.com/HelloWorldLTY/UKBioLM			
-model:protein-subcellular-localization-prediction-model-based-on-graph-convolutional-network	code	https://github.com/GoodGuy398/GraphLoc			
 model:ragenome	code	https://github.com/PanosAntoniadis/RAGenome			
-model:reaping-the-fruits-of-llm-pruning-towards-small-language-models-for-efficient-non-coding-variant-effect-prediction	code	https://github.com/meghegde/dna_llm_pruning			
+model:ramprasad-2025-enhancing-gene-expression	code	https://github.com/pratik-r/dlfa			
+model:sathian-2026-genomic-language-predicting	code	https://github.com/DavuluriLab/DNABERT-Enhancer			
 model:scldm	code	https://github.com/samrogers1233/scLDM			
 model:scyeast	code	https://github.com/hongzhonglu/scYeast			
-model:semantic-design-of-functional-de-novo-genes-from-a-genomic-language-model	code	https://github.com/togethercomputer/stripedhyena			
 model:slim	code	https://github.com/RasmussenLab/SLIM			
 model:spadit	code	https://github.com/wenwenmin/SpaDiT			
 model:splisync	code	https://github.com/splicebox/SpliSync			
 model:spot-contact-lm	code	https://github.com/jas-preet/SPOT-Contact-LM			
 model:spot-contact-single	code	https://github.com/jas-preet/SPOT-Contact-LM			
+model:sugimoto-2026-transcription-factor-regulatory	code	https://github.com/HikaruSugimoto/tfactprofiler			
 model:systema	code	https://github.com/mlbio-epfl/systema			
-model:the-evolution-of-logic-circuits-for-the-purpose-of-protein-contact-map-prediction	code	https://github.com/dknoester/ealib			
 model:thitogene	code	https://github.com/yrjia1015/THItoGene			
-model:unveiling-chromatin-dynamics-with-virtual-epigenome	code	https://github.com/jhhung/EpiVerse			
-model:using-the-dna-language-model-grover-to-parse-effects-of-sequence-chromatin-and-regulatory-features-on-genome-stability	code	https://github.com/ucscGenomeBrowser/kent			
 model:v3cell	code	https://github.com/Laineyoulu/V3Cell			
+model:wang-2023-unified-deep-learning	code	https://github.com/ZhangLab312/PROTRAIT			
 model:when-repeats-drive-the-vocabulary	code	https://github.com/aglabx/dnaBPE			
-module:delrosso-2023-effector-domains	dataset	https://github.com/JimYuhaoWu/eCR_mod_lib	integrated records (filter source_screen=DelRosso_2023)		
+model:xie-2026-performance-deep-learning	code	https://github.com/BiomedicalMachineLearning/DeepHis2Exp			
+model:yoo-2026-dna-augmentations-semi-supervised	code	https://github.com/EESI/dna-ssl-augmentations			
+model:zhang-2022-protein-subcellular-localization	code	https://github.com/GoodGuy398/GraphLoc			
+model:zhang-2026-end-to-end-deep-learning	code	https://github.com/zhichunlizzx/BioSeq2Seq			
 module:delrosso-2023-effector-domains	supplementary	https://www.nature.com/articles/s41586-023-05906-y	Supplementary tables		
-module:epifactors-2022-chromatin-regulators	website	https://epifactors.autosome.org			
+module:delrosso-2023-effector-domains	dataset	https://github.com/JimYuhaoWu/eCR_mod_lib	integrated records (filter source_screen=DelRosso_2023)		
 module:epifactors-2022-chromatin-regulators	dataset	https://github.com/JimYuhaoWu/eCR_mod_lib	integrated records (filter source_screen=EpiFactors_2022)		
-module:tycko-2025-compact-effectors	supplementary	https://www.nature.com/articles/s41587-024-02442-6	Supplementary Table ST3		
+module:epifactors-2022-chromatin-regulators	website	https://epifactors.autosome.org			
 module:tycko-2025-compact-effectors	dataset	https://github.com/JimYuhaoWu/eCR_mod_lib	integrated records (filter source_screen=Tycko_2025)		
+module:tycko-2025-compact-effectors	supplementary	https://www.nature.com/articles/s41587-024-02442-6	Supplementary Table ST3		
 protocol:cutrun-janssens-henikoff	docs	https://doi.org/10.17504/protocols.io.zcpf2vn	protocols.io canonical version		

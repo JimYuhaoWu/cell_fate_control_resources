@@ -827,9 +827,9 @@
     - paper_id: 10.1101/2025.10.31.685862
       role: primary
 
-- entity_id: model:an-explainable-deep-learning-framework-integrating-dna-sequence-and-transcription-initiation-signals-for-gene-expression-prediction
+- entity_id: model:qiao-2026-explainable-deep-learning
   type: model
-  name: An Explainable Deep Learning Framework Integrating DNA Sequence and Transcription Initiation Signals for Gene Expression Prediction
+  name: Qiao 2026 Explainable Deep Learning
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -873,9 +873,9 @@
     - paper_id: 10.64898/2026.06.13.732013
       role: primary
 
-- entity_id: model:dynamic-graph-prior-guided-latent-adaptation-for-generalizable-single-cell-perturbation-response-prediction
+- entity_id: model:bie-2026-dynamic-graph-prior-guided
   type: model
-  name: Dynamic Graph Prior-Guided Latent Adaptation for Generalizable Single-Cell Perturbation Response Prediction
+  name: Bie 2026 Dynamic Graph Prior-Guided
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -904,9 +904,9 @@
     - paper_id: 10.1038/s41587-025-02777-8
       role: primary
 
-- entity_id: model:benchmarking-algorithms-for-generalizable-single-cell-perturbation-response-prediction
+- entity_id: model:wei-2026-benchmarking-algorithms-single-cell
   type: model
-  name: Benchmarking algorithms for generalizable single-cell perturbation response prediction
+  name: Wei 2026 Benchmarking algorithms single-cell
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -917,9 +917,9 @@
     - paper_id: 10.1038/s41592-025-02980-0
       role: primary
 
-- entity_id: model:hierarchical-refinements-of-cis-regulatory-inputs-improve-scalable-gene-expression-prediction
+- entity_id: model:zhang-2026-hierarchical-refinements-cis-regulatory
   type: model
-  name: Hierarchical refinements of cis-regulatory inputs improve scalable gene expression prediction
+  name: Zhang 2026 Hierarchical refinements cis-regulatory
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -930,9 +930,9 @@
     - paper_id: 10.64898/2026.05.31.729151
       role: primary
 
-- entity_id: model:enhancing-personalized-gene-expression-prediction-from-dna-sequences-using-genomic-foundation-models
+- entity_id: model:ramprasad-2024-enhancing-personalized-gene
   type: model
-  name: Enhancing personalized gene expression prediction from DNA sequences using genomic foundation models
+  name: Ramprasad 2024 Enhancing personalized gene
   year: 2024
   fate_axis: [where]
   review_state: unreviewed
@@ -943,9 +943,9 @@
     - paper_id: 10.1016/j.xhgg.2024.100347
       role: primary
 
-- entity_id: model:synergy-aware-residual-flow-matching-for-single-cell-perturbation-prediction
+- entity_id: model:wu-2026-synergy-aware-residual-flow
   type: model
-  name: Synergy-Aware Residual Flow Matching for Single-Cell Perturbation Prediction
+  name: Wu 2026 Synergy-Aware Residual Flow
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -956,9 +956,9 @@
     - paper_id: arxiv:2610.25021
       role: primary
 
-- entity_id: model:genomic-language-models-improve-cross-species-gene-expression-prediction-and-accurately-capture-regulatory-variant-effects-in-brachypodium-mutant-lines
+- entity_id: model:torghabeh-2026-genomic-language-improve
   type: model
-  name: Genomic language models improve cross-species gene expression prediction and accurately capture regulatory variant effects in Brachypodium mutant lines
+  name: Torghabeh 2026 Genomic language improve
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -1001,9 +1001,9 @@
     - paper_id: 10.1101/2025.11.18.689149
       role: primary
 
-- entity_id: model:a-systematic-comparison-of-single-cell-perturbation-response-prediction-models
+- entity_id: model:li-2026-comparison-single-cell-perturbation
   type: model
-  name: A systematic comparison of single-cell perturbation response prediction models
+  name: Li 2026 comparison single-cell perturbation
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -1032,9 +1032,9 @@
     - paper_id: 10.1093/bib/bbae617
       role: primary
 
-- entity_id: model:fine-tuning-sequence-to-function-deep-learning-models-on-large-scale-proteomic-data-improves-the-accuracy-of-variant-effect-prediction
+- entity_id: model:vaz-2025-fine-tuning-sequence-function
   type: model
-  name: Fine-tuning sequence to function deep learning models on large-scale proteomic data improves the accuracy of variant effect prediction
+  name: Vaz 2025 Fine-tuning sequence function
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -1069,9 +1069,9 @@
     - paper_id: arxiv:2606.13713
       role: primary
 
-- entity_id: model:multimodal-benchmarking-of-foundation-model-representations-for-cellular-perturbation-response-prediction
+- entity_id: model:hasanaj-2025-multimodal-benchmarking-foundation
   type: model
-  name: Multimodal Benchmarking of Foundation Model Representations for Cellular Perturbation Response Prediction
+  name: Hasanaj 2025 Multimodal Benchmarking Foundation
   year: 2025
   fate_axis: [what]
   review_state: unreviewed
@@ -1106,9 +1106,9 @@
     - paper_id: 10.3389/fpls.2025.1718258
       role: primary
 
-- entity_id: model:zygosity-aware-dna-language-modeling-improves-ancestry-and-gene-expression-prediction
+- entity_id: model:rashidy-2025-zygosity-aware-dna-language
   type: model
-  name: Zygosity-Aware DNA Language Modeling Improves Ancestry and Gene Expression Prediction
+  name: Rashidy 2025 Zygosity-Aware DNA Language
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -1119,9 +1119,9 @@
     - paper_id: 10.1101/2025.11.19.689326
       role: primary
 
-- entity_id: model:kidzoi-enables-cell-type-specific-regulatory-activity-and-variant-effect-prediction-in-kidney
+- entity_id: model:rather-2026-kidzoi-enables-cell-type-specific
   type: model
-  name: Kidzoi Enables Cell-Type-Specific Regulatory Activity and Variant Effect Prediction in Kidney
+  name: Rather 2026 Kidzoi Enables Cell-Type-Specific
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -1132,9 +1132,9 @@
     - paper_id: 10.64898/2026.09.28.746288
       role: primary
 
-- entity_id: model:chromatin-accessibility-prediction-via-a-hybrid-deep-convolutional-neural-network
+- entity_id: model:liu-2018-chromatin-accessibility-prediction
   type: model
-  name: Chromatin accessibility prediction via a hybrid deep convolutional neural network
+  name: Liu 2018 Chromatin accessibility prediction
   year: 2018
   fate_axis: [where]
   review_state: unreviewed
@@ -1160,9 +1160,9 @@
     - paper_id: arxiv:2609.16925
       role: primary
 
-- entity_id: model:chromatin-accessibility-prediction-via-convolutional-long-short-term-memory-networks-with-k-mer-embedding
+- entity_id: model:min-2017-chromatin-accessibility-prediction
   type: model
-  name: Chromatin accessibility prediction via convolutional long short-term memory networks with k-mer embedding
+  name: Min 2017 Chromatin accessibility prediction
   year: 2017
   fate_axis: [where]
   review_state: unreviewed
@@ -1194,9 +1194,9 @@
     - paper_id: 10.64898/2026.02.05.703637
       role: primary
 
-- entity_id: model:a-metric-calibrated-replay-framework-for-single-cell-genetic-perturbation-prediction
+- entity_id: model:sigliano-2026-metric-calibrated-replay-single-cell
   type: model
-  name: A Metric-Calibrated Replay Framework for Single-Cell Genetic Perturbation Prediction
+  name: Sigliano 2026 Metric-Calibrated Replay Single-Cell
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -1259,9 +1259,9 @@
     - paper_id: arxiv:2602.04901
       role: primary
 
-- entity_id: model:evaluating-sequence-to-function-deep-learning-models-for-ancestry-stratified-regulatory-variant-effect-prediction-using-multi-ancestry-blood-eqtls
+- entity_id: model:sun-2026-evaluating-sequence-to-function-deep
   type: model
-  name: Evaluating sequence-to-function deep learning models for ancestry-stratified regulatory variant effect prediction using multi-ancestry blood eQTLs
+  name: Sun 2026 Evaluating sequence-to-function deep
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -1289,9 +1289,9 @@
     - paper_id: 10.1038/s41592-025-02868-z
       role: primary
 
-- entity_id: model:pre-training-genomic-language-model-with-variants-for-better-modeling-functional-genomics
+- entity_id: model:liu-2026-pre-training-genomic-language
   type: model
-  name: Pre-training genomic language model with variants for better modeling functional genomics
+  name: Liu 2026 Pre-training genomic language
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -1305,9 +1305,9 @@
     - paper_id: 10.1038/s44387-026-00103-4
       role: primary
 
-- entity_id: model:perturbation-response-decomposition-enables-biologically-aligned-generalization-to-unseen-perturbations-and-cellular-contexts
+- entity_id: model:molina-2026-perturbation-response-decomposition
   type: model
-  name: Perturbation response decomposition enables biologically aligned generalization to unseen perturbations and cellular contexts
+  name: Molina 2026 Perturbation response decomposition
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -1333,9 +1333,9 @@
     - paper_id: 10.1093/bioinformatics/btaf256
       role: primary
 
-- entity_id: model:pretraining-enhances-megabase-scale-gene-expression-prediction-with-geneunet
+- entity_id: model:sun-2026-pretraining-enhances-megabase-scale
   type: model
-  name: Pretraining Enhances Megabase-Scale Gene Expression Prediction with GeneUnet
+  name: Sun 2026 Pretraining Enhances Megabase-Scale
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -1346,9 +1346,9 @@
     - paper_id: 10.64898/2026.08.13.744387
       role: primary
 
-- entity_id: model:integrating-histology-and-spatial-transcriptomics-via-multimodal-transformers-and-contrastive-representation-learning-for-accurate-gene-expression-prediction
+- entity_id: model:wang-2026-integrating-histology-spatial
   type: model
-  name: Integrating histology and spatial transcriptomics via multimodal transformers and contrastive representation learning for accurate gene expression prediction
+  name: Wang 2026 Integrating histology spatial
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -1359,9 +1359,9 @@
     - paper_id: 10.1016/j.jbi.2026.105003
       role: primary
 
-- entity_id: model:a-multi-modal-transformer-for-cell-type-agnostic-regulatory-predictions
+- entity_id: model:javed-2025-multi-modal-transformer-cell
   type: model
-  name: A multi-modal transformer for cell type-agnostic regulatory predictions
+  name: Javed 2025 multi-modal transformer cell
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -1389,9 +1389,9 @@
     - paper_id: 10.21203/rs.3.rs-8988269/v1
       role: primary
 
-- entity_id: model:toward-generalizable-and-interpretable-ai-in-regulatory-genomics
+- entity_id: model:nagai-2026-interpretable-ai-regulatory
   type: model
-  name: Toward generalizable and interpretable AI in regulatory genomics
+  name: Nagai 2026 interpretable AI regulatory
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -1427,9 +1427,9 @@
     - paper_id: arxiv:2602.01230
       role: primary
 
-- entity_id: model:early-feature-extraction-drives-model-performance-in-high-resolution-chromatin-accessibility-prediction
+- entity_id: model:grover-2026-early-feature-extraction
   type: model
-  name: Early feature extraction drives model performance in high-resolution chromatin accessibility prediction
+  name: Grover 2026 Early feature extraction
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -1440,9 +1440,9 @@
     - paper_id: 10.1101/gr.281042.125
       role: primary
 
-- entity_id: model:early-feature-extraction-drives-model-performance-in-high-resolution-chromatin-accessibility-prediction-a-systematic-evaluation-of-deep-learning-architectures
+- entity_id: model:grover-2025-early-feature-extraction
   type: model
-  name: "Early feature extraction drives model performance in high-resolution chromatin accessibility prediction: A systematic evaluation of deep learning architectures"
+  name: Grover 2025 Early feature extraction
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -1453,9 +1453,9 @@
     - paper_id: 10.1101/2025.03.01.641000
       role: primary
 
-- entity_id: model:evaluation-of-deep-learning-tools-for-chromatin-contact-prediction
+- entity_id: model:htt-2026-evaluation-deep-learning
   type: model
-  name: Evaluation of deep learning tools for chromatin contact prediction
+  name: HTT 2026 Evaluation deep learning
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -1502,9 +1502,9 @@
     - paper_id: 10.64898/2026.06.23.734130
       role: primary
 
-- entity_id: model:disease-relevance-and-replicability-of-deep-learning-gene-expression-prediction
+- entity_id: model:zhang-2026-disease-relevance-replicability
   type: model
-  name: Disease relevance and replicability of deep learning gene expression prediction
+  name: Zhang 2026 Disease relevance replicability
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -1515,9 +1515,9 @@
     - paper_id: 10.64898/2026.09.24.753534
       role: primary
 
-- entity_id: model:personalized-gene-expression-prediction-in-the-era-of-deep-learning-a-review
+- entity_id: model:dubey-2026-personalized-gene-expression
   type: model
-  name: "Personalized gene expression prediction in the era of deep learning: a review"
+  name: Dubey 2026 Personalized gene expression
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -1533,9 +1533,9 @@
     - paper_id: 10.1093/bib/bbag022
       role: primary
 
-- entity_id: model:long-range-gene-expression-prediction-with-token-alignment-of-large-language-model
+- entity_id: model:honig-2024-long-range-gene-expression
   type: model
-  name: Long-range gene expression prediction with token alignment of large language model
+  name: Honig 2024 Long-range gene expression
   year: 2024
   fate_axis: [where]
   review_state: unreviewed
@@ -1546,9 +1546,9 @@
     - paper_id: arxiv:2410.01858
       role: primary
 
-- entity_id: model:a-framework-to-detect-positive-selection-using-variant-effect-predictions-reveals-widespread-adaptive-evolution-of-human-neurons
+- entity_id: model:starr-2025-detect-positive-selection
   type: model
-  name: A framework to detect positive selection using variant effect predictions reveals widespread adaptive evolution of human neurons
+  name: Starr 2025 detect positive selection
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -1559,9 +1559,9 @@
     - paper_id: 10.1101/2025.09.11.675696
       role: primary
 
-- entity_id: model:genetic-perturbation-prediction-models-fail-out-of-distribution-a-rigorous-benchmark-and-systematic-evaluation
+- entity_id: model:tiwari-2026-genetic-perturbation-prediction
   type: model
-  name: "Genetic Perturbation Prediction Models Fail Out-of-Distribution: A Rigorous Benchmark and Systematic Evaluation"
+  name: Tiwari 2026 Genetic Perturbation Prediction
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -1572,9 +1572,9 @@
     - paper_id: 10.64898/2026.10.16.759604
       role: primary
 
-- entity_id: model:a-biological-response-compound-representation-allows-chemical-perturbation-prediction-across-cell-lines
+- entity_id: model:kaufmann-2026-biological-response-compound-representation
   type: model
-  name: A biological-response compound representation allows chemical perturbation prediction across cell lines
+  name: Kaufmann 2026 biological-response compound representation
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -1617,9 +1617,9 @@
     - paper_id: 10.1093/bioinformatics/btag307
       role: primary
 
-- entity_id: model:tracking-biological-hallucinations-in-single-cell-perturbation-predictions-using-scarchon-a-comprehensive-benchmarking-platform
+- entity_id: model:radig-2025-tracking-biological-hallucinations
   type: model
-  name: "Tracking biological hallucinations in single-cell perturbation predictions using scArchon, a comprehensive benchmarking platform"
+  name: Radig 2025 Tracking biological hallucinations
   year: 2025
   fate_axis: [what]
   review_state: unreviewed
@@ -1630,9 +1630,9 @@
     - paper_id: 10.1101/2025.06.23.661046
       role: primary
 
-- entity_id: model:differentiable-retrieval-augmented-generation-for-predicting-cellular-responses-to-gene-perturbation
+- entity_id: model:francesco-2026-differentiable-retrieval-augmented-generation
   type: model
-  name: Differentiable Retrieval-Augmented Generation for Predicting Cellular Responses to Gene Perturbation
+  name: Francesco 2026 Differentiable Retrieval-Augmented Generation
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -1646,9 +1646,9 @@
     - paper_id: arxiv:2603.07233
       role: primary
 
-- entity_id: model:completing-spatial-transcriptomics-data-for-gene-expression-prediction-benchmarking
+- entity_id: model:ruiz-2025-completing-spatial-transcriptomics
   type: model
-  name: Completing spatial transcriptomics data for gene expression prediction benchmarking
+  name: Ruiz 2025 Completing spatial transcriptomics
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -1675,9 +1675,9 @@
     - paper_id: 10.1101/2024.09.19.613754
       role: primary
 
-- entity_id: model:interpretable-variant-effect-prediction-from-genomic-foundation-model-representations
+- entity_id: model:pearce-2026-interpretable-variant-effect
   type: model
-  name: Interpretable variant effect prediction from genomic foundation model representations
+  name: Pearce 2026 Interpretable variant effect
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -1705,9 +1705,9 @@
     - paper_id: 10.1093/bioinformatics/btag727
       role: primary
 
-- entity_id: model:a-structured-study-of-cross-condition-prediction-of-transcriptional-responses-to-gene-perturbations
+- entity_id: model:zhu-2026-structured-cross-condition-prediction
   type: model
-  name: A structured study of cross-condition prediction of transcriptional responses to gene perturbations
+  name: Zhu 2026 structured cross-condition prediction
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -1730,9 +1730,9 @@
     - paper_id: 10.64898/2026.03.18.712807
       role: primary
 
-- entity_id: model:predicting-drug-responses-of-unseen-cell-types-through-transfer-learning-with-foundation-models
+- entity_id: model:wang-2026-predicting-drug-responses
   type: model
-  name: Predicting drug responses of unseen cell types through transfer learning with foundation models
+  name: Wang 2026 Predicting drug responses
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -1743,9 +1743,9 @@
     - paper_id: 10.1038/s43588-025-00887-6
       role: primary
 
-- entity_id: model:what-makes-a-representation-good-for-single-cell-perturbation-prediction
+- entity_id: model:jiang-2026-what-makes-representation
   type: model
-  name: "What Makes a Representation Good for Single-Cell Perturbation Prediction?"
+  name: Jiang 2026 What Makes Representation
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -1768,9 +1768,9 @@
     - paper_id: 10.1093/bib/bbae373
       role: primary
 
-- entity_id: model:independent-benchmark-of-h-e-based-gene-expression-prediction-in-skin
+- entity_id: model:shaikhutdinova-2026-independent-benchmark-h
   type: model
-  name: "Independent benchmark of H&E-based gene expression prediction in skin"
+  name: Shaikhutdinova 2026 Independent benchmark H
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -1781,9 +1781,9 @@
     - paper_id: 10.64898/2026.09.07.749926
       role: primary
 
-- entity_id: model:causal-variant-underestimation-is-a-major-overlooked-driver-of-sequence-to-function-model-underperformance
+- entity_id: model:drusinsky-2026-causal-variant-underestimation
   type: model
-  name: Causal variant underestimation is a major overlooked driver of sequence-to-function model underperformance
+  name: Drusinsky 2026 Causal variant underestimation
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -1852,9 +1852,9 @@
     - paper_id: arxiv:2610.04475
       role: primary
 
-- entity_id: model:an-end-to-end-generalizable-deep-learning-framework-to-comprehensively-analyze-transcriptional-regulation
+- entity_id: model:zhang-2026-end-to-end-deep-learning
   type: model
-  name: An end-to-end generalizable deep learning framework to comprehensively analyze transcriptional regulation
+  name: Zhang 2026 end-to-end deep learning
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -1868,9 +1868,9 @@
     - paper_id: 10.1038/s41467-026-70070-6
       role: primary
 
-- entity_id: model:enhancing-gene-expression-predictions-using-deep-learning-and-functional-annotations
+- entity_id: model:ramprasad-2025-enhancing-gene-expression
   type: model
-  name: Enhancing Gene Expression Predictions Using Deep Learning and Functional Annotations
+  name: Ramprasad 2025 Enhancing Gene Expression
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -1884,9 +1884,9 @@
     - paper_id: 10.1002/gepi.22595
       role: primary
 
-- entity_id: model:effective-gene-expression-prediction-and-optimization-from-protein-sequences
+- entity_id: model:liu-2025-effective-gene-expression
   type: model
-  name: Effective Gene Expression Prediction and Optimization from Protein Sequences
+  name: Liu 2025 Effective Gene Expression
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -1926,9 +1926,9 @@
     - paper_id: 10.64898/2026.06.18.733146
       role: primary
 
-- entity_id: model:leveraging-biological-networks-for-robust-gene-perturbation-prediction
+- entity_id: model:zhao-2025-leveraging-biological-networks
   type: model
-  name: Leveraging Biological Networks for Robust Gene Perturbation Prediction
+  name: Zhao 2025 Leveraging Biological Networks
   year: 2025
   fate_axis: [what]
   review_state: unreviewed
@@ -1975,9 +1975,9 @@
     - paper_id: 10.64898/2026.02.25.708091
       role: primary
 
-- entity_id: model:leveraging-genomic-deep-learning-models-for-the-prediction-of-non-coding-variant-effects
+- entity_id: model:kathail-2024-leveraging-genomic-deep
   type: model
-  name: Leveraging genomic deep learning models for the prediction of non-coding variant effects
+  name: Kathail 2024 Leveraging genomic deep
   year: 2024
   fate_axis: [how]
   review_state: unreviewed
@@ -2009,9 +2009,9 @@
     - paper_id: 10.64898/2026.02.06.704509
       role: primary
 
-- entity_id: model:an-enhanced-variant-aware-deep-learning-model-for-individual-gene-expression-prediction
+- entity_id: model:zhao-2025-variant-aware-deep-learning
   type: model
-  name: An Enhanced Variant-Aware Deep Learning Model for Individual Gene Expression Prediction
+  name: Zhao 2025 Variant-Aware Deep Learning
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -2022,9 +2022,9 @@
     - paper_id: 10.1101/2025.11.12.688070
       role: primary
 
-- entity_id: model:gene-expression-prediction-based-on-neighbour-connection-neural-network-utilizing-gene-interaction-graphs
+- entity_id: model:li-2023-gene-expression-prediction
   type: model
-  name: Gene expression prediction based on neighbour connection neural network utilizing gene interaction graphs
+  name: Li 2023 Gene expression prediction
   year: 2023
   fate_axis: [where]
   review_state: unreviewed
@@ -2038,9 +2038,9 @@
     - paper_id: 10.1371/journal.pone.0281286
       role: primary
 
-- entity_id: model:reaping-the-fruits-of-llm-pruning-towards-small-language-models-for-efficient-non-coding-variant-effect-prediction
+- entity_id: model:hegde-2025-reaping-fruits-llm
   type: model
-  name: "Reaping the Fruits of LLM Pruning: Towards Small Language Models for Efficient Non-Coding Variant Effect Prediction"
+  name: Hegde 2025 Reaping Fruits LLM
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -2054,9 +2054,9 @@
     - paper_id: 10.3390/genes16111358
       role: primary
 
-- entity_id: model:multi-modal-data-integration-for-machine-learning-applications
+- entity_id: model:serizay-2025-multi-modal-data-integration
   type: model
-  name: Multi-modal data integration for machine learning applications
+  name: Serizay 2025 Multi-modal data integration
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -2079,9 +2079,9 @@
     - paper_id: 10.3390/genes13040568
       role: primary
 
-- entity_id: model:computational-modeling-of-chromatin-accessibility-identified-important-epigenomic-regulators
+- entity_id: model:zhao-2022-computational-modeling-chromatin
   type: model
-  name: Computational modeling of chromatin accessibility identified important epigenomic regulators
+  name: Zhao 2022 Computational modeling chromatin
   year: 2022
   fate_axis: [where]
   review_state: unreviewed
@@ -2092,9 +2092,9 @@
     - paper_id: 10.1186/s12864-021-08234-5
       role: primary
 
-- entity_id: model:benchmarking-genomic-foundation-models-for-gene-fusion-detection-from-dna-sequences
+- entity_id: model:krupi-ka-2025-benchmarking-genomic-foundation
   type: model
-  name: Benchmarking Genomic Foundation Models for Gene Fusion Detection from DNA Sequences
+  name: "Krupička 2025 Benchmarking Genomic Foundation"
   year: 2025
   fate_axis: [how]
   review_state: unreviewed
@@ -2105,9 +2105,9 @@
     - paper_id: 10.21203/rs.3.rs-8360344/v1
       role: primary
 
-- entity_id: model:dna-augmentations-for-semi-supervised-learning-in-genomic-sequence-classification
+- entity_id: model:yoo-2026-dna-augmentations-semi-supervised
   type: model
-  name: DNA augmentations for semi-supervised learning in genomic sequence classification
+  name: Yoo 2026 DNA augmentations semi-supervised
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -2121,9 +2121,9 @@
     - paper_id: 10.1093/nargab/lqag123
       role: primary
 
-- entity_id: model:findings-from-sparse-autoencoders-for-dna-sequence-models-motif-detectors-reading-frame-features-and-the-scarcity-of-regulatory-logic
+- entity_id: model:denvis-2026-findings-sparse-autoencoders
   type: model
-  name: "Findings from Sparse Autoencoders for DNA Sequence Models: Motif Detectors, Reading-Frame Features, and the Scarcity of Regulatory Logic"
+  name: Denvis 2026 Findings Sparse Autoencoders
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -2161,9 +2161,9 @@
     - paper_id: arxiv:2512.17126
       role: primary
 
-- entity_id: model:perturbation-curve-models-continuous-transcriptional-response-trajectories-and-improves-prediction-of-genetic-modulations
+- entity_id: model:zhong-2026-perturbation-curve-continuous
   type: model
-  name: Perturbation Curve models continuous transcriptional response trajectories and improves prediction of genetic modulations
+  name: Zhong 2026 Perturbation Curve continuous
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -2174,9 +2174,9 @@
     - paper_id: 10.64898/2026.06.16.732192
       role: primary
 
-- entity_id: model:capra-predicts-single-cell-transcriptional-responses-to-genetic-perturbations-with-response-anchoring-and-residual-correction
+- entity_id: model:wei-2026-capra-predicts-single-cell
   type: model
-  name: CAPRA predicts single-cell transcriptional responses to genetic perturbations with response anchoring and residual correction
+  name: Wei 2026 CAPRA predicts single-cell
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -2187,9 +2187,9 @@
     - paper_id: 10.21203/rs.3.rs-10231666/v1
       role: primary
 
-- entity_id: model:charting-the-computational-landscape-of-single-cell-genetic-perturbation
+- entity_id: model:zhang-2026-charting-computational-landscape
   type: model
-  name: Charting the computational landscape of single-cell genetic perturbation
+  name: Zhang 2026 Charting computational landscape
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -2200,9 +2200,9 @@
     - paper_id: 10.1016/j.jare.2026.06.012
       role: primary
 
-- entity_id: model:adaptive-resampling-for-improved-machine-learning-in-imbalanced-single-cell-datasets
+- entity_id: model:navidi-2025-adaptive-resampling-machine
   type: model
-  name: Adaptive resampling for improved machine learning in imbalanced single-cell datasets
+  name: Navidi 2025 Adaptive resampling machine
   year: 2025
   fate_axis: [what]
   review_state: unreviewed
@@ -2213,9 +2213,9 @@
     - paper_id: 10.1101/2025.11.04.686583
       role: primary
 
-- entity_id: model:on-the-robustness-of-scrna-seq-foundation-models-for-plant-perturbation-response-prediction-under-cross-experiment-shift
+- entity_id: model:burda-2026-robustness-scrna-seq-foundation
   type: model
-  name: On the robustness of scRNA-seq foundation models for plant perturbation response prediction under cross-experiment shift
+  name: Burda 2026 robustness scRNA-seq foundation
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -2226,9 +2226,9 @@
     - paper_id: 10.64898/2026.08.21.746324
       role: primary
 
-- entity_id: model:explicit-mechanistic-operators-in-predictive-virtual-cells-evidence-failure-modes-and-a-minimum-falsification-framework-for-single-cell-perturbation-prediction
+- entity_id: model:sta-czak-2026-explicit-mechanistic-operators
   type: model
-  name: "Explicit Mechanistic Operators in Predictive Virtual Cells: Evidence, Failure Modes, and a Minimum Falsification Framework for Single-Cell Perturbation Prediction"
+  name: "Stańczak 2026 Explicit Mechanistic Operators"
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -2239,9 +2239,9 @@
     - paper_id: 10.3390/cells15181711
       role: primary
 
-- entity_id: model:toward-subtask-decomposition-based-learning-and-benchmarking-for-genetic-perturbation-outcome-prediction-and-beyond
+- entity_id: model:gao-2024-subtask-decomposition-based-learning
   type: model
-  name: Toward subtask decomposition-based learning and benchmarking for genetic perturbation outcome prediction and beyond
+  name: Gao 2024 subtask decomposition-based learning
   year: 2024
   fate_axis: [what]
   review_state: unreviewed
@@ -2280,9 +2280,9 @@
     - paper_id: 10.1073/pnas.2408737122
       role: primary
 
-- entity_id: model:deep-learning-approaches-for-non-coding-genetic-variant-effect-prediction-current-progress-and-future-prospects
+- entity_id: model:wang-2024-deep-learning-approaches
   type: model
-  name: "Deep learning approaches for non-coding genetic variant effect prediction: current progress and future prospects"
+  name: Wang 2024 Deep learning approaches
   year: 2024
   fate_axis: [where]
   review_state: unreviewed
@@ -2305,9 +2305,9 @@
     - paper_id: 10.1101/2023.10.10.561776
       role: primary
 
-- entity_id: model:human-5-utr-design-and-variant-effect-prediction-from-a-massively-parallel-translation-assay
+- entity_id: model:sample-2019-human-5-utr
   type: model
-  name: "Human 5' UTR design and variant effect prediction from a massively parallel translation assay"
+  name: "Sample 2019 Human 5' UTR"
   year: 2019
   fate_axis: [where]
   review_state: unreviewed
@@ -2318,9 +2318,9 @@
     - paper_id: 10.1038/s41587-019-0164-5
       role: primary
 
-- entity_id: model:a-unified-deep-learning-framework-for-single-cell-atac-seq-analysis-based-on-proddep-transformer-encoder
+- entity_id: model:wang-2023-unified-deep-learning
   type: model
-  name: A Unified Deep Learning Framework for Single-Cell ATAC-Seq Analysis Based on ProdDep Transformer Encoder
+  name: Wang 2023 Unified Deep Learning
   year: 2023
   fate_axis: [where]
   review_state: unreviewed
@@ -2334,9 +2334,9 @@
     - paper_id: 10.3390/ijms24054784
       role: primary
 
-- entity_id: model:the-evolution-of-logic-circuits-for-the-purpose-of-protein-contact-map-prediction
+- entity_id: model:chapman-2017-evolution-logic-circuits
   type: model
-  name: The evolution of logic circuits for the purpose of protein contact map prediction
+  name: Chapman 2017 evolution logic circuits
   year: 2017
   fate_axis: [where]
   review_state: unreviewed
@@ -2350,9 +2350,9 @@
     - paper_id: 10.7717/peerj.3139
       role: primary
 
-- entity_id: model:advances-in-protein-contact-map-prediction-based-on-machine-learning
+- entity_id: model:xie-2015-advances-protein-contact
   type: model
-  name: Advances in protein contact map prediction based on machine learning
+  name: Xie 2015 Advances protein contact
   year: 2015
   fate_axis: [where]
   review_state: unreviewed
@@ -2378,9 +2378,9 @@
     - paper_id: arxiv:2507.21648
       role: primary
 
-- entity_id: model:do-gene-perturbation-predictions-match-real-effects-a-computational-test-using-public-data
+- entity_id: model:harrison-2026-do-gene-perturbation
   type: model
-  name: "Do Gene Perturbation Predictions Match Real Effects? A Computational Test Using Public Data"
+  name: Harrison 2026 Do Gene Perturbation
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -2391,9 +2391,9 @@
     - paper_id: 10.14293/pr2199.003573.v2
       role: primary
 
-- entity_id: model:learning-perturbation-effects-through-contrastive-alignment-of-multimodal-biological-embeddings
+- entity_id: model:long-2026-learning-perturbation-effects
   type: model
-  name: Learning Perturbation Effects Through Contrastive Alignment of Multimodal Biological Embeddings
+  name: Long 2026 Learning Perturbation Effects
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -2404,9 +2404,9 @@
     - paper_id: 10.64898/2026.06.23.734145
       role: primary
 
-- entity_id: model:an-empirical-comparison-of-virtual-cell-models-perturbation-prediction-representation-and-the-baseline-gap
+- entity_id: model:denvis-2026-empirical-comparison-virtual
   type: model
-  name: "An Empirical Comparison of Virtual Cell Models: Perturbation Prediction, Representation, and the Baseline Gap"
+  name: Denvis 2026 Empirical Comparison Virtual
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -2417,9 +2417,9 @@
     - paper_id: 10.21203/rs.3.rs-10434123/v1
       role: primary
 
-- entity_id: model:assessing-scale-and-predictive-diversity-in-models-for-single-cell-transcriptomics-based-on-geneformer
+- entity_id: model:chen-2025-assessing-predictive-diversity
   type: model
-  name: Assessing Scale and Predictive Diversity in Models for Single-Cell Transcriptomics based on Geneformer
+  name: Chen 2025 Assessing Predictive Diversity
   year: 2025
   fate_axis: [what]
   review_state: unreviewed
@@ -2430,9 +2430,9 @@
     - paper_id: 10.1101/2025.11.04.686458
       role: primary
 
-- entity_id: model:latent-causal-diffusions-for-single-cell-perturbation-modeling
+- entity_id: model:lorch-2026-latent-causal-diffusions
   type: model
-  name: Latent Causal Diffusions for Single-Cell Perturbation Modeling
+  name: Lorch 2026 Latent Causal Diffusions
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -2471,9 +2471,9 @@
     - paper_id: 10.1101/2025.08.11.669796
       role: primary
 
-- entity_id: model:an-intrinsically-interpretable-neural-network-architecture-for-sequence-to-function-learning
+- entity_id: model:balc-2023-intrinsically-interpretable-neural
   type: model
-  name: An intrinsically interpretable neural network architecture for sequence-to-function learning
+  name: "Balcı 2023 intrinsically interpretable neural"
   year: 2023
   fate_axis: [where]
   review_state: unreviewed
@@ -2487,9 +2487,9 @@
     - paper_id: 10.1093/bioinformatics/btad271
       role: primary
 
-- entity_id: model:puget-predicts-gene-expression-across-cell-types-using-sequence-and-3d-chromatin-organization-data
+- entity_id: model:hang-2025-puget-predicts-gene
   type: model
-  name: Puget predicts gene expression across cell types using sequence and 3D chromatin organization data
+  name: Hang 2025 Puget predicts gene
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -2500,9 +2500,9 @@
     - paper_id: 10.1101/2025.11.19.689320
       role: primary
 
-- entity_id: model:genomic-foundation-model-derived-disruption-profiling-links-somatic-mutations-to-cancer-biology-and-clinical-outcomes
+- entity_id: model:nayak-2026-genomic-foundation-model-derived
   type: model
-  name: Genomic foundation model-derived disruption profiling links somatic mutations to cancer biology and clinical outcomes
+  name: Nayak 2026 Genomic foundation model-derived
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -2513,9 +2513,9 @@
     - paper_id: 10.64898/2026.09.15.26363174
       role: primary
 
-- entity_id: model:spurious-correlation-inflates-performance-in-single-cell-perturbation-prediction
+- entity_id: model:nicol-2026-spurious-correlation-inflates
   type: model
-  name: Spurious correlation inflates performance in single-cell perturbation prediction
+  name: Nicol 2026 Spurious correlation inflates
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -2567,9 +2567,9 @@
     - paper_id: 10.34133/research.1332
       role: primary
 
-- entity_id: model:deep-learning-prediction-of-gene-expression-from-personal-genomes
+- entity_id: model:drusinsky-2026-deep-learning-prediction-gene
   type: model
-  name: Deep-learning prediction of gene expression from personal genomes
+  name: Drusinsky 2026 Deep-learning prediction gene
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -2580,9 +2580,9 @@
     - paper_id: 10.1186/s13059-025-03926-7
       role: primary
 
-- entity_id: model:a-generative-virtual-tissue-model-enables-computational-design-of-therapeutic-perturbation-strategies
+- entity_id: model:lu-2026-generative-virtual-tissue
   type: model
-  name: A Generative Virtual Tissue Model Enables Computational Design of Therapeutic Perturbation Strategies
+  name: Lu 2026 Generative Virtual Tissue
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -2608,9 +2608,9 @@
     - paper_id: 10.1101/2025.11.01.686014
       role: primary
 
-- entity_id: model:trust-aware-sequence-to-function-modelling-in-regulatory-genomics
+- entity_id: model:onawole-2026-trust-aware-sequence-to-function-modelling
   type: model
-  name: Trust-Aware Sequence-to-Function Modelling in Regulatory Genomics
+  name: Onawole 2026 Trust-Aware Sequence-to-Function Modelling
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -2621,9 +2621,9 @@
     - paper_id: 10.64898/2026.08.20.745945
       role: primary
 
-- entity_id: model:discovery-of-microbial-intergenic-features-with-genomic-language-modeling-and-multimodal-search
+- entity_id: model:zulaybar-2026-discovery-microbial-intergenic
   type: model
-  name: Discovery of microbial intergenic features with genomic language modeling and multimodal search
+  name: Zulaybar 2026 Discovery microbial intergenic
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -2634,9 +2634,9 @@
     - paper_id: 10.64898/2026.09.15.751765
       role: primary
 
-- entity_id: model:evaluating-evo-2-for-plant-variant-effect-prediction
+- entity_id: model:kato-2026-evaluating-evo-2
   type: model
-  name: Evaluating Evo 2 for plant variant effect prediction
+  name: Kato 2026 Evaluating Evo 2
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -2647,9 +2647,9 @@
     - paper_id: 10.64898/2026.03.24.714098
       role: primary
 
-- entity_id: model:generative-design-of-new-to-nature-biosynthetic-assembly-lines-with-genomic-language-modeling
+- entity_id: model:lanclos-2026-generative-design-new-to-nature
   type: model
-  name: Generative Design of New-to-nature Biosynthetic Assembly Lines with Genomic Language Modeling
+  name: Lanclos 2026 Generative Design New-to-nature
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -2660,9 +2660,9 @@
     - paper_id: 10.64898/2026.09.11.750945
       role: primary
 
-- entity_id: model:generative-design-and-construction-of-functional-plasmids-with-a-dna-language-model
+- entity_id: model:cunningham-2025-generative-design-construction
   type: model
-  name: Generative design and construction of functional plasmids with a DNA language model
+  name: Cunningham 2025 Generative design construction
   year: 2025
   fate_axis: [how]
   review_state: unreviewed
@@ -2717,9 +2717,9 @@
     - paper_id: 10.21203/rs.3.rs-11151765/v1
       role: primary
 
-- entity_id: model:scaling-large-language-models-for-next-generation-single-cell-analysis
+- entity_id: model:rizvi-2025-scaling-language-next-generation
   type: model
-  name: Scaling Large Language Models for Next-Generation Single-Cell Analysis
+  name: Rizvi 2025 Scaling Language Next-Generation
   year: 2025
   fate_axis: [what]
   review_state: unreviewed
@@ -2730,9 +2730,9 @@
     - paper_id: 10.1101/2025.04.14.648850
       role: primary
 
-- entity_id: model:a-standardized-framework-for-evaluating-gene-expression-generative-models
+- entity_id: model:rubbi-2026-standardized-evaluating-gene
   type: model
-  name: A Standardized Framework For Evaluating Gene Expression Generative Models
+  name: Rubbi 2026 Standardized Evaluating Gene
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -2743,9 +2743,9 @@
     - paper_id: arxiv:2603.11244
       role: primary
 
-- entity_id: model:scaling-an-autoregressive-transformer-for-single-cell-generation
+- entity_id: model:sharipov-2026-scaling-autoregressive-transformer
   type: model
-  name: Scaling an Autoregressive Transformer for Single-Cell Generation
+  name: Sharipov 2026 Scaling Autoregressive Transformer
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -2773,9 +2773,9 @@
     - paper_id: arxiv:2410.05292
       role: primary
 
-- entity_id: model:sequence-to-function-deep-learning-decodes-human-i-cis-i-regulatory-evolution
+- entity_id: model:mangan-2026-sequence-to-function-deep-learning
   type: model
-  name: "Sequence-to-function deep learning decodes human  <i>cis</i>  -regulatory evolution"
+  name: Mangan 2026 Sequence-to-function deep learning
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -2786,9 +2786,9 @@
     - paper_id: 10.64898/2026.08.24.746818
       role: primary
 
-- entity_id: model:evaluation-of-multiple-sclerosis-risk-loci-reveals-that-genomic-oracles-fail-to-generalise-sequence-effects-across-host-contexts
+- entity_id: model:uysal-2026-evaluation-multiple-sclerosis
   type: model
-  name: Evaluation of multiple sclerosis risk loci reveals that genomic oracles fail to generalise sequence effects across host contexts
+  name: Uysal 2026 Evaluation multiple sclerosis
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -2815,9 +2815,9 @@
     - paper_id: 10.64898/2026.05.29.728876
       role: primary
 
-- entity_id: model:deep-learning-the-tf-regulatory-code-for-gene-expression
+- entity_id: model:li-2026-deep-learning-tf
   type: model
-  name: Deep learning the TF regulatory code for gene expression
+  name: Li 2026 Deep learning TF
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -2828,9 +2828,9 @@
     - paper_id: 10.1101/gr.281425.125
       role: primary
 
-- entity_id: model:positional-interpretation-of-cis-regulatory-code-and-nucleosome-organization-with-deep-learning-models
+- entity_id: model:mcanany-2026-positional-interpretation-cis-regulatory
   type: model
-  name: Positional interpretation of cis-regulatory code and nucleosome organization with deep learning models
+  name: McAnany 2026 Positional interpretation cis-regulatory
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -2841,9 +2841,9 @@
     - paper_id: 10.1038/s41467-026-74807-1
       role: primary
 
-- entity_id: model:evaluating-single-cell-atac-seq-atlasing-technologies-using-sequence-to-function-modeling
+- entity_id: model:dickm-nken-2026-evaluating-single-cell-atac-seq
   type: model
-  name: Evaluating single-cell ATAC-seq atlasing technologies using sequence-to-function modeling
+  name: "Dickmänken 2026 Evaluating single-cell ATAC-seq"
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -2854,9 +2854,9 @@
     - paper_id: 10.1038/s41467-026-68742-4
       role: primary
 
-- entity_id: model:predicting-cell-state-specific-gene-regulation-from-dna-across-species
+- entity_id: model:liu-2026-predicting-cell-state-specific-gene
   type: model
-  name: Predicting cell-state-specific gene regulation from DNA across species
+  name: Liu 2026 Predicting cell-state-specific gene
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -2867,9 +2867,9 @@
     - paper_id: 10.64898/2026.10.19.760026
       role: primary
 
-- entity_id: model:evaluating-the-cross-species-transferability-and-scaling-of-sequence-to-function-predictions-in-alphagenome
+- entity_id: model:ramarao-milne-2026-evaluating-cross-species-transferability
   type: model
-  name: Evaluating the cross-species transferability and scaling of sequence-to-function predictions in AlphaGenome
+  name: Ramarao-Milne 2026 Evaluating cross-species transferability
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -2880,9 +2880,9 @@
     - paper_id: 10.64898/2026.07.10.737654
       role: primary
 
-- entity_id: model:deep-learning-guided-identification-and-in-vivo-validation-of-compact-cis-regulatory-elements-for-the-zebrafish-habenula
+- entity_id: model:li-2026-deep-learning-guided-identification
   type: model
-  name: Deep Learning-Guided Identification and In Vivo Validation of Compact Cis-Regulatory Elements for the Zebrafish Habenula
+  name: Li 2026 Deep Learning-Guided Identification
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -2893,9 +2893,9 @@
     - paper_id: 10.3390/genes17091079
       role: primary
 
-- entity_id: model:single-cell-multiome-analysis-of-chromatin-state-and-transcriptome-in-the-human-basal-ganglia
+- entity_id: model:chang-2026-single-cell-multiome-chromatin
   type: model
-  name: Single-cell Multiome Analysis of Chromatin State and Transcriptome in the Human Basal Ganglia
+  name: Chang 2026 Single-cell Multiome Chromatin
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -2923,9 +2923,9 @@
     - paper_id: 10.1093/bioinformatics/btag426
       role: primary
 
-- entity_id: model:cluster-based-data-balancing-for-protein-contact-map-prediction-using-mlp-neural-networks
+- entity_id: model:saghafi-2025-cluster-based-data-balancing
   type: model
-  name: Cluster-Based Data Balancing for Protein Contact Map Prediction Using MLP Neural Networks
+  name: Saghafi 2025 Cluster-Based Data Balancing
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -2936,9 +2936,9 @@
     - paper_id: 10.21203/rs.3.rs-7528788/v1
       role: primary
 
-- entity_id: model:chromatin-interaction-neural-network-chinn
+- entity_id: model:cao-2021-chromatin-interaction-neural
   type: model
-  name: "Chromatin interaction neural network (ChINN)"
+  name: Cao 2021 Chromatin interaction neural
   year: 2021
   fate_axis: [where]
   review_state: unreviewed
@@ -2969,9 +2969,9 @@
     - paper_id: 10.1093/bib/bbag064
       role: primary
 
-- entity_id: model:adapting-generative-genome-foundation-model-evo-for-functional-genomics-prediction-via-progressive-fine-tuning
+- entity_id: model:xie-2026-adapting-generative-genome
   type: model
-  name: Adapting Generative Genome Foundation Model Evo for Functional Genomics Prediction via Progressive Fine-Tuning
+  name: Xie 2026 Adapting Generative Genome
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -2982,9 +2982,9 @@
     - paper_id: 10.1109/tcbbio.2026.3705107
       role: primary
 
-- entity_id: model:decoding-promoter-activity-from-dna-sequence-using-pre-trained-language-models
+- entity_id: model:jung-2026-decoding-promoter-activity
   type: model
-  name: Decoding promoter activity from DNA sequence using pre-trained language models
+  name: Jung 2026 Decoding promoter activity
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -3048,9 +3048,9 @@
     - paper_id: arxiv:2405.10812
       role: primary
 
-- entity_id: model:a-split-control-criterion-for-few-shot-adaptation-in-single-cell-perturbation-prediction
+- entity_id: model:liang-2026-split-control-criterion-few-shot
   type: model
-  name: A split-control criterion for few-shot adaptation in single-cell perturbation prediction
+  name: Liang 2026 split-control criterion few-shot
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -3127,9 +3127,9 @@
     - paper_id: 10.1101/2024.10.27.620513
       role: primary
 
-- entity_id: model:generation-powered-inference-for-distribution-valued-outcomes
+- entity_id: model:zhang-2026-generation-powered-inference-distribution-valued
   type: model
-  name: Generation-Powered Inference for Distribution-Valued Outcomes
+  name: Zhang 2026 Generation-Powered Inference Distribution-Valued
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -3167,9 +3167,9 @@
     - paper_id: 10.22541/au.174584549.90714325/v1
       role: primary
 
-- entity_id: model:benchmarking-dna-foundation-models-for-genomic-and-genetic-tasks
+- entity_id: model:feng-2025-benchmarking-dna-foundation
   type: model
-  name: Benchmarking DNA foundation models for genomic and genetic tasks
+  name: Feng 2025 Benchmarking DNA foundation
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -3210,9 +3210,9 @@
     - paper_id: 10.1093/nar/gkaf865
       role: primary
 
-- entity_id: model:evolution-and-mechanism-of-i-meis2-i-mediated-forelimb-specialization-in-bats
+- entity_id: model:lo-2026-evolution-mechanism-i
   type: model
-  name: "Evolution and mechanism of  <i>MEIS2</i>  -mediated forelimb specialization in bats"
+  name: Lo 2026 Evolution mechanism i
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -3223,9 +3223,9 @@
     - paper_id: 10.64898/2026.06.03.729816
       role: primary
 
-- entity_id: model:a-high-resolution-protein-rna-binding-atlas-for-structure-aware-interaction-prediction-and-post-transcriptional-regulatory-modeling
+- entity_id: model:karimzadeh-2026-high-resolution-protein-rna-binding
   type: model
-  name: A high-resolution protein-RNA binding atlas for structure-aware interaction prediction and post-transcriptional regulatory modeling
+  name: Karimzadeh 2026 high-resolution protein-RNA binding
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -3251,9 +3251,9 @@
     - paper_id: 10.64898/2026.08.08.743506
       role: primary
 
-- entity_id: model:scauto-as-a-comprehensive-framework-for-single-cell-chromatin-accessibility-data-analysis
+- entity_id: model:gong-2024-scauto-single-cell-chromatin
   type: model
-  name: scAuto as a comprehensive framework for single-cell chromatin accessibility data analysis
+  name: Gong 2024 scAuto single-cell chromatin
   year: 2024
   fate_axis: [where]
   review_state: unreviewed
@@ -3276,9 +3276,9 @@
     - paper_id: 10.64898/2026.05.22.727045
       role: primary
 
-- entity_id: model:tabular-foundation-models-are-competitive-cellular-perturbation-predictors-across-biological-scales
+- entity_id: model:palla-2026-tabular-foundation-competitive
   type: model
-  name: Tabular Foundation Models Are Competitive Cellular Perturbation Predictors Across Biological Scales
+  name: Palla 2026 Tabular Foundation Competitive
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -3301,9 +3301,9 @@
     - paper_id: 10.1101/2025.09.30.679477
       role: primary
 
-- entity_id: model:sparse-integrative-dictionary-learning-resolves-conserved-drug-response-states-in-multiple-myeloma-mm
+- entity_id: model:wu-2026-sparse-integrative-dictionary
   type: model
-  name: "Sparse integrative dictionary learning resolves conserved drug-response states in multiple myeloma (MM)"
+  name: Wu 2026 Sparse integrative dictionary
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -3314,9 +3314,9 @@
     - paper_id: 10.1016/j.cancergen.2026.08.002
       role: primary
 
-- entity_id: model:elucidating-the-design-space-of-generative-models-for-single-cell-perturbation-prediction
+- entity_id: model:bhattacharya-2026-elucidating-design-space
   type: model
-  name: Elucidating the Design Space of Generative Models for Single-Cell Perturbation Prediction
+  name: Bhattacharya 2026 Elucidating Design Space
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -3327,9 +3327,9 @@
     - paper_id: 10.64898/2026.06.15.732063
       role: primary
 
-- entity_id: model:auc-pr-is-a-more-informative-metric-for-assessing-the-biological-relevance-of-in-silico-cellular-perturbation-prediction-models
+- entity_id: model:zhu-2025-auc-pr-more-informative
   type: model
-  name: AUC-PR is a More Informative Metric for Assessing the Biological Relevance of In Silico Cellular Perturbation Prediction Models
+  name: Zhu 2025 AUC-PR More Informative
   year: 2025
   fate_axis: [what]
   review_state: unreviewed
@@ -3340,9 +3340,9 @@
     - paper_id: 10.1101/2025.03.06.641935
       role: primary
 
-- entity_id: model:performance-of-deep-learning-methods-for-spatial-gene-expression-prediction-from-histology-images-a-comprehensive-assessment
+- entity_id: model:xie-2026-performance-deep-learning
   type: model
-  name: "Performance of deep learning methods for spatial gene expression prediction from histology images: a comprehensive assessment"
+  name: Xie 2026 Performance deep learning
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -3396,9 +3396,9 @@
     - paper_id: 10.1186/s13059-025-03809-x
       role: primary
 
-- entity_id: model:deep-genomic-models-of-allele-specific-measurements
+- entity_id: model:tu-2026-deep-genomic-allele-specific
   type: model
-  name: Deep genomic models of allele-specific measurements
+  name: Tu 2026 Deep genomic allele-specific
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -3459,9 +3459,9 @@
     - paper_id: 10.1093/bioinformatics/btae197
       role: primary
 
-- entity_id: model:rapid-and-interpretable-protein-contact-map-prediction-using-a-pattern-matching-strategy
+- entity_id: model:hacisuleyman-2026-rapid-interpretable-protein
   type: model
-  name: Rapid and interpretable protein contact map prediction using a pattern-matching strategy
+  name: Hacisuleyman 2026 Rapid interpretable protein
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -3472,9 +3472,9 @@
     - paper_id: 10.1088/1478-3975/ae443c
       role: primary
 
-- entity_id: model:protein-subcellular-localization-prediction-model-based-on-graph-convolutional-network
+- entity_id: model:zhang-2022-protein-subcellular-localization
   type: model
-  name: Protein Subcellular Localization Prediction Model Based on Graph Convolutional Network
+  name: Zhang 2022 Protein Subcellular Localization
   year: 2022
   fate_axis: [where]
   review_state: unreviewed
@@ -3488,9 +3488,9 @@
     - paper_id: 10.1007/s12539-022-00529-9
       role: primary
 
-- entity_id: model:protein-contact-map-prediction-using-multiple-sequence-alignment-dropout-and-consistency-learning-for-sequences-with-fewer-homologs
+- entity_id: model:liu-2021-protein-contact-map
   type: model
-  name: Protein contact map prediction using multiple sequence alignment dropout and consistency learning for sequences with fewer homologs
+  name: Liu 2021 Protein contact map
   year: 2021
   fate_axis: [where]
   review_state: unreviewed
@@ -3513,9 +3513,9 @@
     - paper_id: 10.1093/bioinformatics/btaa217
       role: primary
 
-- entity_id: model:accurate-prediction-of-protein-contact-maps-by-coupling-residual-two-dimensional-bidirectional-long-short-term-memory-with-convolutional-neural-networks
+- entity_id: model:hanson-2018-accurate-prediction-protein
   type: model
-  name: Accurate prediction of protein contact maps by coupling residual two-dimensional bidirectional long short-term memory with convolutional neural networks
+  name: Hanson 2018 Accurate prediction protein
   year: 2018
   fate_axis: [where]
   review_state: unreviewed
@@ -3526,9 +3526,9 @@
     - paper_id: 10.1093/bioinformatics/bty481
       role: primary
 
-- entity_id: model:genomic-foundation-models-do-not-yet-boost-common-variant-discovery-beyond-standard-functional-annotations
+- entity_id: model:bass-2026-genomic-foundation-do
   type: model
-  name: Genomic foundation models do not yet boost common variant discovery beyond standard functional annotations
+  name: Bass 2026 Genomic foundation do
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -3560,9 +3560,9 @@
     - paper_id: 10.1093/bioinformatics/btag662
       role: primary
 
-- entity_id: model:a-transcription-factor-regulatory-atlas-for-activity-inference-and-perturbation-prediction
+- entity_id: model:sugimoto-2026-transcription-factor-regulatory
   type: model
-  name: A transcription factor regulatory atlas for activity inference and perturbation prediction
+  name: Sugimoto 2026 transcription factor regulatory
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -3578,9 +3578,9 @@
     - paper_id: 10.1093/nar/gkag897
       role: primary
 
-- entity_id: model:systematic-evaluation-of-single-cell-foundation-model-interpretability-reveals-attention-captures-co-expression-rather-than-unique-regulatory-signal
+- entity_id: model:kendiukhov-2026-evaluation-single-cell-foundation
   type: model
-  name: Systematic evaluation of single-cell foundation model interpretability reveals attention captures co-expression rather than unique regulatory signal
+  name: Kendiukhov 2026 evaluation single-cell foundation
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -3615,9 +3615,9 @@
     - paper_id: 10.1101/2024.10.23.619972
       role: primary
 
-- entity_id: model:estimating-genotype-tissue-specific-gene-expression-using-hybrid-deep-learning
+- entity_id: model:dong-2026-estimating-genotype-tissue-specific
   type: model
-  name: Estimating genotype-tissue specific gene expression using hybrid deep learning
+  name: Dong 2026 Estimating genotype-tissue specific
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -3628,9 +3628,9 @@
     - paper_id: 10.1038/s42003-026-10251-7
       role: primary
 
-- entity_id: model:application-of-deep-learning-in-crop-research-from-genomics-to-phenomics
+- entity_id: model:wu-2026-application-deep-learning
   type: model
-  name: "Application of deep learning in crop research: From genomics to phenomics"
+  name: Wu 2026 Application deep learning
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -3641,9 +3641,9 @@
     - paper_id: 10.1002/tpg2.70268
       role: primary
 
-- entity_id: model:overcoming-extrapolation-challenges-of-deep-learning-by-incorporating-physics-in-protein-sequence-function-modeling
+- entity_id: model:barethiya-2026-overcoming-extrapolation-challenges
   type: model
-  name: Overcoming extrapolation challenges of deep learning by incorporating physics in protein sequence-function modeling
+  name: Barethiya 2026 Overcoming extrapolation challenges
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -3659,9 +3659,9 @@
     - paper_id: 10.1371/journal.pcbi.1013728
       role: primary
 
-- entity_id: model:a-deep-learning-based-multiscale-integration-of-spatial-omics-with-tumor-morphology
+- entity_id: model:schmauch-2025-deep-learning-based-multiscale
   type: model
-  name: A deep learning-based multiscale integration of spatial omics with tumor morphology
+  name: Schmauch 2025 deep learning-based multiscale
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -3672,9 +3672,9 @@
     - paper_id: 10.1038/s41467-025-66691-y
       role: primary
 
-- entity_id: model:impact-of-data-quality-on-deep-learning-prediction-of-spatial-transcriptomics-from-histology-images
+- entity_id: model:hallinan-2025-impact-data-quality
   type: model
-  name: Impact of Data Quality on Deep Learning Prediction of Spatial Transcriptomics from Histology Images
+  name: Hallinan 2025 Impact Data Quality
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -3685,9 +3685,9 @@
     - paper_id: 10.1101/2025.09.04.674228
       role: primary
 
-- entity_id: model:spatial-transcriptomics-prediction-from-histology-jointly-through-transformer-and-graph-neural-networks
+- entity_id: model:zeng-2022-spatial-transcriptomics-prediction
   type: model
-  name: Spatial transcriptomics prediction from histology jointly through Transformer and graph neural networks
+  name: Zeng 2022 Spatial transcriptomics prediction
   year: 2022
   fate_axis: [where]
   review_state: unreviewed
@@ -3710,9 +3710,9 @@
     - paper_id: 10.1109/tcbbio.2026.3663364
       role: primary
 
-- entity_id: model:inference-of-spatial-chromatin-accessibility-via-integration-of-spatial-transcriptomics-and-single-cell-multi-omics-data
+- entity_id: model:debnath-2026-inference-spatial-chromatin
   type: model
-  name: Inference of spatial chromatin accessibility via integration of spatial transcriptomics and single-cell multi-omics data
+  name: Debnath 2026 Inference spatial chromatin
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -3728,9 +3728,9 @@
     - paper_id: 10.1038/s41467-026-73948-7
       role: primary
 
-- entity_id: model:benchmarking-algorithms-for-single-cell-multi-omics-prediction-and-integration
+- entity_id: model:hu-2024-benchmarking-algorithms-single-cell
   type: model
-  name: Benchmarking algorithms for single-cell multi-omics prediction and integration
+  name: Hu 2024 Benchmarking algorithms single-cell
   year: 2024
   fate_axis: [where]
   review_state: unreviewed
@@ -3741,9 +3741,9 @@
     - paper_id: 10.1038/s41592-024-02429-w
       role: primary
 
-- entity_id: model:fveocrs-a-database-for-open-chromatin-prediction-in-wild-strawberry-based-on-a-large-language-model
+- entity_id: model:li-2025-fveocrs-database-open
   type: model
-  name: FveOCRs - a database for open chromatin prediction in wild strawberry based on a large language model
+  name: Li 2025 FveOCRs database open
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -3766,9 +3766,9 @@
     - paper_id: 10.1016/j.compbiomed.2023.107822
       role: primary
 
-- entity_id: model:exploring-the-alternative-conformation-of-a-known-protein-structure-based-on-contact-map-prediction
+- entity_id: model:li-2024-exploring-alternative-conformation
   type: model
-  name: Exploring the Alternative Conformation of a Known Protein Structure Based on Contact Map Prediction
+  name: Li 2024 Exploring Alternative Conformation
   year: 2024
   fate_axis: [where]
   review_state: unreviewed
@@ -3779,9 +3779,9 @@
     - paper_id: 10.1021/acs.jcim.3c01381
       role: primary
 
-- entity_id: model:unveiling-chromatin-dynamics-with-virtual-epigenome
+- entity_id: model:lin-2025-unveiling-chromatin-dynamics
   type: model
-  name: Unveiling chromatin dynamics with virtual epigenome
+  name: Lin 2025 Unveiling chromatin dynamics
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -3795,9 +3795,9 @@
     - paper_id: 10.1038/s41467-025-58481-3
       role: primary
 
-- entity_id: model:hi-compass-resolves-cell-type-chromatin-interactions-by-single-cell-and-spatial-atac-seq-data-across-biological-scales
+- entity_id: model:sun-2025-hi-compass-resolves-cell-type
   type: model
-  name: Hi-Compass resolves cell-type chromatin interactions by single-cell and spatial ATAC-seq data across biological scales
+  name: Sun 2025 Hi-Compass resolves cell-type
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -3808,9 +3808,9 @@
     - paper_id: 10.1101/2025.05.14.654019
       role: primary
 
-- entity_id: model:enhancing-protein-contact-map-prediction-accuracy-via-ensembles-of-inter-residue-distance-predictors
+- entity_id: model:mah-2022-enhancing-protein-contact
   type: model
-  name: Enhancing protein contact map prediction accuracy via ensembles of inter-residue distance predictors
+  name: MAH 2022 Enhancing protein contact
   year: 2022
   fate_axis: [where]
   review_state: unreviewed
@@ -3845,9 +3845,9 @@
     - paper_id: 10.1093/bioinformatics/btx164
       role: primary
 
-- entity_id: model:predicting-dynamic-expression-patterns-in-budding-yeast-with-a-fungal-dna-language-model
+- entity_id: model:chao-2025-predicting-dynamic-expression
   type: model
-  name: Predicting dynamic expression patterns in budding yeast with a fungal DNA language model
+  name: Chao 2025 Predicting dynamic expression
   year: 2025
   fate_axis: [how]
   review_state: unreviewed
@@ -3858,9 +3858,9 @@
     - paper_id: 10.21203/rs.3.rs-7681940/v1
       role: primary
 
-- entity_id: model:genomic-language-model-for-predicting-enhancers-and-their-allele-specific-activity-in-the-human-genome
+- entity_id: model:sathian-2026-genomic-language-predicting
   type: model
-  name: Genomic language model for predicting enhancers and their allele-specific activity in the human genome
+  name: Sathian 2026 Genomic language predicting
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -3936,9 +3936,9 @@
     - paper_id: 10.64898/2026.05.02.722054
       role: primary
 
-- entity_id: model:predictive-prioritization-of-enhancers-associated-with-pancreas-disease-risk
+- entity_id: model:wang-2024-predictive-prioritization-enhancers
   type: model
-  name: Predictive Prioritization of Enhancers Associated with Pancreas Disease Risk
+  name: Wang 2024 Predictive Prioritization Enhancers
   year: 2024
   fate_axis: [what]
   review_state: unreviewed
@@ -3961,9 +3961,9 @@
     - paper_id: 10.1038/s41592-024-02201-0
       role: primary
 
-- entity_id: model:transcoder-based-circuit-analysis-for-interpretable-single-cell-foundation-models
+- entity_id: model:hosokawa-2025-transcoder-based-circuit-interpretable
   type: model
-  name: Transcoder-based Circuit Analysis for Interpretable Single-Cell Foundation Models
+  name: Hosokawa 2025 Transcoder-based Circuit Interpretable
   year: 2025
   fate_axis: [what]
   review_state: unreviewed
@@ -4028,9 +4028,9 @@
     - paper_id: 10.1186/s12864-026-12568-3
       role: primary
 
-- entity_id: model:fine-tuning-sequence-to-expression-models-on-personal-genome-and-transcriptome-data
+- entity_id: model:rastogi-2026-fine-tuning-sequence-to-expression-personal
   type: model
-  name: Fine-tuning sequence-to-expression models on personal genome and transcriptome data
+  name: Rastogi 2026 Fine-tuning sequence-to-expression personal
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -4057,9 +4057,9 @@
     - paper_id: 10.64898/2026.07.28.741284
       role: primary
 
-- entity_id: model:is-a-win-win-possible-achieving-pareto-optimal-privacy-utility-balance-in-fine-tuned-genome-language-model-embeddings-against-embedding-reconstruction-attacks
+- entity_id: model:al-saidi-2026-win-win-possible-achieving
   type: model
-  name: "Is a Win-Win possible? Achieving pareto-optimal privacy-utility balance in fine-tuned genome language model embeddings against embedding reconstruction attacks"
+  name: Al-Saidi 2026 Win-Win possible Achieving
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4109,9 +4109,9 @@
     - paper_id: 10.64898/2026.07.04.736518
       role: primary
 
-- entity_id: model:a-fine-tuned-genomic-language-model-captures-nucleotide-level-information-overlooked-by-missense-variant-impact-predictors
+- entity_id: model:su-2026-fine-tuned-genomic-language
   type: model
-  name: A fine-tuned genomic language model captures nucleotide-level information overlooked by missense variant impact predictors
+  name: Su 2026 fine-tuned genomic language
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4122,9 +4122,9 @@
     - paper_id: 10.64898/2026.05.06.723362
       role: primary
 
-- entity_id: model:using-the-dna-language-model-grover-to-parse-effects-of-sequence-chromatin-and-regulatory-features-on-genome-stability
+- entity_id: model:joubert-2026-dna-language-grover
   type: model
-  name: "Using the DNA language model, GROVER, to parse effects of sequence, chromatin and regulatory features on genome stability"
+  name: Joubert 2026 DNA language GROVER
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4154,9 +4154,9 @@
     - paper_id: 10.1016/j.crmeth.2026.101516
       role: primary
 
-- entity_id: model:pretrained-on-animals-deployed-on-plants-why-rna-foundation-models-have-not-decoded-plant-regulation-or-genome-editing
+- entity_id: model:wang-2026-pretrained-animals-deployed
   type: model
-  name: "Pretrained on Animals, Deployed on Plants: Why RNA Foundation Models Have Not Decoded Plant Regulation or Genome Editing"
+  name: Wang 2026 Pretrained Animals Deployed
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4167,9 +4167,9 @@
     - paper_id: 10.20944/preprints202610.0255.v1
       role: primary
 
-- entity_id: model:semantic-design-of-functional-de-novo-genes-from-a-genomic-language-model
+- entity_id: model:merchant-2026-semantic-design-functional
   type: model
-  name: Semantic design of functional de novo genes from a genomic language model
+  name: Merchant 2026 Semantic design functional
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4185,9 +4185,9 @@
     - paper_id: 10.1038/s41586-025-09749-7
       role: primary
 
-- entity_id: model:a-benchmark-of-evo2-genomic-ai-models-for-efficient-and-practical-deployment
+- entity_id: model:li-2025-benchmark-evo2-genomic
   type: model
-  name: A Benchmark of Evo2 Genomic AI Models for Efficient and Practical Deployment
+  name: Li 2025 Benchmark Evo2 Genomic
   year: 2025
   fate_axis: [how]
   review_state: unreviewed
@@ -4198,9 +4198,9 @@
     - paper_id: 10.1101/2025.09.10.675279
       role: primary
 
-- entity_id: model:analyzing-genomic-foundation-models-for-viral-sequence-identification
+- entity_id: model:b-kov-2026-analyzing-genomic-foundation
   type: model
-  name: Analyzing Genomic Foundation Models for Viral Sequence Identification
+  name: "Bůžková 2026 Analyzing Genomic Foundation"
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4223,9 +4223,9 @@
     - paper_id: 10.64898/2026.04.21.719816
       role: primary
 
-- entity_id: model:genomic-properties-representing-plant-sex-chromosome-evolution-interpreted-with-genome-language-models
+- entity_id: model:akagi-2026-genomic-properties-representing
   type: model
-  name: Genomic properties representing plant sex chromosome evolution interpreted with genome language models
+  name: Akagi 2026 Genomic properties representing
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4248,9 +4248,9 @@
     - paper_id: 10.1038/s41467-025-61684-3
       role: primary
 
-- entity_id: model:fp8-inference-in-genomic-foundation-models-theoretical-vs-realized-speedups-on-genomeocean
+- entity_id: model:yu-2026-fp8-inference-genomic
   type: model
-  name: "FP8 Inference in Genomic Foundation Models: Theoretical vs. Realized Speedups on GenomeOcean"
+  name: Yu 2026 FP8 Inference Genomic
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4289,9 +4289,9 @@
     - paper_id: arxiv:2509.25274
       role: primary
 
-- entity_id: model:hybrid-tokenization-strategy-for-dna-language-model-using-byte-pair-encoding-and-k-mer-methods
+- entity_id: model:sapkota-2025-hybrid-tokenization-strategy
   type: model
-  name: Hybrid Tokenization Strategy for DNA Language Model using Byte Pair Encoding and K-MER Methods
+  name: Sapkota 2025 Hybrid Tokenization Strategy
   year: 2025
   fate_axis: [how]
   review_state: unreviewed
@@ -4302,9 +4302,9 @@
     - paper_id: arxiv:2507.18570
       role: primary
 
-- entity_id: model:exploring-adversarial-robustness-in-classification-tasks-using-dna-language-models
+- entity_id: model:yoo-2024-exploring-adversarial-robustness
   type: model
-  name: Exploring Adversarial Robustness in Classification tasks using DNA Language Models
+  name: Yoo 2024 Exploring Adversarial Robustness
   year: 2024
   fate_axis: [how]
   review_state: unreviewed
@@ -4357,9 +4357,9 @@
     - paper_id: arxiv:2509.18207
       role: primary
 
-- entity_id: model:quantifying-memorization-and-privacy-risks-in-genomic-language-models
+- entity_id: model:nemecek-2026-quantifying-memorization-privacy
   type: model
-  name: Quantifying Memorization and Privacy Risks in Genomic Language Models
+  name: Nemecek 2026 Quantifying Memorization Privacy
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4370,9 +4370,9 @@
     - paper_id: arxiv:2603.08913
       role: primary
 
-- entity_id: model:evaluating-dna-function-understanding-in-genomic-language-models-using-evolutionarily-implausible-sequences
+- entity_id: model:jiang-2025-evaluating-dna-function
   type: model
-  name: Evaluating DNA function understanding in genomic language models using evolutionarily implausible sequences
+  name: Jiang 2025 Evaluating DNA function
   year: 2025
   fate_axis: [how]
   review_state: unreviewed
@@ -4400,9 +4400,9 @@
     - paper_id: arxiv:2505.23839
       role: primary
 
-- entity_id: model:recent-advances-in-deep-learning-and-language-models-for-studying-the-microbiome
+- entity_id: model:yan-2024-recent-advances-deep
   type: model
-  name: Recent advances in deep learning and language models for studying the microbiome
+  name: Yan 2024 Recent advances deep
   year: 2024
   fate_axis: [how]
   review_state: unreviewed
@@ -4466,9 +4466,9 @@
     - paper_id: 10.1016/j.synbio.2026.05.014
       role: primary
 
-- entity_id: model:a-mechanism-annotated-benchmark-reveals-limited-fidelity-to-drug-response-signatures-in-single-cell-perturbation-models
+- entity_id: model:li-2026-mechanism-annotated-benchmark-reveals
   type: model
-  name: A mechanism-annotated benchmark reveals limited fidelity to drug-response signatures in single-cell perturbation models
+  name: Li 2026 mechanism-annotated benchmark reveals
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -4479,9 +4479,9 @@
     - paper_id: 10.64898/2026.08.19.745729
       role: primary
 
-- entity_id: model:reference-cell-design-shapes-model-evaluation-in-single-cell-perturbation-prediction
+- entity_id: model:zhou-2026-reference-cell-design-shapes
   type: model
-  name: Reference-cell design shapes model evaluation in single-cell perturbation prediction
+  name: Zhou 2026 Reference-cell design shapes
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -4492,9 +4492,9 @@
     - paper_id: 10.21203/rs.3.rs-11119348/v1
       role: primary
 
-- entity_id: model:towards-principled-evaluation-of-single-cell-perturbation-prediction-models
+- entity_id: model:psl-2026-principled-evaluation-single-cell
   type: model
-  name: Towards Principled Evaluation of Single-Cell Perturbation Prediction Models
+  name: PSL 2026 Principled Evaluation Single-Cell
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -4505,9 +4505,9 @@
     - paper_id: 10.64898/2026.07.23.740433
       role: primary
 
-- entity_id: model:enhancing-cross-context-generalization-in-drug-perturbation-prediction-with-a-multimodal-conditional-diffusion-framework
+- entity_id: model:ma-2026-enhancing-cross-context-generalization
   type: model
-  name: Enhancing cross-context generalization in drug perturbation prediction with a multimodal conditional diffusion framework
+  name: Ma 2026 Enhancing cross-context generalization
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -4537,9 +4537,9 @@
     - paper_id: 10.64898/2026.03.17.712536
       role: primary
 
-- entity_id: model:learning-biophysical-models-of-gene-regulation-with-probability-flow-matching
+- entity_id: model:maddu-2026-learning-biophysical-gene
   type: model
-  name: Learning biophysical models of gene regulation with probability flow matching
+  name: Maddu 2026 Learning biophysical gene
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -4595,9 +4595,9 @@
     - paper_id: arxiv:2605.07335
       role: primary
 
-- entity_id: model:conditional-out-of-sample-generation-for-unpaired-data-using-trvae
+- entity_id: model:lotfollahi-2019-conditional-out-of-sample-generation
   type: model
-  name: Conditional out-of-sample generation for unpaired data using trVAE
+  name: Lotfollahi 2019 Conditional out-of-sample generation
   year: 2019
   fate_axis: [what]
   review_state: unreviewed
@@ -4662,9 +4662,9 @@
     - paper_id: 10.1101/2021.06.19.449089
       role: primary
 
-- entity_id: model:sequence-optimization-targeting-mrna-stability-enhances-monoclonal-antibody-titers-in-cho-cells
+- entity_id: model:schneckener-2026-sequence-optimization-targeting
   type: model
-  name: Sequence optimization targeting mRNA stability enhances monoclonal antibody titers in CHO cells
+  name: Schneckener 2026 Sequence optimization targeting
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4675,9 +4675,9 @@
     - paper_id: 10.1016/j.nbt.2026.09.004
       role: primary
 
-- entity_id: model:probing-3d-chromatin-structure-awareness-in-evo2-dna-language-model
+- entity_id: model:lee-2026-probing-3d-chromatin
   type: model
-  name: Probing 3D Chromatin Structure Awareness in Evo2 DNA Language Model
+  name: Lee 2026 Probing 3D Chromatin
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4688,9 +4688,9 @@
     - paper_id: arxiv:2604.07196
       role: primary
 
-- entity_id: model:reverse-complement-consistency-for-dna-language-models
+- entity_id: model:ma-2025-reverse-complement-consistency-dna
   type: model
-  name: Reverse-Complement Consistency for DNA Language Models
+  name: Ma 2025 Reverse-Complement Consistency DNA
   year: 2025
   fate_axis: [how]
   review_state: unreviewed
@@ -4701,9 +4701,9 @@
     - paper_id: arxiv:2509.18529
       role: primary
 
-- entity_id: model:causal-dictionary-learning-reveals-and-validates-transcription-factor-binding-features-in-genomic-language-models
+- entity_id: model:ali-2026-causal-dictionary-learning
   type: model
-  name: Causal dictionary learning reveals and validates transcription-factor binding features in genomic language models
+  name: Ali 2026 Causal dictionary learning
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4714,9 +4714,9 @@
     - paper_id: arxiv:2607.19618
       role: primary
 
-- entity_id: model:toward-ai-virtual-cells-for-hepatology-representation-generation-dynamics-and-intervention-in-single-cell-models
+- entity_id: model:choi-2026-ai-virtual-cells
   type: model
-  name: "Toward AI Virtual Cells for Hepatology: Representation, Generation, Dynamics, and Intervention in Single-Cell Models"
+  name: Choi 2026 AI Virtual Cells
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -4727,9 +4727,9 @@
     - paper_id: 10.3350/cmh.2026.0820
       role: primary
 
-- entity_id: model:benchmarking-gene-expression-reconstruction-from-single-cell-latent-representations
+- entity_id: model:fu-2026-benchmarking-gene-expression
   type: model
-  name: Benchmarking gene expression reconstruction from single-cell latent representations
+  name: Fu 2026 Benchmarking gene expression
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -4771,9 +4771,9 @@
     - paper_id: arxiv:2608.05928
       role: primary
 
-- entity_id: model:towards-generalizable-single-cell-perturbation-modeling-via-the-conditional-monge-gap
+- entity_id: model:driessen-2025-single-cell-perturbation-modeling
   type: model
-  name: Towards generalizable single-cell perturbation modeling via the Conditional Monge Gap
+  name: Driessen 2025 single-cell perturbation modeling
   year: 2025
   fate_axis: [what]
   review_state: unreviewed
@@ -4784,9 +4784,9 @@
     - paper_id: arxiv:2504.08328
       role: primary
 
-- entity_id: model:a-multi-tissue-epigenomic-atlas-links-the-sheep-non-coding-genome-to-domestication-and-complex-traits
+- entity_id: model:meng-2026-multi-tissue-epigenomic-atlas
   type: model
-  name: A multi-tissue epigenomic atlas links the sheep non-coding genome to domestication and complex traits
+  name: Meng 2026 multi-tissue epigenomic atlas
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -4797,9 +4797,9 @@
     - paper_id: 10.64898/2026.08.22.746371
       role: primary
 
-- entity_id: model:computational-navigation-of-constrained-multidimensional-protein-fitness-landscapes
+- entity_id: model:kaushik-2026-computational-navigation-constrained
   type: model
-  name: Computational navigation of constrained multidimensional protein fitness landscapes
+  name: Kaushik 2026 Computational navigation constrained
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -4827,9 +4827,9 @@
     - paper_id: 10.1101/2025.11.20.689577
       role: primary
 
-- entity_id: model:amplicon-protein-bead-display-enables-quantitative-i-in-vitro-i-biochemistry-at-scale
+- entity_id: model:passow-2026-amplicon-protein-bead
   type: model
-  name: "Amplicon/Protein Bead Display enables quantitative  <i>in vitro</i>  biochemistry at scale"
+  name: Passow 2026 Amplicon Protein Bead
   year: 2026
   fate_axis: [where]
   review_state: unreviewed
@@ -4840,9 +4840,9 @@
     - paper_id: 10.64898/2026.05.28.728566
       role: primary
 
-- entity_id: model:sequence-based-chromatin-activity-modeling-and-regulatory-impact-prediction-of-genetic-variants-in-farmed-animals-using-deep-learning
+- entity_id: model:nguyen-2025-sequence-based-chromatin-activity
   type: model
-  name: Sequence-based chromatin activity modeling and regulatory impact prediction of genetic variants in farmed animals using deep learning
+  name: Nguyen 2025 Sequence-based chromatin activity
   year: 2025
   fate_axis: [where]
   review_state: unreviewed
@@ -4853,9 +4853,9 @@
     - paper_id: 10.1093/nargab/lqaf139
       role: primary
 
-- entity_id: model:deep-homology-based-protein-contact-map-prediction
+- entity_id: model:ronen-2020-deep-homology-based-protein
   type: model
-  name: Deep Homology-Based Protein Contact-Map Prediction
+  name: Ronen 2020 Deep Homology-Based Protein
   year: 2020
   fate_axis: [where]
   review_state: unreviewed
@@ -4881,9 +4881,9 @@
     - paper_id: 10.1039/d3ra03796g
       role: primary
 
-- entity_id: model:protein-secondary-structure-assignment-using-residual-networks
+- entity_id: model:antony-2022-protein-secondary-structure
   type: model
-  name: Protein secondary structure assignment using residual networks
+  name: Antony 2022 Protein secondary structure
   year: 2022
   fate_axis: [where]
   review_state: unreviewed
@@ -4894,9 +4894,9 @@
     - paper_id: 10.1007/s00894-022-05271-z
       role: primary
 
-- entity_id: model:highly-accurate-ab-initio-gene-annotation-with-annevo
+- entity_id: model:zhang-2026-highly-accurate-ab
   type: model
-  name: Highly accurate ab initio gene annotation with ANNEVO
+  name: Zhang 2026 Highly accurate ab
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4907,9 +4907,9 @@
     - paper_id: 10.1038/s41592-026-03036-7
       role: primary
 
-- entity_id: model:tracing-model-generated-dna-with-position-independent-watermarking
+- entity_id: model:provatas1-2026-tracing-model-generated-dna
   type: model
-  name: Tracing model-generated DNA with position-independent watermarking
+  name: Provatas1 2026 Tracing model-generated DNA
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4920,9 +4920,9 @@
     - paper_id: arxiv:2610.04763
       role: primary
 
-- entity_id: model:set-aggregated-genome-embeddings-for-microbiome-abundance-prediction
+- entity_id: model:kim-2026-set-aggregated-genome-embeddings
   type: model
-  name: Set-Aggregated Genome Embeddings for Microbiome Abundance Prediction
+  name: Kim 2026 Set-Aggregated Genome Embeddings
   year: 2026
   fate_axis: [how]
   review_state: unreviewed
@@ -4933,9 +4933,9 @@
     - paper_id: arxiv:2605.12286
       role: primary
 
-- entity_id: model:virtual-cell-construction-for-artificial-intelligence-driven-drug-discovery
+- entity_id: model:jia-2026-virtual-cell-construction
   type: model
-  name: Virtual cell construction for artificial intelligence-driven drug discovery
+  name: Jia 2026 Virtual cell construction
   year: 2026
   fate_axis: [what]
   review_state: unreviewed
@@ -4961,9 +4961,9 @@
     - paper_id: 10.1101/2025.07.25.665130
       role: primary
 
-- entity_id: model:contrastive-mixture-of-posteriors-for-counterfactual-inference-data-integration-and-fairness
+- entity_id: model:foster-2021-contrastive-mixture-posteriors
   type: model
-  name: "Contrastive Mixture of Posteriors for Counterfactual Inference, Data Integration and Fairness"
+  name: Foster 2021 Contrastive Mixture Posteriors
   year: 2021
   fate_axis: [what]
   review_state: unreviewed

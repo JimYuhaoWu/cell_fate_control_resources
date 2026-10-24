@@ -52,10 +52,11 @@ ROOT = Path(__file__).resolve().parents[1]
 RECORDS_DIR = ROOT / "records"
 PROMOTIONS_DIR = ROOT / "literature" / "promotions"
 
-# A slug this long did not come from a resource's name. The longest hand-written
-# id in the catalogue is 36 characters (module:epifactors-2022-chromatin-
-# regulators), and the shortest title-derived one is well past it.
-NAMED_SLUG_MAX = 40
+# Whether a record is named is decided by comparing its name with its paper's
+# title, not by how long the id is. Slug length was a proxy for that question
+# and a poor one: it missed a resource named in prose rather than before a
+# colon -- CAPRA, trVAE -- and it now misreads a citation name
+# ("Kelley 2018 sequential regulatory activity", 44 characters) as a title.
 
 
 def _module(filename: str, name: str):
@@ -99,12 +100,31 @@ def staged() -> list[dict]:
     return out
 
 
-def slug_of(entity_id: str) -> str:
-    return entity_id.split(":", 1)[1]
+def primary_titles() -> dict[str, str]:
+    """entity_id -> the title of its `primary` paper, normalised."""
+    papers = {p["paper_id"]: p for p in yaml.safe_load(
+        (ROOT / "literature" / "papers.yaml").read_text(encoding="utf-8")) or []}
+    out = {}
+    for item in staged():
+        rec = item["rec"]
+        pid = next((p["paper_id"] for p in rec.get("papers") or []
+                    if p["role"] == "primary"), None)
+        title = (papers.get(pid) or {}).get("title") or ""
+        out[rec["entity_id"]] = " ".join(title.lower().split())
+    return out
 
 
-def is_named(entity_id: str) -> bool:
-    return len(slug_of(entity_id)) <= NAMED_SLUG_MAX
+def is_named(rec: dict, titles: dict[str, str]) -> bool:
+    """
+    True when the record's name is something other than its paper's title.
+
+    A record whose name *is* the title is one 03_record.py could find no name
+    in, and publishing it puts a sentence where a resource's name belongs.
+    Anything else -- a real name, or the citation that script now falls back to
+    -- is a name a card can carry.
+    """
+    name = " ".join(str(rec.get("name") or "").lower().split())
+    return bool(name) and name != titles.get(rec["entity_id"], "")
 
 
 def block(item: dict, papers: dict) -> list[str]:
@@ -141,8 +161,9 @@ def write_file(out: Path) -> int:
               in yaml.safe_load((ROOT / "literature" / "papers.yaml")
                                 .read_text(encoding="utf-8")) or []}
     items = staged()
-    named = [i for i in items if is_named(i["rec"]["entity_id"])]
-    titled = [i for i in items if not is_named(i["rec"]["entity_id"])]
+    titles = primary_titles()
+    named = [i for i in items if is_named(i["rec"], titles)]
+    titled = [i for i in items if not is_named(i["rec"], titles)]
 
     lines = [f"# Staging review — {date.today().isoformat()}",
              "",
@@ -160,14 +181,14 @@ def write_file(out: Path) -> int:
              "The two sections are an ordering, not a filter. Every staged "
              "record is here.",
              "", "---", "",
-             f"## Appears to name a resource ({len(named)})",
+             f"## Carries a name ({len(named)})",
              "",
-             f"An `entity_id` slug of {NAMED_SLUG_MAX} characters or fewer, so "
-             f"`03_record.py` found a name rather than falling back to the "
-             f"title. This is where a promotion is most likely to be right, "
-             f"and it is **not** evidence that the rest are not resources: a "
-             f"sample of the section below found roughly one named resource in "
-             f"five, named in prose instead of before a colon.",
+             "Its name is something other than its paper's title: either a "
+             "resource name `03_record.py` found, or the citation it falls "
+             "back to for a paper that named nothing "
+             "(\"Kelley 2018 sequential regulatory activity\"). Both are "
+             "names a card can carry, so both can be promoted as they "
+             "stand.",
              "",
              "Write `name: <the name>` on a block's **Notes:** line to rename "
              "the record as it is promoted. A record whose id is slugged from "
@@ -176,7 +197,7 @@ def write_file(out: Path) -> int:
     for item in sorted(named, key=lambda i: i["rec"]["entity_id"]):
         lines += block(item, papers)
 
-    lines += [f"## Named from the title, so unnamed ({len(titled)})",
+    lines += [f"## Still named after the paper's title ({len(titled)})",
               "",
               "Listed compactly because promoting one needs a `name:` first. "
               "Full blocks are above; to promote one of these, add it there by "
@@ -230,6 +251,7 @@ def promote(path: Path, decisions: list[dict]) -> int:
     """
     by_file: dict[Path, list[dict]] = {}
     index = {i["rec"]["entity_id"]: i for i in staged()}
+    titles = primary_titles()
     errors = []
     for decision in decisions:
         item = index.get(decision["entity_id"])
@@ -237,7 +259,7 @@ def promote(path: Path, decisions: list[dict]) -> int:
             errors.append(f"line {decision['line']}: `{decision['entity_id']}` "
                           f"is not a staged record")
             continue
-        if not is_named(decision["entity_id"]) and not decision["name"]:
+        if not is_named(item["rec"], titles) and not decision["name"]:
             errors.append(f"line {decision['line']}: `{decision['entity_id']}` "
                           f"is slugged from its title. Write `name: <name>` in "
                           f"the **Notes:** line, or leave it staged")
