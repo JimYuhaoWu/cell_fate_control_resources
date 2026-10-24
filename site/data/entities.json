@@ -35,6 +35,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present Action Genome Question Answering (AGQA), a new benchmark for compositional spatio-temporal reasoning.",
   "entity_id": "benchmark:agqa",
   "links": [],
   "name": "AGQA",
@@ -64,6 +65,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce AGQA 2.0, a version of this benchmark with several improvements, most namely a stricter balancing procedure.",
   "entity_id": "benchmark:agqa-2-0",
   "links": [],
   "name": "AGQA 2.0",
@@ -93,6 +95,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We propose AmbiModBench, a specificity-aware, gene- resolved and coverage-aware benchmark.",
   "entity_id": "benchmark:ambimodbench",
   "links": [],
   "name": "AmbiModBench",
@@ -124,6 +127,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present AnnotateMissense, a scalable annotation, benchmarking and genome-wide prediction framework for missense variant interpretation.",
   "entity_id": "benchmark:annotatemissense",
   "links": [
    {
@@ -158,6 +162,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we propose ASTER, an ensemble learning- based tool for accurately estimating the number of cell types in scCAS data.",
   "entity_id": "benchmark:aster",
   "links": [
    {
@@ -194,6 +199,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we develop controlled evaluation metrics based on well-characterized nuclear and mitochondrial sequence features and curated variant sets.",
   "entity_id": "benchmark:benchmarking-dna-foundation-models",
   "links": [],
   "name": "Benchmarking DNA Foundation Models",
@@ -222,6 +228,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We propose a benchmark to assess accuracy of short reads mapping based on the pre-computed global alignment of related genome sequences.",
   "entity_id": "benchmark:benchngs",
   "links": [],
   "name": "benchNGS",
@@ -546,6 +553,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present BioSecBench-Surveillance, a verifiable benchmark of 100 evaluations testing whether AI agents can infer the right analysis pipeline from raw sequencing data and surveillance context.",
   "entity_id": "benchmark:biosecbench-surveillance",
   "links": [],
   "name": "BioSecBench-Surveillance",
@@ -826,6 +834,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we introduce the second iteration of the Fitness Landscape for Antibodies (FLAb2), the largest public therapeutic antibody design benchmark to date.",
   "entity_id": "benchmark:fitness-landscape-for-antibodies-2",
   "links": [
    {
@@ -1003,6 +1012,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce GenomeQA, a benchmark designed to provide a controlled evaluation setting for general-purpose LLMs on sequence-based genome inference tasks.",
   "entity_id": "benchmark:genomeqa",
   "links": [],
   "name": "GenomeQA",
@@ -1076,6 +1086,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We propose GenoTEX as a promising resource for benchmarking and enhancing automated methods for gene expression data analysis.",
   "entity_id": "benchmark:genotex",
   "links": [
    {
@@ -1112,6 +1123,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we propose a genomic AI benchmark, GUANinE, for evaluating model generalization across a number of distinct genomic tasks.",
   "entity_id": "benchmark:guanine-v1-0",
   "links": [],
   "name": "GUANinE v1.0",
@@ -1175,6 +1187,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we propose HiFi-ST, a conditional neural field framework for continuous spatial transcriptomics modeling.",
   "entity_id": "benchmark:hifi-st",
   "links": [],
   "name": "HiFi-ST",
@@ -1206,6 +1219,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present IdeaGene-Bench (IG-Bench), a benchmark for scientific lineage reasoning and lineage-grounded idea generation.",
   "entity_id": "benchmark:ideas-have-genomes",
   "links": [],
   "name": "Ideas Have Genomes",
@@ -1249,6 +1263,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we present Nahual, an open-source framework for reproducible model deployment, and JUMP-lite, a 92.0 GB subset of JUMP that is approximately 1,250-fold smaller, selected to cover genetic modalities and compound annotations and reduced via lossy JPEG XL compression.",
   "entity_id": "benchmark:jump-lite",
   "links": [],
   "name": "JUMP-lite",
@@ -1280,6 +1295,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present Know-Show, a new benchmark designed to evaluate spatio-temporal grounded reasoning, the ability of a model to reason about actions and their semantics while simultaneously grounding its inferences in visual and temporal evidence.",
   "entity_id": "benchmark:know-show",
   "links": [
    {
@@ -1316,6 +1332,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We propose LassoBench, the first benchmark suite tailored for Weighted Lasso regression.",
   "entity_id": "benchmark:lassobench",
   "links": [],
   "name": "LassoBench",
@@ -1383,6 +1400,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we propose a benchmark application to evaluate the proficiency of LLMs to answer materials science questions through the generation and safe execution of codes based on such physics-based computational materials science packages.",
   "entity_id": "benchmark:mattools",
   "links": [],
   "name": "MatTools",
@@ -1415,6 +1433,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Herein, we introduce MVCBench, a comprehensive benchmarking framework for evaluating drug molecular and gene representation methods in predicting drug-induced multimodal virtual cell (MVC) phenotypes.",
   "entity_id": "benchmark:mvcbench",
   "links": [],
   "name": "MVCBench",
@@ -1482,6 +1501,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce OncoTraj, a public benchmark of 813 EGFR-mutant NSCLC patients receiving first-line osimertinib, harmonized from three real-world clinical-genomic sources: MSK-CHORD (672 patients), AACR Project GENIE BPC NSCLC (34 patients), and the FLAURA molecular-resistance supplement (107 patients).",
   "entity_id": "benchmark:oncotraj",
   "links": [],
   "name": "OncoTraj",
@@ -1510,6 +1530,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We developed Plato-Bio, a biology-routed extension of the open Plato/Denario architecture that couples explicit workflow states with provenance records, citation checks, claim-to- evidence links, scoped file writes, and publication gates.",
   "entity_id": "benchmark:plato-bio",
   "links": [],
   "name": "Plato-Bio",
@@ -1661,6 +1682,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we introduce RegDesign-Bench, a standardized framework for evaluating cell-type-specific cis-regulatory element design through a comprehensive set of computational analyses.",
   "entity_id": "benchmark:regdesign-bench",
   "links": [],
   "name": "RegDesign-Bench",
@@ -1777,6 +1799,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce a neural encoder Table2Vec for automated universal representation learning of entities such as customers from all-round enterprise DNA with automated data characteristics analysis and data quality augmentation.",
   "entity_id": "benchmark:table2vec",
   "links": [],
   "name": "Table2Vec",
@@ -2099,6 +2122,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present a major update of the HOCOMOCO collection that provides DNA binding specificity patterns of 949 human transcription factors and 720 mouse orthologs.",
   "entity_id": "database:hocomoco-v12",
   "fate_axis": [
    "with-what",
@@ -2941,6 +2965,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we develop Perturb-seq, combining single-cell RNA sequencing (RNA-seq) and clustered regularly interspaced short palindromic repeats (CRISPR)-based perturbations to perform many such assays in a pool.",
   "entity_id": "dataset:dixit-2016-perturb-seq",
   "fate_axis": [
    "what"
@@ -3937,6 +3962,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we present an analytical framework for interpreting high-dimensional landscapes of cell states (manifolds) constructed from transcriptional phenotypes.",
   "entity_id": "dataset:norman-2019-combinatorial-perturb-seq",
   "fate_axis": [
    "what"
@@ -4566,6 +4592,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we describe the integrative analysis of 111 reference human epigenomes generated as part of the programme, profiled for histone modification patterns, DNA accessibility, DNA methylation and RNA expression.",
   "entity_id": "dataset:roadmap-epigenomics",
   "fate_axis": [
    "where"
@@ -4690,6 +4717,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we introduce \"sci-Plex,\" which uses \"nuclear hashing\" to quantify global transcriptional responses to thousands of independent perturbations at single-cell resolution.",
   "entity_id": "dataset:sci-plex",
   "fate_axis": [
    "what"
@@ -4803,6 +4831,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we present a convolutional neural network, Akita, that accurately predicts genome folding from DNA sequence alone.",
   "entity_id": "model:akita",
   "fate_axis": [
    "where"
@@ -5590,6 +5619,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce ARSENAL , a short-context masked DNA language model pretrained on ENCODE candidate cis-regulatory elements.",
   "entity_id": "model:arsenal",
   "fate_axis": [
    "where"
@@ -5692,6 +5722,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce BarcodeBERT, a family of models tailored to biodiversity analysis and trained exclusively on data from a reference library of 1.5M invertebrate DNA barcodes.",
   "entity_id": "model:barcodebert",
   "fate_axis": [
    "how"
@@ -5740,6 +5771,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we develop a machine-learning system to predict cell-type- specific epigenetic and transcriptional profiles in large mammalian genomes from DNA sequence alone.",
   "entity_id": "model:basenji",
   "fate_axis": [
    "where"
@@ -5775,6 +5807,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce the open source package Basset to apply CNNs to learn the functional activity of DNA sequences from genomics data.",
   "entity_id": "model:basset",
   "fate_axis": [
    "where"
@@ -5889,6 +5922,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we present BioM-JEPA, a joint- embedding predictive architecture that instead predicts aggregate representations of graph-connected gene blocks defined by protein- association and corpus-derived coexpression evidence.",
   "entity_id": "model:biom-jepa",
   "fate_axis": [
    "what"
@@ -6393,6 +6427,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce a deep learning model, BPNet, that uses DNA sequence to predict base-resolution chromatin immunoprecipitation (ChIP)-nexus binding profiles of pluripotency TFs.",
   "entity_id": "model:bpnet",
   "fate_axis": [
    "where"
@@ -6465,6 +6500,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we propose an architecture motivated by these challenges that builds off the long- range Mamba block, and extends it to a BiMamba component that supports bi-directionality, and to a MambaDNA block that additionally supports RC equivariance.",
   "entity_id": "model:caduceus",
   "fate_axis": [
    "how"
@@ -6500,6 +6536,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce CaLMFlow (Causal Language Models for Flow Matching), a novel framework that casts flow matching as a Volterra integral equation (VIE), leveraging the power of large language models (LLMs) for continuous data generation.",
   "entity_id": "model:calmflow",
   "fate_axis": [
    "what"
@@ -6538,6 +6575,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present C arbon , a family of efficient generative DNA language models designed as a practical reference point for this setting.",
   "entity_id": "model:carbon",
   "fate_axis": [
    "where"
@@ -6619,6 +6657,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present CellScientist, a protocol-constrained workflow that converts execution and validation feedback into auditable model-revision trajectories.",
   "entity_id": "model:cellscientist",
   "fate_axis": [
    "what"
@@ -6691,6 +6730,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we introduce CENO, a family of long-context generative genomic world models designed to preserve local DNA grammar while extending usable context to regulatory and chromatin scales.",
   "entity_id": "model:ceno",
   "fate_axis": [
    "where"
@@ -6968,6 +7008,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present DanioDecima, a zebrafish-specific model leveraging transfer learning from human and mouse-trained models to predict tissue- and cell-type-specific gene expression during zebrafish embryogenesis.",
   "entity_id": "model:daniodecima",
   "fate_axis": [
    "where"
@@ -7044,6 +7085,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We developed DECANT to learn mechanism-aligned perturbation representations that remain stable across context shifts while preserving response fidelity.",
   "entity_id": "model:decant",
   "fate_axis": [
    "what"
@@ -7086,6 +7128,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we introduce DeepCis, a Transformer-based multi-omics framework that integrates base-level genomic sequence and epigenomics features, as well as region-level 3D chromatin organization to capture regulatory information across multiple scales.",
   "entity_id": "model:deepcis",
   "fate_axis": [
    "where"
@@ -7129,6 +7172,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we developed DeepGEP, an attention-based Long Short-Term Memory model trained on 228 datasets, including RNA-seq, ATAC-seq, and ChIP-seq of four histone modifications (H3K4me3, H3K4me1, H3K27ac, H3K27me3) from humans, pigs, and cattle.",
   "entity_id": "model:deepgep",
   "fate_axis": [
    "where"
@@ -7166,6 +7210,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we present DeepSCENIC, a deep learning framework that enables causal GRN inference by performing transfer learning from S2F models to single-cell multiome atlases.",
   "entity_id": "model:deepscenic",
   "fate_axis": [
    "where"
@@ -7272,6 +7317,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present DeepWheat, a broadly applicable deep learning framework comprising DeepEXP and DeepEPI, for accurate, tissue-specific gene expression prediction.",
   "entity_id": "model:deepwheat",
   "fate_axis": [
    "where"
@@ -7384,6 +7430,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce differentially expressed gene (DEG)-aware metrics, weighted mean-squared error (WMSE) and weighted delta $R^{2}$ ($R^{2}_{w}(Δ)$) with respect to all perturbations, that measure error in niche signals with high sensitivity.",
   "entity_id": "model:diversity-by-design",
   "fate_axis": [
    "what"
@@ -7523,6 +7570,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce DNAChunker, a masked DNA language model that incorporates a learnable adaptive segmentation module to produce context-dependent, variable-length units.",
   "entity_id": "model:dnachunker",
   "fate_axis": [
    "how"
@@ -7593,6 +7641,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present DoFormer , a causal multimodal Transformer that makes no DAG assumptions and leverages rich perturbational data to accurately predict previously unseen perturbations.",
   "entity_id": "model:doformer",
   "fate_axis": [
    "what"
@@ -7625,6 +7674,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We describe the resource's development, practical applications, and potential for future expansion and enhancement.",
   "entity_id": "model:drivr-base",
   "fate_axis": [
    "where"
@@ -7664,6 +7714,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we propose DrugPT, a novel Transformer-based framework for predicting gene expression changes upon drug treatment.",
   "entity_id": "model:drugpt",
   "fate_axis": [
    "what"
@@ -8330,6 +8381,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce EpiExpr, a flexible deep learning framework that predicts gene expression from 1D epigenetic tracks (EpiExpr-1D) and integrates 3D chromatin interactions (EpiExpr-3D) to capture distal regulatory effects.",
   "entity_id": "model:epiexpr",
   "fate_axis": [
    "where"
@@ -8488,6 +8540,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present Evo, a long-context genomic foundation model with a frontier architecture trained on millions of prokaryotic and phage genomes, and report scaling laws on DNA to complement observations in language and vision.",
   "entity_id": "model:evo",
   "fate_axis": [
    "how"
@@ -9056,6 +9109,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We developed a deep learning-based framework, ExPecto, that can accurately predict, ab initio from a DNA sequence, the tissue-specific transcriptional effects of mutations, including those that are rare or that have not been observed.",
   "entity_id": "model:expecto",
   "fate_axis": [
    "where"
@@ -9886,6 +9940,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present GenART, a genomic language model framework that dynamically segments DNA into variable-length words directly from raw sequences without manual annotation.",
   "entity_id": "model:genart",
   "fate_axis": [
    "how"
@@ -9965,6 +10020,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce G ene J epa , a self-supervised foundation model that learns a predictive world model of single-cell transcriptomes.",
   "entity_id": "model:genejepa",
   "fate_axis": [
    "what"
@@ -10085,6 +10141,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present GenomeHarness, an agentic harness for adapting genome language models through controlled search over fine-tuning recipes.",
   "entity_id": "model:genomeharness",
   "fate_axis": [
    "how"
@@ -10342,6 +10399,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we present gReLU, a comprehensive software framework that enables advanced sequence modeling pipelines, including data preprocessing, modeling, evaluation, interpretation, variant effect prediction and regulatory element design.",
   "entity_id": "model:grelu",
   "fate_axis": [
    "where"
@@ -10487,6 +10545,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We propose HyCoSeq, a contextual hyperbolic representation learning framework for genomic sequences.",
   "entity_id": "model:hycoseq",
   "fate_axis": [
    "how"
@@ -10643,6 +10702,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we introduce Lingshu-Cell, a masked discrete diffusion model that learns transcriptomic state distributions and supports conditional simulation under perturbation.",
   "entity_id": "model:lingshu-cell",
   "fate_axis": [
    "what"
@@ -10681,6 +10741,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we present LucaCell, a sequence-centric foundation model that represents genes through pre-trained mRNA sequence embeddings rather than static gene annotations.",
   "entity_id": "model:lucacell",
   "fate_axis": [
    "what"
@@ -10721,6 +10782,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present MAP , a framework that integrates structured biological knowledge into cellular perturbation modeling and supports zero-shot prediction for small molecules with scarce or absent perturbation profiles.",
   "entity_id": "model:map",
   "fate_axis": [
    "what"
@@ -10825,6 +10887,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we present MultiPert, a deep learning framework specifically designed for predicting perturbation responses in single-cell multi-omics data.",
   "entity_id": "model:multipert",
   "fate_axis": [
    "what"
@@ -12395,6 +12458,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce Oyster, the first convolutional architecture that can be toggled between Exact (ignoring associations) and non-Exact modes.",
   "entity_id": "model:oyster",
   "fate_axis": [
    "where"
@@ -12426,6 +12490,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we introduce Parnet, an RNA foundation model trained directly and exclusively on experimental CLIP-seq data.",
   "entity_id": "model:parnet",
   "fate_axis": [
    "where"
@@ -12505,6 +12570,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we introduce PertDiffBench, a standardized benchmark for diffusion-based transcriptomic perturbation prediction across single-cell and bulk RNA- seq datasets.",
   "entity_id": "model:pertdiffbench",
   "fate_axis": [
    "what"
@@ -12590,6 +12656,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We propose PerturbBridge, a conditional latent Schrödinger Bridge framework that reformulates stochastic population transport over high-dimensional, sparse geneexpression profiles as bridge learning in a compact cell latent space.",
   "entity_id": "model:perturbbridge",
   "fate_axis": [
    "what"
@@ -12695,6 +12762,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present the first systematic study of training data poisoning in genomic language models, targeting both pre-training and fine-tuning stages.",
   "entity_id": "model:poisoning-the-genome",
   "fate_axis": [
    "how"
@@ -12886,6 +12954,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we present RegFM, a context- aware foundation model for human transcriptional regulation.",
   "entity_id": "model:regfm",
   "fate_axis": [
    "what"
@@ -12958,6 +13027,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present SCALE, a conditional transport model that represents cells as unordered sets and predicts treated populations without cell-level matching.",
   "entity_id": "model:scale",
   "fate_axis": [
    "what"
@@ -13002,6 +13072,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present ScAPE (Single Cell Analysis of Perturbational Effects), an ML method for predicting drug-induced gene expression changes.",
   "entity_id": "model:scape",
   "fate_axis": [
    "what"
@@ -13074,6 +13145,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we introduce scBasset, a sequence-based convolutional neural network method to model scATAC data.",
   "entity_id": "model:scbasset",
   "fate_axis": [
    "where"
@@ -13319,6 +13391,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we introduce scooby, the first framework to model scRNA-seq coverage and scATAC-seq insertion profiles along the genome from sequence at single-cell resolution.",
   "entity_id": "model:scooby",
   "fate_axis": [
    "where"
@@ -13564,6 +13637,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present four tasks for contextual learning at single-cell resolution: drug-target nomination, genetic perturbation response prediction, chemical perturbation response prediction, and protein-peptide interaction prediction.",
   "entity_id": "model:signals-in-the-cells",
   "fate_axis": [
    "what"
@@ -13602,6 +13676,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we present SLIM, a lightweight extension of the bilinear model of Ahlmann-Eltze et al. SLIM represents perturbations with 64-dimensional embeddings derived from the STRING protein network and predicts mean transcriptional responses through a closed-form ridge-regression estimator.",
   "entity_id": "model:slim",
   "fate_axis": [
    "what"
@@ -13716,6 +13791,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We developed SpliSync, a genomic language model-driven method for splice site correction that integrates a pre-trained genomic sequence model (HyenaDNA), alignment data, and a U-net architecture to predict splice sites at nucleotide resolution.",
   "entity_id": "model:splisync",
   "fate_axis": [
    "how"
@@ -13754,6 +13830,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we developed a contact-map predictor utilizing the output of a pre-trained language model ESM-1b as an input along with a large training set and an ensemble of residual neural networks.",
   "entity_id": "model:spot-contact-lm",
   "fate_axis": [
    "where"
@@ -13795,6 +13872,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we developed a contact-map predictor utilizing the output of a pre-trained language model ESM-1b as an input along with a large training set and an ensemble of residual neural networks.",
   "entity_id": "model:spot-contact-single",
   "fate_axis": [
    "where"
@@ -13836,6 +13914,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present STAMPS (Signal-peptide Transformer for Augmenting Mammalian Protein Secretion), a generative, autoregressive transformer fine-tuned on ∼6,000 mammalian signal peptides to design de novo sequences that modulate and enhance secretion across proteins and hosts.",
   "entity_id": "model:stamps",
   "fate_axis": [
    "where"
@@ -13872,6 +13951,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We propose Count Flow Map, a generative model that learns finite-time transitions directly in count space for one- or few-step generation.",
   "entity_id": "model:stochastic-flow-map-for-count-data",
   "fate_axis": [
    "what"
@@ -13985,6 +14065,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we introduce V3Cell, a vision-guided framework that constructs in silico surrogates of organoids directly from non-invasive bright-field microscopy.",
   "entity_id": "model:v3cell",
   "fate_axis": [
    "what"
@@ -14032,6 +14113,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we present VariantFormer, a 1.2-billion-parameter transformer that predicts gene-level RNA abundance directly from personalized diploid genomes.",
   "entity_id": "model:variantformer",
   "fate_axis": [
    "where"
@@ -14104,6 +14186,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We introduce a mechanism-centric virtual cell world model that represents cellular state as a set of Latent Mechanism Units (LMUs) and treats genetic perturbations as actions on these latent states.",
   "entity_id": "model:vclmu",
   "fate_axis": [
    "what"
@@ -14340,6 +14423,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here, we present XChrom, a deep learning framework for genome-wide cross-cell chromatin accessibility prediction that integrates genomic sequence and single- cell transcriptomics-derived cell identity into a unified model.",
   "entity_id": "model:xchrom",
   "fate_axis": [
    "where"
@@ -14709,6 +14793,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We describe an assay for transposase-accessible chromatin using sequencing (ATAC-seq), based on direct in vitro transposition of sequencing adaptors into native chromatin, as a rapid and sensitive method for integrative epigenomic analysis.",
   "entity_id": "protocol:atac-seq",
   "fate_axis": [
    "where"
@@ -14743,6 +14828,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "Here we describe Cleavage Under Targets and Tagmentation (CUT&Tag), an enzyme-tethering strategy that provides efficient high- resolution sequencing libraries for profiling diverse chromatin components.",
   "entity_id": "protocol:cut-tag",
   "fate_axis": [
    "where"
@@ -14975,6 +15061,7 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
+  "description": "We present Omni-ATAC, an improved ATAC-seq protocol for chromatin accessibility profiling that works across multiple applications with substantial improvement of signal-to-background ratio and information content.",
   "entity_id": "protocol:omni-atac",
   "fate_axis": [
    "where"

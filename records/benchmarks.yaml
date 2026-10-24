@@ -154,6 +154,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we propose a genomic AI benchmark, GUANinE, for evaluating model
+    generalization across a number of distinct genomic tasks.
   papers:
     - paper_id: 10.1101/2023.10.12.562113
       role: primary
@@ -165,6 +168,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we introduce RegDesign-Bench, a standardized framework for
+    evaluating cell-type-specific cis-regulatory element design through a
+    comprehensive set of computational analyses.
   papers:
     - paper_id: 10.64898/2026.10.18.759890
       role: primary
@@ -214,6 +221,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce GenomeQA, a benchmark designed to provide a controlled
+    evaluation setting for general-purpose LLMs on sequence-based genome
+    inference tasks.
   papers:
     - paper_id: arxiv:2604.05774
       role: primary
@@ -290,6 +301,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We propose AmbiModBench, a specificity-aware, gene- resolved and
+    coverage-aware benchmark.
   papers:
     - paper_id: arxiv:2609.32527
       role: primary
@@ -301,6 +315,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce a neural encoder Table2Vec for automated universal
+    representation learning of entities such as customers from all-round
+    enterprise DNA with automated data characteristics analysis and data
+    quality augmentation.
   papers:
     - paper_id: arxiv:2112.01830
       role: primary
@@ -339,6 +358,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Herein, we introduce MVCBench, a comprehensive benchmarking framework for
+    evaluating drug molecular and gene representation methods in predicting
+    drug-induced multimodal virtual cell (MVC) phenotypes.
   papers:
     - paper_id: 10.64898/2026.04.22.720110
       role: primary
@@ -411,6 +434,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we propose HiFi-ST, a conditional neural field framework for
+    continuous spatial transcriptomics modeling.
   papers:
     - paper_id: 10.64898/2026.06.29.735170
       role: primary
@@ -422,6 +448,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we develop controlled evaluation metrics based on well-characterized
+    nuclear and mitochondrial sequence features and curated variant sets.
   papers:
     - paper_id: 10.64898/2026.03.10.710786
       role: primary
@@ -499,6 +528,10 @@
   links:
     - kind: code
       url: "https://github.com/Graylab/FLAb"
+  description: >-
+    Here, we introduce the second iteration of the Fitness Landscape for
+    Antibodies (FLAb2), the largest public therapeutic antibody design
+    benchmark to date.
   papers:
     - paper_id: 10.64898/2025.12.27.696706
       role: primary
@@ -560,6 +593,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We propose a benchmark to assess accuracy of short reads mapping based on
+    the pre-computed global alignment of related genome sequences.
   papers:
     - paper_id: arxiv:1504.06659
       role: primary
@@ -616,6 +652,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present IdeaGene-Bench (IG-Bench), a benchmark for scientific lineage
+    reasoning and lineage-grounded idea generation.
   papers:
     - paper_id: arxiv:2607.08758
       role: primary
@@ -649,6 +688,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present BioSecBench-Surveillance, a verifiable benchmark of 100
+    evaluations testing whether AI agents can infer the right analysis
+    pipeline from raw sequencing data and surveillance context.
   papers:
     - paper_id: arxiv:2607.19262
       role: primary
@@ -726,6 +769,9 @@
   links:
     - kind: code
       url: "https://github.com/Liu-Hy/GenoTEX"
+  description: >-
+    We propose GenoTEX as a promising resource for benchmarking and enhancing
+    automated methods for gene expression data analysis.
   papers:
     - paper_id: arxiv:2406.15341
       role: primary
@@ -737,6 +783,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce AGQA 2.0, a version of this benchmark with several
+    improvements, most namely a stricter balancing procedure.
   papers:
     - paper_id: arxiv:2204.06105
       role: primary
@@ -809,6 +858,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present Action Genome Question Answering (AGQA), a new benchmark for
+    compositional spatio-temporal reasoning.
   papers:
     - paper_id: arxiv:2103.16002
       role: primary
@@ -844,6 +896,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We propose LassoBench, the first benchmark suite tailored for Weighted
+    Lasso regression.
   papers:
     - paper_id: arxiv:2111.02790
       role: primary
@@ -892,6 +947,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we propose a benchmark application to evaluate the proficiency of
+    LLMs to answer materials science questions through the generation and safe
+    execution of codes based on such physics-based computational materials
+    science packages.
   papers:
     - paper_id: arxiv:2505.10852
       role: primary
@@ -938,6 +998,12 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce OncoTraj, a public benchmark of 813 EGFR-mutant NSCLC
+    patients receiving first-line osimertinib, harmonized from three
+    real-world clinical-genomic sources: MSK-CHORD (672 patients), AACR
+    Project GENIE BPC NSCLC (34 patients), and the FLAURA molecular-resistance
+    supplement (107 patients).
   papers:
     - paper_id: arxiv:2606.11144
       role: primary
@@ -952,6 +1018,11 @@
   links:
     - kind: code
       url: "https://github.com/LUNAProject22/Know-Show"
+  description: >-
+    We present Know-Show, a new benchmark designed to evaluate spatio-temporal
+    grounded reasoning, the ability of a model to reason about actions and
+    their semantics while simultaneously grounding its inferences in visual
+    and temporal evidence.
   papers:
     - paper_id: arxiv:2512.05513
       role: primary
@@ -966,6 +1037,9 @@
   links:
     - kind: code
       url: "https://github.com/MuhammadMuneeb007/CAGI7_Annotate_All_Missense"
+  description: >-
+    We present AnnotateMissense, a scalable annotation, benchmarking and
+    genome-wide prediction framework for missense variant interpretation.
   papers:
     - paper_id: arxiv:2605.24520
       role: primary
@@ -1015,6 +1089,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We developed Plato-Bio, a biology-routed extension of the open
+    Plato/Denario architecture that couples explicit workflow states with
+    provenance records, citation checks, claim-to- evidence links, scoped file
+    writes, and publication gates.
   papers:
     - paper_id: arxiv:2607.23975
       role: primary
@@ -1103,6 +1182,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we present Nahual, an open-source framework for reproducible model
+    deployment, and JUMP-lite, a 92.0 GB subset of JUMP that is approximately
+    1,250-fold smaller, selected to cover genetic modalities and compound
+    annotations and reduced via lossy JPEG XL compression.
   papers:
     - paper_id: arxiv:2608.07632
       role: primary
@@ -1129,6 +1213,9 @@
   links:
     - kind: code
       url: "https://github.com/BioX-NKU/ASTER"
+  description: >-
+    Here, we propose ASTER, an ensemble learning- based tool for accurately
+    estimating the number of cell types in scCAS data.
   papers:
     - paper_id: 10.1093/bioinformatics/btac842
       role: primary

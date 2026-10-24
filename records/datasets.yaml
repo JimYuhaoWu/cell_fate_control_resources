@@ -300,6 +300,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present an analytical framework for interpreting high-dimensional
+    landscapes of cell states (manifolds) constructed from transcriptional
+    phenotypes.
   papers:
     - paper_id: 10.1126/science.aax4438
       role: primary
@@ -324,6 +328,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we develop Perturb-seq, combining single-cell RNA sequencing
+    (RNA-seq) and clustered regularly interspaced short palindromic repeats
+    (CRISPR)-based perturbations to perform many such assays in a pool.
   papers:
     - paper_id: 10.1016/j.cell.2016.11.038
       role: primary
@@ -336,6 +344,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we introduce "sci-Plex," which uses "nuclear hashing" to quantify
+    global transcriptional responses to thousands of independent perturbations
+    at single-cell resolution.
   papers:
     - paper_id: 10.1126/science.aax6234
       role: primary
@@ -360,6 +372,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we describe the integrative analysis of 111 reference human
+    epigenomes generated as part of the programme, profiled for histone
+    modification patterns, DNA accessibility, DNA methylation and RNA
+    expression.
   papers:
     - paper_id: 10.1038/nature14248
       role: primary

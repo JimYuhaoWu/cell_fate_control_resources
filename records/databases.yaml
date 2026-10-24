@@ -74,6 +74,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present a major update of the HOCOMOCO collection that provides DNA
+    binding specificity patterns of 949 human transcription factors and 720
+    mouse orthologs.
   papers:
     - paper_id: 10.1093/nar/gkad1077
       role: primary

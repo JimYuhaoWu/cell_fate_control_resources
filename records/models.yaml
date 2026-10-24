@@ -819,6 +819,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present VariantFormer, a 1.2-billion-parameter transformer that
+    predicts gene-level RNA abundance directly from personalized diploid
+    genomes.
   papers:
     - paper_id: 10.1101/2025.10.31.685862
       role: primary
@@ -844,6 +848,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We propose PerturbBridge, a conditional latent Schrödinger Bridge
+    framework that reformulates stochastic population transport over
+    high-dimensional, sparse geneexpression profiles as bridge learning in a
+    compact cell latent space.
   papers:
     - paper_id: 10.64898/2026.09.24.754259
       role: primary
@@ -856,6 +865,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we introduce PertDiffBench, a standardized benchmark for
+    diffusion-based transcriptomic perturbation prediction across single-cell
+    and bulk RNA- seq datasets.
   papers:
     - paper_id: 10.64898/2026.06.13.732013
       role: primary
@@ -979,6 +992,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present XChrom, a deep learning framework for genome-wide
+    cross-cell chromatin accessibility prediction that integrates genomic
+    sequence and single- cell transcriptomics-derived cell identity into a
+    unified model.
   papers:
     - paper_id: 10.1101/2025.11.18.689149
       role: primary
@@ -1135,6 +1153,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We propose HyCoSeq, a contextual hyperbolic representation learning
+    framework for genomic sequences.
   papers:
     - paper_id: arxiv:2609.16925
       role: primary
@@ -1166,6 +1187,9 @@
   links:
     - kind: code
       url: "https://github.com/kundajelab/regulatory_lm"
+  description: >-
+    We introduce ARSENAL , a short-context masked DNA language model
+    pretrained on ENCODE candidate cis-regulatory elements.
   papers:
     - paper_id: 10.64898/2026.02.05.703637
       role: primary
@@ -1196,6 +1220,12 @@
       url: "https://github.com/RasmussenLab/SLIM"
   model_ext:
     license: MIT
+  description: >-
+    Here we present SLIM, a lightweight extension of the bilinear model of
+    Ahlmann-Eltze et al. SLIM represents perturbations with 64-dimensional
+    embeddings derived from the STRING protein network and predicts mean
+    transcriptional responses through a closed-form ridge-regression
+    estimator.
   papers:
     - paper_id: 10.64898/2026.08.07.743481
       role: primary
@@ -1250,6 +1280,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we present gReLU, a comprehensive software framework that enables
+    advanced sequence modeling pipelines, including data preprocessing,
+    modeling, evaluation, interpretation, variant effect prediction and
+    regulatory element design.
   papers:
     - paper_id: 10.1038/s41592-025-02868-z
       role: primary
@@ -1345,6 +1380,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we introduce DeepCis, a Transformer-based multi-omics framework that
+    integrates base-level genomic sequence and epigenomics features, as well
+    as region-level 3D chromatin organization to capture regulatory
+    information across multiple scales.
   papers:
     - paper_id: 10.21203/rs.3.rs-8988269/v1
       role: primary
@@ -1434,6 +1474,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we propose an architecture motivated by these challenges that builds
+    off the long- range Mamba block, and extends it to a BiMamba component
+    that supports bi-directionality, and to a MambaDNA block that additionally
+    supports RC equivariance.
   papers:
     - paper_id: arxiv:2403.03234
       role: primary
@@ -1449,6 +1494,10 @@
   links:
     - kind: code
       url: "https://github.com/Laineyoulu/V3Cell"
+  description: >-
+    Here we introduce V3Cell, a vision-guided framework that constructs in
+    silico surrogates of organoids directly from non-invasive bright-field
+    microscopy.
   papers:
     - paper_id: 10.64898/2026.06.23.734130
       role: primary
@@ -1544,6 +1593,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present four tasks for contextual learning at single-cell resolution:
+    drug-target nomination, genetic perturbation response prediction, chemical
+    perturbation response prediction, and protein-peptide interaction
+    prediction.
   papers:
     - paper_id: 10.1101/2024.06.12.598655
       role: primary
@@ -1613,6 +1667,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we introduce scooby, the first framework to model scRNA-seq coverage
+    and scATAC-seq insertion profiles along the genome from sequence at
+    single-cell resolution.
   papers:
     - paper_id: 10.1101/2024.09.19.613754
       role: primary
@@ -1786,6 +1844,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce a mechanism-centric virtual cell world model that represents
+    cellular state as a set of Latent Mechanism Units (LMUs) and treats
+    genetic perturbations as actions on these latent states.
   papers:
     - paper_id: arxiv:2610.04475
       role: primary
@@ -1888,6 +1950,10 @@
   links:
     - kind: code
       url: "https://github.com/MengyuanZhaoo/MultiPert"
+  description: >-
+    Here, we present MultiPert, a deep learning framework specifically
+    designed for predicting perturbation responses in single-cell multi-omics
+    data.
   papers:
     - paper_id: 10.1371/journal.pcbi.1014054
       role: primary
@@ -1900,6 +1966,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present MAP , a framework that integrates structured biological
+    knowledge into cellular perturbation modeling and supports zero-shot
+    prediction for small molecules with scarce or absent perturbation
+    profiles.
   papers:
     - paper_id: 10.64898/2026.02.25.708091
       role: primary
@@ -1930,6 +2001,10 @@
       url: "https://github.com/souryacs/3CExpr"
   model_ext:
     license: MIT
+  description: >-
+    We introduce EpiExpr, a flexible deep learning framework that predicts
+    gene expression from 1D epigenetic tracks (EpiExpr-1D) and integrates 3D
+    chromatin interactions (EpiExpr-3D) to capture distal regulatory effects.
   papers:
     - paper_id: 10.64898/2026.02.06.704509
       role: primary
@@ -2185,6 +2260,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present DeepSCENIC, a deep learning framework that enables causal
+    GRN inference by performing transfer learning from S2F models to
+    single-cell multiome atlases.
   papers:
     - paper_id: 10.64898/2026.09.18.752607
       role: primary
@@ -2372,6 +2451,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we introduce Lingshu-Cell, a masked discrete diffusion model that
+    learns transcriptomic state distributions and supports conditional
+    simulation under perturbation.
   papers:
     - paper_id: arxiv:2603.25240
       role: primary
@@ -2463,6 +2546,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we developed DeepGEP, an attention-based Long Short-Term Memory
+    model trained on 228 datasets, including RNA-seq, ATAC-seq, and ChIP-seq
+    of four histone modifications (H3K4me3, H3K4me1, H3K27ac, H3K27me3) from
+    humans, pigs, and cattle.
   papers:
     - paper_id: 10.1016/j.ygeno.2026.111285
       role: primary
@@ -2513,6 +2601,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce Oyster, the first convolutional architecture that can be
+    toggled between Exact (ignoring associations) and non-Exact modes.
   papers:
     - paper_id: 10.1101/2025.11.01.686014
       role: primary
@@ -2602,6 +2693,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present the first systematic study of training data poisoning in
+    genomic language models, targeting both pre-training and fine-tuning
+    stages.
   papers:
     - paper_id: arxiv:2603.27465
       role: primary
@@ -2614,6 +2709,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we present LucaCell, a sequence-centric foundation model that
+    represents genes through pre-trained mRNA sequence embeddings rather than
+    static gene annotations.
   papers:
     - paper_id: 10.21203/rs.3.rs-11151765/v1
       role: primary
@@ -2665,6 +2764,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce CaLMFlow (Causal Language Models for Flow Matching), a novel
+    framework that casts flow matching as a Volterra integral equation (VIE),
+    leveraging the power of large language models (LLMs) for continuous data
+    generation.
   papers:
     - paper_id: arxiv:2410.05292
       role: primary
@@ -2703,6 +2807,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present DanioDecima, a zebrafish-specific model leveraging transfer
+    learning from human and mouse-trained models to predict tissue- and
+    cell-type-specific gene expression during zebrafish embryogenesis.
   papers:
     - paper_id: 10.64898/2026.05.29.728876
       role: primary
@@ -2985,6 +3093,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present ScAPE (Single Cell Analysis of Perturbational Effects), an ML
+    method for predicting drug-induced gene expression changes.
   papers:
     - paper_id: 10.1101/2025.09.08.674873
       role: primary
@@ -3037,6 +3148,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We propose Count Flow Map, a generative model that learns finite-time
+    transitions directly in count space for one- or few-step generation.
   papers:
     - paper_id: arxiv:2609.23290
       role: primary
@@ -3130,6 +3244,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we introduce Parnet, an RNA foundation model trained directly and
+    exclusively on experimental CLIP-seq data.
   papers:
     - paper_id: 10.64898/2026.08.08.743506
       role: primary
@@ -3271,6 +3388,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present DeepWheat, a broadly applicable deep learning framework
+    comprising DeepEXP and DeepEPI, for accurate, tissue-specific gene
+    expression prediction.
   papers:
     - paper_id: 10.1186/s13059-025-03809-x
       role: primary
@@ -3311,6 +3432,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present C arbon , a family of efficient generative DNA language models
+    designed as a practical reference point for this setting.
   papers:
     - paper_id: 10.64898/2026.05.22.727119
       role: primary
@@ -3328,6 +3452,9 @@
       url: "https://github.com/amyfrancis-science/DrivR-Base"
   model_ext:
     license: GPL-3.0
+  description: >-
+    We describe the resource's development, practical applications, and
+    potential for future expansion and enhancement.
   papers:
     - paper_id: 10.1093/bioinformatics/btae197
       role: primary
@@ -3425,6 +3552,10 @@
       url: "https://github.com/bliulab/DECANT"
   model_ext:
     license: MIT
+  description: >-
+    We developed DECANT to learn mechanism-aligned perturbation
+    representations that remain stable across context shifts while preserving
+    response fidelity.
   papers:
     - paper_id: 10.1093/bioinformatics/btag662
       role: primary
@@ -3782,6 +3913,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we present RegFM, a context- aware foundation model for human
+    transcriptional regulation.
   papers:
     - paper_id: 10.64898/2026.08.17.744355
       role: primary
@@ -3794,6 +3928,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present DoFormer , a causal multimodal Transformer that makes no DAG
+    assumptions and leverages rich perturbational data to accurately predict
+    previously unseen perturbations.
   papers:
     - paper_id: 10.64898/2026.05.02.722054
       role: primary
@@ -3911,6 +4049,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we introduce CENO, a family of long-context generative genomic world
+    models designed to preserve local DNA grammar while extending usable
+    context to regulatory and chromatin scales.
   papers:
     - paper_id: 10.64898/2026.07.28.741284
       role: primary
@@ -3958,6 +4100,11 @@
       url: "https://github.com/splicebox/SpliSync"
   model_ext:
     license: GPL-3.0
+  description: >-
+    We developed SpliSync, a genomic language model-driven method for splice
+    site correction that integrates a pre-trained genomic sequence model
+    (HyenaDNA), alignment data, and a U-net architecture to predict splice
+    sites at nucleotide resolution.
   papers:
     - paper_id: 10.64898/2026.07.04.736518
       role: primary
@@ -3999,6 +4146,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present GenART, a genomic language model framework that dynamically
+    segments DNA into variable-length words directly from raw sequences
+    without manual annotation.
   papers:
     - paper_id: 10.1016/j.crmeth.2026.101516
       role: primary
@@ -4118,6 +4269,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce DNAChunker, a masked DNA language model that incorporates a
+    learnable adaptive segmentation module to produce context-dependent,
+    variable-length units.
   papers:
     - paper_id: arxiv:2601.03019
       role: primary
@@ -4183,6 +4338,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present GenomeHarness, an agentic harness for adapting genome language
+    models through controlled search over fine-tuning recipes.
   papers:
     - paper_id: arxiv:2608.21916
       role: primary
@@ -4285,6 +4443,10 @@
       url: "https://github.com/bioscan-ml/BarcodeBERT"
   model_ext:
     license: MIT
+  description: >-
+    We introduce BarcodeBERT, a family of models tailored to biodiversity
+    analysis and trained exclusively on data from a reference library of 1.5M
+    invertebrate DNA barcodes.
   papers:
     - paper_id: arxiv:2311.02401
       role: primary
@@ -4367,6 +4529,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present SCALE, a conditional transport model that represents cells as
+    unordered sets and predicts treated populations without cell-level
+    matching.
   papers:
     - paper_id: 10.64898/2026.03.17.712536
       role: primary
@@ -4404,6 +4570,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce differentially expressed gene (DEG)-aware metrics, weighted
+    mean-squared error (WMSE) and weighted delta $R^{2}$ ($R^{2}_{w}(Δ)$) with
+    respect to all perturbations, that measure error in niche signals with
+    high sensitivity.
   papers:
     - paper_id: arxiv:2506.22641
       role: primary
@@ -4416,6 +4587,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present CellScientist, a protocol-constrained workflow that converts
+    execution and validation feedback into auditable model-revision
+    trajectories.
   papers:
     - paper_id: arxiv:2605.07335
       role: primary
@@ -4458,6 +4633,10 @@
       url: "https://github.com/jas-preet/SPOT-Contact-LM"
   model_ext:
     license: MPL-2.0
+  description: >-
+    Here, we developed a contact-map predictor utilizing the output of a
+    pre-trained language model ESM-1b as an input along with a large training
+    set and an ensemble of residual neural networks.
   papers:
     - paper_id: 10.1093/bioinformatics/btac053
       role: primary
@@ -4475,6 +4654,10 @@
       url: "https://github.com/jas-preet/SPOT-Contact-LM"
   model_ext:
     license: MPL-2.0
+  description: >-
+    Here, we developed a contact-map predictor utilizing the output of a
+    pre-trained language model ESM-1b as an input along with a large training
+    set and an ensemble of residual neural networks.
   papers:
     - paper_id: 10.1101/2021.06.19.449089
       role: primary
@@ -4565,6 +4748,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce G ene J epa , a self-supervised foundation model that learns
+    a predictive world model of single-cell transcriptomes.
   papers:
     - paper_id: 10.1101/2025.10.14.682378
       role: primary
@@ -4577,6 +4763,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we present BioM-JEPA, a joint- embedding predictive architecture that
+    instead predicts aggregate representations of graph-connected gene blocks
+    defined by protein- association and corpus-derived coexpression evidence.
   papers:
     - paper_id: arxiv:2608.05928
       role: primary
@@ -4628,6 +4818,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present STAMPS (Signal-peptide Transformer for Augmenting Mammalian
+    Protein Secretion), a generative, autoregressive transformer fine-tuned on
+    ∼6,000 mammalian signal peptides to design de novo sequences that modulate
+    and enhance secretion across proteins and hosts.
   papers:
     - paper_id: 10.1101/2025.11.20.689577
       role: primary
@@ -4759,6 +4954,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we propose DrugPT, a novel Transformer-based framework for
+    predicting gene expression changes upon drug treatment.
   papers:
     - paper_id: 10.1101/2025.07.25.665130
       role: primary
@@ -4784,6 +4982,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we develop a machine-learning system to predict cell-type- specific
+    epigenetic and transcriptional profiles in large mammalian genomes from
+    DNA sequence alone.
   papers:
     - paper_id: 10.1101/gr.227819.117
       role: primary
@@ -4808,6 +5010,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we introduce scBasset, a sequence-based convolutional neural network
+    method to model scATAC data.
   papers:
     - paper_id: 10.1038/s41592-022-01562-8
       role: primary
@@ -4883,6 +5088,9 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce the open source package Basset to apply CNNs to learn the
+    functional activity of DNA sequences from genomics data.
   papers:
     - paper_id: 10.1101/gr.200535.115
       role: primary
@@ -4895,6 +5103,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We developed a deep learning-based framework, ExPecto, that can accurately
+    predict, ab initio from a DNA sequence, the tissue-specific
+    transcriptional effects of mutations, including those that are rare or
+    that have not been observed.
   papers:
     - paper_id: 10.1038/s41588-018-0160-6
       role: primary
@@ -4919,6 +5132,10 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce a deep learning model, BPNet, that uses DNA sequence to
+    predict base-resolution chromatin immunoprecipitation (ChIP)-nexus binding
+    profiles of pluripotency TFs.
   papers:
     - paper_id: 10.1038/s41588-021-00782-6
       role: primary
@@ -4933,6 +5150,9 @@
   date_updated: 2026-10-23
   model_ext:
     output_type: [contact-map]
+  description: >-
+    Here we present a convolutional neural network, Akita, that accurately
+    predicts genome folding from DNA sequence alone.
   papers:
     - paper_id: 10.1038/s41592-020-0958-x
       role: primary
@@ -4976,6 +5196,11 @@
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present Evo, a long-context genomic foundation model with a frontier
+    architecture trained on millions of prokaryotic and phage genomes, and
+    report scaling laws on DNA to complement observations in language and
+    vision.
   papers:
     - paper_id: 10.1126/science.ado9336
       role: primary
