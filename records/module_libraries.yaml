@@ -143,7 +143,6 @@
   name: Soto 2022 Compendium human transcription
   year: 2022
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -156,7 +155,6 @@
   name: DelRosso 2024 High-Throughput Measurements Identify
   year: 2024
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -169,7 +167,6 @@
   name: Ludwig 2023 High-throughput discovery characterization
   year: 2023
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -182,7 +179,6 @@
   name: Erkine 2024 Enigma Transcriptional Activation
   year: 2024
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -195,7 +191,6 @@
   name: DelRosso 2024 High-throughput affinity measurements
   year: 2024
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -208,7 +203,6 @@
   name: Mukund 2023 High-throughput functional characterization
   year: 2023
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -221,7 +215,6 @@
   name: Staller 2022 Directed mutational scanning
   year: 2022
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -234,7 +227,6 @@
   name: Staller 2017 deep mutational scan
   year: 2017
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -247,7 +239,6 @@
   name: Levati 2016 Dry wet approaches
   year: 2016
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -260,7 +251,6 @@
   name: Valerio 2017 Histone Acetyltransferase Activity
   year: 2017
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -273,7 +263,6 @@
   name: Zhang 2026 Condensates chromatin regulator
   year: 2026
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -286,7 +275,6 @@
   name: Zhang 2026 Decoding chromatin regulator-LAIR1
   year: 2026
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -299,7 +287,6 @@
   name: RKS 2024 Chromatin Regulator SMARCA4
   year: 2024
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -312,10 +299,14 @@
   name: Strobel 2020 High-throughput identification synthetic
   year: 2020
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we describe a fast and broadly applicable method to functionally
+    screen complex riboswitch libraries (~1.8 × 10 4 constructs) by
+    cDNA-amplicon-sequencing in transiently transfected and stimulated human
+    cells.
   papers:
     - paper_id: 10.1038/s41467-020-14491-x
       role: primary
@@ -325,7 +316,6 @@
   name: Liao 2023 Identification chromatin regulator
   year: 2023
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -338,7 +328,6 @@
   name: Xiong 2017 Development immunoassay detect
   year: 2017
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -351,7 +340,6 @@
   name: Liu 2022 chromatin regulator-related immune
   year: 2022
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -364,7 +352,6 @@
   name: Zhu 2022 Identification chromatin regulator
   year: 2022
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -377,7 +364,6 @@
   name: Pan 2018 major chromatin regulator
   year: 2018
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -390,10 +376,13 @@
   name: Morita 2020 Synergistic Upregulation Target
   year: 2020
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we describe the screening of factors that exhibit the best
+    synergistic activation of gene expression with TET1 in the dCas9-SunTag
+    format.
   papers:
     - paper_id: 10.3390/ijms21051574
       role: primary
@@ -403,7 +392,6 @@
   name: Malgulwar 2026 ATRX inactivation disrupts
   year: 2026
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -416,7 +404,6 @@
   name: Sanborn 2021 Simple biochemical features
   year: 2021
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -429,7 +416,6 @@
   name: Staller 2018 High-Throughput Mutational Scan
   year: 2018
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -442,10 +428,14 @@
   name: Partridge 2020 Occupancy maps 208
   year: 2020
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we present, as part of the ENCODE (Encyclopedia of DNA Elements)
+    project, data and analyses from chromatin immunoprecipitation followed by
+    high-throughput sequencing (ChIP-seq) experiments using the human HepG2
+    cell line for 208 chromatin-associated proteins (CAPs).
   papers:
     - paper_id: 10.1038/s41586-020-2023-4
       role: primary
@@ -455,7 +445,6 @@
   name: Liu 2026 Epigenetic Factor PHF13
   year: 2026
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -468,7 +457,6 @@
   name: Due 2025 Hierarchy regulator interactions
   year: 2025
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -481,7 +469,6 @@
   name: Chen 2024 inhibiting transcriptional autoactivation
   year: 2024
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -494,7 +481,6 @@
   name: Yakhou 2023 genetic screen identifies
   year: 2023
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -507,7 +493,6 @@
   name: Pallara 2022 Peptidomimetics designed bind
   year: 2022
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -520,7 +505,6 @@
   name: Iruela 2022 FRET-Based Biosensor Src
   year: 2022
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -533,10 +517,13 @@
   name: Weber 2019 PiggyBac transposon tools
   year: 2019
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we describe PiggyBac transposon tools and mouse models for recessive
+    screening and show their application to study clonal B-cell
+    lymphomagenesis.
   papers:
     - paper_id: 10.1038/s41467-019-09180-3
       role: primary
@@ -546,7 +533,6 @@
   name: Takahashi 2018 Identification functional features
   year: 2018
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -559,7 +545,6 @@
   name: Belyy 2016 Actin activates Pseudomonas
   year: 2016
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -572,7 +557,6 @@
   name: Chen 2023 Development synthetic transcription
   year: 2023
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -585,7 +569,6 @@
   name: NFC 2023 identification transcriptional activator
   year: 2023
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -598,7 +581,6 @@
   name: Rafehi 2016 Improving understanding chromatin
   year: 2016
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -611,7 +593,6 @@
   name: Xi 2019 Dynamic Changes DNA
   year: 2019
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -624,10 +605,13 @@
   name: Takahashi 2019 Cell Assays SINEUP
   year: 2019
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present a method to selectively up-regulate protein expression of
+    desired genes in cultured cells by means of synthetic antisense non-coding
+    RNAs known as SINEUPs.
   papers:
     - paper_id: 10.3791/58627
       role: primary
@@ -637,7 +621,6 @@
   name: Alexandrov 2026 Chromatin regulator perturbation
   year: 2026
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -650,7 +633,6 @@
   name: Luan 2026 Targeting oncogenic SOX2
   year: 2026
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -663,10 +645,12 @@
   name: Sonn 2025 MeCP2 interacts super
   year: 2025
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We propose a previously unknown mechanism by which MePC2 regulates gene
+    expression underlying synaptic plasticity.
   papers:
     - paper_id: 10.1126/sciadv.adt5937
       role: primary
@@ -676,7 +660,6 @@
   name: Boyne 2022 multitool multiplex gene
   year: 2022
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -689,7 +672,6 @@
   name: Zhang 2024 Mevalonate kinase inhibits
   year: 2024
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -702,7 +684,6 @@
   name: Li 2022 identified validated BRD4
   year: 2022
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -715,10 +696,13 @@
   name: Plaper 2020 Coiled-coil heterodimers increased
   year: 2020
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we report the design and versatile applications of orthogonal CC
+    dimer-forming peptides with a dissociation constant in the low nanomolar
+    range.
   papers:
     - paper_id: 10.1101/2020.12.10.419440
       role: primary
@@ -728,7 +712,6 @@
   name: Li 2020 Maturation Lipophagic Organelles
   year: 2020
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -741,7 +724,6 @@
   name: Hurtado 2018 Transcriptomic rationale synthetic
   year: 2018
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -754,10 +736,13 @@
   name: "Fernández 2019 Transmembrane Prolines Mediate"
   year: 2019
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we report that individual replacement of prolines in DesKs TM1 and
+    TM5 helices by alanine (DesKPA) locked DesK in a phosphatase-ON state,
+    abrogating membrane fluidity responses.
   papers:
     - paper_id: 10.1128/mbio.02564-19
       role: primary
@@ -767,7 +752,6 @@
   name: Kolundzic 2017 FACT sets barrier
   year: 2017
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -780,7 +764,6 @@
   name: Zhang 2017 Inducible Bcl-2 gene
   year: 2017
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -793,7 +776,6 @@
   name: Tajima 2015 SETD1A modulates cell
   year: 2015
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -806,10 +788,13 @@
   name: Tikhmyanova 2017 Small molecule perturbation
   year: 2017
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We propose that C60 perturbs the normal interaction and function of CAND1
+    with Cullins to promote the stabilization of substrates like ZTA and p53,
+    leading to EBV reactivation from latency.
   papers:
     - paper_id: 10.1371/journal.ppat.1006517
       role: primary
@@ -819,7 +804,6 @@
   name: Braun 2016 Versatile vivo regulation
   year: 2016
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -832,7 +816,6 @@
   name: "Micheva-Viteva 2017 PKC-η-MARCKS Signaling Promotes"
   year: 2017
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -845,7 +828,6 @@
   name: Nishikawa 2016 Inhibiting fungal multidrug
   year: 2016
   fate_axis: [with-what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23

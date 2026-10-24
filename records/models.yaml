@@ -832,7 +832,6 @@
   name: Qiao 2026 Explainable Deep Learning
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -878,7 +877,6 @@
   name: Bie 2026 Dynamic Graph Prior-Guided
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -909,10 +907,13 @@
   name: Wei 2026 Benchmarking algorithms single-cell
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present a comprehensive benchmark of 27 methods for single-cell
+    perturbation response prediction, evaluated across 29 datasets using 6
+    complementary performance metrics.
   papers:
     - paper_id: 10.1038/s41592-025-02980-0
       role: primary
@@ -922,10 +923,14 @@
   name: Zhang 2026 Hierarchical refinements cis-regulatory
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we introduce a two-stage selective framework (TSSF) that performs
+    hierarchical refinements: nucleotide-level masking within each cCRE,
+    followed by cCRE-level selection around each gene, implemented with
+    information-bottleneck priors and a fully Transformer-based architecture.
   papers:
     - paper_id: 10.64898/2026.05.31.729151
       role: primary
@@ -935,7 +940,6 @@
   name: Ramprasad 2024 Enhancing personalized gene
   year: 2024
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -948,7 +952,6 @@
   name: Wu 2026 Synergy-Aware Residual Flow
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -961,10 +964,14 @@
   name: Torghabeh 2026 Genomic language improve
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we developed deep learning sequence-to-expression (S2E) models that
+    leverage context- aware sequence embeddings from the PlantCaduceus genomic
+    language model instead of one-hot encoding of sequences, to predict gene
+    expression across 17 plant species.
   papers:
     - paper_id: 10.64898/2026.02.27.708524
       role: primary
@@ -1006,13 +1013,16 @@
   name: Li 2026 comparison single-cell perturbation
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
   links:
     - kind: code
       url: "https://github.com/TianGzlab/scPerturbBench"
+  description: >-
+    We present a large-scale benchmark of 13 representative methods and
+    baselines across 25 datasets spanning diverse perturbation modalities and
+    species, including two primary immune-cell drug-response resources.
   papers:
     - paper_id: 10.1126/sciadv.aed3414
       role: primary
@@ -1037,7 +1047,6 @@
   name: Vaz 2025 Fine-tuning sequence function
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1074,7 +1083,6 @@
   name: Hasanaj 2025 Multimodal Benchmarking Foundation
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1111,7 +1119,6 @@
   name: Rashidy 2025 Zygosity-Aware DNA Language
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1124,10 +1131,13 @@
   name: Rather 2026 Kidzoi Enables Cell-Type-Specific
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we develop Kidzoi, a kidney cell-type-specific S2F model obtained by
+    transfer learning from the pretrained model Borzoi using single-nucleus
+    chromatin accessibility data from human kidney tissue.
   papers:
     - paper_id: 10.64898/2026.09.28.746288
       role: primary
@@ -1137,7 +1147,6 @@
   name: Liu 2018 Chromatin accessibility prediction
   year: 2018
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1165,7 +1174,6 @@
   name: Min 2017 Chromatin accessibility prediction
   year: 2017
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1199,10 +1207,13 @@
   name: Sigliano 2026 Metric-Calibrated Replay Single-Cell
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present TCPE, a metric-calibrated replay framework that makes scorer
+    orientation, top-k response restriction, seed aggregation, and
+    reference-margin comparison explicit components of a benchmark statement.
   papers:
     - paper_id: 10.21203/rs.3.rs-9955756/v1
       role: primary
@@ -1264,7 +1275,6 @@
   name: Sun 2026 Evaluating sequence-to-function deep
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1294,7 +1304,6 @@
   name: Liu 2026 Pre-training genomic language
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1310,10 +1319,13 @@
   name: Molina 2026 Perturbation response decomposition
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce a decomposition framework that explicitly separates
+    transcriptional responses into global, perturbation-specific,
+    cell-line-specific, and perturbation-by-cell-line interaction components.
   papers:
     - paper_id: 10.64898/2026.07.24.740459
       role: primary
@@ -1338,10 +1350,15 @@
   name: Sun 2026 Pretraining Enhances Megabase-Scale
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we introduce GB.GeneUnet, an 837M-parameter transformer-based U-Net
+    pretrained on 6 trillion tokens from multi-species genomes in OpenGenome2,
+    extending genomic context to 1 Mb with up to 100× inference speedup over
+    GeneMoE, a preliminary MoE transformer baseline of similar model size
+    pretrained on the same data.
   papers:
     - paper_id: 10.64898/2026.08.13.744387
       role: primary
@@ -1351,7 +1368,6 @@
   name: Wang 2026 Integrating histology spatial
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1364,10 +1380,14 @@
   name: Javed 2025 multi-modal transformer cell
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present EpiBERT, a multi-modal transformer that learns
+    generalizable representations of genomic sequence and cell type-specific
+    chromatin accessibility through a masked accessibility-based pre-training
+    objective.
   papers:
     - paper_id: 10.1016/j.xgen.2025.100762
       role: primary
@@ -1394,7 +1414,6 @@
   name: Nagai 2026 interpretable AI regulatory
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1432,7 +1451,6 @@
   name: Grover 2026 Early feature extraction
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1445,7 +1463,6 @@
   name: Grover 2025 Early feature extraction
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1458,7 +1475,6 @@
   name: HTT 2026 Evaluation deep learning
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1507,7 +1523,6 @@
   name: Zhang 2026 Disease relevance replicability
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1520,7 +1535,6 @@
   name: Dubey 2026 Personalized gene expression
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1538,10 +1552,13 @@
   name: Honig 2024 Long-range gene expression
   year: 2024
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce Genetic sequence Token Alignment (GTA), which aligns genetic
+    sequence features with natural language tokens, allowing for symbolic
+    reasoning of genomic sequence features via the frozen language model.
   papers:
     - paper_id: arxiv:2410.01858
       role: primary
@@ -1551,10 +1568,13 @@
   name: Starr 2025 detect positive selection
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we propose that these methods can be considered special cases of a
+    more general framework to detect positive selection with any variant
+    effect prediction method.
   papers:
     - paper_id: 10.1101/2025.09.11.675696
       role: primary
@@ -1564,7 +1584,6 @@
   name: Tiwari 2026 Genetic Perturbation Prediction
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1577,7 +1596,6 @@
   name: Kaufmann 2026 biological-response compound representation
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1622,10 +1640,13 @@
   name: Radig 2025 Tracking biological hallucinations
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present scArchon, a reproducible, modular benchmarking platform
+    built on Snakemake, designed to evaluate perturbation response prediction
+    tools in an unbiased and extensible manner.
   papers:
     - paper_id: 10.1101/2025.06.23.661046
       role: primary
@@ -1635,13 +1656,16 @@
   name: Francesco 2026 Differentiable Retrieval-Augmented Generation
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
   links:
     - kind: code
       url: "https://github.com/difra100/PT-RAG_NIPS"
+  description: >-
+    We introduce PT-RAG (Perturbation-aware Two-stage Retrieval-Augmented
+    Generation), a plug-in retrieval-and-conditioning module for generative
+    cellular perturbation response.
   papers:
     - paper_id: arxiv:2603.07233
       role: primary
@@ -1651,7 +1675,6 @@
   name: Ruiz 2025 Completing spatial transcriptomics
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1680,10 +1703,14 @@
   name: Pearce 2026 Interpretable variant effect
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce a covariance-based probe that captures second- order
+    structure from Evo 2 sequence embeddings to predict variant pathogenicity
+    across variant types and functional consequences, matching or exceeding
+    specialized predictors within their domains.
   papers:
     - paper_id: 10.64898/2026.04.10.717844
       role: primary
@@ -1710,10 +1737,14 @@
   name: Zhu 2026 structured cross-condition prediction
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce TranScouter, a lightweight encoderdecoder framework that
+    represents perturbed genes using LLM- derived embeddings of their text
+    summaries and represents biological conditions using transcriptomic
+    profiles of control cells from the target condition.
   papers:
     - paper_id: 10.64898/2026.07.30.741892
       role: primary
@@ -1735,7 +1766,6 @@
   name: Wang 2026 Predicting drug responses
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1748,7 +1778,6 @@
   name: Jiang 2026 What Makes Representation
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1773,7 +1802,6 @@
   name: Shaikhutdinova 2026 Independent benchmark H
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1786,7 +1814,6 @@
   name: Drusinsky 2026 Causal variant underestimation
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1857,7 +1884,6 @@
   name: Zhang 2026 end-to-end deep learning
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1873,7 +1899,6 @@
   name: Ramprasad 2025 Enhancing Gene Expression
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1889,7 +1914,6 @@
   name: Liu 2025 Effective Gene Expression
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1931,7 +1955,6 @@
   name: Zhao 2025 Leveraging Biological Networks
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1980,10 +2003,14 @@
   name: Kathail 2024 Leveraging genomic deep
   year: 2024
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We describe practical considerations for making such predictions and
+    categorize the types of ground truth data used to evaluate variant effect
+    predictions, providing insight into the settings in which current models
+    are most useful.
   papers:
     - paper_id: arxiv:2411.11158
       role: primary
@@ -2014,7 +2041,6 @@
   name: Zhao 2025 Variant-Aware Deep Learning
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2027,7 +2053,6 @@
   name: Li 2023 Gene expression prediction
   year: 2023
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2043,7 +2068,6 @@
   name: Hegde 2025 Reaping Fruits LLM
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2059,10 +2083,13 @@
   name: Serizay 2025 Multi-modal data integration
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present momics, a unified framework to consolidate multi-omics
+    data in a single repository and interrogate it with a high-performance
+    query engine.
   papers:
     - paper_id: 10.1101/2025.10.10.681692
       role: primary
@@ -2084,7 +2111,6 @@
   name: Zhao 2022 Computational modeling chromatin
   year: 2022
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2097,7 +2123,6 @@
   name: "Krupička 2025 Benchmarking Genomic Foundation"
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2110,7 +2135,6 @@
   name: Yoo 2026 DNA augmentations semi-supervised
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2126,7 +2150,6 @@
   name: Denvis 2026 Findings Sparse Autoencoders
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2166,10 +2189,14 @@
   name: Zhong 2026 Perturbation Curve continuous
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present Perturbation Curve (PertCurve), a nonlinear, curve-based
+    computational framework that models the trajectories of transcriptomic
+    responses by explicitly incorporating diverse perturbation magnitudes and
+    strengths.
   papers:
     - paper_id: 10.64898/2026.06.16.732192
       role: primary
@@ -2179,10 +2206,12 @@
   name: Wei 2026 CAPRA predicts single-cell
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we introduce Control-Anchored Perturbation Residual Architecture
+    (CAPRA), a response-anchored model for genetic perturbation prediction.
   papers:
     - paper_id: 10.21203/rs.3.rs-10231666/v1
       role: primary
@@ -2192,7 +2221,6 @@
   name: Zhang 2026 Charting computational landscape
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2205,10 +2233,14 @@
   name: Navidi 2025 Adaptive resampling machine
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present a generalizable Adaptive Resampling (AR) approach that
+    addresses these limitations and enhances single-cell representation
+    learning by resampling data based on its learned latent structure in an
+    online, adaptive manner concurrent with model training.
   papers:
     - paper_id: 10.1101/2025.11.04.686583
       role: primary
@@ -2218,7 +2250,6 @@
   name: Burda 2026 robustness scRNA-seq foundation
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2231,7 +2262,6 @@
   name: "Stańczak 2026 Explicit Mechanistic Operators"
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2244,7 +2274,6 @@
   name: Gao 2024 subtask decomposition-based learning
   year: 2024
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2285,7 +2314,6 @@
   name: Wang 2024 Deep learning approaches
   year: 2024
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2310,7 +2338,6 @@
   name: "Sample 2019 Human 5' UTR"
   year: 2019
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2323,7 +2350,6 @@
   name: Wang 2023 Unified Deep Learning
   year: 2023
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2339,13 +2365,15 @@
   name: Chapman 2017 evolution logic circuits
   year: 2017
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
   links:
     - kind: code
       url: "https://github.com/dknoester/ealib"
+  description: >-
+    We describe a novel method for contact map prediction that uses the
+    evolution of logic circuits.
   papers:
     - paper_id: 10.7717/peerj.3139
       role: primary
@@ -2355,7 +2383,6 @@
   name: Xie 2015 Advances protein contact
   year: 2015
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2383,7 +2410,6 @@
   name: Harrison 2026 Do Gene Perturbation
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2396,10 +2422,14 @@
   name: Long 2026 Learning Perturbation Effects
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we introduce PertOmni, a CLIP-style multimodal
+    representation-learning framework that aligns transcriptomic perturbation
+    signatures with text-derived embeddings of curated genes and compound
+    descriptions, as well as image- derived embeddings from cell paintings.
   papers:
     - paper_id: 10.64898/2026.06.23.734145
       role: primary
@@ -2409,7 +2439,6 @@
   name: Denvis 2026 Empirical Comparison Virtual
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2422,7 +2451,6 @@
   name: Chen 2025 Assessing Predictive Diversity
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2435,10 +2463,13 @@
   name: Lorch 2026 Latent Causal Diffusions
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present the latent causal diffusion (LCD), a generative model
+    that frames single-cell gene expression as a stationary diffusion process
+    observed under measurement noise.
   papers:
     - paper_id: arxiv:2601.15341
       role: primary
@@ -2476,13 +2507,17 @@
   name: "Balcı 2023 intrinsically interpretable neural"
   year: 2023
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
   links:
     - kind: code
       url: "https://github.com/boooooogey/ATAConv"
+  description: >-
+    Here, we introduce a deep learning architecture called totally
+    interpretable sequence-to-function model (tiSFM). tiSFM improves upon the
+    performance of standard multilayer convolutional models while using fewer
+    parameters.
   papers:
     - paper_id: 10.1093/bioinformatics/btad271
       role: primary
@@ -2492,10 +2527,13 @@
   name: Hang 2025 Puget predicts gene
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present Puget, a deep learning model that predicts cell type-specific
+    gene expression from sequence and Hi-C data, which captures 3D chromatin
+    organization.
   papers:
     - paper_id: 10.1101/2025.11.19.689320
       role: primary
@@ -2505,7 +2543,6 @@
   name: Nayak 2026 Genomic foundation model-derived
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2518,7 +2555,6 @@
   name: Nicol 2026 Spurious correlation inflates
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2572,7 +2608,6 @@
   name: Drusinsky 2026 Deep-learning prediction gene
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2585,10 +2620,14 @@
   name: Lu 2026 Generative Virtual Tissue
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we introduce the Cell Interaction Foundation Model (CIFM), a virtual
+    tissue model that forward-simulates the transcriptional dynamics of cells
+    in human tissue under arbitrary therapeutic conditions based upon a
+    spatial transcriptomic seed.
   papers:
     - paper_id: 10.64898/2026.08.12.743536
       role: primary
@@ -2613,10 +2652,13 @@
   name: Onawole 2026 Trust-Aware Sequence-to-Function Modelling
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We develop and evaluate RegTrust-XAI, a trust-aware framework separating
+    these questions using three inference-time signals: ensemble consensus,
+    motif-grounded attribution coherence, and applicability-domain distance.
   papers:
     - paper_id: 10.64898/2026.08.20.745945
       role: primary
@@ -2626,7 +2668,6 @@
   name: Zulaybar 2026 Discovery microbial intergenic
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2639,7 +2680,6 @@
   name: Kato 2026 Evaluating Evo 2
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2652,7 +2692,6 @@
   name: Lanclos 2026 Generative Design New-to-nature
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2665,10 +2704,13 @@
   name: Cunningham 2025 Generative design construction
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we develop an end-to-end pipeline for generative design of
+    Escherichia coli plasmid backbones, from large-scale data curation through
+    fine-tuning, sampling, bioinformatic assessment, and candidate selection.
   papers:
     - paper_id: 10.64898/2025.12.06.692736
       role: primary
@@ -2722,7 +2764,6 @@
   name: Rizvi 2025 Scaling Language Next-Generation
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2735,7 +2776,6 @@
   name: Rubbi 2026 Standardized Evaluating Gene
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2748,7 +2788,6 @@
   name: Sharipov 2026 Scaling Autoregressive Transformer
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2778,7 +2817,6 @@
   name: Mangan 2026 Sequence-to-function deep learning
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2791,7 +2829,6 @@
   name: Uysal 2026 Evaluation multiple sclerosis
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2820,7 +2857,6 @@
   name: Li 2026 Deep learning TF
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2833,10 +2869,13 @@
   name: McAnany 2026 Positional interpretation cis-regulatory
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we introduce pairwise influence by sequence attribution (PISA),
+    which uses attribution to combinatorially decode which bases contributed
+    to the readout at a specific genomic coordinate.
   papers:
     - paper_id: 10.1038/s41467-026-74807-1
       role: primary
@@ -2846,10 +2885,14 @@
   name: "Dickmänken 2026 Evaluating single-cell ATAC-seq"
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce HyDrop v2, an improved custom droplet scATAC-seq method, and
+    perform the first benchmark of scATAC-seq platforms focusing on its
+    capacity to train S2F models and its capacity to yield TF footprints in
+    different species.
   papers:
     - paper_id: 10.1038/s41467-026-68742-4
       role: primary
@@ -2859,10 +2902,14 @@
   name: Liu 2026 Predicting cell-state-specific gene
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We developed Bolero, a sequence-to-function model whose parameters
+    condition on atlas-scale cell-state embeddings and additional biological
+    variables to predict cell-state-specific chromatin accessibility and
+    transcript abundance from DNA.
   papers:
     - paper_id: 10.64898/2026.10.19.760026
       role: primary
@@ -2872,10 +2919,14 @@
   name: Ramarao-Milne 2026 Evaluating cross-species transferability
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We developed a scoring-approach for AI-agents to autonomously assess
+    AlphaGenome prediction confidence and accurately differentiate between
+    AlphaGenome’s robust sequence-level recognition across species and its
+    current limitations when interpreting un-fine-mapped regulatory variants.
   papers:
     - paper_id: 10.64898/2026.07.10.737654
       role: primary
@@ -2885,10 +2936,13 @@
   name: Li 2026 Deep Learning-Guided Identification
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We developed ZEN-former (Zebrafish EN-former), an Enformer-based sequence-
+    to-function model trained on neuronal subclass chromatin accessibility
+    profiles from the adult mouse brain.
   papers:
     - paper_id: 10.3390/genes17091079
       role: primary
@@ -2898,10 +2952,13 @@
   name: Chang 2026 Single-cell Multiome Chromatin
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present the first single-cell multiome atlas of histone
+    modifications and transcriptomes across eight basal ganglia regions from
+    neurotypical adult human donors.
   papers:
     - paper_id: 10.64898/2026.02.03.703645
       role: primary
@@ -2928,7 +2985,6 @@
   name: Saghafi 2025 Cluster-Based Data Balancing
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2941,7 +2997,6 @@
   name: Cao 2021 Chromatin interaction neural
   year: 2021
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2950,6 +3005,10 @@
       url: "https://github.com/mjflab/chinn"
   model_ext:
     license: Apache-2.0
+  description: >-
+    We develop a computational method, chromatin interaction neural network
+    (ChINN), to predict chromatin interactions between open chromatin regions
+    using only DNA sequences.
   papers:
     - paper_id: 10.1186/s13059-021-02453-5
       role: primary
@@ -2974,7 +3033,6 @@
   name: Xie 2026 Adapting Generative Genome
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -2987,7 +3045,6 @@
   name: Jung 2026 Decoding promoter activity
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3053,10 +3110,12 @@
   name: Liang 2026 split-control criterion few-shot
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce SafeDelta, a split-control criterion that uses calibration
+    data to decide whether to adapt.
   papers:
     - paper_id: 10.64898/2026.10.05.756906
       role: primary
@@ -3132,10 +3191,13 @@
   name: Zhang 2026 Generation-Powered Inference Distribution-Valued
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We propose generation-powered inference (GPI), a general framework for
+    improving inference on distribution-valued parameters using auxiliary
+    generative models.
   papers:
     - paper_id: arxiv:2608.14542
       role: primary
@@ -3172,13 +3234,18 @@
   name: Feng 2025 Benchmarking DNA foundation
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
   links:
     - kind: code
       url: "https://github.com/ChongWuLab/dna_foundation_benchmark"
+  description: >-
+    Here, we present a benchmarking study of three recent DNA foundation
+    language models, including DNABERT-2, Nucleotide Transformer version-2
+    (NT-v2), and HyenaDNA, focusing on the quality of their zero-shot
+    embeddings across a diverse range of genomic tasks and species through
+    analyses of 57 real datasets.
   papers:
     - paper_id: 10.1038/s41467-025-65823-8
       role: primary
@@ -3215,7 +3282,6 @@
   name: Lo 2026 Evolution mechanism i
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3228,10 +3294,14 @@
   name: Karimzadeh 2026 high-resolution protein-RNA binding
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we introduce eclair CLIP (ecCLIP), a high-throughput CLIP-seq
+    platform that combines endogenous protein tagging for uniform affinity
+    capture with ligation-free library preparation to generate high-resolution
+    RNA-protein binding profiles.
   papers:
     - paper_id: 10.64898/2026.10.12.758580
       role: primary
@@ -3256,7 +3326,6 @@
   name: Gong 2024 scAuto single-cell chromatin
   year: 2024
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3281,7 +3350,6 @@
   name: Palla 2026 Tabular Foundation Competitive
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3306,7 +3374,6 @@
   name: Wu 2026 Sparse integrative dictionary
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3319,10 +3386,14 @@
   name: Bhattacharya 2026 Elucidating Design Space
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce ExpressionVAE (eVAE), a discrete-latent perturbation model
+    that compresses each cell into a short sequence of discrete codes through
+    a finite-scalar-quantization (FSQ) bottleneck and trains a
+    perturbation-conditioned discrete prior over those codes.
   papers:
     - paper_id: 10.64898/2026.06.15.732063
       role: primary
@@ -3332,7 +3403,6 @@
   name: Zhu 2025 AUC-PR More Informative
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3345,7 +3415,6 @@
   name: Xie 2026 Performance deep learning
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3401,7 +3470,6 @@
   name: Tu 2026 Deep genomic allele-specific
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3464,10 +3532,13 @@
   name: Hacisuleyman 2026 Rapid interpretable protein
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present a template-based pattern- matching approach that predicts
+    protein contact maps by identifying conserved structural motifs from
+    homologous experimental structures.
   papers:
     - paper_id: 10.1088/1478-3975/ae443c
       role: primary
@@ -3477,7 +3548,6 @@
   name: Zhang 2022 Protein Subcellular Localization
   year: 2022
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3493,7 +3563,6 @@
   name: Liu 2021 Protein contact map
   year: 2021
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3518,10 +3587,15 @@
   name: Hanson 2018 Accurate prediction protein
   year: 2018
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we propose a novel protein contact map prediction method by stacking
+    residual convolutional networks with two-dimensional residual
+    bidirectional recurrent LSTM networks, and using both one-dimensional
+    sequence-based and two- dimensional evolutionary coupling-based
+    information.
   papers:
     - paper_id: 10.1093/bioinformatics/bty481
       role: primary
@@ -3531,7 +3605,6 @@
   name: Bass 2026 Genomic foundation do
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3565,7 +3638,6 @@
   name: Sugimoto 2026 transcription factor regulatory
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3574,6 +3646,12 @@
       url: "https://github.com/HikaruSugimoto/tfactprofiler"
   model_ext:
     license: BSD-3-Clause
+  description: >-
+    Here, we present TFActProfiler, a TF-mRNA resource and computational
+    framework that learns signed, quantitative TF-mRNA regulatory coefficients
+    by integrating heterogeneous prior evidence (ChIP-based, motif-based, and
+    curated TF-mRNA annotations) with large-scale bulk and single-cell RNA-seq
+    atlases.
   papers:
     - paper_id: 10.1093/nar/gkag897
       role: primary
@@ -3583,7 +3661,6 @@
   name: Kendiukhov 2026 evaluation single-cell foundation
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3620,7 +3697,6 @@
   name: Dong 2026 Estimating genotype-tissue specific
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3633,7 +3709,6 @@
   name: Wu 2026 Application deep learning
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3646,7 +3721,6 @@
   name: Barethiya 2026 Overcoming extrapolation challenges
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3655,6 +3729,10 @@
       url: "https://github.com/SBarethiya/VEP"
   model_ext:
     license: MIT
+  description: >-
+    We propose that incorporating the physics of protein interactions and
+    dynamics can be an effective approach to overcome the extrapolation
+    limitations.
   papers:
     - paper_id: 10.1371/journal.pcbi.1013728
       role: primary
@@ -3664,10 +3742,12 @@
   name: Schmauch 2025 deep learning-based multiscale
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present a deep learning-based approach for multiscale integration
+    of spTx with tumor morphology (MISO).
   papers:
     - paper_id: 10.1038/s41467-025-66691-y
       role: primary
@@ -3677,7 +3757,6 @@
   name: Hallinan 2025 Impact Data Quality
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3690,10 +3769,12 @@
   name: Zeng 2022 Spatial transcriptomics prediction
   year: 2022
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we developed Hist2ST, a deep learning-based model to predict RNA-seq
+    expression from histology images.
   papers:
     - paper_id: 10.1093/bib/bbac297
       role: primary
@@ -3715,7 +3796,6 @@
   name: Debnath 2026 Inference spatial chromatin
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3724,6 +3804,10 @@
       url: "https://github.com/Durenlab/ISON"
   model_ext:
     license: MIT
+  description: >-
+    Here, we present ISON (Integrated Spatial Omics Network), a unified
+    computational method for integrative spatial multi-omics analysis from
+    single cell multiome data and spatial transcriptomics data.
   papers:
     - paper_id: 10.1038/s41467-026-73948-7
       role: primary
@@ -3733,10 +3817,13 @@
   name: Hu 2024 Benchmarking algorithms single-cell
   year: 2024
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present a benchmark study of 14 protein abundance/chromatin
+    accessibility prediction algorithms and 18 single-cell multi-omics
+    integration algorithms using 47 single- cell multi-omics datasets.
   papers:
     - paper_id: 10.1038/s41592-024-02429-w
       role: primary
@@ -3746,7 +3833,6 @@
   name: Li 2025 FveOCRs database open
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3771,7 +3857,6 @@
   name: Li 2024 Exploring Alternative Conformation
   year: 2024
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3784,7 +3869,6 @@
   name: Lin 2025 Unveiling chromatin dynamics
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3800,10 +3884,13 @@
   name: Sun 2025 Hi-Compass resolves cell-type
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present Hi- Compass, a generalizable deep learning model that
+    accurately predicts chromatin organization across diverse biological
+    contexts, from bulk to single-cell samples.
   papers:
     - paper_id: 10.1101/2025.05.14.654019
       role: primary
@@ -3813,7 +3900,6 @@
   name: MAH 2022 Enhancing protein contact
   year: 2022
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3850,10 +3936,13 @@
   name: Chao 2025 Predicting dynamic expression
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce a masked DNA language model pretrained on 165 fungal genomes
+    closely related to budding yeast that captures conserved regulatory
+    grammar.
   papers:
     - paper_id: 10.21203/rs.3.rs-7681940/v1
       role: primary
@@ -3863,7 +3952,6 @@
   name: Sathian 2026 Genomic language predicting
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3941,7 +4029,6 @@
   name: Wang 2024 Predictive Prioritization Enhancers
   year: 2024
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -3966,7 +4053,6 @@
   name: Hosokawa 2025 Transcoder-based Circuit Interpretable
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4033,7 +4119,6 @@
   name: Rastogi 2026 Fine-tuning sequence-to-expression personal
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4062,7 +4147,6 @@
   name: Al-Saidi 2026 Win-Win possible Achieving
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4114,7 +4198,6 @@
   name: Su 2026 fine-tuned genomic language
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4127,7 +4210,6 @@
   name: Joubert 2026 DNA language GROVER
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4159,7 +4241,6 @@
   name: Wang 2026 Pretrained Animals Deployed
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4172,7 +4253,6 @@
   name: Merchant 2026 Semantic design functional
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4190,7 +4270,6 @@
   name: Li 2025 Benchmark Evo2 Genomic
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4203,7 +4282,6 @@
   name: "Bůžková 2026 Analyzing Genomic Foundation"
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4228,7 +4306,6 @@
   name: Akagi 2026 Genomic properties representing
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4253,10 +4330,14 @@
   name: Yu 2026 FP8 Inference Genomic
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present an empirical case study of FP8 post-training quantization
+    applied to GenomeOcean, a computationally efficient genomic foundation
+    model with strong reported performance across diverse genomics tasks [Zhou
+    et al., 2025].
   papers:
     - paper_id: 10.64898/2026.08.09.743676
       role: primary
@@ -4294,7 +4375,6 @@
   name: Sapkota 2025 Hybrid Tokenization Strategy
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4307,7 +4387,6 @@
   name: Yoo 2024 Exploring Adversarial Robustness
   year: 2024
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4362,10 +4441,12 @@
   name: Nemecek 2026 Quantifying Memorization Privacy
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present a comprehensive, multi-vector privacy evaluation framework
+    designed to quantify memorization risks in GLMs.
   papers:
     - paper_id: arxiv:2603.08913
       role: primary
@@ -4375,10 +4456,13 @@
   name: Jiang 2025 Evaluating DNA function
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce a benchmark called Nullsettes, which assesses how well models
+    can predict in silico loss-of-function (LOF) mutations, in synthetic
+    expression cassettes with little evolutionary precedent.
   papers:
     - paper_id: arxiv:2506.10271
       role: primary
@@ -4405,7 +4489,6 @@
   name: Yan 2024 Recent advances deep
   year: 2024
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4471,10 +4554,13 @@
   name: Li 2026 mechanism-annotated benchmark reveals
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we present scDrugPerturb-Bench, a mechanism-annotated benchmark that
+    links matched control and drug-treated single-cell RNA- sequencing
+    profiles to literature-curated directional key-gene evidence.
   papers:
     - paper_id: 10.64898/2026.08.19.745729
       role: primary
@@ -4484,7 +4570,6 @@
   name: Zhou 2026 Reference-cell design shapes
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4497,7 +4582,6 @@
   name: PSL 2026 Principled Evaluation Single-Cell
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4510,7 +4594,6 @@
   name: Ma 2026 Enhancing cross-context generalization
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4542,10 +4625,13 @@
   name: Maddu 2026 Learning biophysical gene
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we introduce Probability Flow Matching (PFM), a scalable framework
+    for learning biophysically consistent stochastic processes directly from
+    time-resolved single-cell measurements.
   papers:
     - paper_id: arxiv:2604.25062
       role: primary
@@ -4600,7 +4686,6 @@
   name: Lotfollahi 2019 Conditional out-of-sample generation
   year: 2019
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4667,7 +4752,6 @@
   name: Schneckener 2026 Sequence optimization targeting
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4680,7 +4764,6 @@
   name: Lee 2026 Probing 3D Chromatin
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4693,7 +4776,6 @@
   name: Ma 2025 Reverse-Complement Consistency DNA
   year: 2025
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4706,10 +4788,13 @@
   name: Ali 2026 Causal dictionary learning
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We introduce a framework that combines sparse dictionary learning with
+    causal intervention to extract, validate, and causally test interpretable
+    features in genomic foundation models.
   papers:
     - paper_id: arxiv:2607.19618
       role: primary
@@ -4719,7 +4804,6 @@
   name: Choi 2026 AI Virtual Cells
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4732,10 +4816,12 @@
   name: Fu 2026 Benchmarking gene expression
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we introduce ReconEval, a benchmark for evaluating gene expression
+    reconstruction from single-cell latent spaces.
   papers:
     - paper_id: 10.64898/2026.06.15.731445
       role: primary
@@ -4776,10 +4862,12 @@
   name: Driessen 2025 single-cell perturbation modeling
   year: 2025
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we propose the Conditional Monge Gap which learns OT maps
+    conditionally on arbitrary covariates.
   papers:
     - paper_id: arxiv:2504.08328
       role: primary
@@ -4789,10 +4877,13 @@
   name: Meng 2026 multi-tissue epigenomic atlas
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we present SheepEpimap, a multi-tissue regulatory atlas harmonizing
+    516 CUT&Tag histone modifications, ATAC- seq, and RNA-seq datasets across
+    43 adult tissues in sheep.
   papers:
     - paper_id: 10.64898/2026.08.22.746371
       role: primary
@@ -4802,7 +4893,6 @@
   name: Kaushik 2026 Computational navigation constrained
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4832,10 +4922,12 @@
   name: Passow 2026 Amplicon Protein Bead
   year: 2026
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present Amplicon/Protein Bead Display (APB-Display), which
+    expresses and purifies >100,000 protein variants in vitro in 1 day.
   papers:
     - paper_id: 10.64898/2026.05.28.728566
       role: primary
@@ -4845,10 +4937,13 @@
   name: Nguyen 2025 Sequence-based chromatin activity
   year: 2025
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present a deep learning-based framework that utilizes functional
+    genomic data to generate genome-wide predictions of the regulatory impact
+    of noncoding variants in cattle, chicken, pig, and Atlantic salmon.
   papers:
     - paper_id: 10.1093/nargab/lqaf139
       role: primary
@@ -4858,7 +4953,6 @@
   name: Ronen 2020 Deep Homology-Based Protein
   year: 2020
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4886,7 +4980,6 @@
   name: Antony 2022 Protein secondary structure
   year: 2022
   fate_axis: [where]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4899,10 +4992,14 @@
   name: Zhang 2026 Highly accurate ab
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here we introduce ANNEVO, a mixture of experts-based genomic language
+    model that directly models distal sequence dependencies and joint
+    evolutionary relationships from diverse genomes, enabling precise ab
+    initio gene annotation.
   papers:
     - paper_id: 10.1038/s41592-026-03036-7
       role: primary
@@ -4912,7 +5009,6 @@
   name: Provatas1 2026 Tracing model-generated DNA
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4925,7 +5021,6 @@
   name: Kim 2026 Set-Aggregated Genome Embeddings
   year: 2026
   fate_axis: [how]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4938,7 +5033,6 @@
   name: Jia 2026 Virtual cell construction
   year: 2026
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -4966,10 +5060,13 @@
   name: Foster 2021 Contrastive Mixture Posteriors
   year: 2021
   fate_axis: [what]
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We propose the Contrastive Mixture of Posteriors (CoMP) method that uses a
+    novel misalignment penalty defined in terms of mixtures of the variational
+    posteriors to enforce this independence in latent space.
   papers:
     - paper_id: arxiv:2106.08161
       role: primary

@@ -180,7 +180,6 @@
   type: benchmark
   name: Alfisi 2025 Benchmarking DNA Foundation
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -192,7 +191,6 @@
   type: benchmark
   name: Benegas 2025 Benchmarking DNA Sequence
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -233,7 +231,6 @@
   type: benchmark
   name: Csendes 2025 Benchmarking foundation cell
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -248,7 +245,6 @@
   type: benchmark
   name: Wang 2025 Benchmarking translational potential
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -260,7 +256,6 @@
   type: benchmark
   name: Feng 2024 Benchmarking DNA Foundation
   year: 2024
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -272,7 +267,6 @@
   type: benchmark
   name: Csendes 2024 Benchmarking foundational cell
   year: 2024
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -328,10 +322,12 @@
   type: benchmark
   name: Sun 2025 benchmark guide sequence-function
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we introduce a comprehensive benchmark framework for evaluating
+    sequence-to-function models.
   papers:
     - paper_id: 10.1101/2025.01.06.631405
       role: primary
@@ -340,7 +336,6 @@
   type: benchmark
   name: Ko 2026 Scalable embedding fusion
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -370,7 +365,6 @@
   type: benchmark
   name: Prakash 2021 More Realistic Simulated
   year: 2021
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -385,7 +379,6 @@
   type: benchmark
   name: Kulkarni 2019 TF binding site
   year: 2019
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -419,7 +412,6 @@
   type: benchmark
   name: Gupta 2025 Benchmarking Language Polymer
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -459,13 +451,16 @@
   type: benchmark
   name: Kang 2026 Benchmarking three simple
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
   links:
     - kind: code
       url: "https://github.com/hrthiam-lab/Kang_etal_2026"
+  description: >-
+    Here, we introduce two simple DNA image-derived metrics - Diffuse Signal
+    Index (DSI)and 1-Gini - and benchmark them against the coefficient of
+    variation (CV) as fixation-free readouts of chromatin reorganization.
   papers:
     - paper_id: 10.1080/19491034.2026.2721777
       role: primary
@@ -474,7 +469,6 @@
   type: benchmark
   name: Macias-Velasco 2026 Benchmarking genome choice
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -486,7 +480,6 @@
   type: benchmark
   name: Shao 2026 Benchmark Averages Hide
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -498,10 +491,13 @@
   type: benchmark
   name: "Góes 2026 Evaluation Feature Representations"
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present a systematic evaluation of machine learning models and feature
+    extraction approaches to predict cancer-associated sORFs across 15 cancer
+    types.
   papers:
     - paper_id: 10.64898/2026.06.16.732659
       role: primary
@@ -510,7 +506,6 @@
   type: benchmark
   name: Luo 2024 Benchmarking computational single-cell
   year: 2024
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -540,7 +535,6 @@
   type: benchmark
   name: Vinceti 2024 benchmark computational correcting
   year: 2024
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -566,7 +560,6 @@
   type: benchmark
   name: Luecken 2022 Benchmarking atlas-level data
   year: 2022
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -578,7 +571,6 @@
   type: benchmark
   name: Xu 2021 Benchmarking CITE-seq versus
   year: 2021
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -604,7 +596,6 @@
   type: benchmark
   name: Khushi 2020 Benchmarking database performance
   year: 2020
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -700,7 +691,6 @@
   type: benchmark
   name: Han 2021 Image Scene Graph
   year: 2021
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -715,7 +705,6 @@
   type: benchmark
   name: Muneeb 2026 Benchmarking end-to-end genotype-to-phenotype
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -727,7 +716,6 @@
   type: benchmark
   name: Paudel 2026 Benchmarking Machine Learning
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -739,7 +727,6 @@
   type: benchmark
   name: Kan-Tor 2024 Does understand genes
   year: 2024
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -751,7 +738,6 @@
   type: benchmark
   name: Creanga 2026 Benchmarking Language Biomedical
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -794,7 +780,6 @@
   type: benchmark
   name: Munteanu 2023 rigorous benchmarking SARS-CoV-2
   year: 2023
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -806,7 +791,6 @@
   type: benchmark
   name: Ali 2022 Benchmarking Machine Learning
   year: 2022
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -832,7 +816,6 @@
   type: benchmark
   name: Ji 2023 Complex-query Referring Image
   year: 2023
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -869,10 +852,13 @@
   type: benchmark
   name: Jokisaari 2016 Benchmark Problems Numerical
   year: 2016
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    We present the first set of benchmark problems for phase field models that
+    are being developed by the Center for Hierarchical Materials Design
+    (CHiMaD) and the National Institute of Standards and Technology (NIST).
   papers:
     - paper_id: arxiv:1610.00622
       role: primary
@@ -881,7 +867,6 @@
   type: benchmark
   name: Chen 2024 Benchmarking Embedding Aggregation
   year: 2024
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -921,10 +906,13 @@
   type: benchmark
   name: Rindtorff 2019 Biologically Plausible Benchmark
   year: 2019
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we propose a benchmark dataset to evaluate contextual bandit
+    algorithms based on real in vitro drug response of approximately 900
+    cancer cell lines.
   papers:
     - paper_id: arxiv:1911.04389
       role: primary
@@ -960,10 +948,13 @@
   type: benchmark
   name: Fahsbender 2025 Benchmarking Evaluation AI
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
+  description: >-
+    Here, we present insights from a recent workshop that convened machine
+    learning and computational biology experts across imaging,
+    transcriptomics, proteomics, and genomics to tackle this gap.
   papers:
     - paper_id: arxiv:2507.10502
       role: primary
@@ -972,7 +963,6 @@
   type: benchmark
   name: Herrmann 2020 Large-scale benchmark survival
   year: 2020
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1048,7 +1038,6 @@
   type: benchmark
   name: Ouologuem 2025 Spatial transcriptomics deconvolution
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1063,7 +1052,6 @@
   type: benchmark
   name: Rafi 2023 Evaluation optimization sequence-based
   year: 2023
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1102,13 +1090,17 @@
   type: benchmark
   name: Fu 2026 iAODE benchmarking continuum
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
   links:
     - kind: code
       url: "https://github.com/PeterPonyu/iAODE"
+  description: >-
+    We introduce iAODE, a variational autoencoder that couples a zero-inflated
+    negative binomial likelihood with a latent Neural ODE, low-weight
+    Kullback- Leibler (KL) regularization, and an interpretable reconstruction
+    bottleneck to learn generative, temporally continuous latent spaces.
   papers:
     - paper_id: 10.1038/s42003-026-09768-8
       role: primary
@@ -1128,7 +1120,6 @@
   type: benchmark
   name: Wang 2026 benchmarking computational tools
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1140,7 +1131,6 @@
   type: benchmark
   name: Wang 2025 Benchmark chromatin-protein interaction
   year: 2025
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1152,7 +1142,6 @@
   type: benchmark
   name: MYY 2023 Benchmarking algorithms joint
   year: 2023
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1167,7 +1156,6 @@
   type: benchmark
   name: Kulkarni 2019 Maps Transcription Factor
   year: 2019
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1195,7 +1183,6 @@
   type: benchmark
   name: Almeida 2020 Supporting supervised learning
   year: 2020
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1224,7 +1211,6 @@
   type: benchmark
   name: Jabin 2026 benchmark publicly available
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1236,7 +1222,6 @@
   type: benchmark
   name: Liu 2022 dropout imputation scRNA-seq
   year: 2022
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1248,7 +1233,6 @@
   type: benchmark
   name: Hollet 2026 Benchmark MRI- Foundation
   year: 2026
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
@@ -1263,7 +1247,6 @@
   type: benchmark
   name: Cen 2023 Time Embrace Natural
   year: 2023
-  review_state: unreviewed
   curator: JimYuhaoWu
   date_added: 2026-10-23
   date_updated: 2026-10-23
