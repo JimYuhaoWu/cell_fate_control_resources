@@ -26,11 +26,13 @@ no GNN term, `cell_type` cannot be CL-only, `n_parameters` could not represent
 a model family, `protocol_ext.category` ships no vocabulary, and `vocab.facet`
 cannot be a DDL enum at all.
 
-## M2 — public website on GitHub Pages ✅ merged, first deploy pending
+## M2 — public website on GitHub Pages ✅ done, live
 
-Merged to `main` as PR #1 (`0ae3c73`). Pages is enabled and set to build from
-Actions, but no deploy has gone green yet — the first run failed because Pages
-had not been enabled when it fired, and the re-run is the one step left.
+Merged to `main` as PR #1 (`0ae3c73`); the first deploy went green and the site
+has been live at <https://cellfatecontrol.com> since. The workflow re-runs the
+exporter on every push and fails if the result differs from what is committed,
+so a curation change that forgets `scripts/07_export_site.py` cannot keep
+serving the previous export silently.
 
 - [x] `scripts/07_export_site.py` → `site/data/{entities,facets,papers}.json`
 - [x] `fate_axis` as primary navigation, not a sidebar filter
@@ -190,19 +192,91 @@ author list, and `evidence_tier` is derived from author lists. Retries are not
 optional. arXiv rate-limits; Crossref omits abstracts for Nature-family journals
 where Europe PMC has them.
 
-## M4 — backfill wave 1
+## M4 — backfill wave 1 ⚠️ breadth met threefold, depth not met
 
 The dominant cost of the whole project.
 
-- [ ] Interval models: the Basenji→Enformer→Borzoi line, Sei, ChromBPNet, scBasset, EpiGePT
-- [ ] DNA LMs: DNABERT family, HyenaDNA, Caduceus, GENA-LM, GPN/GPN-MSA, Evo, GROVER
-- [ ] The critical-evaluation thread — the `critique` papers are the differentiator, so backfill them *with* the models, not after
-- [ ] Benchmarks: GUANinE, DNALongBench, LRB, OmniGenBench, GUE
-- [ ] Module collections to ~15–30 entities, each keyed back to `eCR_mod_lib`
+- [x] Interval models: the Basenji→Enformer→Borzoi line, Sei, ChromBPNet, scBasset, EpiGePT
+- [x] DNA LMs: DNABERT family, HyenaDNA, Caduceus, GENA-LM, GPN/GPN-MSA, Evo, GROVER
+- [x] The critical-evaluation thread — the `critique` papers are the differentiator, so backfill them *with* the models, not after
+- [x] Benchmarks: GUANinE, DNALongBench, LRB, OmniGenBench, GUE
+- [x] Module collections to ~15–30 entities, each keyed back to `eCR_mod_lib` — 58, above the range
 - [ ] First vocabulary promotion pass once tags clear the ≥10-record threshold
 
 **Exit:** ~150 entities, and `reports/vocab_candidates.md` fires for the first
 time, which means the bottom-up vocabulary mechanism has actually been exercised.
+
+**Half met, and the unmet half is the one that mattered.** 489 entities
+published — 319 models, 91 benchmarks, 58 module collections, 9 datasets, 7
+databases, 5 protocols — against a ~150 target and a ~300-400 ceiling, so the
+entity count is not the open question any more. `vocab_candidates.md` still
+does not fire: a tag needs ≥10 records and only the 20 hand-curated seeds carry
+tags at all, because `07_enrich.py` deliberately refuses to generate them. The
+vocabulary mechanism is therefore still unexercised, which is what this
+milestone was actually for.
+
+**Measured on 2026-10-26, and the reason M4 does not close:** the backfill
+bought breadth by spending depth, and the fields it left empty are the ones the
+NAR argument rests on.
+
+| field | populated |
+|---|---|
+| year | 489/489 |
+| `fate_axis` | 404/489 |
+| description | 186/489 |
+| license | 37/489 |
+| tags | 20/489 |
+| **`evidence_tier`** | **8/489** |
+| `availability_tier` | 8/489 |
+
+472 of the 489 hold only their own primary paper; all 291 `benchmark`/`critique`
+papers sit on 16 records. Median populated fields per card is 11, against 32 for
+the 20 seeds curated by hand. So the evidence layer — named below as the
+differentiator and the general-interest claim — exists on 16 records, and the
+faceted query M2's exit criterion promises ("which interval models has anyone
+outside the authoring group evaluated, and can I legally use the weights") is
+answerable for the handful of cards that carry both fields.
+
+**The next phase is depth on 489, not more breadth.** Kipoi already holds
+2,000+ and the Stegle catalogue 156; breadth does not win the argument and
+never did. See **M4a** for what has to happen first.
+
+## M4a — the boundary, before any further expansion
+
+**Decided 2026-10-27.** Expanding the corpus further is on hold until the
+boundary is written down as criteria rather than prose, because two facts are
+the same fact:
+
+- A score cannot decide admission at any threshold — at ≥3.0 the discovery
+  score retains 17 of 29 curated resources, at ≥8.0 nine of them.
+- Nobody can say how far the backfill drifted. The 9 published records that are
+  out of scope — video question answering, MRI, wastewater, protein contact
+  maps — were found by eye, not by a check.
+
+CFCR has an *intensional* boundary (the prose rule in `README.md`, plus the
+per-axis table below) and no *extensional* one: no labelled set of in/out
+decisions that any rule, human or scored, could be measured against. That
+absence is why scope cannot be automated **and** why drift cannot be detected.
+At 489 entities a ~2% admission error is 9 records; at several thousand it is
+invisible and uncorrectable.
+
+- [ ] Inclusion and exclusion criteria, written as criteria — needed for
+      publication regardless, since a database on a narrow topic has to argue
+      its boundary to the wider readership
+- [ ] A labelled in/out set to measure them against. The 9 known out-of-scope
+      records are free hard negatives, which are the expensive half
+- [ ] Measure the current 489 against the criteria, and record the drift rate
+- [ ] A demote path. `literature/06_promote.py` has none by design, so
+      withdrawing a record today means editing `review_state: unreviewed` back
+      into it by hand
+
+**Exit:** the criteria exist, and the admission error rate of the current
+catalogue is a number rather than an impression.
+
+**Tradeoff, decided.** A tighter boundary sharpens the novelty argument; a wider
+one narrows the gap with Kipoi's count. Tight was chosen, because the
+differentiator is the evidence layer and Kipoi already won on count and lost on
+evidence.
 
 **Scope — decided.** CFCR indexes resources you act with, not resources you
 observe with; see the scope section in `README.md` for the full rule. In
@@ -251,6 +325,31 @@ Everything schema §11 deferred, plus what M1 and M4 turn up.
 - [ ] Contributor attribution table, for crediting co-maintainers
 - [ ] Per-paper curator override on the `evidence_tier` author-overlap threshold,
       if the backfill shows the global 50% rule misfiring
+
+**`entity_relation` is what a relationship map needs, and the map is what the
+table is for.** Raised 2026-10-27: a graph of citing/cited, benchmarked-on and
+database-used relationships, as navigation over the catalogue. It is blocked
+here rather than on any drawing library, because the edges do not exist —
+`benchmarked_on` is populated on **0 of 490** records, `training_data` on 1,
+`supersedes` on 1, `variant_of` on 1. Entity↔entity relationships in CFCR are
+not thin, they are absent; the only populated graph is entity↔paper, 799 edges
+of which 291 are `benchmark`/`critique`. Designing the table against a
+visualization that has to be drawn beats designing it in the abstract, so the
+two should be done together.
+
+**Graph indicators are deferred on purpose, not forgotten.** A clustering
+coefficient or any centrality measure computed on this catalogue would measure
+the catalogue's sampling, not the field: with 472 of 489 entities holding one
+paper and 16 holding every evidence edge, centrality reports that Enformer is
+the centre of regulatory genomics — true of the sweep order, false about the
+world. That is the M2 evidence-badge failure again, where two code paths
+re-derived one thing and the card contradicted the claim it advertised as
+auditable. A number that is real and whose interpretation is false is worse
+than no number, because it looks like a finding. **Gate: no graph indicators
+until the evidence edges stop being concentrated on 3% of records.** What can
+be drawn trustworthily at any coverage is the evidence layer alone — resource,
+its evaluators, independent or not — which is also a candidate for the
+graphical abstract M7 requires.
 
 ## M7 — citable release and database paper
 
@@ -318,6 +417,49 @@ because the editor will open the site.
 download in open formats with licence terms stated, mobile support (worth
 mentioning in the manuscript — NAR asks for it), and no new experimental or
 computational results, which the Database Issue does not accept.
+
+### A second venue, considered and declined for CFCR itself
+
+Considered 2026-10-27: the **NAR Web Server Issue**, whose gate is far easier —
+no invitation, a one-page proposal taken year-round from November 2026, the
+manuscript due two months after the approval email, and acceptance by ~1 May
+for that year's issue. Fixed deadlines were abolished in the 2026 editorial.
+Verified from <https://academic.oup.com/nar/pages/submission_webserver>.
+
+**CFCR cannot go there, and cannot go to both.** Three of that issue's
+exclusions are decisive, and the third rule is the one that settles sequencing:
+
+- "Aggregators or assemblers of existing third-party tools" are not eligible.
+- "Query-only data resources" are directed to the Database Issue — which is
+  what a browsable catalogue is.
+- The server must let users analyse their own data; "mere portals for static
+  data" are excluded.
+- **Similar tools need a two-year interval after any previous publication.** So
+  a CFCR-shaped server following a January 2028 Database Issue paper is blocked
+  until 2030.
+
+What *is* eligible is the derivation rather than the catalogue: a server that
+takes a resource and its paper as user-submitted input and reports who
+evaluated it, whether those evaluators were independent, and on what terms it
+can be reused. That is field-agnostic by construction — author names and
+citation graphs carry no discipline — and a prior-art survey the same day found
+nothing that does it: scite classifies citation statements rather than
+evaluators, OpenEBench hosts benchmarks without recording evaluator
+independence, the replication databases mean independent *samples*, and the
+ML-licence tools stop at the licence.
+
+That is now a separate project, [WhoChecked](https://github.com/JimYuhaoWu/WhoChecked),
+deliberately not a mode of CFCR — which is what keeps the two-year rule from
+biting. **The derivation they share (`classify_overlap`, `derive_tier`,
+`norm_author` in `scripts/05_validate.py`) should become a library both import
+rather than a copy in each**; this file's own review discipline treats a second
+home for a shared thing as a defect, and it is the function both papers would
+claim as novel. Undecided, and tracked as WhoChecked's M1 first item.
+
+**The honest argument against starting it:** M7 still needs a co-maintainer,
+NAR states that retirement or graduation of developers is not a valid reason to
+terminate a resource, and a second project doubles that gap rather than sharing
+it.
 
 ---
 
