@@ -21,6 +21,10 @@ Three lists, because they are three different questions:
   list A     "does this paper evaluate <entity>, whose primary it cites?"
   list B     "does this paper evaluate a class of models, naming none?"  -- §2.3
 
+and one section that asks nothing: "Cited, not proposed" holds the rows that
+cite a catalogued primary but neither name the entity nor could move its tier,
+so they are neither safe to record unread nor worth a curator's decision.
+
 In discovery nothing is dropped for scoring low: --min-score decides which
 *section* a candidate lands in and the whole set is written down, because a
 rejection that is not recorded comes back as a candidate next cycle -- which is
@@ -202,12 +206,21 @@ def render_list_a(citing: list[dict], primaries, model_forms, all_forms,
     """
     List A, split by whether a decision can change a derived tier.
 
-    Returns the lines and the keys of every paper it reported, so list B can
-    skip them. Those lists used to be disjoint by construction -- A required
-    the entity's name, B required that no catalogued model be named -- and the
-    reference gate ends that: a paper that cites a primary and names nothing
-    now qualifies for both. Asking the same question twice in one file is the
-    one thing the review file exists not to do.
+    Three outcomes, not two, because the reference gate admits rows that
+    satisfy neither of the old halves' conditions:
+
+      needs a decision   the tier would move, or cannot be computed
+      recorded unread    the paper names the entity and the tier cannot move
+      listed only        neither -- no role recorded, no question asked
+
+    Returns list A's lines, the listed section's lines, and the keys of every
+    paper it reported either way, so list B can skip them. A and B used to be
+    disjoint by construction -- A required the entity's name, B required that
+    no catalogued model be named -- and the reference gate ends that: a paper
+    citing a primary and naming nothing now qualifies for both. Asking the same
+    question twice in one file is the one thing the review file exists not to
+    do, and letting the listed rows return as list B questions would simply
+    move the wall.
 
     Both halves are written out in full. The split is about whose attention a
     proposal needs, not about what gets kept: a `benchmark` row on a model that
@@ -217,6 +230,7 @@ def render_list_a(citing: list[dict], primaries, model_forms, all_forms,
     conclusion.
     """
     buckets: dict[str, dict[str, list]] = {"needs-human": {}, "no-effect": {}}
+    context: dict[str, list] = {}
     shown: set[str] = set()
     for rec in citing:
         got = rules.score_named(rec, rec["cites_entity"], primaries,
@@ -232,6 +246,14 @@ def render_list_a(citing: list[dict], primaries, model_forms, all_forms,
             verdict, why = rules.tier_effect(state[entity], rec.get("authors"))
         else:
             verdict, why = "needs-human", "entity carries no primary paper"
+        # Recording a role without a human reading it needs the name, which is
+        # the signal the old gate was built on and the only evidence here that
+        # the paper is about the entity rather than merely citing it. A row
+        # with neither that nor a tier to move is listed and nothing else.
+        if verdict == "no-effect" and not ("name_title" in parts
+                                           or "name_abstract" in parts):
+            context.setdefault(entity, []).append((score, role, rec))
+            continue
         buckets[verdict].setdefault(entity, []).append(
             (score, role, parts, rec, why))
 
@@ -270,7 +292,12 @@ def render_list_a(citing: list[dict], primaries, model_forms, all_forms,
               "Nothing here is dropped — each is recorded as the role shown, "
               "and `03_record.py` will attach it. They appear so the catalogue "
               "stays complete and so a curator can veto one, not so one has to "
-              "be approved.", ""]
+              "be approved.", "",
+              "Every one of these names the entity. That is what makes the "
+              "proposal strong enough to record unread: the reference gate "
+              "only establishes that the paper cites the primary, which a "
+              "paper does for many reasons. Rows with neither a name nor a "
+              "tier to move are listed further down instead.", ""]
     for entity in sorted(buckets["no-effect"]):
         group = sorted(buckets["no-effect"][entity], key=lambda t: -t[0])
         tier = state.get(entity, {}).get("tier")
@@ -278,7 +305,41 @@ def render_list_a(citing: list[dict], primaries, model_forms, all_forms,
         for score, role, parts, rec, why in group:
             _block_a(lines, score, role, parts, rec, entity, primary_authors,
                      why, auto=True)
-    return lines, shown
+    return lines, _render_context(context), shown
+
+
+def _render_context(context: dict[str, list]) -> list[str]:
+    """
+    The rows that are listed and nothing else: no role recorded, no question.
+
+    Written as bullets rather than blocks on purpose. `03_record.py` finds a
+    block by `#### [score] title` (its RE_BLOCK), so a bullet is invisible to
+    it and there is no decision line for it to fail on. At this volume the
+    compact form is also the only readable one -- as blocks with abstracts
+    these rows ran to some 30,000 lines of review file.
+    """
+    n = sum(len(v) for v in context.values())
+    lines = [f"## Cited, not proposed ({n})", "",
+             f"Papers that cite a catalogued `primary` paper and score at or "
+             f"above `{LIST_A_MIN}`, but name no entity and cannot move one's "
+             f"`evidence_tier`. **Nothing here is recorded and nothing is "
+             f"asked.** They are written down so the sweep stays auditable and "
+             f"so a curator who wants one can attach it by hand.", "",
+             "Why they are neither: recording a role unread rests on the "
+             "paper naming the entity, and asking about one that cannot move "
+             "a tier spends a curator on a foregone conclusion — the two "
+             "halves of list A above. A row with neither property satisfies "
+             "the condition for neither half.", ""]
+    for entity in sorted(context):
+        group = sorted(context[entity], key=lambda t: -t[0])
+        lines += [f"### {entity} ({len(group)})", ""]
+        for score, role, rec in group:
+            lines.append(
+                f"- `[{score:+.2f}]` `{role}` · openalex "
+                f"`{rec['openalex_id']}` · doi `{rec.get('doi') or '—'}` · "
+                f"{rec.get('year')} — {rec.get('title')}")
+        lines.append("")
+    return lines
 
 
 def _block_a(lines, score, role, parts, rec, entity, primary_authors, why,
@@ -334,12 +395,13 @@ def render_list_b(citing: list[dict], primaries, model_forms, state,
 
     lines = [f"## List B — names a class, no catalogued model ({len(rows)})", "",
              "Deduplicated and global, because one such paper is evidence for "
-             "several entities at once. Papers already in list A are left out: "
-             "since list A gates on the reference list, the two overlap where "
-             "they used to be disjoint, and a curator should not be asked the "
-             "same question twice. Each entry lists the catalogued primary "
-             "papers it cites, so a curator can see which entities it might "
-             "attach to.", "",
+             "several entities at once. Papers list A reported are left out, "
+             "including the ones it only listed: since list A gates on the "
+             "reference list, the two overlap where they used to be disjoint, "
+             "and a curator should not be asked the same question twice — nor "
+             "asked here what was deliberately not asked there. Each entry "
+             "lists the catalogued primary papers it cites, so a curator can "
+             "see which entities it might attach to.", "",
              "What remains here that list A cannot reach is a paper citing no "
              "catalogued primary at all — found by class terms alone, so it "
              "has no reference-list anchor to any entity.", "",
@@ -456,11 +518,15 @@ def main() -> int:
 
     lines += render_discovery(keep, args.min_score)
     tier_state = rules.read_tier_state()
-    list_a, in_list_a = render_list_a(data["citing"], primaries_oa, model_forms,
-                                      all_forms, primary_authors, tier_state)
+    list_a, listed, in_list_a = render_list_a(
+        data["citing"], primaries_oa, model_forms, all_forms, primary_authors,
+        tier_state)
     lines += list_a
     lines += render_list_b(data["citing"], primaries_oa, model_forms,
                            tier_state, args.min_score, in_list_a)
+    # Last, because it is the largest section and the only one that asks for
+    # nothing: a curator reaches the end of the work before reaching it.
+    lines += listed
 
     REVIEWS_DIR.mkdir(parents=True, exist_ok=True)
     out = REVIEWS_DIR / f"review_{date.today().isoformat()}.md"
