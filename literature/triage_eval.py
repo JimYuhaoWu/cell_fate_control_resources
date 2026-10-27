@@ -57,7 +57,11 @@ SELECT = ("id,doi,title,publication_year,type,primary_location,referenced_works,
 
 # Scoring thresholds. Both lists are ranked proposals, so these only decide how
 # much a curator is asked to read -- nothing is discarded by QC on this basis.
-MIN_A = 3.0
+#
+# MIN_A tracks 02_triage.LIST_A_MIN and has to: list A is gated on the citing
+# paper's reference list, which every swept work satisfies, so an eval run at a
+# threshold the pipeline does not use would measure neither.
+MIN_A = 5.0
 MIN_B = 3.0
 
 
@@ -190,7 +194,7 @@ def report():
     b_abs = sorted((r for r in list_b.values() if r[5]), key=lambda r: -r[0])
     b_noabs = sorted((r for r in list_b.values() if not r[5]), key=lambda r: -r[0])
 
-    print(f"\nlist A (names the model), min_score {MIN_A}:")
+    print(f"\nlist A (cites the primary), min_score {MIN_A}:")
     for entity, (total, rows) in list_a.items():
         print(f"  {entity:32s} {total:5d} citing -> {len(rows):4d} proposed")
     print(f"list B (class-level), min_score {MIN_B}: "

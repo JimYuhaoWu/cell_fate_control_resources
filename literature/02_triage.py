@@ -18,13 +18,17 @@ Triage ranks. It does not include, and it does not tier:
 Three lists, because they are three different questions:
 
   discovery  "is this resource in scope?"  -- scored per expect_type, §1.4
-  list A     "does this paper evaluate <entity>, which it names?"  -- §2.3
+  list A     "does this paper evaluate <entity>, whose primary it cites?"
   list B     "does this paper evaluate a class of models, naming none?"  -- §2.3
 
-Nothing is dropped for scoring low. A threshold decides which *section* a
-candidate lands in, and the whole set is written down: a rejection that is not
-recorded comes back as a candidate next cycle, which is why
-literature/reviews/ is committed while literature/candidates/ is not.
+In discovery nothing is dropped for scoring low: --min-score decides which
+*section* a candidate lands in and the whole set is written down, because a
+rejection that is not recorded comes back as a candidate next cycle -- which is
+why literature/reviews/ is committed while literature/candidates/ is not.
+
+Lists A and B do drop below their thresholds, and list A's is a real filter
+rather than a boundary: its gate is the citing paper's reference list, which
+every swept row satisfies, so without LIST_A_MIN the list would be the sweep.
 
 Run from project root:
     python literature/02_triage.py [--candidates PATH] [--min-score 3.0]
@@ -45,6 +49,20 @@ import triage_rules as rules                            # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 CANDIDATES_DIR = ROOT / "literature" / "candidates"
 REVIEWS_DIR = ROOT / "literature" / "reviews"
+
+# List A's own boundary, not --min-score. Its gate is the citing paper's
+# reference list, which every swept row satisfies, so the threshold is the only
+# thing between a curator and the whole sweep -- a different job from the
+# section boundary --min-score draws in discovery and list B, and on a
+# different scale, since every list A score now carries a +3.0 gate term.
+#
+# 5.0 is measured, not picked: over the 7,002 cached citing rows of 2026-10-21
+# it is the highest threshold at which every one of the 283 curated
+# benchmark/critique rows in that corpus survives. 5.5 starts losing them (264)
+# and 7.0 keeps 174; below 5.0 recall is already total, so a lower boundary
+# buys rows and nothing else. It cost 2,069 rows there against the name gate's
+# 146, for 283 curated rows against 110.
+LIST_A_MIN = 5.0
 
 
 def _rel(path: Path) -> str:
@@ -180,9 +198,16 @@ def render_discovery(cands: list[dict], min_score: float) -> list[str]:
 
 
 def render_list_a(citing: list[dict], primaries, model_forms, all_forms,
-                  primary_authors, state, min_score: float) -> list[str]:
+                  primary_authors, state) -> tuple[list[str], set[str]]:
     """
     List A, split by whether a decision can change a derived tier.
+
+    Returns the lines and the keys of every paper it reported, so list B can
+    skip them. Those lists used to be disjoint by construction -- A required
+    the entity's name, B required that no catalogued model be named -- and the
+    reference gate ends that: a paper that cites a primary and names nothing
+    now qualifies for both. Asking the same question twice in one file is the
+    one thing the review file exists not to do.
 
     Both halves are written out in full. The split is about whose attention a
     proposal needs, not about what gets kept: a `benchmark` row on a model that
@@ -192,14 +217,16 @@ def render_list_a(citing: list[dict], primaries, model_forms, all_forms,
     conclusion.
     """
     buckets: dict[str, dict[str, list]] = {"needs-human": {}, "no-effect": {}}
+    shown: set[str] = set()
     for rec in citing:
         got = rules.score_named(rec, rec["cites_entity"], primaries,
                                 model_forms, all_forms)
         if not got:
             continue
         score, role, parts = got
-        if score < min_score:
+        if score < LIST_A_MIN:
             continue
+        shown.add(rec.get("doi") or rec["openalex_id"])
         entity = rec["cites_entity"]
         if entity in state:
             verdict, why = rules.tier_effect(state[entity], rec.get("authors"))
@@ -211,11 +238,16 @@ def render_list_a(citing: list[dict], primaries, model_forms, all_forms,
     n_human = sum(len(v) for v in buckets["needs-human"].values())
     n_auto = sum(len(v) for v in buckets["no-effect"].values())
 
-    lines = [f"## List A — names the entity ({n_human + n_auto})", "",
-             "Papers citing a catalogued `primary` paper *and* naming the "
-             "entity. The two lexicon sub-scores are printed next to every "
-             "proposed role, because the split is sometimes a coin-flip "
-             "(design §2.6.4).", "",
+    lines = [f"## List A — cites the entity's primary paper "
+             f"({n_human + n_auto})", "",
+             f"Papers whose reference list contains a catalogued `primary` "
+             f"paper, scored at or above `{LIST_A_MIN}`. Naming the entity is "
+             f"worth up to 3.0 of that score but is no longer required: a "
+             f"record named after its own citation cannot be named in anyone "
+             f"else's prose, and the name gate reached 110 of the 283 curated "
+             f"evaluations where this one reaches all 283. The two lexicon "
+             f"sub-scores are printed next to every proposed role, because the "
+             f"split is sometimes a coin-flip (design §2.6.4).", "",
              f"**{n_human} need a decision. {n_auto} do not** — "
              "`evidence_tier` saturates, so once an entity has one independent "
              "evaluation no further row can move it. Author overlap decides "
@@ -246,7 +278,7 @@ def render_list_a(citing: list[dict], primaries, model_forms, all_forms,
         for score, role, parts, rec, why in group:
             _block_a(lines, score, role, parts, rec, entity, primary_authors,
                      why, auto=True)
-    return lines
+    return lines, shown
 
 
 def _block_a(lines, score, role, parts, rec, entity, primary_authors, why,
@@ -275,11 +307,11 @@ def _block_a(lines, score, role, parts, rec, entity, primary_authors, why,
 
 
 def render_list_b(citing: list[dict], primaries, model_forms, state,
-                  min_score: float) -> list[str]:
+                  min_score: float, in_list_a: set[str]) -> list[str]:
     seen: dict[str, tuple] = {}
     for rec in citing:
         key = rec.get("doi") or rec["openalex_id"]
-        if key in seen:
+        if key in seen or key in in_list_a:
             continue
         got = rules.score_class(rec, primaries, model_forms)
         if not got:
@@ -302,11 +334,15 @@ def render_list_b(citing: list[dict], primaries, model_forms, state,
 
     lines = [f"## List B — names a class, no catalogued model ({len(rows)})", "",
              "Deduplicated and global, because one such paper is evidence for "
-             "several entities at once. This list exists because the gate that "
-             "ranks named cases well discards **both** catalogued critiques of "
-             "Enformer: neither names it (design §2.3). Each entry lists the "
-             "catalogued primary papers it cites, so a curator can see which "
-             "entities it might attach to.", "",
+             "several entities at once. Papers already in list A are left out: "
+             "since list A gates on the reference list, the two overlap where "
+             "they used to be disjoint, and a curator should not be asked the "
+             "same question twice. Each entry lists the catalogued primary "
+             "papers it cites, so a curator can see which entities it might "
+             "attach to.", "",
+             "What remains here that list A cannot reach is a paper citing no "
+             "catalogued primary at all — found by class terms alone, so it "
+             "has no reference-list anchor to any entity.", "",
              f"**{len(human)} need a decision. {len(auto)} do not** — the same "
              "saturation test as list A, applied across every entity the paper "
              "could attach to. One target whose tier could move is enough to "
@@ -393,7 +429,8 @@ def main() -> int:
              f"From `{_rel(path)}` "
              f"({data['counts']['discovery']} discovery, "
              f"{data['counts']['citing']} citing). Section boundary at "
-             f"`--min-score {args.min_score}`.", "",
+             f"`--min-score {args.min_score}`; list A filters at "
+             f"`{LIST_A_MIN}`.", "",
              "Tick one decision per candidate and fill in the notes, then run "
              "`python literature/03_record.py`. Accepting a citing paper "
              "proposes an `entity_paper` role; the `evidence_tier` that follows "
@@ -419,10 +456,11 @@ def main() -> int:
 
     lines += render_discovery(keep, args.min_score)
     tier_state = rules.read_tier_state()
-    lines += render_list_a(data["citing"], primaries_oa, model_forms, all_forms,
-                           primary_authors, tier_state, args.min_score)
+    list_a, in_list_a = render_list_a(data["citing"], primaries_oa, model_forms,
+                                      all_forms, primary_authors, tier_state)
+    lines += list_a
     lines += render_list_b(data["citing"], primaries_oa, model_forms,
-                           tier_state, args.min_score)
+                           tier_state, args.min_score, in_list_a)
 
     REVIEWS_DIR.mkdir(parents=True, exist_ok=True)
     out = REVIEWS_DIR / f"review_{date.today().isoformat()}.md"

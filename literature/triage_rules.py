@@ -400,15 +400,38 @@ def _context(rec: dict, primaries: dict, entity: str | None):
 
 
 def score_named(rec, entity, primaries, model_forms, all_forms):
-    """List A: the citing paper names this entity."""
-    title, abstract, both, _, n_shared = _context(rec, primaries, entity)
-    parts = {}
+    """
+    List A: the citing paper cites this entity's `primary` paper.
+
+    Gated on the reference list, not on the entity's name. Measured over the
+    7,002 cached citing rows of 2026-10-21, against the curated
+    `benchmark`/`critique` rows as truth: the name gate reached 110 of the 283
+    present in that corpus, and this gate reaches all 283. The swept primary
+    appears in `referenced_works` for 7,002 of 7,002, so the match is exact
+    and costs no request -- every citing row already carries the list.
+
+    The name gate could not have been fixed by widening it. A record whose
+    paper introduces no named resource is named after its citation since
+    `fec702d` -- `Wang 2025 Benchmarking translational potential` -- and no
+    paper writes that in prose, so 392 of the 472 records holding only a
+    primary paper were unreachable by any name match.
+
+    The name still *scores* where it appears, because a paper that names the
+    resource is more likely to be about it than one that only cites it: on the
+    reference gate alone the threshold keeps 269 of the 283, and the name bonus
+    carries the last 14 over it.
+
+    This gate admits every swept row, so it decides nothing on its own and the
+    threshold in 02_triage.py is what holds the list to a readable size.
+    """
+    title, abstract, both, cited, n_shared = _context(rec, primaries, entity)
+    if entity not in cited:
+        return None
+    parts = {"ref_primary": 3.0}
     if names(all_forms.get(entity, set()), title):
         parts["name_title"] = 3.0
     elif names(all_forms.get(entity, set()), abstract):
         parts["name_abstract"] = 1.5
-    else:
-        return None
     bench, crit = lexicon(title, abstract)
     parts["bench_lex"], parts["crit_lex"] = bench, crit
     others = sum(1 for e, f in model_forms.items() if e != entity and names(f, both))
