@@ -229,10 +229,11 @@ preprint handling.
 
 | signal | weight | why |
 |---|---|---|
-| **names this entity, in the title** | +3.0 | The strongest available evidence that a citing paper is *about* this model rather than merely citing it. |
+| **cites this entity's primary paper** | +3.0, and it is the gate | Since 1f4ab1f this is what admits a row to list A at all. Exact: the swept primary is in `referenced_works` for 7,002 of 7,002 cached citing rows, so OpenAlex's `cites:` index and the stored reference lists agree completely, and it costs no request. |
+| **names this entity, in the title** | +3.0 | Still the strongest evidence that a citing paper is *about* this model rather than merely citing it — but a bonus now, not a requirement. |
 | **names this entity, in the abstract** | +1.5 | Same signal, weaker position. |
 | **several catalogued models named together** | 0 / +0.5 / +1.5 / +3.0 for 0/1/2/3+ | The benchmark signature. A paper naming three catalogued models is comparing them. |
-| **cites several catalogued primary papers** | +0.75 each, capped +3.0 | A benchmark's reference list contains the models it evaluates. Weaker than it looks today — see 2.5. |
+| **cites several catalogued primary papers** | +0.75 each, capped +3.0 | A benchmark's reference list contains the models it evaluates. Counts primaries *other* than this entity's, which the gate has already established. |
 | **benchmark lexicon** | title +2.0 each (cap 4.0), abstract +0.5 each (cap 2.0) | `benchmark`, `evaluation`, `comparison`, `assessment`, `baseline`, `systematic`, `leaderboard`, `head-to-head`. |
 | **critique lexicon** | title +2.5 each (cap 5.0), abstract +0.75 each (cap 3.0) | `fail`, `struggle`, `poorly`, `overestimat`, `limitation`, `pitfall`, `spurious`, `confound`, `misleading`, `not generalize`. Weighted above the benchmark lexicon because critiques are rarer and are what the novelty claim rests on. |
 | **demotion** | −3.0 | `review`, `perspective`, `primer`, `erratum`, `retraction` in the title, or OpenAlex `type: review`. Demotes, never excludes: `review` is a real role. |
@@ -242,6 +243,10 @@ contain `"NT"` for `model:nucleotide-transformer`, which matches almost every
 abstract; all matching is word-boundary anchored and case-insensitive.
 
 ### 2.3 Two lists, because one ranking was measurably wrong
+
+**Superseded in part by 2.3a. The name gate described here was replaced on
+2026-10-27; the reasoning is kept because it is why list B exists and why the
+replacement went the way it did.**
 
 The first design gated candidacy on naming the model: a citing paper that never
 writes "Enformer" is not an evaluation of Enformer. That gate ranks the named
@@ -267,6 +272,75 @@ Merging the two into one ranking was tried and measured: the class track floods
 the list, and the Enformer benchmark falls from rank 2 to rank 13 while the pool
 grows from 47 to 144. The lists are kept separate and the curator reads A first.
 
+### 2.3a The gate is the reference list, not the name
+
+The name gate above fixed its own problem twice over and then met one it could
+not. `fec702d` gave a record whose paper introduces no named resource a
+*citation* name — `Wang 2025 Benchmarking translational potential` — which was
+right for the catalogue and fatal here: nobody writes that in prose, so **392
+of the 472 records holding only a primary paper were unreachable by any name
+match.** The two decisions were each sound and could not both stand.
+
+Measured over the 7,002 cached citing rows of 2026-10-21, against the curated
+`benchmark`/`critique` rows as truth:
+
+| route | of the 283 curated rows present |
+|---|---|
+| list A, name gate | 110 |
+| list B | 82 |
+| either | 192 |
+| **neither** | **91** |
+| list A, reference gate | **283** |
+
+So list A now admits a row when the entity's primary paper is in the citing
+paper's reference list, and the name scores where it appears rather than
+gating. On the reference gate alone the threshold keeps 269 of 283; the name
+bonus carries the last 14 over.
+
+**The gate admits every swept row**, so it decides nothing by itself and
+`02_triage.LIST_A_MIN` does the work. 5.0 is the highest threshold at which all
+283 survive — 5.5 keeps 264, 7.0 keeps 174 — and below it recall is already
+total. It is a filter, not the section boundary `--min-score` draws in
+discovery, and on a different scale, since every list A score now carries the
++3.0 gate term.
+
+**Three outcomes, not two.** Recording a role unread rests on the name, which
+is the only evidence in a row that the paper is about the entity rather than
+citing it for one of many reasons; asking about a row that cannot move a
+saturated tier spends a curator on a foregone conclusion. A row with neither
+property satisfies neither condition, so it is listed under *Cited, not
+proposed* — no role recorded, no question asked. On the cached corpus:
+
+| | tier cannot move | tier could move |
+|---|---|---|
+| names the entity | 190 → recorded unread | 0 |
+| cites only | **1,867 → listed only** | 12 → asked |
+
+Sending those 1,867 to a human was the alternative and the arithmetic refused
+it: 1,879 decisions of which 1,867 cannot change any tier, which rebuilds the
+wall 1.5 spent four changes climbing down from.
+
+**Lists A and B are no longer disjoint**, where they used to be by
+construction — A required the name, B required that no catalogued model be
+named. A paper citing a primary and naming nothing now qualifies for both, so
+list B skips what A reported, the listed rows included; letting them return as
+B questions would move the wall rather than remove it. On the cached corpus
+that empties list B entirely — all 172 of its rows cite a catalogued primary.
+**Whether list B still earns a second scorer is therefore open**: it is not
+dead in principle, since a class-level paper citing no catalogued primary has
+no reference-list anchor and still lands there, but that case did not occur
+once in 7,002 rows.
+
+**What this does not settle.** The 471 primaries behind the one-paper records
+carry 61,897 citing works, 53,351 of them behind just 19 papers — ENCODE at
+18,053, ATAC-seq at 6,415, Roadmap at 6,351. Citing ENCODE's primary means "we
+used ENCODE data", not "we evaluated ENCODE", so the gate's one signal means
+something different for a foundational resource paper than for a model's own.
+And none of those 472 records holds an evaluation yet, so neither cheaper
+outcome applies and every row is a real decision: roughly 18,000 of them at the
+29.6% that cleared 5.0 here. Sweeping them is a per-record decision about which
+primaries are worth asking about, not a cycle to run. Tracked in #8.
+
 ### 2.4 Author overlap is deliberately not scored
 
 Author overlap with the primary paper is the most predictive signal in the pool
@@ -285,6 +359,11 @@ that is the correct answer, not a missing one. So the review file should
 human deciding what to read — and the score must ignore it.
 
 ### 2.5 Measured against the eight committed rows
+
+**Historical.** This is the name gate measured when the catalogue held eight
+evaluation rows; it now holds 291, and 2.3a supersedes the placements below.
+Kept because the title-only finding at the end of it is still load-bearing.
+`triage_eval.py` reproduces the current numbers, not these.
 
 `db/entity_paper.tsv` holds 6 `benchmark` and 2 `critique` rows. Reproduce with
 `python literature/triage_eval.py`.

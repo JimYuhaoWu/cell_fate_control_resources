@@ -283,8 +283,33 @@ observe with; see the scope section in `README.md` for the full rule. In
 practice: `where` and `how` deep (including 3D genome contact prediction),
 `what` shallow and pointing outward (a single-cell foundation model qualifies
 when it predicts a perturbation response, not when it only embeds cells),
-trajectory inference and RNA velocity out. Target ~300-400 entities, which is
-roughly:
+trajectory inference and RNA velocity out.
+
+**The ~300-400 target below is the original estimate and the catalogue has
+passed it: 489 published.** It is kept because the per-axis shape is what the
+estimate was for, and the shape is where the overshoot sits rather than being
+spread evenly. Measured against it, with 85 benchmarks carrying no `fate_axis`
+at all and a record able to carry more than one:
+
+| axis | estimated | now |
+|---|---|---|
+| `where` | ~125-175 | 166 |
+| `how` | ~60-80 | 78 |
+| `what` | ~15-25 | **105** |
+| `with-what` | ~15-30 | 61 |
+
+`where` and `how` landed inside their ranges. `what` was meant to be shallow
+and pointing outward and is the largest overshoot at four times its ceiling,
+which is exactly where the scope rule is hardest to apply — a single-cell
+foundation model qualifies when it predicts a perturbation response and not
+when it only embeds cells, and nothing in the pipeline can tell those apart.
+
+So the number to fix is not the target: M4a holds expansion until the drift
+rate is measured, and whether 105 on `what` is scope creep or simply more
+resources existing is precisely what that measurement answers. Revise the
+estimate then, from the labelled set, rather than now from the overshoot.
+
+The original estimate, for reference:
 
 | | |
 |---|---|
