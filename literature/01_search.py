@@ -91,11 +91,22 @@ class FetchError(RuntimeError):
     """One source gave up after its retries. Recorded, not fatal."""
 
 
+# The longest `Retry-After` this will sit through. A per-second 429 asks for a
+# few seconds and is worth waiting out; OpenAlex's daily-budget 429 sends the
+# seconds until midnight UTC -- 58,069 of them when this was found -- and
+# sleeping on that parks the process for sixteen hours having printed one line.
+# Above the cap the wait becomes a FetchError, which is the exit this module is
+# already built around: `cached_citing` writes each paper's citing set as it
+# arrives so that a failed run is resumed by running it again.
+MAX_RETRY_AFTER = 60
+
+
 def _get(url: str, params: dict, parse: str = "json"):
     """
-    Four attempts, then give up loudly. Honours Retry-After when the server
-    sends one; otherwise backs off 3s, 6s, 9s -- arXiv asks for a few seconds
-    between calls and OpenAlex charges nothing for a per-second 429.
+    Four attempts, then give up loudly. Honours Retry-After up to
+    MAX_RETRY_AFTER when the server sends one; otherwise backs off 3s, 6s, 9s
+    -- arXiv asks for a few seconds between calls and OpenAlex charges nothing
+    for a per-second 429.
     """
     for attempt in range(4):
         try:
@@ -103,11 +114,21 @@ def _get(url: str, params: dict, parse: str = "json"):
                              timeout=60)
             if r.status_code == 429:
                 wait = int(r.headers.get("Retry-After", 10))
+                if wait > MAX_RETRY_AFTER:
+                    raise FetchError(
+                        f"rate limited for {wait}s, longer than the "
+                        f"{MAX_RETRY_AFTER}s this will wait -- a quota rather "
+                        f"than a burst. Nothing already fetched is lost; run "
+                        f"again once it resets. {url} {params}")
                 print(f"    rate limited, waiting {wait}s", file=sys.stderr)
                 time.sleep(wait)
                 continue
             r.raise_for_status()
             return r.json() if parse == "json" else ET.fromstring(r.content)
+        except FetchError:
+            # Not retryable, and `except Exception` below would swallow it
+            # back into the loop.
+            raise
         except Exception as exc:                        # noqa: BLE001
             print(f"    retry {attempt + 1}: {exc}", file=sys.stderr)
             time.sleep(3 * (attempt + 1))
@@ -185,16 +206,45 @@ def search_arxiv(query: str, min_year: int, max_results: int) -> list[dict]:
 
 # ── OpenAlex citation sweep ──────────────────────────────────────────────────
 
+def openalex_doi(paper_id: str) -> str:
+    """
+    The DOI to resolve a catalogued paper_id by.
+
+    arXiv mints `10.48550/arXiv.<id>` for every submission and OpenAlex indexes
+    it, so an arXiv id resolves exactly and in the same call shape as any other
+    -- 111 of the 471 primary papers are arXiv ids, and each used to cost a
+    fuzzy title search of its own. OpenAlex echoes the DOI lower-cased, so
+    anything keyed on the value it returns has to fold case.
+    """
+    return ("10.48550/arXiv." + paper_id.split(":", 1)[1]
+            if paper_id.startswith("arxiv:") else paper_id)
+
+
 def resolve_openalex(paper_id: str, title: str | None) -> str | None:
-    """paper_id -> OpenAlex short id. arXiv ids carry no DOI, so match on title."""
-    if paper_id.startswith("arxiv:"):
-        if not title:
-            return None
-        hits = _get(OPENALEX, {"filter": f"title.search:{title}",
-                               "select": "id", "mailto": MAILTO}).get("results")
-        return hits[0]["id"].rsplit("/", 1)[-1] if hits else None
-    work = _get(f"{OPENALEX}/doi:{paper_id}", {"select": "id", "mailto": MAILTO})
-    return (work.get("id") or "").rsplit("/", 1)[-1] or None
+    """
+    paper_id -> OpenAlex short id, by DOI.
+
+    The title search is the fallback for a paper OpenAlex does not hold under
+    its DOI. It used to be the arXiv path, on the premise that arXiv ids carry
+    no DOI; they do, and a title search is both a request each and a best guess
+    rather than the paper.
+
+    Asked as a `filter` rather than as `/works/doi:<doi>`, because the
+    single-entity form 404s on a DOI OpenAlex does not have -- which `_get`
+    turns into a FetchError after four attempts, so the fallback below could
+    never run. A filter answers an absent DOI with an empty result set.
+    """
+    hits = _get(OPENALEX, {"filter": f"doi:{openalex_doi(paper_id)}",
+                           "select": "id", "per-page": 1,
+                           "mailto": MAILTO}).get("results")
+    if hits:
+        return hits[0]["id"].rsplit("/", 1)[-1]
+    if not title:
+        return None
+    hits = _get(OPENALEX, {"filter": f"title.search:{title}",
+                           "select": "id", "per-page": 1,
+                           "mailto": MAILTO}).get("results")
+    return hits[0]["id"].rsplit("/", 1)[-1] if hits else None
 
 
 def citing_works(short_id: str) -> list[dict]:

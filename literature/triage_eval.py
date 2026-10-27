@@ -81,17 +81,25 @@ def _get(url: str, params: dict) -> dict:
 
 
 def resolve(paper_id: str, title: str | None) -> str | None:
-    """paper_id -> OpenAlex short id. arXiv ids have no DOI, so fall back to title."""
-    if paper_id.startswith("arxiv:"):
-        if not title:
-            return None
-        res = _get(OA, {"filter": f"title.search:{title}", "select": "id"}).get("results")
-        if not res:
-            return None
+    """
+    paper_id -> OpenAlex short id, by DOI; title search only as the fallback.
+
+    Same fix as 01_search.resolve_openalex and for the same reason: arXiv mints
+    `10.48550/arXiv.<id>`, so the arXiv branch was spending a fuzzy title
+    search per paper on a DOI that resolves exactly. Two copies of a wrong
+    premise meant fixing it in one place would have left the other.
+    """
+    doi = ("10.48550/arXiv." + paper_id.split(":", 1)[1]
+           if paper_id.startswith("arxiv:") else paper_id)
+    res = _get(OA, {"filter": f"doi:{doi}", "select": "id",
+                    "per-page": 1}).get("results")
+    if res:
         return res[0]["id"].rsplit("/", 1)[-1]
-    work = _get(f"{OA}/doi:{paper_id}", {"select": "id"})
-    wid = work.get("id")
-    return wid.rsplit("/", 1)[-1] if wid else None
+    if not title:
+        return None
+    res = _get(OA, {"filter": f"title.search:{title}", "select": "id",
+                    "per-page": 1}).get("results")
+    return res[0]["id"].rsplit("/", 1)[-1] if res else None
 
 
 def citing(short_id: str) -> list[dict]:
