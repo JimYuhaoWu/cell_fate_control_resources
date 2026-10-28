@@ -47,14 +47,19 @@ Usage
 from __future__ import annotations
 
 import json
-import re
-import unicodedata
 import sqlite3
 from contextlib import contextmanager
 from pathlib import Path
 from typing import Iterator
 
 import pandas as pd
+
+# Author overlap is WhoChecked's, not ours. Re-exported here because
+# 05_validate.py and literature/triage_rules.py both import these names from
+# `schema` and the move should not reach them -- and because `derive_tier`
+# below is the one thing in this pair that stays CFCR's: a tier is an assertion
+# the catalogue makes, and WhoChecked asserts nothing.
+from whochecked.overlap import PARTIAL_MAX, classify_overlap, norm_author  # noqa: F401
 
 
 # ── enums ────────────────────────────────────────────────────────────────────
@@ -92,56 +97,41 @@ LINK_KINDS = ("code", "weights", "website", "dataset", "docs", "api",
 # group asserting the same claim n times is still one group, and rewarding
 # volume would favour the most prolific labs over the most scrutinized models.
 #
-# Derivation (05_validate.py), over every entity_paper row with
-# role IN ('benchmark','critique'), comparing its authors against the authors of
-# the `primary` paper, normalized to lastname + first initial:
+# Each evaluation is classified by `whochecked.overlap.classify_overlap`, which
+# owns that arithmetic and documents its four verdicts. 05_validate.py applies
+# it over every entity_paper row with role IN ('benchmark','critique'),
+# comparing its authors against the `primary` paper's.
 #
-#   shared == 0                                    -> independent
-#   0 < shared < 50% of the evaluating paper's authors -> partially independent
-#   shared >= 50%                                  -> same group; contributes nothing
-#
-# The model takes the most independent tier any single evaluation reaches:
+# What stays CFCR's is the step below: the model takes the most independent tier
+# any single evaluation reaches.
 # any independent evaluation    -> externally-benchmarked
 # else any partially independent -> partially-independent
 # else                           -> self-reported
+#
+# `derive_tier` can also return None, which is not a fourth tier and so is not
+# listed here: it means no tier could be derived at all, because evaluations
+# exist and every one of them classified as `unknown`. See its docstring.
 EVIDENCE_TIERS = ("externally-benchmarked", "partially-independent",
                   "self-reported")
 
-# Fraction of the EVALUATING paper's authors that may be shared with the primary
-# paper before the evaluation is treated as coming from the same group.
-PARTIAL_MAX = 0.50
-
-
-def norm_author(name: str) -> str:
-    """
-    Normalize to `lastname|first-initial`, accent- and case-folded.
-
-    Deliberately lossy and therefore conservative: two different people who
-    share a surname and initial collide, which counts as author overlap and
-    biases the derivation toward the LOWER (less independent) tier. Reporting a
-    model as less externally validated than it is, is the safe direction.
-    """
-    n = unicodedata.normalize("NFKD", name)
-    n = "".join(c for c in n if not unicodedata.combining(c)).lower()
-    parts = [p for p in re.split(r"[\s.\-,]+", n) if p]
-    if not parts:
-        return ""
-    return f"{parts[-1]}|{parts[0][0]}"
-
-
-def classify_overlap(primary: set[str], evaluating: set[str]) -> tuple[str, set[str]]:
-    shared = primary & evaluating
-    if not shared:
-        return "independent", shared
-    if not evaluating:
-        return "unknown", shared
-    if len(shared) / len(evaluating) < PARTIAL_MAX:
-        return "partial", shared
-    return "same-group", shared
-
 
 def derive_tier(primary: set[str],
-                evaluations: list[tuple[str, set[str]]]) -> tuple[str, list]:
+                evaluations: list[tuple[str, set[str]]]) -> tuple[str | None, list]:
+    """
+    The most independent tier any single evaluation reaches, or None.
+
+    None means the derivation has nothing to say: evaluations exist but every
+    one classified as `unknown`, because an author list behind them is missing.
+    `self-reported` would be a claim in that case -- that the authors are the
+    only people who have checked -- read off absent data rather than evidence.
+
+    **No evaluations at all is a different fact and still derives
+    `self-reported`.** Nobody has evaluated the resource, so only its own paper
+    speaks for it, which is exactly what that tier says. The distinction
+    matters more than it looks: 312 of the catalogue's 320 models carry no
+    evaluation, and `all([])` is True, so folding the two cases together would
+    silently withdraw the derived tier from almost every model in CFCR.
+    """
     verdicts = [(pid, *classify_overlap(primary, authors))
                 for pid, authors in evaluations]
     kinds = {v[1] for v in verdicts}
@@ -149,16 +139,23 @@ def derive_tier(primary: set[str],
         tier = "externally-benchmarked"
     elif "partial" in kinds:
         tier = "partially-independent"
+    elif kinds and kinds <= {"unknown"}:
+        tier = None
     else:
+        # Includes `same-group` mixed with `unknown`: one evaluation known to
+        # come from the same group is information, and the unknowns add
+        # nothing to it.
         tier = "self-reported"
     return tier, verdicts
 
 
-# These three live here, beside the tier vocabulary they produce, rather than in
-# 05_validate.py where they started. `evidence_tier` is the one claim CFCR rests
-# on, and literature/02_triage.py needs the same arithmetic to decide which role
-# proposals could move a tier and therefore need a human. Two copies of this
-# would be the worst possible thing in this repository to let drift.
+# `derive_tier` lives here, beside the tier vocabulary it produces, rather than
+# in 05_validate.py where it started. `evidence_tier` is the one claim CFCR
+# rests on, and literature/02_triage.py needs the same arithmetic to decide
+# which role proposals could move a tier and therefore need a human. The
+# classification it is built on moved further out still, to `whochecked`, for
+# the same reason one step along: two copies of it would be the worst possible
+# thing to let drift, and there were about to be two repositories.
 AVAILABILITY_TIERS = ("open-source", "open-weights", "api-only")
 MODEL_FAMILIES = ("interval-model", "dna-lm", "perturbation-model",
                   "module-predictor", "other")

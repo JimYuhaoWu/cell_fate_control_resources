@@ -524,6 +524,10 @@ def read_tier_state() -> dict[str, dict]:
 
     `tier` is None for an entity that carries no evaluation yet: there is no
     tier to preserve, so the first accepted evaluation always changes something.
+
+    It is also None when evaluations exist but `derive_tier` cannot classify
+    any of them. Both mean "no tier to preserve", which is why one value covers
+    them, and `tier_effect` sends either to a human.
     """
     def rows(path: str) -> list[dict]:
         with (ROOT / path).open(encoding="utf-8") as fh:
@@ -561,11 +565,21 @@ def tier_effect(state: dict, candidate_authors: list[str] | None) -> tuple[str, 
       "needs-human"  the tier would change, or cannot be computed
       "no-effect"    the tier is already what it would be afterwards
 
-    An author list we do not have is **never** treated as no-effect. With no
-    authors, `classify_overlap` sees an empty intersection and returns
-    "independent", which would read as the strongest possible evidence from the
-    weakest possible data -- a missing abstract's harmless cousin turned into a
-    tier promotion. Those go to a human.
+    An author list we do not have is **never** treated as no-effect. Those go
+    to a human.
+
+    That guard was written to compensate for a defect: `classify_overlap` used
+    to return "independent" for an empty author list, because its `if not
+    shared` test ran before its `if not evaluating` test and made the "unknown"
+    branch unreachable -- the strongest possible evidence read off the weakest
+    possible data. `whochecked.overlap` fixes it, so the guard now agrees with
+    the classifier instead of working around it.
+
+    It stays, for the reason it would have been written anyway: this function
+    answers "would accepting this move the tier", and for a candidate with no
+    authors the honest answer is that nobody can say. Returning no-effect on an
+    "unknown" verdict would hide the proposal from the curator precisely when
+    the evidence is weakest.
     """
     if not candidate_authors:
         return "needs-human", "no author list; independence cannot be computed"
@@ -578,6 +592,15 @@ def tier_effect(state: dict, candidate_authors: list[str] | None) -> tuple[str, 
     after = derive_tier(state["primary_authors"],
                         state["evaluations"] + [("candidate", theirs)])[0]
     kind = classify_overlap(state["primary_authors"], theirs)[0]
+    if after is None:
+        # `derive_tier` returns None when every evaluation classifies as
+        # `unknown`, which here means the entity's own primary paper has no
+        # author list. Nothing can be said about what accepting this would do,
+        # and this is the case the old defect hid: the classifier used to call
+        # it `independent`, so `after` came back `externally-benchmarked` and
+        # the row reached a human by accident rather than on purpose.
+        return "needs-human", ("no tier can be derived; the primary paper has "
+                               "no author list")
     if before is None:
         return "needs-human", f"first evaluation; would set tier to {after}"
     if after != before:

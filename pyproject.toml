@@ -13,6 +13,14 @@ keywords = ["genomics", "cell fate", "chromatin", "deep learning", "curation"]
 dependencies = [
     "pandas",
     "pyyaml",
+    # The author-overlap derivation behind `evidence_tier`, owned by
+    # WhoChecked so that two projects cannot hold two copies of it. Pinned to a
+    # commit, not a branch: the QC story here is that a rebuild reproduces the
+    # committed snapshots byte for byte, and a dependency that computes
+    # `evidence_tier` cannot be allowed to move underneath that claim. Bumping
+    # the pin is a visible commit, which is the right weight for a change to
+    # the one thing CFCR rests on.
+    "whochecked @ git+https://github.com/JimYuhaoWu/WhoChecked@603778d",
 ]
 
 # The literature pipeline is the only thing here that touches the network, and

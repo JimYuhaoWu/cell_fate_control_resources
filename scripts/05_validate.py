@@ -379,8 +379,8 @@ def check_evidence_tier(db, papers, by_entity, rep):
         if not primary and evaluations:
             rep.add(WARNING, "evidence-tier", eid,
                     "primary paper has no author list, so overlap cannot be "
-                    "computed; every evaluation reads as 'unknown' and the "
-                    "derived tier falls back to self-reported",
+                    "computed; every evaluation reads as 'unknown' and no tier "
+                    "is derived",
                     "repair the primary paper's authors in papers.yaml")
 
         detail = "; ".join(
@@ -388,7 +388,23 @@ def check_evidence_tier(db, papers, by_entity, rep):
                                   if shared else "")
             for pid, kind, shared in verdicts) or "no benchmark/critique papers"
 
-        if claimed is None:
+        if derived is None:
+            # Evaluations exist and not one of them could be classified, so
+            # there is no derivation to agree or disagree with. An asserted
+            # tier is an ERROR rather than a mismatch: the catalogue is making
+            # the claim it rests on where nothing can corroborate it, which is
+            # what this check exists to catch. Repairing the author lists is
+            # the fix either way.
+            if claimed is None:
+                rep.add(INFO, "evidence-tier", eid,
+                        f"no tier derived [{detail}]")
+            else:
+                rep.add(ERROR, "evidence-tier", eid,
+                        f"asserted evidence_tier '{claimed}' but no tier can "
+                        f"be derived [{detail}]",
+                        "repair the author lists behind those evaluations, or "
+                        "drop the asserted evidence_tier")
+        elif claimed is None:
             # A `model_ext` block that carries no tier is not asserting a null
             # one: it is a record that holds some other model field -- a
             # licence, a parameter count -- and leaves the tier to be derived,

@@ -112,25 +112,21 @@ def latest_candidates() -> Path:
 
 def author_overlap(rec: dict, primary_authors: list[str]) -> str:
     """
-    Shown, never scored. Uses 05_validate.py's own `lastname|first-initial`
-    normalization so the number a curator reads is the number QC will derive
-    the tier from.
+    Shown, never scored. Uses the same `lastname|first-initial` normalization
+    QC derives the tier from, so the number a curator reads here is that
+    number.
+
+    It used to keep its own copy of that function, "kept in step with
+    05_validate.py" by hand -- which had already fallen out of step, since the
+    original moved to schema.py. It now comes from `whochecked.overlap` through
+    triage_rules like every other caller.
     """
     if not rec.get("authors") or not primary_authors:
         return "unknown"
-    theirs = {norm_author(a) for a in rec["authors"]} - {""}
-    ours = {norm_author(a) for a in primary_authors} - {""}
+    theirs = {rules.norm_author(a) for a in rec["authors"]} - {""}
+    ours = {rules.norm_author(a) for a in primary_authors} - {""}
     shared = theirs & ours
     return f"{len(shared)}/{len(ours)} of the primary authors"
-
-
-def norm_author(name: str) -> str:
-    """Kept in step with scripts/05_validate.py:norm_author."""
-    import unicodedata
-    n = unicodedata.normalize("NFKD", name)
-    n = "".join(c for c in n if not unicodedata.combining(c)).lower()
-    parts = [p for p in re.split(r"[\s.\-,]+", n) if p]
-    return f"{parts[-1]}|{parts[0][0]}" if parts else ""
 
 
 def fmt_parts(parts: dict) -> str:
