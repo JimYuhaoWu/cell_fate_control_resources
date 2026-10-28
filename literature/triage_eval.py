@@ -22,6 +22,7 @@ from __future__ import annotations
 import contextlib
 import io
 import json
+import os
 import sys
 import time
 from datetime import date
@@ -51,6 +52,12 @@ def _contact_email() -> str:
 
 MAILTO = _contact_email()
 UA = f"cfcr-triage-eval (mailto:{MAILTO})"
+
+# Same source as 01_search.OPENALEX_KEY, read again rather than imported: a
+# module whose name starts with a digit cannot be imported by name, which is
+# why _contact_email is a second copy here too. Absent is supported -- this
+# harness fits in the keyless budget on a warm cache.
+OPENALEX_KEY = os.environ.get("OPENALEX_API_KEY") or None
 OA = "https://api.openalex.org/works"
 SELECT = ("id,doi,title,publication_year,type,primary_location,referenced_works,"
           "referenced_works_count,abstract_inverted_index")
@@ -71,7 +78,10 @@ def _get(url: str, params: dict) -> dict:
     params = dict(params, mailto=MAILTO)
     for attempt in range(4):
         try:
-            r = requests.get(url, params=params, headers={"User-Agent": UA}, timeout=60)
+            headers = {"User-Agent": UA}
+            if OPENALEX_KEY:
+                headers["Authorization"] = f"Bearer {OPENALEX_KEY}"
+            r = requests.get(url, params=params, headers=headers, timeout=60)
             r.raise_for_status()
             return r.json()
         except Exception as exc:  # noqa: BLE001 -- retry anything the API throws

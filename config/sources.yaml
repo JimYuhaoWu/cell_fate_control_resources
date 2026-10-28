@@ -41,10 +41,24 @@ metadata_apis:
     # the same lookup with a null citationCount, surfaced one of the two inside
     # the first 1,000 of Enformer's 1,325 citations, and did not find BEND.
     contact_email: yuhaow9412@gmail.com
+    # A key is required for citation work, not an optimisation. OpenAlex moved
+    # to a per-call budget priced in dollars: measured against the live API on
+    # 2026-10-28, X-RateLimit-Limit-USD is 0.10 a day without a key, a
+    # filter call costs 0.0001 and a search call 0.001 -- so keyless is a
+    # thousand filter calls or a hundred searches, shared by everyone on this
+    # network's IP, and the sweep's 471 primaries plus their citing pages do
+    # not fit. The quoted figure for a free key is tenfold that; unverified
+    # here, because there is no key yet.
+    #
+    # The address is still sent and still polite, but it no longer grants a
+    # quota of its own, which is what the note here used to claim.
+    api_key_env: OPENALEX_API_KEY
     note: >
-      Ten requests a second keyless, against a daily budget reported in the
-      X-RateLimit-Limit header; a free key raises that budget tenfold and is
-      required for cursor paging past the first page.
+      The key is read from the OPENALEX_API_KEY environment variable and sent
+      as an Authorization: Bearer header -- never written into this file or any
+      other, the same way 07_enrich.py reaches GitHub through `gh` rather than
+      holding a token. Absent, the pipeline runs on the keyless budget and says
+      so. A free key is issued at https://openalex.org/settings/api-key.
   - name: crossref
     url: https://api.crossref.org/works
     role: resolution

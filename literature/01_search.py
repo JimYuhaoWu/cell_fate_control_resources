@@ -38,6 +38,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import sys
 import time
 import xml.etree.ElementTree as ET
@@ -71,6 +72,15 @@ UA = f"cfcr-literature/0.1 (mailto:{MAILTO})"
 EUROPEPMC = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
 ARXIV = "https://export.arxiv.org/api/query"
 OPENALEX = "https://api.openalex.org/works"
+
+# Read from the environment and stored nowhere, for the same reason 07_enrich.py
+# reaches GitHub through `gh` instead of holding a token: a key written into the
+# repository is a key in its history, and this history is public and permanent.
+# Absent is a supported state -- discovery needs no key, and the keyless budget
+# answers a few hundred citation calls -- so run_sweep says so and carries on
+# rather than exiting. The warning lives there and not here because 07_enrich.py
+# imports this module for its `_get` and touches OpenAlex never.
+OPENALEX_KEY = os.environ.get("OPENALEX_API_KEY") or None
 
 # What 02_triage.py scores a citing work on (docs/triage_design.md §2.2):
 # title, abstract, type, and the reference list the model-count signal reads.
@@ -110,8 +120,13 @@ def _get(url: str, params: dict, parse: str = "json"):
     """
     for attempt in range(4):
         try:
-            r = requests.get(url, params=params, headers={"User-Agent": UA},
-                             timeout=60)
+            # The key goes in a header, not the query string, and only to
+            # OpenAlex: `_get` also serves Europe PMC and arXiv, and a query
+            # string is the part of a request that gets logged.
+            headers = {"User-Agent": UA}
+            if url == OPENALEX and OPENALEX_KEY:
+                headers["Authorization"] = f"Bearer {OPENALEX_KEY}"
+            r = requests.get(url, params=params, headers=headers, timeout=60)
             if r.status_code == 429:
                 wait = int(r.headers.get("Retry-After", 10))
                 if wait > MAX_RETRY_AFTER:
@@ -417,6 +432,11 @@ def run_sweep(cfg: dict, primary: dict, titles: dict, linked: set,
     if dry_run:
         print(f"\n[citation_sweep] {len(entities)} entities with a primary paper")
         return []
+
+    if not OPENALEX_KEY:
+        print("[citation_sweep] no OPENALEX_API_KEY -- running on the keyless "
+              "budget, $0.10 a day shared by every user of this network's IP. "
+              "See config/sources.yaml.", file=sys.stderr)
 
     # Fetched per primary paper, not per entity: a model and the dataset it was
     # trained on routinely share one. The first full run fetched Enformer's
