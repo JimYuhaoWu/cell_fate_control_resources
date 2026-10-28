@@ -1,12 +1,12 @@
 {
-  "build_date": "2026-10-24",
+  "build_date": "2026-10-28",
   "db_path": "db/cfcr.db",
   "inputs": {
     "literature/papers.yaml": "e01f8f538fe85c295971e983f0fe56b19fcb7fa0b2dce94322245d7b0d331785",
-    "records/benchmarks.yaml": "920ebaf8219eb7903f987aba523f174e12236370b942b11efb1574c700c3610e",
+    "records/benchmarks.yaml": "50224280383e014b914015a5c1ca48795c97af0505042df02d8b0bdcfbbc97c3",
     "records/databases.yaml": "cf5a4a03a9b7a30f9db0e3133999a5498ccdc46b76053df679650bdf71a0d139",
     "records/datasets.yaml": "1e0a389358610e94eb2a70f66ef02073dcd5397c9f55587d65171ac567f145ea",
-    "records/models.yaml": "43dc6b647430dc011b4e2a230c486c40805fe337668d9f6bb727983c2a97af21",
+    "records/models.yaml": "18d1d84d9a259a5b366b08a34ffd7c61cbeffd8007000443063c4f57995bd04e",
     "records/module_libraries.yaml": "508fcd66513c324fca3e2d3d0153febb4bad2e4270df181867e2ad89009228c2",
     "records/protocols.yaml": "9fcd131e815352dcc9c24eb3748eb850f7c9be7d0a00e7db0f55ba3903c7675d",
     "vocab/architecture.yaml": "287c121e51fb652f7c527937d81304d31fece7abbc7094ca6b62846067738ff8",
@@ -19,7 +19,7 @@
   },
   "script": "scripts/04_build.py",
   "snapshots": {
-    "entities.tsv": 490,
+    "entities.tsv": 489,
     "entity_paper.tsv": 799,
     "links.tsv": 120,
     "papers.tsv": 744
@@ -30,23 +30,23 @@
       "not asserted": 31
     },
     "by_paper_role": {
-      "application": 9,
+      "application": 10,
       "benchmark": 229,
       "critique": 62,
       "extension": 1,
       "preprint": 8,
-      "primary": 489,
+      "primary": 488,
       "review": 1
     },
     "by_type": {
-      "benchmark": 91,
+      "benchmark": 90,
       "database": 7,
       "dataset": 9,
       "model": 320,
       "module": 58,
       "protocol": 5
     },
-    "n_entities": 490,
+    "n_entities": 489,
     "n_links": 120,
     "n_papers": 744
   }
