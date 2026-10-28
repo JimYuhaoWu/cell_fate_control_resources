@@ -109,19 +109,107 @@ OUTPUT_TYPE = {
     "perturbation response": 1.5,
 }
 
-# The README's own exclusions, plus observation-not-control and
-# plainly-other-field. Uncapped on purpose: these are exclusions, not
-# preferences.
-OUT_OF_SCOPE = {
+# -- The scope criteria, encoded (docs/scope_criteria.md) -------------------
+#
+# These tables used to be the README's exclusions written from memory, and
+# measured against the 490 labelled records in literature/scope_labels.yaml
+# they did nothing: the old table fired on 10 per cent of the records that are
+# out of scope and 9 per cent of the records that are in, and 98 per cent of
+# out-of-scope records still scored at or above the --min-score boundary
+# against 95 per cent of in-scope ones. Six points of separation, which is none.
+#
+# They are now derived from that labelled set, fitted on the 387 records
+# outside the seeded random sample and measured on the 102 inside it, which
+# were labelled before any of this existed. docs/triage_design.md 1.7 records
+# what it bought.
+
+# C2, the substrate. A term here says the object under study is not a genome,
+# which no amount of positive scoring should outweigh -- so it is a veto rather
+# than a penalty, expressed as a number because the review file prints numbers
+# and because discovery drops nothing: a vetoed candidate is still listed, in
+# the section below the boundary, with `substrate` saying why.
+#
+# Every term is matched on whole words and qualified where the bare word is
+# shared with in-scope work. That qualification is the whole lesson of the
+# first attempt: `precipitation` matched immunoprecipitation, `polymer` matched
+# polymerase, `antibody` matched every CUT&RUN protocol, `video` matched the
+# video tutorials in ReMap's own abstract, and `contact map` is genuinely
+# ambiguous -- a protein contact map and a chromatin contact map are different
+# objects under one name, and Enformer, AlphaGenome and Akita all predict the
+# second. Unqualified, the veto hit 16 in-scope records including four of the
+# interval models the catalogue is built around. Qualified, it hits none.
+SUBSTRATE_VETO_SCORE = -20.0
+SUBSTRATE_VETO = [
+    # protein structure and fitness: qualified, because chromatin papers also
+    # say "contact map" and every CUT&RUN protocol says "antibody".
+    "protein contact", "protein contact map", "residue contact",
+    "inter-residue", "contact map prediction",
+    "protein structure prediction", "protein secondary structure",
+    "protein domain boundar", "protein subcellular", "protein fitness",
+    "antibody fitness", "antibody developability", "therapeutic antibody",
+    "signal peptide", "protein secretion", "peptidomimetic",
+    "drug-target binding",
+    # images
+    "histolog", "whole-slide", "whole slide", "hematoxylin",
+    "digital pathology", "computational pathology", "pathology image",
+    "radiolog", "magnetic resonance", "mri", "scene graph",
+    "image segmentation", "referring image",
+    "video question", "video-language", "video understanding",
+    # plainly other fields
+    "phase field", "phase-field", "polymer property", "polymer informatics",
+    "materials science", "precipitation downscaling", "wastewater",
+    "electronic health record", "hyperparameter optimization",
+    "community detection",
+    # sequencing infrastructure rather than sequence
+    "nanopore signal", "read alignment", "dna barcode", "basecalling",
+]
+
+# C3, observation rather than action. The README's own exclusions are the first
+# five; the rest are that distinction applied consistently, each a term that
+# separated out-of-scope from in-scope records in the training split.
+OBSERVE = {
     "trajectory inference": -4.0, "rna velocity": -4.0, "pseudotime": -3.0,
     "lineage tracing": -3.0, "optimal transport": -2.5,
-    "batch correction": -2.5, "cell type annotation": -2.0,
-    "cell-type annotation": -2.0, "clustering": -1.5,
-    "histopathology": -4.0, "whole-slide": -3.0, "radiomics": -3.0,
-    "electronic health record": -4.0, "protein folding": -3.0,
-    "protein structure prediction": -3.0, "drug discovery": -2.0,
-    "genomic selection": -3.0, "bibliometric": -4.0,
+    "batch correction": -3.0, "batch effect": -2.0, "data integration": -2.0,
+    "atlas-level": -2.0, "label transfer": -2.5,
+    "cell type annotation": -2.5, "cell-type annotation": -2.5,
+    "clustering": -1.5, "dimensionality reduction": -2.0,
+    "imputation": -2.5, "deconvolution": -3.0,
+    "gene annotation": -2.5, "genome annotation": -2.5,
+    "phylogenetic": -3.0, "positive selection": -2.5,
+    "genome-wide association": -2.0,
+    "pathogenicity": -2.5, "missense": -2.5, "variants of uncertain": -3.0,
+    "diagnosis": -2.0, "prognosis": -3.0, "prognostic": -3.0,
+    "survival prediction": -3.0, "biomarker": -2.0,
+    "surveillance": -3.0, "lineage abundance": -3.0,
+    "gene fusion": -2.5,
 }
+
+# C1, a conclusion rather than a resource. The weakest of these tables, and
+# measurably so: C1 is the criterion a score cannot see, because "we present X"
+# and "we find that X" are one word apart. Of the out-of-scope records still
+# above the boundary after all of this, more fail C1 than any other criterion.
+# These terms catch only the cases that announce themselves.
+NOT_RESOURCE = {
+    "this review": -4.0, "we review": -4.0, "systematic review": -4.0,
+    "a review of": -3.0, "opportunities and challenges": -3.0,
+    "future directions": -2.5, "future prospects": -2.5,
+    "recommendations": -2.0, "current progress": -2.0, "we discuss": -2.0,
+    "practical considerations": -2.5,
+    "prognostic signature": -4.0, "candidate drugs": -3.0,
+}
+
+# C5, representation rather than a predicted response.
+REPRESENT = {
+    "representation quality": -2.0, "expression reconstruction": -2.5,
+}
+
+# What a curator reads as one number, so the review file keeps one line for it.
+# The last four are older entries with no criterion of their own; they are kept
+# because nothing measured argues against them.
+OUT_OF_SCOPE = {**OBSERVE, **NOT_RESOURCE, **REPRESENT,
+                "drug discovery": -2.0, "genomic selection": -3.0,
+                "bibliometric": -4.0, "protein folding": -3.0}
 
 # Replaces eCR_mod_lib's flat organism penalty, which would have discarded the
 # multi-species DNA language models that are squarely in scope. The whole table
@@ -350,6 +438,12 @@ def score_discovery(rec: dict) -> tuple[float, dict]:
     """
     Scope score for one discovery hit, and the per-table breakdown the review
     file prints so a curator can see what moved it.
+
+    The negative tables encode docs/scope_criteria.md. `substrate` is a veto and
+    the rest are weights, which is the one asymmetry here: C2 asks what the
+    resource reads and the answer does not trade off against how well the paper
+    is written, while C1, C3 and C5 ask what it does with what it read, and that
+    is a judgement a curator should still be shown.
     """
     title = (rec.get("title") or "").lower()
     abstract = (rec.get("abstract") or "").lower()
@@ -360,6 +454,12 @@ def score_discovery(rec: dict) -> tuple[float, dict]:
     parts = {k: v for k, v in parts.items() if v}
 
     both = f"{title} || {abstract}"
+    # The substrate veto first, because it is the one signal that should not be
+    # weighed against anything: a protein contact-map predictor is not a weak
+    # genomics candidate, it is a different field, and the positive tables
+    # score it well on `sequence`, `prediction` and `deep learning`.
+    if hits(SUBSTRATE_VETO, both):
+        parts["substrate"] = SUBSTRATE_VETO_SCORE
     off = _table(OUT_OF_SCOPE, title, abstract, 0.0)
     if off:
         parts["out_of_scope"] = off

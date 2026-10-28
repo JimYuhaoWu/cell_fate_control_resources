@@ -195,6 +195,75 @@ back next cycle — the reason `.gitignore` commits `literature/reviews/` in ful
    defensible and was not tuned; nothing here measures what a different factor
    would do.
 
+### 1.7 The criteria, encoded and measured
+
+Added 2026-10-28, after `docs/scope_criteria.md` and
+`literature/scope_labels.yaml` gave this section something to be measured
+against for the first time. §1.3 measured the tables on 50 hand-read hits;
+there are now 490 records labelled in or out of scope, and the tables can be
+scored against all of them.
+
+**The result was that the old exclusions did nothing.** `OUT_OF_SCOPE`, written
+from the README's prose, fired on 10% of the records that are out of scope and
+9% of the records that are in. At the `--min-score 3.0` boundary, 98% of
+out-of-scope records scored at or above it against 95% of in-scope ones. Six
+points of separation is not a filter; it is the absence of one, and it is how
+240 of 490 records came to be out of scope.
+
+**Fitted on one split, measured on another.** The 102-record seeded random
+sample in `scope_labels.yaml` was labelled before any of this work, so terms
+were derived from the other 387 records only and the sample is a genuine
+held-out test. On that blind split:
+
+| | out of scope (51) | in scope (51) |
+|---|---|---|
+| substrate veto fires | 29% | **0%** |
+| at or above 3.0, before | 96% | 90% |
+| at or above 3.0, after | **55%** | 86% |
+
+Separation goes from 6 points to 31, and the cost is 4 points of in-scope
+recall. Train and test agree closely — 57% against 93% on the training split —
+which is the thing a fit to 387 records most needed to show.
+
+**And on a real cycle, not just on the labels.** Re-scoring the 675 discovery
+candidates from the 2026-10-21 cycle, with nothing changed but these tables:
+472 scored at or above the boundary before and 359 after, so **113 candidates
+move out of the section a curator has to read**, a quarter of it. The veto
+fires on 96 of the 675. That is the number this work was for — the labelled set
+says whether the tables are right, and this says what being right is worth.
+
+**C2 is a veto, not a weight.** A protein contact-map predictor is not a weak
+genomics candidate; it is a different field, and the positive tables score it
+well on `sequence`, `prediction` and `deep learning`. So a substrate term sets
+the score to −20.0 rather than subtracting from it. Discovery still drops
+nothing (§1.5): the candidate appears below the boundary with `substrate` in its
+breakdown, which is the one place a curator can see the veto and overrule it.
+
+**Every substrate term is qualified, and the first attempt shows why.** Written
+as bare words, the veto hit 16 in-scope records: `precipitation` matched
+immunoprecipitation, `polymer` matched polymerase, `antibody` matched every
+CUT&RUN protocol, `video` matched the video tutorials in ReMap's own abstract,
+and `contact map` is genuinely ambiguous — a protein contact map and a chromatin
+contact map are different objects with one name, and Enformer, AlphaGenome,
+Akita and Hi-Compass all predict the second. ExPecto, Xpresso, BPNet, CUT&RUN
+and CUT&Tag were all vetoed by that first draft. Qualified to `protein contact`,
+`polymer property`, `antibody fitness`, `video question` and so on, the veto
+hits none of the 250 in-scope records in either split.
+
+**What it cannot do, measured rather than assumed.** 55% of out-of-scope
+records still score above the boundary, and they are not evenly spread: of those
+that remain, more fail **C1** than any other criterion. C1 is *a result, not a
+resource*, and no keyword distinguishes "we present a model that predicts
+chromatin accessibility" from "we find that early feature extraction drives
+chromatin accessibility prediction". Those two sentences share every scored
+term. That is the ceiling of keyword scoring on this problem, and it is the
+reason `docs/scope_criteria.md` is addressed to a curator rather than to this
+file.
+
+So the honest claim is narrow: the tables now remove the drift that announces
+itself in the substrate, and rank the rest lower than they did. They do not
+decide scope, and §1.5 still holds — the threshold ranks, it does not drop.
+
 ---
 
 ## 2. Proposing roles from the citing set
