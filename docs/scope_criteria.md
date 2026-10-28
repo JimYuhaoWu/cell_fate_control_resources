@@ -115,6 +115,122 @@ only criterion that turns on what a resource is *used for* rather than what it
 *is*, and because the `what` axis is at 105 records against an estimate of
 15–30 — four times its ceiling, and the place where C5 is doing the most work.
 
+## Decisions on the boundary cases
+
+The first pass left **86 labels `arguable`** — a reasonable curator could read
+the criterion either way. Settled on 2026-10-28, because an unsettled boundary
+case is not a small residue: those 86 were a sixth of the catalogue, and the
+criteria could not be applied consistently to a new record while they stood.
+
+They were not 86 questions. They were five, and the labels were **inconsistent**
+on the largest of them before these decisions, which is the better argument for
+making them than any of the individual records: *Early feature extraction drives
+model performance* was labelled in while *a mechanistic finding about regulator
+interactions* was labelled out, and nothing distinguished them.
+
+### D1 — A paper whose product is a conclusion is not a resource
+
+Settles 42 labels, and flipped 12 of them from in to out.
+
+**The test: does something reusable ship with it?** Weights, inference code, a
+task suite, a dataset, a compendium, a protocol. If what the paper delivers is
+a conclusion — about architectures, about representations, about how robust or
+private or attackable existing models are, about what the field should do next —
+it is not an entity, whatever it is about.
+
+This is not a new rule. `README.md` already says papers are *evidence attached
+to entities, not the records themselves*, and `entity_paper` already carries
+`critique`, `benchmark`, `review` and `application` for exactly this. D1 only
+applies it to records that were admitted before anyone checked.
+
+The consequence worth stating plainly: a **critique** entered as an entity is
+the costly case, and `model:harrison-2026-do-gene-perturbation` and
+`model:zhang-2026-disease-relevance-replicability` are both. As entities they
+inflate the model count; as `entity_paper` rows they would feed `evidence_tier`
+for the models they examine. The same mistake inflates the count and starves
+the evidence layer, which is the one thing CFCR argues on. Withdrawing them is
+half the fix; attaching them is the other half, and it is not done here.
+
+What survives D1: a *method* is a resource even when it ships no weights, if
+others can apply it. Augmentation recipes, a tokeniser, a scoring framework, a
+replay harness — all in. A *finding about* methods is not.
+
+### D2 — `how` is bounded by fate control, not by sequence design
+
+Settles 4 labels, all confirmed out.
+
+A DNA language model that designs plasmid backbones, biosynthetic assembly
+lines, de novo genes, or a sequence optimised for antibody titre in CHO cells is
+doing sequence design, and `how` is not "sequence design". Every `fate_axis` is
+a verb about acting on **cell fate**; `how` is how I represent and score
+sequence *I might design to that end*.
+
+The model is in scope and its application is not — Evo is catalogued, and
+Evo-designed biosynthetic pathways are not. Read the other way, `how` would
+widen to all of generative genomics, and the tight boundary is the thing the
+novelty argument rests on.
+
+### D3 — The substrate must be read, not inferred
+
+Settles 11 labels, all confirmed out.
+
+C2 asks what the resource's primary input **is**. A TWAS-style model that
+imputes expression from genotype never reads a base of sequence: it reads
+variant calls and an expression reference. Likewise inferring the rest of a
+transcriptome from landmark genes, and a general-purpose inference or
+flow-matching framework whose genomic use is one illustration.
+
+The same test keeps out actuators that act on RNA rather than on the genome —
+SINEUPs, riboswitches, aptamer-ribozyme switches — and designed protein modules
+whose function is protein association.
+
+### D4 — A claimed capability, not an evaluated task
+
+Settles 10 labels, 4 confirmed out and 1 flipped.
+
+C5 admits a single-cell foundation model when it predicts a perturbation
+response. The question was whose claim counts, since almost any such model can
+be *evaluated* on perturbation prediction by someone else.
+
+**The resource's own claim counts.** scGPT claims perturbation prediction among
+its capabilities and is in; a model that claims representation quality,
+reconstruction, or cross-species transfer is out even where a later benchmark
+scores it on perturbations. Otherwise C5 is decided by whatever someone else
+chose to measure, and every single-cell foundation model is one benchmark away
+from being in scope.
+
+By the same test, a resource whose output is a *representation of
+perturbations* rather than a predicted *response* is out.
+
+### D5 — Observation stays out, including when an in-scope model does the observing
+
+Settles 19 labels, all confirmed out.
+
+The hardest version of C3, and the one that recurs: a sequence-to-function model
+used to study regulatory evolution, a DNA language model used to explain
+double-strand break sensitivity, in-scope models used to infer a regulatory
+network. The resource is in scope. The paper's product is an explanation.
+
+D5 and D1 meet here and agree, which is the reason to trust both: whether you
+ask "does it act?" or "does something reusable ship?", a paper that uses
+Enformer to tell you something about human evolution answers no twice.
+
+Also settled out under D5, for the same reading: assay-versus-assay
+comparisons, data-processing and bias-correction benchmarks, annotation, gene
+finding, sequence classification for diagnostics or surveillance, clinical
+coding-variant interpretation, and multi-omics data infrastructure.
+
+### What these decisions cost, measured
+
+227 records were out before, 240 after: the five decisions moved 13 records, all
+in the same direction, and left 250 in. No label flipped from out to in, which
+is worth noticing — the first pass was not systematically harsh, it was
+systematically unsure about one question, D1.
+
+Every decision is reversible and `settled_by` in `literature/scope_labels.yaml`
+says which labels rest on which, so disagreeing with D1 costs re-reading 42
+labels rather than all 490.
+
 ## What the criteria do not decide
 
 **Type, as distinct from scope.** Several records are in scope and typed wrongly:

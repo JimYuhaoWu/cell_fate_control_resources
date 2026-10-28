@@ -339,23 +339,30 @@ catalogue is a number rather than an impression. Both hold: the number is 34.7%
 clear and 46.3% wide, with every record named in
 `literature/scope_labels.yaml`, and all four items are done.
 
-**Done, including the withdrawal.** On 2026-10-28 the 170 `clear` records were
-withdrawn — `literature/demotions/demote_2026-10-28.md` is the worked file —
-leaving **319 published** against the ~300-400 the scope section estimated. QC
-holds at 0 errors and the warning count fell from 98 to 39, most of it the
-`fate_axis` warnings those 85 benchmark records were raising.
+**Done, including the withdrawal and the boundary cases.** On 2026-10-28 the 170
+`clear` records were withdrawn, then the 86 `arguable` labels were settled by
+five decisions (`docs/scope_criteria.md`) and the 69 further records they
+confirmed were withdrawn too — `demote_2026-10-28.md` and
+`demote_2026-10-28_settled.md` are the worked files. **239 withdrawn, 250
+published.** QC holds at 0 errors and the warning count fell from 98 to 31.
 
 Nothing was deleted: all 490 records remain in `records/`, in `db/` and in the
 snapshots, each carrying the criterion that took it off the site, and deleting
 two lines puts one back.
 
-The **56 `arguable`** records are still published and still ticked `keep`. They
-are not a backlog but four questions — whether `how` covers sequence design
-that is not fate control, whether an in-scope model used to produce a finding
-is a resource, whether genotype-based expression imputation has a genomic
-substrate, and when a single-cell foundation model counts as predicting a
-response. Each answer settles a group, and each is a decision about the
-boundary rather than about a record.
+No label is `arguable` any more. The five decisions are D1 a conclusion is not a
+resource (42 labels), D5 observation stays out even when an in-scope model does
+the observing (19), D3 the substrate must be read rather than inferred (11), D4
+a claimed capability rather than an evaluated task (10), and D2 `how` is bounded
+by fate control rather than by sequence design (4). Each is reversible, and
+`settled_by` in the labels file names which labels rest on which, so disagreeing
+with D1 costs re-reading 42 of them rather than all 490.
+
+D1 withdrew records that are evidence rather than resources, including two
+critiques. Attaching those as `entity_paper` rows is the other half of that fix
+and is **not done** — tracked in the type-defect issue, and it matters because a
+critique entered as an entity inflated the model count and starved the evidence
+layer with one mistake.
 
 **Tradeoff, decided.** A tighter boundary sharpens the novelty argument; a wider
 one narrows the gap with Kipoi's count. Tight was chosen, because the
@@ -370,29 +377,33 @@ when it predicts a perturbation response, not when it only embeds cells),
 trajectory inference and RNA velocity out.
 
 **The ~300-400 target below was the original estimate. The catalogue passed it,
-and then M4a's withdrawal brought it back inside.** 489 were published; 170
-records clearly out of scope were withdrawn on 2026-10-28, leaving **319**. A
-record can carry more than one axis, so the column sums above the total:
+and then M4a's withdrawals took it under.** 489 were published; 239 out-of-scope
+records were withdrawn on 2026-10-28, leaving **250**. A record can carry more
+than one axis, so the column sums above the total:
 
 | axis | estimated | at 489 | published now |
 |---|---|---|---|
-| `where` | ~125-175 | 166 | 110 |
-| `how` | ~60-80 | 78 | 67 |
-| `what` | ~15-25 | **105** | **92** |
-| `with-what` | ~15-30 | 61 | 30 |
+| `where` | ~125-175 | 166 | 97 |
+| `how` | ~60-80 | 78 | 45 |
+| `what` | ~15-25 | **105** | **77** |
+| `with-what` | ~15-30 | 61 | 19 |
 
-So the estimate was not wrong about the size. It was right about three axes and
-the overshoot was mostly drift, which the labels say plainly: 74% of benchmarks
-and 72% of modules were out of scope, against 37% of models.
+So the overshoot at 489 was mostly drift, which the labels say plainly: 74% of
+benchmarks and 72% of modules were out of scope, against 41% of models.
 
-`what` is the exception and the one still above its range, at 92 against ~15-25.
-That is the axis `README.md` calls deliberately shallow, and the measurement
-does not say the estimate was too low — it says C5 is the criterion doing the
-most work and the one most often `arguable`, because a single-cell foundation
-model qualifies when it predicts a perturbation response and not when it only
-embeds cells, and an abstract does not always say which. Revising the estimate
-for `what` waits on the 56 arguable labels being settled; the other three axes
-now sit inside their ranges and need no revision.
+**But the catalogue is now under its target, not over it.** 250 against
+~300-400, with `where` at 97 and `how` at 45, both below their ranges. That is
+the cost of a boundary this tight, and it is the next real problem: this file
+records that content scale, not the website, gates the NAR submission. M4a held
+expansion until the boundary existed. It exists, so the hold has done its work,
+and what the catalogue needs now is growth measured against criteria rather than
+against a keyword.
+
+`what` is the one axis still over its range, at 77 against ~15-25, and D4 is
+what holds it there rather than any looseness: perturbation-response prediction
+turned out to be a large and active literature, and the axis was called shallow
+when the catalogue held twenty of them. **That estimate is the number to revise,
+not the labels.**
 
 The original estimate, for reference:
 

@@ -387,6 +387,8 @@
 
 - entity_id: benchmark:kulkarni-2019-tf-binding-site
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: TF binding site maps for regulatory network inference; the object is an inferred network"
   name: Kulkarni 2019 TF binding site
   year: 2019
   curator: JimYuhaoWu
@@ -485,6 +487,8 @@
 
 - entity_id: benchmark:macias-velasco-2026-benchmarking-genome-choice
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: compares reference-genome representations for functional genomics analysis; the object is an analysis pipeline, not a resource serving an axis"
   name: Macias-Velasco 2026 Benchmarking genome choice
   year: 2026
   curator: JimYuhaoWu
@@ -559,6 +563,8 @@
 
 - entity_id: benchmark:vinceti-2024-benchmark-computational-correcting
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: bias correction in CRISPR-Cas9 screening data: the screens are perturbations, but what is benchmarked is data processing"
   name: Vinceti 2024 benchmark computational correcting
   year: 2024
   curator: JimYuhaoWu
@@ -777,6 +783,8 @@
 
 - entity_id: benchmark:kan-tor-2024-does-understand-genes
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: probes gene-property knowledge in biological and text models; the object is what a model knows, not an action"
   name: Kan-Tor 2024 Does understand genes
   year: 2024
   curator: JimYuhaoWu
@@ -862,6 +870,8 @@
 
 - entity_id: benchmark:virobench
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: nucleotide foundation models on viral genomics tasks; in-scope substrate, but the tasks are classification and surveillance"
   name: ViroBench
   year: 2026
   curator: JimYuhaoWu
@@ -1207,6 +1217,8 @@
 
 - entity_id: benchmark:beyond-chromatin-accessibility
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: benchmarks bulk ATAC-seq against WGS for variant and copy-number detection: how well an assay characterises a genome, not a resource for acting on one"
   name: Beyond chromatin accessibility
   year: 2026
   curator: JimYuhaoWu
@@ -1231,6 +1243,8 @@
 
 - entity_id: benchmark:wang-2025-benchmark-chromatin-protein-interaction
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: compares chromatin-protein interaction assays in one cell type; an assay comparison"
   name: Wang 2025 Benchmark chromatin-protein interaction
   year: 2025
   curator: JimYuhaoWu
@@ -1258,6 +1272,8 @@
 
 - entity_id: benchmark:kulkarni-2019-maps-transcription-factor
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: TF binding site maps for regulatory network inference; the published version of the same work"
   name: Kulkarni 2019 Maps Transcription Factor
   year: 2019
   curator: JimYuhaoWu

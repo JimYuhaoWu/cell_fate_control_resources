@@ -79,6 +79,12 @@
   score: 8.5
   title: Enhancing Gene Expression Predictions Using Deep Learning and Functional
     Annotations
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:ramprasad-2025-enhancing-gene-expression
+  list: withdrawal
+  reason: 'C2: TWAS expression imputation from genotype rather than from sequence'
+  title: Ramprasad 2025 Enhancing Gene Expression
 10.1002/hep.31059:
 - date: '2026-10-23'
   decision: accepted
@@ -101,6 +107,13 @@
   score: 5.0
   title: Hierarchy in regulator interactions with distant transcriptional activation
     domains empowers rheostatic regulation
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:due-2025-hierarchy-regulator-interactions
+  list: withdrawal
+  reason: 'C1: a mechanistic finding about how regulators engage distant activation
+    domains'
+  title: Due 2025 Hierarchy regulator interactions
 10.1002/prot.25684:
 - date: '2026-10-23'
   decision: deferred
@@ -548,6 +561,13 @@
   score: 8.0
   title: Dry and wet approaches for genome-wide functional annotation of conventional
     and unconventional transcriptional activators
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:levati-2016-dry-wet-approaches
+  list: withdrawal
+  reason: 'C1: a survey of approaches to annotating activators rather than a collection
+    of them'
+  title: Levati 2016 Dry wet approaches
 10.1016/j.csbj.2022.11.020:
 - date: '2026-10-23'
   decision: deferred
@@ -590,6 +610,12 @@
   role: benchmark
   score: 4.75
   title: Charting the computational landscape of single-cell genetic perturbation
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:zhang-2026-charting-computational-landscape
+  list: withdrawal
+  reason: 'C1: a survey of the computational landscape for perturbation screens'
+  title: Zhang 2026 Charting computational landscape
 10.1016/j.jbi.2026.105003:
 - date: '2026-10-23'
   decision: accepted
@@ -646,6 +672,12 @@
   list: discovery
   score: 8.0
   title: The Enigma of Transcriptional Activation Domains
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:erkine-2024-enigma-transcriptional-activation
+  list: withdrawal
+  reason: 'C1: a review of activation-domain biology rather than a compendium'
+  title: Erkine 2024 Enigma Transcriptional Activation
 10.1016/j.media.2025.103754:
 - date: '2026-10-23'
   decision: accepted
@@ -682,6 +714,13 @@
   score: 3.5
   title: Sequence optimization targeting mRNA stability enhances monoclonal antibody
     titers in CHO cells
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:schneckener-2026-sequence-optimization-targeting
+  list: withdrawal
+  reason: 'C4: DNA sequence optimisation for antibody titre in CHO cells; design,
+    but for protein production'
+  title: Schneckener 2026 Sequence optimization targeting
 10.1016/j.omtn.2023.06.019:
 - date: '2026-10-23'
   decision: recorded
@@ -706,6 +745,12 @@
   score: 4.0
   title: 'scYeast: a biological-knowledge-guided foundation model on yeast single-cell
     transcriptomics'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:scyeast
+  list: withdrawal
+  reason: 'C5: yeast single-cell foundation model; representation'
+  title: scYeast
 10.1016/j.tplants.2026.04.012:
 - date: '2026-10-23'
   decision: deferred
@@ -953,6 +998,13 @@
   score: 5.0
   title: PiggyBac transposon tools for recessive screening identify B-cell lymphoma
     drivers in mice
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:weber-2019-piggybac-transposon-tools
+  list: withdrawal
+  reason: 'C1: transposon screening tools whose product here is a list of lymphoma
+    drivers'
+  title: Weber 2019 PiggyBac transposon tools
 10.1038/s41467-020-14491-x:
 - date: '2026-10-23'
   decision: accepted
@@ -961,6 +1013,12 @@
   score: 7.0
   title: High-throughput identification of synthetic riboswitches by barcode-free
     amplicon-sequencing in human cells
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:strobel-2020-high-throughput-identification-synthetic
+  list: withdrawal
+  reason: 'C2: synthetic riboswitches act on RNA, not on the genome'
+  title: Strobel 2020 High-throughput identification synthetic
 10.1038/s41467-024-45227-w:
 - date: '2026-10-23'
   decision: accepted
@@ -1161,6 +1219,13 @@
   list: discovery
   score: 6.0
   title: Benchmarking genome choice in functional genomics analyses
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:macias-velasco-2026-benchmarking-genome-choice
+  list: withdrawal
+  reason: 'C3: compares reference-genome representations for functional genomics
+    analysis; the object is an analysis pipeline, not a resource serving an axis'
+  title: Macias-Velasco 2026 Benchmarking genome choice
 10.1038/s41467-026-73948-7:
 - date: '2026-10-23'
   decision: accepted
@@ -1221,6 +1286,13 @@
   list: discovery
   score: 4.0
   title: Semantic design of functional de novo genes from a genomic language model
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:merchant-2026-semantic-design-functional
+  list: withdrawal
+  reason: 'C4: de novo gene design from a genomic language model; sequence design,
+    but the target is a gene product rather than a fate axis'
+  title: Merchant 2026 Semantic design functional
 10.1038/s41586-026-11005-5:
 - date: '2026-10-23'
   decision: deferred
@@ -1286,6 +1358,13 @@
   list: discovery
   score: 10.5
   title: Toward generalizable and interpretable AI in regulatory genomics
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:nagai-2026-interpretable-ai-regulatory
+  list: withdrawal
+  reason: 'C1: a perspective on generalisable and interpretable regulatory genomics,
+    not a resource'
+  title: Nagai 2026 interpretable AI regulatory
 10.1038/s41592-021-01336-8:
 - date: '2026-10-23'
   decision: accepted
@@ -1396,6 +1475,12 @@
   list: discovery
   score: 3.0
   title: Highly accurate ab initio gene annotation with ANNEVO
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:zhang-2026-highly-accurate-ab
+  list: withdrawal
+  reason: 'C3: ab initio gene annotation with a genomic language model; annotation'
+  title: Zhang 2026 Highly accurate ab
 10.1038/s41592-026-03057-2:
 - date: '2026-10-23'
   decision: recorded
@@ -1546,6 +1631,13 @@
   score: 4.75
   title: Estimating genotype-tissue specific gene expression using hybrid deep
     learning
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:dong-2026-estimating-genotype-tissue-specific
+  list: withdrawal
+  reason: 'C2: imputes genotype-tissue expression profiles rather than reading
+    sequence'
+  title: Dong 2026 Estimating genotype-tissue specific
 10.1038/s42256-025-01047-1:
 - date: '2026-10-23'
   decision: recorded
@@ -1620,6 +1712,12 @@
   score: 3.0
   title: Inducible Bcl-2 gene RNA interference mediated by aptamer-integrated
     HDV ribozyme switch
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:zhang-2017-inducible-bcl-2-gene
+  list: withdrawal
+  reason: 'C2: an aptamer-ribozyme switch acting on RNA interference'
+  title: Zhang 2017 Inducible Bcl-2 gene
 10.1039/d3ra03796g:
 - date: '2026-10-23'
   decision: accepted
@@ -1652,6 +1750,13 @@
   score: 3.0
   title: Versatile in vivo regulation of tumor phenotypes by dCas9-mediated transcriptional
     perturbation
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:braun-2016-versatile-vivo-regulation
+  list: withdrawal
+  reason: 'C1: demonstrates dCas9 transcriptional perturbation in vivo; an in-scope
+    actuator used to produce a finding'
+  title: Braun 2016 Versatile vivo regulation
 10.1073/pnas.2408737122:
 - date: '2026-10-23'
   decision: accepted
@@ -2113,6 +2218,13 @@
   score: 5.0
   title: 'DrivR-Base: a feature extraction toolkit for variant effect prediction
     model construction'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:drivr-base
+  list: withdrawal
+  reason: 'C3: feature extraction for driver variant effect models; coding variant
+    interpretation'
+  title: DrivR-Base
 10.1093/bioinformatics/btae461:
 - date: '2026-10-23'
   decision: accepted
@@ -2221,6 +2333,13 @@
   title: Is a Win-Win possible? Achieving pareto-optimal privacy-utility balance
     in fine-tuned genome language model embeddings against embedding reconstruction
     attacks
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:al-saidi-2026-win-win-possible-achieving
+  list: withdrawal
+  reason: 'C1: a privacy-utility study of genome language model embeddings; the
+    product is a risk analysis'
+  title: Al-Saidi 2026 Win-Win possible Achieving
 10.1093/bioinformatics/btag426:
 - date: '2026-10-23'
   decision: accepted
@@ -2267,6 +2386,13 @@
   score: 4.0
   title: Using the DNA language model, GROVER, to parse effects of sequence, chromatin
     and regulatory features on genome stability
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:joubert-2026-dna-language-grover
+  list: withdrawal
+  reason: 'C3: uses a DNA language model to explain double-strand break sensitivity;
+    the product is an explanation'
+  title: Joubert 2026 DNA language GROVER
 10.1093/bioinformatics/btag634:
 - date: '2026-10-23'
   decision: deferred
@@ -2282,6 +2408,13 @@
   score: 5.0
   title: 'DECANT: decoupling mechanism from context in single-cell drug perturbation
     representation'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:decant
+  list: withdrawal
+  reason: 'C5: learns representations that organise drugs by mechanism; it does
+    not predict a perturbation response, which is what C5 admits on'
+  title: DECANT
 10.1093/bioinformatics/btag727:
 - date: '2026-10-23'
   decision: accepted
@@ -2543,6 +2676,14 @@
   score: 4.5
   title: 'Beyond chromatin accessibility: bulk ATAC-seq as an integrative assay
     to portray genomes and epigenomes'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:beyond-chromatin-accessibility
+  list: withdrawal
+  reason: 'C3: benchmarks bulk ATAC-seq against WGS for variant and copy-number
+    detection: how well an assay characterises a genome, not a resource for acting
+    on one'
+  title: Beyond chromatin accessibility
 10.1093/nargab/lqag095:
 - date: '2026-10-23'
   decision: accepted
@@ -2650,6 +2791,13 @@
   score: 3.0
   title: Coiled-coil heterodimers with increased stability for cellular regulation
     and sensing SARS-CoV-2 spike protein-mediated cell fusion
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:plaper-2020-coiled-coil-heterodimers-increased
+  list: withdrawal
+  reason: 'C2: designed coiled-coil modules mediate protein association rather
+    than genome action'
+  title: Plaper 2020 Coiled-coil heterodimers increased
 10.1101/2020.12.18.423551:
 - date: '2026-10-23'
   decision: rejected
@@ -3089,6 +3237,13 @@
   score: 4.5
   title: Predictive Prioritization of Enhancers Associated with Pancreas Disease
     Risk
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:wang-2024-predictive-prioritization-enhancers
+  list: withdrawal
+  reason: 'C1: prioritises pancreas-disease enhancers: a finding produced with
+    existing methods'
+  title: Wang 2024 Predictive Prioritization Enhancers
 10.1101/2024.09.18.613778:
 - date: '2026-10-23'
   decision: rejected
@@ -3317,6 +3472,13 @@
   title: 'Early feature extraction drives model performance in high-resolution
     chromatin accessibility prediction: A systematic evaluation of deep learning
     architectures'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:grover-2025-early-feature-extraction
+  list: withdrawal
+  reason: 'C1: the claim that early feature extraction drives performance is a
+    finding about architectures'
+  title: Grover 2025 Early feature extraction
 10.1101/2025.03.06.641935:
 - date: '2026-10-23'
   decision: accepted
@@ -3372,6 +3534,13 @@
   list: discovery
   score: 6.5
   title: Scaling Large Language Models for Next-Generation Single-Cell Analysis
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:rizvi-2025-scaling-language-next-generation
+  list: withdrawal
+  reason: 'C5: scaling single-cell foundation models for analysis; representation
+    rather than perturbation response'
+  title: Rizvi 2025 Scaling Language Next-Generation
 10.1101/2025.05.06.25327057:
 - date: '2026-10-23'
   decision: recorded
@@ -3786,6 +3955,12 @@
   list: discovery
   score: 8.0
   title: Multi-modal data integration for machine learning applications
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:serizay-2025-multi-modal-data-integration
+  list: withdrawal
+  reason: 'C3: a multi-omics data repository and query framework; infrastructure'
+  title: Serizay 2025 Multi-modal data integration
 10.1101/2025.10.14.682350:
 - date: '2026-10-23'
   decision: accepted
@@ -3810,6 +3985,12 @@
   list: discovery
   score: 3.5
   title: 'GeneJepa: A Predictive World Model of the Transcriptome'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:genejepa
+  list: withdrawal
+  reason: 'C5: a joint-embedding world model of the transcriptome; representation'
+  title: GeneJepa
 10.1101/2025.10.20.683304:
 - date: '2026-10-23'
   decision: accepted
@@ -3868,6 +4049,13 @@
   score: 8.0
   title: Adaptive resampling for improved machine learning in imbalanced single-cell
     datasets
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:navidi-2025-adaptive-resampling-machine
+  list: withdrawal
+  reason: 'C3: resampling for imbalanced single-cell data; a general ML method,
+    not an action on the genome'
+  title: Navidi 2025 Adaptive resampling machine
 10.1101/2025.11.08.686890:
 - date: '2026-10-23'
   decision: accepted
@@ -4036,6 +4224,13 @@
   score: 8.0
   title: Enhanced TF binding site maps improve regulatory networks learned from
     accessible chromatin data
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:kulkarni-2019-tf-binding-site
+  list: withdrawal
+  reason: 'C3: TF binding site maps for regulatory network inference; the object
+    is an inferred network'
+  title: Kulkarni 2019 TF binding site
 10.1101/728980:
 - date: '2026-10-23'
   decision: deferred
@@ -4058,6 +4253,12 @@
   score: 10.5
   title: Early feature extraction drives model performance in high-resolution
     chromatin accessibility prediction
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:grover-2026-early-feature-extraction
+  list: withdrawal
+  reason: 'C1: the same finding about architectures, under a second entity'
+  title: Grover 2026 Early feature extraction
 10.1101/gr.281154.125:
 - date: '2026-10-23'
   decision: accepted
@@ -4096,6 +4297,13 @@
   score: 4.0
   title: Enhanced Maps of Transcription Factor Binding Sites Improve Regulatory
     Networks Learned from Accessible Chromatin Data
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:kulkarni-2019-maps-transcription-factor
+  list: withdrawal
+  reason: 'C3: TF binding site maps for regulatory network inference; the published
+    version of the same work'
+  title: Kulkarni 2019 Maps Transcription Factor
 10.1109/aicaps68631.2026.11452691:
 - date: '2026-10-23'
   decision: recorded
@@ -4245,6 +4453,13 @@
   score: 4.5
   title: 'AGEP_TWAS: A Deep Learning-Based Framework for Predicting Gene Expression
     Levels in Tissues'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:agep-twas
+  list: withdrawal
+  reason: 'C2: predicts tissue expression for TWAS from genotype rather than from
+    sequence or chromatin state'
+  title: AGEP_TWAS
 10.1109/tcbbio.2026.3705107:
 - date: '2026-10-23'
   decision: accepted
@@ -4298,6 +4513,12 @@
   list: discovery
   score: 3.0
   title: Virtual cell construction for artificial intelligence-driven drug discovery
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:jia-2026-virtual-cell-construction
+  list: withdrawal
+  reason: 'C1: a review of virtual cell construction for drug discovery'
+  title: Jia 2026 Virtual cell construction
 10.1111/cpr.70274:
 - date: '2026-10-23'
   decision: deferred
@@ -4690,6 +4911,13 @@
   score: 6.0
   title: A benchmark of computational methods for correcting biases of established
     and unknown origin in CRISPR-Cas9 screening data
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:vinceti-2024-benchmark-computational-correcting
+  list: withdrawal
+  reason: 'C3: bias correction in CRISPR-Cas9 screening data: the screens are
+    perturbations, but what is benchmarked is data processing'
+  title: Vinceti 2024 benchmark computational correcting
 10.1186/s13059-024-03356-x:
 - date: '2026-10-23'
   decision: accepted
@@ -4901,6 +5129,13 @@
   score: 5.0
   title: Identification of functional features of synthetic SINEUPs, antisense
     lncRNAs that specifically enhance protein translation
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:takahashi-2018-identification-functional-features
+  list: withdrawal
+  reason: 'C2: SINEUP antisense lncRNAs act post-transcriptionally on mRNA, not
+    on the genome'
+  title: Takahashi 2018 Identification functional features
 10.1371/journal.pone.0220182:
 - date: '2026-10-23'
   decision: deferred
@@ -4915,6 +5150,13 @@
   score: 8.0
   title: Gene expression prediction based on neighbour connection neural network
     utilizing gene interaction graphs
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:li-2023-gene-expression-prediction
+  list: withdrawal
+  reason: 'C2: infers the remaining transcriptome from landmark genes; the substrate
+    is expression, not sequence'
+  title: Li 2023 Gene expression prediction
 10.1371/journal.pone.0329122:
 - date: '2026-10-23'
   decision: accepted
@@ -4989,6 +5231,13 @@
   score: 7.5
   title: Do Gene Perturbation Predictions Match Real Effects? A Computational
     Test Using Public Data
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:harrison-2026-do-gene-perturbation
+  list: withdrawal
+  reason: 'C1: tests whether perturbation predictions match measured effects;
+    a critique, which belongs on the models it tests'
+  title: Harrison 2026 Do Gene Perturbation
 10.1534/g3.119.400616:
 - date: '2026-10-23'
   decision: deferred
@@ -5085,6 +5334,13 @@
   score: 8.0
   title: 'Findings from Sparse Autoencoders for DNA Sequence Models: Motif Detectors,
     Reading-Frame Features, and the Scarcity of Regulatory Logic'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:denvis-2026-findings-sparse-autoencoders
+  list: withdrawal
+  reason: 'C1: findings about what sparse autoencoders recover from DNA models;
+    ships a conclusion, not a suite or a model'
+  title: Denvis 2026 Findings Sparse Autoencoders
 10.21203/rs.3.rs-10446347/v1:
 - date: '2026-10-23'
   decision: deferred
@@ -5171,6 +5427,12 @@
   score: 5.0
   title: A novel method for inhibiting transcriptional autoactivation by fusion
     of SRDX repression domain
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:chen-2024-inhibiting-transcriptional-autoactivation
+  list: withdrawal
+  reason: 'C1: a technique for suppressing autoactivation in one assay context'
+  title: Chen 2024 inhibiting transcriptional autoactivation
 10.21203/rs.3.rs-4819905/v1:
 - date: '2026-10-23'
   decision: accepted
@@ -5397,6 +5659,12 @@
   score: 3.5
   title: 'Toward AI Virtual Cells for Hepatology: Representation, Generation,
     Dynamics, and Intervention in Single-Cell Models'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:choi-2026-ai-virtual-cells
+  list: withdrawal
+  reason: 'C1: a perspective on virtual cells for hepatology'
+  title: Choi 2026 AI Virtual Cells
 10.3389/fbioe.2022.1033669:
 - date: '2026-10-23'
   decision: accepted
@@ -5417,6 +5685,13 @@
   list: discovery
   score: 4.0
   title: Benchmark of chromatin-protein interaction methods in haploid round spermatids
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:wang-2025-benchmark-chromatin-protein-interaction
+  list: withdrawal
+  reason: 'C3: compares chromatin-protein interaction assays in one cell type;
+    an assay comparison'
+  title: Wang 2025 Benchmark chromatin-protein interaction
 10.3389/fcimb.2017.00231:
 - date: '2026-10-23'
   decision: accepted
@@ -5822,6 +6097,12 @@
   score: 4.0
   title: Cell Based Assays of SINEUP Non-coding RNAs That Can Specifically Enhance
     mRNA Translation
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:takahashi-2019-cell-assays-sineup
+  list: withdrawal
+  reason: 'C2: SINEUP assays; the same substrate question as the 2018 record'
+  title: Takahashi 2019 Cell Assays SINEUP
 10.3892/or.2015.4472:
 - date: '2026-10-23'
   decision: deferred
@@ -5901,6 +6182,13 @@
   score: 6.5
   title: Generative design and construction of functional plasmids with a DNA
     language model
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:cunningham-2025-generative-design-construction
+  list: withdrawal
+  reason: 'C4: generative design of plasmid backbones; sequence design, but no
+    fate axis it serves'
+  title: Cunningham 2025 Generative design construction
 10.64898/2025.12.11.693702:
 - date: '2026-10-23'
   decision: accepted
@@ -6512,6 +6800,12 @@
   score: 6.25
   title: A fine-tuned genomic language model captures nucleotide-level information
     overlooked by missense variant impact predictors
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:su-2026-fine-tuned-genomic-language
+  list: withdrawal
+  reason: 'C3: missense variant impact in clinical genomics; coding variant interpretation'
+  title: Su 2026 fine-tuned genomic language
 10.64898/2026.05.07.723486:
 - date: '2026-10-23'
   decision: accepted
@@ -6573,6 +6867,13 @@
   score: 3.75
   title: 'Hidden State Genomics: Graph-Based Analysis of Sparse Auto-Encoder Feature
     Activity in Genomic Language Models'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:hidden-state-genomics
+  list: withdrawal
+  reason: 'C1: a graph-based analysis of feature activity in genomic language
+    models; the product is the analysis'
+  title: Hidden State Genomics
 10.64898/2026.05.16.26353369:
 - date: '2026-10-23'
   decision: recorded
@@ -7103,6 +7404,13 @@
   score: 4.0
   title: 'FP8 Inference in Genomic Foundation Models: Theoretical vs. Realized
     Speedups on GenomeOcean'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:yu-2026-fp8-inference-genomic
+  list: withdrawal
+  reason: 'C1: an empirical case study of quantised inference; ships measurements,
+    not a model'
+  title: Yu 2026 FP8 Inference Genomic
 10.64898/2026.08.10.744024:
 - date: '2026-10-23'
   decision: accepted
@@ -7189,6 +7497,13 @@
   score: 6.0
   title: Sequence-to-function deep learning decodes human <i>cis</i> -regulatory
     evolution
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:mangan-2026-sequence-to-function-deep-learning
+  list: withdrawal
+  reason: 'C3: uses sequence-to-function models to study regulatory evolution;
+    the product is an evolutionary finding'
+  title: Mangan 2026 Sequence-to-function deep learning
 10.64898/2026.08.25.26361369:
 - date: '2026-10-23'
   decision: recorded
@@ -7289,6 +7604,13 @@
   score: 6.5
   title: Generative Design of New-to-nature Biosynthetic Assembly Lines with Genomic
     Language Modeling
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:lanclos-2026-generative-design-new-to-nature
+  list: withdrawal
+  reason: 'C4: generative design of biosynthetic assembly lines; a DNA language
+    model acting, but on a metabolic pathway rather than any fate axis'
+  title: Lanclos 2026 Generative Design New-to-nature
 10.64898/2026.09.13.751326:
 - date: '2026-10-23'
   decision: deferred
@@ -7328,6 +7650,13 @@
   score: 6.5
   title: Discovery of microbial intergenic features with genomic language modeling
     and multimodal search
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:zulaybar-2026-discovery-microbial-intergenic
+  list: withdrawal
+  reason: 'C3: discovery and functional interpretation of microbial noncoding
+    regions; annotation'
+  title: Zulaybar 2026 Discovery microbial intergenic
 10.64898/2026.09.18.752607:
 - date: '2026-10-23'
   decision: accepted
@@ -7336,6 +7665,13 @@
   score: 7.5
   title: 'DeepSCENIC: transfer learning from sequence-to-function models enables
     causal gene regulatory network inference'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:deepscenic
+  list: withdrawal
+  reason: 'C3: causal gene regulatory network inference; built on in-scope models,
+    but the object is an inferred network'
+  title: DeepSCENIC
 10.64898/2026.09.18.752701:
 - date: '2026-10-23'
   decision: deferred
@@ -7365,6 +7701,13 @@
   score: 10.0
   title: Disease relevance and replicability of deep learning gene expression
     prediction
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:zhang-2026-disease-relevance-replicability
+  list: withdrawal
+  reason: 'C1: a critique of deep-learning expression prediction; evidence about
+    those models, which entity_paper carries and an entity cannot'
+  title: Zhang 2026 Disease relevance replicability
 10.64898/2026.09.24.754259:
 - date: '2026-10-23'
   decision: accepted
@@ -7514,6 +7857,14 @@
   score: 5.0
   title: Genomic foundation models do not yet boost common variant discovery beyond
     standard functional annotations
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:bass-2026-genomic-foundation-do
+  list: withdrawal
+  reason: 'C1: whether genomic foundation models help variant discovery is a conclusion
+    about resources, not a resource; it belongs on those models as an entity_paper
+    row'
+  title: Bass 2026 Genomic foundation do
 10.64898/2026.10.15.759350:
 - date: '2026-10-23'
   decision: deferred
@@ -7754,6 +8105,13 @@ arxiv:2106.08161:
   score: 3.0
   title: Contrastive Mixture of Posteriors for Counterfactual Inference, Data
     Integration and Fairness
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:foster-2021-contrastive-mixture-posteriors
+  list: withdrawal
+  reason: 'C3: representation learning for batch correction and counterfactual
+    inference; a general method'
+  title: Foster 2021 Contrastive Mixture Posteriors
 arxiv:2106.13642:
 - date: '2026-10-23'
   decision: accepted
@@ -7761,6 +8119,13 @@ arxiv:2106.13642:
   list: discovery
   score: 9.0
   title: 'VEGN: Variant Effect Prediction with Graph Neural Networks'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:vegn
+  list: withdrawal
+  reason: 'C3: prioritises coding disease-causing variants in a patient; the object
+    is a diagnosis, not a design'
+  title: VEGN
 arxiv:2107.12604:
 - date: '2026-10-23'
   decision: accepted
@@ -8054,6 +8419,13 @@ arxiv:2409.19788:
   score: 4.0
   title: Exploring Adversarial Robustness in Classification tasks using DNA Language
     Models
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:yoo-2024-exploring-adversarial-robustness
+  list: withdrawal
+  reason: 'C1: explores how robust existing DNA language models are; a conclusion
+    about them'
+  title: Yoo 2024 Exploring Adversarial Robustness
 arxiv:2410.01784:
 - date: '2026-10-23'
   decision: accepted
@@ -8091,6 +8463,13 @@ arxiv:2410.05292:
   list: discovery
   score: 6.5
   title: 'CaLMFlow: Volterra Flow Matching using Causal Language Models'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:calmflow
+  list: withdrawal
+  reason: 'C2: a general flow-matching framework; the genomic application is an
+    illustration'
+  title: CaLMFlow
 arxiv:2410.15367:
 - date: '2026-10-23'
   decision: deferred
@@ -8113,6 +8492,13 @@ arxiv:2411.11158:
   score: 8.25
   title: Leveraging genomic deep learning models for the prediction of non-coding
     variant effects
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:kathail-2024-leveraging-genomic-deep
+  list: withdrawal
+  reason: 'C1: practical guidance on using genomic deep learning for non-coding
+    variants; a review'
+  title: Kathail 2024 Leveraging genomic deep
 arxiv:2412.02915:
 - date: '2026-10-23'
   decision: deferred
@@ -8128,6 +8514,13 @@ arxiv:2412.04075:
   score: 6.0
   title: Does your model understand genes? A benchmark of gene properties for
     biological and text models
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:kan-tor-2024-does-understand-genes
+  list: withdrawal
+  reason: 'C3: probes gene-property knowledge in biological and text models; the
+    object is what a model knows, not an action'
+  title: Kan-Tor 2024 Does understand genes
 arxiv:2412.05430:
 - date: '2026-10-23'
   decision: accepted
@@ -8221,6 +8614,13 @@ arxiv:2505.08918:
   score: 4.0
   title: 'When repeats drive the vocabulary: a Byte-Pair Encoding analysis of
     T2T primate genomes'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:when-repeats-drive-the-vocabulary
+  list: withdrawal
+  reason: 'C1: a tokenisation analysis of primate genomes; the product is what
+    it found, not a tokeniser'
+  title: When repeats drive the vocabulary
 arxiv:2505.10852:
 - date: '2026-10-23'
   decision: accepted
@@ -8252,6 +8652,12 @@ arxiv:2505.23839:
   score: 4.0
   title: 'GeneBreaker: Jailbreak Attacks against DNA Language Models with Pathogenicity
     Guidance'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:genebreaker
+  list: withdrawal
+  reason: 'C1: jailbreak attacks on DNA language models; a security finding'
+  title: GeneBreaker
 arxiv:2506.00096:
 - date: '2026-10-23'
   decision: deferred
@@ -8377,6 +8783,13 @@ arxiv:2509.18207:
   score: 4.0
   title: 'Securing the Language of Life: Inheritable Watermarks from DNA Language
     Models to Proteins'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:securing-the-language-of-life
+  list: withdrawal
+  reason: 'C1: inheritable watermarks for provenance; a security mechanism, not
+    a fate resource'
+  title: Securing the Language of Life
 arxiv:2509.18529:
 - date: '2026-10-23'
   decision: accepted
@@ -8569,6 +8982,14 @@ arxiv:2603.08913:
   list: discovery
   score: 4.0
   title: Quantifying Memorization and Privacy Risks in Genomic Language Models
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:nemecek-2026-quantifying-memorization-privacy
+  list: withdrawal
+  reason: 'C1: a privacy evaluation framework for genomic language models: the
+    substrate is in scope but the product is a risk assessment, not a resource
+    for acting'
+  title: Nemecek 2026 Quantifying Memorization Privacy
 arxiv:2603.11244:
 - date: '2026-10-23'
   decision: accepted
@@ -8576,6 +8997,13 @@ arxiv:2603.11244:
   list: discovery
   score: 6.5
   title: A Standardized Framework For Evaluating Gene Expression Generative Models
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:rubbi-2026-standardized-evaluating-gene
+  list: withdrawal
+  reason: 'C5: evaluation of generative models of expression, not of perturbation
+    response'
+  title: Rubbi 2026 Standardized Evaluating Gene
 arxiv:2603.25240:
 - date: '2026-10-23'
   decision: accepted
@@ -8591,6 +9019,13 @@ arxiv:2603.27465:
   list: discovery
   score: 6.5
   title: 'Poisoning the Genome: Targeted Backdoor Attacks on DNA Foundation Models'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:poisoning-the-genome
+  list: withdrawal
+  reason: 'C1: backdoor attacks on DNA foundation models: in-scope substrate,
+    but the product is a security finding'
+  title: Poisoning the Genome
 arxiv:2604.05774:
 - date: '2026-10-23'
   decision: accepted
@@ -8693,6 +9128,12 @@ arxiv:2605.19343:
   list: discovery
   score: 9.5
   title: What Makes a Representation Good for Single-Cell Perturbation Prediction?
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:jiang-2026-what-makes-representation
+  list: withdrawal
+  reason: 'C1: what makes a representation good is a conclusion about representations'
+  title: Jiang 2026 What Makes Representation
 arxiv:2605.24520:
 - date: '2026-10-23'
   decision: accepted
@@ -8723,6 +9164,13 @@ arxiv:2605.25388:
   score: 6.0
   title: 'ViroBench: Benchmarking Nucleotide Foundation Models on Viral Genomics
     Tasks'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:virobench
+  list: withdrawal
+  reason: 'C3: nucleotide foundation models on viral genomics tasks; in-scope
+    substrate, but the tasks are classification and surveillance'
+  title: ViroBench
 arxiv:2606.11144:
 - date: '2026-10-23'
   decision: accepted
@@ -8781,6 +9229,13 @@ arxiv:2606.30140:
   list: discovery
   score: 6.0
   title: 'DNA Language Models: An Assessment of Pre-Training for Fine-Tuning Tasks'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:dna-language-models
+  list: withdrawal
+  reason: 'C1: an assessment of pretraining for fine-tuning; no named suite or
+    model ships with it'
+  title: DNA Language Models
 arxiv:2607.05153:
 - date: '2026-10-23'
   decision: deferred
@@ -8942,6 +9397,13 @@ arxiv:2608.14542:
   list: discovery
   score: 6.0
   title: Generation-Powered Inference for Distribution-Valued Outcomes
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:zhang-2026-generation-powered-inference-distribution-valued
+  list: withdrawal
+  reason: 'C2: a general inference framework for distribution-valued outputs;
+    single-cell is one application'
+  title: Zhang 2026 Generation-Powered Inference Distribution-Valued
 arxiv:2608.20054:
 - date: '2026-10-23'
   decision: deferred
@@ -9035,6 +9497,12 @@ arxiv:2610.04763:
   list: discovery
   score: 3.0
   title: Tracing model-generated DNA with position-independent watermarking
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:provatas1-2026-tracing-model-generated-dna
+  list: withdrawal
+  reason: 'C1: watermarking for provenance of generated DNA'
+  title: Provatas1 2026 Tracing model-generated DNA
 arxiv:2610.11761:
 - date: '2026-10-23'
   decision: accepted

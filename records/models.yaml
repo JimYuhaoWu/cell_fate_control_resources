@@ -1413,6 +1413,8 @@
 
 - entity_id: model:nagai-2026-interpretable-ai-regulatory
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a perspective on generalisable and interpretable regulatory genomics, not a resource"
   name: Nagai 2026 interpretable AI regulatory
   year: 2026
   fate_axis: [where]
@@ -1450,6 +1452,8 @@
 
 - entity_id: model:grover-2026-early-feature-extraction
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: the same finding about architectures, under a second entity"
   name: Grover 2026 Early feature extraction
   year: 2026
   fate_axis: [where]
@@ -1462,6 +1466,8 @@
 
 - entity_id: model:grover-2025-early-feature-extraction
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: the claim that early feature extraction drives performance is a finding about architectures"
   name: Grover 2025 Early feature extraction
   year: 2025
   fate_axis: [where]
@@ -1522,6 +1528,8 @@
 
 - entity_id: model:zhang-2026-disease-relevance-replicability
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a critique of deep-learning expression prediction; evidence about those models, which entity_paper carries and an entity cannot"
   name: Zhang 2026 Disease relevance replicability
   year: 2026
   fate_axis: [where]
@@ -1783,6 +1791,8 @@
 
 - entity_id: model:jiang-2026-what-makes-representation
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: what makes a representation good is a conclusion about representations"
   name: Jiang 2026 What Makes Representation
   year: 2026
   fate_axis: [what]
@@ -1865,6 +1875,8 @@
 
 - entity_id: model:vegn
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: prioritises coding disease-causing variants in a patient; the object is a diagnosis, not a design"
   name: VEGN
   year: 2021
   fate_axis: [where]
@@ -1908,6 +1920,8 @@
 
 - entity_id: model:ramprasad-2025-enhancing-gene-expression
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: TWAS expression imputation from genotype rather than from sequence"
   name: Ramprasad 2025 Enhancing Gene Expression
   year: 2025
   fate_axis: [where]
@@ -2014,6 +2028,8 @@
 
 - entity_id: model:kathail-2024-leveraging-genomic-deep
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: practical guidance on using genomic deep learning for non-coding variants; a review"
   name: Kathail 2024 Leveraging genomic deep
   year: 2024
   fate_axis: [how]
@@ -2064,6 +2080,8 @@
 
 - entity_id: model:li-2023-gene-expression-prediction
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: infers the remaining transcriptome from landmark genes; the substrate is expression, not sequence"
   name: Li 2023 Gene expression prediction
   year: 2023
   fate_axis: [where]
@@ -2094,6 +2112,8 @@
 
 - entity_id: model:serizay-2025-multi-modal-data-integration
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: a multi-omics data repository and query framework; infrastructure"
   name: Serizay 2025 Multi-modal data integration
   year: 2025
   fate_axis: [where]
@@ -2163,6 +2183,8 @@
 
 - entity_id: model:denvis-2026-findings-sparse-autoencoders
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: findings about what sparse autoencoders recover from DNA models; ships a conclusion, not a suite or a model"
   name: Denvis 2026 Findings Sparse Autoencoders
   year: 2026
   fate_axis: [how]
@@ -2234,6 +2256,8 @@
 
 - entity_id: model:zhang-2026-charting-computational-landscape
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a survey of the computational landscape for perturbation screens"
   name: Zhang 2026 Charting computational landscape
   year: 2026
   fate_axis: [what]
@@ -2246,6 +2270,8 @@
 
 - entity_id: model:navidi-2025-adaptive-resampling-machine
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: resampling for imbalanced single-cell data; a general ML method, not an action on the genome"
   name: Navidi 2025 Adaptive resampling machine
   year: 2025
   fate_axis: [what]
@@ -2299,6 +2325,8 @@
 
 - entity_id: model:deepscenic
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: causal gene regulatory network inference; built on in-scope models, but the object is an inferred network"
   name: DeepSCENIC
   year: 2026
   fate_axis: [where]
@@ -2433,6 +2461,8 @@
 
 - entity_id: model:harrison-2026-do-gene-perturbation
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: tests whether perturbation predictions match measured effects; a critique, which belongs on the models it tests"
   name: Harrison 2026 Do Gene Perturbation
   year: 2026
   fate_axis: [what]
@@ -2701,6 +2731,8 @@
 
 - entity_id: model:zulaybar-2026-discovery-microbial-intergenic
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: discovery and functional interpretation of microbial noncoding regions; annotation"
   name: Zulaybar 2026 Discovery microbial intergenic
   year: 2026
   fate_axis: [how]
@@ -2725,6 +2757,8 @@
 
 - entity_id: model:lanclos-2026-generative-design-new-to-nature
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C4: generative design of biosynthetic assembly lines; a DNA language model acting, but on a metabolic pathway rather than any fate axis"
   name: Lanclos 2026 Generative Design New-to-nature
   year: 2026
   fate_axis: [how]
@@ -2737,6 +2771,8 @@
 
 - entity_id: model:cunningham-2025-generative-design-construction
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C4: generative design of plasmid backbones; sequence design, but no fate axis it serves"
   name: Cunningham 2025 Generative design construction
   year: 2025
   fate_axis: [how]
@@ -2765,6 +2801,8 @@
 
 - entity_id: model:poisoning-the-genome
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: backdoor attacks on DNA foundation models: in-scope substrate, but the product is a security finding"
   name: Poisoning the Genome
   year: 2026
   fate_axis: [how]
@@ -2799,6 +2837,8 @@
 
 - entity_id: model:rizvi-2025-scaling-language-next-generation
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C5: scaling single-cell foundation models for analysis; representation rather than perturbation response"
   name: Rizvi 2025 Scaling Language Next-Generation
   year: 2025
   fate_axis: [what]
@@ -2811,6 +2851,8 @@
 
 - entity_id: model:rubbi-2026-standardized-evaluating-gene
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C5: evaluation of generative models of expression, not of perturbation response"
   name: Rubbi 2026 Standardized Evaluating Gene
   year: 2026
   fate_axis: [what]
@@ -2837,6 +2879,8 @@
 
 - entity_id: model:calmflow
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: a general flow-matching framework; the genomic application is an illustration"
   name: CaLMFlow
   year: 2024
   fate_axis: [what]
@@ -2854,6 +2898,8 @@
 
 - entity_id: model:mangan-2026-sequence-to-function-deep-learning
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: uses sequence-to-function models to study regulatory evolution; the product is an evolutionary finding"
   name: Mangan 2026 Sequence-to-function deep learning
   year: 2026
   fate_axis: [where]
@@ -3129,6 +3175,8 @@
 
 - entity_id: model:dna-language-models
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: an assessment of pretraining for fine-tuning; no named suite or model ships with it"
   name: DNA Language Models
   year: 2026
   fate_axis: [how]
@@ -3236,6 +3284,8 @@
 
 - entity_id: model:zhang-2026-generation-powered-inference-distribution-valued
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: a general inference framework for distribution-valued outputs; single-cell is one application"
   name: Zhang 2026 Generation-Powered Inference Distribution-Valued
   year: 2026
   fate_axis: [what]
@@ -3585,6 +3635,8 @@
 
 - entity_id: model:drivr-base
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: feature extraction for driver variant effect models; coding variant interpretation"
   name: DrivR-Base
   year: 2024
   fate_axis: [where]
@@ -3688,6 +3740,8 @@
 
 - entity_id: model:bass-2026-genomic-foundation-do
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: whether genomic foundation models help variant discovery is a conclusion about resources, not a resource; it belongs on those models as an entity_paper row"
   name: Bass 2026 Genomic foundation do
   year: 2026
   fate_axis: [how]
@@ -3700,6 +3754,8 @@
 
 - entity_id: model:decant
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C5: learns representations that organise drugs by mechanism; it does not predict a perturbation response, which is what C5 admits on"
   name: DECANT
   year: 2026
   fate_axis: [what]
@@ -3784,6 +3840,8 @@
 
 - entity_id: model:dong-2026-estimating-genotype-tissue-specific
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: imputes genotype-tissue expression profiles rather than reading sequence"
   name: Dong 2026 Estimating genotype-tissue specific
   year: 2026
   fate_axis: [where]
@@ -3881,6 +3939,8 @@
 
 - entity_id: model:agep-twas
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: predicts tissue expression for TWAS from genotype rather than from sequence or chromatin state"
   name: AGEP_TWAS
   year: 2026
   fate_axis: [where]
@@ -4140,6 +4200,8 @@
 
 - entity_id: model:wang-2024-predictive-prioritization-enhancers
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: prioritises pancreas-disease enhancers: a finding produced with existing methods"
   name: Wang 2024 Predictive Prioritization Enhancers
   year: 2024
   fate_axis: [what]
@@ -4266,6 +4328,8 @@
 
 - entity_id: model:al-saidi-2026-win-win-possible-achieving
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a privacy-utility study of genome language model embeddings; the product is a risk analysis"
   name: Al-Saidi 2026 Win-Win possible Achieving
   year: 2026
   fate_axis: [how]
@@ -4283,6 +4347,8 @@
 
 - entity_id: model:hidden-state-genomics
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a graph-based analysis of feature activity in genomic language models; the product is the analysis"
   name: Hidden State Genomics
   year: 2026
   fate_axis: [how]
@@ -4319,6 +4385,8 @@
 
 - entity_id: model:su-2026-fine-tuned-genomic-language
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: missense variant impact in clinical genomics; coding variant interpretation"
   name: Su 2026 fine-tuned genomic language
   year: 2026
   fate_axis: [how]
@@ -4331,6 +4399,8 @@
 
 - entity_id: model:joubert-2026-dna-language-grover
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: uses a DNA language model to explain double-strand break sensitivity; the product is an explanation"
   name: Joubert 2026 DNA language GROVER
   year: 2026
   fate_axis: [how]
@@ -4376,6 +4446,8 @@
 
 - entity_id: model:merchant-2026-semantic-design-functional
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C4: de novo gene design from a genomic language model; sequence design, but the target is a gene product rather than a fate axis"
   name: Merchant 2026 Semantic design functional
   year: 2026
   fate_axis: [how]
@@ -4459,6 +4531,8 @@
 
 - entity_id: model:yu-2026-fp8-inference-genomic
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: an empirical case study of quantised inference; ships measurements, not a model"
   name: Yu 2026 FP8 Inference Genomic
   year: 2026
   fate_axis: [how]
@@ -4516,6 +4590,8 @@
 
 - entity_id: model:yoo-2024-exploring-adversarial-robustness
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: explores how robust existing DNA language models are; a conclusion about them"
   name: Yoo 2024 Exploring Adversarial Robustness
   year: 2024
   fate_axis: [how]
@@ -4558,6 +4634,8 @@
 
 - entity_id: model:securing-the-language-of-life
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: inheritable watermarks for provenance; a security mechanism, not a fate resource"
   name: Securing the Language of Life
   year: 2025
   fate_axis: [how]
@@ -4570,6 +4648,8 @@
 
 - entity_id: model:nemecek-2026-quantifying-memorization-privacy
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a privacy evaluation framework for genomic language models: the substrate is in scope but the product is a risk assessment, not a resource for acting"
   name: Nemecek 2026 Quantifying Memorization Privacy
   year: 2026
   fate_axis: [how]
@@ -4601,6 +4681,8 @@
 
 - entity_id: model:genebreaker
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: jailbreak attacks on DNA language models; a security finding"
   name: GeneBreaker
   year: 2025
   fate_axis: [how]
@@ -4632,6 +4714,8 @@
 
 - entity_id: model:when-repeats-drive-the-vocabulary
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a tokenisation analysis of primate genomes; the product is what it found, not a tokeniser"
   name: When repeats drive the vocabulary
   year: 2025
   fate_axis: [how]
@@ -4672,6 +4756,8 @@
 
 - entity_id: model:scyeast
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C5: yeast single-cell foundation model; representation"
   name: scYeast
   year: 2027
   fate_axis: [what]
@@ -4891,6 +4977,8 @@
 
 - entity_id: model:schneckener-2026-sequence-optimization-targeting
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C4: DNA sequence optimisation for antibody titre in CHO cells; design, but for protein production"
   name: Schneckener 2026 Sequence optimization targeting
   year: 2026
   fate_axis: [how]
@@ -4943,6 +5031,8 @@
 
 - entity_id: model:choi-2026-ai-virtual-cells
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a perspective on virtual cells for hepatology"
   name: Choi 2026 AI Virtual Cells
   year: 2026
   fate_axis: [what]
@@ -4972,6 +5062,8 @@
 
 - entity_id: model:genejepa
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C5: a joint-embedding world model of the transcriptome; representation"
   name: GeneJepa
   year: 2025
   fate_axis: [what]
@@ -5147,6 +5239,8 @@
 
 - entity_id: model:zhang-2026-highly-accurate-ab
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: ab initio gene annotation with a genomic language model; annotation"
   name: Zhang 2026 Highly accurate ab
   year: 2026
   fate_axis: [how]
@@ -5164,6 +5258,8 @@
 
 - entity_id: model:provatas1-2026-tracing-model-generated-dna
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: watermarking for provenance of generated DNA"
   name: Provatas1 2026 Tracing model-generated DNA
   year: 2026
   fate_axis: [how]
@@ -5190,6 +5286,8 @@
 
 - entity_id: model:jia-2026-virtual-cell-construction
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a review of virtual cell construction for drug discovery"
   name: Jia 2026 Virtual cell construction
   year: 2026
   fate_axis: [what]
@@ -5217,6 +5315,8 @@
 
 - entity_id: model:foster-2021-contrastive-mixture-posteriors
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: representation learning for batch correction and counterfactual inference; a general method"
   name: Foster 2021 Contrastive Mixture Posteriors
   year: 2021
   fate_axis: [what]

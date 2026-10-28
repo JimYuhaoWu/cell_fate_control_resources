@@ -416,37 +416,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "benchmark:beyond-chromatin-accessibility",
-  "links": [],
-  "name": "Beyond chromatin accessibility",
-  "papers": [
-   {
-    "authors": [
-     "Toumi I",
-     "Kham C",
-     "Stuani L",
-     "Le Cam L",
-     "Roux PF"
-    ],
-    "doi": "10.1093/nargab/lqag046",
-    "note": null,
-    "paper_id": "10.1093/nargab/lqag046",
-    "role": "primary",
-    "title": "Beyond chromatin accessibility: bulk ATAC-seq as an integrative assay to portray genomes and epigenomes",
-    "url": "https://doi.org/10.1093/nargab/lqag046",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.1093/nargab/lqag046",
-  "primary_paper_title": "Beyond chromatin accessibility: bulk ATAC-seq as an integrative assay to portray genomes and epigenomes",
-  "type": "benchmark",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "entity_id": "benchmark:csendes-2024-benchmarking-foundational-cell",
   "links": [],
   "name": "Csendes 2024 Benchmarking foundational cell",
@@ -961,95 +930,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "benchmark:kan-tor-2024-does-understand-genes",
-  "links": [],
-  "name": "Kan-Tor 2024 Does understand genes",
-  "papers": [
-   {
-    "authors": [
-     "Yoav Kan-Tor",
-     "Michael Morris Danziger",
-     "Eden Zohar",
-     "Matan Ninio",
-     "Yishai Shimoni"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2412.04075",
-    "role": "primary",
-    "title": "Does your model understand genes? A benchmark of gene properties for biological and text models",
-    "url": "https://arxiv.org/abs/2412.04075",
-    "venue": "arXiv",
-    "year": 2024
-   }
-  ],
-  "primary_paper_id": "arxiv:2412.04075",
-  "primary_paper_title": "Does your model understand genes? A benchmark of gene properties for biological and text models",
-  "type": "benchmark",
-  "year": 2024
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "benchmark:kulkarni-2019-maps-transcription-factor",
-  "links": [],
-  "name": "Kulkarni 2019 Maps Transcription Factor",
-  "papers": [
-   {
-    "authors": [
-     "Kulkarni SR",
-     "Jones DM",
-     "Vandepoele K"
-    ],
-    "doi": "10.1104/pp.19.00605",
-    "note": null,
-    "paper_id": "10.1104/pp.19.00605",
-    "role": "primary",
-    "title": "Enhanced Maps of Transcription Factor Binding Sites Improve Regulatory Networks Learned from Accessible Chromatin Data",
-    "url": "https://doi.org/10.1104/pp.19.00605",
-    "venue": null,
-    "year": 2019
-   }
-  ],
-  "primary_paper_id": "10.1104/pp.19.00605",
-  "primary_paper_title": "Enhanced Maps of Transcription Factor Binding Sites Improve Regulatory Networks Learned from Accessible Chromatin Data",
-  "type": "benchmark",
-  "year": 2019
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "benchmark:kulkarni-2019-tf-binding-site",
-  "links": [],
-  "name": "Kulkarni 2019 TF binding site",
-  "papers": [
-   {
-    "authors": [
-     "Kulkarni SR",
-     "Jones DM",
-     "Vandepoele K"
-    ],
-    "doi": "10.1101/545780",
-    "note": null,
-    "paper_id": "10.1101/545780",
-    "role": "primary",
-    "title": "Enhanced TF binding site maps improve regulatory networks learned from accessible chromatin data",
-    "url": "https://doi.org/10.1101/545780",
-    "venue": null,
-    "year": 2019
-   }
-  ],
-  "primary_paper_id": "10.1101/545780",
-  "primary_paper_title": "Enhanced TF binding site maps improve regulatory networks learned from accessible chromatin data",
-  "type": "benchmark",
-  "year": 2019
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "entity_id": "benchmark:loco-epi",
   "links": [
    {
@@ -1082,51 +962,6 @@
   "primary_paper_title": "LOCO-EPI: Leave-one-chromosome-out (LOCO) as a benchmarking paradigm for deep learning based prediction of enhancer-promoter interactions",
   "type": "benchmark",
   "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "benchmark:macias-velasco-2026-benchmarking-genome-choice",
-  "links": [],
-  "name": "Macias-Velasco 2026 Benchmarking genome choice",
-  "papers": [
-   {
-    "authors": [
-     "Macias-Velasco JF",
-     "Zhuo X",
-     "Tomlinson C",
-     "Belter EA",
-     "Kremitzki M",
-     "Albracht D",
-     "Lindsay T",
-     "Xing X",
-     "Tekkey N",
-     "Zhang W",
-     "Garza JE",
-     "Xu Z",
-     "Xin Z",
-     "Fu Q",
-     "Lawson HA",
-     "Stitziel NO",
-     "Fulton RS",
-     "Li D",
-     "Wang T"
-    ],
-    "doi": "10.1038/s41467-026-73663-3",
-    "note": null,
-    "paper_id": "10.1038/s41467-026-73663-3",
-    "role": "primary",
-    "title": "Benchmarking genome choice in functional genomics analyses",
-    "url": "https://doi.org/10.1038/s41467-026-73663-3",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.1038/s41467-026-73663-3",
-  "primary_paper_title": "Benchmarking genome choice in functional genomics analyses",
-  "type": "benchmark",
-  "year": 2026
  },
  {
   "curator": "JimYuhaoWu",
@@ -1356,115 +1191,6 @@
   ],
   "primary_paper_id": "10.1101/2025.01.06.631405",
   "primary_paper_title": "A comprehensive benchmark and guide for sequence-function interpretable deep learning models in genomics",
-  "type": "benchmark",
-  "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "benchmark:vinceti-2024-benchmark-computational-correcting",
-  "links": [],
-  "name": "Vinceti 2024 benchmark computational correcting",
-  "papers": [
-   {
-    "authors": [
-     "Vinceti A",
-     "Iannuzzi RM",
-     "Boyle I",
-     "Trastulla L",
-     "Campbell CD",
-     "Vazquez F",
-     "Dempster JM",
-     "Iorio F"
-    ],
-    "doi": "10.1186/s13059-024-03336-1",
-    "note": null,
-    "paper_id": "10.1186/s13059-024-03336-1",
-    "role": "primary",
-    "title": "A benchmark of computational methods for correcting biases of established and unknown origin in CRISPR-Cas9 screening data",
-    "url": "https://doi.org/10.1186/s13059-024-03336-1",
-    "venue": null,
-    "year": 2024
-   }
-  ],
-  "primary_paper_id": "10.1186/s13059-024-03336-1",
-  "primary_paper_title": "A benchmark of computational methods for correcting biases of established and unknown origin in CRISPR-Cas9 screening data",
-  "type": "benchmark",
-  "year": 2024
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "benchmark:virobench",
-  "links": [
-   {
-    "kind": "code",
-    "label": null,
-    "url": "https://github.com/SII-AGI4S/ViroBench"
-   }
-  ],
-  "name": "ViroBench",
-  "papers": [
-   {
-    "authors": [
-     "Dongxin Ye",
-     "Fang Hu",
-     "Han Hu",
-     "Shu Hu",
-     "Yang Tan",
-     "Wanli Ouyang",
-     "Stan Z. Li",
-     "Jie Cui",
-     "Nanqing Dong"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2605.25388",
-    "role": "primary",
-    "title": "ViroBench: Benchmarking Nucleotide Foundation Models on Viral Genomics Tasks",
-    "url": "https://arxiv.org/abs/2605.25388",
-    "venue": "arXiv",
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "arxiv:2605.25388",
-  "primary_paper_title": "ViroBench: Benchmarking Nucleotide Foundation Models on Viral Genomics Tasks",
-  "type": "benchmark",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "benchmark:wang-2025-benchmark-chromatin-protein-interaction",
-  "links": [],
-  "name": "Wang 2025 Benchmark chromatin-protein interaction",
-  "papers": [
-   {
-    "authors": [
-     "Wang R",
-     "Wu Y",
-     "Zhou Z",
-     "Ma Y",
-     "Zhang W",
-     "Wang Z",
-     "Luo W",
-     "Hua P"
-    ],
-    "doi": "10.3389/fcell.2025.1572405",
-    "note": null,
-    "paper_id": "10.3389/fcell.2025.1572405",
-    "role": "primary",
-    "title": "Benchmark of chromatin-protein interaction methods in haploid round spermatids",
-    "url": "https://doi.org/10.3389/fcell.2025.1572405",
-    "venue": null,
-    "year": 2025
-   }
-  ],
-  "primary_paper_id": "10.3389/fcell.2025.1572405",
-  "primary_paper_title": "Benchmark of chromatin-protein interaction methods in haploid round spermatids",
   "type": "benchmark",
   "year": 2025
  },
@@ -4302,45 +4028,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:agep-twas",
-  "fate_axis": [
-   "where"
-  ],
-  "links": [],
-  "name": "AGEP_TWAS",
-  "papers": [
-   {
-    "authors": [
-     "Wang S",
-     "Zhou Z",
-     "Li C",
-     "Cai Y",
-     "Wang J",
-     "Zhang Z",
-     "Li R",
-     "Niyazbekova Z",
-     "Jiang Y",
-     "Liu Q"
-    ],
-    "doi": "10.1109/tcbbio.2026.3663364",
-    "note": null,
-    "paper_id": "10.1109/tcbbio.2026.3663364",
-    "role": "primary",
-    "title": "AGEP_TWAS: A Deep Learning-Based Framework for Predicting Gene Expression Levels in Tissues",
-    "url": "https://doi.org/10.1109/tcbbio.2026.3663364",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.1109/tcbbio.2026.3663364",
-  "primary_paper_title": "AGEP_TWAS: A Deep Learning-Based Framework for Predicting Gene Expression Levels in Tissues",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "description": "Here we present a convolutional neural network, Akita, that accurately predicts genome folding from DNA sequence alone.",
   "entity_id": "model:akita",
   "fate_axis": [
@@ -4372,46 +4059,6 @@
   "primary_paper_title": "Predicting 3D genome folding from DNA sequence with Akita",
   "type": "model",
   "year": 2020
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:al-saidi-2026-win-win-possible-achieving",
-  "fate_axis": [
-   "how"
-  ],
-  "license": "Apache-2.0",
-  "links": [
-   {
-    "kind": "code",
-    "label": null,
-    "url": "https://github.com/AnonymousISCBConf/Win-Win-Privacy-Utility-Analysis"
-   }
-  ],
-  "name": "Al-Saidi 2026 Win-Win possible Achieving",
-  "papers": [
-   {
-    "authors": [
-     "Al-Saidi R",
-     "Ayday E",
-     "Kobti Z",
-     "AlSeidi R"
-    ],
-    "doi": "10.1093/bioinformatics/btag311",
-    "note": null,
-    "paper_id": "10.1093/bioinformatics/btag311",
-    "role": "primary",
-    "title": "Is a Win-Win possible? Achieving pareto-optimal privacy-utility balance in fine-tuned genome language model embeddings against embedding reconstruction attacks",
-    "url": "https://doi.org/10.1093/bioinformatics/btag311",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.1093/bioinformatics/btag311",
-  "primary_paper_title": "Is a Win-Win possible? Achieving pareto-optimal privacy-utility balance in fine-tuned genome language model embeddings against embedding reconstruction attacks",
-  "type": "model",
-  "year": 2026
  },
  {
   "curator": "JimYuhaoWu",
@@ -5349,40 +4996,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:bass-2026-genomic-foundation-do",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Bass 2026 Genomic foundation do",
-  "papers": [
-   {
-    "authors": [
-     "Bass AJ",
-     "Park J",
-     "Mukherjee S",
-     "Whittaker J",
-     "Wallace C"
-    ],
-    "doi": "10.64898/2026.10.13.758880",
-    "note": null,
-    "paper_id": "10.64898/2026.10.13.758880",
-    "role": "primary",
-    "title": "Genomic foundation models do not yet boost common variant discovery beyond standard functional annotations",
-    "url": "https://doi.org/10.64898/2026.10.13.758880",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.64898/2026.10.13.758880",
-  "primary_paper_title": "Genomic foundation models do not yet boost common variant discovery beyond standard functional annotations",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "description": "We introduce the open source package Basset to apply CNNs to learn the functional activity of DNA sequences from genomics data.",
   "entity_id": "model:basset",
   "fate_axis": [
@@ -6186,45 +5799,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "description": "We introduce CaLMFlow (Causal Language Models for Flow Matching), a novel framework that casts flow matching as a Volterra integral equation (VIE), leveraging the power of large language models (LLMs) for continuous data generation.",
-  "entity_id": "model:calmflow",
-  "fate_axis": [
-   "what"
-  ],
-  "links": [],
-  "name": "CaLMFlow",
-  "papers": [
-   {
-    "authors": [
-     "Sizhuang He",
-     "Daniel Levine",
-     "Ivan Vrkic",
-     "Marco Francesco Bressana",
-     "David Zhang",
-     "Syed Asad Rizvi",
-     "Yangtian Zhang",
-     "Emanuele Zappala",
-     "David van Dijk"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2410.05292",
-    "role": "primary",
-    "title": "CaLMFlow: Volterra Flow Matching using Causal Language Models",
-    "url": "https://arxiv.org/abs/2410.05292",
-    "venue": "arXiv",
-    "year": 2024
-   }
-  ],
-  "primary_paper_id": "arxiv:2410.05292",
-  "primary_paper_title": "CaLMFlow: Volterra Flow Matching using Causal Language Models",
-  "type": "model",
-  "year": 2024
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "description": "We develop a computational method, chromatin interaction neural network (ChINN), to predict chromatin interactions between open chromatin regions using only DNA sequences.",
   "entity_id": "model:cao-2021-chromatin-interaction-neural",
   "fate_axis": [
@@ -6507,39 +6081,6 @@
   "year": 2025
  },
  {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:choi-2026-ai-virtual-cells",
-  "fate_axis": [
-   "what"
-  ],
-  "links": [],
-  "name": "Choi 2026 AI Virtual Cells",
-  "papers": [
-   {
-    "authors": [
-     "Choi Y",
-     "Koh IG",
-     "Choi M",
-     "An JY"
-    ],
-    "doi": "10.3350/cmh.2026.0820",
-    "note": null,
-    "paper_id": "10.3350/cmh.2026.0820",
-    "role": "primary",
-    "title": "Toward AI Virtual Cells for Hepatology: Representation, Generation, Dynamics, and Intervention in Single-Cell Models",
-    "url": "https://doi.org/10.3350/cmh.2026.0820",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.3350/cmh.2026.0820",
-  "primary_paper_title": "Toward AI Virtual Cells for Hepatology: Representation, Generation, Dynamics, and Intervention in Single-Cell Models",
-  "type": "model",
-  "year": 2026
- },
- {
   "aliases": [
    "chrombpnet"
   ],
@@ -6743,40 +6284,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "description": "Here, we develop an end-to-end pipeline for generative design of Escherichia coli plasmid backbones, from large-scale data curation through fine-tuning, sampling, bioinformatic assessment, and candidate selection.",
-  "entity_id": "model:cunningham-2025-generative-design-construction",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Cunningham 2025 Generative design construction",
-  "papers": [
-   {
-    "authors": [
-     "Cunningham AG",
-     "Dekker L",
-     "Shcherbakova A",
-     "Barnes CP"
-    ],
-    "doi": "10.64898/2025.12.06.692736",
-    "note": null,
-    "paper_id": "10.64898/2025.12.06.692736",
-    "role": "primary",
-    "title": "Generative design and construction of functional plasmids with a DNA language model",
-    "url": "https://doi.org/10.64898/2025.12.06.692736",
-    "venue": null,
-    "year": 2025
-   }
-  ],
-  "primary_paper_id": "10.64898/2025.12.06.692736",
-  "primary_paper_title": "Generative design and construction of functional plasmids with a DNA language model",
-  "type": "model",
-  "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "description": "We present DanioDecima, a zebrafish-specific model leveraging transfer learning from human and mouse-trained models to predict tissue- and cell-type-specific gene expression during zebrafish embryogenesis.",
   "entity_id": "model:daniodecima",
   "fate_axis": [
@@ -6849,49 +6356,6 @@
   "primary_paper_title": "DART-Eval: A Comprehensive DNA Language Model Evaluation Benchmark on Regulatory DNA",
   "type": "model",
   "year": 2024
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "description": "We developed DECANT to learn mechanism-aligned perturbation representations that remain stable across context shifts while preserving response fidelity.",
-  "entity_id": "model:decant",
-  "fate_axis": [
-   "what"
-  ],
-  "license": "MIT",
-  "links": [
-   {
-    "kind": "code",
-    "label": null,
-    "url": "https://github.com/bliulab/DECANT"
-   }
-  ],
-  "name": "DECANT",
-  "papers": [
-   {
-    "authors": [
-     "Qi R",
-     "Teng W",
-     "Yang X",
-     "Cheng Y",
-     "Shaytan AK",
-     "Liu B"
-    ],
-    "doi": "10.1093/bioinformatics/btag662",
-    "note": null,
-    "paper_id": "10.1093/bioinformatics/btag662",
-    "role": "primary",
-    "title": "DECANT: decoupling mechanism from context in single-cell drug perturbation representation",
-    "url": "https://doi.org/10.1093/bioinformatics/btag662",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.1093/bioinformatics/btag662",
-  "primary_paper_title": "DECANT: decoupling mechanism from context in single-cell drug perturbation representation",
-  "type": "model",
-  "year": 2026
  },
  {
   "curator": "JimYuhaoWu",
@@ -6972,41 +6436,6 @@
   ],
   "primary_paper_id": "10.1016/j.ygeno.2026.111285",
   "primary_paper_title": "DeepGEP: Deep learning for gene expression prediction from multi-omics in mammals",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "description": "Here, we present DeepSCENIC, a deep learning framework that enables causal GRN inference by performing transfer learning from S2F models to single-cell multiome atlases.",
-  "entity_id": "model:deepscenic",
-  "fate_axis": [
-   "where"
-  ],
-  "links": [],
-  "name": "DeepSCENIC",
-  "papers": [
-   {
-    "authors": [
-     "Partel G",
-     "De Winter S",
-     "Konstantakos V",
-     "Blaauw CH",
-     "Aerts S"
-    ],
-    "doi": "10.64898/2026.09.18.752607",
-    "note": null,
-    "paper_id": "10.64898/2026.09.18.752607",
-    "role": "primary",
-    "title": "DeepSCENIC: transfer learning from sequence-to-function models enables causal gene regulatory network inference",
-    "url": "https://doi.org/10.64898/2026.09.18.752607",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.64898/2026.09.18.752607",
-  "primary_paper_title": "DeepSCENIC: transfer learning from sequence-to-function models enables causal gene regulatory network inference",
   "type": "model",
   "year": 2026
  },
@@ -7149,36 +6578,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:denvis-2026-findings-sparse-autoencoders",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Denvis 2026 Findings Sparse Autoencoders",
-  "papers": [
-   {
-    "authors": [
-     "Denvis O"
-    ],
-    "doi": "10.21203/rs.3.rs-10434163/v1",
-    "note": null,
-    "paper_id": "10.21203/rs.3.rs-10434163/v1",
-    "role": "primary",
-    "title": "Findings from Sparse Autoencoders for DNA Sequence Models: Motif Detectors, Reading-Frame Features, and the Scarcity of Regulatory Logic",
-    "url": "https://doi.org/10.21203/rs.3.rs-10434163/v1",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.21203/rs.3.rs-10434163/v1",
-  "primary_paper_title": "Findings from Sparse Autoencoders for DNA Sequence Models: Motif Detectors, Reading-Frame Features, and the Scarcity of Regulatory Logic",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "description": "We introduce HyDrop v2, an improved custom droplet scATAC-seq method, and perform the first benchmark of scATAC-seq platforms focusing on its capacity to train S2F models and its capacity to yield TF footprints in different species.",
   "entity_id": "model:dickm-nken-2026-evaluating-single-cell-atac-seq",
   "fate_axis": [
@@ -7254,38 +6653,6 @@
   "primary_paper_title": "Diversity by Design: Addressing Mode Collapse Improves scRNA-seq Perturbation Modeling on Well-Calibrated Metrics",
   "type": "model",
   "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:dna-language-models",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "DNA Language Models",
-  "papers": [
-   {
-    "authors": [
-     "Romain Karpinsky",
-     "Julien Mozziconacci",
-     "Mickaël Delcey"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2606.30140",
-    "role": "primary",
-    "title": "DNA Language Models: An Assessment of Pre-Training for Fine-Tuning Tasks",
-    "url": "https://arxiv.org/abs/2606.30140",
-    "venue": "arXiv",
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "arxiv:2606.30140",
-  "primary_paper_title": "DNA Language Models: An Assessment of Pre-Training for Fine-Tuning Tasks",
-  "type": "model",
-  "year": 2026
  },
  {
   "curator": "JimYuhaoWu",
@@ -7467,38 +6834,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:dong-2026-estimating-genotype-tissue-specific",
-  "fate_axis": [
-   "where"
-  ],
-  "links": [],
-  "name": "Dong 2026 Estimating genotype-tissue specific",
-  "papers": [
-   {
-    "authors": [
-     "Dong J",
-     "Brown S",
-     "Truong K"
-    ],
-    "doi": "10.1038/s42003-026-10251-7",
-    "note": null,
-    "paper_id": "10.1038/s42003-026-10251-7",
-    "role": "primary",
-    "title": "Estimating genotype-tissue specific gene expression using hybrid deep learning",
-    "url": "https://doi.org/10.1038/s42003-026-10251-7",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.1038/s42003-026-10251-7",
-  "primary_paper_title": "Estimating genotype-tissue specific gene expression using hybrid deep learning",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "description": "Here, we propose the Conditional Monge Gap which learns OT maps conditionally on arbitrary covariates.",
   "entity_id": "model:driessen-2025-single-cell-perturbation-modeling",
   "fate_axis": [
@@ -7528,46 +6863,6 @@
   "primary_paper_title": "Towards generalizable single-cell perturbation modeling via the Conditional Monge Gap",
   "type": "model",
   "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "description": "We describe the resource's development, practical applications, and potential for future expansion and enhancement.",
-  "entity_id": "model:drivr-base",
-  "fate_axis": [
-   "where"
-  ],
-  "license": "GPL-3.0",
-  "links": [
-   {
-    "kind": "code",
-    "label": null,
-    "url": "https://github.com/amyfrancis-science/DrivR-Base"
-   }
-  ],
-  "name": "DrivR-Base",
-  "papers": [
-   {
-    "authors": [
-     "Francis A",
-     "Campbell C",
-     "Gaunt TR"
-    ],
-    "doi": "10.1093/bioinformatics/btae197",
-    "note": null,
-    "paper_id": "10.1093/bioinformatics/btae197",
-    "role": "primary",
-    "title": "DrivR-Base: a feature extraction toolkit for variant effect prediction model construction",
-    "url": "https://doi.org/10.1093/bioinformatics/btae197",
-    "venue": null,
-    "year": 2024
-   }
-  ],
-  "primary_paper_id": "10.1093/bioinformatics/btae197",
-  "primary_paper_title": "DrivR-Base: a feature extraction toolkit for variant effect prediction model construction",
-  "type": "model",
-  "year": 2024
  },
  {
   "curator": "JimYuhaoWu",
@@ -9246,42 +8541,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "description": "We propose the Contrastive Mixture of Posteriors (CoMP) method that uses a novel misalignment penalty defined in terms of mixtures of the variational posteriors to enforce this independence in latent space.",
-  "entity_id": "model:foster-2021-contrastive-mixture-posteriors",
-  "fate_axis": [
-   "what"
-  ],
-  "links": [],
-  "name": "Foster 2021 Contrastive Mixture Posteriors",
-  "papers": [
-   {
-    "authors": [
-     "Adam Foster",
-     "Árpi Vezér",
-     "Craig A Glastonbury",
-     "Páidí Creed",
-     "Sam Abujudeh",
-     "Aaron Sim"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2106.08161",
-    "role": "primary",
-    "title": "Contrastive Mixture of Posteriors for Counterfactual Inference, Data Integration and Fairness",
-    "url": "https://arxiv.org/abs/2106.08161",
-    "venue": "arXiv",
-    "year": 2021
-   }
-  ],
-  "primary_paper_id": "arxiv:2106.08161",
-  "primary_paper_title": "Contrastive Mixture of Posteriors for Counterfactual Inference, Data Integration and Fairness",
-  "type": "model",
-  "year": 2021
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "description": "We introduce PT-RAG (Perturbation-aware Two-stage Retrieval-Augmented Generation), a plug-in retrieval-and-conditioning module for generative cellular perturbation response.",
   "entity_id": "model:francesco-2026-differentiable-retrieval-augmented-generation",
   "fate_axis": [
@@ -9947,84 +9206,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:genebreaker",
-  "fate_axis": [
-   "how"
-  ],
-  "license": "CC0-1.0",
-  "links": [
-   {
-    "kind": "code",
-    "label": null,
-    "url": "https://github.com/zaixizhang/GeneBreaker"
-   }
-  ],
-  "name": "GeneBreaker",
-  "papers": [
-   {
-    "authors": [
-     "Zaixi Zhang",
-     "Zhenghong Zhou",
-     "Ruofan Jin",
-     "Le Cong",
-     "Mengdi Wang"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2505.23839",
-    "role": "primary",
-    "title": "GeneBreaker: Jailbreak Attacks against DNA Language Models with Pathogenicity Guidance",
-    "url": "https://arxiv.org/abs/2505.23839",
-    "venue": "arXiv",
-    "year": 2025
-   }
-  ],
-  "primary_paper_id": "arxiv:2505.23839",
-  "primary_paper_title": "GeneBreaker: Jailbreak Attacks against DNA Language Models with Pathogenicity Guidance",
-  "type": "model",
-  "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "description": "We introduce G ene J epa , a self-supervised foundation model that learns a predictive world model of single-cell transcriptomes.",
-  "entity_id": "model:genejepa",
-  "fate_axis": [
-   "what"
-  ],
-  "links": [],
-  "name": "GeneJepa",
-  "papers": [
-   {
-    "authors": [
-     "Litman E",
-     "Myers T",
-     "Agarwal V",
-     "Mittal E",
-     "Li O",
-     "Gopinath A",
-     "Kassis T"
-    ],
-    "doi": "10.1101/2025.10.14.682378",
-    "note": null,
-    "paper_id": "10.1101/2025.10.14.682378",
-    "role": "primary",
-    "title": "GeneJepa: A Predictive World Model of the Transcriptome",
-    "url": "https://doi.org/10.1101/2025.10.14.682378",
-    "venue": null,
-    "year": 2025
-   }
-  ],
-  "primary_paper_id": "10.1101/2025.10.14.682378",
-  "primary_paper_title": "GeneJepa: A Predictive World Model of the Transcriptome",
-  "type": "model",
-  "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "entity_id": "model:genepert",
   "fate_axis": [
    "what"
@@ -10330,76 +9511,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:grover-2025-early-feature-extraction",
-  "fate_axis": [
-   "where"
-  ],
-  "links": [],
-  "name": "Grover 2025 Early feature extraction",
-  "papers": [
-   {
-    "authors": [
-     "Aayush Grover",
-     "Till Muser",
-     "Liine Kasak",
-     "Lin Zhang",
-     "Ekaterina Krymova",
-     "Valentina Boeva"
-    ],
-    "doi": "10.1101/2025.03.01.641000",
-    "note": null,
-    "paper_id": "10.1101/2025.03.01.641000",
-    "role": "primary",
-    "title": "Early feature extraction drives model performance in high-resolution chromatin accessibility prediction: A systematic evaluation of deep learning architectures",
-    "url": "https://doi.org/10.1101/2025.03.01.641000",
-    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
-    "year": 2025
-   }
-  ],
-  "primary_paper_id": "10.1101/2025.03.01.641000",
-  "primary_paper_title": "Early feature extraction drives model performance in high-resolution chromatin accessibility prediction: A systematic evaluation of deep learning architectures",
-  "type": "model",
-  "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:grover-2026-early-feature-extraction",
-  "fate_axis": [
-   "where"
-  ],
-  "links": [],
-  "name": "Grover 2026 Early feature extraction",
-  "papers": [
-   {
-    "authors": [
-     "Grover A",
-     "Muser T",
-     "Kasak L",
-     "Zhang L",
-     "Krymova E",
-     "Boeva V"
-    ],
-    "doi": "10.1101/gr.281042.125",
-    "note": null,
-    "paper_id": "10.1101/gr.281042.125",
-    "role": "primary",
-    "title": "Early feature extraction drives model performance in high-resolution chromatin accessibility prediction",
-    "url": "https://doi.org/10.1101/gr.281042.125",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.1101/gr.281042.125",
-  "primary_paper_title": "Early feature extraction drives model performance in high-resolution chromatin accessibility prediction",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "description": "We present Puget, a deep learning model that predicts cell type-specific gene expression from sequence and Hi-C data, which captures 3D chromatin organization.",
   "entity_id": "model:hang-2025-puget-predicts-gene",
   "fate_axis": [
@@ -10434,36 +9545,6 @@
   "primary_paper_title": "Puget predicts gene expression across cell types using sequence and 3D chromatin organization data",
   "type": "model",
   "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:harrison-2026-do-gene-perturbation",
-  "fate_axis": [
-   "what"
-  ],
-  "links": [],
-  "name": "Harrison 2026 Do Gene Perturbation",
-  "papers": [
-   {
-    "authors": [
-     "Harrison E"
-    ],
-    "doi": "10.14293/pr2199.003573.v2",
-    "note": null,
-    "paper_id": "10.14293/pr2199.003573.v2",
-    "role": "primary",
-    "title": "Do Gene Perturbation Predictions Match Real Effects? A Computational Test Using Public Data",
-    "url": "https://doi.org/10.14293/pr2199.003573.v2",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.14293/pr2199.003573.v2",
-  "primary_paper_title": "Do Gene Perturbation Predictions Match Real Effects? A Computational Test Using Public Data",
-  "type": "model",
-  "year": 2026
  },
  {
   "curator": "JimYuhaoWu",
@@ -10538,38 +9619,6 @@
   "primary_paper_title": "Reaping the Fruits of LLM Pruning: Towards Small Language Models for Efficient Non-Coding Variant Effect Prediction",
   "type": "model",
   "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:hidden-state-genomics",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Hidden State Genomics",
-  "papers": [
-   {
-    "authors": [
-     "Eliot Kmiec",
-     "Samuel O'Brien",
-     "Matthew McCoy"
-    ],
-    "doi": "10.64898/2026.05.13.725007",
-    "note": null,
-    "paper_id": "10.64898/2026.05.13.725007",
-    "role": "primary",
-    "title": "Hidden State Genomics: Graph-Based Analysis of Sparse Auto-Encoder Feature Activity in Genomic Language Models",
-    "url": "https://doi.org/10.64898/2026.05.13.725007",
-    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.64898/2026.05.13.725007",
-  "primary_paper_title": "Hidden State Genomics: Graph-Based Analysis of Sparse Auto-Encoder Feature Activity in Genomic Language Models",
-  "type": "model",
-  "year": 2026
  },
  {
   "curator": "JimYuhaoWu",
@@ -10841,41 +9890,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:jia-2026-virtual-cell-construction",
-  "fate_axis": [
-   "what"
-  ],
-  "links": [],
-  "name": "Jia 2026 Virtual cell construction",
-  "papers": [
-   {
-    "authors": [
-     "Jia Y",
-     "Xing X",
-     "Han H",
-     "Zhao Y",
-     "Zhou S",
-     "Chen J"
-    ],
-    "doi": "10.1111/bph.70585",
-    "note": null,
-    "paper_id": "10.1111/bph.70585",
-    "role": "primary",
-    "title": "Virtual cell construction for artificial intelligence-driven drug discovery",
-    "url": "https://doi.org/10.1111/bph.70585",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.1111/bph.70585",
-  "primary_paper_title": "Virtual cell construction for artificial intelligence-driven drug discovery",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "description": "We introduce a benchmark called Nullsettes, which assesses how well models can predict in silico loss-of-function (LOF) mutations, in synthetic expression cassettes with little evolutionary precedent.",
   "entity_id": "model:jiang-2025-evaluating-dna-function",
   "fate_axis": [
@@ -10904,83 +9918,6 @@
   "primary_paper_title": "Evaluating DNA function understanding in genomic language models using evolutionarily implausible sequences",
   "type": "model",
   "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:jiang-2026-what-makes-representation",
-  "fate_axis": [
-   "what"
-  ],
-  "links": [],
-  "name": "Jiang 2026 What Makes Representation",
-  "papers": [
-   {
-    "authors": [
-     "Wenkang Jiang",
-     "Yuhang Liu",
-     "Yichao Cai",
-     "Erdun Gao",
-     "Jiayi Dong",
-     "Ehsan Abbasnejad",
-     "Lina Yao",
-     "Javen Qinfeng Shi"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2605.19343",
-    "role": "primary",
-    "title": "What Makes a Representation Good for Single-Cell Perturbation Prediction?",
-    "url": "https://arxiv.org/abs/2605.19343",
-    "venue": "arXiv",
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "arxiv:2605.19343",
-  "primary_paper_title": "What Makes a Representation Good for Single-Cell Perturbation Prediction?",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:joubert-2026-dna-language-grover",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [
-   {
-    "kind": "code",
-    "label": null,
-    "url": "https://github.com/ucscGenomeBrowser/kent"
-   }
-  ],
-  "name": "Joubert 2026 DNA language GROVER",
-  "papers": [
-   {
-    "authors": [
-     "Joubert PM",
-     "Vlasov A",
-     "Janakievski N",
-     "Sanabria M",
-     "Poetsch AR"
-    ],
-    "doi": "10.1093/bioinformatics/btag602",
-    "note": null,
-    "paper_id": "10.1093/bioinformatics/btag602",
-    "role": "primary",
-    "title": "Using the DNA language model, GROVER, to parse effects of sequence, chromatin and regulatory features on genome stability",
-    "url": "https://doi.org/10.1093/bioinformatics/btag602",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.1093/bioinformatics/btag602",
-  "primary_paper_title": "Using the DNA language model, GROVER, to parse effects of sequence, chromatin and regulatory features on genome stability",
-  "type": "model",
-  "year": 2026
  },
  {
   "curator": "JimYuhaoWu",
@@ -11018,39 +9955,6 @@
   "primary_paper_title": "Decoding promoter activity from DNA sequence using pre-trained language models",
   "type": "model",
   "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "description": "We describe practical considerations for making such predictions and categorize the types of ground truth data used to evaluate variant effect predictions, providing insight into the settings in which current models are most useful.",
-  "entity_id": "model:kathail-2024-leveraging-genomic-deep",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Kathail 2024 Leveraging genomic deep",
-  "papers": [
-   {
-    "authors": [
-     "Pooja Kathail",
-     "Ayesha Bajwa",
-     "Nilah M. Ioannidis"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2411.11158",
-    "role": "primary",
-    "title": "Leveraging genomic deep learning models for the prediction of non-coding variant effects",
-    "url": "https://arxiv.org/abs/2411.11158",
-    "venue": "arXiv",
-    "year": 2024
-   }
-  ],
-  "primary_paper_id": "arxiv:2411.11158",
-  "primary_paper_title": "Leveraging genomic deep learning models for the prediction of non-coding variant effects",
-  "type": "model",
-  "year": 2024
  },
  {
   "curator": "JimYuhaoWu",
@@ -11122,49 +10026,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:lanclos-2026-generative-design-new-to-nature",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Lanclos 2026 Generative Design New-to-nature",
-  "papers": [
-   {
-    "authors": [
-     "Lanclos N",
-     "Ibrahim KE",
-     "Cornman A",
-     "Huang M",
-     "Gill V",
-     "Jain A",
-     "Abraham J",
-     "Gin JW",
-     "Chen Y",
-     "Petzold CJ",
-     "Baerwald J",
-     "Kortemme T",
-     "Keasling JD",
-     "Hwang Y"
-    ],
-    "doi": "10.64898/2026.09.11.750945",
-    "note": null,
-    "paper_id": "10.64898/2026.09.11.750945",
-    "role": "primary",
-    "title": "Generative Design of New-to-nature Biosynthetic Assembly Lines with Genomic Language Modeling",
-    "url": "https://doi.org/10.64898/2026.09.11.750945",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.64898/2026.09.11.750945",
-  "primary_paper_title": "Generative Design of New-to-nature Biosynthetic Assembly Lines with Genomic Language Modeling",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "entity_id": "model:lee-2026-probing-3d-chromatin",
   "fate_axis": [
    "how"
@@ -11190,46 +10051,6 @@
   "primary_paper_title": "Probing 3D Chromatin Structure Awareness in Evo2 DNA Language Model",
   "type": "model",
   "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:li-2023-gene-expression-prediction",
-  "fate_axis": [
-   "where"
-  ],
-  "links": [
-   {
-    "kind": "code",
-    "label": null,
-    "url": "https://github.com/xuanyu-li/NCNN"
-   }
-  ],
-  "name": "Li 2023 Gene expression prediction",
-  "papers": [
-   {
-    "authors": [
-     "Li X",
-     "Zhang X",
-     "He W",
-     "Bu D",
-     "Zhang S"
-    ],
-    "doi": "10.1371/journal.pone.0281286",
-    "note": null,
-    "paper_id": "10.1371/journal.pone.0281286",
-    "role": "primary",
-    "title": "Gene expression prediction based on neighbour connection neural network utilizing gene interaction graphs",
-    "url": "https://doi.org/10.1371/journal.pone.0281286",
-    "venue": null,
-    "year": 2023
-   }
-  ],
-  "primary_paper_id": "10.1371/journal.pone.0281286",
-  "primary_paper_title": "Gene expression prediction based on neighbour connection neural network utilizing gene interaction graphs",
-  "type": "model",
-  "year": 2023
  },
  {
   "curator": "JimYuhaoWu",
@@ -11957,47 +10778,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:mangan-2026-sequence-to-function-deep-learning",
-  "fate_axis": [
-   "where"
-  ],
-  "links": [],
-  "name": "Mangan 2026 Sequence-to-function deep learning",
-  "papers": [
-   {
-    "authors": [
-     "Mangan RJ",
-     "Thoduguli N",
-     "Ivanov D",
-     "Li B",
-     "Vasudev K",
-     "Zeerow T",
-     "Shankar J",
-     "Lin Y",
-     "Liu Z",
-     "Wohlwend M",
-     "Song JH",
-     "Kellis M"
-    ],
-    "doi": "10.64898/2026.08.24.746818",
-    "note": null,
-    "paper_id": "10.64898/2026.08.24.746818",
-    "role": "primary",
-    "title": "Sequence-to-function deep learning decodes human  <i>cis</i>  -regulatory evolution",
-    "url": "https://doi.org/10.64898/2026.08.24.746818",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.64898/2026.08.24.746818",
-  "primary_paper_title": "Sequence-to-function deep learning decodes human  <i>cis</i>  -regulatory evolution",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "description": "We present MAP , a framework that integrates structured biological knowledge into cellular perturbation modeling and supports zero-shot prediction for small molecules with scarce or absent perturbation profiles.",
   "entity_id": "model:map",
   "fate_axis": [
@@ -12158,46 +10938,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:merchant-2026-semantic-design-functional",
-  "fate_axis": [
-   "how"
-  ],
-  "license": "Apache-2.0",
-  "links": [
-   {
-    "kind": "code",
-    "label": null,
-    "url": "https://github.com/togethercomputer/stripedhyena"
-   }
-  ],
-  "name": "Merchant 2026 Semantic design functional",
-  "papers": [
-   {
-    "authors": [
-     "Merchant AT",
-     "King SH",
-     "Nguyen E",
-     "Hie BL"
-    ],
-    "doi": "10.1038/s41586-025-09749-7",
-    "note": null,
-    "paper_id": "10.1038/s41586-025-09749-7",
-    "role": "primary",
-    "title": "Semantic design of functional de novo genes from a genomic language model",
-    "url": "https://doi.org/10.1038/s41586-025-09749-7",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.1038/s41586-025-09749-7",
-  "primary_paper_title": "Semantic design of functional de novo genes from a genomic language model",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "entity_id": "model:min-2017-chromatin-accessibility-prediction",
   "fate_axis": [
    "where"
@@ -12339,111 +11079,6 @@
   ],
   "primary_paper_id": "10.1371/journal.pcbi.1014054",
   "primary_paper_title": "MultiPert: An adversarial alignment and dual attention framework for single-cell multi-omics perturbation prediction",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:nagai-2026-interpretable-ai-regulatory",
-  "fate_axis": [
-   "where"
-  ],
-  "links": [],
-  "name": "Nagai 2026 interpretable AI regulatory",
-  "papers": [
-   {
-    "authors": [
-     "Nagai M",
-     "Murphy AE",
-     "Rizzo K",
-     "Koo PK"
-    ],
-    "doi": "10.1038/s41588-026-02670-3",
-    "note": null,
-    "paper_id": "10.1038/s41588-026-02670-3",
-    "role": "primary",
-    "title": "Toward generalizable and interpretable AI in regulatory genomics",
-    "url": "https://doi.org/10.1038/s41588-026-02670-3",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.1038/s41588-026-02670-3",
-  "primary_paper_title": "Toward generalizable and interpretable AI in regulatory genomics",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "description": "We present a generalizable Adaptive Resampling (AR) approach that addresses these limitations and enhances single-cell representation learning by resampling data based on its learned latent structure in an online, adaptive manner concurrent with model training.",
-  "entity_id": "model:navidi-2025-adaptive-resampling-machine",
-  "fate_axis": [
-   "what"
-  ],
-  "links": [],
-  "name": "Navidi 2025 Adaptive resampling machine",
-  "papers": [
-   {
-    "authors": [
-     "Navidi Z",
-     "Thoutam A",
-     "Hughes M",
-     "Raghavan S",
-     "Winter PS",
-     "Crawford L",
-     "Amini AP"
-    ],
-    "doi": "10.1101/2025.11.04.686583",
-    "note": null,
-    "paper_id": "10.1101/2025.11.04.686583",
-    "role": "primary",
-    "title": "Adaptive resampling for improved machine learning in imbalanced single-cell datasets",
-    "url": "https://doi.org/10.1101/2025.11.04.686583",
-    "venue": null,
-    "year": 2025
-   }
-  ],
-  "primary_paper_id": "10.1101/2025.11.04.686583",
-  "primary_paper_title": "Adaptive resampling for improved machine learning in imbalanced single-cell datasets",
-  "type": "model",
-  "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "description": "We present a comprehensive, multi-vector privacy evaluation framework designed to quantify memorization risks in GLMs.",
-  "entity_id": "model:nemecek-2026-quantifying-memorization-privacy",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Nemecek 2026 Quantifying Memorization Privacy",
-  "papers": [
-   {
-    "authors": [
-     "Alexander Nemecek",
-     "Wenbiao Li",
-     "Xiaoqian Jiang",
-     "Jaideep Vaidya",
-     "Erman Ayday"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2603.08913",
-    "role": "primary",
-    "title": "Quantifying Memorization and Privacy Risks in Genomic Language Models",
-    "url": "https://arxiv.org/abs/2603.08913",
-    "venue": "arXiv",
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "arxiv:2603.08913",
-  "primary_paper_title": "Quantifying Memorization and Privacy Risks in Genomic Language Models",
   "type": "model",
   "year": 2026
  },
@@ -14324,39 +12959,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "description": "We present the first systematic study of training data poisoning in genomic language models, targeting both pre-training and fine-tuning stages.",
-  "entity_id": "model:poisoning-the-genome",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Poisoning the Genome",
-  "papers": [
-   {
-    "authors": [
-     "Charalampos Koilakos",
-     "Ioannis Mouratidis",
-     "Ilias Georgakopoulos-Soares"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2603.27465",
-    "role": "primary",
-    "title": "Poisoning the Genome: Targeted Backdoor Attacks on DNA Foundation Models",
-    "url": "https://arxiv.org/abs/2603.27465",
-    "venue": "arXiv",
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "arxiv:2603.27465",
-  "primary_paper_title": "Poisoning the Genome: Targeted Backdoor Attacks on DNA Foundation Models",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "entity_id": "model:pop-corn",
   "fate_axis": [
    "what"
@@ -14384,38 +12986,6 @@
   ],
   "primary_paper_id": "10.64898/2026.09.25.754560",
   "primary_paper_title": "Pop-Corn: Predicting Perturbation Phenotype Effects Across Single-Cell and Spatial Contexts",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:provatas1-2026-tracing-model-generated-dna",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Provatas1 2026 Tracing model-generated DNA",
-  "papers": [
-   {
-    "authors": [
-     "Kimon Antonios Provatas1",
-     "Christos Galanopoulos",
-     "Ilias Georgakopoulos-Soares"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2610.04763",
-    "role": "primary",
-    "title": "Tracing model-generated DNA with position-independent watermarking",
-    "url": "https://arxiv.org/abs/2610.04763",
-    "venue": "arXiv",
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "arxiv:2610.04763",
-  "primary_paper_title": "Tracing model-generated DNA with position-independent watermarking",
   "type": "model",
   "year": 2026
  },
@@ -14648,44 +13218,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:ramprasad-2025-enhancing-gene-expression",
-  "fate_axis": [
-   "where"
-  ],
-  "links": [
-   {
-    "kind": "code",
-    "label": null,
-    "url": "https://github.com/pratik-r/dlfa"
-   }
-  ],
-  "name": "Ramprasad 2025 Enhancing Gene Expression",
-  "papers": [
-   {
-    "authors": [
-     "Ramprasad P",
-     "Ren J",
-     "Pan W"
-    ],
-    "doi": "10.1002/gepi.22595",
-    "note": null,
-    "paper_id": "10.1002/gepi.22595",
-    "role": "primary",
-    "title": "Enhancing Gene Expression Predictions Using Deep Learning and Functional Annotations",
-    "url": "https://doi.org/10.1002/gepi.22595",
-    "venue": null,
-    "year": 2025
-   }
-  ],
-  "primary_paper_id": "10.1002/gepi.22595",
-  "primary_paper_title": "Enhancing Gene Expression Predictions Using Deep Learning and Functional Annotations",
-  "type": "model",
-  "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "entity_id": "model:rashidy-2025-zygosity-aware-dna-language",
   "fate_axis": [
    "where"
@@ -14811,96 +13343,6 @@
   ],
   "primary_paper_id": "10.64898/2026.08.17.744355",
   "primary_paper_title": "RegFM: an interpretable context-aware foundation model for human transcriptional regulation",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:rizvi-2025-scaling-language-next-generation",
-  "fate_axis": [
-   "what"
-  ],
-  "links": [],
-  "name": "Rizvi 2025 Scaling Language Next-Generation",
-  "papers": [
-   {
-    "authors": [
-     "Rizvi SA",
-     "Levine D",
-     "Patel A",
-     "Zhang S",
-     "Wang E",
-     "Perry CJ",
-     "Vrkic I",
-     "Constante NM",
-     "Fu Z",
-     "He S",
-     "Zhang D",
-     "Tang C",
-     "Lyu Z",
-     "Darji R",
-     "Li C",
-     "Sun E",
-     "Jeong D",
-     "Zhao L",
-     "Kwan J",
-     "Braun D",
-     "Hafler B",
-     "Chung H",
-     "Dhodapkar RM",
-     "Jaeger P",
-     "Perozzi B",
-     "Ishizuka J",
-     "Azizi S",
-     "van Dijk D"
-    ],
-    "doi": "10.1101/2025.04.14.648850",
-    "note": null,
-    "paper_id": "10.1101/2025.04.14.648850",
-    "role": "primary",
-    "title": "Scaling Large Language Models for Next-Generation Single-Cell Analysis",
-    "url": "https://doi.org/10.1101/2025.04.14.648850",
-    "venue": null,
-    "year": 2025
-   }
-  ],
-  "primary_paper_id": "10.1101/2025.04.14.648850",
-  "primary_paper_title": "Scaling Large Language Models for Next-Generation Single-Cell Analysis",
-  "type": "model",
-  "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:rubbi-2026-standardized-evaluating-gene",
-  "fate_axis": [
-   "what"
-  ],
-  "links": [],
-  "name": "Rubbi 2026 Standardized Evaluating Gene",
-  "papers": [
-   {
-    "authors": [
-     "Andrea Rubbi",
-     "Andrea Giuseppe Di Francesco",
-     "Mohammad Lotfollahi",
-     "Pietro Liò"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2603.11244",
-    "role": "primary",
-    "title": "A Standardized Framework For Evaluating Gene Expression Generative Models",
-    "url": "https://arxiv.org/abs/2603.11244",
-    "venue": "arXiv",
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "arxiv:2603.11244",
-  "primary_paper_title": "A Standardized Framework For Evaluating Gene Expression Generative Models",
   "type": "model",
   "year": 2026
  },
@@ -15271,40 +13713,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:schneckener-2026-sequence-optimization-targeting",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Schneckener 2026 Sequence optimization targeting",
-  "papers": [
-   {
-    "authors": [
-     "Schneckener S",
-     "Haag K",
-     "Leweke S",
-     "Wolf T",
-     "Mayer-Bartschmid A"
-    ],
-    "doi": "10.1016/j.nbt.2026.09.004",
-    "note": null,
-    "paper_id": "10.1016/j.nbt.2026.09.004",
-    "role": "primary",
-    "title": "Sequence optimization targeting mRNA stability enhances monoclonal antibody titers in CHO cells",
-    "url": "https://doi.org/10.1016/j.nbt.2026.09.004",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.1016/j.nbt.2026.09.004",
-  "primary_paper_title": "Sequence optimization targeting mRNA stability enhances monoclonal antibody titers in CHO cells",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "entity_id": "model:scldm",
   "fate_axis": [
    "what"
@@ -15454,79 +13862,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:scyeast",
-  "fate_axis": [
-   "what"
-  ],
-  "links": [
-   {
-    "kind": "code",
-    "label": null,
-    "url": "https://github.com/hongzhonglu/scYeast"
-   }
-  ],
-  "name": "scYeast",
-  "papers": [
-   {
-    "authors": [
-     "Fan X",
-     "Liao W",
-     "Xiao L",
-     "Yan X",
-     "Lu H"
-    ],
-    "doi": "10.1016/j.synbio.2026.05.014",
-    "note": null,
-    "paper_id": "10.1016/j.synbio.2026.05.014",
-    "role": "primary",
-    "title": "scYeast: a biological-knowledge-guided foundation model on yeast single-cell transcriptomics",
-    "url": "https://doi.org/10.1016/j.synbio.2026.05.014",
-    "venue": null,
-    "year": 2027
-   }
-  ],
-  "primary_paper_id": "10.1016/j.synbio.2026.05.014",
-  "primary_paper_title": "scYeast: a biological-knowledge-guided foundation model on yeast single-cell transcriptomics",
-  "type": "model",
-  "year": 2027
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:securing-the-language-of-life",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Securing the Language of Life",
-  "papers": [
-   {
-    "authors": [
-     "Zaixi Zhang",
-     "Ruofan Jin",
-     "Le Cong",
-     "Mengdi Wang"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2509.18207",
-    "role": "primary",
-    "title": "Securing the Language of Life: Inheritable Watermarks from DNA Language Models to Proteins",
-    "url": "https://arxiv.org/abs/2509.18207",
-    "venue": "arXiv",
-    "year": 2025
-   }
-  ],
-  "primary_paper_id": "arxiv:2509.18207",
-  "primary_paper_title": "Securing the Language of Life: Inheritable Watermarks from DNA Language Models to Proteins",
-  "type": "model",
-  "year": 2025
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "entity_id": "model:sei",
   "fate_axis": [
    "where"
@@ -15589,38 +13924,6 @@
   "primary_paper_title": "SemanticCAP: Chromatin Accessibility Prediction Enhanced by Features Learning from a Language Model",
   "type": "model",
   "year": 2022
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "description": "Here, we present momics, a unified framework to consolidate multi-omics data in a single repository and interrogate it with a high-performance query engine.",
-  "entity_id": "model:serizay-2025-multi-modal-data-integration",
-  "fate_axis": [
-   "where"
-  ],
-  "links": [],
-  "name": "Serizay 2025 Multi-modal data integration",
-  "papers": [
-   {
-    "authors": [
-     "Serizay J",
-     "Koszul R"
-    ],
-    "doi": "10.1101/2025.10.10.681692",
-    "note": null,
-    "paper_id": "10.1101/2025.10.10.681692",
-    "role": "primary",
-    "title": "Multi-modal data integration for machine learning applications",
-    "url": "https://doi.org/10.1101/2025.10.10.681692",
-    "venue": null,
-    "year": 2025
-   }
-  ],
-  "primary_paper_id": "10.1101/2025.10.10.681692",
-  "primary_paper_title": "Multi-modal data integration for machine learning applications",
-  "type": "model",
-  "year": 2025
  },
  {
   "curator": "JimYuhaoWu",
@@ -15761,37 +14064,6 @@
   ],
   "primary_paper_id": "10.3390/cells15181711",
   "primary_paper_title": "Explicit Mechanistic Operators in Predictive Virtual Cells: Evidence, Failure Modes, and a Minimum Falsification Framework for Single-Cell Perturbation Prediction",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:su-2026-fine-tuned-genomic-language",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Su 2026 fine-tuned genomic language",
-  "papers": [
-   {
-    "authors": [
-     "Yaqi Su",
-     "Yu-Jen Lin"
-    ],
-    "doi": "10.64898/2026.05.06.723362",
-    "note": null,
-    "paper_id": "10.64898/2026.05.06.723362",
-    "role": "primary",
-    "title": "A fine-tuned genomic language model captures nucleotide-level information overlooked by missense variant impact predictors",
-    "url": "https://doi.org/10.64898/2026.05.06.723362",
-    "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.64898/2026.05.06.723362",
-  "primary_paper_title": "A fine-tuned genomic language model captures nucleotide-level information overlooked by missense variant impact predictors",
   "type": "model",
   "year": 2026
  },
@@ -16339,38 +14611,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:vegn",
-  "fate_axis": [
-   "where"
-  ],
-  "links": [],
-  "name": "VEGN",
-  "papers": [
-   {
-    "authors": [
-     "Jun Cheng",
-     "Carolin Lawrence",
-     "Mathias Niepert"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2106.13642",
-    "role": "primary",
-    "title": "VEGN: Variant Effect Prediction with Graph Neural Networks",
-    "url": "https://arxiv.org/abs/2106.13642",
-    "venue": "arXiv",
-    "year": 2021
-   }
-  ],
-  "primary_paper_id": "arxiv:2106.13642",
-  "primary_paper_title": "VEGN: Variant Effect Prediction with Graph Neural Networks",
-  "type": "model",
-  "year": 2021
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "entity_id": "model:vqdna",
   "fate_axis": [
    "how"
@@ -16401,48 +14641,6 @@
   ],
   "primary_paper_id": "arxiv:2405.10812",
   "primary_paper_title": "VQDNA: Unleashing the Power of Vector Quantization for Multi-Species Genomic Sequence Modeling",
-  "type": "model",
-  "year": 2024
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:wang-2024-predictive-prioritization-enhancers",
-  "fate_axis": [
-   "what"
-  ],
-  "links": [],
-  "name": "Wang 2024 Predictive Prioritization Enhancers",
-  "papers": [
-   {
-    "authors": [
-     "Wang L",
-     "Baek S",
-     "Prasad G",
-     "Wildenthal J",
-     "Guo K",
-     "Sturgill D",
-     "Truongvo T",
-     "Char E",
-     "Pegoraro G",
-     "McKinnon K",
-     "Hoskins JW",
-     "Amundadottir LT",
-     "Arda HE"
-    ],
-    "doi": "10.1101/2024.09.07.611794",
-    "note": null,
-    "paper_id": "10.1101/2024.09.07.611794",
-    "role": "primary",
-    "title": "Predictive Prioritization of Enhancers Associated with Pancreas Disease Risk",
-    "url": "https://doi.org/10.1101/2024.09.07.611794",
-    "venue": null,
-    "year": 2024
-   }
-  ],
-  "primary_paper_id": "10.1101/2024.09.07.611794",
-  "primary_paper_title": "Predictive Prioritization of Enhancers Associated with Pancreas Disease Risk",
   "type": "model",
   "year": 2024
  },
@@ -16575,45 +14773,6 @@
   "primary_paper_title": "CAPRA predicts single-cell transcriptional responses to genetic perturbations with response anchoring and residual correction",
   "type": "model",
   "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:when-repeats-drive-the-vocabulary",
-  "fate_axis": [
-   "how"
-  ],
-  "license": "MIT",
-  "links": [
-   {
-    "kind": "code",
-    "label": null,
-    "url": "https://github.com/aglabx/dnaBPE"
-   }
-  ],
-  "name": "When repeats drive the vocabulary",
-  "papers": [
-   {
-    "authors": [
-     "Marina Popova",
-     "Iaroslav Chelombitko",
-     "Aleksey Komissarov"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2505.08918",
-    "role": "primary",
-    "title": "When repeats drive the vocabulary: a Byte-Pair Encoding analysis of T2T primate genomes",
-    "url": "https://arxiv.org/abs/2505.08918",
-    "venue": "arXiv",
-    "year": 2025
-   }
-  ],
-  "primary_paper_id": "arxiv:2505.08918",
-  "primary_paper_title": "When repeats drive the vocabulary: a Byte-Pair Encoding analysis of T2T primate genomes",
-  "type": "model",
-  "year": 2025
  },
  {
   "curator": "JimYuhaoWu",
@@ -16844,39 +15003,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:yoo-2024-exploring-adversarial-robustness",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Yoo 2024 Exploring Adversarial Robustness",
-  "papers": [
-   {
-    "authors": [
-     "Hyunwoo Yoo",
-     "Haebin Shin",
-     "Kaidi Xu",
-     "Gail Rosen"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2409.19788",
-    "role": "primary",
-    "title": "Exploring Adversarial Robustness in Classification tasks using DNA Language Models",
-    "url": "https://arxiv.org/abs/2409.19788",
-    "venue": "arXiv",
-    "year": 2024
-   }
-  ],
-  "primary_paper_id": "arxiv:2409.19788",
-  "primary_paper_title": "Exploring Adversarial Robustness in Classification tasks using DNA Language Models",
-  "type": "model",
-  "year": 2024
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "entity_id": "model:yoo-2026-dna-augmentations-semi-supervised",
   "fate_axis": [
    "how"
@@ -16907,113 +15033,6 @@
   ],
   "primary_paper_id": "10.1093/nargab/lqag123",
   "primary_paper_title": "DNA augmentations for semi-supervised learning in genomic sequence classification",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "description": "We present an empirical case study of FP8 post-training quantization applied to GenomeOcean, a computationally efficient genomic foundation model with strong reported performance across diverse genomics tasks [Zhou et al., 2025].",
-  "entity_id": "model:yu-2026-fp8-inference-genomic",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Yu 2026 FP8 Inference Genomic",
-  "papers": [
-   {
-    "authors": [
-     "Yu M",
-     "Egan R",
-     "Liu F",
-     "Wang Z",
-     "Shi L"
-    ],
-    "doi": "10.64898/2026.08.09.743676",
-    "note": null,
-    "paper_id": "10.64898/2026.08.09.743676",
-    "role": "primary",
-    "title": "FP8 Inference in Genomic Foundation Models: Theoretical vs. Realized Speedups on GenomeOcean",
-    "url": "https://doi.org/10.64898/2026.08.09.743676",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.64898/2026.08.09.743676",
-  "primary_paper_title": "FP8 Inference in Genomic Foundation Models: Theoretical vs. Realized Speedups on GenomeOcean",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:zhang-2026-charting-computational-landscape",
-  "fate_axis": [
-   "what"
-  ],
-  "links": [],
-  "name": "Zhang 2026 Charting computational landscape",
-  "papers": [
-   {
-    "authors": [
-     "Yaozhi Zhang",
-     "Junyang Huang",
-     "Yang Li",
-     "Tianyuan Liu",
-     "Liping Ren",
-     "Jian Hua Huang",
-     "Hao Lin",
-     "Juan Feng",
-     "Yang Zhang"
-    ],
-    "doi": "10.1016/j.jare.2026.06.012",
-    "note": null,
-    "paper_id": "10.1016/j.jare.2026.06.012",
-    "role": "primary",
-    "title": "Charting the computational landscape of single-cell genetic perturbation",
-    "url": "https://doi.org/10.1016/j.jare.2026.06.012",
-    "venue": "Journal of Advanced Research",
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.1016/j.jare.2026.06.012",
-  "primary_paper_title": "Charting the computational landscape of single-cell genetic perturbation",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "model:zhang-2026-disease-relevance-replicability",
-  "fate_axis": [
-   "where"
-  ],
-  "links": [],
-  "name": "Zhang 2026 Disease relevance replicability",
-  "papers": [
-   {
-    "authors": [
-     "Zhang A",
-     "Tasaki S",
-     "Connell D",
-     "Ng B",
-     "Gaiteri C"
-    ],
-    "doi": "10.64898/2026.09.24.753534",
-    "note": null,
-    "paper_id": "10.64898/2026.09.24.753534",
-    "role": "primary",
-    "title": "Disease relevance and replicability of deep learning gene expression prediction",
-    "url": "https://doi.org/10.64898/2026.09.24.753534",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.64898/2026.09.24.753534",
-  "primary_paper_title": "Disease relevance and replicability of deep learning gene expression prediction",
   "type": "model",
   "year": 2026
  },
@@ -17068,38 +15087,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "description": "We propose generation-powered inference (GPI), a general framework for improving inference on distribution-valued parameters using auxiliary generative models.",
-  "entity_id": "model:zhang-2026-generation-powered-inference-distribution-valued",
-  "fate_axis": [
-   "what"
-  ],
-  "links": [],
-  "name": "Zhang 2026 Generation-Powered Inference Distribution-Valued",
-  "papers": [
-   {
-    "authors": [
-     "Yijiao Zhang",
-     "Hongzhe Li"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2608.14542",
-    "role": "primary",
-    "title": "Generation-Powered Inference for Distribution-Valued Outcomes",
-    "url": "https://arxiv.org/abs/2608.14542",
-    "venue": "arXiv",
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "arxiv:2608.14542",
-  "primary_paper_title": "Generation-Powered Inference for Distribution-Valued Outcomes",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "description": "Here we introduce a two-stage selective framework (TSSF) that performs hierarchical refinements: nucleotide-level masking within each cCRE, followed by cCRE-level selection around each gene, implemented with information-bottleneck priors and a fully Transformer-based architecture.",
   "entity_id": "model:zhang-2026-hierarchical-refinements-cis-regulatory",
   "fate_axis": [
@@ -17128,49 +15115,6 @@
   ],
   "primary_paper_id": "10.64898/2026.05.31.729151",
   "primary_paper_title": "Hierarchical refinements of cis-regulatory inputs improve scalable gene expression prediction",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "description": "Here we introduce ANNEVO, a mixture of experts-based genomic language model that directly models distal sequence dependencies and joint evolutionary relationships from diverse genomes, enabling precise ab initio gene annotation.",
-  "entity_id": "model:zhang-2026-highly-accurate-ab",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Zhang 2026 Highly accurate ab",
-  "papers": [
-   {
-    "authors": [
-     "Zhang P",
-     "Xu T",
-     "Wang S",
-     "Yang X",
-     "Sun P",
-     "Jia P",
-     "Lin J",
-     "Wang B",
-     "Zhang Y",
-     "Meng D",
-     "Bush SJ",
-     "Ning Z",
-     "Ye K"
-    ],
-    "doi": "10.1038/s41592-026-03036-7",
-    "note": null,
-    "paper_id": "10.1038/s41592-026-03036-7",
-    "role": "primary",
-    "title": "Highly accurate ab initio gene annotation with ANNEVO",
-    "url": "https://doi.org/10.1038/s41592-026-03036-7",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.1038/s41592-026-03036-7",
-  "primary_paper_title": "Highly accurate ab initio gene annotation with ANNEVO",
   "type": "model",
   "year": 2026
  },
@@ -17381,40 +15325,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "model:zulaybar-2026-discovery-microbial-intergenic",
-  "fate_axis": [
-   "how"
-  ],
-  "links": [],
-  "name": "Zulaybar 2026 Discovery microbial intergenic",
-  "papers": [
-   {
-    "authors": [
-     "Zulaybar N",
-     "Tranzillo M",
-     "Silverstein R",
-     "Hwang Y",
-     "Cornman A"
-    ],
-    "doi": "10.64898/2026.09.15.751765",
-    "note": null,
-    "paper_id": "10.64898/2026.09.15.751765",
-    "role": "primary",
-    "title": "Discovery of microbial intergenic features with genomic language modeling and multimodal search",
-    "url": "https://doi.org/10.64898/2026.09.15.751765",
-    "venue": null,
-    "year": 2026
-   }
-  ],
-  "primary_paper_id": "10.64898/2026.09.15.751765",
-  "primary_paper_title": "Discovery of microbial intergenic features with genomic language modeling and multimodal search",
-  "type": "model",
-  "year": 2026
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "entity_id": "module:boyne-2022-multitool-multiplex-gene",
   "fate_axis": [
    "with-what"
@@ -17448,76 +15358,6 @@
   "primary_paper_title": "Efficient multitool/multiplex gene engineering with TALE-BE",
   "type": "module",
   "year": 2022
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "module:braun-2016-versatile-vivo-regulation",
-  "fate_axis": [
-   "with-what"
-  ],
-  "links": [],
-  "name": "Braun 2016 Versatile vivo regulation",
-  "papers": [
-   {
-    "authors": [
-     "Braun CJ",
-     "Bruno PM",
-     "Horlbeck MA",
-     "Gilbert LA",
-     "Weissman JS",
-     "Hemann MT"
-    ],
-    "doi": "10.1073/pnas.1600582113",
-    "note": null,
-    "paper_id": "10.1073/pnas.1600582113",
-    "role": "primary",
-    "title": "Versatile in vivo regulation of tumor phenotypes by dCas9-mediated transcriptional perturbation",
-    "url": "https://doi.org/10.1073/pnas.1600582113",
-    "venue": null,
-    "year": 2016
-   }
-  ],
-  "primary_paper_id": "10.1073/pnas.1600582113",
-  "primary_paper_title": "Versatile in vivo regulation of tumor phenotypes by dCas9-mediated transcriptional perturbation",
-  "type": "module",
-  "year": 2016
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "module:chen-2024-inhibiting-transcriptional-autoactivation",
-  "fate_axis": [
-   "with-what"
-  ],
-  "links": [],
-  "name": "Chen 2024 inhibiting transcriptional autoactivation",
-  "papers": [
-   {
-    "authors": [
-     "Chen Z",
-     "Ren J",
-     "Wei G",
-     "Jia X",
-     "Shah FA",
-     "Lu X"
-    ],
-    "doi": "10.21203/rs.3.rs-4387794/v1",
-    "note": null,
-    "paper_id": "10.21203/rs.3.rs-4387794/v1",
-    "role": "primary",
-    "title": "A novel method for inhibiting transcriptional autoactivation by fusion of SRDX repression domain",
-    "url": "https://doi.org/10.21203/rs.3.rs-4387794/v1",
-    "venue": null,
-    "year": 2024
-   }
-  ],
-  "primary_paper_id": "10.21203/rs.3.rs-4387794/v1",
-  "primary_paper_title": "A novel method for inhibiting transcriptional autoactivation by fusion of SRDX repression domain",
-  "type": "module",
-  "year": 2024
  },
  {
   "aliases": [
@@ -17701,46 +15541,6 @@
   "year": 2024
  },
  {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "module:due-2025-hierarchy-regulator-interactions",
-  "fate_axis": [
-   "with-what"
-  ],
-  "links": [],
-  "name": "Due 2025 Hierarchy regulator interactions",
-  "papers": [
-   {
-    "authors": [
-     "Due AD",
-     "Davey NE",
-     "Thomasen FE",
-     "Morffy N",
-     "Prestel A",
-     "Brakti I",
-     "O'Shea C",
-     "Strader LC",
-     "Lindorff-Larsen K",
-     "Skriver K",
-     "Kragelund BB"
-    ],
-    "doi": "10.1002/pro.70142",
-    "note": null,
-    "paper_id": "10.1002/pro.70142",
-    "role": "primary",
-    "title": "Hierarchy in regulator interactions with distant transcriptional activation domains empowers rheostatic regulation",
-    "url": "https://doi.org/10.1002/pro.70142",
-    "venue": null,
-    "year": 2025
-   }
-  ],
-  "primary_paper_id": "10.1002/pro.70142",
-  "primary_paper_title": "Hierarchy in regulator interactions with distant transcriptional activation domains empowers rheostatic regulation",
-  "type": "module",
-  "year": 2025
- },
- {
   "aliases": [
    "EpiFactors",
    "EpiFactors 2.0"
@@ -17830,71 +15630,6 @@
   ],
   "type": "module",
   "year": 2022
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "module:erkine-2024-enigma-transcriptional-activation",
-  "fate_axis": [
-   "with-what"
-  ],
-  "links": [],
-  "name": "Erkine 2024 Enigma Transcriptional Activation",
-  "papers": [
-   {
-    "authors": [
-     "Erkine AM",
-     "Oliveira MA",
-     "Class CA"
-    ],
-    "doi": "10.1016/j.jmb.2024.168766",
-    "note": null,
-    "paper_id": "10.1016/j.jmb.2024.168766",
-    "role": "primary",
-    "title": "The Enigma of Transcriptional Activation Domains",
-    "url": "https://doi.org/10.1016/j.jmb.2024.168766",
-    "venue": null,
-    "year": 2024
-   }
-  ],
-  "primary_paper_id": "10.1016/j.jmb.2024.168766",
-  "primary_paper_title": "The Enigma of Transcriptional Activation Domains",
-  "type": "module",
-  "year": 2024
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "module:levati-2016-dry-wet-approaches",
-  "fate_axis": [
-   "with-what"
-  ],
-  "links": [],
-  "name": "Levati 2016 Dry wet approaches",
-  "papers": [
-   {
-    "authors": [
-     "Levati E",
-     "Sartini S",
-     "Ottonello S",
-     "Montanini B"
-    ],
-    "doi": "10.1016/j.csbj.2016.06.004",
-    "note": null,
-    "paper_id": "10.1016/j.csbj.2016.06.004",
-    "role": "primary",
-    "title": "Dry and wet approaches for genome-wide functional annotation of conventional and unconventional transcriptional activators",
-    "url": "https://doi.org/10.1016/j.csbj.2016.06.004",
-    "venue": null,
-    "year": 2016
-   }
-  ],
-  "primary_paper_id": "10.1016/j.csbj.2016.06.004",
-  "primary_paper_title": "Dry and wet approaches for genome-wide functional annotation of conventional and unconventional transcriptional activators",
-  "type": "module",
-  "year": 2016
  },
  {
   "curator": "JimYuhaoWu",
@@ -18094,43 +15829,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "description": "Here, we report the design and versatile applications of orthogonal CC dimer-forming peptides with a dissociation constant in the low nanomolar range.",
-  "entity_id": "module:plaper-2020-coiled-coil-heterodimers-increased",
-  "fate_axis": [
-   "with-what"
-  ],
-  "links": [],
-  "name": "Plaper 2020 Coiled-coil heterodimers increased",
-  "papers": [
-   {
-    "authors": [
-     "Plaper T",
-     "Aupič J",
-     "Dekleva P",
-     "Lapenta F",
-     "Manček Keber M",
-     "Jerala R",
-     "Benčina M"
-    ],
-    "doi": "10.1101/2020.12.10.419440",
-    "note": null,
-    "paper_id": "10.1101/2020.12.10.419440",
-    "role": "primary",
-    "title": "Coiled-coil heterodimers with increased stability for cellular regulation and sensing SARS-CoV-2 spike protein-mediated cell fusion",
-    "url": "https://doi.org/10.1101/2020.12.10.419440",
-    "venue": null,
-    "year": 2020
-   }
-  ],
-  "primary_paper_id": "10.1101/2020.12.10.419440",
-  "primary_paper_title": "Coiled-coil heterodimers with increased stability for cellular regulation and sensing SARS-CoV-2 spike protein-mediated cell fusion",
-  "type": "module",
-  "year": 2020
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "entity_id": "module:sanborn-2021-simple-biochemical-features",
   "fate_axis": [
    "with-what"
@@ -18307,118 +16005,6 @@
   "year": 2022
  },
  {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "description": "Here we describe a fast and broadly applicable method to functionally screen complex riboswitch libraries (~1.8 × 10 4 constructs) by cDNA-amplicon-sequencing in transiently transfected and stimulated human cells.",
-  "entity_id": "module:strobel-2020-high-throughput-identification-synthetic",
-  "fate_axis": [
-   "with-what"
-  ],
-  "links": [],
-  "name": "Strobel 2020 High-throughput identification synthetic",
-  "papers": [
-   {
-    "authors": [
-     "Strobel B",
-     "Spöring M",
-     "Klein H",
-     "Blazevic D",
-     "Rust W",
-     "Sayols S",
-     "Hartig JS",
-     "Kreuz S"
-    ],
-    "doi": "10.1038/s41467-020-14491-x",
-    "note": null,
-    "paper_id": "10.1038/s41467-020-14491-x",
-    "role": "primary",
-    "title": "High-throughput identification of synthetic riboswitches by barcode-free amplicon-sequencing in human cells",
-    "url": "https://doi.org/10.1038/s41467-020-14491-x",
-    "venue": null,
-    "year": 2020
-   }
-  ],
-  "primary_paper_id": "10.1038/s41467-020-14491-x",
-  "primary_paper_title": "High-throughput identification of synthetic riboswitches by barcode-free amplicon-sequencing in human cells",
-  "type": "module",
-  "year": 2020
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "module:takahashi-2018-identification-functional-features",
-  "fate_axis": [
-   "with-what"
-  ],
-  "links": [],
-  "name": "Takahashi 2018 Identification functional features",
-  "papers": [
-   {
-    "authors": [
-     "Takahashi H",
-     "Kozhuharova A",
-     "Sharma H",
-     "Hirose M",
-     "Ohyama T",
-     "Fasolo F",
-     "Yamazaki T",
-     "Cotella D",
-     "Santoro C",
-     "Zucchelli S",
-     "Gustincich S",
-     "Carninci P"
-    ],
-    "doi": "10.1371/journal.pone.0183229",
-    "note": null,
-    "paper_id": "10.1371/journal.pone.0183229",
-    "role": "primary",
-    "title": "Identification of functional features of synthetic SINEUPs, antisense lncRNAs that specifically enhance protein translation",
-    "url": "https://doi.org/10.1371/journal.pone.0183229",
-    "venue": null,
-    "year": 2018
-   }
-  ],
-  "primary_paper_id": "10.1371/journal.pone.0183229",
-  "primary_paper_title": "Identification of functional features of synthetic SINEUPs, antisense lncRNAs that specifically enhance protein translation",
-  "type": "module",
-  "year": 2018
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "description": "Here, we present a method to selectively up-regulate protein expression of desired genes in cultured cells by means of synthetic antisense non-coding RNAs known as SINEUPs.",
-  "entity_id": "module:takahashi-2019-cell-assays-sineup",
-  "fate_axis": [
-   "with-what"
-  ],
-  "links": [],
-  "name": "Takahashi 2019 Cell Assays SINEUP",
-  "papers": [
-   {
-    "authors": [
-     "Takahashi H",
-     "Sharma H",
-     "Carninci P"
-    ],
-    "doi": "10.3791/58627",
-    "note": null,
-    "paper_id": "10.3791/58627",
-    "role": "primary",
-    "title": "Cell Based Assays of SINEUP Non-coding RNAs That Can Specifically Enhance mRNA Translation",
-    "url": "https://doi.org/10.3791/58627",
-    "venue": null,
-    "year": 2019
-   }
-  ],
-  "primary_paper_id": "10.3791/58627",
-  "primary_paper_title": "Cell Based Assays of SINEUP Non-coding RNAs That Can Specifically Enhance mRNA Translation",
-  "type": "module",
-  "year": 2019
- },
- {
   "aliases": [
    "Tycko compact effectors"
   ],
@@ -18518,113 +16104,6 @@
   ],
   "type": "module",
   "year": 2024
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "description": "Here, we describe PiggyBac transposon tools and mouse models for recessive screening and show their application to study clonal B-cell lymphomagenesis.",
-  "entity_id": "module:weber-2019-piggybac-transposon-tools",
-  "fate_axis": [
-   "with-what"
-  ],
-  "links": [],
-  "name": "Weber 2019 PiggyBac transposon tools",
-  "papers": [
-   {
-    "authors": [
-     "Weber J",
-     "de la Rosa J",
-     "Grove CS",
-     "Schick M",
-     "Rad L",
-     "Baranov O",
-     "Strong A",
-     "Pfaus A",
-     "Friedrich MJ",
-     "Engleitner T",
-     "Lersch R",
-     "Öllinger R",
-     "Grau M",
-     "Menendez IG",
-     "Martella M",
-     "Kohlhofer U",
-     "Banerjee R",
-     "Turchaninova MA",
-     "Scherger A",
-     "Hoffman GJ",
-     "Hess J",
-     "Kuhn LB",
-     "Ammon T",
-     "Kim J",
-     "Schneider G",
-     "Unger K",
-     "Zimber-Strobl U",
-     "Heikenwälder M",
-     "Schmidt-Supprian M",
-     "Yang F",
-     "Saur D",
-     "Liu P",
-     "Steiger K",
-     "Chudakov DM",
-     "Lenz G",
-     "Quintanilla-Martinez L",
-     "Keller U",
-     "Vassiliou GS",
-     "Cadiñanos J",
-     "Bradley A",
-     "Rad R"
-    ],
-    "doi": "10.1038/s41467-019-09180-3",
-    "note": null,
-    "paper_id": "10.1038/s41467-019-09180-3",
-    "role": "primary",
-    "title": "PiggyBac transposon tools for recessive screening identify B-cell lymphoma drivers in mice",
-    "url": "https://doi.org/10.1038/s41467-019-09180-3",
-    "venue": null,
-    "year": 2019
-   }
-  ],
-  "primary_paper_id": "10.1038/s41467-019-09180-3",
-  "primary_paper_title": "PiggyBac transposon tools for recessive screening identify B-cell lymphoma drivers in mice",
-  "type": "module",
-  "year": 2019
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
-  "entity_id": "module:zhang-2017-inducible-bcl-2-gene",
-  "fate_axis": [
-   "with-what"
-  ],
-  "links": [],
-  "name": "Zhang 2017 Inducible Bcl-2 gene",
-  "papers": [
-   {
-    "authors": [
-     "Zhang Y",
-     "Wang J",
-     "Cheng H",
-     "Sun N",
-     "Liu M",
-     "Wu Z",
-     "Pei R"
-    ],
-    "doi": "10.1039/c7ib00029d",
-    "note": null,
-    "paper_id": "10.1039/c7ib00029d",
-    "role": "primary",
-    "title": "Inducible Bcl-2 gene RNA interference mediated by aptamer-integrated HDV ribozyme switch",
-    "url": "https://doi.org/10.1039/c7ib00029d",
-    "venue": null,
-    "year": 2017
-   }
-  ],
-  "primary_paper_id": "10.1039/c7ib00029d",
-  "primary_paper_title": "Inducible Bcl-2 gene RNA interference mediated by aptamer-integrated HDV ribozyme switch",
-  "type": "module",
-  "year": 2017
  },
  {
   "curator": "JimYuhaoWu",

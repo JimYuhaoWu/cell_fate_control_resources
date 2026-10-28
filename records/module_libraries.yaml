@@ -176,6 +176,8 @@
 
 - entity_id: module:erkine-2024-enigma-transcriptional-activation
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a review of activation-domain biology rather than a compendium"
   name: Erkine 2024 Enigma Transcriptional Activation
   year: 2024
   fate_axis: [with-what]
@@ -236,6 +238,8 @@
 
 - entity_id: module:levati-2016-dry-wet-approaches
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a survey of approaches to annotating activators rather than a collection of them"
   name: Levati 2016 Dry wet approaches
   year: 2016
   fate_axis: [with-what]
@@ -304,6 +308,8 @@
 
 - entity_id: module:strobel-2020-high-throughput-identification-synthetic
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C2: synthetic riboswitches act on RNA, not on the genome"
   name: Strobel 2020 High-throughput identification synthetic
   year: 2020
   fate_axis: [with-what]
@@ -476,6 +482,8 @@
 
 - entity_id: module:due-2025-hierarchy-regulator-interactions
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a mechanistic finding about how regulators engage distant activation domains"
   name: Due 2025 Hierarchy regulator interactions
   year: 2025
   fate_axis: [with-what]
@@ -488,6 +496,8 @@
 
 - entity_id: module:chen-2024-inhibiting-transcriptional-autoactivation
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a technique for suppressing autoactivation in one assay context"
   name: Chen 2024 inhibiting transcriptional autoactivation
   year: 2024
   fate_axis: [with-what]
@@ -542,6 +552,8 @@
 
 - entity_id: module:weber-2019-piggybac-transposon-tools
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: transposon screening tools whose product here is a list of lymphoma drivers"
   name: Weber 2019 PiggyBac transposon tools
   year: 2019
   fate_axis: [with-what]
@@ -558,6 +570,8 @@
 
 - entity_id: module:takahashi-2018-identification-functional-features
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C2: SINEUP antisense lncRNAs act post-transcriptionally on mRNA, not on the genome"
   name: Takahashi 2018 Identification functional features
   year: 2018
   fate_axis: [with-what]
@@ -638,6 +652,8 @@
 
 - entity_id: module:takahashi-2019-cell-assays-sineup
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C2: SINEUP assays; the same substrate question as the 2018 record"
   name: Takahashi 2019 Cell Assays SINEUP
   year: 2019
   fate_axis: [with-what]
@@ -739,6 +755,8 @@
 
 - entity_id: module:plaper-2020-coiled-coil-heterodimers-increased
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C2: designed coiled-coil modules mediate protein association rather than genome action"
   name: Plaper 2020 Coiled-coil heterodimers increased
   year: 2020
   fate_axis: [with-what]
@@ -815,6 +833,8 @@
 
 - entity_id: module:zhang-2017-inducible-bcl-2-gene
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C2: an aptamer-ribozyme switch acting on RNA interference"
   name: Zhang 2017 Inducible Bcl-2 gene
   year: 2017
   fate_axis: [with-what]
@@ -859,6 +879,8 @@
 
 - entity_id: module:braun-2016-versatile-vivo-regulation
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: demonstrates dCas9 transcriptional perturbation in vivo; an in-scope actuator used to produce a finding"
   name: Braun 2016 Versatile vivo regulation
   year: 2016
   fate_axis: [with-what]
