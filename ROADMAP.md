@@ -249,29 +249,78 @@ the same fact:
 
 - A score cannot decide admission at any threshold — at ≥3.0 the discovery
   score retains 17 of 29 curated resources, at ≥8.0 nine of them.
-- Nobody can say how far the backfill drifted. The 9 published records that are
-  out of scope — video question answering, MRI, wastewater, protein contact
-  maps — were found by eye, not by a check.
+- Nobody could say how far the backfill drifted. The 9 published records that
+  were known to be out of scope — video question answering, MRI, wastewater,
+  protein contact maps — were found by eye, not by a check.
 
 CFCR has an *intensional* boundary (the prose rule in `README.md`, plus the
 per-axis table below) and no *extensional* one: no labelled set of in/out
 decisions that any rule, human or scored, could be measured against. That
 absence is why scope cannot be automated **and** why drift cannot be detected.
-At 489 entities a ~2% admission error is 9 records; at several thousand it is
-invisible and uncorrectable.
 
-- [ ] Inclusion and exclusion criteria, written as criteria — needed for
+**Measured 2026-10-28, and it is not 9 records.** `docs/scope_criteria.md` now
+states the boundary as five criteria decidable from a title and an abstract, and
+`literature/scope_labels.yaml` labels a seeded stratified random sample of 102
+of the 490 records against them. **38 are clearly out of scope and 10 more are
+arguable: 37% clear, 47% including the arguable ones.** Scaled to the catalogue
+with a 95% Wilson interval that is **140–230 records clearly out**, and 185–278
+on the wider reading — against the 9 that had been found by eye, which is one
+record in twenty of the real number.
+
+So the estimate the hold was placed on was wrong in the reassuring direction. A
+~2% admission error was the assumption; the measurement is closer to 37%, and
+the differentiator CFCR argues for publication is precisely that its boundary
+is tighter than a count-driven list's.
+
+Three things the labelled set says that the prose rule could not:
+
+- **The drift is concentrated in `benchmark` and `module`, and they drifted for
+  different reasons.** Out of scope: 14 of the 19 benchmarks sampled, 9 of the
+  12 modules, 25 of the 65 models, and none of the 6 datasets, databases and
+  protocols. Benchmarks came in on keywords — the discovery queries match
+  *benchmark*, *foundation model*, *sequence* and *expression*, and a
+  scene-graph benchmark matches all four. Modules came in on subject matter:
+  the `with-what` backfill admitted chromatin- and cancer-biology **findings**
+  about regulators instead of **collections** of them, which is a C1 failure,
+  not a C2 one, and no keyword list would have caught it.
+- **85 of the 91 `benchmark` records carry an empty `fate_axis`** — while all
+  405 records of every other type carry one. `README.md` already says a
+  benchmark is in scope only when it serves an axis that is in scope and
+  inherits that axis, so the field that records admissibility was never filled
+  for the one type where admission went wrong. The rule was in force on paper
+  and unapplied in fact.
+- **A second kind of error the criteria deliberately do not catch:** records in
+  scope but entered under the wrong type — a benchmark as a `model`, a critique
+  as an entity instead of an `entity_paper` row. 9 of the 102 are flagged.
+  `model:dart-eval` and `benchmark:dart-eval` are one resource entered twice.
+
+At 490 entities a 37% admission error is ~180 records. At several thousand it
+is invisible and uncorrectable.
+
+- [x] Inclusion and exclusion criteria, written as criteria — needed for
       publication regardless, since a database on a narrow topic has to argue
-      its boundary to the wider readership
-- [ ] A labelled in/out set to measure them against. The 9 known out-of-scope
-      records are free hard negatives, which are the expensive half
-- [ ] Measure the current 489 against the criteria, and record the drift rate
+      its boundary to the wider readership. `docs/scope_criteria.md`: C1 a
+      resource not a result, C2 a genomic substrate, C3 acting not observing,
+      C4 a nameable in-scope axis, C5 `what` stays shallow
+- [x] A labelled in/out set to measure them against —
+      `literature/scope_labels.yaml`, 102 records, seeded and reproducible.
+      Drawn at random rather than from the known negatives: a set assembled by
+      looking for mistakes measures how good the looking was. The labels are
+      unratified, since a scope decision is the curator's to make
+- [ ] Measure the current 489 against the criteria, and record the drift rate.
+      The rate is now estimated — 37% clear, 95% CI 28–47% — but which ~180
+      records are out is still unknown, and that needs the criteria applied one
+      record at a time rather than to a sample. The `arguable` labels are where
+      to start: they are the boundary cases, and each one settled sharpens C1
+      through C5 for every record after it
 - [ ] A demote path. `literature/06_promote.py` has none by design, so
       withdrawing a record today means editing `review_state: unreviewed` back
       into it by hand
 
 **Exit:** the criteria exist, and the admission error rate of the current
-catalogue is a number rather than an impression.
+catalogue is a number rather than an impression. The criteria exist and the
+number is 37%; what is left is the identification, and a demote path to act on
+it with.
 
 **Tradeoff, decided.** A tighter boundary sharpens the novelty argument; a wider
 one narrows the gap with Kipoi's count. Tight was chosen, because the
