@@ -71,10 +71,24 @@ SELECT = ("id,doi,title,publication_year,type,primary_location,referenced_works,
 MIN_A = 5.0
 MIN_B = 3.0
 
+# Tracks 01_search.MAX_RETRY_AFTER, and for the reason given there: a
+# per-second 429 asks for a few seconds, while the daily-budget 429 sends the
+# seconds until midnight UTC and sleeping on that parks the process for hours.
+MAX_RETRY_AFTER = 60
+
 
 # ── OpenAlex ─────────────────────────────────────────────────────────────────
 
 def _get(url: str, params: dict) -> dict:
+    """
+    Four attempts, then exit. A 429 is read rather than retried: OpenAlex says
+    in the response how long the budget needs, and four more requests cannot
+    shorten it. Only a wait inside MAX_RETRY_AFTER is worth sitting through.
+
+    The budget SystemExit needs no guard against the retry clause below, unlike
+    01_search's FetchError: SystemExit derives from BaseException, not from
+    Exception, so it leaves the loop on its own.
+    """
     params = dict(params, mailto=MAILTO)
     for attempt in range(4):
         try:
@@ -82,6 +96,23 @@ def _get(url: str, params: dict) -> dict:
             if OPENALEX_KEY:
                 headers["Authorization"] = f"Bearer {OPENALEX_KEY}"
             r = requests.get(url, params=params, headers=headers, timeout=60)
+            if r.status_code == 429:
+                wait = int(r.headers.get("Retry-After", 10))
+                if wait > MAX_RETRY_AFTER:
+                    raise SystemExit(
+                        f"OpenAlex budget exhausted: it asks for {wait}s, which"
+                        f" is a daily quota rather than a burst. Citing sets "
+                        f"already written under literature/candidates/ are "
+                        f"kept; ids resolved during this run are not, because "
+                        f"report() writes that cache only once the whole "
+                        f"resolve pass is through. Set OPENALEX_API_KEY to "
+                        f"raise the ceiling -- see config/sources.yaml."
+                        + ("" if OPENALEX_KEY else
+                           " No key is set, so this is the keyless budget,"
+                           " shared by every user of this network's IP."))
+                print(f"    rate limited, waiting {wait}s", file=sys.stderr)
+                time.sleep(wait)
+                continue
             r.raise_for_status()
             return r.json()
         except Exception as exc:  # noqa: BLE001 -- retry anything the API throws
