@@ -185,12 +185,27 @@ back next cycle — the reason `.gitignore` commits `literature/reviews/` in ful
    the 3.0 line at 3.75. Uncapped it scored −0.25. The cap is the safer error for
    a catalogue whose recall matters more than a curator's reading time, but it is
    a choice, not a fact.
-2. **The `benchmarks` query should still be narrowed.** `search_queries.yaml`
-   already flags it as too broad and defers the fix to this scoring work. The
-   measurement supports narrowing: the first 50 hits have a median of 2.50 and
-   include toxicology, breast-cancer imaging, bibliometrics and crop breeding.
-   Narrowing the query is cheaper than scoring the noise, but that edit belongs
-   with `01_search.py`.
+2. **The `benchmarks` query was narrowed on 2026-10-28, and this note was
+   wrong about which half.** It said the query was too broad on the evidence
+   that its first 50 hits had a median score of 2.50. Measured against
+   `literature/scope_labels.yaml`, `benchmarks` is middling overall — 54% of
+   its hits survive scoring, better than `dna_language_models` at 36% and far
+   better than `genome_3d` at 8%. The query has two sides and only one was the
+   problem: the Europe PMC half is already a conjunction of "benchmark" with
+   one of seven genomics phrases, while the arXiv half was
+   `ti:"benchmark" AND abs:"genomic"` — two words, which produced 43 of the 170
+   records the scope audit withdrew, 90% of everything it contributed. It now
+   requires a genomics word in the title as well: 56 hits to 23, keeping 5 of 5
+   in-scope records and dropping 32 of 43 out-of-scope ones. §1.7 and
+   `search_queries.yaml` carry the measurement, including the variant that was
+   measured and rejected.
+
+   Two queries this does **not** argue for narrowing. `genome_3d` has the
+   worst veto rate at 75%, but it produced only 24 records and the substrate
+   veto already catches its noise at scoring time. `module_collections` is the
+   second-largest source of out-of-scope records, 42 against 13 in scope, and
+   no query edit reaches it: the query correctly finds effector-domain papers,
+   and what came in were findings *about* regulators, which is C1.
 3. **Title doubling is uncalibrated.** Counting a title match twice is
    defensible and was not tuned; nothing here measures what a different factor
    would do.

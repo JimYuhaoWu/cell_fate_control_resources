@@ -162,15 +162,44 @@ queries:
            OR TITLE_ABS:"chromatin accessibility"
            OR TITLE_ABS:"gene expression prediction"
            OR TITLE_ABS:"variant effect prediction")
-    # Not narrowed, and this is the load-bearing half. docs/triage_design.md
+    # The load-bearing half, and narrowed on 2026-10-28. docs/triage_design.md
     # §2.6.1 names this query as the mitigation for DART-Eval, whose OpenAlex
     # record has one reference deposited so no citation sweep can ever reach
-    # it. Checked: DART-Eval is absent from Europe PMC entirely (0 hits for its
-    # own title), so arXiv is the only route to it -- and this query finds it at
-    # rank 11 of 50 out of 60 total. Tightening it to the DNA-language-model
-    # phrasings puts DART-Eval at rank 1 but drops the query to 3 hits, which
-    # trades the mitigation for precision the scoring already provides.
-    arxiv: 'ti:"benchmark" AND abs:"genomic"'
+    # it, and which is absent from Europe PMC entirely -- arXiv is the only
+    # route to it. That mitigation is why this was left as
+    # `ti:"benchmark" AND abs:"genomic"`, and why tightening it to the
+    # DNA-language-model phrasings was rejected: DART-Eval went to rank 1 and
+    # the query collapsed to 3 hits.
+    #
+    # Measured against literature/scope_labels.yaml, those two words were the
+    # worst source in the pipeline: 48 of them became records, 43 of which are
+    # out of scope -- 90%, and a quarter of every record the scope audit
+    # withdrew. `abs:"genomic"` matches a passing mention, and RainNet's
+    # abstract says "nuclear fusion, ecology, genomics, meteorology". AGQA,
+    # MatTools, LassoBench, FACTUAL, Reefknot, Table2Vec, a phase-field
+    # benchmark and an MRI benchmark all arrived this way.
+    #
+    # So the subject has to be named in the TITLE as well. Measured live
+    # against the 56 cached hits: 56 -> 23, keeping 5 of 5 in-scope records and
+    # dropping 32 of the 43 out-of-scope ones, with DART-Eval kept and now top
+    # of the list, plus BEND newly reachable. Unlike the phrase-level attempt
+    # this does not collapse the query, because it asks for any genomics word
+    # rather than one of seven phrasings.
+    #
+    # `abs:"genomic"` STAYS, and dropping it was measured and rejected. Without
+    # it the title terms are catastrophically ambiguous on an arXiv corpus that
+    # is mostly computer science: `variant` matched "software variants" and
+    # multi-agent pathfinding, `regulatory` matched FDA and PFAS law,
+    # `perturbation` matched SLAM robotics and Atari saliency maps, `promoter`
+    # matched entertainment content promotion. That version dropped the same 33
+    # and added 40 hits, 32 of them scoring over the boundary with no substrate
+    # term to veto them -- a worse trade than the query it replaced.
+    #
+    # One line, like every other `arxiv` query here. A folded block keeps the
+    # newlines of its more-indented lines, so the wrapped version of this was
+    # reaching search_arxiv with four of them embedded -- harmless for the
+    # europepmc queries, which all carry some, and untested for arXiv.
+    arxiv: 'ti:"benchmark" AND abs:"genomic" AND (ti:"genomic" OR ti:"genome" OR ti:"DNA" OR ti:"chromatin" OR ti:"regulatory" OR ti:"enhancer" OR ti:"promoter" OR ti:"variant" OR ti:"nucleotide" OR ti:"gene expression" OR ti:"perturbation" OR ti:"epigenomic" OR ti:"transcriptomic" OR ti:"sequence-to-function")'
 
   - id: module_collections
     fate_axis: with-what
