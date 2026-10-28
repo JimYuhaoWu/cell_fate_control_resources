@@ -1001,38 +1001,6 @@
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
   "date_updated": "2026-10-23",
-  "entity_id": "benchmark:dnabert-2",
-  "links": [],
-  "name": "DNABERT-2",
-  "papers": [
-   {
-    "authors": [
-     "Zhihan Zhou",
-     "Yanrong Ji",
-     "Weijian Li",
-     "Pratik Dutta",
-     "Ramana Davuluri",
-     "Han Liu"
-    ],
-    "doi": null,
-    "note": null,
-    "paper_id": "arxiv:2306.15006",
-    "role": "primary",
-    "title": "DNABERT-2: Efficient Foundation Model and Benchmark For Multi-Species Genome",
-    "url": "https://arxiv.org/abs/2306.15006",
-    "venue": "arXiv",
-    "year": 2023
-   }
-  ],
-  "primary_paper_id": "arxiv:2306.15006",
-  "primary_paper_title": "DNABERT-2: Efficient Foundation Model and Benchmark For Multi-Species Genome",
-  "type": "benchmark",
-  "year": 2023
- },
- {
-  "curator": "JimYuhaoWu",
-  "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
   "entity_id": "benchmark:dnalongbench",
   "fate_axis": [
    "where"
@@ -9930,7 +9898,7 @@
  {
   "curator": "JimYuhaoWu",
   "date_added": "2026-10-23",
-  "date_updated": "2026-10-23",
+  "date_updated": "2026-10-28",
   "entity_id": "model:dnabert-2",
   "fate_axis": [
    "how"
@@ -9940,6 +9908,24 @@
   "papers": [
    {
     "authors": [
+     "Zhihan Zhou",
+     "Yanrong Ji",
+     "Weijian Li",
+     "Pratik Dutta",
+     "Ramana Davuluri",
+     "Han Liu"
+    ],
+    "doi": null,
+    "note": null,
+    "paper_id": "arxiv:2306.15006",
+    "role": "primary",
+    "title": "DNABERT-2: Efficient Foundation Model and Benchmark For Multi-Species Genome",
+    "url": "https://arxiv.org/abs/2306.15006",
+    "venue": "arXiv",
+    "year": 2023
+   },
+   {
+    "authors": [
      "Darren King",
      "Yaser Atlasi",
      "Gholamreza Rafiee"
@@ -9947,17 +9933,17 @@
     "doi": null,
     "note": null,
     "paper_id": "arxiv:2509.25274",
-    "role": "primary",
+    "role": "application",
     "title": "DNABERT-2: Fine-Tuning a Genomic Language Model for Colorectal Gene Enhancer Classification",
     "url": "https://arxiv.org/abs/2509.25274",
     "venue": "arXiv",
     "year": 2025
    }
   ],
-  "primary_paper_id": "arxiv:2509.25274",
-  "primary_paper_title": "DNABERT-2: Fine-Tuning a Genomic Language Model for Colorectal Gene Enhancer Classification",
+  "primary_paper_id": "arxiv:2306.15006",
+  "primary_paper_title": "DNABERT-2: Efficient Foundation Model and Benchmark For Multi-Species Genome",
   "type": "model",
-  "year": 2025
+  "year": 2023
  },
  {
   "curator": "JimYuhaoWu",

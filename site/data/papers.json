@@ -18273,12 +18273,12 @@
   "doi": null,
   "entities": [
    {
-    "entity_id": "benchmark:dnabert-2",
+    "entity_id": "benchmark:gue",
     "note": null,
     "role": "primary"
    },
    {
-    "entity_id": "benchmark:gue",
+    "entity_id": "model:dnabert-2",
     "note": null,
     "role": "primary"
    }
@@ -19346,7 +19346,7 @@
    {
     "entity_id": "model:dnabert-2",
     "note": null,
-    "role": "primary"
+    "role": "application"
    }
   ],
   "paper_id": "arxiv:2509.25274",

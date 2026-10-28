@@ -4361,14 +4361,16 @@
 - entity_id: model:dnabert-2
   type: model
   name: DNABERT-2
-  year: 2025
+  year: 2023
   fate_axis: [how]
   curator: JimYuhaoWu
   date_added: 2026-10-23
-  date_updated: 2026-10-23
+  date_updated: 2026-10-28
   papers:
-    - paper_id: arxiv:2509.25274
+    - paper_id: arxiv:2306.15006
       role: primary
+    - paper_id: arxiv:2509.25274
+      role: application
 
 - entity_id: model:sapkota-2025-hybrid-tokenization-strategy
   type: model

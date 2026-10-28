@@ -614,17 +614,6 @@
     - paper_id: arxiv:2406.01627
       role: primary
 
-- entity_id: benchmark:dnabert-2
-  type: benchmark
-  name: DNABERT-2
-  year: 2023
-  curator: JimYuhaoWu
-  date_added: 2026-10-23
-  date_updated: 2026-10-23
-  papers:
-    - paper_id: arxiv:2306.15006
-      role: primary
-
 - entity_id: benchmark:scisafeeval
   type: benchmark
   name: SciSafeEval

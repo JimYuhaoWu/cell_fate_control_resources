@@ -29,7 +29,6 @@ benchmark:csendes-2024-benchmarking-foundational-cell	10.1101/2024.09.30.615843	
 benchmark:csendes-2025-benchmarking-foundation-cell	10.1186/s12864-025-11600-2	primary	
 benchmark:dart-eval	10.1016/j.celrep.2026.118025	benchmark	
 benchmark:dart-eval	10.52202/079017-1981	primary	
-benchmark:dnabert-2	arxiv:2306.15006	primary	
 benchmark:dnalongbench	10.1038/s41467-025-65077-4	primary	
 benchmark:factual	arxiv:2305.17497	primary	
 benchmark:fahsbender-2025-benchmarking-evaluation-ai	arxiv:2507.10502	primary	
@@ -327,7 +326,8 @@ model:dickm-nken-2026-evaluating-single-cell-atac-seq	10.1038/s41467-026-68742-4
 model:diversity-by-design	arxiv:2506.22641	primary	
 model:dna-language-models	arxiv:2606.30140	primary	
 model:dnabert	10.1093/bioinformatics/btab083	primary	
-model:dnabert-2	arxiv:2509.25274	primary	
+model:dnabert-2	arxiv:2306.15006	primary	
+model:dnabert-2	arxiv:2509.25274	application	
 model:dnachunker	arxiv:2601.03019	primary	
 model:dnamotiftokenizer	arxiv:2512.17126	primary	
 model:doformer	10.64898/2026.05.02.722054	primary	
