@@ -320,15 +320,31 @@ several thousand it is invisible and uncorrectable.
       resource, whether genotype-based expression imputation has a genomic
       substrate, and when a single-cell foundation model counts as predicting a
       response. Settling those four settles most of the 86
-- [ ] A demote path. `literature/06_promote.py` has none by design, so
-      withdrawing a record today means editing `review_state: unreviewed` back
-      into it by hand
+- [x] A demote path — `literature/09_demote.py`, the mirror of 06_promote.py:
+      it writes a review file from the labels, and `--apply` reads the ticks
+      back. Not to `review_state: unreviewed`, which is what this item
+      originally said: `unreviewed` means nobody has looked yet, and
+      06_promote.py collects every one of those into the queue of records
+      awaiting a decision, so demoting 170 records there would park them in
+      that queue for good. They get a third state, `withdrawn`, with the
+      criterion in `withdrawn_reason`. The record stays in `records/`, in `db/`
+      and in the snapshots, so a curator who disagrees restores it by deleting
+      two lines, and a withdrawal also writes `rejected` against the primary
+      paper in `literature/decisions.yaml` — without which the next discovery
+      cycle proposes it again under a new slug, which is how both Grover 2025
+      and Grover 2026 came to exist
 
 **Exit:** the criteria exist, and the admission error rate of the current
-catalogue is a number rather than an impression. Both now hold: the number is
-34.7% clear, 46.3% wide, with every record named in
-`literature/scope_labels.yaml`. What is left is not measurement but action — a
-demote path, and the decision about how much of the catalogue to withdraw.
+catalogue is a number rather than an impression. Both hold: the number is 34.7%
+clear and 46.3% wide, with every record named in
+`literature/scope_labels.yaml`, and all four items are done.
+
+What is left is not work but a decision, and it is the curator's: **how much of
+the catalogue to withdraw.** 170 records are clearly out and 226 of them are
+published; withdrawing the clear ones leaves 320 entities, back inside the
+~300-400 the scope section estimated. The labels are unratified on purpose, and
+`09_demote.py` defaults every record to `keep`, so nothing happens until
+someone ticks a box.
 
 **Tradeoff, decided.** A tighter boundary sharpens the novelty argument; a wider
 one narrows the gap with Kipoi's count. Tight was chosen, because the

@@ -75,7 +75,12 @@ ENTITY_STATUS = ("active", "deprecated", "superseded", "unmaintained")
 #
 # The DDL defaults to `reviewed`, so the twenty hand-curated records say nothing
 # and mean what they always did. Only 03_record.py writes `unreviewed`.
-REVIEW_STATES = ("reviewed", "unreviewed")
+# `withdrawn` is not a third shade of `unreviewed`. `unreviewed` means nobody has
+# looked yet, and literature/06_promote.py collects every one of them into the
+# queue of records awaiting a decision; `withdrawn` means someone looked and said
+# no. Demoting an out-of-scope record to `unreviewed` would put it back in that
+# queue for good, which is why the two are separate values rather than one.
+REVIEW_STATES = ("reviewed", "unreviewed", "withdrawn")
 PAPER_ROLES = ("primary", "preprint", "benchmark", "critique", "application",
                "extension", "review")
 VENUE_TYPES = ("journal", "conference", "preprint", "workshop", "thesis", "other")
@@ -206,6 +211,7 @@ CREATE TABLE IF NOT EXISTS entity (
     status          TEXT    {_check('status', ENTITY_STATUS)},
     review_state    TEXT    NOT NULL DEFAULT 'reviewed'
                             {_check('review_state', REVIEW_STATES, nullable=False)},
+    withdrawn_reason TEXT,          -- why, for review_state 'withdrawn' only
     supersedes      TEXT    REFERENCES entity(entity_id),
     variant_of      TEXT    REFERENCES entity(entity_id),
     date_added      TEXT    NOT NULL,
@@ -400,6 +406,7 @@ ALL_DDL = (CREATE_ENTITY + CREATE_PAPER + CREATE_ENTITY_PAPER + CREATE_LINK
 MIGRATIONS: list[tuple[str, str, str]] = [
     ("model_ext", "n_parameters_min", "INTEGER"),
     ("model_ext", "n_parameters_max", "INTEGER"),
+    ("entity", "withdrawn_reason", "TEXT"),
 ]
 
 # Columns removed after a table shipped, dropped when present. Needed because
@@ -544,6 +551,34 @@ class CFCR:
         for idx in CREATE_INDEXES:
             cur.execute(idx)
         self.conn.commit()
+        self._check_enum_constraints(cur)
+
+    def _check_enum_constraints(self, cur):
+        """
+        Refuse to run against a database whose CHECK constraints predate an
+        enum value, rather than failing on the first row that uses it.
+
+        MIGRATIONS covers a new column; nothing covers a changed CHECK, because
+        SQLite cannot alter one -- the table has to be rebuilt. CREATE TABLE IF
+        NOT EXISTS is a no-op on an existing database, so a value added to
+        REVIEW_STATES reaches a fresh build and not a carried-over one, and the
+        failure lands on an INSERT with no hint of why. db/cfcr.db is derived
+        and gitignored, so deleting it is the whole fix.
+        """
+        cur.execute("SELECT sql FROM sqlite_master "
+                    "WHERE type='table' AND name='entity';")
+        row = cur.fetchone()
+        if not row:
+            return
+        ddl = row["sql"] if not isinstance(row, tuple) else row[0]
+        missing = [v for v in REVIEW_STATES if f"'{v}'" not in ddl]
+        if missing:
+            raise SystemExit(
+                f"db/cfcr.db was built before review_state gained "
+                f"{', '.join(missing)}, and SQLite cannot alter a CHECK "
+                f"constraint. db/cfcr.db is derived and gitignored, so "
+                f"delete it and rebuild: "
+                f"rm db/cfcr.db && python scripts/04_build.py")
 
     def _columns(self, table: str) -> list[str]:
         cur = self.conn.cursor()

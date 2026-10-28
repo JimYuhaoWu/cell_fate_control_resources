@@ -167,10 +167,12 @@ def check_axis(entities, rep):
     search_queries.yaml is the one query with no axis, because the benchmarks
     it finds span several, so every benchmark admitted from a cycle arrives
     without one. Staged records are not reported; an axis is part of what
-    promoting a record is for.
+    promoting a record is for. Neither are withdrawn ones: a record held off
+    the site for being out of scope has no in-scope axis to give it, and
+    asking for one is asking it back in.
     """
     for e in entities:
-        if e.get("review_state") == "unreviewed":
+        if e.get("review_state") in ("unreviewed", "withdrawn"):
             continue
         if not (e.get("fate_axis") or []):
             rep.add(WARNING, "fate-axis", e["entity_id"],
@@ -178,6 +180,42 @@ def check_axis(entities, rep):
                     "cannot reach it",
                     "give it the axis of whatever it serves, or hold it back "
                     "with review_state: unreviewed")
+
+
+def check_withdrawn(entities, rep):
+    """
+    A withdrawn record has to say why, and a reason has to mean something.
+
+    `review_state: withdrawn` is the one state that records a judgement rather
+    than a stage, and the judgement is the whole value of it: six months from
+    now the question is not that a record left the site but which criterion
+    took it off. `literature/09_demote.py` writes the reason as it demotes, so
+    this fires on a hand edit.
+
+    The mirror case is reported too. A `withdrawn_reason` on a record that is
+    not withdrawn is a withdrawal that was reverted without clearing its note,
+    and the note then reads as current.
+
+    One limit, measured rather than assumed: this reads the database, and
+    `_upsert` writes only the columns a record mentions, so deleting
+    `withdrawn_reason` from a YAML block does not clear it in a carried-over
+    db/cfcr.db and this check passes. It fires on the fresh build. That is a
+    property of every derived column, not of this one, and the fix is the
+    rebuild 04_build.py is cheap enough to run.
+    """
+    for e in entities:
+        withdrawn = e.get("review_state") == "withdrawn"
+        reason = (e.get("withdrawn_reason") or "").strip()
+        if withdrawn and not reason:
+            rep.add(ERROR, "withdrawn", e["entity_id"],
+                    "review_state: withdrawn with no withdrawn_reason",
+                    "say which criterion it failed, or restore the record by "
+                    "removing the review_state line")
+        elif reason and not withdrawn:
+            rep.add(WARNING, "withdrawn", e["entity_id"],
+                    f"withdrawn_reason on a record whose review_state is "
+                    f"'{e.get('review_state')}'",
+                    "drop withdrawn_reason, since the record is not withdrawn")
 
 
 def check_unused_vocab(db, entities, rep):
@@ -341,7 +379,8 @@ def check_evidence_tier(db, papers, by_entity, rep):
         if not primary and evaluations:
             rep.add(WARNING, "evidence-tier", eid,
                     "primary paper has no author list, so overlap cannot be "
-                    "computed; every evaluation counted as independent",
+                    "computed; every evaluation reads as 'unknown' and the "
+                    "derived tier falls back to self-reported",
                     "repair the primary paper's authors in papers.yaml")
 
         detail = "; ".join(
@@ -563,6 +602,7 @@ def main() -> int:
 
         check_prefix(entities, rep)
         check_axis(entities, rep)
+        check_withdrawn(entities, rep)
         check_vocab(db, entities, rep)
         check_unused_vocab(db, entities, rep)
         papers, by_entity = check_papers(db, entities, rep, whitelist)

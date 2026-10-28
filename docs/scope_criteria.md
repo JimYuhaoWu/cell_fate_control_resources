@@ -128,6 +128,8 @@ flags them with `type_defect` rather than labelling them out.
 evidence layer is for, and conflating the two would make `evidence_tier`
 circular.
 
-**Demotion.** A record that fails a criterion today is not thereby withdrawn:
-`literature/06_promote.py` has no demote path, which is M4a's fourth item.
-Labelling is the measurement, not the correction.
+**Demotion.** A record that fails a criterion today is not thereby withdrawn.
+Labelling is the measurement; `literature/09_demote.py` is the correction, and
+it defaults every record to `keep`. A failed criterion is an argument for
+withdrawing a record, not the act of withdrawing it, and the two are kept apart
+so that disagreeing with a label costs nothing.

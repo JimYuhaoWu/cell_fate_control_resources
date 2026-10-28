@@ -11,7 +11,12 @@ That is the only safe thing to do with a bulk accept, and it means the staging
 area now holds far more than the catalogue. This script is how a record leaves
 staging.
 
-**Nothing here rejects anything, and that is the design.** `02_triage.py`
+**Nothing here rejects anything, and that is the design.** Taking a *published*
+record back off the site is `literature/09_demote.py`, which is a different
+question with a different answer: it writes `review_state: withdrawn` rather
+than `unreviewed`, precisely so that a record decided against does not land in
+the queue this script builds out of records nobody has decided yet.
+ `02_triage.py`
 filters every future review file against the ledger, and only `rejected` is
 suppressed -- a rejection is permanent, while a record left staged costs a row
 in `db/` and nothing else. Measured on the 2026-10-21 cycle: a rule that

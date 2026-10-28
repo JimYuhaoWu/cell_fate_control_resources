@@ -156,6 +156,10 @@ def main() -> int:
         for rec in yaml.safe_load(text) or []:
             if rec.get("description"):
                 continue
+            if rec.get("review_state") == "withdrawn":
+                # Never, not even with --staged: a withdrawn record is off the
+                # site for good, and a description is written for a card.
+                continue
             if rec.get("review_state") == "unreviewed" and not args.staged:
                 continue
             if args.limit and considered >= args.limit:
