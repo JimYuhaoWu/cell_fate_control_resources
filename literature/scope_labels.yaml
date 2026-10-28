@@ -1,661 +1,3455 @@
 # literature/scope_labels.yaml
 #
-# The labelled in/out set M4a asks for: the extensional boundary the catalogue
-# did not have. docs/scope_criteria.md is the procedure; this is what it was
-# written against and what it is measured on.
+# The extensional boundary M4a asks for: every published record labelled in or
+# out of scope against docs/scope_criteria.md, which is the procedure these
+# labels apply. Written 2026-10-28.
 #
-# HOW THE SAMPLE WAS DRAWN. A stratified random sample of the 490 published
-# records, proportional by type, seeded so it is reproducible:
+# WHAT WAS DECIDED FROM. Each record's `name`, its `description` where it has
+# one, and the title and abstract of its `primary` paper -- nothing else. That
+# is the same evidence a curator or a script has for the 304 of 490 records
+# that carry no description, and docs/scope_criteria.md was written to be
+# decidable from it.
+#
+# `certainty` is part of the label, not a hedge about it. `clear` means the
+# criterion decides the record outright; `arguable` means a reasonable curator
+# could go the other way. The two give a floor and a ceiling: 170 records are
+# clearly out, 227 are out on the wider reading. The `arguable` ones are where
+# the boundary actually needs a decision, and each one settled sharpens the
+# criteria for every record after it.
+#
+# `in_sample` marks the 102 records of the earlier seeded random sample, drawn
+# before any of this pass was done. It is kept because it is evidence about the
+# method rather than about the catalogue: the sample estimated 47.1% out and
+# the full pass found 46.3%, so sampling would have given the same answer for a
+# fiftieth of the work. The next audit does not need to be exhaustive.
 #
 #     rng = random.Random(20261028)
 #     k   = max(2, round(100 * len(stratum) / 490))   # per type
 #
-# The draw reproduces exactly only against the 490 records as they stood on that
-# date: adding or removing one changes which records the seed selects. Re-label
-# rather than re-draw, or the set stops being the thing the rate was measured on.
-#
-# Random and not hand-picked, because a set assembled by looking for mistakes
-# measures only how good the looking was. Every record drawn is labelled, which
-# is what makes the proportion an estimate of the catalogue rather than a tally.
-#
-# WHAT EACH LABEL WAS DECIDED FROM. The record's `name`, its `description` where
-# it has one, and the title and abstract of its `primary` paper -- nothing else.
-# That is the same evidence a curator or a script has for the 304 of 490 records
-# that carry no description.
-#
-# `certainty` is part of the label, not a hedge about it. `clear` means the
-# criterion decides the record outright; `arguable` means a reasonable curator
-# could go the other way, and those records are where the boundary actually
-# needs a decision. Reporting a rate without them would overstate the precision
-# of the criteria; reporting only the union would overstate the drift.
-#
-# `type_defect` is NOT a scope label. These records are in scope and entered
+# `type_defect` is NOT a scope label. Those records are in scope and entered
 # under the wrong type -- a benchmark as a `model`, a critique as an entity
-# rather than as an entity_paper row. The criteria pass them, correctly, and
-# they need a separate pass.
+# instead of an entity_paper row, one resource entered twice. The criteria pass
+# them, correctly, and they need a separate pass; see the audit report.
 #
-# PROVENANCE. These 102 labels were assigned by Claude (Opus 5) on 2026-10-28,
-# not by the project's curator, and `ratified: false` says so. They are a
-# measurement offered for review, not curatorial fact: a scope decision is the
-# curator's to make, and the whole point of writing them down is that someone
-# can disagree with a specific one and say which criterion they read
-# differently. Set `ratified: true` per label, or in the header once the set has
-# been read through.
+# PROVENANCE. These labels were assigned by Claude (Opus 5), not by the
+# project's curator, and `ratified: false` says so. They are a measurement
+# offered for review, not curatorial fact: a scope decision is the curator's to
+# make, and the point of writing them down is that someone can disagree with a
+# specific one and name the criterion they read differently. Nothing here
+# withdraws a record -- M4a's fourth item, a demote path, does not exist yet.
+#
+# Regenerate nothing: this file is hand-assigned, not derived. reports/scope_audit.md
+# is the summary computed from it.
 
 method:
-  drawn: '2026-10-28'
-  seed: 20261028
+  labelled: '2026-10-28'
   population: 490
-  sampled: 102
-  stratified_by: type
-  strata:
-    benchmark:
-      population: 91
-      sampled: 19
-    database:
-      population: 7
-      sampled: 2
-    dataset:
-      population: 9
-      sampled: 2
-    model:
-      population: 320
-      sampled: 65
-    module:
-      population: 58
-      sampled: 12
-    protocol:
-      population: 5
-      sampled: 2
-  ratified: false
   labelled_by: claude-opus-5
+  ratified: false
   criteria: docs/scope_criteria.md
+  evidence: record name and description, plus primary paper title and abstract
+  sample:
+    seed: 20261028
+    size: 102
+    drawn: 2026-10-28, before the full pass
+    stratified_by: type
+  summary:
+    out_clear: 170
+    out_including_arguable: 227
+    in: 263
+    type_defect: 44
 labels:
+- entity_id: benchmark:3cdb
+  name: 3CDB
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: curated chromosome conformation capture data; where
+  type_defect: a database entered as a benchmark
+- entity_id: benchmark:agqa
+  name: AGQA
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: compositional spatio-temporal reasoning over video
+  failed_criterion: C2
+- entity_id: benchmark:agqa-2-0
+  name: AGQA 2.0
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: compositional spatio-temporal reasoning over video
+  failed_criterion: C2
 - entity_id: benchmark:alfisi-2025-benchmarking-dna-foundation
   name: Alfisi 2025 Benchmarking DNA Foundation
+  type: benchmark
   label: in
   certainty: clear
   reason: benchmarks DNA foundation models on regulatory variant effect; serves
     how
+  in_sample: true
+- entity_id: benchmark:ali-2022-benchmarking-machine-learning
+  name: Ali 2022 Benchmarking Machine Learning
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: SARS-CoV-2 genome sequence classification robustness
+  failed_criterion: C3
+- entity_id: benchmark:almeida-2020-supporting-supervised-learning
+  name: Almeida 2020 Supporting supervised learning
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: fungal biosynthetic gene cluster discovery; annotation
+  failed_criterion: C3
+- entity_id: benchmark:ambimodbench
+  name: AmbiModBench
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: gene perturbation prediction beyond shared responses; what
+- entity_id: benchmark:annotatemissense
+  name: AnnotateMissense
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: missense pathogenicity prediction; coding variant interpretation
+  failed_criterion: C3
+- entity_id: benchmark:aster
+  name: ASTER
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: estimating the number of cell types in accessibility data
+  failed_criterion: C3
+- entity_id: benchmark:benchmarking-dna-foundation-models
+  name: Benchmarking DNA Foundation Models
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: controlled evaluation of Evo2 variant-effect prediction; how
+- entity_id: benchmark:benchngs
+  name: benchNGS
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: short-read alignment tools
+  failed_criterion: C3
+- entity_id: benchmark:bend
+  name: BEND
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: DNA language models on genome annotation tasks including accessibility;
+    how
+- entity_id: benchmark:benegas-2025-benchmarking-dna-sequence
+  name: Benegas 2025 Benchmarking DNA Sequence
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: DNA sequence models on causal regulatory variant prediction; how
 - entity_id: benchmark:beyond-chromatin-accessibility
   name: Beyond chromatin accessibility
+  type: benchmark
   label: out
   certainty: arguable
   reason: 'benchmarks bulk ATAC-seq against WGS for variant and copy-number detection:
     how well an assay characterises a genome, not a resource for acting on one'
   failed_criterion: C3
+  in_sample: true
+- entity_id: benchmark:biosecbench-surveillance
+  name: BioSecBench-Surveillance
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: AI agents performing pathogen genomic surveillance
+  failed_criterion: C3
 - entity_id: benchmark:cen-2023-time-embrace-natural
   name: Cen 2023 Time Embrace Natural
+  type: benchmark
   label: out
   certainty: clear
   reason: digital pathology images
   failed_criterion: C2
+  in_sample: true
+- entity_id: benchmark:chen-2024-benchmarking-embedding-aggregation
+  name: Chen 2024 Benchmarking Embedding Aggregation
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: computational pathology image embeddings
+  failed_criterion: C2
+- entity_id: benchmark:creanga-2026-benchmarking-language-biomedical
+  name: Creanga 2026 Benchmarking Language Biomedical
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: biomedical relation extraction from literature
+  failed_criterion: C2
+- entity_id: benchmark:csendes-2024-benchmarking-foundational-cell
+  name: Csendes 2024 Benchmarking foundational cell
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: post-perturbation RNA-seq prediction; what
+  type_defect: likely the same work as benchmark:csendes-2025-benchmarking-foundation-cell
+- entity_id: benchmark:csendes-2025-benchmarking-foundation-cell
+  name: Csendes 2025 Benchmarking foundation cell
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: post-perturbation RNA-seq prediction; what
+  type_defect: likely the same work as benchmark:csendes-2024-benchmarking-foundational-cell
+- entity_id: benchmark:dart-eval
+  name: DART-Eval
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: DNA language model evaluation on regulatory DNA; how and where
+  type_defect: duplicate of model:dart-eval
+- entity_id: benchmark:dnabert-2
+  name: DNABERT-2
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: the GUE benchmark introduced with DNABERT-2; how
+  type_defect: its primary paper is a model paper, and benchmark:gue is the same
+    benchmark under a second entity
 - entity_id: benchmark:dnalongbench
   name: DNALongBench
+  type: benchmark
   label: in
   certainty: clear
   reason: long-range DNA prediction tasks including 3D folding; serves where
+  in_sample: true
+- entity_id: benchmark:factual
+  name: FACTUAL
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: textual scene graph parsing
+  failed_criterion: C2
+- entity_id: benchmark:fahsbender-2025-benchmarking-evaluation-ai
+  name: Fahsbender 2025 Benchmarking Evaluation AI
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: a workshop report with recommendations, not a resource
+  failed_criterion: C1
+- entity_id: benchmark:feng-2024-benchmarking-dna-foundation
+  name: Feng 2024 Benchmarking DNA Foundation
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: DNA foundation models on genomic and genetic tasks; how
+- entity_id: benchmark:fitness-landscape-for-antibodies-2
+  name: Fitness Landscape for Antibodies 2
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: antibody developability; protein substrate
+  failed_criterion: C2
 - entity_id: benchmark:flab
   name: FLAb
+  type: benchmark
   label: out
   certainty: clear
   reason: antibody fitness; protein substrate
   failed_criterion: C2
+  in_sample: true
+- entity_id: benchmark:fu-2026-iaode-benchmarking-continuum
+  name: Fu 2026 iAODE benchmarking continuum
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: continuum and trajectory modelling of single-cell accessibility; trajectory
+    inference is named out in README.md
+  failed_criterion: C3
 - entity_id: benchmark:g-es-2026-evaluation-feature-representations
   name: Góes 2026 Evaluation Feature Representations
+  type: benchmark
   label: out
   certainty: clear
   reason: annotating cancer-associated sORFs in non-coding RNA; RNA substrate and
     an annotation task
   failed_criterion: C3
+  in_sample: true
+- entity_id: benchmark:genbench
+  name: GenBench
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: systematic evaluation of genomic foundation models; how
 - entity_id: benchmark:geneb
   name: GENEB
+  type: benchmark
   label: in
   certainty: clear
   reason: probing benchmark over genomic foundation models; serves how and where
+  in_sample: true
+- entity_id: benchmark:genomeqa
+  name: GenomeQA
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: general LLMs answering questions about genome sequence; natural language
+  failed_criterion: C2
+- entity_id: benchmark:genomic-benchmarks
+  name: Genomic Benchmarks
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: datasets for genomic sequence classification; how
+- entity_id: benchmark:genotex
+  name: GenoTEX
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: LLM agents automating gene expression data analysis
+  failed_criterion: C2
+- entity_id: benchmark:guanine-v1-0
+  name: GUANinE v1.0
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: sequence-to-function generalisation benchmark; where
+- entity_id: benchmark:gue
+  name: GUE
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: the GUE multi-species genome benchmark; how
+  type_defect: the same benchmark as benchmark:dnabert-2
+- entity_id: benchmark:gupta-2025-benchmarking-language-polymer
+  name: Gupta 2025 Benchmarking Language Polymer
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: polymer property prediction
+  failed_criterion: C2
 - entity_id: benchmark:han-2021-image-scene-graph
   name: Han 2021 Image Scene Graph
+  type: benchmark
   label: out
   certainty: clear
   reason: image scene graph generation
   failed_criterion: C2
+  in_sample: true
+- entity_id: benchmark:herrmann-2020-large-scale-benchmark-survival
+  name: Herrmann 2020 Large-scale benchmark survival
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: survival prediction from multi-omics data
+  failed_criterion: C3
+- entity_id: benchmark:hifi-st
+  name: HiFi-ST
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: reconstructing a continuous spatial expression field; observation
+  failed_criterion: C3
+- entity_id: benchmark:hollet-2026-benchmark-mri-foundation
+  name: Hollet 2026 Benchmark MRI- Foundation
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: MRI foundation models predicting IDH status
+  failed_criterion: C2
+- entity_id: benchmark:ideas-have-genomes
+  name: Ideas Have Genomes
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: scientific lineage reasoning by language models; genomes only as a metaphor
+  failed_criterion: C2
 - entity_id: benchmark:jabin-2026-benchmark-publicly-available
   name: Jabin 2026 benchmark publicly available
+  type: benchmark
   label: out
   certainty: clear
   reason: gene expression from whole slide images
   failed_criterion: C2
+  in_sample: true
+- entity_id: benchmark:ji-2023-complex-query-referring-image
+  name: Ji 2023 Complex-query Referring Image
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: referring image segmentation
+  failed_criterion: C2
 - entity_id: benchmark:jokisaari-2016-benchmark-problems-numerical
   name: Jokisaari 2016 Benchmark Problems Numerical
+  type: benchmark
   label: out
   certainty: clear
   reason: phase-field models in materials design
   failed_criterion: C2
+  in_sample: true
+- entity_id: benchmark:jump-lite
+  name: JUMP-lite
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: image-based cell profiling representations
+  failed_criterion: C2
+- entity_id: benchmark:kan-tor-2024-does-understand-genes
+  name: Kan-Tor 2024 Does understand genes
+  type: benchmark
+  label: out
+  certainty: arguable
+  reason: probes gene-property knowledge in biological and text models; the object
+    is what a model knows, not an action
+  failed_criterion: C3
+- entity_id: benchmark:kang-2026-benchmarking-three-simple
+  name: Kang 2026 Benchmarking three simple
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: image metrics from DNA staining in live cells
+  failed_criterion: C2
+- entity_id: benchmark:khushi-2020-benchmarking-database-performance
+  name: Khushi 2020 Benchmarking database performance
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: database engine performance on genomic interval operations
+  failed_criterion: C3
 - entity_id: benchmark:know-show
   name: Know-Show
+  type: benchmark
   label: out
   certainty: clear
   reason: video-language spatio-temporal reasoning
   failed_criterion: C2
+  in_sample: true
+- entity_id: benchmark:ko-2026-scalable-embedding-fusion
+  name: Ko 2026 Scalable embedding fusion
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: protein language model embeddings
+  failed_criterion: C2
+- entity_id: benchmark:kulkarni-2019-maps-transcription-factor
+  name: Kulkarni 2019 Maps Transcription Factor
+  type: benchmark
+  label: out
+  certainty: arguable
+  reason: TF binding site maps for regulatory network inference; the published version
+    of the same work
+  failed_criterion: C3
+  type_defect: duplicate of benchmark:kulkarni-2019-tf-binding-site
+- entity_id: benchmark:kulkarni-2019-tf-binding-site
+  name: Kulkarni 2019 TF binding site
+  type: benchmark
+  label: out
+  certainty: arguable
+  reason: TF binding site maps for regulatory network inference; the object is an
+    inferred network
+  failed_criterion: C3
+  type_defect: duplicate of benchmark:kulkarni-2019-maps-transcription-factor
+- entity_id: benchmark:lassobench
+  name: LassoBench
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: hyperparameter optimisation for weighted Lasso
+  failed_criterion: C2
+- entity_id: benchmark:liu-2022-dropout-imputation-scrna-seq
+  name: Liu 2022 dropout imputation scRNA-seq
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: dropout imputation
+  failed_criterion: C3
+- entity_id: benchmark:loco-epi
+  name: LOCO-EPI
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: leave-one-chromosome-out evaluation of enhancer-promoter interaction prediction;
+    where
+- entity_id: benchmark:luecken-2022-benchmarking-atlas-level-data
+  name: Luecken 2022 Benchmarking atlas-level data
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: atlas-level data integration
+  failed_criterion: C3
+- entity_id: benchmark:luo-2024-benchmarking-computational-single-cell
+  name: Luo 2024 Benchmarking computational single-cell
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: single-cell chromatin data analysis methods; clustering and dimensionality
+    reduction
+  failed_criterion: C3
 - entity_id: benchmark:macias-velasco-2026-benchmarking-genome-choice
   name: Macias-Velasco 2026 Benchmarking genome choice
+  type: benchmark
   label: out
   certainty: arguable
   reason: compares reference-genome representations for functional genomics analysis;
     the object is an analysis pipeline, not a resource serving an axis
   failed_criterion: C3
+  in_sample: true
+- entity_id: benchmark:mattools
+  name: MatTools
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: LLMs on materials science tools
+  failed_criterion: C2
+- entity_id: benchmark:muneeb-2026-benchmarking-end-to-end-genotype-to-phenotype
+  name: Muneeb 2026 Benchmarking end-to-end genotype-to-phenotype
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: genotype-to-phenotype prediction workflows; association, not design
+  failed_criterion: C3
 - entity_id: benchmark:munteanu-2023-rigorous-benchmarking-sars-cov-2
   name: Munteanu 2023 rigorous benchmarking SARS-CoV-2
+  type: benchmark
   label: out
   certainty: clear
   reason: SARS-CoV-2 lineage abundance in wastewater
   failed_criterion: C2
+  in_sample: true
 - entity_id: benchmark:mvcbench
   name: MVCBench
+  type: benchmark
   label: in
   certainty: arguable
   reason: drug-induced phenotype prediction, which is perturbation response under
     C5; admitted despite the imaging modality because the prediction target is the
     response
+  in_sample: true
 - entity_id: benchmark:myy-2023-benchmarking-algorithms-joint
   name: MYY 2023 Benchmarking algorithms joint
+  type: benchmark
   label: out
   certainty: clear
   reason: joint integration of unpaired scRNA-seq and scATAC-seq
   failed_criterion: C3
+  in_sample: true
+- entity_id: benchmark:omnigenbench
+  name: OmniGenBench
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: automated benchmarking of genomic foundation models; how
+- entity_id: benchmark:oncotraj
+  name: OncoTraj
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: longitudinal clinical resistance prediction under therapy
+  failed_criterion: C3
 - entity_id: benchmark:ouologuem-2025-spatial-transcriptomics-deconvolution
   name: Ouologuem 2025 Spatial transcriptomics deconvolution
+  type: benchmark
   label: out
   certainty: clear
   reason: spatial deconvolution
   failed_criterion: C3
+  in_sample: true
+- entity_id: benchmark:paudel-2026-benchmarking-machine-learning
+  name: Paudel 2026 Benchmarking Machine Learning
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: multi-omics breast cancer status prediction
+  failed_criterion: C3
 - entity_id: benchmark:plato-bio
   name: Plato-Bio
+  type: benchmark
   label: out
   certainty: clear
   reason: LLM research agent over literature and code
   failed_criterion: C2
+  in_sample: true
+- entity_id: benchmark:prakash-2021-more-realistic-simulated
+  name: Prakash 2021 More Realistic Simulated
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: simulated datasets for benchmarking regulatory genomics models; where
+- entity_id: benchmark:prostate-varbench
+  name: Prostate-VarBench
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: clinical classification of prostate cancer variants of uncertain significance
+  failed_criterion: C3
+- entity_id: benchmark:rafi-2023-evaluation-optimization-sequence-based
+  name: Rafi 2023 Evaluation optimization sequence-based
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: evaluation and optimisation of sequence-based gene regulatory models;
+    where
+- entity_id: benchmark:rainnet
+  name: RainNet
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: spatial precipitation downscaling
+  failed_criterion: C2
+- entity_id: benchmark:rawbench
+  name: RawBench
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: raw nanopore signal analysis; basecalling infrastructure
+  failed_criterion: C3
 - entity_id: benchmark:reefknot
   name: Reefknot
+  type: benchmark
   label: out
   certainty: clear
   reason: relation hallucination in multimodal LLMs
   failed_criterion: C2
+  in_sample: true
 - entity_id: benchmark:regdesign-bench
   name: RegDesign-Bench
+  type: benchmark
   label: in
   certainty: clear
   reason: cell-type-specific regulatory DNA design; serves where
+  in_sample: true
+- entity_id: benchmark:rindtorff-2019-biologically-plausible-benchmark
+  name: Rindtorff 2019 Biologically Plausible Benchmark
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: contextual bandits for treatment selection in precision oncology
+  failed_criterion: C3
+- entity_id: benchmark:scisafeeval
+  name: SciSafeEval
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: safety alignment of LLMs on scientific tasks
+  failed_criterion: C2
+- entity_id: benchmark:sequencelab
+  name: SequenceLab
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: computational methods for comparing genomic sequences; alignment infrastructure
+  failed_criterion: C3
+- entity_id: benchmark:shao-2026-benchmark-averages-hide
+  name: Shao 2026 Benchmark Averages Hide
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: quantised protein language models for protein variant effect
+  failed_criterion: C2
+- entity_id: benchmark:sun-2025-benchmark-guide-sequence-function
+  name: Sun 2025 benchmark guide sequence-function
+  type: benchmark
+  label: in
+  certainty: clear
+  reason: sequence-to-function models and their interpretation methods; where
+- entity_id: benchmark:table2vec
+  name: Table2Vec
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: representation learning over enterprise business data; DNA only as a metaphor
+    in the title
+  failed_criterion: C2
+- entity_id: benchmark:the-tcga-meta-dataset-clinical-benchmark
+  name: The TCGA Meta-Dataset Clinical Benchmark
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: clinical diagnosis and prognosis
+  failed_criterion: C3
+- entity_id: benchmark:uncertainty-in-gnn-learning-evaluations
+  name: Uncertainty in GNN Learning Evaluations
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: graph neural network community detection
+  failed_criterion: C2
+- entity_id: benchmark:vinceti-2024-benchmark-computational-correcting
+  name: Vinceti 2024 benchmark computational correcting
+  type: benchmark
+  label: out
+  certainty: arguable
+  reason: 'bias correction in CRISPR-Cas9 screening data: the screens are perturbations,
+    but what is benchmarked is data processing'
+  failed_criterion: C3
+- entity_id: benchmark:virobench
+  name: ViroBench
+  type: benchmark
+  label: out
+  certainty: arguable
+  reason: nucleotide foundation models on viral genomics tasks; in-scope substrate,
+    but the tasks are classification and surveillance
+  failed_criterion: C3
+- entity_id: benchmark:wang-2025-benchmark-chromatin-protein-interaction
+  name: Wang 2025 Benchmark chromatin-protein interaction
+  type: benchmark
+  label: out
+  certainty: arguable
+  reason: compares chromatin-protein interaction assays in one cell type; an assay
+    comparison
+  failed_criterion: C3
+- entity_id: benchmark:wang-2025-benchmarking-translational-potential
+  name: Wang 2025 Benchmarking translational potential
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: spatial expression predicted from histology
+  failed_criterion: C2
+- entity_id: benchmark:wang-2026-benchmarking-computational-tools
+  name: Wang 2026 benchmarking computational tools
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: cross-omics label transfer from scRNA to scATAC
+  failed_criterion: C3
+- entity_id: benchmark:xu-2021-benchmarking-cite-seq-versus
+  name: Xu 2021 Benchmarking CITE-seq versus
+  type: benchmark
+  label: out
+  certainty: clear
+  reason: assay-versus-assay comparison of multimodal single-cell protocols
+  failed_criterion: C3
 - entity_id: database:cis-bp
   name: CIS-BP
+  type: database
   label: in
   certainty: clear
   reason: TF DNA sequence specificities by DBD class; serves with-what and where
+  in_sample: true
+- entity_id: database:encode-screen-ccres
+  name: ENCODE SCREEN cCREs
+  type: database
+  label: in
+  certainty: clear
+  reason: candidate cis-regulatory element encyclopaedia; where
 - entity_id: database:ensembl-regulatory-build
   name: Ensembl Regulatory Build
+  type: database
   label: in
   certainty: clear
   reason: regulatory annotation across cell types; serves where
+  in_sample: true
+- entity_id: database:hocomoco-v12
+  name: HOCOMOCO v12
+  type: database
+  label: in
+  certainty: clear
+  reason: binding models for human and mouse TFs; with-what and where
+- entity_id: database:jaspar-2024
+  name: JASPAR 2024
+  type: database
+  label: in
+  certainty: clear
+  reason: curated TF binding profiles; with-what and where
+- entity_id: database:kipoi
+  name: Kipoi
+  type: database
+  label: in
+  certainty: clear
+  reason: repository of predictive genomics models; where and how
+- entity_id: database:remap-2022
+  name: ReMap 2022
+  type: database
+  label: in
+  certainty: clear
+  reason: curated catalogues of regulatory regions from DNA-binding experiments;
+    where
+- entity_id: dataset:adamson-2016-perturb-seq-upr-screen
+  name: Adamson 2016 Perturb-seq UPR screen
+  type: dataset
+  label: in
+  certainty: clear
+  reason: multiplexed single-cell CRISPR screen; what
+- entity_id: dataset:borzoi-data
+  name: Borzoi training intervals
+  type: dataset
+  label: in
+  certainty: clear
+  reason: the intervals and folds Borzoi was trained on; where
+- entity_id: dataset:dixit-2016-perturb-seq
+  name: Dixit 2016 Perturb-seq
+  type: dataset
+  label: in
+  certainty: clear
+  reason: the original Perturb-seq screens; what
+- entity_id: dataset:encode
+  name: ENCODE
+  type: dataset
+  label: in
+  certainty: clear
+  reason: the DNA element encyclopaedia most interval models are trained on; where
+- entity_id: dataset:enformer-data
+  name: Enformer training intervals
+  type: dataset
+  label: in
+  certainty: clear
+  reason: the intervals and folds Enformer was trained on; where
 - entity_id: dataset:norman-2019-combinatorial-perturb-seq
   name: Norman 2019 combinatorial Perturb-seq
+  type: dataset
   label: in
   certainty: clear
   reason: combinatorial Perturb-seq, the training data perturbation-response models
     are scored on
+  in_sample: true
+- entity_id: dataset:replogle-2022-perturb-seq
+  name: Replogle 2022 genome-scale Perturb-seq atlas
+  type: dataset
+  label: in
+  certainty: clear
+  reason: genome-scale Perturb-seq; the training and evaluation data for perturbation
+    response; what
 - entity_id: dataset:roadmap-epigenomics
   name: Roadmap Epigenomics
+  type: dataset
   label: in
   certainty: clear
   reason: 111 reference epigenomes; serves where
+  in_sample: true
+- entity_id: dataset:sci-plex
+  name: sci-Plex
+  type: dataset
+  label: in
+  certainty: clear
+  reason: multiplex chemical transcriptomics; chemical perturbation response; what
+- entity_id: model:a-systematic-review
+  name: A Systematic Review
+  type: model
+  label: out
+  certainty: clear
+  reason: a systematic review of deep learning for evolutionary patterns
+  failed_criterion: C1
 - entity_id: model:agep-twas
   name: AGEP_TWAS
+  type: model
   label: out
   certainty: arguable
   reason: predicts tissue expression for TWAS from genotype rather than from sequence
     or chromatin state
   failed_criterion: C2
+  in_sample: true
+- entity_id: model:akagi-2026-genomic-properties-representing
+  name: Akagi 2026 Genomic properties representing
+  type: model
+  label: out
+  certainty: clear
+  reason: plant sex chromosome evolution interpreted with genome language models
+  failed_criterion: C3
+- entity_id: model:akita
+  name: Akita
+  type: model
+  label: in
+  certainty: clear
+  reason: 3D genome folding from sequence; where
+- entity_id: model:al-saidi-2026-win-win-possible-achieving
+  name: Al-Saidi 2026 Win-Win possible Achieving
+  type: model
+  label: out
+  certainty: arguable
+  reason: a privacy-utility study of genome language model embeddings; the product
+    is a risk analysis
+  failed_criterion: C1
+- entity_id: model:ali-2026-causal-dictionary-learning
+  name: Ali 2026 Causal dictionary learning
+  type: model
+  label: in
+  certainty: clear
+  reason: causal extraction of TF binding features from genomic language models;
+    how
+- entity_id: model:alphagenome
+  name: AlphaGenome
+  type: model
+  label: in
+  certainty: clear
+  reason: unified sequence model over thousands of functional tracks; where
+- entity_id: model:antony-2022-protein-secondary-structure
+  name: Antony 2022 Protein secondary structure
+  type: model
+  label: out
+  certainty: clear
+  reason: protein secondary structure assignment
+  failed_criterion: C2
+- entity_id: model:arsenal
+  name: ARSENAL
+  type: model
+  label: in
+  certainty: clear
+  reason: short-context DNA language model over candidate cis-regulatory elements;
+    how
+- entity_id: model:attcon
+  name: AttCON
+  type: model
+  label: out
+  certainty: clear
+  reason: protein contact map prediction
+  failed_criterion: C2
 - entity_id: model:b-kov-2026-analyzing-genomic-foundation
   name: Bůžková 2026 Analyzing Genomic Foundation
+  type: model
   label: out
   certainty: clear
   reason: viral sequence identification for diagnostics and surveillance
   failed_criterion: C3
+  in_sample: true
+- entity_id: model:back-to-bert-in-2026
+  name: Back to BERT in 2026
+  type: model
+  label: in
+  certainty: clear
+  reason: efficient DNA foundation model baseline; how
+- entity_id: model:balc-2023-intrinsically-interpretable-neural
+  name: Balcı 2023 intrinsically interpretable neural
+  type: model
+  label: in
+  certainty: clear
+  reason: interpretable sequence-to-function architecture; where
+- entity_id: model:barcodebert
+  name: BarcodeBERT
+  type: model
+  label: out
+  certainty: clear
+  reason: DNA barcoding for biodiversity identification
+  failed_criterion: C3
+- entity_id: model:barethiya-2026-overcoming-extrapolation-challenges
+  name: Barethiya 2026 Overcoming extrapolation challenges
+  type: model
+  label: out
+  certainty: clear
+  reason: protein sequence-function modelling with physics
+  failed_criterion: C2
+- entity_id: model:basenji
+  name: Basenji
+  type: model
+  label: in
+  certainty: clear
+  reason: sequential regulatory activity across chromosomes; where
+- entity_id: model:bass-2026-genomic-foundation-do
+  name: Bass 2026 Genomic foundation do
+  type: model
+  label: in
+  certainty: arguable
+  reason: whether genomic foundation models help common variant discovery; in-scope
+    resources evaluated on an association task
+  type_defect: a critique, which belongs in entity_paper rather than as an entity
+- entity_id: model:basset
+  name: Basset
+  type: model
+  label: in
+  certainty: clear
+  reason: regulatory code of the accessible genome; where
+- entity_id: model:beyond-independent-genes
+  name: Beyond Independent Genes
+  type: model
+  label: in
+  certainty: clear
+  reason: module-inductive representations for perturbation prediction; what
+- entity_id: model:bhattacharya-2026-elucidating-design-space
+  name: Bhattacharya 2026 Elucidating Design Space
+  type: model
+  label: in
+  certainty: clear
+  reason: generative model design space for perturbation prediction; what
+- entity_id: model:bie-2026-dynamic-graph-prior-guided
+  name: Bie 2026 Dynamic Graph Prior-Guided
+  type: model
+  label: in
+  certainty: clear
+  reason: drug perturbation response in unseen contexts; what
+- entity_id: model:biodsnn
+  name: BioDSNN
+  type: model
+  label: in
+  certainty: clear
+  reason: multi-gene perturbation response; what
 - entity_id: model:biom-jepa
   name: BioM-JEPA
+  type: model
   label: out
   certainty: clear
   reason: single-cell joint-embedding model; representation, not perturbation response
   failed_criterion: C5
+  in_sample: true
+- entity_id: model:borzoi
+  name: Borzoi
+  type: model
+  label: in
+  certainty: clear
+  reason: RNA-seq coverage from sequence; where
+- entity_id: model:bpnet
+  name: BPNet
+  type: model
+  label: in
+  certainty: clear
+  reason: base-resolution TF binding and motif syntax; where
+- entity_id: model:burda-2026-robustness-scrna-seq-foundation
+  name: Burda 2026 robustness scRNA-seq foundation
+  type: model
+  label: in
+  certainty: clear
+  reason: plant perturbation response under cross-experiment shift; what
+- entity_id: model:c3p
+  name: C3P
+  type: model
+  label: in
+  certainty: clear
+  reason: promoter-protein pretraining for bacterial gene regulation; how
+- entity_id: model:caduceus
+  name: Caduceus
+  type: model
+  label: in
+  certainty: clear
+  reason: bi-directional long-range DNA sequence model; how
+- entity_id: model:calmflow
+  name: CaLMFlow
+  type: model
+  label: out
+  certainty: arguable
+  reason: a general flow-matching framework; the genomic application is an illustration
+  failed_criterion: C2
+- entity_id: model:cao-2021-chromatin-interaction-neural
+  name: Cao 2021 Chromatin interaction neural
+  type: model
+  label: in
+  certainty: clear
+  reason: chromatin interactions from DNA sequence; where
 - entity_id: model:carbon
   name: Carbon
+  type: model
   label: in
   certainty: clear
   reason: generative DNA language model for understanding, generation and design
+  in_sample: true
+- entity_id: model:catlearning
+  name: CatLearning
+  type: model
+  label: in
+  certainty: clear
+  reason: expression from histone marks; where
+- entity_id: model:cellscientist
+  name: CellScientist
+  type: model
+  label: in
+  certainty: arguable
+  reason: an LLM workflow that revises perturbation-prediction models; what, as
+    a meta-method
+- entity_id: model:cellxpert
+  name: CellxPert
+  type: model
+  label: in
+  certainty: clear
+  reason: inference-time steering for in-silico perturbation; what
+- entity_id: model:ceno
+  name: CENO
+  type: model
+  label: in
+  certainty: clear
+  reason: genome-scale world model for programmable regulatory design; where
+- entity_id: model:cgan-cmap
+  name: CGAN-Cmap
+  type: model
+  label: out
+  certainty: clear
+  reason: protein contact map prediction
+  failed_criterion: C2
 - entity_id: model:chang-2026-single-cell-multiome-chromatin
   name: Chang 2026 Single-cell Multiome Chromatin
+  type: model
   label: out
   certainty: clear
   reason: 'a single-cell multiome atlas of a brain region: a result, and if admitted
     at all it is a dataset, not a model'
   failed_criterion: C1
+  in_sample: true
+- entity_id: model:chao-2025-predicting-dynamic-expression
+  name: Chao 2025 Predicting dynamic expression
+  type: model
+  label: in
+  certainty: clear
+  reason: fungal DNA language model predicting expression; how
+- entity_id: model:chapman-2017-evolution-logic-circuits
+  name: Chapman 2017 evolution logic circuits
+  type: model
+  label: out
+  certainty: clear
+  reason: protein contact map prediction
+  failed_criterion: C2
 - entity_id: model:chen-2025-assessing-predictive-diversity
   name: Chen 2025 Assessing Predictive Diversity
+  type: model
   label: out
   certainty: clear
   reason: evaluates scaling and representation quality of a single-cell foundation
     model
   failed_criterion: C5
+  in_sample: true
+- entity_id: model:choi-2026-ai-virtual-cells
+  name: Choi 2026 AI Virtual Cells
+  type: model
+  label: out
+  certainty: arguable
+  reason: a perspective on virtual cells for hepatology
+  failed_criterion: C1
 - entity_id: model:chrombpnet
   name: ChromBPNet
+  type: model
   label: in
   certainty: clear
   reason: base-resolution chromatin accessibility from sequence; where
+  in_sample: true
+- entity_id: model:cistranscell
+  name: CisTransCell
+  type: model
+  label: in
+  certainty: clear
+  reason: zero-shot single-cell perturbation prediction; what
+- entity_id: model:cunningham-2025-generative-design-construction
+  name: Cunningham 2025 Generative design construction
+  type: model
+  label: out
+  certainty: arguable
+  reason: generative design of plasmid backbones; sequence design, but no fate axis
+    it serves
+  failed_criterion: C4
 - entity_id: model:daniodecima
   name: DanioDecima
+  type: model
   label: in
   certainty: clear
   reason: zebrafish sequence-to-function model; where
+  in_sample: true
 - entity_id: model:dart-eval
   name: DART-Eval
+  type: model
   label: in
   certainty: clear
   reason: DNA language model evaluation on regulatory DNA; serves how
   type_defect: duplicate of benchmark:dart-eval, and a benchmark typed as a model
+  in_sample: true
+- entity_id: model:debnath-2026-inference-spatial-chromatin
+  name: Debnath 2026 Inference spatial chromatin
+  type: model
+  label: out
+  certainty: clear
+  reason: inferring spatial accessibility by integrating assays
+  failed_criterion: C3
+- entity_id: model:decant
+  name: DECANT
+  type: model
+  label: in
+  certainty: arguable
+  reason: mechanism-aligned drug perturbation representations; what, though the
+    output is a representation of perturbations rather than a response
+- entity_id: model:deepcis
+  name: DeepCis
+  type: model
+  label: in
+  certainty: clear
+  reason: regulatory element identification from sequence and multi-omics; where
+- entity_id: model:deepgep
+  name: DeepGEP
+  type: model
+  label: in
+  certainty: clear
+  reason: expression from multi-omics in mammals; where
+- entity_id: model:deepscenic
+  name: DeepSCENIC
+  type: model
+  label: out
+  certainty: arguable
+  reason: causal gene regulatory network inference; built on in-scope models, but
+    the object is an inferred network
+  failed_criterion: C3
+- entity_id: model:deepsea
+  name: DeepSEA
+  type: model
+  label: in
+  certainty: clear
+  reason: noncoding variant effects from sequence; where
 - entity_id: model:deepsge
   name: DeepSGE
+  type: model
   label: out
   certainty: clear
   reason: spatial expression from histology images
   failed_criterion: C2
+  in_sample: true
+- entity_id: model:deepwheat
+  name: DeepWheat
+  type: model
+  label: in
+  certainty: clear
+  reason: variant effects on expression and regulatory activity in wheat; where
+- entity_id: model:demixpert
+  name: DeMixPert
+  type: model
+  label: in
+  certainty: clear
+  reason: out-of-distribution perturbation response; what
+- entity_id: model:denvis-2026-empirical-comparison-virtual
+  name: Denvis 2026 Empirical Comparison Virtual
+  type: model
+  label: in
+  certainty: clear
+  reason: virtual cell models on perturbation prediction against baselines; what
+  type_defect: a benchmark typed as a model
+- entity_id: model:denvis-2026-findings-sparse-autoencoders
+  name: Denvis 2026 Findings Sparse Autoencoders
+  type: model
+  label: in
+  certainty: arguable
+  reason: sparse autoencoder features in DNA sequence models; a findings paper about
+    how sequence is represented
 - entity_id: model:dfce-kant
   name: DFCE-KanT
+  type: model
   label: out
   certainty: clear
   reason: spatial expression from H and E images
   failed_criterion: C2
+  in_sample: true
 - entity_id: model:dickm-nken-2026-evaluating-single-cell-atac-seq
   name: Dickmänken 2026 Evaluating single-cell ATAC-seq
+  type: model
   label: in
   certainty: arguable
   reason: evaluates scATAC-seq atlasing as training data for sequence-to-function
     models; serves where
   type_defect: a benchmark, and partly a protocol, typed as a model
+  in_sample: true
 - entity_id: model:diversity-by-design
   name: Diversity by Design
+  type: model
   label: in
   certainty: clear
   reason: perturbation-response modelling and its metrics; what
+  in_sample: true
+- entity_id: model:dna-language-models
+  name: DNA Language Models
+  type: model
+  label: in
+  certainty: arguable
+  reason: an assessment of pretraining for fine-tuning tasks; how
+  type_defect: an assessment, closer to a benchmark than a model
+- entity_id: model:dnabert
+  name: DNABERT
+  type: model
+  label: in
+  certainty: clear
+  reason: the original DNA language model; how
+- entity_id: model:dnabert-2
+  name: DNABERT-2
+  type: model
+  label: in
+  certainty: arguable
+  reason: fine-tuning for colorectal enhancer classification; where
+  type_defect: named for DNABERT-2, but its primary paper is an application; the
+    DNABERT-2 model paper is attached to benchmark:dnabert-2 instead, so the model
+    itself may have no record
+- entity_id: model:dnachunker
+  name: DNACHUNKER
+  type: model
+  label: in
+  certainty: clear
+  reason: learnable tokenisation for DNA language models; how
+- entity_id: model:dnamotiftokenizer
+  name: DNAMotifTokenizer
+  type: model
+  label: in
+  certainty: clear
+  reason: motif-informed tokenisation for DNA language models; how
+- entity_id: model:doformer
+  name: DoFormer
+  type: model
+  label: in
+  certainty: clear
+  reason: causal transformer for gene perturbation; what
+- entity_id: model:dong-2026-estimating-genotype-tissue-specific
+  name: Dong 2026 Estimating genotype-tissue specific
+  type: model
+  label: out
+  certainty: arguable
+  reason: imputes genotype-tissue expression profiles rather than reading sequence
+  failed_criterion: C2
+- entity_id: model:driessen-2025-single-cell-perturbation-modeling
+  name: Driessen 2025 single-cell perturbation modeling
+  type: model
+  label: in
+  certainty: clear
+  reason: conditional optimal transport for perturbation response; what
+- entity_id: model:drivr-base
+  name: DrivR-Base
+  type: model
+  label: out
+  certainty: arguable
+  reason: feature extraction for driver variant effect models; coding variant interpretation
+  failed_criterion: C3
 - entity_id: model:drugpt
   name: DrugPT
+  type: model
   label: in
   certainty: clear
   reason: predicts expression change on drug treatment; what
+  in_sample: true
+- entity_id: model:drusinsky-2026-causal-variant-underestimation
+  name: Drusinsky 2026 Causal variant underestimation
+  type: model
+  label: in
+  certainty: clear
+  reason: causal variant underestimation in sequence-to-function models; where
+  type_defect: a critique, which belongs in entity_paper rather than as an entity
+- entity_id: model:drusinsky-2026-deep-learning-prediction-gene
+  name: Drusinsky 2026 Deep-learning prediction gene
+  type: model
+  label: in
+  certainty: clear
+  reason: expression predicted from personal genome sequence; where
+- entity_id: model:dubey-2026-personalized-gene-expression
+  name: Dubey 2026 Personalized gene expression
+  type: model
+  label: out
+  certainty: clear
+  reason: a review of personalised expression prediction
+  failed_criterion: C1
+- entity_id: model:enformer
+  name: Enformer
+  type: model
+  label: in
+  certainty: clear
+  reason: long-range expression and chromatin tracks from sequence; where
 - entity_id: model:enigma
   name: Enigma
+  type: model
   label: in
   certainty: clear
   reason: sequence-to-function regulatory model; where
+  in_sample: true
 - entity_id: model:epiexpr
   name: EpiExpr
+  type: model
   label: in
   certainty: clear
   reason: expression from epigenetic tracks and 3D contacts; where
+  in_sample: true
+- entity_id: model:epigept
+  name: EpiGePT
+  type: model
+  label: in
+  certainty: clear
+  reason: context-specific epigenomics from sequence and chromatin; where
 - entity_id: model:epinformer
   name: EPInformer
+  type: model
   label: in
   certainty: clear
   reason: promoter-enhancer sequence plus epigenomic data; where
+  in_sample: true
+- entity_id: model:epintlm
+  name: EPINTLM
+  type: model
+  label: in
+  certainty: clear
+  reason: enhancer-promoter interaction prediction; where
+- entity_id: model:evo
+  name: Evo
+  type: model
+  label: in
+  certainty: clear
+  reason: genomic foundation model for sequence modelling and design; how
+- entity_id: model:evo2
+  name: Evo 2
+  type: model
+  label: in
+  certainty: clear
+  reason: genome modelling and design across domains of life; how
+- entity_id: model:evolen
+  name: EvoLen
+  type: model
+  label: in
+  certainty: clear
+  reason: evolution-guided tokenisation for DNA language models; how
 - entity_id: model:expecto
   name: ExPecto
+  type: model
   label: in
   certainty: clear
   reason: ab initio variant effect on expression from sequence; where
+  in_sample: true
+- entity_id: model:feng-2025-benchmarking-dna-foundation
+  name: Feng 2025 Benchmarking DNA foundation
+  type: model
+  label: in
+  certainty: clear
+  reason: DNA foundation models on genomic and genetic tasks; how
+  type_defect: a benchmark typed as a model, and a duplicate of benchmark:feng-2024-benchmarking-dna-foundation
+- entity_id: model:flashzoi
+  name: Flashzoi
+  type: model
+  label: in
+  certainty: clear
+  reason: accelerated re-implementation of Borzoi; where
+- entity_id: model:fmh2st
+  name: FmH2ST
+  type: model
+  label: out
+  certainty: clear
+  reason: spatial transcriptomics generated from histology
+  failed_criterion: C2
+- entity_id: model:foster-2021-contrastive-mixture-posteriors
+  name: Foster 2021 Contrastive Mixture Posteriors
+  type: model
+  label: out
+  certainty: arguable
+  reason: representation learning for batch correction and counterfactual inference;
+    a general method
+  failed_criterion: C3
+- entity_id: model:foundation-models-in-cancer-pathology
+  name: Foundation Models in Cancer Pathology
+  type: model
+  label: out
+  certainty: clear
+  reason: pathology image foundation models
+  failed_criterion: C2
+- entity_id: model:francesco-2026-differentiable-retrieval-augmented-generation
+  name: Francesco 2026 Differentiable Retrieval-Augmented Generation
+  type: model
+  label: in
+  certainty: clear
+  reason: retrieval-augmented perturbation response prediction; what
+- entity_id: model:fu-2026-benchmarking-gene-expression
+  name: Fu 2026 Benchmarking gene expression
+  type: model
+  label: out
+  certainty: clear
+  reason: expression reconstruction from latent representations
+  failed_criterion: C5
+- entity_id: model:fupred
+  name: FUpred
+  type: model
+  label: out
+  certainty: clear
+  reason: protein domain boundaries from contact maps
+  failed_criterion: C2
+- entity_id: model:gao-2024-subtask-decomposition-based-learning
+  name: Gao 2024 subtask decomposition-based learning
+  type: model
+  label: in
+  certainty: clear
+  reason: subtask decomposition for genetic perturbation outcome prediction; what
+- entity_id: model:gears
+  name: GEARS
+  type: model
+  label: in
+  certainty: clear
+  reason: transcriptional outcomes of novel multigene perturbations; what
+- entity_id: model:gena-lm
+  name: GENA-LM
+  type: model
+  label: in
+  certainty: clear
+  reason: open DNA language models for long sequences; how
+- entity_id: model:genart
+  name: GenART
+  type: model
+  label: in
+  certainty: clear
+  reason: adaptive tokenisation for genomic language models; how
+- entity_id: model:genebreaker
+  name: GeneBreaker
+  type: model
+  label: out
+  certainty: arguable
+  reason: jailbreak attacks on DNA language models; a security finding
+  failed_criterion: C1
+- entity_id: model:genejepa
+  name: GeneJepa
+  type: model
+  label: out
+  certainty: arguable
+  reason: a joint-embedding world model of the transcriptome; representation
+  failed_criterion: C5
+- entity_id: model:genepert
+  name: GenePert
+  type: model
+  label: in
+  certainty: clear
+  reason: gene perturbation prediction from embeddings; what
+- entity_id: model:generator
+  name: GENERator
+  type: model
+  label: in
+  certainty: clear
+  reason: long-context generative genomic foundation model; how
+- entity_id: model:genomeharness
+  name: GenomeHarness
+  type: model
+  label: in
+  certainty: clear
+  reason: agentic adaptation of genome language models to downstream tasks; how
+- entity_id: model:genomic-language-models
+  name: Genomic Language Models
+  type: model
+  label: out
+  certainty: clear
+  reason: a perspective on opportunities and challenges
+  failed_criterion: C1
+- entity_id: model:gong-2024-scauto-single-cell-chromatin
+  name: Gong 2024 scAuto single-cell chromatin
+  type: model
+  label: out
+  certainty: clear
+  reason: single-cell accessibility data analysis framework
+  failed_criterion: C3
 - entity_id: model:gpn
   name: GPN
+  type: model
   label: in
   certainty: clear
   reason: DNA language model for genome-wide variant effects; how
+  in_sample: true
+- entity_id: model:gpn-msa
+  name: GPN-MSA
+  type: model
+  label: in
+  certainty: clear
+  reason: alignment-based DNA language model for variant effect; how
+- entity_id: model:gpo-vae
+  name: GPO-VAE
+  type: model
+  label: in
+  certainty: clear
+  reason: explainable gene perturbation response; what
+- entity_id: model:graphunet-ss
+  name: GraphUnet-SS
+  type: model
+  label: out
+  certainty: clear
+  reason: protein secondary structure prediction
+  failed_criterion: C2
+- entity_id: model:graphylovar
+  name: GraphyloVar
+  type: model
+  label: in
+  certainty: clear
+  reason: non-coding variant impact from a multi-species sequence model; where
+- entity_id: model:grelu
+  name: gReLU
+  type: model
+  label: in
+  certainty: clear
+  reason: framework for DNA sequence modelling and design; where
+- entity_id: model:grover-2025-early-feature-extraction
+  name: Grover 2025 Early feature extraction
+  type: model
+  label: in
+  certainty: arguable
+  reason: architectural evaluation for accessibility prediction; a finding about
+    architectures
+  type_defect: duplicate of model:grover-2026-early-feature-extraction
 - entity_id: model:grover-2026-early-feature-extraction
   name: Grover 2026 Early feature extraction
+  type: model
   label: in
   certainty: arguable
   reason: architectural study of high-resolution chromatin accessibility prediction;
     in scope on substrate and axis, but its product is a finding about architectures
+  in_sample: true
 - entity_id: model:hacisuleyman-2026-rapid-interpretable-protein
   name: Hacisuleyman 2026 Rapid interpretable protein
+  type: model
   label: out
   certainty: clear
   reason: protein contact map prediction
   failed_criterion: C2
+  in_sample: true
 - entity_id: model:hallinan-2025-impact-data-quality
   name: Hallinan 2025 Impact Data Quality
+  type: model
   label: out
   certainty: clear
   reason: spatial transcriptomics from histology images
   failed_criterion: C2
+  in_sample: true
 - entity_id: model:hang-2025-puget-predicts-gene
   name: Hang 2025 Puget predicts gene
+  type: model
   label: in
   certainty: clear
   reason: expression from sequence and Hi-C; where
+  in_sample: true
 - entity_id: model:hanson-2018-accurate-prediction-protein
   name: Hanson 2018 Accurate prediction protein
+  type: model
   label: out
   certainty: clear
   reason: protein contact map prediction
   failed_criterion: C2
+  in_sample: true
 - entity_id: model:harrison-2026-do-gene-perturbation
   name: Harrison 2026 Do Gene Perturbation
+  type: model
   label: in
   certainty: arguable
   reason: tests perturbation predictions against measured effects; what
   type_defect: a critique, which belongs in entity_paper rather than as an entity
+  in_sample: true
+- entity_id: model:hasanaj-2025-multimodal-benchmarking-foundation
+  name: Hasanaj 2025 Multimodal Benchmarking Foundation
+  type: model
+  label: in
+  certainty: clear
+  reason: foundation model representations for perturbation response; what
+  type_defect: a benchmark typed as a model
+- entity_id: model:hegde-2025-reaping-fruits-llm
+  name: Hegde 2025 Reaping Fruits LLM
+  type: model
+  label: in
+  certainty: clear
+  reason: pruned genomic language models for non-coding variant effect; how
+- entity_id: model:hespotex
+  name: HESpotEx
+  type: model
+  label: out
+  certainty: clear
+  reason: spot-level expression from histology
+  failed_criterion: C2
+- entity_id: model:hidden-state-genomics
+  name: Hidden State Genomics
+  type: model
+  label: in
+  certainty: arguable
+  reason: sparse autoencoder feature activity in genomic language models; how
+- entity_id: model:honig-2024-long-range-gene-expression
+  name: Honig 2024 Long-range gene expression
+  type: model
+  label: in
+  certainty: clear
+  reason: token alignment for long-range expression prediction; where
+- entity_id: model:hosokawa-2025-transcoder-based-circuit-interpretable
+  name: Hosokawa 2025 Transcoder-based Circuit Interpretable
+  type: model
+  label: out
+  certainty: clear
+  reason: circuit analysis of single-cell foundation model internals
+  failed_criterion: C5
+- entity_id: model:htt-2026-evaluation-deep-learning
+  name: HTT 2026 Evaluation deep learning
+  type: model
+  label: in
+  certainty: clear
+  reason: evaluation of chromatin contact prediction tools; where
+  type_defect: a benchmark typed as a model
+- entity_id: model:hu-2024-benchmarking-algorithms-single-cell
+  name: Hu 2024 Benchmarking algorithms single-cell
+  type: model
+  label: out
+  certainty: clear
+  reason: single-cell multi-omics prediction and integration algorithms
+  failed_criterion: C3
+- entity_id: model:hybridna
+  name: HybriDNA
+  type: model
+  label: in
+  certainty: clear
+  reason: hybrid long-range DNA language model; how
+- entity_id: model:hycoseq
+  name: HyCoSeq
+  type: model
+  label: in
+  certainty: clear
+  reason: hyperbolic representation learning for genomic sequence; how
+- entity_id: model:hyenadna
+  name: HyenaDNA
+  type: model
+  label: in
+  certainty: clear
+  reason: single-nucleotide-resolution long-range genomic model; how
+- entity_id: model:hyperbolic-genome-embeddings
+  name: Hyperbolic Genome Embeddings
+  type: model
+  label: in
+  certainty: clear
+  reason: hyperbolic representations of genomic sequence; how
+- entity_id: model:iedgedta
+  name: iEdgeDTA
+  type: model
+  label: out
+  certainty: clear
+  reason: drug-target binding affinity
+  failed_criterion: C2
+- entity_id: model:javed-2025-multi-modal-transformer-cell
+  name: Javed 2025 multi-modal transformer cell
+  type: model
+  label: in
+  certainty: clear
+  reason: EpiBERT, cell-type-agnostic regulatory prediction; where
+- entity_id: model:jia-2026-virtual-cell-construction
+  name: Jia 2026 Virtual cell construction
+  type: model
+  label: out
+  certainty: arguable
+  reason: a review of virtual cell construction for drug discovery
+  failed_criterion: C1
+- entity_id: model:jiang-2025-evaluating-dna-function
+  name: Jiang 2025 Evaluating DNA function
+  type: model
+  label: in
+  certainty: clear
+  reason: Nullsettes, loss-of-function prediction on implausible sequences; how
+  type_defect: a benchmark typed as a model
+- entity_id: model:jiang-2026-what-makes-representation
+  name: Jiang 2026 What Makes Representation
+  type: model
+  label: in
+  certainty: arguable
+  reason: what representations suit perturbation prediction; a finding, within an
+    in-scope axis
+- entity_id: model:joubert-2026-dna-language-grover
+  name: Joubert 2026 DNA language GROVER
+  type: model
+  label: out
+  certainty: arguable
+  reason: uses a DNA language model to explain double-strand break sensitivity;
+    the product is an explanation
+  failed_criterion: C3
+- entity_id: model:jung-2026-decoding-promoter-activity
+  name: Jung 2026 Decoding promoter activity
+  type: model
+  label: in
+  certainty: clear
+  reason: promoter activity from sequence with pretrained models; where
 - entity_id: model:karimzadeh-2026-high-resolution-protein-rna-binding
   name: Karimzadeh 2026 high-resolution protein-RNA binding
+  type: model
   label: out
   certainty: clear
   reason: protein-RNA binding atlas; RNA substrate
   failed_criterion: C2
+  in_sample: true
+- entity_id: model:kathail-2024-leveraging-genomic-deep
+  name: Kathail 2024 Leveraging genomic deep
+  type: model
+  label: out
+  certainty: arguable
+  reason: practical guidance on using genomic deep learning for non-coding variants;
+    a review
+  failed_criterion: C1
+- entity_id: model:kato-2026-evaluating-evo-2
+  name: Kato 2026 Evaluating Evo 2
+  type: model
+  label: in
+  certainty: clear
+  reason: Evo 2 on plant regulatory variant effect; how
 - entity_id: model:kaufmann-2026-biological-response-compound-representation
   name: Kaufmann 2026 biological-response compound representation
+  type: model
   label: in
   certainty: clear
   reason: chemical perturbation response across cell lines; what
+  in_sample: true
+- entity_id: model:kaushik-2026-computational-navigation-constrained
+  name: Kaushik 2026 Computational navigation constrained
+  type: model
+  label: out
+  certainty: clear
+  reason: protein fitness landscapes
+  failed_criterion: C2
+- entity_id: model:kendiukhov-2026-evaluation-single-cell-foundation
+  name: Kendiukhov 2026 evaluation single-cell foundation
+  type: model
+  label: out
+  certainty: clear
+  reason: interpretability of single-cell foundation model attention for network
+    inference
+  failed_criterion: C5
+- entity_id: model:kim-2026-set-aggregated-genome-embeddings
+  name: Kim 2026 Set-Aggregated Genome Embeddings
+  type: model
+  label: out
+  certainty: clear
+  reason: microbiome abundance prediction
+  failed_criterion: C3
+- entity_id: model:krupi-ka-2025-benchmarking-genomic-foundation
+  name: Krupička 2025 Benchmarking Genomic Foundation
+  type: model
+  label: out
+  certainty: clear
+  reason: gene fusion detection; diagnostic annotation
+  failed_criterion: C3
+- entity_id: model:lanclos-2026-generative-design-new-to-nature
+  name: Lanclos 2026 Generative Design New-to-nature
+  type: model
+  label: out
+  certainty: arguable
+  reason: generative design of biosynthetic assembly lines; a DNA language model
+    acting, but on a metabolic pathway rather than any fate axis
+  failed_criterion: C4
+- entity_id: model:lee-2026-probing-3d-chromatin
+  name: Lee 2026 Probing 3D Chromatin
+  type: model
+  label: in
+  certainty: clear
+  reason: whether Evo2 encodes 3D chromatin structure; how and where
+- entity_id: model:li-2023-gene-expression-prediction
+  name: Li 2023 Gene expression prediction
+  type: model
+  label: out
+  certainty: arguable
+  reason: infers the remaining transcriptome from landmark genes; the substrate
+    is expression, not sequence
+  failed_criterion: C2
+- entity_id: model:li-2024-exploring-alternative-conformation
+  name: Li 2024 Exploring Alternative Conformation
+  type: model
+  label: out
+  certainty: clear
+  reason: protein conformations from contact map prediction
+  failed_criterion: C2
 - entity_id: model:li-2025-benchmark-evo2-genomic
   name: Li 2025 Benchmark Evo2 Genomic
+  type: model
   label: in
   certainty: clear
   reason: benchmark of a genomic foundation model; how
   type_defect: a benchmark typed as a model
+  in_sample: true
+- entity_id: model:li-2025-fveocrs-database-open
+  name: Li 2025 FveOCRs database open
+  type: model
+  label: in
+  certainty: clear
+  reason: predicted open chromatin regions in wild strawberry; where
+  type_defect: a database typed as a model
+- entity_id: model:li-2026-comparison-single-cell-perturbation
+  name: Li 2026 comparison single-cell perturbation
+  type: model
+  label: in
+  certainty: clear
+  reason: 13 methods across 25 perturbation datasets; what
+  type_defect: a benchmark typed as a model
+- entity_id: model:li-2026-deep-learning-guided-identification
+  name: Li 2026 Deep Learning-Guided Identification
+  type: model
+  label: in
+  certainty: clear
+  reason: designs and validates compact zebrafish cis-regulatory elements; where
+- entity_id: model:li-2026-deep-learning-tf
+  name: Li 2026 Deep learning TF
+  type: model
+  label: in
+  certainty: clear
+  reason: the TF regulatory code for expression; where
 - entity_id: model:li-2026-mechanism-annotated-benchmark-reveals
   name: Li 2026 mechanism-annotated benchmark reveals
+  type: model
   label: in
   certainty: clear
   reason: benchmark of single-cell drug perturbation models; what
   type_defect: a benchmark typed as a model
+  in_sample: true
+- entity_id: model:liang-2026-split-control-criterion-few-shot
+  name: Liang 2026 split-control criterion few-shot
+  type: model
+  label: in
+  certainty: clear
+  reason: when to adapt in few-shot perturbation prediction; what
+- entity_id: model:lin-2025-unveiling-chromatin-dynamics
+  name: Lin 2025 Unveiling chromatin dynamics
+  type: model
+  label: in
+  certainty: clear
+  reason: virtual epigenome for chromatin organisation; where
+- entity_id: model:lingshu-cell
+  name: Lingshu-Cell
+  type: model
+  label: in
+  certainty: clear
+  reason: generative cellular model for perturbation response; what
+- entity_id: model:liu-2018-chromatin-accessibility-prediction
+  name: Liu 2018 Chromatin accessibility prediction
+  type: model
+  label: in
+  certainty: clear
+  reason: chromatin accessibility from sequence; where
+- entity_id: model:liu-2021-protein-contact-map
+  name: Liu 2021 Protein contact map
+  type: model
+  label: out
+  certainty: clear
+  reason: protein contact map prediction
+  failed_criterion: C2
 - entity_id: model:liu-2025-effective-gene-expression
   name: Liu 2025 Effective Gene Expression
+  type: model
   label: out
   certainty: clear
   reason: protein expression predicted from protein sequence
   failed_criterion: C2
+  in_sample: true
+- entity_id: model:liu-2026-pre-training-genomic-language
+  name: Liu 2026 Pre-training genomic language
+  type: model
+  label: in
+  certainty: clear
+  reason: genomic language model pretrained with variants; how
 - entity_id: model:liu-2026-predicting-cell-state-specific-gene
   name: Liu 2026 Predicting cell-state-specific gene
+  type: model
   label: in
   certainty: clear
   reason: cell-state-conditioned sequence-to-function model; where
+  in_sample: true
 - entity_id: model:lo-2026-evolution-mechanism-i
   name: Lo 2026 Evolution mechanism i
+  type: model
   label: out
   certainty: clear
   reason: a finding about MEIS2 and bat forelimb evolution
   failed_criterion: C1
+  in_sample: true
+- entity_id: model:long-2026-learning-perturbation-effects
+  name: Long 2026 Learning Perturbation Effects
+  type: model
+  label: in
+  certainty: clear
+  reason: multimodal perturbation effect representations; what
+- entity_id: model:lorch-2026-latent-causal-diffusions
+  name: Lorch 2026 Latent Causal Diffusions
+  type: model
+  label: in
+  certainty: clear
+  reason: latent causal diffusion for perturbation modelling; what
+- entity_id: model:lotfollahi-2019-conditional-out-of-sample-generation
+  name: Lotfollahi 2019 Conditional out-of-sample generation
+  type: model
+  label: in
+  certainty: clear
+  reason: trVAE, conditional out-of-sample perturbation response; what
 - entity_id: model:lu-2026-generative-virtual-tissue
   name: Lu 2026 Generative Virtual Tissue
+  type: model
   label: in
   certainty: arguable
   reason: forward-simulates tissue response to design therapeutic perturbations,
     which is acting; what
+  in_sample: true
+- entity_id: model:lucacell
+  name: LucaCell
+  type: model
+  label: out
+  certainty: clear
+  reason: cross-species single-cell representation model
+  failed_criterion: C5
+- entity_id: model:ma-2025-reverse-complement-consistency-dna
+  name: Ma 2025 Reverse-Complement Consistency DNA
+  type: model
+  label: in
+  certainty: clear
+  reason: reverse-complement consistency in DNA language models; how
+- entity_id: model:ma-2026-enhancing-cross-context-generalization
+  name: Ma 2026 Enhancing cross-context generalization
+  type: model
+  label: in
+  certainty: clear
+  reason: cross-context drug perturbation response; what
+- entity_id: model:maddu-2026-learning-biophysical-gene
+  name: Maddu 2026 Learning biophysical gene
+  type: model
+  label: in
+  certainty: arguable
+  reason: biophysical models of gene regulation mediating differentiation; what
+- entity_id: model:mah-2022-enhancing-protein-contact
+  name: MAH 2022 Enhancing protein contact
+  type: model
+  label: out
+  certainty: clear
+  reason: protein contact map prediction
+  failed_criterion: C2
+- entity_id: model:mangan-2026-sequence-to-function-deep-learning
+  name: Mangan 2026 Sequence-to-function deep learning
+  type: model
+  label: out
+  certainty: arguable
+  reason: uses sequence-to-function models to study regulatory evolution; the product
+    is an evolutionary finding
+  failed_criterion: C3
+- entity_id: model:map
+  name: MAP
+  type: model
+  label: in
+  certainty: clear
+  reason: single-cell responses to unprofiled drugs; what
+- entity_id: model:mcanany-2026-positional-interpretation-cis-regulatory
+  name: McAnany 2026 Positional interpretation cis-regulatory
+  type: model
+  label: in
+  certainty: clear
+  reason: positional interpretation of cis-regulatory code and nucleosome organisation;
+    where
+- entity_id: model:membrain-contact-2-0
+  name: MemBrain-contact 2.0
+  type: model
+  label: out
+  certainty: clear
+  reason: transmembrane protein residue contacts
+  failed_criterion: C2
+- entity_id: model:meng-2026-multi-tissue-epigenomic-atlas
+  name: Meng 2026 multi-tissue epigenomic atlas
+  type: model
+  label: in
+  certainty: arguable
+  reason: a sheep multi-tissue regulatory atlas; where
+  type_defect: a dataset typed as a model
+- entity_id: model:merchant-2026-semantic-design-functional
+  name: Merchant 2026 Semantic design functional
+  type: model
+  label: out
+  certainty: arguable
+  reason: de novo gene design from a genomic language model; sequence design, but
+    the target is a gene product rather than a fate axis
+  failed_criterion: C4
+- entity_id: model:min-2017-chromatin-accessibility-prediction
+  name: Min 2017 Chromatin accessibility prediction
+  type: model
+  label: in
+  certainty: clear
+  reason: chromatin accessibility from sequence; where
 - entity_id: model:molina-2026-perturbation-response-decomposition
   name: Molina 2026 Perturbation response decomposition
+  type: model
   label: in
   certainty: clear
   reason: perturbation response generalisation; what
+  in_sample: true
 - entity_id: model:mtmixg-net
   name: MTMixG-Net
+  type: model
   label: in
   certainty: clear
   reason: plant gene expression from genomic sequence; where
+  in_sample: true
 - entity_id: model:multipert
   name: MultiPert
+  type: model
   label: in
   certainty: clear
   reason: single-cell multi-omics perturbation response; what
+  in_sample: true
+- entity_id: model:nagai-2026-interpretable-ai-regulatory
+  name: Nagai 2026 interpretable AI regulatory
+  type: model
+  label: out
+  certainty: arguable
+  reason: a perspective on generalisable and interpretable regulatory genomics,
+    not a resource
+  failed_criterion: C1
+  type_defect: duplicate of model:toward-interpretable-and-generalizable-ai-in-regulatory-genomics
+- entity_id: model:navidi-2025-adaptive-resampling-machine
+  name: Navidi 2025 Adaptive resampling machine
+  type: model
+  label: out
+  certainty: arguable
+  reason: resampling for imbalanced single-cell data; a general ML method, not an
+    action on the genome
+  failed_criterion: C3
+- entity_id: model:nayak-2026-genomic-foundation-model-derived
+  name: Nayak 2026 Genomic foundation model-derived
+  type: model
+  label: out
+  certainty: clear
+  reason: links somatic mutation burden to clinical outcome; association, not design
+  failed_criterion: C3
+- entity_id: model:nebcon
+  name: NeBcon
+  type: model
+  label: out
+  certainty: clear
+  reason: protein contact map prediction
+  failed_criterion: C2
 - entity_id: model:nemecek-2026-quantifying-memorization-privacy
   name: Nemecek 2026 Quantifying Memorization Privacy
+  type: model
   label: out
   certainty: arguable
   reason: 'a privacy evaluation framework for genomic language models: the substrate
     is in scope but the product is a risk assessment, not a resource for acting'
   failed_criterion: C1
+  in_sample: true
+- entity_id: model:nguyen-2025-sequence-based-chromatin-activity
+  name: Nguyen 2025 Sequence-based chromatin activity
+  type: model
+  label: in
+  certainty: clear
+  reason: chromatin activity and regulatory variant impact in farmed animals; where
+- entity_id: model:nicol-2026-spurious-correlation-inflates
+  name: Nicol 2026 Spurious correlation inflates
+  type: model
+  label: in
+  certainty: clear
+  reason: spurious correlation in perturbation prediction metrics; what
+  type_defect: a critique, which belongs in entity_paper rather than as an entity
+- entity_id: model:nucleotide-transformer
+  name: Nucleotide Transformer
+  type: model
+  label: in
+  certainty: clear
+  reason: DNA language model family; how
 - entity_id: model:ocoo-t
   name: OCOO-T
+  type: model
   label: in
   certainty: clear
   reason: transcriptional perturbation response prediction; what
+  in_sample: true
+- entity_id: model:onawole-2026-trust-aware-sequence-to-function-modelling
+  name: Onawole 2026 Trust-Aware Sequence-to-Function Modelling
+  type: model
+  label: in
+  certainty: clear
+  reason: trust-aware sequence-to-function inference for regulatory activity; where
 - entity_id: model:orca
   name: Orca
+  type: model
   label: in
   certainty: clear
   reason: 3D genome architecture from sequence; where
+  in_sample: true
+- entity_id: model:oryzag3
+  name: OryzaG3
+  type: model
+  label: in
+  certainty: clear
+  reason: rice pangenome genomic foundation model; how
+- entity_id: model:oyster
+  name: Oyster
+  type: model
+  label: in
+  certainty: clear
+  reason: position-specific k-mer contributions in genomic sequence models; where
+- entity_id: model:palla-2026-tabular-foundation-competitive
+  name: Palla 2026 Tabular Foundation Competitive
+  type: model
+  label: in
+  certainty: clear
+  reason: tabular models as perturbation predictors; what
 - entity_id: model:parnet
   name: PARNET
+  type: model
   label: out
   certainty: clear
   reason: RNA foundation model trained on CLIP-seq; RNA substrate
   failed_criterion: C2
+  in_sample: true
+- entity_id: model:passow-2026-amplicon-protein-bead
+  name: Passow 2026 Amplicon Protein Bead
+  type: model
+  label: out
+  certainty: clear
+  reason: a protein library display method
+  failed_criterion: C2
 - entity_id: model:pearce-2026-interpretable-variant-effect
   name: Pearce 2026 Interpretable variant effect
+  type: model
   label: in
   certainty: clear
   reason: variant effect from genomic foundation model representations; how
+  in_sample: true
+- entity_id: model:pertadapt
+  name: PertAdapt
+  type: model
+  label: in
+  certainty: clear
+  reason: adapting single-cell foundation models to perturbation prediction; what
+- entity_id: model:pertdiffbench
+  name: PertDiffBench
+  type: model
+  label: in
+  certainty: clear
+  reason: diffusion models for perturbation response; what
+  type_defect: a benchmark typed as a model
+- entity_id: model:perttf
+  name: pertTF
+  type: model
+  label: in
+  certainty: clear
+  reason: genome-scale perturbation prediction; what
+- entity_id: model:perturbbridge
+  name: PerturbBridge
+  type: model
+  label: in
+  certainty: clear
+  reason: single-cell perturbation response; what
+- entity_id: model:pgst
+  name: PGST
+  type: model
+  label: out
+  certainty: clear
+  reason: spatial transcriptomics prediction from morphology
+  failed_criterion: C2
 - entity_id: model:phylotune
   name: PhyloTune
+  type: model
   label: out
   certainty: clear
   reason: phylogenetic tree reconstruction; observation, though it uses a DNA language
     model
   failed_criterion: C3
+  in_sample: true
 - entity_id: model:poisoning-the-genome
   name: Poisoning the Genome
+  type: model
   label: out
   certainty: arguable
   reason: 'backdoor attacks on DNA foundation models: in-scope substrate, but the
     product is a security finding'
   failed_criterion: C1
+  in_sample: true
 - entity_id: model:pop-corn
   name: Pop-Corn
+  type: model
   label: in
   certainty: clear
   reason: perturbation phenotype effects across contexts; what
+  in_sample: true
+- entity_id: model:prestige-st
+  name: PRESTIGE-ST
+  type: model
+  label: out
+  certainty: clear
+  reason: expression inferred from histology patches
+  failed_criterion: C2
+- entity_id: model:prot-vae
+  name: ProT-VAE
+  type: model
+  label: out
+  certainty: clear
+  reason: functional protein design
+  failed_criterion: C2
+- entity_id: model:provatas1-2026-tracing-model-generated-dna
+  name: Provatas1 2026 Tracing model-generated DNA
+  type: model
+  label: out
+  certainty: arguable
+  reason: watermarking for provenance of generated DNA
+  failed_criterion: C1
+- entity_id: model:psl-2026-principled-evaluation-single-cell
+  name: PSL 2026 Principled Evaluation Single-Cell
+  type: model
+  label: in
+  certainty: clear
+  reason: principled evaluation of perturbation prediction models; what
+  type_defect: a benchmark typed as a model
+- entity_id: model:qiao-2026-explainable-deep-learning
+  name: Qiao 2026 Explainable Deep Learning
+  type: model
+  label: in
+  certainty: clear
+  reason: expression from sequence and initiation signals; where
+- entity_id: model:radig-2025-tracking-biological-hallucinations
+  name: Radig 2025 Tracking biological hallucinations
+  type: model
+  label: in
+  certainty: clear
+  reason: scArchon, a perturbation model benchmarking platform; what
+  type_defect: a benchmark typed as a model, and a duplicate of model:scarchon
+- entity_id: model:ragenome
+  name: RAGenome
+  type: model
+  label: in
+  certainty: clear
+  reason: retrieval-based genomic language model at long context; how
+- entity_id: model:ramarao-milne-2026-evaluating-cross-species-transferability
+  name: Ramarao-Milne 2026 Evaluating cross-species transferability
+  type: model
+  label: in
+  certainty: clear
+  reason: cross-species transferability of AlphaGenome predictions; where
+  type_defect: an evaluation, which belongs in entity_paper rather than as an entity
+- entity_id: model:ramprasad-2024-enhancing-personalized-gene
+  name: Ramprasad 2024 Enhancing personalized gene
+  type: model
+  label: in
+  certainty: clear
+  reason: personalised expression from sequence with foundation models; where
+- entity_id: model:ramprasad-2025-enhancing-gene-expression
+  name: Ramprasad 2025 Enhancing Gene Expression
+  type: model
+  label: out
+  certainty: arguable
+  reason: TWAS expression imputation from genotype rather than from sequence
+  failed_criterion: C2
+- entity_id: model:rashidy-2025-zygosity-aware-dna-language
+  name: Rashidy 2025 Zygosity-Aware DNA Language
+  type: model
+  label: in
+  certainty: arguable
+  reason: zygosity-aware DNA language modelling; improves expression prediction,
+    but ancestry inference is the other half
+- entity_id: model:rastogi-2026-fine-tuning-sequence-to-expression-personal
+  name: Rastogi 2026 Fine-tuning sequence-to-expression personal
+  type: model
+  label: in
+  certainty: clear
+  reason: fine-tuning sequence-to-expression models on personal genomes; where
 - entity_id: model:rather-2026-kidzoi-enables-cell-type-specific
   name: Rather 2026 Kidzoi Enables Cell-Type-Specific
+  type: model
   label: in
   certainty: clear
   reason: kidney sequence-to-function model by transfer from Borzoi; where
+  in_sample: true
+- entity_id: model:regfm
+  name: RegFM
+  type: model
+  label: in
+  certainty: clear
+  reason: context-aware foundation model for human transcriptional regulation; where
+- entity_id: model:rizvi-2025-scaling-language-next-generation
+  name: Rizvi 2025 Scaling Language Next-Generation
+  type: model
+  label: out
+  certainty: arguable
+  reason: scaling single-cell foundation models for analysis; representation rather
+    than perturbation response
+  failed_criterion: C5
+- entity_id: model:ronen-2020-deep-homology-based-protein
+  name: Ronen 2020 Deep Homology-Based Protein
+  type: model
+  label: out
+  certainty: clear
+  reason: protein contact map prediction
+  failed_criterion: C2
+- entity_id: model:rubbi-2026-standardized-evaluating-gene
+  name: Rubbi 2026 Standardized Evaluating Gene
+  type: model
+  label: out
+  certainty: arguable
+  reason: evaluation of generative models of expression, not of perturbation response
+  failed_criterion: C5
+- entity_id: model:ruiz-2025-completing-spatial-transcriptomics
+  name: Ruiz 2025 Completing spatial transcriptomics
+  type: model
+  label: out
+  certainty: clear
+  reason: spatial transcriptomics completion for histology-based prediction
+  failed_criterion: C2
+- entity_id: model:saghafi-2025-cluster-based-data-balancing
+  name: Saghafi 2025 Cluster-Based Data Balancing
+  type: model
+  label: out
+  certainty: clear
+  reason: protein contact map prediction
+  failed_criterion: C2
 - entity_id: model:sample-2019-human-5-utr
   name: Sample 2019 Human 5' UTR
+  type: model
   label: in
   certainty: clear
   reason: UTR design and variant effect from a massively parallel assay; where
+  in_sample: true
 - entity_id: model:sapkota-2025-hybrid-tokenization-strategy
   name: Sapkota 2025 Hybrid Tokenization Strategy
+  type: model
   label: in
   certainty: clear
   reason: tokenisation for DNA language models; how
+  in_sample: true
+- entity_id: model:sathian-2026-genomic-language-predicting
+  name: Sathian 2026 Genomic language predicting
+  type: model
+  label: in
+  certainty: clear
+  reason: enhancers and allele-specific activity from a genomic language model;
+    where
+- entity_id: model:sc-otgm
+  name: sc-OTGM
+  type: model
+  label: in
+  certainty: clear
+  reason: optimal transport for single-cell perturbation modelling; what
+- entity_id: model:scale
+  name: SCALE
+  type: model
+  label: in
+  certainty: clear
+  reason: atlas-level conditional transport for perturbation prediction; what
 - entity_id: model:scape
   name: ScAPE
+  type: model
   label: in
   certainty: clear
   reason: drug-induced expression change; what
+  in_sample: true
+- entity_id: model:scarchon
+  name: scArchon
+  type: model
+  label: in
+  certainty: clear
+  reason: benchmarking framework for single-cell perturbation models; what
+  type_defect: a benchmark typed as a model, and a duplicate of model:radig-2025-tracking-biological-hallucinations
+- entity_id: model:scbasset
+  name: scBasset
+  type: model
+  label: in
+  certainty: clear
+  reason: single-cell ATAC from sequence; where
 - entity_id: model:scdisinfact
   name: scDisInFact
+  type: model
   label: out
   certainty: clear
   reason: batch and condition disentangling for integration
   failed_criterion: C3
+  in_sample: true
+- entity_id: model:scdiva
+  name: ScDiVa
+  type: model
+  label: out
+  certainty: clear
+  reason: joint generative modelling of cell identity and expression
+  failed_criterion: C5
+- entity_id: model:scgenept
+  name: scGenePT
+  type: model
+  label: in
+  certainty: clear
+  reason: language embeddings for single-cell perturbation modelling; what
+- entity_id: model:scgpt
+  name: scGPT
+  type: model
+  label: in
+  certainty: arguable
+  reason: single-cell foundation model whose evaluated tasks include perturbation
+    response; in under C5 on that use, not on its representation tasks
+- entity_id: model:schmauch-2025-deep-learning-based-multiscale
+  name: Schmauch 2025 deep learning-based multiscale
+  type: model
+  label: out
+  certainty: clear
+  reason: spatial omics integrated with tumour morphology
+  failed_criterion: C2
+- entity_id: model:schneckener-2026-sequence-optimization-targeting
+  name: Schneckener 2026 Sequence optimization targeting
+  type: model
+  label: out
+  certainty: arguable
+  reason: DNA sequence optimisation for antibody titre in CHO cells; design, but
+    for protein production
+  failed_criterion: C4
 - entity_id: model:scldm
   name: scLDM
+  type: model
   label: in
   certainty: clear
   reason: single-cell perturbation response by diffusion; what
+  in_sample: true
 - entity_id: model:scmomer
   name: scMomer
+  type: model
   label: out
   certainty: clear
   reason: multi-omics pretraining under missing modalities; representation only
   failed_criterion: C5
+  in_sample: true
+- entity_id: model:scooby
+  name: scooby
+  type: model
+  label: in
+  certainty: clear
+  reason: single-cell multi-modal profiles from sequence; where
+- entity_id: model:scouter
+  name: Scouter
+  type: model
+  label: in
+  certainty: clear
+  reason: transcriptional responses to genetic perturbations; what
+- entity_id: model:scrgp
+  name: scRGP
+  type: model
+  label: in
+  certainty: clear
+  reason: rank-based perturbation response prediction; what
+- entity_id: model:scyeast
+  name: scYeast
+  type: model
+  label: out
+  certainty: arguable
+  reason: yeast single-cell foundation model; representation
+  failed_criterion: C5
+- entity_id: model:securing-the-language-of-life
+  name: Securing the Language of Life
+  type: model
+  label: out
+  certainty: arguable
+  reason: inheritable watermarks for provenance; a security mechanism, not a fate
+    resource
+  failed_criterion: C1
+- entity_id: model:sei
+  name: Sei
+  type: model
+  label: in
+  certainty: clear
+  reason: sequence-based global map of regulatory activity; where
 - entity_id: model:semanticcap
   name: SemanticCAP
+  type: model
   label: in
   certainty: clear
   reason: chromatin accessibility prediction; where
+  in_sample: true
+- entity_id: model:serizay-2025-multi-modal-data-integration
+  name: Serizay 2025 Multi-modal data integration
+  type: model
+  label: out
+  certainty: arguable
+  reason: a multi-omics data repository and query framework; infrastructure
+  failed_criterion: C3
+- entity_id: model:shaikhutdinova-2026-independent-benchmark-h
+  name: Shaikhutdinova 2026 Independent benchmark H
+  type: model
+  label: out
+  certainty: clear
+  reason: expression predicted from H and E slides
+  failed_criterion: C2
+- entity_id: model:sharipov-2026-scaling-autoregressive-transformer
+  name: Sharipov 2026 Scaling Autoregressive Transformer
+  type: model
+  label: out
+  certainty: clear
+  reason: generating expression vectors for a cell type; representation
+  failed_criterion: C5
 - entity_id: model:sigliano-2026-metric-calibrated-replay-single-cell
   name: Sigliano 2026 Metric-Calibrated Replay Single-Cell
+  type: model
   label: in
   certainty: arguable
   reason: a replay and scoring framework for perturbation benchmarks; what
   type_defect: closer to a benchmark than a model
+  in_sample: true
+- entity_id: model:signals-in-the-cells
+  name: Signals in the Cells
+  type: model
+  label: in
+  certainty: arguable
+  reason: contextual single-cell tasks including genetic perturbation; what
+  type_defect: a benchmark typed as a model
+- entity_id: model:slim
+  name: SLIM
+  type: model
+  label: in
+  certainty: clear
+  reason: linear baseline for genetic perturbation prediction; what
+- entity_id: model:spadit
+  name: SpaDiT
+  type: model
+  label: out
+  certainty: clear
+  reason: imputing spatial expression from scRNA-seq; observation
+  failed_criterion: C3
+- entity_id: model:spavgn
+  name: SpaVGN
+  type: model
+  label: out
+  certainty: clear
+  reason: spatial transcriptomics reconstruction and domain identification
+  failed_criterion: C3
+- entity_id: model:splisync
+  name: SpliSync
+  type: model
+  label: out
+  certainty: clear
+  reason: splice site correction in long sequencing reads; read processing
+  failed_criterion: C3
 - entity_id: model:spot-contact-lm
   name: SPOT-Contact-LM
+  type: model
+  label: out
+  certainty: clear
+  reason: protein contact map prediction
+  failed_criterion: C2
+  in_sample: true
+- entity_id: model:spot-contact-single
+  name: SPOT-Contact-Single
+  type: model
   label: out
   certainty: clear
   reason: protein contact map prediction
   failed_criterion: C2
 - entity_id: model:sta-czak-2026-explicit-mechanistic-operators
   name: Stańczak 2026 Explicit Mechanistic Operators
+  type: model
   label: in
   certainty: arguable
   reason: a falsification framework for virtual-cell perturbation prediction; what
   type_defect: closer to a benchmark than a model
+  in_sample: true
+- entity_id: model:stamps
+  name: STAMPS
+  type: model
+  label: out
+  certainty: clear
+  reason: signal peptide design for protein secretion
+  failed_criterion: C2
 - entity_id: model:starr-2025-detect-positive-selection
   name: Starr 2025 detect positive selection
+  type: model
   label: out
   certainty: clear
   reason: detecting positive selection; observation, though built on variant effect
     predictors
   failed_criterion: C3
+  in_sample: true
+- entity_id: model:stochastic-flow-map-for-count-data
+  name: Stochastic Flow Map for Count Data
+  type: model
+  label: out
+  certainty: clear
+  reason: a generative model for count data in general
+  failed_criterion: C2
+- entity_id: model:su-2026-fine-tuned-genomic-language
+  name: Su 2026 fine-tuned genomic language
+  type: model
+  label: out
+  certainty: arguable
+  reason: missense variant impact in clinical genomics; coding variant interpretation
+  failed_criterion: C3
 - entity_id: model:sugimoto-2026-transcription-factor-regulatory
   name: Sugimoto 2026 transcription factor regulatory
+  type: model
   label: in
   certainty: clear
   reason: TF activity inference and perturbation response prediction; what
+  in_sample: true
+- entity_id: model:sun-2025-hi-compass-resolves-cell-type
+  name: Sun 2025 Hi-Compass resolves cell-type
+  type: model
+  label: in
+  certainty: clear
+  reason: chromatin interactions predicted from accessibility; where
+- entity_id: model:sun-2026-evaluating-sequence-to-function-deep
+  name: Sun 2026 Evaluating sequence-to-function deep
+  type: model
+  label: in
+  certainty: clear
+  reason: ancestry-stratified regulatory variant effect from sequence-to-function
+    models; where
 - entity_id: model:sun-2026-pretraining-enhances-megabase-scale
   name: Sun 2026 Pretraining Enhances Megabase-Scale
+  type: model
   label: in
   certainty: clear
   reason: megabase-scale expression prediction; where
+  in_sample: true
 - entity_id: model:systema
   name: Systema
+  type: model
   label: in
   certainty: clear
   reason: evaluation framework for perturbation response prediction; what
   type_defect: a benchmark typed as a model
+  in_sample: true
+- entity_id: model:thitogene
+  name: THItoGene
+  type: model
+  label: out
+  certainty: clear
+  reason: spatial transcriptomics from histology
+  failed_criterion: C2
+- entity_id: model:tiwari-2026-genetic-perturbation-prediction
+  name: Tiwari 2026 Genetic Perturbation Prediction
+  type: model
+  label: in
+  certainty: clear
+  reason: out-of-distribution failure of perturbation predictors; what
+  type_defect: a benchmark typed as a model
+- entity_id: model:torghabeh-2026-genomic-language-improve
+  name: Torghabeh 2026 Genomic language improve
+  type: model
+  label: in
+  certainty: clear
+  reason: cross-species expression and regulatory variant effects in plants; where
+- entity_id: model:toward-interpretable-and-generalizable-ai-in-regulatory-genomics
+  name: Toward Interpretable and Generalizable AI in Regulatory Genomics
+  type: model
+  label: out
+  certainty: arguable
+  reason: the same perspective under a second entity
+  failed_criterion: C1
+  type_defect: duplicate of model:nagai-2026-interpretable-ai-regulatory
+- entity_id: model:tu-2026-deep-genomic-allele-specific
+  name: Tu 2026 Deep genomic allele-specific
+  type: model
+  label: in
+  certainty: clear
+  reason: allele-specific measurements from sequence; where
+- entity_id: model:uysal-2026-evaluation-multiple-sclerosis
+  name: Uysal 2026 Evaluation multiple sclerosis
+  type: model
+  label: in
+  certainty: clear
+  reason: tests whether sequence-to-function oracles generalise when used to select
+    designed regulatory elements; where
+  type_defect: a critique, which belongs in entity_paper rather than as an entity
+- entity_id: model:v3cell
+  name: V3Cell
+  type: model
+  label: in
+  certainty: arguable
+  reason: organoid response to chemical perturbation; what, admitted on the prediction
+    target despite the imaging modality
+- entity_id: model:variantformer
+  name: VariantFormer
+  type: model
+  label: in
+  certainty: clear
+  reason: personalised expression from sequence plus variation; where
+- entity_id: model:vaz-2025-fine-tuning-sequence-function
+  name: Vaz 2025 Fine-tuning sequence function
+  type: model
+  label: in
+  certainty: clear
+  reason: fine-tuning sequence-to-function models for variant effect; where
+- entity_id: model:vcbench
+  name: VCBench
+  type: model
+  label: in
+  certainty: arguable
+  reason: multi-dimensional benchmark of single-cell foundation models; in on the
+    perturbation dimensions, representation-only on others
+  type_defect: a benchmark typed as a model
+- entity_id: model:vclmu
+  name: VCLMU
+  type: model
+  label: in
+  certainty: clear
+  reason: mechanism-centric virtual cell for perturbation response; what
 - entity_id: model:vegn
   name: VEGN
+  type: model
   label: out
   certainty: arguable
   reason: prioritises coding disease-causing variants in a patient; the object is
     a diagnosis, not a design
   failed_criterion: C3
+  in_sample: true
+- entity_id: model:vqdna
+  name: VQDNA
+  type: model
+  label: in
+  certainty: clear
+  reason: vector-quantised multi-species genomic sequence modelling; how
+- entity_id: model:wang-2023-unified-deep-learning
+  name: Wang 2023 Unified Deep Learning
+  type: model
+  label: out
+  certainty: clear
+  reason: scATAC-seq analysis framework; clustering and annotation
+  failed_criterion: C3
+- entity_id: model:wang-2024-deep-learning-approaches
+  name: Wang 2024 Deep learning approaches
+  type: model
+  label: out
+  certainty: clear
+  reason: a review of non-coding variant effect methods
+  failed_criterion: C1
 - entity_id: model:wang-2024-predictive-prioritization-enhancers
   name: Wang 2024 Predictive Prioritization Enhancers
+  type: model
   label: out
   certainty: arguable
   reason: 'prioritises pancreas-disease enhancers: a finding produced with existing
     methods'
   failed_criterion: C1
+  in_sample: true
+- entity_id: model:wang-2026-integrating-histology-spatial
+  name: Wang 2026 Integrating histology spatial
+  type: model
+  label: out
+  certainty: clear
+  reason: spatial expression from histology images
+  failed_criterion: C2
 - entity_id: model:wang-2026-predicting-drug-responses
   name: Wang 2026 Predicting drug responses
+  type: model
   label: in
   certainty: clear
   reason: drug response in unseen cell types; what
+  in_sample: true
+- entity_id: model:wang-2026-pretrained-animals-deployed
+  name: Wang 2026 Pretrained Animals Deployed
+  type: model
+  label: out
+  certainty: clear
+  reason: RNA foundation models, and a position piece about them
+  failed_criterion: C2
+- entity_id: model:wei-2026-benchmarking-algorithms-single-cell
+  name: Wei 2026 Benchmarking algorithms single-cell
+  type: model
+  label: in
+  certainty: clear
+  reason: 27 methods for perturbation response prediction; what
+  type_defect: a benchmark typed as a model
+- entity_id: model:wei-2026-capra-predicts-single-cell
+  name: Wei 2026 CAPRA predicts single-cell
+  type: model
+  label: in
+  certainty: clear
+  reason: response-anchored perturbation prediction; what
+- entity_id: model:when-repeats-drive-the-vocabulary
+  name: When repeats drive the vocabulary
+  type: model
+  label: in
+  certainty: arguable
+  reason: byte-pair tokenisation analysed on primate genomes; how
+- entity_id: model:wisteria
+  name: Wisteria
+  type: model
+  label: in
+  certainty: clear
+  reason: multi-scale feature learning for DNA language models; how
+- entity_id: model:wu-2026-application-deep-learning
+  name: Wu 2026 Application deep learning
+  type: model
+  label: out
+  certainty: clear
+  reason: a review of deep learning in crop research
+  failed_criterion: C1
+- entity_id: model:wu-2026-sparse-integrative-dictionary
+  name: Wu 2026 Sparse integrative dictionary
+  type: model
+  label: out
+  certainty: clear
+  reason: conserved drug-response states in multiple myeloma; a clinical finding
+  failed_criterion: C1
+- entity_id: model:wu-2026-synergy-aware-residual-flow
+  name: Wu 2026 Synergy-Aware Residual Flow
+  type: model
+  label: in
+  certainty: clear
+  reason: synergy-aware perturbation prediction; what
+- entity_id: model:x-cell
+  name: X-Cell
+  type: model
+  label: in
+  certainty: clear
+  reason: causal perturbation prediction across contexts; what
+- entity_id: model:xchrom
+  name: XChrom
+  type: model
+  label: in
+  certainty: clear
+  reason: cross-cell chromatin accessibility from sequence; where
+- entity_id: model:xie-2015-advances-protein-contact
+  name: Xie 2015 Advances protein contact
+  type: model
+  label: out
+  certainty: clear
+  reason: a review of protein contact map prediction
+  failed_criterion: C2
+- entity_id: model:xie-2026-adapting-generative-genome
+  name: Xie 2026 Adapting Generative Genome
+  type: model
+  label: in
+  certainty: clear
+  reason: fine-tuning Evo for functional genomics prediction; how
+- entity_id: model:xie-2026-performance-deep-learning
+  name: Xie 2026 Performance deep learning
+  type: model
+  label: out
+  certainty: clear
+  reason: spatial expression from histology images
+  failed_criterion: C2
+- entity_id: model:xpresso
+  name: Xpresso
+  type: model
+  label: in
+  certainty: clear
+  reason: mRNA abundance from genomic sequence; where
+- entity_id: model:yan-2024-recent-advances-deep
+  name: Yan 2024 Recent advances deep
+  type: model
+  label: out
+  certainty: clear
+  reason: a review of deep learning for the microbiome
+  failed_criterion: C1
+- entity_id: model:yoo-2024-exploring-adversarial-robustness
+  name: Yoo 2024 Exploring Adversarial Robustness
+  type: model
+  label: in
+  certainty: arguable
+  reason: adversarial robustness of DNA language models on classification; how
+- entity_id: model:yoo-2026-dna-augmentations-semi-supervised
+  name: Yoo 2026 DNA augmentations semi-supervised
+  type: model
+  label: in
+  certainty: arguable
+  reason: augmentation and semi-supervised training for genomic sequence models;
+    how
+- entity_id: model:yu-2026-fp8-inference-genomic
+  name: Yu 2026 FP8 Inference Genomic
+  type: model
+  label: in
+  certainty: arguable
+  reason: quantised inference for a genomic foundation model; how, as deployment
+    engineering
 - entity_id: model:zeng-2022-spatial-transcriptomics-prediction
   name: Zeng 2022 Spatial transcriptomics prediction
+  type: model
   label: out
   certainty: clear
   reason: expression from histology images
   failed_criterion: C2
+  in_sample: true
+- entity_id: model:zhang-2022-protein-subcellular-localization
+  name: Zhang 2022 Protein Subcellular Localization
+  type: model
+  label: out
+  certainty: clear
+  reason: protein subcellular localisation
+  failed_criterion: C2
+- entity_id: model:zhang-2026-charting-computational-landscape
+  name: Zhang 2026 Charting computational landscape
+  type: model
+  label: out
+  certainty: arguable
+  reason: a survey of the computational landscape for perturbation screens
+  failed_criterion: C1
 - entity_id: model:zhang-2026-disease-relevance-replicability
   name: Zhang 2026 Disease relevance replicability
+  type: model
   label: in
   certainty: arguable
   reason: critique of deep-learning expression prediction; where
   type_defect: a critique, which belongs in entity_paper rather than as an entity
+  in_sample: true
+- entity_id: model:zhang-2026-end-to-end-deep-learning
+  name: Zhang 2026 end-to-end deep learning
+  type: model
+  label: in
+  certainty: clear
+  reason: end-to-end analysis of transcriptional regulation from sequence; where
+- entity_id: model:zhang-2026-generation-powered-inference-distribution-valued
+  name: Zhang 2026 Generation-Powered Inference Distribution-Valued
+  type: model
+  label: out
+  certainty: arguable
+  reason: a general inference framework for distribution-valued outputs; single-cell
+    is one application
+  failed_criterion: C2
+- entity_id: model:zhang-2026-hierarchical-refinements-cis-regulatory
+  name: Zhang 2026 Hierarchical refinements cis-regulatory
+  type: model
+  label: in
+  certainty: clear
+  reason: hierarchical cis-regulatory refinement for expression prediction; where
+- entity_id: model:zhang-2026-highly-accurate-ab
+  name: Zhang 2026 Highly accurate ab
+  type: model
+  label: out
+  certainty: arguable
+  reason: ab initio gene annotation with a genomic language model; annotation
+  failed_criterion: C3
+- entity_id: model:zhao-2022-computational-modeling-chromatin
+  name: Zhao 2022 Computational modeling chromatin
+  type: model
+  label: in
+  certainty: clear
+  reason: chromatin accessibility modelling identifying epigenomic regulators; where
+- entity_id: model:zhao-2025-leveraging-biological-networks
+  name: Zhao 2025 Leveraging Biological Networks
+  type: model
+  label: in
+  certainty: clear
+  reason: network-informed gene perturbation prediction; what
+- entity_id: model:zhao-2025-variant-aware-deep-learning
+  name: Zhao 2025 Variant-Aware Deep Learning
+  type: model
+  label: in
+  certainty: clear
+  reason: individual expression prediction from whole-genome sequence; where
+- entity_id: model:zhong-2026-perturbation-curve-continuous
+  name: Zhong 2026 Perturbation Curve continuous
+  type: model
+  label: in
+  certainty: clear
+  reason: continuous transcriptional response to genetic modulation; what
+- entity_id: model:zhou-2026-reference-cell-design-shapes
+  name: Zhou 2026 Reference-cell design shapes
+  type: model
+  label: in
+  certainty: clear
+  reason: how reference-cell choice distorts perturbation evaluation; what
+  type_defect: a critique, which belongs in entity_paper rather than as an entity
 - entity_id: model:zhu-2025-auc-pr-more-informative
   name: Zhu 2025 AUC-PR More Informative
+  type: model
   label: out
   certainty: clear
   reason: a metric argument, not a resource
   failed_criterion: C1
+  in_sample: true
+- entity_id: model:zhu-2026-structured-cross-condition-prediction
+  name: Zhu 2026 structured cross-condition prediction
+  type: model
+  label: in
+  certainty: clear
+  reason: cross-condition perturbation response; what
+- entity_id: model:zulaybar-2026-discovery-microbial-intergenic
+  name: Zulaybar 2026 Discovery microbial intergenic
+  type: model
+  label: out
+  certainty: arguable
+  reason: discovery and functional interpretation of microbial noncoding regions;
+    annotation
+  failed_criterion: C3
+- entity_id: module:alexandrov-2026-chromatin-regulator-perturbation
+  name: Alexandrov 2026 Chromatin regulator perturbation
+  type: module
+  label: out
+  certainty: clear
+  reason: a finding about heme pathway imbalance
+  failed_criterion: C1
+- entity_id: module:belyy-2016-actin-activates-pseudomonas
+  name: Belyy 2016 Actin activates Pseudomonas
+  type: module
+  label: out
+  certainty: clear
+  reason: a finding about a bacterial toxin; effector domain in an unrelated sense
+  failed_criterion: C1
+- entity_id: module:boyne-2022-multitool-multiplex-gene
+  name: Boyne 2022 multitool multiplex gene
+  type: module
+  label: in
+  certainty: arguable
+  reason: TALE base editors built from effector domains; actuator parts, though
+    they edit rather than regulate
+- entity_id: module:braun-2016-versatile-vivo-regulation
+  name: Braun 2016 Versatile vivo regulation
+  type: module
+  label: out
+  certainty: arguable
+  reason: demonstrates dCas9 transcriptional perturbation in vivo; an in-scope actuator
+    used to produce a finding
+  failed_criterion: C1
+- entity_id: module:chen-2023-development-synthetic-transcription
+  name: Chen 2023 Development synthetic transcription
+  type: module
+  label: out
+  certainty: clear
+  reason: a metabolite biosensor built in yeast
+  failed_criterion: C1
+- entity_id: module:chen-2024-inhibiting-transcriptional-autoactivation
+  name: Chen 2024 inhibiting transcriptional autoactivation
+  type: module
+  label: out
+  certainty: arguable
+  reason: a technique for suppressing autoactivation in one assay context
+  failed_criterion: C1
+- entity_id: module:delrosso-2023-effector-domains
+  name: DelRosso 2023 human transcriptional effector domains
+  type: module
+  label: in
+  certainty: clear
+  reason: large-scale mapping and mutagenesis of human effector domains; with-what
+- entity_id: module:delrosso-2024-high-throughput-affinity-measurements
+  name: DelRosso 2024 High-throughput affinity measurements
+  type: module
+  label: in
+  certainty: clear
+  reason: affinity measurements between activation domains and co-activators; with-what
 - entity_id: module:delrosso-2024-high-throughput-measurements-identify
   name: DelRosso 2024 High-Throughput Measurements Identify
+  type: module
   label: in
   certainty: clear
   reason: high-throughput measurements of transcriptional and epigenetic regulator
     domains; with-what
+  in_sample: true
+- entity_id: module:due-2025-hierarchy-regulator-interactions
+  name: Due 2025 Hierarchy regulator interactions
+  type: module
+  label: out
+  certainty: arguable
+  reason: a mechanistic finding about how regulators engage distant activation domains
+  failed_criterion: C1
+- entity_id: module:epifactors-2022-chromatin-regulators
+  name: EpiFactors 2022 epigenetic regulators
+  type: module
+  label: in
+  certainty: clear
+  reason: curated compendium of human epigenetic regulators and complexes; with-what
 - entity_id: module:erkine-2024-enigma-transcriptional-activation
   name: Erkine 2024 Enigma Transcriptional Activation
+  type: module
   label: out
   certainty: arguable
   reason: a review of activation-domain biology rather than a compendium
   failed_criterion: C1
+  in_sample: true
+- entity_id: module:fern-ndez-2019-transmembrane-prolines-mediate
+  name: Fernández 2019 Transmembrane Prolines Mediate
+  type: module
+  label: out
+  certainty: clear
+  reason: a finding about signal sensing in a bacterial histidine kinase
+  failed_criterion: C1
+- entity_id: module:hurtado-2018-transcriptomic-rationale-synthetic
+  name: Hurtado 2018 Transcriptomic rationale synthetic
+  type: module
+  label: out
+  certainty: clear
+  reason: a synthetic-lethality rationale in leukaemia
+  failed_criterion: C1
+- entity_id: module:iruela-2022-fret-based-biosensor-src
+  name: Iruela 2022 FRET-Based Biosensor Src
+  type: module
+  label: out
+  certainty: clear
+  reason: a FRET biosensor for a kinase regulatory element
+  failed_criterion: C2
+- entity_id: module:kolundzic-2017-fact-sets-barrier
+  name: Kolundzic 2017 FACT sets barrier
+  type: module
+  label: out
+  certainty: clear
+  reason: a finding about FACT as a reprogramming barrier; on topic for cell fate,
+    still a result
+  failed_criterion: C1
+- entity_id: module:levati-2016-dry-wet-approaches
+  name: Levati 2016 Dry wet approaches
+  type: module
+  label: out
+  certainty: arguable
+  reason: a survey of approaches to annotating activators rather than a collection
+    of them
+  failed_criterion: C1
+- entity_id: module:li-2020-maturation-lipophagic-organelles
+  name: Li 2020 Maturation Lipophagic Organelles
+  type: module
+  label: out
+  certainty: clear
+  reason: a finding about lipophagy in hepatocytes
+  failed_criterion: C1
+- entity_id: module:li-2022-identified-validated-brd4
+  name: Li 2022 identified validated BRD4
+  type: module
+  label: out
+  certainty: clear
+  reason: candidate biomarkers for osteoarthritis
+  failed_criterion: C1
+- entity_id: module:liao-2023-identification-chromatin-regulator
+  name: Liao 2023 Identification chromatin regulator
+  type: module
+  label: out
+  certainty: clear
+  reason: a prognostic signature for prostate cancer
+  failed_criterion: C1
+- entity_id: module:liu-2022-chromatin-regulator-related-immune
+  name: Liu 2022 chromatin regulator-related immune
+  type: module
+  label: out
+  certainty: clear
+  reason: a prognostic signature for endometrial cancer
+  failed_criterion: C1
+- entity_id: module:liu-2026-epigenetic-factor-phf13
+  name: Liu 2026 Epigenetic Factor PHF13
+  type: module
+  label: out
+  certainty: clear
+  reason: a finding about PHF13 in trophoblast differentiation
+  failed_criterion: C1
 - entity_id: module:luan-2026-targeting-oncogenic-sox2
   name: Luan 2026 Targeting oncogenic SOX2
+  type: module
   label: out
   certainty: clear
   reason: a cancer-biology finding about SOX2 condensates
   failed_criterion: C1
+  in_sample: true
+- entity_id: module:ludwig-2023-high-throughput-discovery-characterization
+  name: Ludwig 2023 High-throughput discovery characterization
+  type: module
+  label: in
+  certainty: clear
+  reason: screen of viral transcriptional effectors in human cells; with-what
+- entity_id: module:malgulwar-2026-atrx-inactivation-disrupts
+  name: Malgulwar 2026 ATRX inactivation disrupts
+  type: module
+  label: out
+  certainty: clear
+  reason: a finding about ATRX inactivation in glioma
+  failed_criterion: C1
+- entity_id: module:micheva-viteva-2017-pkc-marcks-signaling-promotes
+  name: Micheva-Viteva 2017 PKC-η-MARCKS Signaling Promotes
+  type: module
+  label: out
+  certainty: clear
+  reason: a finding about intracellular bacterial survival
+  failed_criterion: C1
 - entity_id: module:morita-2020-synergistic-upregulation-target
   name: Morita 2020 Synergistic Upregulation Target
+  type: module
   label: in
   certainty: clear
   reason: screens effector combinations for dCas9-SunTag activation; with-what
+  in_sample: true
+- entity_id: module:mukund-2023-high-throughput-functional-characterization
+  name: Mukund 2023 High-throughput functional characterization
+  type: module
+  label: in
+  certainty: clear
+  reason: combinations of activators and repressors measured at scale; with-what
+- entity_id: module:nfc-2023-identification-transcriptional-activator
+  name: NFC 2023 identification transcriptional activator
+  type: module
+  label: in
+  certainty: clear
+  reason: systematic identification of activation domains from non-TF proteins;
+    with-what
+- entity_id: module:nishikawa-2016-inhibiting-fungal-multidrug
+  name: Nishikawa 2016 Inhibiting fungal multidrug
+  type: module
+  label: out
+  certainty: clear
+  reason: a finding about disrupting an activator-Mediator interaction in fungi
+  failed_criterion: C1
+- entity_id: module:pallara-2022-peptidomimetics-designed-bind
+  name: Pallara 2022 Peptidomimetics designed bind
+  type: module
+  label: out
+  certainty: clear
+  reason: peptidomimetics against a RAS effector domain; protein-protein, not genomic
+  failed_criterion: C2
+- entity_id: module:pan-2018-major-chromatin-regulator
+  name: Pan 2018 major chromatin regulator
+  type: module
+  label: out
+  certainty: clear
+  reason: a finding about tumour resistance to T-cell killing
+  failed_criterion: C1
+- entity_id: module:partridge-2020-occupancy-maps-208
+  name: Partridge 2020 Occupancy maps 208
+  type: module
+  label: in
+  certainty: clear
+  reason: occupancy maps of 208 chromatin-associated proteins; with-what
+- entity_id: module:plaper-2020-coiled-coil-heterodimers-increased
+  name: Plaper 2020 Coiled-coil heterodimers increased
+  type: module
+  label: out
+  certainty: arguable
+  reason: designed coiled-coil modules mediate protein association rather than genome
+    action
+  failed_criterion: C2
 - entity_id: module:rafehi-2016-improving-understanding-chromatin
   name: Rafehi 2016 Improving understanding chromatin
+  type: module
   label: out
   certainty: clear
   reason: a review article
   failed_criterion: C1
+  in_sample: true
+- entity_id: module:rks-2024-chromatin-regulator-smarca4
+  name: RKS 2024 Chromatin Regulator SMARCA4
+  type: module
+  label: out
+  certainty: clear
+  reason: a finding about SMARCA4 in virus-induced inflammatory cell death
+  failed_criterion: C1
 - entity_id: module:sanborn-2021-simple-biochemical-features
   name: Sanborn 2021 Simple biochemical features
+  type: module
   label: in
   certainty: clear
   reason: 150 activation domains tiled across yeast TFs, with binding data; with-what
+  in_sample: true
 - entity_id: module:sonn-2025-mecp2-interacts-super
   name: Sonn 2025 MeCP2 interacts super
+  type: module
   label: out
   certainty: clear
   reason: a mechanistic finding about MeCP2
   failed_criterion: C1
+  in_sample: true
+- entity_id: module:soto-2022-compendium-human-transcription
+  name: Soto 2022 Compendium human transcription
+  type: module
+  label: in
+  certainty: clear
+  reason: compendium of human TF effector domains; with-what
+- entity_id: module:staller-2017-deep-mutational-scan
+  name: Staller 2017 deep mutational scan
+  type: module
+  label: in
+  certainty: clear
+  reason: deep mutational scan of an acidic activation domain; with-what
+- entity_id: module:staller-2018-high-throughput-mutational-scan
+  name: Staller 2018 High-Throughput Mutational Scan
+  type: module
+  label: in
+  certainty: clear
+  reason: mutational scan of a disordered acidic activation domain; with-what
+- entity_id: module:staller-2022-directed-mutational-scanning
+  name: Staller 2022 Directed mutational scanning
+  type: module
+  label: in
+  certainty: clear
+  reason: mutational scanning across human activation domains; with-what
+- entity_id: module:strobel-2020-high-throughput-identification-synthetic
+  name: Strobel 2020 High-throughput identification synthetic
+  type: module
+  label: out
+  certainty: arguable
+  reason: synthetic riboswitches act on RNA, not on the genome
+  failed_criterion: C2
+- entity_id: module:tajima-2015-setd1a-modulates-cell
+  name: Tajima 2015 SETD1A modulates cell
+  type: module
+  label: out
+  certainty: clear
+  reason: a finding about SETD1A and a p53-target miRNA network
+  failed_criterion: C1
 - entity_id: module:takahashi-2018-identification-functional-features
   name: Takahashi 2018 Identification functional features
+  type: module
   label: out
   certainty: arguable
   reason: SINEUP antisense lncRNAs act post-transcriptionally on mRNA, not on the
     genome
   failed_criterion: C2
+  in_sample: true
 - entity_id: module:takahashi-2019-cell-assays-sineup
   name: Takahashi 2019 Cell Assays SINEUP
+  type: module
   label: out
   certainty: arguable
   reason: SINEUP assays; the same substrate question as the 2018 record
   failed_criterion: C2
+  in_sample: true
+- entity_id: module:tikhmyanova-2017-small-molecule-perturbation
+  name: Tikhmyanova 2017 Small molecule perturbation
+  type: module
+  label: out
+  certainty: clear
+  reason: a finding about a small molecule and viral reactivation
+  failed_criterion: C1
+- entity_id: module:tycko-2025-compact-effectors
+  name: Tycko 2025 compact effector domains
+  type: module
+  label: in
+  certainty: clear
+  reason: HT-recruit screen of compact activation and repression domains across
+    contexts; with-what
 - entity_id: module:valerio-2017-histone-acetyltransferase-activity
   name: Valerio 2017 Histone Acetyltransferase Activity
+  type: module
   label: out
   certainty: clear
   reason: a leukaemia-biology finding about MOF
   failed_criterion: C1
+  in_sample: true
+- entity_id: module:weber-2019-piggybac-transposon-tools
+  name: Weber 2019 PiggyBac transposon tools
+  type: module
+  label: out
+  certainty: arguable
+  reason: transposon screening tools whose product here is a list of lymphoma drivers
+  failed_criterion: C1
+- entity_id: module:xi-2019-dynamic-changes-dna
+  name: Xi 2019 Dynamic Changes DNA
+  type: module
+  label: out
+  certainty: clear
+  reason: a descriptive study of methylation during porcine ovarian ageing
+  failed_criterion: C1
+- entity_id: module:xiong-2017-development-immunoassay-detect
+  name: Xiong 2017 Development immunoassay detect
+  type: module
+  label: out
+  certainty: clear
+  reason: an immunoassay developed for drug screening
+  failed_criterion: C1
+- entity_id: module:yakhou-2023-genetic-screen-identifies
+  name: Yakhou 2023 genetic screen identifies
+  type: module
+  label: out
+  certainty: clear
+  reason: a finding about BEND3 and bivalent gene expression
+  failed_criterion: C1
+- entity_id: module:zhang-2017-inducible-bcl-2-gene
+  name: Zhang 2017 Inducible Bcl-2 gene
+  type: module
+  label: out
+  certainty: arguable
+  reason: an aptamer-ribozyme switch acting on RNA interference
+  failed_criterion: C2
 - entity_id: module:zhang-2024-mevalonate-kinase-inhibits
   name: Zhang 2024 Mevalonate kinase inhibits
+  type: module
   label: out
   certainty: clear
   reason: a tumour-immunology finding; no genomic actuator component
   failed_criterion: C1
+  in_sample: true
 - entity_id: module:zhang-2026-condensates-chromatin-regulator
   name: Zhang 2026 Condensates chromatin regulator
+  type: module
   label: out
   certainty: clear
   reason: a developmental-biology finding about ANKRD11
   failed_criterion: C1
+  in_sample: true
+- entity_id: module:zhang-2026-decoding-chromatin-regulator-lair1
+  name: Zhang 2026 Decoding chromatin regulator-LAIR1
+  type: module
+  label: out
+  certainty: clear
+  reason: a multi-omics finding about macrophage patterns and clinical outcome
+  failed_criterion: C1
+- entity_id: module:zhu-2022-identification-chromatin-regulator
+  name: Zhu 2022 Identification chromatin regulator
+  type: module
+  label: out
+  certainty: clear
+  reason: a prognostic signature for bladder cancer
+  failed_criterion: C1
 - entity_id: protocol:atac-seq
   name: ATAC-seq
+  type: protocol
   label: in
   certainty: clear
   reason: the accessibility assay the where axis is built on
+  in_sample: true
 - entity_id: protocol:cut-tag
   name: CUT&Tag
+  type: protocol
   label: in
   certainty: clear
   reason: targeted chromatin profiling; where
+  in_sample: true
+- entity_id: protocol:cutrun-janssens-henikoff
+  name: CUT&RUN targeted in situ genome-wide profiling
+  type: protocol
+  label: in
+  certainty: clear
+  reason: the reference CUT&RUN protocol for chromatin profiling; where
+- entity_id: protocol:lowinput-cutrun-v2
+  name: Low-input CUT&RUN for sorted MEF populations
+  type: protocol
+  label: in
+  certainty: clear
+  reason: CUT&RUN adapted for low cell numbers during reprogramming; where
+- entity_id: protocol:omni-atac
+  name: Omni-ATAC
+  type: protocol
+  label: in
+  certainty: clear
+  reason: improved ATAC-seq for frozen tissue; where
