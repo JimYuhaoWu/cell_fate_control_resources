@@ -248,6 +248,8 @@
 
 - entity_id: module:valerio-2017-histone-acetyltransferase-activity
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a leukaemia-biology finding about MOF"
   name: Valerio 2017 Histone Acetyltransferase Activity
   year: 2017
   fate_axis: [with-what]
@@ -260,6 +262,8 @@
 
 - entity_id: module:zhang-2026-condensates-chromatin-regulator
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a developmental-biology finding about ANKRD11"
   name: Zhang 2026 Condensates chromatin regulator
   year: 2026
   fate_axis: [with-what]
@@ -272,6 +276,8 @@
 
 - entity_id: module:zhang-2026-decoding-chromatin-regulator-lair1
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a multi-omics finding about macrophage patterns and clinical outcome"
   name: Zhang 2026 Decoding chromatin regulator-LAIR1
   year: 2026
   fate_axis: [with-what]
@@ -284,6 +290,8 @@
 
 - entity_id: module:rks-2024-chromatin-regulator-smarca4
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about SMARCA4 in virus-induced inflammatory cell death"
   name: RKS 2024 Chromatin Regulator SMARCA4
   year: 2024
   fate_axis: [with-what]
@@ -313,6 +321,8 @@
 
 - entity_id: module:liao-2023-identification-chromatin-regulator
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a prognostic signature for prostate cancer"
   name: Liao 2023 Identification chromatin regulator
   year: 2023
   fate_axis: [with-what]
@@ -325,6 +335,8 @@
 
 - entity_id: module:xiong-2017-development-immunoassay-detect
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: an immunoassay developed for drug screening"
   name: Xiong 2017 Development immunoassay detect
   year: 2017
   fate_axis: [with-what]
@@ -337,6 +349,8 @@
 
 - entity_id: module:liu-2022-chromatin-regulator-related-immune
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a prognostic signature for endometrial cancer"
   name: Liu 2022 chromatin regulator-related immune
   year: 2022
   fate_axis: [with-what]
@@ -349,6 +363,8 @@
 
 - entity_id: module:zhu-2022-identification-chromatin-regulator
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a prognostic signature for bladder cancer"
   name: Zhu 2022 Identification chromatin regulator
   year: 2022
   fate_axis: [with-what]
@@ -361,6 +377,8 @@
 
 - entity_id: module:pan-2018-major-chromatin-regulator
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about tumour resistance to T-cell killing"
   name: Pan 2018 major chromatin regulator
   year: 2018
   fate_axis: [with-what]
@@ -389,6 +407,8 @@
 
 - entity_id: module:malgulwar-2026-atrx-inactivation-disrupts
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about ATRX inactivation in glioma"
   name: Malgulwar 2026 ATRX inactivation disrupts
   year: 2026
   fate_axis: [with-what]
@@ -442,6 +462,8 @@
 
 - entity_id: module:liu-2026-epigenetic-factor-phf13
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about PHF13 in trophoblast differentiation"
   name: Liu 2026 Epigenetic Factor PHF13
   year: 2026
   fate_axis: [with-what]
@@ -478,6 +500,8 @@
 
 - entity_id: module:yakhou-2023-genetic-screen-identifies
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about BEND3 and bivalent gene expression"
   name: Yakhou 2023 genetic screen identifies
   year: 2023
   fate_axis: [with-what]
@@ -490,6 +514,8 @@
 
 - entity_id: module:pallara-2022-peptidomimetics-designed-bind
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C2: peptidomimetics against a RAS effector domain; protein-protein, not genomic"
   name: Pallara 2022 Peptidomimetics designed bind
   year: 2022
   fate_axis: [with-what]
@@ -502,6 +528,8 @@
 
 - entity_id: module:iruela-2022-fret-based-biosensor-src
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C2: a FRET biosensor for a kinase regulatory element"
   name: Iruela 2022 FRET-Based Biosensor Src
   year: 2022
   fate_axis: [with-what]
@@ -542,6 +570,8 @@
 
 - entity_id: module:belyy-2016-actin-activates-pseudomonas
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about a bacterial toxin; effector domain in an unrelated sense"
   name: Belyy 2016 Actin activates Pseudomonas
   year: 2016
   fate_axis: [with-what]
@@ -554,6 +584,8 @@
 
 - entity_id: module:chen-2023-development-synthetic-transcription
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a metabolite biosensor built in yeast"
   name: Chen 2023 Development synthetic transcription
   year: 2023
   fate_axis: [with-what]
@@ -578,6 +610,8 @@
 
 - entity_id: module:rafehi-2016-improving-understanding-chromatin
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a review article"
   name: Rafehi 2016 Improving understanding chromatin
   year: 2016
   fate_axis: [with-what]
@@ -590,6 +624,8 @@
 
 - entity_id: module:xi-2019-dynamic-changes-dna
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a descriptive study of methylation during porcine ovarian ageing"
   name: Xi 2019 Dynamic Changes DNA
   year: 2019
   fate_axis: [with-what]
@@ -618,6 +654,8 @@
 
 - entity_id: module:alexandrov-2026-chromatin-regulator-perturbation
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about heme pathway imbalance"
   name: Alexandrov 2026 Chromatin regulator perturbation
   year: 2026
   fate_axis: [with-what]
@@ -630,6 +668,8 @@
 
 - entity_id: module:luan-2026-targeting-oncogenic-sox2
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a cancer-biology finding about SOX2 condensates"
   name: Luan 2026 Targeting oncogenic SOX2
   year: 2026
   fate_axis: [with-what]
@@ -642,6 +682,8 @@
 
 - entity_id: module:sonn-2025-mecp2-interacts-super
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a mechanistic finding about MeCP2"
   name: Sonn 2025 MeCP2 interacts super
   year: 2025
   fate_axis: [with-what]
@@ -669,6 +711,8 @@
 
 - entity_id: module:zhang-2024-mevalonate-kinase-inhibits
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a tumour-immunology finding; no genomic actuator component"
   name: Zhang 2024 Mevalonate kinase inhibits
   year: 2024
   fate_axis: [with-what]
@@ -681,6 +725,8 @@
 
 - entity_id: module:li-2022-identified-validated-brd4
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: candidate biomarkers for osteoarthritis"
   name: Li 2022 identified validated BRD4
   year: 2022
   fate_axis: [with-what]
@@ -709,6 +755,8 @@
 
 - entity_id: module:li-2020-maturation-lipophagic-organelles
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about lipophagy in hepatocytes"
   name: Li 2020 Maturation Lipophagic Organelles
   year: 2020
   fate_axis: [with-what]
@@ -721,6 +769,8 @@
 
 - entity_id: module:hurtado-2018-transcriptomic-rationale-synthetic
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a synthetic-lethality rationale in leukaemia"
   name: Hurtado 2018 Transcriptomic rationale synthetic
   year: 2018
   fate_axis: [with-what]
@@ -733,6 +783,8 @@
 
 - entity_id: module:fern-ndez-2019-transmembrane-prolines-mediate
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about signal sensing in a bacterial histidine kinase"
   name: "Fernández 2019 Transmembrane Prolines Mediate"
   year: 2019
   fate_axis: [with-what]
@@ -749,6 +801,8 @@
 
 - entity_id: module:kolundzic-2017-fact-sets-barrier
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about FACT as a reprogramming barrier; on topic for cell fate, still a result"
   name: Kolundzic 2017 FACT sets barrier
   year: 2017
   fate_axis: [with-what]
@@ -773,6 +827,8 @@
 
 - entity_id: module:tajima-2015-setd1a-modulates-cell
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about SETD1A and a p53-target miRNA network"
   name: Tajima 2015 SETD1A modulates cell
   year: 2015
   fate_axis: [with-what]
@@ -785,6 +841,8 @@
 
 - entity_id: module:tikhmyanova-2017-small-molecule-perturbation
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about a small molecule and viral reactivation"
   name: Tikhmyanova 2017 Small molecule perturbation
   year: 2017
   fate_axis: [with-what]
@@ -813,6 +871,8 @@
 
 - entity_id: module:micheva-viteva-2017-pkc-marcks-signaling-promotes
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about intracellular bacterial survival"
   name: "Micheva-Viteva 2017 PKC-η-MARCKS Signaling Promotes"
   year: 2017
   fate_axis: [with-what]
@@ -825,6 +885,8 @@
 
 - entity_id: module:nishikawa-2016-inhibiting-fungal-multidrug
   type: module
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about disrupting an activator-Mediator interaction in fungi"
   name: Nishikawa 2016 Inhibiting fungal multidrug
   year: 2016
   fate_axis: [with-what]

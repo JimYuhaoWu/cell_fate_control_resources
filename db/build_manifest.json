@@ -1,13 +1,13 @@
 {
-  "build_date": "2026-10-24",
+  "build_date": "2026-10-28",
   "db_path": "db/cfcr.db",
   "inputs": {
     "literature/papers.yaml": "e01f8f538fe85c295971e983f0fe56b19fcb7fa0b2dce94322245d7b0d331785",
-    "records/benchmarks.yaml": "920ebaf8219eb7903f987aba523f174e12236370b942b11efb1574c700c3610e",
+    "records/benchmarks.yaml": "775f35309df777cace9123d89c156502007d8561ff5ba19fd28bf6eb7eb2c224",
     "records/databases.yaml": "cf5a4a03a9b7a30f9db0e3133999a5498ccdc46b76053df679650bdf71a0d139",
     "records/datasets.yaml": "1e0a389358610e94eb2a70f66ef02073dcd5397c9f55587d65171ac567f145ea",
-    "records/models.yaml": "43dc6b647430dc011b4e2a230c486c40805fe337668d9f6bb727983c2a97af21",
-    "records/module_libraries.yaml": "508fcd66513c324fca3e2d3d0153febb4bad2e4270df181867e2ad89009228c2",
+    "records/models.yaml": "3646aedfb11072f32a0fbb30a53a5085203485754d8c5094ba8582de7f36d49c",
+    "records/module_libraries.yaml": "3498b61d00e4976c828a59d85119237ee8187b312796e66334940dc86ab55442",
     "records/protocols.yaml": "9fcd131e815352dcc9c24eb3748eb850f7c9be7d0a00e7db0f55ba3903c7675d",
     "vocab/architecture.yaml": "287c121e51fb652f7c527937d81304d31fece7abbc7094ca6b62846067738ff8",
     "vocab/assay.yaml": "c449a1589daec90e56aa61be102d0810ed0f92f704de2116c9b4ff908516c803",

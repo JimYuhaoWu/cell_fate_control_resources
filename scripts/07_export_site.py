@@ -261,11 +261,19 @@ def main() -> int:
     ]
 
     n_links = sum(len(v) for v in links_by_entity.values())
-    held = len(cfcr.load(with_papers=False)) - len(entities)
+    # Counted by state rather than summed, because the two are held back for
+    # opposite reasons: `unreviewed` is a queue and `withdrawn` is a verdict,
+    # and reporting 170 withdrawals as a review backlog invites someone to
+    # work through them.
+    all_records = cfcr.load(with_papers=False)
+    staged = len(all_records[all_records["review_state"] == "unreviewed"])
+    withdrawn = len(all_records[all_records["review_state"] == "withdrawn"])
     print(f"exported {len(entities)} entities, {len(papers)} papers, "
           f"{n_links} links, {len(facets)} facets")
-    if held:
-        print(f"  held back {held} unreviewed record(s); "
+    if staged or withdrawn:
+        parts = ([f"{staged} unreviewed"] if staged else []) + (
+            [f"{withdrawn} withdrawn"] if withdrawn else [])
+        print(f"  held back {' and '.join(parts)} record(s); "
               f"they are in db/ but not on the site")
     for path in written:
         try:

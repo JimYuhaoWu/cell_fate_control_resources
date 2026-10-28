@@ -339,12 +339,23 @@ catalogue is a number rather than an impression. Both hold: the number is 34.7%
 clear and 46.3% wide, with every record named in
 `literature/scope_labels.yaml`, and all four items are done.
 
-What is left is not work but a decision, and it is the curator's: **how much of
-the catalogue to withdraw.** 170 records are clearly out and 226 of them are
-published; withdrawing the clear ones leaves 320 entities, back inside the
-~300-400 the scope section estimated. The labels are unratified on purpose, and
-`09_demote.py` defaults every record to `keep`, so nothing happens until
-someone ticks a box.
+**Done, including the withdrawal.** On 2026-10-28 the 170 `clear` records were
+withdrawn — `literature/demotions/demote_2026-10-28.md` is the worked file —
+leaving **319 published** against the ~300-400 the scope section estimated. QC
+holds at 0 errors and the warning count fell from 98 to 39, most of it the
+`fate_axis` warnings those 85 benchmark records were raising.
+
+Nothing was deleted: all 490 records remain in `records/`, in `db/` and in the
+snapshots, each carrying the criterion that took it off the site, and deleting
+two lines puts one back.
+
+The **56 `arguable`** records are still published and still ticked `keep`. They
+are not a backlog but four questions — whether `how` covers sequence design
+that is not fate control, whether an in-scope model used to produce a finding
+is a resource, whether genotype-based expression imputation has a genomic
+substrate, and when a single-cell foundation model counts as predicting a
+response. Each answer settles a group, and each is a decision about the
+boundary rather than about a record.
 
 **Tradeoff, decided.** A tighter boundary sharpens the novelty argument; a wider
 one narrows the gap with Kipoi's count. Tight was chosen, because the
@@ -358,29 +369,30 @@ practice: `where` and `how` deep (including 3D genome contact prediction),
 when it predicts a perturbation response, not when it only embeds cells),
 trajectory inference and RNA velocity out.
 
-**The ~300-400 target below is the original estimate and the catalogue has
-passed it: 489 published.** It is kept because the per-axis shape is what the
-estimate was for, and the shape is where the overshoot sits rather than being
-spread evenly. Measured against it, with 85 benchmarks carrying no `fate_axis`
-at all and a record able to carry more than one:
+**The ~300-400 target below was the original estimate. The catalogue passed it,
+and then M4a's withdrawal brought it back inside.** 489 were published; 170
+records clearly out of scope were withdrawn on 2026-10-28, leaving **319**. A
+record can carry more than one axis, so the column sums above the total:
 
-| axis | estimated | now |
-|---|---|---|
-| `where` | ~125-175 | 166 |
-| `how` | ~60-80 | 78 |
-| `what` | ~15-25 | **105** |
-| `with-what` | ~15-30 | 61 |
+| axis | estimated | at 489 | published now |
+|---|---|---|---|
+| `where` | ~125-175 | 166 | 110 |
+| `how` | ~60-80 | 78 | 67 |
+| `what` | ~15-25 | **105** | **92** |
+| `with-what` | ~15-30 | 61 | 30 |
 
-`where` and `how` landed inside their ranges. `what` was meant to be shallow
-and pointing outward and is the largest overshoot at four times its ceiling,
-which is exactly where the scope rule is hardest to apply — a single-cell
-foundation model qualifies when it predicts a perturbation response and not
-when it only embeds cells, and nothing in the pipeline can tell those apart.
+So the estimate was not wrong about the size. It was right about three axes and
+the overshoot was mostly drift, which the labels say plainly: 74% of benchmarks
+and 72% of modules were out of scope, against 37% of models.
 
-So the number to fix is not the target: M4a holds expansion until the drift
-rate is measured, and whether 105 on `what` is scope creep or simply more
-resources existing is precisely what that measurement answers. Revise the
-estimate then, from the labelled set, rather than now from the overshoot.
+`what` is the exception and the one still above its range, at 92 against ~15-25.
+That is the axis `README.md` calls deliberately shallow, and the measurement
+does not say the estimate was too low — it says C5 is the criterion doing the
+most work and the one most often `arguable`, because a single-cell foundation
+model qualifies when it predicts a perturbation response and not when it only
+embeds cells, and an abstract does not always say which. Revising the estimate
+for `what` waits on the 56 arguable labels being settled; the other three axes
+now sit inside their ranges and need no revision.
 
 The original estimate, for reference:
 

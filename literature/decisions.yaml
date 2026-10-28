@@ -27,6 +27,12 @@
   score: 3.0
   title: Computational navigation of constrained multidimensional protein fitness
     landscapes
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:kaushik-2026-computational-navigation-constrained
+  list: withdrawal
+  reason: 'C2: protein fitness landscapes'
+  title: Kaushik 2026 Computational navigation constrained
 10.1002/advs.202407664:
 - date: '2026-10-23'
   decision: accepted
@@ -34,6 +40,12 @@
   list: discovery
   score: 8.5
   title: Effective Gene Expression Prediction and Optimization from Protein Sequences
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:liu-2025-effective-gene-expression
+  list: withdrawal
+  reason: 'C2: protein expression predicted from protein sequence'
+  title: Liu 2025 Effective Gene Expression
 10.1002/advs.202514490:
 - date: '2026-10-23'
   decision: accepted
@@ -75,6 +87,12 @@
   score: 3.0
   title: Maturation of Lipophagic Organelles in Hepatocytes Is Dependent Upon
     a Rab10/Dynamin-2 Complex
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:li-2020-maturation-lipophagic-organelles
+  list: withdrawal
+  reason: 'C1: a finding about lipophagy in hepatocytes'
+  title: Li 2020 Maturation Lipophagic Organelles
 10.1002/pro.70142:
 - date: '2026-10-23'
   decision: accepted
@@ -122,6 +140,12 @@
   list: discovery
   score: 4.75
   title: 'Application of deep learning in crop research: From genomics to phenomics'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:wu-2026-application-deep-learning
+  list: withdrawal
+  reason: 'C1: a review of deep learning in crop research'
+  title: Wu 2026 Application deep learning
 10.1007/978-1-0716-0958-3_17:
 - date: '2026-10-23'
   decision: accepted
@@ -235,6 +259,12 @@
   list: discovery
   score: 3.0
   title: Protein secondary structure assignment using residual networks
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:antony-2022-protein-secondary-structure
+  list: withdrawal
+  reason: 'C2: protein secondary structure assignment'
+  title: Antony 2022 Protein secondary structure
 10.1007/s10238-026-02217-0:
 - date: '2026-10-23'
   decision: accepted
@@ -244,6 +274,12 @@
   title: 'Decoding chromatin regulator-LAIR1&lt;sup&gt;+&lt;/sup&gt; M2 like macrophage
     patterns in atherosclerosis and clinical outcomes of Lung adenocarcinoma patients:
     evidence from artificial intelligence-driven multi omics and in vitro validation'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:zhang-2026-decoding-chromatin-regulator-lair1
+  list: withdrawal
+  reason: 'C1: a multi-omics finding about macrophage patterns and clinical outcome'
+  title: Zhang 2026 Decoding chromatin regulator-LAIR1
 10.1007/s10489-025-06607-x:
 - date: '2026-10-23'
   decision: accepted
@@ -262,6 +298,12 @@
   score: 4.0
   title: Development of a synthetic transcription factor-based S-adenosylmethionine
     biosensor in Saccharomyces cerevisiae
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:chen-2023-development-synthetic-transcription
+  list: withdrawal
+  reason: 'C1: a metabolite biosensor built in yeast'
+  title: Chen 2023 Development synthetic transcription
 10.1007/s12539-022-00529-9:
 - date: '2026-10-23'
   decision: accepted
@@ -270,6 +312,12 @@
   score: 5.0
   title: Protein Subcellular Localization Prediction Model Based on Graph Convolutional
     Network
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:zhang-2022-protein-subcellular-localization
+  list: withdrawal
+  reason: 'C2: protein subcellular localisation'
+  title: Zhang 2022 Protein Subcellular Localization
 10.1007/s44443-026-00555-3:
 - date: '2026-10-23'
   decision: recorded
@@ -314,6 +362,13 @@
   score: 5.5
   title: Sparse integrative dictionary learning resolves conserved drug-response
     states in multiple myeloma (MM)
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:wu-2026-sparse-integrative-dictionary
+  list: withdrawal
+  reason: 'C1: conserved drug-response states in multiple myeloma; a clinical
+    finding'
+  title: Wu 2026 Sparse integrative dictionary
 10.1016/j.cell.2026.07.006:
 - date: '2026-10-23'
   decision: accepted
@@ -322,6 +377,12 @@
   score: 7.0
   title: Condensates of the chromatin regulator ANKRD11 restrict hypertranscribed
     genes to safeguard development
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:zhang-2026-condensates-chromatin-regulator
+  list: withdrawal
+  reason: 'C1: a developmental-biology finding about ANKRD11'
+  title: Zhang 2026 Condensates chromatin regulator
 10.1016/j.celrep.2026.118025:
 - date: '2026-10-23'
   decision: accepted
@@ -378,6 +439,12 @@
   score: 4.5
   title: Enhancing protein contact map prediction accuracy via ensembles of inter-residue
     distance predictors
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:mah-2022-enhancing-protein-contact
+  list: withdrawal
+  reason: 'C2: protein contact map prediction'
+  title: MAH 2022 Enhancing protein contact
 10.1016/j.compbiolchem.2026.109079:
 - date: '2026-10-23'
   decision: accepted
@@ -422,6 +489,12 @@
   score: 4.5
   title: 'AttCON: With better MSAs and attention mechanism for accurate protein
     contact map prediction'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:attcon
+  list: withdrawal
+  reason: 'C2: protein contact map prediction'
+  title: AttCON
 10.1016/j.compbiomed.2024.108230:
 - date: '2026-10-23'
   decision: accepted
@@ -430,6 +503,12 @@
   score: 5.5
   title: scAuto as a comprehensive framework for single-cell chromatin accessibility
     data analysis
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:gong-2024-scauto-single-cell-chromatin
+  list: withdrawal
+  reason: 'C3: single-cell accessibility data analysis framework'
+  title: Gong 2024 scAuto single-cell chromatin
 10.1016/j.compbiomed.2026.111598:
 - date: '2026-10-23'
   decision: accepted
@@ -438,6 +517,12 @@
   score: 4.25
   title: 'GraphUnet-SS: A novel deep learning model for protein secondary structure
     prediction based on U-Net architecture'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:graphunet-ss
+  list: withdrawal
+  reason: 'C2: protein secondary structure prediction'
+  title: GraphUnet-SS
 10.1016/j.crmeth.2023.100599:
 - date: '2026-10-23'
   decision: accepted
@@ -513,6 +598,12 @@
   score: 10.5
   title: Integrating histology and spatial transcriptomics via multimodal transformers
     and contrastive representation learning for accurate gene expression prediction
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:wang-2026-integrating-histology-spatial
+  list: withdrawal
+  reason: 'C2: spatial expression from histology images'
+  title: Wang 2026 Integrating histology spatial
 10.1016/j.jbi.2026.105080:
 - date: '2026-10-23'
   decision: accepted
@@ -563,6 +654,12 @@
   score: 9.5
   title: Completing spatial transcriptomics data for gene expression prediction
     benchmarking
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:ruiz-2025-completing-spatial-transcriptomics
+  list: withdrawal
+  reason: 'C2: spatial transcriptomics completion for histology-based prediction'
+  title: Ruiz 2025 Completing spatial transcriptomics
 10.1016/j.media.2026.104148:
 - date: '2026-10-23'
   decision: deferred
@@ -630,6 +727,12 @@
   score: 3.0
   title: Targeting oncogenic SOX2 condensates suppresses squamous cell carcinoma
     progression
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:luan-2026-targeting-oncogenic-sox2
+  list: withdrawal
+  reason: 'C1: a cancer-biology finding about SOX2 condensates'
+  title: Luan 2026 Targeting oncogenic SOX2
 10.1016/j.xgen.2025.100762:
 - date: '2026-10-23'
   decision: accepted
@@ -716,6 +819,12 @@
   score: 4.5
   title: Exploring the Alternative Conformation of a Known Protein Structure Based
     on Contact Map Prediction
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:li-2024-exploring-alternative-conformation
+  list: withdrawal
+  reason: 'C2: protein conformations from contact map prediction'
+  title: Li 2024 Exploring Alternative Conformation
 10.1021/acs.jcim.5c00205:
 - date: '2026-10-23'
   decision: accepted
@@ -765,6 +874,13 @@
   score: 3.0
   title: Inhibiting fungal multidrug resistance by disrupting an activator-Mediator
     interaction
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:nishikawa-2016-inhibiting-fungal-multidrug
+  list: withdrawal
+  reason: 'C1: a finding about disrupting an activator-Mediator interaction in
+    fungi'
+  title: Nishikawa 2016 Inhibiting fungal multidrug
 10.1038/ncomms13582:
 - date: '2026-10-23'
   decision: accepted
@@ -773,6 +889,13 @@
   score: 5.0
   title: Actin activates Pseudomonas aeruginosa ExoY nucleotidyl cyclase toxin
     and ExoY-like effector domains from MARTX toxins
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:belyy-2016-actin-activates-pseudomonas
+  list: withdrawal
+  reason: 'C1: a finding about a bacterial toxin; effector domain in an unrelated
+    sense'
+  title: Belyy 2016 Actin activates Pseudomonas
 10.1038/ncomms9257:
 - date: '2026-10-23'
   decision: accepted
@@ -781,6 +904,12 @@
   score: 3.0
   title: SETD1A modulates cell cycle progression through a miRNA network that
     regulates p53 target genes
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:tajima-2015-setd1a-modulates-cell
+  list: withdrawal
+  reason: 'C1: a finding about SETD1A and a p53-target miRNA network'
+  title: Tajima 2015 SETD1A modulates cell
 10.1038/s10038-025-01385-3:
 - date: '2026-10-23'
   decision: deferred
@@ -840,6 +969,12 @@
   score: 6.0
   title: 'scDisInFact: disentangled learning for integration and prediction of
     multi-batch multi-condition single-cell RNA-sequencing data'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:scdisinfact
+  list: withdrawal
+  reason: 'C3: batch and condition disentangling for integration'
+  title: scDisInFact
 10.1038/s41467-024-53628-0:
 - date: '2026-10-23'
   decision: deferred
@@ -870,6 +1005,12 @@
   score: 10.0
   title: Benchmarking the translational potential of spatial gene expression prediction
     from histology
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:wang-2025-benchmarking-translational-potential
+  list: withdrawal
+  reason: 'C2: spatial expression predicted from histology'
+  title: Wang 2025 Benchmarking translational potential
 10.1038/s41467-025-58481-3:
 - date: '2026-10-23'
   decision: accepted
@@ -892,6 +1033,13 @@
   score: 4.0
   title: 'PhyloTune: An efficient method to accelerate phylogenetic updates using
     a pretrained DNA language model'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:phylotune
+  list: withdrawal
+  reason: 'C3: phylogenetic tree reconstruction; observation, though it uses a
+    DNA language model'
+  title: PhyloTune
 10.1038/s41467-025-65077-4:
 - date: '2026-10-23'
   decision: accepted
@@ -931,6 +1079,12 @@
   score: 4.5
   title: A deep learning-based multiscale integration of spatial omics with tumor
     morphology
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:schmauch-2025-deep-learning-based-multiscale
+  list: withdrawal
+  reason: 'C2: spatial omics integrated with tumour morphology'
+  title: Schmauch 2025 deep learning-based multiscale
 10.1038/s41467-025-66899-y:
 - date: '2026-10-23'
   decision: recorded
@@ -1015,6 +1169,12 @@
   score: 4.5
   title: Inference of spatial chromatin accessibility via integration of spatial
     transcriptomics and single-cell multi-omics data
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:debnath-2026-inference-spatial-chromatin
+  list: withdrawal
+  reason: 'C3: inferring spatial accessibility by integrating assays'
+  title: Debnath 2026 Inference spatial chromatin
 10.1038/s41467-026-74807-1:
 - date: '2026-10-23'
   decision: accepted
@@ -1133,6 +1293,12 @@
   list: discovery
   score: 6.0
   title: Benchmarking atlas-level data integration in single-cell genomics
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:luecken-2022-benchmarking-atlas-level-data
+  list: withdrawal
+  reason: 'C3: atlas-level data integration'
+  title: Luecken 2022 Benchmarking atlas-level data
 10.1038/s41592-024-02201-0:
 - date: '2026-10-23'
   decision: accepted
@@ -1154,6 +1320,12 @@
   list: discovery
   score: 4.5
   title: Benchmarking algorithms for single-cell multi-omics prediction and integration
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:hu-2024-benchmarking-algorithms-single-cell
+  list: withdrawal
+  reason: 'C3: single-cell multi-omics prediction and integration algorithms'
+  title: Hu 2024 Benchmarking algorithms single-cell
 10.1038/s41592-025-02772-6:
 - date: '2026-10-23'
   decision: accepted
@@ -1280,6 +1452,12 @@
   score: 7.0
   title: 'Development of a novel immunoassay to detect interactions with the transactivation
     domain of p53: application to screening of new drugs'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:xiong-2017-development-immunoassay-detect
+  list: withdrawal
+  reason: 'C1: an immunoassay developed for drug screening'
+  title: Xiong 2017 Development immunoassay detect
 10.1038/s41598-022-19703-6:
 - date: '2026-10-23'
   decision: accepted
@@ -1288,6 +1466,13 @@
   score: 5.0
   title: Peptidomimetics designed to bind to RAS effector domain are promising
     cancer therapeutic compounds
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:pallara-2022-peptidomimetics-designed-bind
+  list: withdrawal
+  reason: 'C2: peptidomimetics against a RAS effector domain; protein-protein,
+    not genomic'
+  title: Pallara 2022 Peptidomimetics designed bind
 10.1038/s41598-024-85022-7:
 - date: '2026-10-23'
   decision: deferred
@@ -1346,6 +1531,13 @@
   score: 4.5
   title: iAODE for benchmarking and continuum modeling of single-cell chromatin
     accessibility
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:fu-2026-iaode-benchmarking-continuum
+  list: withdrawal
+  reason: 'C3: continuum and trajectory modelling of single-cell accessibility;
+    trajectory inference is named out in README.md'
+  title: Fu 2026 iAODE benchmarking continuum
 10.1038/s42003-026-10251-7:
 - date: '2026-10-23'
   decision: accepted
@@ -1379,6 +1571,12 @@
   score: 5.0
   title: 'HESpotEx: a dual-stream deep learning framework for spot-level gene
     expression prediction from histological images'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:hespotex
+  list: withdrawal
+  reason: 'C2: spot-level expression from histology'
+  title: HESpotEx
 10.1038/s44259-026-00219-2:
 - date: '2026-10-23'
   decision: deferred
@@ -1430,6 +1628,12 @@
   score: 3.0
   title: 'iEdgeDTA: integrated edge information and 1D graph convolutional neural
     networks for binding affinity prediction'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:iedgedta
+  list: withdrawal
+  reason: 'C2: drug-target binding affinity'
+  title: iEdgeDTA
 10.1051/itmconf/20269001011:
 - date: '2026-10-23'
   decision: recorded
@@ -1456,6 +1660,12 @@
   score: 7.5
   title: 'ProT-VAE: Protein Transformer Variational AutoEncoder for functional
     protein design'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:prot-vae
+  list: withdrawal
+  reason: 'C2: functional protein design'
+  title: ProT-VAE
 10.1073/pnas.2504117122:
 - date: '2026-10-23'
   decision: deferred
@@ -1477,6 +1687,12 @@
   score: 6.0
   title: Benchmarking three simple DNA staining-based image metrics for live-cell
     tracking of chromatin organization
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:kang-2026-benchmarking-three-simple
+  list: withdrawal
+  reason: 'C2: image metrics from DNA staining in live cells'
+  title: Kang 2026 Benchmarking three simple
 10.1080/21541264.2026.2727737:
 - date: '2026-10-23'
   decision: deferred
@@ -1492,6 +1708,12 @@
   score: 5.0
   title: Rapid and interpretable protein contact map prediction using a pattern-matching
     strategy
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:hacisuleyman-2026-rapid-interpretable-protein
+  list: withdrawal
+  reason: 'C2: protein contact map prediction'
+  title: Hacisuleyman 2026 Rapid interpretable protein
 10.1093/bib/bbab442:
 - date: '2026-10-23'
   decision: accepted
@@ -1500,6 +1722,12 @@
   score: 3.0
   title: Are dropout imputation methods for scRNA-seq effective for scATAC-seq
     data?
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:liu-2022-dropout-imputation-scrna-seq
+  list: withdrawal
+  reason: 'C3: dropout imputation'
+  title: Liu 2022 dropout imputation scRNA-seq
 10.1093/bib/bbab529:
 - date: '2026-10-23'
   decision: deferred
@@ -1515,6 +1743,12 @@
   score: 4.5
   title: Spatial transcriptomics prediction from histology jointly through Transformer
     and graph neural networks
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:zeng-2022-spatial-transcriptomics-prediction
+  list: withdrawal
+  reason: 'C2: expression from histology images'
+  title: Zeng 2022 Spatial transcriptomics prediction
 10.1093/bib/bbad464:
 - date: '2026-10-23'
   decision: accepted
@@ -1523,6 +1757,12 @@
   score: 5.0
   title: 'THItoGene: a deep learning method for predicting spatial transcriptomics
     from histological images'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:thitogene
+  list: withdrawal
+  reason: 'C2: spatial transcriptomics from histology'
+  title: THItoGene
 10.1093/bib/bbae110:
 - date: '2026-10-23'
   decision: recorded
@@ -1549,6 +1789,12 @@
   score: 7.5
   title: 'Deep learning approaches for non-coding genetic variant effect prediction:
     current progress and future prospects'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:wang-2024-deep-learning-approaches
+  list: withdrawal
+  reason: 'C1: a review of non-coding variant effect methods'
+  title: Wang 2024 Deep learning approaches
 10.1093/bib/bbae560:
 - date: '2026-10-23'
   decision: accepted
@@ -1567,6 +1813,12 @@
   score: 9.0
   title: 'SpaDiT: diffusion transformer for spatial gene expression prediction
     using scRNA-seq'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:spadit
+  list: withdrawal
+  reason: 'C3: imputing spatial expression from scRNA-seq; observation'
+  title: SpaDiT
 10.1093/bib/bbae617:
 - date: '2026-10-23'
   decision: accepted
@@ -1625,6 +1877,12 @@
   score: 8.5
   title: 'Scalable embedding fusion with protein language models: insights from
     benchmarking text-integrated representations'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:ko-2026-scalable-embedding-fusion
+  list: withdrawal
+  reason: 'C2: protein language model embeddings'
+  title: Ko 2026 Scalable embedding fusion
 10.1093/bib/bbag022:
 - date: '2026-10-23'
   decision: accepted
@@ -1633,6 +1891,12 @@
   score: 10.0
   title: 'Personalized gene expression prediction in the era of deep learning:
     a review'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:dubey-2026-personalized-gene-expression
+  list: withdrawal
+  reason: 'C1: a review of personalised expression prediction'
+  title: Dubey 2026 Personalized gene expression
 10.1093/bib/bbag064:
 - date: '2026-10-23'
   decision: accepted
@@ -1770,6 +2034,12 @@
   score: 5.0
   title: 'Performance of deep learning methods for spatial gene expression prediction
     from histology images: a comprehensive assessment'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:xie-2026-performance-deep-learning
+  list: withdrawal
+  reason: 'C2: spatial expression from histology images'
+  title: Xie 2026 Performance deep learning
 10.1093/bioinformatics/btaa217:
 - date: '2026-10-23'
   decision: accepted
@@ -1778,6 +2048,12 @@
   score: 5.0
   title: 'FUpred: detecting protein domains through deep-learning-based contact
     map prediction'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:fupred
+  list: withdrawal
+  reason: 'C2: protein domain boundaries from contact maps'
+  title: FUpred
 10.1093/bioinformatics/btac053:
 - date: '2026-10-23'
   decision: accepted
@@ -1786,6 +2062,12 @@
   score: 3.5
   title: 'SPOT-Contact-LM: improving single-sequence-based prediction of protein
     contact map using a transformer language model'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:spot-contact-lm
+  list: withdrawal
+  reason: 'C2: protein contact map prediction'
+  title: SPOT-Contact-LM
 10.1093/bioinformatics/btac421:
 - date: '2026-10-23'
   decision: deferred
@@ -1802,6 +2084,12 @@
   score: 3.5
   title: 'ASTER: accurately estimating the number of cell types in single-cell
     chromatin accessibility data'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:aster
+  list: withdrawal
+  reason: 'C3: estimating the number of cell types in accessibility data'
+  title: ASTER
 10.1093/bioinformatics/btad271:
 - date: '2026-10-23'
   decision: accepted
@@ -1872,6 +2160,12 @@
   score: 5.5
   title: Spatial transcriptomics deconvolution methods generalize well to spatial
     chromatin accessibility data
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:ouologuem-2025-spatial-transcriptomics-deconvolution
+  list: withdrawal
+  reason: 'C3: spatial deconvolution'
+  title: Ouologuem 2025 Spatial transcriptomics deconvolution
 10.1093/bioinformatics/btaf317:
 - date: '2026-10-23'
   decision: accepted
@@ -1959,6 +2253,12 @@
   score: 5.5
   title: 'DFCE-KanT: predicting spatial gene expression from histology images
     via contrastive learning'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:dfce-kant
+  list: withdrawal
+  reason: 'C2: spatial expression from H and E images'
+  title: DFCE-KanT
 10.1093/bioinformatics/btag602:
 - date: '2026-10-23'
   decision: accepted
@@ -2006,6 +2306,12 @@
   score: 4.5
   title: 'NeBcon: protein contact map prediction using neural network training
     coupled with naïve Bayes classifiers'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:nebcon
+  list: withdrawal
+  reason: 'C2: protein contact map prediction'
+  title: NeBcon
 10.1093/bioinformatics/btx234:
 - date: '2026-10-23'
   decision: accepted
@@ -2023,6 +2329,12 @@
   title: 'MemBrain-contact 2.0: a new two-stage machine learning model for the
     prediction enhancement of transmembrane protein residue contacts in the full
     chain'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:membrain-contact-2-0
+  list: withdrawal
+  reason: 'C2: transmembrane protein residue contacts'
+  title: MemBrain-contact 2.0
 10.1093/bioinformatics/btx679:
 - date: '2026-10-23'
   decision: accepted
@@ -2039,6 +2351,12 @@
   score: 5.0
   title: Accurate prediction of protein contact maps by coupling residual two-dimensional
     bidirectional long short-term memory with convolutional neural networks
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:hanson-2018-accurate-prediction-protein
+  list: withdrawal
+  reason: 'C2: protein contact map prediction'
+  title: Hanson 2018 Accurate prediction protein
 10.1093/bioinformatics/btz876:
 - date: '2026-10-23'
   decision: deferred
@@ -2071,6 +2389,12 @@
   score: 4.0
   title: A comprehensive benchmarking study on computational tools for cross-omics
     label transfer from single-cell RNA to ATAC data
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:wang-2026-benchmarking-computational-tools
+  list: withdrawal
+  reason: 'C3: cross-omics label transfer from scRNA to scATAC'
+  title: Wang 2026 benchmarking computational tools
 10.1093/gigascience/giad085:
 - date: '2026-10-23'
   decision: accepted
@@ -2116,6 +2440,12 @@
   score: 5.0
   title: A genetic screen identifies BEND3 as a regulator of bivalent gene expression
     and global DNA methylation
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:yakhou-2023-genetic-screen-identifies
+  list: withdrawal
+  reason: 'C1: a finding about BEND3 and bivalent gene expression'
+  title: Yakhou 2023 genetic screen identifies
 10.1093/nar/gkaf1209:
 - date: '2026-10-23'
   decision: accepted
@@ -2134,6 +2464,12 @@
   score: 5.5
   title: 'FmH2ST: foundation model-based spatial transcriptomics generation from
     histological images'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:fmh2st
+  list: withdrawal
+  reason: 'C2: spatial transcriptomics generated from histology'
+  title: FmH2ST
 10.1093/nar/gkaf871:
 - date: '2026-10-23'
   decision: recorded
@@ -2151,6 +2487,12 @@
   score: 6.0
   title: ATRX inactivation disrupts global chromatin state and topology to dysregulate
     neurodevelopmental pathways in glioma pathogenesis
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:malgulwar-2026-atrx-inactivation-disrupts
+  list: withdrawal
+  reason: 'C1: a finding about ATRX inactivation in glioma'
+  title: Malgulwar 2026 ATRX inactivation disrupts
 10.1093/nar/gkag704:
 - date: '2026-10-23'
   decision: deferred
@@ -2257,6 +2599,13 @@
   score: 3.0
   title: FACT sets a barrier for cell fate reprogramming in <i>C. elegans</i>
     and Human
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:kolundzic-2017-fact-sets-barrier
+  list: withdrawal
+  reason: 'C1: a finding about FACT as a reprogramming barrier; on topic for cell
+    fate, still a result'
+  title: Kolundzic 2017 FACT sets barrier
 10.1101/2019.12.24.887877:
 - date: '2026-10-23'
   decision: deferred
@@ -2280,6 +2629,12 @@
   list: discovery
   score: 3.0
   title: Deep Homology-Based Protein Contact-Map Prediction
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:ronen-2020-deep-homology-based-protein
+  list: withdrawal
+  reason: 'C2: protein contact map prediction'
+  title: Ronen 2020 Deep Homology-Based Protein
 10.1101/2020.10.05.326140:
 - date: '2026-10-23'
   decision: deferred
@@ -2313,6 +2668,12 @@
   score: 5.0
   title: Protein contact map prediction using multiple sequence alignment dropout
     and consistency learning for sequences with fewer homologs
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:liu-2021-protein-contact-map
+  list: withdrawal
+  reason: 'C2: protein contact map prediction'
+  title: Liu 2021 Protein contact map
 10.1101/2021.06.19.449089:
 - date: '2026-10-23'
   decision: accepted
@@ -2321,6 +2682,12 @@
   score: 3.5
   title: 'SPOT-Contact-Single: Improving Single-Sequence-Based Prediction of Protein
     Contact Map using a Transformer Language Model'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:spot-contact-single
+  list: withdrawal
+  reason: 'C2: protein contact map prediction'
+  title: SPOT-Contact-Single
 10.1101/2021.07.22.453446:
 - date: '2026-10-23'
   decision: deferred
@@ -2336,6 +2703,12 @@
   score: 6.0
   title: Comprehensive Benchmarking of CITE-seq versus DOGMA-seq Single Cell Multimodal
     Omics
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:xu-2021-benchmarking-cite-seq-versus
+  list: withdrawal
+  reason: 'C3: assay-versus-assay comparison of multimodal single-cell protocols'
+  title: Xu 2021 Benchmarking CITE-seq versus
 10.1101/2021.12.26.474224:
 - date: '2026-10-23'
   decision: accepted
@@ -2362,6 +2735,12 @@
   score: 4.5
   title: 'CGAN-Cmap: protein contact map prediction using deep generative adversarial
     neural networks'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:cgan-cmap
+  list: withdrawal
+  reason: 'C2: protein contact map prediction'
+  title: CGAN-Cmap
 10.1101/2022.09.15.508087:
 - date: '2026-10-23'
   decision: recorded
@@ -2535,6 +2914,12 @@
   list: discovery
   score: 6.0
   title: 'FLAb: Benchmarking deep learning methods for antibody fitness prediction'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:flab
+  list: withdrawal
+  reason: 'C2: antibody fitness; protein substrate'
+  title: FLAb
 10.1101/2024.01.17.576034:
 - date: '2026-10-23'
   decision: accepted
@@ -2940,6 +3325,12 @@
   score: 5.5
   title: AUC-PR is a More Informative Metric for Assessing the Biological Relevance
     of In Silico Cellular Perturbation Prediction Models
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:zhu-2025-auc-pr-more-informative
+  list: withdrawal
+  reason: 'C1: a metric argument, not a resource'
+  title: Zhu 2025 AUC-PR More Informative
 10.1101/2025.03.07.25323578:
 - date: '2026-10-23'
   decision: deferred
@@ -3203,6 +3594,13 @@
   score: 5.0
   title: 'scMomer: A modality-aware pretraining framework for single-cell multi-omics
     modeling under missing modality conditions'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:scmomer
+  list: withdrawal
+  reason: 'C5: multi-omics pretraining under missing modalities; representation
+    only'
+  title: scMomer
 10.1101/2025.08.11.669796:
 - date: '2026-10-23'
   decision: accepted
@@ -3211,6 +3609,12 @@
   score: 7.25
   title: 'PRESTIGE-ST: Patch Resolution and Encoder STrategies for Inference of
     Gene Expression from Spatial Transcriptomics'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:prestige-st
+  list: withdrawal
+  reason: 'C2: expression inferred from histology patches'
+  title: PRESTIGE-ST
 10.1101/2025.08.17.670700:
 - date: '2026-10-23'
   decision: recorded
@@ -3249,6 +3653,12 @@
   score: 4.5
   title: Impact of Data Quality on Deep Learning Prediction of Spatial Transcriptomics
     from Histology Images
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:hallinan-2025-impact-data-quality
+  list: withdrawal
+  reason: 'C2: spatial transcriptomics from histology images'
+  title: Hallinan 2025 Impact Data Quality
 10.1101/2025.09.08.674800:
 - date: '2026-10-23'
   decision: rejected
@@ -3300,6 +3710,13 @@
   score: 10.0
   title: A framework to detect positive selection using variant effect predictions
     reveals widespread adaptive evolution of human neurons
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:starr-2025-detect-positive-selection
+  list: withdrawal
+  reason: 'C3: detecting positive selection; observation, though built on variant
+    effect predictors'
+  title: Starr 2025 detect positive selection
 10.1101/2025.09.19.677475:
 - date: '2026-10-23'
   decision: rejected
@@ -3436,6 +3853,13 @@
   score: 7.5
   title: Assessing Scale and Predictive Diversity in Models for Single-Cell Transcriptomics
     based on Geneformer
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:chen-2025-assessing-predictive-diversity
+  list: withdrawal
+  reason: 'C5: evaluates scaling and representation quality of a single-cell foundation
+    model'
+  title: Chen 2025 Assessing Predictive Diversity
 10.1101/2025.11.04.686583:
 - date: '2026-10-23'
   decision: accepted
@@ -3554,6 +3978,12 @@
   score: 3.0
   title: 'STAMPS: Signal-peptide Transformer for Augmenting Mammalian Protein
     Secretion'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:stamps
+  list: withdrawal
+  reason: 'C2: signal peptide design for protein secretion'
+  title: STAMPS
 10.1101/2025.11.21.689655:
 - date: '2026-10-23'
   decision: rejected
@@ -3791,6 +4221,12 @@
   score: 5.0
   title: 'PGST: A Prototype-Guided Parameter-Efficient Network for Spatial Transcriptomics
     Prediction'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:pgst
+  list: withdrawal
+  reason: 'C2: spatial transcriptomics prediction from morphology'
+  title: PGST
 10.1109/tcbbio.2026.3657361:
 - date: '2026-10-23'
   decision: recorded
@@ -3849,6 +4285,12 @@
   score: 3.0
   title: Transcriptomic rationale for synthetic lethality-targeting ERCC1 and
     CDKN1A in chronic myelomonocytic leukaemia
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:hurtado-2018-transcriptomic-rationale-synthetic
+  list: withdrawal
+  reason: 'C1: a synthetic-lethality rationale in leukaemia'
+  title: Hurtado 2018 Transcriptomic rationale synthetic
 10.1111/bph.70585:
 - date: '2026-10-23'
   decision: accepted
@@ -3893,6 +4335,12 @@
   list: discovery
   score: 3.0
   title: MeCP2 interacts with the super elongation complex to regulate transcription
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:sonn-2025-mecp2-interacts-super
+  list: withdrawal
+  reason: 'C1: a mechanistic finding about MeCP2'
+  title: Sonn 2025 MeCP2 interacts super
 10.1126/sciadv.aed3414:
 - date: '2026-10-23'
   decision: accepted
@@ -3918,6 +4366,12 @@
   score: 7.0
   title: A major chromatin regulator determines resistance of tumor cells to T
     cell-mediated killing
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:pan-2018-major-chromatin-regulator
+  list: withdrawal
+  reason: 'C1: a finding about tumour resistance to T-cell killing'
+  title: Pan 2018 major chromatin regulator
 10.1126/science.adf7044:
 - date: '2026-10-23'
   decision: accepted
@@ -3936,6 +4390,12 @@
   score: 3.0
   title: Transmembrane Prolines Mediate Signal Sensing and Decoding in Bacillus
     subtilis DesK Histidine Kinase
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:fern-ndez-2019-transmembrane-prolines-mediate
+  list: withdrawal
+  reason: 'C1: a finding about signal sensing in a bacterial histidine kinase'
+  title: Fernández 2019 Transmembrane Prolines Mediate
 10.1145/3770855.3818839:
 - date: '2026-10-23'
   decision: recorded
@@ -3983,6 +4443,12 @@
   score: 4.0
   title: Dynamic Changes of DNA Methylation and Transcriptome Expression in Porcine
     Ovaries during Aging
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:xi-2019-dynamic-changes-dna
+  list: withdrawal
+  reason: 'C1: a descriptive study of methylation during porcine ovarian ageing'
+  title: Xi 2019 Dynamic Changes DNA
 10.1158/0008-5472.can-16-2374:
 - date: '2026-10-23'
   decision: accepted
@@ -3991,6 +4457,12 @@
   score: 8.0
   title: Histone Acetyltransferase Activity of MOF Is Required for <i>MLL-AF9</i>
     Leukemogenesis
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:valerio-2017-histone-acetyltransferase-activity
+  list: withdrawal
+  reason: 'C1: a leukaemia-biology finding about MOF'
+  title: Valerio 2017 Histone Acetyltransferase Activity
 10.1158/2159-8290.cd-25-1735:
 - date: '2026-10-23'
   decision: deferred
@@ -4096,6 +4568,12 @@
   score: 4.0
   title: 'DeepSGE: predicting spatial gene expression using residual network with
     efficient channel attention and dynamic graph attention network'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:deepsge
+  list: withdrawal
+  reason: 'C2: spatial expression from histology images'
+  title: DeepSGE
 10.1186/s12864-026-12625-x:
 - date: '2026-10-23'
   decision: deferred
@@ -4188,6 +4666,12 @@
   score: 4.0
   title: Benchmarking algorithms for joint integration of unpaired and paired
     single-cell RNA-seq and ATAC-seq data
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:myy-2023-benchmarking-algorithms-joint
+  list: withdrawal
+  reason: 'C3: joint integration of unpaired scRNA-seq and scATAC-seq'
+  title: MYY 2023 Benchmarking algorithms joint
 10.1186/s13059-024-03335-2:
 - date: '2026-10-23'
   decision: recorded
@@ -4213,6 +4697,13 @@
   list: discovery
   score: 6.0
   title: Benchmarking computational methods for single-cell chromatin data analysis
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:luo-2024-benchmarking-computational-single-cell
+  list: withdrawal
+  reason: 'C3: single-cell chromatin data analysis methods; clustering and dimensionality
+    reduction'
+  title: Luo 2024 Benchmarking computational single-cell
 10.1186/s13059-025-03674-8:
 - date: '2026-10-23'
   decision: accepted
@@ -4311,6 +4802,12 @@
   score: 7.0
   title: Identification of a chromatin regulator signature and potential candidate
     drugs for bladder cancer
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:zhu-2022-identification-chromatin-regulator
+  list: withdrawal
+  reason: 'C1: a prognostic signature for bladder cancer'
+  title: Zhu 2022 Identification chromatin regulator
 10.1186/s41065-022-00253-w:
 - date: '2026-10-23'
   decision: accepted
@@ -4319,6 +4816,12 @@
   score: 7.0
   title: A novel chromatin regulator-related immune checkpoint related gene prognostic
     signature and potential candidate drugs for endometrial cancer patients
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:liu-2022-chromatin-regulator-related-immune
+  list: withdrawal
+  reason: 'C1: a prognostic signature for endometrial cancer'
+  title: Liu 2022 chromatin regulator-related immune
 10.1360/csb-2025-0682:
 - date: '2026-10-23'
   decision: accepted
@@ -4362,6 +4865,12 @@
   score: 4.75
   title: Overcoming extrapolation challenges of deep learning by incorporating
     physics in protein sequence-function modeling
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:barethiya-2026-overcoming-extrapolation-challenges
+  list: withdrawal
+  reason: 'C2: protein sequence-function modelling with physics'
+  title: Barethiya 2026 Overcoming extrapolation challenges
 10.1371/journal.pcbi.1014054:
 - date: '2026-10-23'
   decision: accepted
@@ -4414,6 +4923,12 @@
   score: 6.75
   title: 'SpaVGN: A hybrid deep learning framework for high-resolution spatial
     transcriptomics data reconstruction and spatial domain identification'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:spavgn
+  list: withdrawal
+  reason: 'C3: spatial transcriptomics reconstruction and domain identification'
+  title: SpaVGN
 10.1371/journal.ppat.1006517:
 - date: '2026-10-23'
   decision: accepted
@@ -4422,6 +4937,12 @@
   score: 3.0
   title: Small molecule perturbation of the CAND1-Cullin1-ubiquitin cycle stabilizes
     p53 and triggers Epstein-Barr virus reactivation
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:tikhmyanova-2017-small-molecule-perturbation
+  list: withdrawal
+  reason: 'C1: a finding about a small molecule and viral reactivation'
+  title: Tikhmyanova 2017 Small molecule perturbation
 10.14202/vetworld.2025.1922-1935:
 - date: '2026-10-23'
   decision: accepted
@@ -4483,6 +5004,12 @@
   score: 4.0
   title: Improving understanding of chromatin regulatory proteins and potential
     implications for drug discovery
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:rafehi-2016-improving-understanding-chromatin
+  list: withdrawal
+  reason: 'C1: a review article'
+  title: Rafehi 2016 Improving understanding chromatin
 10.20944/preprints202507.0260.v1:
 - date: '2026-10-23'
   decision: deferred
@@ -4504,6 +5031,12 @@
   score: 4.0
   title: 'Pretrained on Animals, Deployed on Plants: Why RNA Foundation Models
     Have Not Decoded Plant Regulation or Genome Editing'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:wang-2026-pretrained-animals-deployed
+  list: withdrawal
+  reason: 'C2: RNA foundation models, and a position piece about them'
+  title: Wang 2026 Pretrained Animals Deployed
 10.21203/rs.3.rs-10231666/v1:
 - date: '2026-10-23'
   decision: accepted
@@ -4530,6 +5063,12 @@
   score: 3.0
   title: Chromatin regulator perturbation causes heme pathway imbalance in yeast
     and human cells
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:alexandrov-2026-chromatin-regulator-perturbation
+  list: withdrawal
+  reason: 'C1: a finding about heme pathway imbalance'
+  title: Alexandrov 2026 Chromatin regulator perturbation
 10.21203/rs.3.rs-10434123/v1:
 - date: '2026-10-23'
   decision: accepted
@@ -4584,6 +5123,12 @@
   score: 6.5
   title: 'LucaCell: a sequence-centric foundation model for cross-species single-cell
     analysis'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:lucacell
+  list: withdrawal
+  reason: 'C5: cross-species single-cell representation model'
+  title: LucaCell
 10.21203/rs.3.rs-1811912/v1:
 - date: '2026-10-23'
   decision: rejected
@@ -4602,6 +5147,12 @@
   score: 3.0
   title: Comprehensive analysis identified and validated BRD4, CHD1, and KDM7A
     as potential biomarkers for osteoarthritis
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:li-2022-identified-validated-brd4
+  list: withdrawal
+  reason: 'C1: candidate biomarkers for osteoarthritis'
+  title: Li 2022 identified validated BRD4
 10.21203/rs.3.rs-2969323/v1:
 - date: '2026-10-23'
   decision: rejected
@@ -4629,6 +5180,12 @@
   title: Mevalonate kinase inhibits anti-tumor immunity by impairing the tumor
     cell-intrinsic interferon response in microsatellite instability colorectal
     cancer
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:zhang-2024-mevalonate-kinase-inhibits
+  list: withdrawal
+  reason: 'C1: a tumour-immunology finding; no genomic actuator component'
+  title: Zhang 2024 Mevalonate kinase inhibits
 10.21203/rs.3.rs-6128805/v1:
 - date: '2026-10-23'
   decision: deferred
@@ -4662,6 +5219,12 @@
   score: 6.0
   title: Cluster-Based Data Balancing for Protein Contact Map Prediction Using
     MLP Neural Networks
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:saghafi-2025-cluster-based-data-balancing
+  list: withdrawal
+  reason: 'C2: protein contact map prediction'
+  title: Saghafi 2025 Cluster-Based Data Balancing
 10.21203/rs.3.rs-7681940/v1:
 - date: '2026-10-23'
   decision: accepted
@@ -4678,6 +5241,12 @@
   score: 8.0
   title: Benchmarking Genomic Foundation Models for Gene Fusion Detection from
     DNA Sequences
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:krupi-ka-2025-benchmarking-genomic-foundation
+  list: withdrawal
+  reason: 'C3: gene fusion detection; diagnostic annotation'
+  title: Krupička 2025 Benchmarking Genomic Foundation
 10.21203/rs.3.rs-859635/v1:
 - date: '2026-10-23'
   decision: rejected
@@ -4718,6 +5287,13 @@
   score: 5.0
   title: Systematic evaluation of single-cell foundation model interpretability
     reveals attention captures co-expression rather than unique regulatory signal
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:kendiukhov-2026-evaluation-single-cell-foundation
+  list: withdrawal
+  reason: 'C5: interpretability of single-cell foundation model attention for
+    network inference'
+  title: Kendiukhov 2026 evaluation single-cell foundation
 10.21203/rs.3.rs-9955756/v1:
 - date: '2026-10-23'
   decision: accepted
@@ -4740,6 +5316,12 @@
   list: discovery
   score: 7.5
   title: Advances in protein contact map prediction based on machine learning
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:xie-2015-advances-protein-contact
+  list: withdrawal
+  reason: 'C2: a review of protein contact map prediction'
+  title: Xie 2015 Advances protein contact
 10.21769/bioprotoc.5676:
 - date: '2026-10-23'
   decision: recorded
@@ -4768,6 +5350,12 @@
   score: 5.75
   title: 'A Systematic Review: Deep Learning for Analyzing Genomic Data to Discover
     Evolutionary Patterns'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:a-systematic-review
+  list: withdrawal
+  reason: 'C1: a systematic review of deep learning for evolutionary patterns'
+  title: A Systematic Review
 10.26355/eurrev_202301_30901:
 - date: '2026-10-23'
   decision: accepted
@@ -4776,6 +5364,12 @@
   score: 7.0
   title: Identification of a chromatin regulator signature for predicting prognosis
     of prostate cancer patient
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:liao-2023-identification-chromatin-regulator
+  list: withdrawal
+  reason: 'C1: a prognostic signature for prostate cancer'
+  title: Liao 2023 Identification chromatin regulator
 10.26508/lsa.202201778:
 - date: '2026-10-23'
   decision: accepted
@@ -4831,6 +5425,12 @@
   score: 3.0
   title: PKC-η-MARCKS Signaling Promotes Intracellular Survival of Unopsonized
     <i>Burkholderia thailandensis</i>
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:micheva-viteva-2017-pkc-marcks-signaling-promotes
+  list: withdrawal
+  reason: 'C1: a finding about intracellular bacterial survival'
+  title: Micheva-Viteva 2017 PKC-η-MARCKS Signaling Promotes
 10.3389/fcimb.2023.1182567:
 - date: '2026-10-23'
   decision: accepted
@@ -5009,6 +5609,12 @@
   list: discovery
   score: 5.0
   title: A FRET-Based Biosensor for the Src N-Terminal Regulatory Element
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:iruela-2022-fret-based-biosensor-src
+  list: withdrawal
+  reason: 'C2: a FRET biosensor for a kinase regulatory element'
+  title: Iruela 2022 FRET-Based Biosensor Src
 10.3390/bios16100581:
 - date: '2026-10-23'
   decision: accepted
@@ -5118,6 +5724,12 @@
   score: 7.5
   title: A Unified Deep Learning Framework for Single-Cell ATAC-Seq Analysis Based
     on ProdDep Transformer Encoder
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:wang-2023-unified-deep-learning
+  list: withdrawal
+  reason: 'C3: scATAC-seq analysis framework; clustering and annotation'
+  title: Wang 2023 Unified Deep Learning
 10.3390/ijms27073296:
 - date: '2026-10-23'
   decision: deferred
@@ -5182,6 +5794,12 @@
   score: 7.0
   title: Chromatin Regulator SMARCA4 Is Essential for MHV-Induced Inflammatory
     Cell Death, PANoptosis
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:rks-2024-chromatin-regulator-smarca4
+  list: withdrawal
+  reason: 'C1: a finding about SMARCA4 in virus-induced inflammatory cell death'
+  title: RKS 2024 Chromatin Regulator SMARCA4
 10.34133/research.1332:
 - date: '2026-10-23'
   decision: accepted
@@ -5190,6 +5808,12 @@
   score: 6.5
   title: 'Foundation Models in Cancer Pathology: Techniques, Applications, and
     Future Directions'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:foundation-models-in-cancer-pathology
+  list: withdrawal
+  reason: 'C2: pathology image foundation models'
+  title: Foundation Models in Cancer Pathology
 10.3791/58627:
 - date: '2026-10-23'
   decision: accepted
@@ -5337,6 +5961,12 @@
   score: 6.0
   title: 'Fitness Landscape for Antibodies 2: Benchmarking Reveals That Protein
     AI Models Cannot Yet Consistently Predict Developability Properties'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:fitness-landscape-for-antibodies-2
+  list: withdrawal
+  reason: 'C2: antibody developability; protein substrate'
+  title: Fitness Landscape for Antibodies 2
 10.64898/2026.01.12.699009:
 - date: '2026-10-23'
   decision: accepted
@@ -5489,6 +6119,13 @@
   score: 6.0
   title: Single-cell Multiome Analysis of Chromatin State and Transcriptome in
     the Human Basal Ganglia
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:chang-2026-single-cell-multiome-chromatin
+  list: withdrawal
+  reason: 'C1: a single-cell multiome atlas of a brain region: a result, and if
+    admitted at all it is a dataset, not a model'
+  title: Chang 2026 Single-cell Multiome Chromatin
 10.64898/2026.02.05.703637:
 - date: '2026-10-23'
   decision: accepted
@@ -5627,6 +6264,12 @@
   score: 3.0
   title: A comprehensive benchmark of publicly available image foundation models
     for their usability to predict gene expression from whole slide images
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:jabin-2026-benchmark-publicly-available
+  list: withdrawal
+  reason: 'C2: gene expression from whole slide images'
+  title: Jabin 2026 benchmark publicly available
 10.64898/2026.03.04.709607:
 - date: '2026-10-23'
   decision: accepted
@@ -5674,6 +6317,12 @@
   list: discovery
   score: 5.0
   title: The Epigenetic Factor PHF13 Governs Trophoblast Stemness and Differentiation
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: module:liu-2026-epigenetic-factor-phf13
+  list: withdrawal
+  reason: 'C1: a finding about PHF13 in trophoblast differentiation'
+  title: Liu 2026 Epigenetic Factor PHF13
 10.64898/2026.03.15.711852:
 - date: '2026-10-23'
   decision: deferred
@@ -5980,6 +6629,13 @@
   score: 4.0
   title: Genomic properties representing plant sex chromosome evolution interpreted
     with genome language models
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:akagi-2026-genomic-properties-representing
+  list: withdrawal
+  reason: 'C3: plant sex chromosome evolution interpreted with genome language
+    models'
+  title: Akagi 2026 Genomic properties representing
 10.64898/2026.05.28.728566:
 - date: '2026-10-23'
   decision: accepted
@@ -5988,6 +6644,12 @@
   score: 3.0
   title: Amplicon/Protein Bead Display enables quantitative <i>in vitro</i> biochemistry
     at scale
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:passow-2026-amplicon-protein-bead
+  list: withdrawal
+  reason: 'C2: a protein library display method'
+  title: Passow 2026 Amplicon Protein Bead
 10.64898/2026.05.29.728876:
 - date: '2026-10-23'
   decision: accepted
@@ -6041,6 +6703,12 @@
   score: 5.5
   title: Evolution and mechanism of <i>MEIS2</i> -mediated forelimb specialization
     in bats
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:lo-2026-evolution-mechanism-i
+  list: withdrawal
+  reason: 'C1: a finding about MEIS2 and bat forelimb evolution'
+  title: Lo 2026 Evolution mechanism i
 10.64898/2026.06.04.730272:
 - date: '2026-10-23'
   decision: accepted
@@ -6100,6 +6768,12 @@
   list: discovery
   score: 3.5
   title: Benchmarking gene expression reconstruction from single-cell latent representations
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:fu-2026-benchmarking-gene-expression
+  list: withdrawal
+  reason: 'C5: expression reconstruction from latent representations'
+  title: Fu 2026 Benchmarking gene expression
 10.64898/2026.06.15.732063:
 - date: '2026-10-23'
   decision: accepted
@@ -6140,6 +6814,13 @@
   score: 7.75
   title: Systematic Evaluation of Feature Representations for Cancer-Associated
     sORF Prediction in Non-coding RNA
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:g-es-2026-evaluation-feature-representations
+  list: withdrawal
+  reason: 'C3: annotating cancer-associated sORFs in non-coding RNA; RNA substrate
+    and an annotation task'
+  title: Góes 2026 Evaluation Feature Representations
 10.64898/2026.06.17.732686:
 - date: '2026-10-23'
   decision: deferred
@@ -6245,6 +6926,12 @@
   score: 6.5
   title: 'HiFi-ST: High-Fidelity Reconstruction of Continuous Spatial Transcriptomic
     Expression Fields via Conditional Neural Fields'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:hifi-st
+  list: withdrawal
+  reason: 'C3: reconstructing a continuous spatial expression field; observation'
+  title: HiFi-ST
 10.64898/2026.07.02.736037:
 - date: '2026-10-23'
   decision: accepted
@@ -6263,6 +6950,12 @@
   score: 4.0
   title: 'SpliSync: Genomic language model-driven splice site correction of long
     RNA sequencing reads'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:splisync
+  list: withdrawal
+  reason: 'C3: splice site correction in long sequencing reads; read processing'
+  title: SpliSync
 10.64898/2026.07.10.737654:
 - date: '2026-10-23'
   decision: accepted
@@ -6396,6 +7089,12 @@
   score: 5.5
   title: 'PARNET: A CLIP-SEQ-BASED FOUNDATION MODEL FOR RNA SEQUENCE REPRESENTATION
     LEARNING'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:parnet
+  list: withdrawal
+  reason: 'C2: RNA foundation model trained on CLIP-seq; RNA substrate'
+  title: PARNET
 10.64898/2026.08.09.743676:
 - date: '2026-10-23'
   decision: accepted
@@ -6412,6 +7111,12 @@
   score: 6.0
   title: 'Benchmark Averages Hide the Failures That Matter: Quantizing ESM-2 for
     Protein Variant-Effect Prediction'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:shao-2026-benchmark-averages-hide
+  list: withdrawal
+  reason: 'C2: quantised protein language models for protein variant effect'
+  title: Shao 2026 Benchmark Averages Hide
 10.64898/2026.08.12.743536:
 - date: '2026-10-23'
   decision: accepted
@@ -6536,6 +7241,12 @@
   list: discovery
   score: 9.0
   title: Independent benchmark of H&E-based gene expression prediction in skin
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:shaikhutdinova-2026-independent-benchmark-h
+  list: withdrawal
+  reason: 'C2: expression predicted from H and E slides'
+  title: Shaikhutdinova 2026 Independent benchmark H
 10.64898/2026.09.08.750126:
 - date: '2026-10-23'
   decision: accepted
@@ -6602,6 +7313,13 @@
   score: 3.0
   title: Genomic foundation model-derived disruption profiling links somatic mutations
     to cancer biology and clinical outcomes
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:nayak-2026-genomic-foundation-model-derived
+  list: withdrawal
+  reason: 'C3: links somatic mutation burden to clinical outcome; association,
+    not design'
+  title: Nayak 2026 Genomic foundation model-derived
 10.64898/2026.09.15.751765:
 - date: '2026-10-23'
   decision: accepted
@@ -6672,6 +7390,12 @@
   list: discovery
   score: 4.0
   title: Analyzing Genomic Foundation Models for Viral Sequence Identification
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:b-kov-2026-analyzing-genomic-foundation
+  list: withdrawal
+  reason: 'C3: viral sequence identification for diagnostics and surveillance'
+  title: Bůžková 2026 Analyzing Genomic Foundation
 10.64898/2026.09.25.754560:
 - date: '2026-10-23'
   decision: accepted
@@ -6776,6 +7500,12 @@
   score: 3.25
   title: A high-resolution protein-RNA binding atlas for structure-aware interaction
     prediction and post-transcriptional regulatory modeling
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:karimzadeh-2026-high-resolution-protein-rna-binding
+  list: withdrawal
+  reason: 'C2: protein-RNA binding atlas; RNA substrate'
+  title: Karimzadeh 2026 high-resolution protein-RNA binding
 10.64898/2026.10.13.758880:
 - date: '2026-10-23'
   decision: accepted
@@ -6875,6 +7605,12 @@
   score: 7.5
   title: The evolution of logic circuits for the purpose of protein contact map
     prediction
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:chapman-2017-evolution-logic-circuits
+  list: withdrawal
+  reason: 'C2: protein contact map prediction'
+  title: Chapman 2017 evolution logic circuits
 arxiv:1504.06659:
 - date: '2026-10-23'
   decision: accepted
@@ -6882,6 +7618,12 @@ arxiv:1504.06659:
   list: discovery
   score: 6.0
   title: 'benchNGS : An approach to benchmark short reads alignment tools'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:benchngs
+  list: withdrawal
+  reason: 'C3: short-read alignment tools'
+  title: benchNGS
 arxiv:1610.00622:
 - date: '2026-10-23'
   decision: accepted
@@ -6889,6 +7631,12 @@ arxiv:1610.00622:
   list: discovery
   score: 6.0
   title: Benchmark Problems for Numerical Implementations of Phase Field Models
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:jokisaari-2016-benchmark-problems-numerical
+  list: withdrawal
+  reason: 'C2: phase-field models in materials design'
+  title: Jokisaari 2016 Benchmark Problems Numerical
 arxiv:1910.01791:
 - date: '2026-10-23'
   decision: accepted
@@ -6903,6 +7651,12 @@ arxiv:1910.08636:
   list: discovery
   score: 6.0
   title: The TCGA Meta-Dataset Clinical Benchmark
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:the-tcga-meta-dataset-clinical-benchmark
+  list: withdrawal
+  reason: 'C3: clinical diagnosis and prognosis'
+  title: The TCGA Meta-Dataset Clinical Benchmark
 arxiv:1911.04389:
 - date: '2026-10-23'
   decision: accepted
@@ -6911,6 +7665,12 @@ arxiv:1911.04389:
   score: 6.0
   title: A Biologically Plausible Benchmark for Contextual Bandit Algorithms in
     Precision Oncology Using in vitro Data
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:rindtorff-2019-biologically-plausible-benchmark
+  list: withdrawal
+  reason: 'C3: contextual bandits for treatment selection in precision oncology'
+  title: Rindtorff 2019 Biologically Plausible Benchmark
 arxiv:2001.03260:
 - date: '2026-10-23'
   decision: accepted
@@ -6919,6 +7679,12 @@ arxiv:2001.03260:
   score: 4.0
   title: 'Supporting supervised learning in fungal Biosynthetic Gene Cluster discovery:
     new benchmark datasets'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:almeida-2020-supporting-supervised-learning
+  list: withdrawal
+  reason: 'C3: fungal biosynthetic gene cluster discovery; annotation'
+  title: Almeida 2020 Supporting supervised learning
 arxiv:2003.03621:
 - date: '2026-10-23'
   decision: accepted
@@ -6927,6 +7693,12 @@ arxiv:2003.03621:
   score: 6.0
   title: Large-scale benchmark study of survival prediction methods using multi-omics
     data
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:herrmann-2020-large-scale-benchmark-survival
+  list: withdrawal
+  reason: 'C3: survival prediction from multi-omics data'
+  title: Herrmann 2020 Large-scale benchmark survival
 arxiv:2008.06835:
 - date: '2026-10-23'
   decision: accepted
@@ -6934,6 +7706,12 @@ arxiv:2008.06835:
   list: discovery
   score: 6.0
   title: Benchmarking database performance for genomic data
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:khushi-2020-benchmarking-database-performance
+  list: withdrawal
+  reason: 'C3: database engine performance on genomic interval operations'
+  title: Khushi 2020 Benchmarking database performance
 arxiv:2012.09700:
 - date: '2026-10-23'
   decision: accepted
@@ -6942,6 +7720,12 @@ arxiv:2012.09700:
   score: 6.0
   title: 'RainNet: A Large-Scale Imagery Dataset and Benchmark for Spatial Precipitation
     Downscaling'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:rainnet
+  list: withdrawal
+  reason: 'C2: spatial precipitation downscaling'
+  title: RainNet
 arxiv:2103.16002:
 - date: '2026-10-23'
   decision: accepted
@@ -6949,6 +7733,12 @@ arxiv:2103.16002:
   list: discovery
   score: 6.0
   title: 'AGQA: A Benchmark for Compositional Spatio-Temporal Reasoning'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:agqa
+  list: withdrawal
+  reason: 'C2: compositional spatio-temporal reasoning over video'
+  title: AGQA
 arxiv:2104.12320:
 - date: '2026-10-23'
   decision: deferred
@@ -6978,6 +7768,12 @@ arxiv:2107.12604:
   list: discovery
   score: 6.0
   title: Image Scene Graph Generation (SGG) Benchmark
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:han-2021-image-scene-graph
+  list: withdrawal
+  reason: 'C2: image scene graph generation'
+  title: Han 2021 Image Scene Graph
 arxiv:2111.02790:
 - date: '2026-10-23'
   decision: accepted
@@ -6986,6 +7782,12 @@ arxiv:2111.02790:
   score: 6.0
   title: 'LassoBench: A High-Dimensional Hyperparameter Optimization Benchmark
     Suite for Lasso'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:lassobench
+  list: withdrawal
+  reason: 'C2: hyperparameter optimisation for weighted Lasso'
+  title: LassoBench
 arxiv:2112.01830:
 - date: '2026-10-23'
   decision: accepted
@@ -6994,6 +7796,13 @@ arxiv:2112.01830:
   score: 10.0
   title: 'Table2Vec: Automated Universal Representation Learning to Encode All-round
     Data DNA for Benchmarkable and Explainable Enterprise Data Science'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:table2vec
+  list: withdrawal
+  reason: 'C2: representation learning over enterprise business data; DNA only
+    as a metaphor in the title'
+  title: Table2Vec
 arxiv:2204.06105:
 - date: '2026-10-23'
   decision: accepted
@@ -7001,6 +7810,12 @@ arxiv:2204.06105:
   list: discovery
   score: 6.0
   title: 'AGQA 2.0: An Updated Benchmark for Compositional Spatio-Temporal Reasoning'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:agqa-2-0
+  list: withdrawal
+  reason: 'C2: compositional spatio-temporal reasoning over video'
+  title: AGQA 2.0
 arxiv:2207.08898:
 - date: '2026-10-23'
   decision: accepted
@@ -7009,6 +7824,12 @@ arxiv:2207.08898:
   score: 6.0
   title: Benchmarking Machine Learning Robustness in Covid-19 Genome Sequence
     Classification
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:ali-2022-benchmarking-machine-learning
+  list: withdrawal
+  reason: 'C3: SARS-CoV-2 genome sequence classification robustness'
+  title: Ali 2022 Benchmarking Machine Learning
 arxiv:2302.10406:
 - date: '2026-10-23'
   decision: accepted
@@ -7017,6 +7838,12 @@ arxiv:2302.10406:
   score: 3.0
   title: 'Time to Embrace Natural Language Processing (NLP)-based Digital Pathology:
     Benchmarking NLP- and Convolutional Neural Network-based Deep Learning Pipelines'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:cen-2023-time-embrace-natural
+  list: withdrawal
+  reason: 'C2: digital pathology images'
+  title: Cen 2023 Time Embrace Natural
 arxiv:2305.06026:
 - date: '2026-10-23'
   decision: accepted
@@ -7025,6 +7852,12 @@ arxiv:2305.06026:
   score: 6.0
   title: 'Uncertainty in GNN Learning Evaluations: The Importance of a Consistent
     Benchmark for Community Detection'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:uncertainty-in-gnn-learning-evaluations
+  list: withdrawal
+  reason: 'C2: graph neural network community detection'
+  title: Uncertainty in GNN Learning Evaluations
 arxiv:2305.17497:
 - date: '2026-10-23'
   decision: accepted
@@ -7033,6 +7866,12 @@ arxiv:2305.17497:
   score: 6.0
   title: 'FACTUAL: A Benchmark for Faithful and Consistent Textual Scene Graph
     Parsing'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:factual
+  list: withdrawal
+  reason: 'C2: textual scene graph parsing'
+  title: FACTUAL
 arxiv:2306.15006:
 - date: '2026-10-23'
   decision: accepted
@@ -7049,6 +7888,12 @@ arxiv:2309.16994:
   score: 6.0
   title: A rigorous benchmarking of methods for SARS-CoV-2 lineage abundance estimation
     in wastewater
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:munteanu-2023-rigorous-benchmarking-sars-cov-2
+  list: withdrawal
+  reason: 'C2: SARS-CoV-2 lineage abundance in wastewater'
+  title: Munteanu 2023 rigorous benchmarking SARS-CoV-2
 arxiv:2309.17205:
 - date: '2026-10-23'
   decision: accepted
@@ -7056,6 +7901,12 @@ arxiv:2309.17205:
   list: discovery
   score: 6.0
   title: 'Towards Complex-query Referring Image Segmentation: A Novel Benchmark'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:ji-2023-complex-query-referring-image
+  list: withdrawal
+  reason: 'C2: referring image segmentation'
+  title: Ji 2023 Complex-query Referring Image
 arxiv:2310.16908:
 - date: '2026-10-23'
   decision: accepted
@@ -7064,6 +7915,13 @@ arxiv:2310.16908:
   score: 12.0
   title: 'SequenceLab: A Comprehensive Benchmark of Computational Methods for
     Comparing Genomic Sequences'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:sequencelab
+  list: withdrawal
+  reason: 'C3: computational methods for comparing genomic sequences; alignment
+    infrastructure'
+  title: SequenceLab
 arxiv:2311.02401:
 - date: '2026-10-23'
   decision: accepted
@@ -7071,6 +7929,12 @@ arxiv:2311.02401:
   list: discovery
   score: 4.0
   title: 'BarcodeBERT: Transformers for Biodiversity Analysis'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:barcodebert
+  list: withdrawal
+  reason: 'C3: DNA barcoding for biodiversity identification'
+  title: BarcodeBERT
 arxiv:2403.03234:
 - date: '2026-10-23'
   decision: accepted
@@ -7115,6 +7979,12 @@ arxiv:2406.15341:
   list: discovery
   score: 6.0
   title: 'GenoTEX: An LLM Agent Benchmark for Automated Gene Expression Data Analysis'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:genotex
+  list: withdrawal
+  reason: 'C2: LLM agents automating gene expression data analysis'
+  title: GenoTEX
 arxiv:2407.07841:
 - date: '2026-10-23'
   decision: accepted
@@ -7123,6 +7993,12 @@ arxiv:2407.07841:
   score: 6.0
   title: 'Benchmarking Embedding Aggregation Methods in Computational Pathology:
     A Clinical Data Perspective'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:chen-2024-benchmarking-embedding-aggregation
+  list: withdrawal
+  reason: 'C2: computational pathology image embeddings'
+  title: Chen 2024 Benchmarking Embedding Aggregation
 arxiv:2407.11435:
 - date: '2026-10-23'
   decision: accepted
@@ -7130,6 +8006,12 @@ arxiv:2407.11435:
   list: discovery
   score: 6.0
   title: 'Genomic Language Models: Opportunities and Challenges'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:genomic-language-models
+  list: withdrawal
+  reason: 'C1: a perspective on opportunities and challenges'
+  title: Genomic Language Models
 arxiv:2407.13205:
 - date: '2026-10-23'
   decision: deferred
@@ -7144,6 +8026,12 @@ arxiv:2408.09429:
   score: 6.0
   title: 'Reefknot: A Comprehensive Benchmark for Relation Hallucination Evaluation,
     Analysis and Mitigation in Multimodal Large Language Models'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:reefknot
+  list: withdrawal
+  reason: 'C2: relation hallucination in multimodal LLMs'
+  title: Reefknot
 arxiv:2409.10579:
 - date: '2026-10-23'
   decision: accepted
@@ -7152,6 +8040,12 @@ arxiv:2409.10579:
   score: 4.0
   title: Recent advances in deep learning and language models for studying the
     microbiome
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:yan-2024-recent-advances-deep
+  list: withdrawal
+  reason: 'C1: a review of deep learning for the microbiome'
+  title: Yan 2024 Recent advances deep
 arxiv:2409.19788:
 - date: '2026-10-23'
   decision: accepted
@@ -7184,6 +8078,12 @@ arxiv:2410.03769:
   score: 6.0
   title: 'SciSafeEval: A Comprehensive Benchmark for Safety Alignment of Large
     Language Models in Scientific Tasks'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:scisafeeval
+  list: withdrawal
+  reason: 'C2: safety alignment of LLMs on scientific tasks'
+  title: SciSafeEval
 arxiv:2410.05292:
 - date: '2026-10-23'
   decision: accepted
@@ -7328,6 +8228,12 @@ arxiv:2505.10852:
   list: discovery
   score: 6.0
   title: 'MatTools: Benchmarking Large Language Models for Materials Science Tools'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:mattools
+  list: withdrawal
+  reason: 'C2: LLMs on materials science tools'
+  title: MatTools
 arxiv:2505.14402:
 - date: '2026-10-23'
   decision: rejected
@@ -7360,6 +8266,12 @@ arxiv:2506.02129:
   list: discovery
   score: 7.5
   title: Benchmarking Large Language Models for Polymer Property Predictions
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:gupta-2025-benchmarking-language-polymer
+  list: withdrawal
+  reason: 'C2: polymer property prediction'
+  title: Gupta 2025 Benchmarking Language Polymer
 arxiv:2506.10031:
 - date: '2026-10-23'
   decision: deferred
@@ -7402,6 +8314,12 @@ arxiv:2507.10502:
   score: 6.0
   title: 'Benchmarking and Evaluation of AI Models in Biology: Outcomes and Recommendations
     from the CZI Virtual Cells Workshop'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:fahsbender-2025-benchmarking-evaluation-ai
+  list: withdrawal
+  reason: 'C1: a workshop report with recommendations, not a resource'
+  title: Fahsbender 2025 Benchmarking Evaluation AI
 arxiv:2507.18570:
 - date: '2026-10-23'
   decision: accepted
@@ -7445,6 +8363,12 @@ arxiv:2509.14723:
   score: 4.5
   title: Transcoder-based Circuit Analysis for Interpretable Single-Cell Foundation
     Models
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:hosokawa-2025-transcoder-based-circuit-interpretable
+  list: withdrawal
+  reason: 'C5: circuit analysis of single-cell foundation model internals'
+  title: Hosokawa 2025 Transcoder-based Circuit Interpretable
 arxiv:2509.18207:
 - date: '2026-10-23'
   decision: accepted
@@ -7476,6 +8400,12 @@ arxiv:2510.03629:
   score: 8.0
   title: 'RawBench: A Comprehensive Benchmarking Framework for Raw Nanopore Signal
     Analysis Techniques'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:rawbench
+  list: withdrawal
+  reason: 'C3: raw nanopore signal analysis; basecalling infrastructure'
+  title: RawBench
 arxiv:2510.12617:
 - date: '2026-10-23'
   decision: deferred
@@ -7498,6 +8428,13 @@ arxiv:2511.09576:
   score: 6.0
   title: 'Prostate-VarBench: A Benchmark with Interpretable TabNet Framework for
     Prostate Cancer Variant Classification'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:prostate-varbench
+  list: withdrawal
+  reason: 'C3: clinical classification of prostate cancer variants of uncertain
+    significance'
+  title: Prostate-VarBench
 arxiv:2511.19299:
 - date: '2026-10-23'
   decision: deferred
@@ -7513,6 +8450,12 @@ arxiv:2512.05513:
   score: 6.0
   title: 'Know-Show: Benchmarking Video-Language Models on Spatio-Temporal Grounded
     Reasoning'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:know-show
+  list: withdrawal
+  reason: 'C2: video-language spatio-temporal reasoning'
+  title: Know-Show
 arxiv:2512.07113:
 - date: '2026-10-23'
   decision: deferred
@@ -7577,6 +8520,12 @@ arxiv:2602.03477:
   score: 4.5
   title: 'ScDiVa: Masked Discrete Diffusion for Joint Modeling of Single-Cell
     Identity and Expression'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:scdiva
+  list: withdrawal
+  reason: 'C5: joint generative modelling of cell identity and expression'
+  title: ScDiVa
 arxiv:2602.04901:
 - date: '2026-10-23'
   decision: accepted
@@ -7599,6 +8548,12 @@ arxiv:2603.06768:
   score: 6.0
   title: Benchmarking end-to-end genotype-to-phenotype prediction workflows across
     80 openSNP phenotypes
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:muneeb-2026-benchmarking-end-to-end-genotype-to-phenotype
+  list: withdrawal
+  reason: 'C3: genotype-to-phenotype prediction workflows; association, not design'
+  title: Muneeb 2026 Benchmarking end-to-end genotype-to-phenotype
 arxiv:2603.07233:
 - date: '2026-10-23'
   decision: accepted
@@ -7644,6 +8599,13 @@ arxiv:2604.05774:
   score: 11.5
   title: 'GenomeQA: Benchmarking General Large Language Models for Genome Sequence
     Understanding'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:genomeqa
+  list: withdrawal
+  reason: 'C2: general LLMs answering questions about genome sequence; natural
+    language'
+  title: GenomeQA
 arxiv:2604.06549:
 - date: '2026-10-23'
   decision: deferred
@@ -7718,6 +8680,12 @@ arxiv:2605.12286:
   list: discovery
   score: 3.0
   title: Set-Aggregated Genome Embeddings for Microbiome Abundance Prediction
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:kim-2026-set-aggregated-genome-embeddings
+  list: withdrawal
+  reason: 'C3: microbiome abundance prediction'
+  title: Kim 2026 Set-Aggregated Genome Embeddings
 arxiv:2605.19343:
 - date: '2026-10-23'
   decision: accepted
@@ -7733,6 +8701,12 @@ arxiv:2605.24520:
   score: 6.0
   title: 'AnnotateMissense: a genome-wide annotation and benchmarking framework
     for missense pathogenicity prediction'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:annotatemissense
+  list: withdrawal
+  reason: 'C3: missense pathogenicity prediction; coding variant interpretation'
+  title: AnnotateMissense
 arxiv:2605.25242:
 - date: '2026-10-23'
   decision: accepted
@@ -7757,6 +8731,12 @@ arxiv:2606.11144:
   score: 6.0
   title: 'OncoTraj: a public benchmark for longitudinal resistance prediction
     in EGFR-mutant non-small-cell lung cancer on osimertinib'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:oncotraj
+  list: withdrawal
+  reason: 'C3: longitudinal clinical resistance prediction under therapy'
+  title: OncoTraj
 arxiv:2606.12838:
 - date: '2026-10-23'
   decision: accepted
@@ -7781,6 +8761,12 @@ arxiv:2606.23172:
   score: 3.0
   title: A Benchmark of (MRI-) Foundation Models to Predict IDH Mutational Status
     in Glioma
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:hollet-2026-benchmark-mri-foundation
+  list: withdrawal
+  reason: 'C2: MRI foundation models predicting IDH status'
+  title: Hollet 2026 Benchmark MRI- Foundation
 arxiv:2606.27413:
 - date: '2026-10-23'
   decision: deferred
@@ -7809,6 +8795,13 @@ arxiv:2607.08758:
   score: 6.0
   title: 'Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded
     Idea Generation'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:ideas-have-genomes
+  list: withdrawal
+  reason: 'C2: scientific lineage reasoning by language models; genomes only as
+    a metaphor'
+  title: Ideas Have Genomes
 arxiv:2607.16250:
 - date: '2026-10-23'
   decision: accepted
@@ -7817,6 +8810,12 @@ arxiv:2607.16250:
   score: 6.0
   title: Benchmarking Machine Learning Models for Multi-Omics-Based Breast Cancer
     Prediction
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:paudel-2026-benchmarking-machine-learning
+  list: withdrawal
+  reason: 'C3: multi-omics breast cancer status prediction'
+  title: Paudel 2026 Benchmarking Machine Learning
 arxiv:2607.17227:
 - date: '2026-10-23'
   decision: deferred
@@ -7832,6 +8831,12 @@ arxiv:2607.19262:
   score: 6.0
   title: 'BioSecBench-Surveillance: A Verifiable Benchmark for AI Agents in Pathogen
     Genomic Surveillance'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:biosecbench-surveillance
+  list: withdrawal
+  reason: 'C3: AI agents performing pathogen genomic surveillance'
+  title: BioSecBench-Surveillance
 arxiv:2607.19618:
 - date: '2026-10-23'
   decision: accepted
@@ -7855,6 +8860,12 @@ arxiv:2607.23975:
   score: 5.0
   title: 'Plato-Bio: verification-first biological novelty screening with temporal
     rediscovery and structural benchmarks'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:plato-bio
+  list: withdrawal
+  reason: 'C2: LLM research agent over literature and code'
+  title: Plato-Bio
 arxiv:2608.02615:
 - date: '2026-10-23'
   decision: deferred
@@ -7869,6 +8880,12 @@ arxiv:2608.02961:
   list: discovery
   score: 6.5
   title: Scaling an Autoregressive Transformer for Single-Cell Generation
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:sharipov-2026-scaling-autoregressive-transformer
+  list: withdrawal
+  reason: 'C5: generating expression vectors for a cell type; representation'
+  title: Sharipov 2026 Scaling Autoregressive Transformer
 arxiv:2608.05329:
 - date: '2026-10-23'
   decision: deferred
@@ -7884,6 +8901,13 @@ arxiv:2608.05928:
   score: 3.5
   title: 'BioM-JEPA: joint-embedding prediction of graph-connected gene blocks
     in single cells'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:biom-jepa
+  list: withdrawal
+  reason: 'C5: single-cell joint-embedding model; representation, not perturbation
+    response'
+  title: BioM-JEPA
 arxiv:2608.06824:
 - date: '2026-10-23'
   decision: deferred
@@ -7898,6 +8922,12 @@ arxiv:2608.07632:
   list: discovery
   score: 4.0
   title: 'JUMP-lite: Compact, reproducible benchmarking of cell representations'
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:jump-lite
+  list: withdrawal
+  reason: 'C2: image-based cell profiling representations'
+  title: JUMP-lite
 arxiv:2608.08926:
 - date: '2026-10-23'
   decision: deferred
@@ -7956,12 +8986,24 @@ arxiv:2609.19071:
   list: discovery
   score: 6.0
   title: Benchmarking Large Language Models for Biomedical Relation Extraction
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: benchmark:creanga-2026-benchmarking-language-biomedical
+  list: withdrawal
+  reason: 'C2: biomedical relation extraction from literature'
+  title: Creanga 2026 Benchmarking Language Biomedical
 arxiv:2609.23290:
 - date: '2026-10-23'
   decision: accepted
   entity_id: model:stochastic-flow-map-for-count-data
   list: discovery
   score: 6.0
+  title: Stochastic Flow Map for Count Data
+- date: '2026-10-28'
+  decision: rejected
+  entity_id: model:stochastic-flow-map-for-count-data
+  list: withdrawal
+  reason: 'C2: a generative model for count data in general'
   title: Stochastic Flow Map for Count Data
 arxiv:2609.28386:
 - date: '2026-10-23'

@@ -1365,6 +1365,8 @@
 
 - entity_id: model:wang-2026-integrating-histology-spatial
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: spatial expression from histology images"
   name: Wang 2026 Integrating histology spatial
   year: 2026
   fate_axis: [where]
@@ -1532,6 +1534,8 @@
 
 - entity_id: model:dubey-2026-personalized-gene-expression
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a review of personalised expression prediction"
   name: Dubey 2026 Personalized gene expression
   year: 2026
   fate_axis: [where]
@@ -1565,6 +1569,8 @@
 
 - entity_id: model:starr-2025-detect-positive-selection
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: detecting positive selection; observation, though built on variant effect predictors"
   name: Starr 2025 detect positive selection
   year: 2025
   fate_axis: [where]
@@ -1672,6 +1678,8 @@
 
 - entity_id: model:ruiz-2025-completing-spatial-transcriptomics
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: spatial transcriptomics completion for histology-based prediction"
   name: Ruiz 2025 Completing spatial transcriptomics
   year: 2025
   fate_axis: [where]
@@ -1799,6 +1807,8 @@
 
 - entity_id: model:shaikhutdinova-2026-independent-benchmark-h
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: expression predicted from H and E slides"
   name: Shaikhutdinova 2026 Independent benchmark H
   year: 2026
   fate_axis: [where]
@@ -1823,6 +1833,8 @@
 
 - entity_id: model:spadit
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: imputing spatial expression from scRNA-seq; observation"
   name: SpaDiT
   year: 2024
   fate_axis: [where]
@@ -1911,6 +1923,8 @@
 
 - entity_id: model:liu-2025-effective-gene-expression
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein expression predicted from protein sequence"
   name: Liu 2025 Effective Gene Expression
   year: 2025
   fate_axis: [where]
@@ -2120,6 +2134,8 @@
 
 - entity_id: model:krupi-ka-2025-benchmarking-genomic-foundation
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: gene fusion detection; diagnostic annotation"
   name: "Krupička 2025 Benchmarking Genomic Foundation"
   year: 2025
   fate_axis: [how]
@@ -2299,6 +2315,8 @@
 
 - entity_id: model:prot-vae
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: functional protein design"
   name: ProT-VAE
   year: 2025
   fate_axis: [where]
@@ -2311,6 +2329,8 @@
 
 - entity_id: model:wang-2024-deep-learning-approaches
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a review of non-coding variant effect methods"
   name: Wang 2024 Deep learning approaches
   year: 2024
   fate_axis: [where]
@@ -2347,6 +2367,8 @@
 
 - entity_id: model:wang-2023-unified-deep-learning
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: scATAC-seq analysis framework; clustering and annotation"
   name: Wang 2023 Unified Deep Learning
   year: 2023
   fate_axis: [where]
@@ -2362,6 +2384,8 @@
 
 - entity_id: model:chapman-2017-evolution-logic-circuits
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein contact map prediction"
   name: Chapman 2017 evolution logic circuits
   year: 2017
   fate_axis: [where]
@@ -2380,6 +2404,8 @@
 
 - entity_id: model:xie-2015-advances-protein-contact
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: a review of protein contact map prediction"
   name: Xie 2015 Advances protein contact
   year: 2015
   fate_axis: [where]
@@ -2448,6 +2474,8 @@
 
 - entity_id: model:chen-2025-assessing-predictive-diversity
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C5: evaluates scaling and representation quality of a single-cell foundation model"
   name: Chen 2025 Assessing Predictive Diversity
   year: 2025
   fate_axis: [what]
@@ -2492,6 +2520,8 @@
 
 - entity_id: model:prestige-st
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: expression inferred from histology patches"
   name: PRESTIGE-ST
   year: 2025
   fate_axis: [where]
@@ -2540,6 +2570,8 @@
 
 - entity_id: model:nayak-2026-genomic-foundation-model-derived
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: links somatic mutation burden to clinical outcome; association, not design"
   name: Nayak 2026 Genomic foundation model-derived
   year: 2026
   fate_axis: [how]
@@ -2564,6 +2596,8 @@
 
 - entity_id: model:spavgn
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: spatial transcriptomics reconstruction and domain identification"
   name: SpaVGN
   year: 2025
   fate_axis: [where]
@@ -2593,6 +2627,8 @@
 
 - entity_id: model:foundation-models-in-cancer-pathology
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: pathology image foundation models"
   name: Foundation Models in Cancer Pathology
   year: 2026
   fate_axis: [where]
@@ -2745,6 +2781,8 @@
 
 - entity_id: model:lucacell
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C5: cross-species single-cell representation model"
   name: LucaCell
   year: 2026
   fate_axis: [what]
@@ -2785,6 +2823,8 @@
 
 - entity_id: model:sharipov-2026-scaling-autoregressive-transformer
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C5: generating expression vectors for a cell type; representation"
   name: Sharipov 2026 Scaling Autoregressive Transformer
   year: 2026
   fate_axis: [what]
@@ -2949,6 +2989,8 @@
 
 - entity_id: model:chang-2026-single-cell-multiome-chromatin
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a single-cell multiome atlas of a brain region: a result, and if admitted at all it is a dataset, not a model"
   name: Chang 2026 Single-cell Multiome Chromatin
   year: 2026
   fate_axis: [where]
@@ -2982,6 +3024,8 @@
 
 - entity_id: model:saghafi-2025-cluster-based-data-balancing
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein contact map prediction"
   name: Saghafi 2025 Cluster-Based Data Balancing
   year: 2025
   fate_axis: [where]
@@ -3071,6 +3115,8 @@
 
 - entity_id: model:genomic-language-models
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a perspective on opportunities and challenges"
   name: Genomic Language Models
   year: 2024
   fate_axis: [how]
@@ -3161,6 +3207,8 @@
 
 - entity_id: model:scdisinfact
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: batch and condition disentangling for integration"
   name: scDisInFact
   year: 2024
   fate_axis: [what]
@@ -3204,6 +3252,8 @@
 
 - entity_id: model:stochastic-flow-map-for-count-data
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: a generative model for count data in general"
   name: Stochastic Flow Map for Count Data
   year: 2026
   fate_axis: [what]
@@ -3219,6 +3269,8 @@
 
 - entity_id: model:a-systematic-review
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a systematic review of deep learning for evolutionary patterns"
   name: A Systematic Review
   year: 2025
   fate_axis: [where]
@@ -3252,6 +3304,8 @@
 
 - entity_id: model:dfce-kant
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: spatial expression from H and E images"
   name: DFCE-KanT
   year: 2026
   fate_axis: [where]
@@ -3267,6 +3321,8 @@
 
 - entity_id: model:fmh2st
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: spatial transcriptomics generated from histology"
   name: FmH2ST
   year: 2025
   fate_axis: [where]
@@ -3279,6 +3335,8 @@
 
 - entity_id: model:lo-2026-evolution-mechanism-i
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a finding about MEIS2 and bat forelimb evolution"
   name: Lo 2026 Evolution mechanism i
   year: 2026
   fate_axis: [where]
@@ -3291,6 +3349,8 @@
 
 - entity_id: model:karimzadeh-2026-high-resolution-protein-rna-binding
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein-RNA binding atlas; RNA substrate"
   name: Karimzadeh 2026 high-resolution protein-RNA binding
   year: 2026
   fate_axis: [where]
@@ -3308,6 +3368,8 @@
 
 - entity_id: model:parnet
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: RNA foundation model trained on CLIP-seq; RNA substrate"
   name: PARNET
   year: 2026
   fate_axis: [where]
@@ -3323,6 +3385,8 @@
 
 - entity_id: model:gong-2024-scauto-single-cell-chromatin
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: single-cell accessibility data analysis framework"
   name: Gong 2024 scAuto single-cell chromatin
   year: 2024
   fate_axis: [where]
@@ -3371,6 +3435,8 @@
 
 - entity_id: model:wu-2026-sparse-integrative-dictionary
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: conserved drug-response states in multiple myeloma; a clinical finding"
   name: Wu 2026 Sparse integrative dictionary
   year: 2026
   fate_axis: [what]
@@ -3400,6 +3466,8 @@
 
 - entity_id: model:zhu-2025-auc-pr-more-informative
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a metric argument, not a resource"
   name: Zhu 2025 AUC-PR More Informative
   year: 2025
   fate_axis: [what]
@@ -3412,6 +3480,8 @@
 
 - entity_id: model:xie-2026-performance-deep-learning
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: spatial expression from histology images"
   name: Xie 2026 Performance deep learning
   year: 2026
   fate_axis: [where]
@@ -3427,6 +3497,8 @@
 
 - entity_id: model:hespotex
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: spot-level expression from histology"
   name: HESpotEx
   year: 2026
   fate_axis: [where]
@@ -3439,6 +3511,8 @@
 
 - entity_id: model:pgst
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: spatial transcriptomics prediction from morphology"
   name: PGST
   year: 2026
   fate_axis: [where]
@@ -3479,6 +3553,8 @@
 
 - entity_id: model:thitogene
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: spatial transcriptomics from histology"
   name: THItoGene
   year: 2023
   fate_axis: [where]
@@ -3529,6 +3605,8 @@
 
 - entity_id: model:hacisuleyman-2026-rapid-interpretable-protein
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein contact map prediction"
   name: Hacisuleyman 2026 Rapid interpretable protein
   year: 2026
   fate_axis: [where]
@@ -3545,6 +3623,8 @@
 
 - entity_id: model:zhang-2022-protein-subcellular-localization
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein subcellular localisation"
   name: Zhang 2022 Protein Subcellular Localization
   year: 2022
   fate_axis: [where]
@@ -3560,6 +3640,8 @@
 
 - entity_id: model:liu-2021-protein-contact-map
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein contact map prediction"
   name: Liu 2021 Protein contact map
   year: 2021
   fate_axis: [where]
@@ -3572,6 +3654,8 @@
 
 - entity_id: model:fupred
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein domain boundaries from contact maps"
   name: FUpred
   year: 2020
   fate_axis: [where]
@@ -3584,6 +3668,8 @@
 
 - entity_id: model:hanson-2018-accurate-prediction-protein
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein contact map prediction"
   name: Hanson 2018 Accurate prediction protein
   year: 2018
   fate_axis: [where]
@@ -3658,6 +3744,8 @@
 
 - entity_id: model:kendiukhov-2026-evaluation-single-cell-foundation
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C5: interpretability of single-cell foundation model attention for network inference"
   name: Kendiukhov 2026 evaluation single-cell foundation
   year: 2026
   fate_axis: [what]
@@ -3670,6 +3758,8 @@
 
 - entity_id: model:scmomer
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C5: multi-omics pretraining under missing modalities; representation only"
   name: scMomer
   year: 2025
   fate_axis: [what]
@@ -3706,6 +3796,8 @@
 
 - entity_id: model:wu-2026-application-deep-learning
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a review of deep learning in crop research"
   name: Wu 2026 Application deep learning
   year: 2026
   fate_axis: [where]
@@ -3718,6 +3810,8 @@
 
 - entity_id: model:barethiya-2026-overcoming-extrapolation-challenges
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein sequence-function modelling with physics"
   name: Barethiya 2026 Overcoming extrapolation challenges
   year: 2026
   fate_axis: [where]
@@ -3739,6 +3833,8 @@
 
 - entity_id: model:schmauch-2025-deep-learning-based-multiscale
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: spatial omics integrated with tumour morphology"
   name: Schmauch 2025 deep learning-based multiscale
   year: 2025
   fate_axis: [where]
@@ -3754,6 +3850,8 @@
 
 - entity_id: model:hallinan-2025-impact-data-quality
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: spatial transcriptomics from histology images"
   name: Hallinan 2025 Impact Data Quality
   year: 2025
   fate_axis: [where]
@@ -3766,6 +3864,8 @@
 
 - entity_id: model:zeng-2022-spatial-transcriptomics-prediction
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: expression from histology images"
   name: Zeng 2022 Spatial transcriptomics prediction
   year: 2022
   fate_axis: [where]
@@ -3793,6 +3893,8 @@
 
 - entity_id: model:debnath-2026-inference-spatial-chromatin
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: inferring spatial accessibility by integrating assays"
   name: Debnath 2026 Inference spatial chromatin
   year: 2026
   fate_axis: [where]
@@ -3814,6 +3916,8 @@
 
 - entity_id: model:hu-2024-benchmarking-algorithms-single-cell
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: single-cell multi-omics prediction and integration algorithms"
   name: Hu 2024 Benchmarking algorithms single-cell
   year: 2024
   fate_axis: [where]
@@ -3842,6 +3946,8 @@
 
 - entity_id: model:attcon
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein contact map prediction"
   name: AttCON
   year: 2024
   fate_axis: [where]
@@ -3854,6 +3960,8 @@
 
 - entity_id: model:li-2024-exploring-alternative-conformation
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein conformations from contact map prediction"
   name: Li 2024 Exploring Alternative Conformation
   year: 2024
   fate_axis: [where]
@@ -3897,6 +4005,8 @@
 
 - entity_id: model:mah-2022-enhancing-protein-contact
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein contact map prediction"
   name: MAH 2022 Enhancing protein contact
   year: 2022
   fate_axis: [where]
@@ -3909,6 +4019,8 @@
 
 - entity_id: model:cgan-cmap
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein contact map prediction"
   name: CGAN-Cmap
   year: 2022
   fate_axis: [where]
@@ -3921,6 +4033,8 @@
 
 - entity_id: model:nebcon
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein contact map prediction"
   name: NeBcon
   year: 2017
   fate_axis: [where]
@@ -4050,6 +4164,8 @@
 
 - entity_id: model:hosokawa-2025-transcoder-based-circuit-interpretable
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C5: circuit analysis of single-cell foundation model internals"
   name: Hosokawa 2025 Transcoder-based Circuit Interpretable
   year: 2025
   fate_axis: [what]
@@ -4074,6 +4190,8 @@
 
 - entity_id: model:scdiva
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C5: joint generative modelling of cell identity and expression"
   name: ScDiVa
   year: 2026
   fate_axis: [what]
@@ -4086,6 +4204,8 @@
 
 - entity_id: model:graphunet-ss
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein secondary structure prediction"
   name: GraphUnet-SS
   year: 2026
   fate_axis: [where]
@@ -4101,6 +4221,8 @@
 
 - entity_id: model:deepsge
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: spatial expression from histology images"
   name: DeepSGE
   year: 2026
   fate_axis: [where]
@@ -4173,6 +4295,8 @@
 
 - entity_id: model:splisync
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: splice site correction in long sequencing reads; read processing"
   name: SpliSync
   year: 2026
   fate_axis: [how]
@@ -4238,6 +4362,8 @@
 
 - entity_id: model:wang-2026-pretrained-animals-deployed
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: RNA foundation models, and a position piece about them"
   name: Wang 2026 Pretrained Animals Deployed
   year: 2026
   fate_axis: [how]
@@ -4279,6 +4405,8 @@
 
 - entity_id: model:b-kov-2026-analyzing-genomic-foundation
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: viral sequence identification for diagnostics and surveillance"
   name: "Bůžková 2026 Analyzing Genomic Foundation"
   year: 2026
   fate_axis: [how]
@@ -4303,6 +4431,8 @@
 
 - entity_id: model:akagi-2026-genomic-properties-representing
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: plant sex chromosome evolution interpreted with genome language models"
   name: Akagi 2026 Genomic properties representing
   year: 2026
   fate_axis: [how]
@@ -4315,6 +4445,8 @@
 
 - entity_id: model:phylotune
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: phylogenetic tree reconstruction; observation, though it uses a DNA language model"
   name: PhyloTune
   year: 2025
   fate_axis: [how]
@@ -4486,6 +4618,8 @@
 
 - entity_id: model:yan-2024-recent-advances-deep
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C1: a review of deep learning for the microbiome"
   name: Yan 2024 Recent advances deep
   year: 2024
   fate_axis: [how]
@@ -4515,6 +4649,8 @@
 
 - entity_id: model:barcodebert
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: DNA barcoding for biodiversity identification"
   name: BarcodeBERT
   year: 2023
   fate_axis: [how]
@@ -4695,6 +4831,8 @@
 
 - entity_id: model:membrain-contact-2-0
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: transmembrane protein residue contacts"
   name: MemBrain-contact 2.0
   year: 2018
   fate_axis: [where]
@@ -4707,6 +4845,8 @@
 
 - entity_id: model:spot-contact-lm
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein contact map prediction"
   name: SPOT-Contact-LM
   year: 2022
   fate_axis: [where]
@@ -4728,6 +4868,8 @@
 
 - entity_id: model:spot-contact-single
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein contact map prediction"
   name: SPOT-Contact-Single
   year: 2021
   fate_axis: [where]
@@ -4813,6 +4955,8 @@
 
 - entity_id: model:fu-2026-benchmarking-gene-expression
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C5: expression reconstruction from latent representations"
   name: Fu 2026 Benchmarking gene expression
   year: 2026
   fate_axis: [what]
@@ -4843,6 +4987,8 @@
 
 - entity_id: model:biom-jepa
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C5: single-cell joint-embedding model; representation, not perturbation response"
   name: BioM-JEPA
   year: 2026
   fate_axis: [what]
@@ -4890,6 +5036,8 @@
 
 - entity_id: model:kaushik-2026-computational-navigation-constrained
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein fitness landscapes"
   name: Kaushik 2026 Computational navigation constrained
   year: 2026
   fate_axis: [where]
@@ -4902,6 +5050,8 @@
 
 - entity_id: model:stamps
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: signal peptide design for protein secretion"
   name: STAMPS
   year: 2025
   fate_axis: [where]
@@ -4919,6 +5069,8 @@
 
 - entity_id: model:passow-2026-amplicon-protein-bead
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: a protein library display method"
   name: Passow 2026 Amplicon Protein Bead
   year: 2026
   fate_axis: [where]
@@ -4950,6 +5102,8 @@
 
 - entity_id: model:ronen-2020-deep-homology-based-protein
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein contact map prediction"
   name: Ronen 2020 Deep Homology-Based Protein
   year: 2020
   fate_axis: [where]
@@ -4962,6 +5116,8 @@
 
 - entity_id: model:iedgedta
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: drug-target binding affinity"
   name: iEdgeDTA
   year: 2023
   fate_axis: [where]
@@ -4977,6 +5133,8 @@
 
 - entity_id: model:antony-2022-protein-secondary-structure
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein secondary structure assignment"
   name: Antony 2022 Protein secondary structure
   year: 2022
   fate_axis: [where]
@@ -5018,6 +5176,8 @@
 
 - entity_id: model:kim-2026-set-aggregated-genome-embeddings
   type: model
+  review_state: withdrawn
+  withdrawn_reason: "C3: microbiome abundance prediction"
   name: Kim 2026 Set-Aggregated Genome Embeddings
   year: 2026
   fate_axis: [how]

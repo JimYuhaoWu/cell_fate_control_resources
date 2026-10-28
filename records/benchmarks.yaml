@@ -200,6 +200,8 @@
 
 - entity_id: benchmark:sequencelab
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: computational methods for comparing genomic sequences; alignment infrastructure"
   name: SequenceLab
   year: 2023
   curator: JimYuhaoWu
@@ -214,6 +216,8 @@
 
 - entity_id: benchmark:genomeqa
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: general LLMs answering questions about genome sequence; natural language"
   name: GenomeQA
   year: 2026
   curator: JimYuhaoWu
@@ -243,6 +247,8 @@
 
 - entity_id: benchmark:wang-2025-benchmarking-translational-potential
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: spatial expression predicted from histology"
   name: Wang 2025 Benchmarking translational potential
   year: 2025
   curator: JimYuhaoWu
@@ -304,6 +310,8 @@
 
 - entity_id: benchmark:table2vec
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: representation learning over enterprise business data; DNA only as a metaphor in the title"
   name: Table2Vec
   year: 2021
   curator: JimYuhaoWu
@@ -334,6 +342,8 @@
 
 - entity_id: benchmark:ko-2026-scalable-embedding-fusion
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: protein language model embeddings"
   name: Ko 2026 Scalable embedding fusion
   year: 2026
   curator: JimYuhaoWu
@@ -399,6 +409,8 @@
 
 - entity_id: benchmark:rawbench
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: raw nanopore signal analysis; basecalling infrastructure"
   name: RawBench
   year: 2025
   curator: JimYuhaoWu
@@ -410,6 +422,8 @@
 
 - entity_id: benchmark:gupta-2025-benchmarking-language-polymer
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: polymer property prediction"
   name: Gupta 2025 Benchmarking Language Polymer
   year: 2025
   curator: JimYuhaoWu
@@ -421,6 +435,8 @@
 
 - entity_id: benchmark:hifi-st
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: reconstructing a continuous spatial expression field; observation"
   name: HiFi-ST
   year: 2026
   curator: JimYuhaoWu
@@ -449,6 +465,8 @@
 
 - entity_id: benchmark:kang-2026-benchmarking-three-simple
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: image metrics from DNA staining in live cells"
   name: Kang 2026 Benchmarking three simple
   year: 2026
   curator: JimYuhaoWu
@@ -478,6 +496,8 @@
 
 - entity_id: benchmark:shao-2026-benchmark-averages-hide
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: quantised protein language models for protein variant effect"
   name: Shao 2026 Benchmark Averages Hide
   year: 2026
   curator: JimYuhaoWu
@@ -489,6 +509,8 @@
 
 - entity_id: benchmark:g-es-2026-evaluation-feature-representations
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: annotating cancer-associated sORFs in non-coding RNA; RNA substrate and an annotation task"
   name: "Góes 2026 Evaluation Feature Representations"
   year: 2026
   curator: JimYuhaoWu
@@ -504,6 +526,8 @@
 
 - entity_id: benchmark:luo-2024-benchmarking-computational-single-cell
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: single-cell chromatin data analysis methods; clustering and dimensionality reduction"
   name: Luo 2024 Benchmarking computational single-cell
   year: 2024
   curator: JimYuhaoWu
@@ -515,6 +539,8 @@
 
 - entity_id: benchmark:fitness-landscape-for-antibodies-2
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: antibody developability; protein substrate"
   name: Fitness Landscape for Antibodies 2
   year: 2025
   curator: JimYuhaoWu
@@ -544,6 +570,8 @@
 
 - entity_id: benchmark:flab
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: antibody fitness; protein substrate"
   name: FLAb
   year: 2024
   curator: JimYuhaoWu
@@ -558,6 +586,8 @@
 
 - entity_id: benchmark:luecken-2022-benchmarking-atlas-level-data
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: atlas-level data integration"
   name: Luecken 2022 Benchmarking atlas-level data
   year: 2022
   curator: JimYuhaoWu
@@ -569,6 +599,8 @@
 
 - entity_id: benchmark:xu-2021-benchmarking-cite-seq-versus
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: assay-versus-assay comparison of multimodal single-cell protocols"
   name: Xu 2021 Benchmarking CITE-seq versus
   year: 2021
   curator: JimYuhaoWu
@@ -580,6 +612,8 @@
 
 - entity_id: benchmark:benchngs
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: short-read alignment tools"
   name: benchNGS
   year: 2015
   curator: JimYuhaoWu
@@ -594,6 +628,8 @@
 
 - entity_id: benchmark:khushi-2020-benchmarking-database-performance
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: database engine performance on genomic interval operations"
   name: Khushi 2020 Benchmarking database performance
   year: 2020
   curator: JimYuhaoWu
@@ -627,6 +663,8 @@
 
 - entity_id: benchmark:scisafeeval
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: safety alignment of LLMs on scientific tasks"
   name: SciSafeEval
   year: 2024
   curator: JimYuhaoWu
@@ -638,6 +676,8 @@
 
 - entity_id: benchmark:ideas-have-genomes
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: scientific lineage reasoning by language models; genomes only as a metaphor"
   name: Ideas Have Genomes
   year: 2026
   curator: JimYuhaoWu
@@ -652,6 +692,8 @@
 
 - entity_id: benchmark:the-tcga-meta-dataset-clinical-benchmark
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: clinical diagnosis and prognosis"
   name: The TCGA Meta-Dataset Clinical Benchmark
   year: 2019
   curator: JimYuhaoWu
@@ -663,6 +705,8 @@
 
 - entity_id: benchmark:prostate-varbench
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: clinical classification of prostate cancer variants of uncertain significance"
   name: Prostate-VarBench
   year: 2025
   curator: JimYuhaoWu
@@ -674,6 +718,8 @@
 
 - entity_id: benchmark:biosecbench-surveillance
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: AI agents performing pathogen genomic surveillance"
   name: BioSecBench-Surveillance
   year: 2026
   curator: JimYuhaoWu
@@ -689,6 +735,8 @@
 
 - entity_id: benchmark:han-2021-image-scene-graph
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: image scene graph generation"
   name: Han 2021 Image Scene Graph
   year: 2021
   curator: JimYuhaoWu
@@ -703,6 +751,8 @@
 
 - entity_id: benchmark:muneeb-2026-benchmarking-end-to-end-genotype-to-phenotype
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: genotype-to-phenotype prediction workflows; association, not design"
   name: Muneeb 2026 Benchmarking end-to-end genotype-to-phenotype
   year: 2026
   curator: JimYuhaoWu
@@ -714,6 +764,8 @@
 
 - entity_id: benchmark:paudel-2026-benchmarking-machine-learning
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: multi-omics breast cancer status prediction"
   name: Paudel 2026 Benchmarking Machine Learning
   year: 2026
   curator: JimYuhaoWu
@@ -736,6 +788,8 @@
 
 - entity_id: benchmark:creanga-2026-benchmarking-language-biomedical
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: biomedical relation extraction from literature"
   name: Creanga 2026 Benchmarking Language Biomedical
   year: 2026
   curator: JimYuhaoWu
@@ -747,6 +801,8 @@
 
 - entity_id: benchmark:genotex
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: LLM agents automating gene expression data analysis"
   name: GenoTEX
   year: 2024
   curator: JimYuhaoWu
@@ -764,6 +820,8 @@
 
 - entity_id: benchmark:agqa-2-0
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: compositional spatio-temporal reasoning over video"
   name: AGQA 2.0
   year: 2022
   curator: JimYuhaoWu
@@ -778,6 +836,8 @@
 
 - entity_id: benchmark:munteanu-2023-rigorous-benchmarking-sars-cov-2
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: SARS-CoV-2 lineage abundance in wastewater"
   name: Munteanu 2023 rigorous benchmarking SARS-CoV-2
   year: 2023
   curator: JimYuhaoWu
@@ -789,6 +849,8 @@
 
 - entity_id: benchmark:ali-2022-benchmarking-machine-learning
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: SARS-CoV-2 genome sequence classification robustness"
   name: Ali 2022 Benchmarking Machine Learning
   year: 2022
   curator: JimYuhaoWu
@@ -814,6 +876,8 @@
 
 - entity_id: benchmark:ji-2023-complex-query-referring-image
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: referring image segmentation"
   name: Ji 2023 Complex-query Referring Image
   year: 2023
   curator: JimYuhaoWu
@@ -825,6 +889,8 @@
 
 - entity_id: benchmark:uncertainty-in-gnn-learning-evaluations
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: graph neural network community detection"
   name: Uncertainty in GNN Learning Evaluations
   year: 2023
   curator: JimYuhaoWu
@@ -836,6 +902,8 @@
 
 - entity_id: benchmark:agqa
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: compositional spatio-temporal reasoning over video"
   name: AGQA
   year: 2021
   curator: JimYuhaoWu
@@ -850,6 +918,8 @@
 
 - entity_id: benchmark:jokisaari-2016-benchmark-problems-numerical
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: phase-field models in materials design"
   name: Jokisaari 2016 Benchmark Problems Numerical
   year: 2016
   curator: JimYuhaoWu
@@ -865,6 +935,8 @@
 
 - entity_id: benchmark:chen-2024-benchmarking-embedding-aggregation
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: computational pathology image embeddings"
   name: Chen 2024 Benchmarking Embedding Aggregation
   year: 2024
   curator: JimYuhaoWu
@@ -876,6 +948,8 @@
 
 - entity_id: benchmark:lassobench
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: hyperparameter optimisation for weighted Lasso"
   name: LassoBench
   year: 2021
   curator: JimYuhaoWu
@@ -890,6 +964,8 @@
 
 - entity_id: benchmark:factual
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: textual scene graph parsing"
   name: FACTUAL
   year: 2023
   curator: JimYuhaoWu
@@ -904,6 +980,8 @@
 
 - entity_id: benchmark:rindtorff-2019-biologically-plausible-benchmark
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: contextual bandits for treatment selection in precision oncology"
   name: Rindtorff 2019 Biologically Plausible Benchmark
   year: 2019
   curator: JimYuhaoWu
@@ -919,6 +997,8 @@
 
 - entity_id: benchmark:reefknot
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: relation hallucination in multimodal LLMs"
   name: Reefknot
   year: 2024
   curator: JimYuhaoWu
@@ -930,6 +1010,8 @@
 
 - entity_id: benchmark:mattools
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: LLMs on materials science tools"
   name: MatTools
   year: 2025
   curator: JimYuhaoWu
@@ -946,6 +1028,8 @@
 
 - entity_id: benchmark:fahsbender-2025-benchmarking-evaluation-ai
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C1: a workshop report with recommendations, not a resource"
   name: Fahsbender 2025 Benchmarking Evaluation AI
   year: 2025
   curator: JimYuhaoWu
@@ -961,6 +1045,8 @@
 
 - entity_id: benchmark:herrmann-2020-large-scale-benchmark-survival
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: survival prediction from multi-omics data"
   name: Herrmann 2020 Large-scale benchmark survival
   year: 2020
   curator: JimYuhaoWu
@@ -972,6 +1058,8 @@
 
 - entity_id: benchmark:rainnet
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: spatial precipitation downscaling"
   name: RainNet
   year: 2020
   curator: JimYuhaoWu
@@ -983,6 +1071,8 @@
 
 - entity_id: benchmark:oncotraj
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: longitudinal clinical resistance prediction under therapy"
   name: OncoTraj
   year: 2026
   curator: JimYuhaoWu
@@ -1000,6 +1090,8 @@
 
 - entity_id: benchmark:know-show
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: video-language spatio-temporal reasoning"
   name: Know-Show
   year: 2025
   curator: JimYuhaoWu
@@ -1019,6 +1111,8 @@
 
 - entity_id: benchmark:annotatemissense
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: missense pathogenicity prediction; coding variant interpretation"
   name: AnnotateMissense
   year: 2026
   curator: JimYuhaoWu
@@ -1036,6 +1130,8 @@
 
 - entity_id: benchmark:ouologuem-2025-spatial-transcriptomics-deconvolution
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: spatial deconvolution"
   name: Ouologuem 2025 Spatial transcriptomics deconvolution
   year: 2025
   curator: JimYuhaoWu
@@ -1072,6 +1168,8 @@
 
 - entity_id: benchmark:plato-bio
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: LLM research agent over literature and code"
   name: Plato-Bio
   year: 2026
   curator: JimYuhaoWu
@@ -1088,6 +1186,8 @@
 
 - entity_id: benchmark:fu-2026-iaode-benchmarking-continuum
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: continuum and trajectory modelling of single-cell accessibility; trajectory inference is named out in README.md"
   name: Fu 2026 iAODE benchmarking continuum
   year: 2026
   curator: JimYuhaoWu
@@ -1118,6 +1218,8 @@
 
 - entity_id: benchmark:wang-2026-benchmarking-computational-tools
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: cross-omics label transfer from scRNA to scATAC"
   name: Wang 2026 benchmarking computational tools
   year: 2026
   curator: JimYuhaoWu
@@ -1140,6 +1242,8 @@
 
 - entity_id: benchmark:myy-2023-benchmarking-algorithms-joint
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: joint integration of unpaired scRNA-seq and scATAC-seq"
   name: MYY 2023 Benchmarking algorithms joint
   year: 2023
   curator: JimYuhaoWu
@@ -1165,6 +1269,8 @@
 
 - entity_id: benchmark:jump-lite
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: image-based cell profiling representations"
   name: JUMP-lite
   year: 2026
   curator: JimYuhaoWu
@@ -1181,6 +1287,8 @@
 
 - entity_id: benchmark:almeida-2020-supporting-supervised-learning
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: fungal biosynthetic gene cluster discovery; annotation"
   name: Almeida 2020 Supporting supervised learning
   year: 2020
   curator: JimYuhaoWu
@@ -1192,6 +1300,8 @@
 
 - entity_id: benchmark:aster
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: estimating the number of cell types in accessibility data"
   name: ASTER
   year: 2023
   curator: JimYuhaoWu
@@ -1209,6 +1319,8 @@
 
 - entity_id: benchmark:jabin-2026-benchmark-publicly-available
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: gene expression from whole slide images"
   name: Jabin 2026 benchmark publicly available
   year: 2026
   curator: JimYuhaoWu
@@ -1220,6 +1332,8 @@
 
 - entity_id: benchmark:liu-2022-dropout-imputation-scrna-seq
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C3: dropout imputation"
   name: Liu 2022 dropout imputation scRNA-seq
   year: 2022
   curator: JimYuhaoWu
@@ -1231,6 +1345,8 @@
 
 - entity_id: benchmark:hollet-2026-benchmark-mri-foundation
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: MRI foundation models predicting IDH status"
   name: Hollet 2026 Benchmark MRI- Foundation
   year: 2026
   curator: JimYuhaoWu
@@ -1245,6 +1361,8 @@
 
 - entity_id: benchmark:cen-2023-time-embrace-natural
   type: benchmark
+  review_state: withdrawn
+  withdrawn_reason: "C2: digital pathology images"
   name: Cen 2023 Time Embrace Natural
   year: 2023
   curator: JimYuhaoWu
