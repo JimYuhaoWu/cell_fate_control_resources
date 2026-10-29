@@ -240,13 +240,25 @@ min_year: 2015
 # GEARS -- the only perturbation model in the catalogue -- at rank 89 of 109 in
 # Europe PMC's relevance order, and `dna_language_models` puts Nucleotide
 # Transformer at rank 76. Both fell off the end. 100 is Europe PMC's own page
-# size, so it is one request either way.
+# size, so it was one request either way.
 #
 # The cost is rows, not requests: a broader fetch means more low-scoring
 # candidates in the review file's below-threshold section. That is the right
 # trade only because scoring, not the API's relevance order, decides what a
 # curator reads -- see docs/triage_design.md §1.5.
-max_results_per_query: 100
+#
+# Raised again to 300 on 2026-10-29, and this time the cap was the binding
+# constraint rather than the rank. docs/triage_design.md 1.8 measured 298
+# Europe PMC hits sitting past 100, 287 of them on `interval_models` (264 hits,
+# `where`) and `dna_language_models` (223, `how`) -- the two axes below their
+# ranges in ROADMAP. The other five Europe PMC queries fit under 100 and are
+# unaffected. 300 clears the largest of the eight with room, and
+# `search_europepmc` now pages with `cursorMark` to reach it, so the cost is
+# three requests for those two queries and one for everything else.
+#
+# arXiv is left at the same cap and does not page: its largest query is 58 hits
+# and none is near 100, so there is nothing past the end to reach.
+max_results_per_query: 300
 
 # Breadth as measured on 2026-10-20, Europe PMC / arXiv, so the first cycle
 # starts from numbers rather than guesses:

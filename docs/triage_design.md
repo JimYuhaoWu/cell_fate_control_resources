@@ -355,6 +355,68 @@ paper, so only a cycle could surface these. Both are tracked rather than fixed
 here: a negative term for design would also hit the in-scope half of D2, and
 that trade is unmeasured.
 
+### 1.9 Paging past the cap, and what the tail held
+
+`search_europepmc` pages with `cursorMark` as of 2026-10-29 and
+`max_results_per_query` is 300, so §1.8's 298 unreached hits were fetched and
+scored. `interval_models` returned 263 rows and `dna_language_models` 222,
+against the 264 and 223 their `hitCount` reports — Europe PMC's count and its
+cursor walk disagree by one on both, which is noted and not chased. arXiv is
+unchanged: its largest query is 58 hits, so nothing there sits past the end.
+
+Banding every candidate by the rank it held **in the query it was assigned to**
+— a paper found by two queries is scored once, under the `expect_type` of the
+first, which is §1.4's rule and the first version of this measurement got it
+wrong by re-scoring each paper under every query that returned it:
+
+| | new candidates | suppressed by the ledger | in the review file | at or above 3.0 | veto fires |
+|---|---|---|---|---|---|
+| rank 1-100 | 178 | 29 | 149 | 4 | 27 |
+| rank 101+ | 250 | 2 | 248 | 92 | 22 |
+| arXiv (no paging) | 44 | 2 | 42 | 1 | 1 |
+
+**The tail is not the dregs, and the reason is bookkeeping rather than
+relevance.** Europe PMC orders by relevance, so the expectation in §1.8 was
+that the tail would be worse than the head. It is 37% above the boundary
+against the head's 3%. The head has been fetched every cycle since 2026-10-20
+and its good papers are already records — 29 of its 178 are suppressed as
+rejected against 2 of the tail's 250 — so what survives in the head is its
+own residue. The tail had never been fetched at all.
+
+**So the 37% is a backlog draining, not a rate.** Once this file is worked the
+tail is as picked-over as the head, and the next cycle reaches the same 843
+rows minus everything decided. This measurement does not license an expectation
+for the next one.
+
+**Two kinds of duplicate, counted before claiming anything.** Of the tail's 92:
+10 are preprint DOIs of papers already in `papers.yaml` under their published
+DOI, because `01_search` filters known papers on `paper_id` and Europe PMC
+indexes the preprint and the journal version as separate records — §2.6
+measured the opposite for OpenAlex, which merges them. 8 more are title
+duplicates within the tail itself, and 1 was already in the ledger by title.
+**73 unique papers above the boundary are genuinely new**, against 3 in the
+head and 1 on arXiv.
+
+**Read against the criteria, 24 of the 73 are in scope** — 19 clearly, 5
+arguable — against **0 of the 4** the head and arXiv produced. These labels are
+mine and unratified; `review_2026-10-29.md` is where they are decided. What the
+other 49 are, as clusters: 11 protein design, engineering, expression or
+ligand-binding (C2), 7 plant, crop or yeast (clade), 7 a finding rather than a
+resource (C1), 6 prokaryotic, metagenomic or microbiome (clade, and the gap
+issue #20 names), 5 expression predicted from expression or from imputed
+genotype (D3), 4 expression from histology or spatial images (C2), 3 RNA
+riboregulators (D3), 2 single-cell models that only embed (D4), and 2 others.
+
+**The two that justify the change on their own.** The tail holds *Cross-species
+regulatory sequence activity prediction* (Basenji2) and *The human genome's
+vocabulary as proposed by the DNA language model GROVER*, at ranks 236 and 219.
+Neither paper is in `papers.yaml`; there is no `model:basenji2`, and all three
+GROVER-named records are withdrawn, so GROVER has no record either.
+`ROADMAP.md` M4 ticks "the Basenji→Enformer→Borzoi line" and "DNA LMs: … GROVER"
+as done. Issue #17 found the same shape of hole at DNABERT-2. These are not
+marginal new papers: they are founding papers of the two axes below target,
+and the fetch cap is why no cycle could see them.
+
 ---
 
 ## 2. Proposing roles from the citing set

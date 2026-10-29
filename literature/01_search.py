@@ -153,37 +153,62 @@ def _get(url: str, params: dict, parse: str = "json"):
 # ── Europe PMC ───────────────────────────────────────────────────────────────
 
 def search_europepmc(query: str, min_year: int, max_results: int) -> list[dict]:
-    """resultType=core, because triage scores abstracts and QC needs authors."""
+    """
+    resultType=core, because triage scores abstracts and QC needs authors.
+
+    Pages with `cursorMark`, because `pageSize` stops at 100 and three of the
+    eight committed queries hold more hits than that: 298 papers sat past the
+    cap on 2026-10-29, 287 of them on the two axes below their ranges
+    (docs/triage_design.md 1.8). A cursor rather than `page`, which Europe PMC
+    documents as unreliable once the offset grows.
+    """
     window = f"(FIRST_PDATE:[{min_year}-01-01 TO {date.today().isoformat()}])"
-    data = _get(EUROPEPMC, {
-        "query": f"{' '.join(query.split())} AND {window}",
-        "format": "json", "resultType": "core", "pageSize": min(max_results, 100),
-    })
-    out = []
-    for r in data.get("resultList", {}).get("result", []):
-        doi = (r.get("doi") or "").lower() or None
-        authors = [a["fullName"] for a
-                   in (r.get("authorList") or {}).get("author", [])
-                   if a.get("fullName")]
-        out.append({
-            "source": "europepmc",
-            "paper_id": doi,
-            "doi": doi,
-            # Kept because 2 of 326 hits in the first real run were PMC records
-            # carrying a PMCID and nothing else -- no DOI, journal, abstract or
-            # authors. They cannot become `paper_id` (records/ take a DOI or an
-            # arxiv: id) and triage has nothing to score, so this is the only
-            # handle a curator has for looking one up.
-            "europepmc_id": r.get("id"),
-            "title": (r.get("title") or "").rstrip("."),
-            "abstract": r.get("abstractText") or None,
-            "authors": authors or None,
-            "year": int(r["pubYear"]) if (r.get("pubYear") or "").isdigit() else None,
-            "venue": r.get("journalTitle") or None,
-            # SRC:PPR is Europe PMC's own marker for a preprint record.
-            "venue_type": "preprint" if r.get("source") == "PPR" else "journal",
+    out: list[dict] = []
+    cursor = "*"
+    while len(out) < max_results:
+        data = _get(EUROPEPMC, {
+            "query": f"{' '.join(query.split())} AND {window}",
+            "format": "json", "resultType": "core",
+            "pageSize": min(max_results - len(out), 100),
+            "cursorMark": cursor,
         })
-    return out
+        page = data.get("resultList", {}).get("result", [])
+        out += [_epmc_row(r) for r in page]
+        nxt = data.get("nextCursorMark")
+        # Measured rather than assumed: at the end Europe PMC returns an empty
+        # `result` list and omits `nextCursorMark`, both at once, so every
+        # query pays one empty request to learn it has finished. `not page` is
+        # the condition that bounds the loop -- `len(out) < max_results` cannot,
+        # since an empty page leaves `out` the length it already was.
+        if not page or not nxt:
+            break
+        cursor = nxt
+    return out[:max_results]
+
+
+def _epmc_row(r: dict) -> dict:
+    doi = (r.get("doi") or "").lower() or None
+    authors = [a["fullName"] for a
+               in (r.get("authorList") or {}).get("author", [])
+               if a.get("fullName")]
+    return {
+        "source": "europepmc",
+        "paper_id": doi,
+        "doi": doi,
+        # Kept because 2 of 326 hits in the first real run were PMC records
+        # carrying a PMCID and nothing else -- no DOI, journal, abstract or
+        # authors. They cannot become `paper_id` (records/ take a DOI or an
+        # arxiv: id) and triage has nothing to score, so this is the only
+        # handle a curator has for looking one up.
+        "europepmc_id": r.get("id"),
+        "title": (r.get("title") or "").rstrip("."),
+        "abstract": r.get("abstractText") or None,
+        "authors": authors or None,
+        "year": int(r["pubYear"]) if (r.get("pubYear") or "").isdigit() else None,
+        "venue": r.get("journalTitle") or None,
+        # SRC:PPR is Europe PMC's own marker for a preprint record.
+        "venue_type": "preprint" if r.get("source") == "PPR" else "journal",
+    }
 
 
 # ── arXiv ────────────────────────────────────────────────────────────────────

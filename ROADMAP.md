@@ -437,6 +437,22 @@ completely. Paging past the cap was rejected on 2026-10-21 because the scoring
 would have handed a curator noise at that volume; §1.7 of
 `docs/triage_design.md` is what changed, and §1.8 carries both measurements.
 
+**Paged on 2026-10-29, same day, and the tail held the founding papers.**
+`search_europepmc` now pages with `cursorMark` and the cap is 300, so the 298
+were fetched. The review file went from 5 decisions to 97, and banding each
+candidate by its rank in its own query gives 4 above the boundary in ranks
+1-100 against 92 in ranks 101+. After removing 10 preprint DOIs of papers
+already catalogued, 8 title duplicates and 1 already in the ledger, **73
+genuinely new papers clear the boundary and 24 of them are in scope**, against
+0 of the 4 the first 100 ranks produced.
+
+The head is picked over, which is why its rate is low -- 29 of its 178 are
+suppressed as already rejected against 2 of the tail's 250 -- so this is a
+backlog draining and not a rate the next cycle inherits. Two of the 24 settle
+the question on their own: Basenji2 and GROVER, at ranks 236 and 219, neither
+of which has a paper in `papers.yaml` or a record, on two lines M4 ticks as
+done. §1.9 of `docs/triage_design.md` carries the measurement.
+
 ## M5 — hybrid search
 
 Deliberately gated on M4. Deferred from M2 on purpose: with 20 records there is
