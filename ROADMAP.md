@@ -419,6 +419,24 @@ The differentiator is the evidence layer, not the taxonomy: no other resource
 records whether a genomic/epigenomic deep-learning model has been
 independently evaluated, or whether its weights can legally be reused.
 
+**Hold lifted 2026-10-29, and the first cycle says the queries are spent.** A
+discovery-only run under the encoded criteria returned 222 candidates new to
+`papers.yaml` and **17 new to the pipeline**: 172 of the 191 in the review file
+had been deferred by an earlier cycle, 31 more were suppressed as rejected.
+Five cleared the boundary and all five are out of scope on
+`docs/scope_criteria.md` — promoter design for gut commensals, metagenomic
+taxonomy, expression from H&E images, a domain-agnostic active-learning method,
+and a cis-regulatory evolution map built with AlphaGenome.
+
+So the gap to ~300-400 does not close by re-running the eight queries, and the
+corpus they have not reached is measured rather than guessed: Europe PMC holds
+**298 hits past the 100-result fetch cap**, 287 of them on `interval_models`
+(`where`, 164 unreached) and `dna_language_models` (`how`, 123) — the two axes
+below their ranges. The other five Europe PMC queries reach their corpus
+completely. Paging past the cap was rejected on 2026-10-21 because the scoring
+would have handed a curator noise at that volume; §1.7 of
+`docs/triage_design.md` is what changed, and §1.8 carries both measurements.
+
 ## M5 — hybrid search
 
 Deliberately gated on M4. Deferred from M2 on purpose: with 20 records there is

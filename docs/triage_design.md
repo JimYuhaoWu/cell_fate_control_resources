@@ -279,6 +279,82 @@ So the honest claim is narrow: the tables now remove the drift that announces
 itself in the substrate, and rank the rest lower than they did. They do not
 decide scope, and §1.5 still holds — the threshold ranks, it does not drop.
 
+### 1.8 What the first cycle after M4a measured
+
+Run 2026-10-29, discovery only, with M4a's hold lifted and the §1.7 tables in
+force.
+
+**The eight queries are exhausted, and that is the finding.** 222 candidates
+were new to `papers.yaml`, but only **17 were new to the pipeline**: of the 191
+that reached the review file, 172 had been deferred by a previous cycle, and 31
+more were suppressed as already rejected. Eight days separate this cycle from
+2026-10-21, so 17 papers is what the field produced through these queries in
+eight days. Five candidates cleared 3.0, and read against
+`docs/scope_criteria.md` all five are out of scope: DAPE-PD designs promoters
+for gut commensals (D2), Nammu classifies marine metagenomes (C3), DiffBulk
+predicts expression from H&E images (C2), a transport-kernel active-learning
+method has no genomic substrate of its own (C2), and a map of human
+cis-regulatory evolution built with AlphaGenome is a result rather than a
+resource (C1).
+
+Re-running the queries therefore does not rebuild content scale. 250 published
+records against a ~300-400 target, `where` at 97 of ~125-175 and `how` at 45 of
+~60-80, and this cycle offers nothing toward either.
+
+**The ledger is doing work the tables cannot.** 24 of the 31 suppressed
+candidates scored at or above 3.0 — they are the primary papers of records the
+scope audit withdrew, and without the ledger they would be re-proposed at the
+top of the file. §1.7 said plainly that 55% of out-of-scope records still clear
+the boundary; the ledger is what keeps those 24 from costing a second decision.
+It only reaches papers decided once, so it replaces nothing in §1.7.
+
+**The unread corpus is past the fetch cap, not past the queries.** Europe PMC's
+own `hitCount` per committed query, against the 100 that
+`max_results_per_query` fetches:
+
+| query | axis | hits | fetched | unreached |
+|---|---|---|---|---|
+| `interval_models` | `where` | 264 | 100 | **164** |
+| `dna_language_models` | `how` | 223 | 100 | **123** |
+| `perturbation_response` | `what` | 111 | 100 | 11 |
+| `module_collections` | `with-what` | 80 | 80 | 0 |
+| `benchmarks` | — | 61 | 61 | 0 |
+| `genome_3d` | `where` | 50 | 50 | 0 |
+| `variant_effect` | `where` | 41 | 41 | 0 |
+| `accessibility` | `where` | 15 | 15 | 0 |
+
+298 papers have never been scored, and 287 of them belong to the two axes that
+sit below their ranges. Three queries are the whole of it; the other five reach
+their corpus completely. The cap went from 50 to 100 on 2026-10-21 because
+resources were falling off the end at ranks 76 and 89, and 100 is Europe PMC's
+page size — so going further means cursor paging, which `search_europepmc` does
+not do. `search_queries.yaml` records why paging was not worth it then: at 494
+hits the scoring under-ranked the real resources, and a curator would have read
+noise. §1.7 is what changed, and it is the measured answer to that objection.
+
+This says nothing about the hit rate in the tail. Europe PMC orders by
+relevance, so the unreached 164 are its least relevant and the honest
+expectation is that they are worse than the head — where the hit rate this
+cycle was zero of five.
+
+**Two gaps in the encoding that the labelled set could not have shown.**
+Neither of the cycle's top two `how` candidates has a negative term anywhere in
+the tables:
+
+* **D2 is not encoded.** DAPE-PD scored +9.50, the highest in the cycle, on
+  `regulatory dna`, `cis-regulatory` and `generated sequence` — the last of
+  which is a reward. D2 puts sequence design outside `how` unless it is design
+  toward fate control, and no term expresses that.
+* **`SINGLE_CLADE` stops at eukaryotes and phages.** It carries *Arabidopsis*,
+  crops, yeast, *Drosophila*, plasmid and bacteriophage, and nothing for
+  prokaryotic or metagenomic work. Nammu is trained on marine metagenomes and
+  DAPE-PD on gut commensals; neither took a clade penalty.
+
+`scope_labels.yaml` holds no prokaryotic-metagenomic record and no design
+paper, so only a cycle could surface these. Both are tracked rather than fixed
+here: a negative term for design would also hit the in-scope half of D2, and
+that trade is unmeasured.
+
 ---
 
 ## 2. Proposing roles from the citing set
