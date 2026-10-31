@@ -397,9 +397,11 @@ duplicates within the tail itself, and 1 was already in the ledger by title.
 **73 unique papers above the boundary are genuinely new**, against 3 in the
 head and 1 on arXiv.
 
-**Read against the criteria, 24 of the 73 are in scope** — 19 clearly, 5
+**Read against the criteria, 24 of the 73 are in scope** — 20 clearly, 4
 arguable — against **0 of the 4** the head and arXiv produced. These labels are
-mine and unratified; `review_2026-10-29.md` is where they are decided. What the
+mine and unratified, and they are now written into the **Notes:** line of every
+one of the 97 blocks that needs a decision, with every tick left blank;
+`review_2026-10-29.md` is where they are decided. What the
 other 49 are, as clusters: 11 protein design, engineering, expression or
 ligand-binding (C2), 7 plant, crop or yeast (clade), 7 a finding rather than a
 resource (C1), 6 prokaryotic, metagenomic or microbiome (clade, and the gap
