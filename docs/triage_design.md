@@ -595,7 +595,7 @@ truth is 291 `benchmark`/`critique` rows:
 |---|---|
 | curated rows recovered into a ranked proposal | **288 of 291** |
 | via list A (the reference gate) | 286 |
-| via list B's abstract-less split | 2 |
+| via list B, below list A's 5.0 | 2 |
 | missed: no citation edge in OpenAlex | 3 |
 | missed: dropped by the scoring | **0** |
 | proposed role matches the curated role | **287 of 288** |
@@ -610,6 +610,16 @@ times the ground truth §2.5 was tuned on**: the median curated row sits at 16%
 of its list, 42 of the 288 in the top ten, scores from 3.00 to 17.50. **The
 one role mismatch is a curated `benchmark` proposed as `critique`**, which is
 §2.6.4's coin-flip margin showing up once in 288 rather than once in 6.
+
+**One claim above no longer holds.** This section says 5.0 is the highest
+threshold at which every swept row survives, which was measured at 283 rows.
+At 291, two of them fall below it in list A -- `10.1093/gigascience/giad085`
+for `dataset:enformer-data` and `10.3390/bios16100581` for `model:gears` --
+and only list B returns them. Both are papers that cite a primary without
+reading as an evaluation of it in title or abstract, which is the case the
+threshold exists to drop, so this is a cost to weigh rather than a defect to
+fix; it is recorded here because the next threshold change should be argued
+against 291 rows and not 283.
 
 What this is not is a review burden. 3,688 of the 6,895 clear 5.0, and the
 three outcomes above are what turn that into a human's afternoon; the
