@@ -462,6 +462,25 @@ preprint handling.
 | **critique lexicon** | title +2.5 each (cap 5.0), abstract +0.75 each (cap 3.0) | `fail`, `struggle`, `poorly`, `overestimat`, `limitation`, `pitfall`, `spurious`, `confound`, `misleading`, `not generalize`. Weighted above the benchmark lexicon because critiques are rarer and are what the novelty claim rests on. |
 | **demotion** | −3.0 | `review`, `perspective`, `primer`, `erratum`, `retraction` in the title, or OpenAlex `type: review`. Demotes, never excludes: `review` is a real role. |
 
+**Where the three lexicons live, 2026-11-03.** The benchmark, critique and
+demotion term lists, and the `hits` and `names` matchers under them, moved out
+of `literature/triage_rules.py` into `whochecked.lexicon`, which CFCR imports.
+The weights and caps in the table above did not change and neither did the
+output: `triage_eval.py` was run on both sides of the swap and every line of it
+is identical, and every cached citing work -- 2,729 across five entities -- was
+re-scored under both and agrees on the score, the breakdown and the proposed
+role. (The §2.5 numbers below are a separate matter: the ground truth has grown
+to 291 `benchmark`/`critique` rows since they were written, so re-running the
+measurement moves them for reasons that have nothing to do with the swap.)
+
+The reason for the move is the one in §2.4: WhoChecked owns the question of
+who evaluated a resource, those words carry no discipline, and a word list
+with two homes is exactly the defect this repository's review discipline is
+written to catch. Everything genomics- or
+catalogue-specific stayed: the input gate, the task and architecture tables, the
+substrate veto, the clade terms, `score_discovery`, `propose_role`,
+`score_named` and `score_class`.
+
 Aliases shorter than four characters are dropped. `vocab`-adjacent alias lists
 contain `"NT"` for `model:nucleotide-transformer`, which matches almost every
 abstract; all matching is word-boundary anchored and case-insensitive.

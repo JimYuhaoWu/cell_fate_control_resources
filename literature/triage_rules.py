@@ -37,6 +37,15 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from schema import (PAPER_ROLES, classify_overlap, derive_tier,  # noqa: E402,F401
                     norm_author)
 
+# The evaluation lexicon is imported for the same reason one repository further
+# out. WhoChecked owns the question of who evaluated a resource, and the words
+# that say a paper is doing the evaluating are not genomics: `benchmark`,
+# `fails to` and `review` read the same in any field, which is why WhoChecked
+# took them and left everything below this import here. `whochecked.lexicon`
+# imports only `re`, so README's claim that querying the catalogue needs no
+# network library still holds.
+from whochecked.lexicon import DEMOTE_TITLE, hits, lexicon, names  # noqa: E402
+
 
 # ══ Part 1: discovery hits, scored for scope (design §1.2) ═══════════════════
 
@@ -386,44 +395,14 @@ CLASS_TERMS = [
     "state-of-the-art model", "current model", "current approaches",
     "deep learning model", "sequence model",
 ]
-BENCH_TITLE = [
-    "benchmark", "benchmarking", "evaluation", "evaluating", "evaluate",
-    "comparison", "comparative", "compare", "assessment", "assessing", "assess",
-    "baseline", "leaderboard", "head-to-head", "systematic",
-]
-BENCH_ABSTRACT = BENCH_TITLE + [
-    "we evaluate", "we compare", "we benchmark", "we assess", "across models",
-    "evaluated on", "four state-of-the-art", "three state-of-the-art",
-]
-CRIT_TITLE = [
-    "fail", "fails", "struggle", "struggles", "poorly", "overestimat",
-    "underestimat", "limitation", "caveat", "cannot", "pitfall", "overstate",
-    "illusion", "spurious", "confound", "underperform", "inflated",
-    "misleading", "hard to compare", "not generalize", "questioning",
-    "reassess", "overlooked",
-]
-CRIT_ABSTRACT = CRIT_TITLE + [
-    "fails to", "struggle to", "poorly explained", "limited performance",
-    "no better than", "worse than", "artifact", "remains unexplored",
-    "often fail", "incorrect direction",
-]
-# `review` is a legitimate entity_paper role, so these demote rather than
-# exclude: a review that evaluates models is still worth a curator's glance.
-DEMOTE_TITLE = ["review", "perspective", "primer", "roadmap", "erratum",
-                "correction", "retraction"]
+# The benchmark, critique and demotion lexicons are `whochecked.lexicon`'s,
+# imported above with `hits` and `names`. Design §2.2 holds the terms and the
+# weights, and they are not restated here: a second home for a shared thing is
+# what this repository's review discipline treats as a defect, and a list of
+# words is no exception.
 
 
 # ══ Matching ════════════════════════════════════════════════════════════════
-
-def hits(terms, text: str) -> list[str]:
-    """Terms present in `text`, left-anchored on a word boundary."""
-    return [t for t in terms if re.search(r"(?<![a-z])" + re.escape(t), text)]
-
-
-def names(forms: set[str], text: str) -> bool:
-    return any(re.search(r"(?<![a-z0-9])" + re.escape(f.lower()) + r"(?![a-z0-9])", text)
-               for f in forms)
-
 
 def _table(table: dict, title: str, abstract: str, cap: float) -> float:
     """A term in the title counts double (design §1.2); the total is capped."""
@@ -474,14 +453,6 @@ def score_discovery(rec: dict) -> tuple[float, dict]:
 
 
 # ══ Citing-work scorers (design §2.2, §2.3) ═════════════════════════════════
-
-def lexicon(title: str, abstract: str) -> tuple[float, float]:
-    bench = (min(2.0 * len(hits(BENCH_TITLE, title)), 4.0)
-             + min(0.5 * len(hits(BENCH_ABSTRACT, abstract)), 2.0))
-    crit = (min(2.5 * len(hits(CRIT_TITLE, title)), 5.0)
-            + min(0.75 * len(hits(CRIT_ABSTRACT, abstract)), 3.0))
-    return bench, crit
-
 
 def propose_role(bench: float, crit: float) -> str:
     if crit > bench:

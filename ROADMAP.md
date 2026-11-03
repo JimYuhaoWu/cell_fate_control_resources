@@ -611,6 +611,16 @@ rather than a copy in each**; this file's own review discipline treats a second
 home for a shared thing as a defect, and it is the function both papers would
 claim as novel. Undecided, and tracked as WhoChecked's M1 first item.
 
+**Decided, and now done.** The derivation moved to WhoChecked and CFCR imports
+it: `scripts/schema.py` takes `classify_overlap` and `norm_author` from
+`whochecked.overlap` and keeps `derive_tier` here, beside the tier vocabulary it
+produces. On 2026-11-03 the pin moved to `2fd9509` and the evaluation lexicon
+followed the derivation out -- `literature/triage_rules.py` imports the
+benchmark, critique and demotion term lists from `whochecked.lexicon` rather
+than holding its own copy (`docs/triage_design.md` §2.2). The split is by
+field, not by convenience: WhoChecked has taken what is field-agnostic, and
+every genomics-specific table stays in CFCR.
+
 **The honest argument against starting it:** M7 still needs a co-maintainer,
 NAR states that retirement or graduation of developers is not a valid reason to
 terminate a resource, and a second project doubles that gap rather than sharing
