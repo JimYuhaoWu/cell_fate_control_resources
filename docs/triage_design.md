@@ -584,6 +584,37 @@ outcome applies and every row is a real decision: roughly 18,000 of them at the
 29.6% that cleared 5.0 here. Sweeping them is a per-record decision about which
 primaries are worth asking about, not a cycle to run. Tracked in #8.
 
+**Re-measured 2026-11-03, and `reports/triage_eval.md` now holds this run.**
+The committed artifact had been the 2026-10-21 one all along -- the name gate,
+eight ground-truth rows -- so §2.5's promise that `triage_eval.py` reproduces
+the current numbers pointed at a file that did not. It does now. 16 entities
+carry an evaluation, their primaries draw 6,895 citing works, and the ground
+truth is 291 `benchmark`/`critique` rows:
+
+| | n |
+|---|---|
+| curated rows recovered into a ranked proposal | **288 of 291** |
+| via list A (the reference gate) | 286 |
+| via list B's abstract-less split | 2 |
+| missed: no citation edge in OpenAlex | 3 |
+| missed: dropped by the scoring | **0** |
+| proposed role matches the curated role | **287 of 288** |
+
+Three things to read off it. **The scoring drops nothing**: every miss is a
+reference list OpenAlex does not hold, which no weight can reach, and all three
+are conference proceedings -- DART-Eval at NeurIPS 37 for two of them, and
+Stable-Shift at ACM-BCB 2026 for the third. That is §2.6.1's systematic gap
+holding exactly, and it is the standing argument for keeping the `benchmarks`
+discovery query rather than letting the sweep replace it. **Rank holds at 36
+times the ground truth §2.5 was tuned on**: the median curated row sits at 16%
+of its list, 42 of the 288 in the top ten, scores from 3.00 to 17.50. **The
+one role mismatch is a curated `benchmark` proposed as `critique`**, which is
+§2.6.4's coin-flip margin showing up once in 288 rather than once in 6.
+
+What this is not is a review burden. 3,688 of the 6,895 clear 5.0, and the
+three outcomes above are what turn that into a human's afternoon; the
+measurement here is of the ranking, not of the question count.
+
 ### 2.4 Author overlap is deliberately not scored
 
 Author overlap with the primary paper is the most predictive signal in the pool
@@ -606,7 +637,8 @@ human deciding what to read — and the score must ignore it.
 **Historical.** This is the name gate measured when the catalogue held eight
 evaluation rows; it now holds 291, and 2.3a supersedes the placements below.
 Kept because the title-only finding at the end of it is still load-bearing.
-`triage_eval.py` reproduces the current numbers, not these.
+`triage_eval.py` reproduces the current numbers, not these, and since
+2026-11-03 `reports/triage_eval.md` holds them (2.3a's last subsection).
 
 `db/entity_paper.tsv` holds 6 `benchmark` and 2 `critique` rows. Reproduce with
 `python literature/triage_eval.py`.
