@@ -20,7 +20,7 @@ dependencies = [
     # `evidence_tier` cannot be allowed to move underneath that claim. Bumping
     # the pin is a visible commit, which is the right weight for a change to
     # the one thing CFCR rests on.
-    "whochecked @ git+https://github.com/JimYuhaoWu/WhoChecked@603778d",
+    "whochecked @ git+https://github.com/JimYuhaoWu/WhoChecked@2fd9509",
 ]
 
 # The literature pipeline is the only thing here that touches the network, and
