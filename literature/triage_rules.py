@@ -229,11 +229,54 @@ SINGLE_CLADE = {
     "yeast": -2.0, "saccharomyces": -2.0, "drosophila": -2.0,
     "zebrafish": -2.0, "caenorhabditis": -2.0, "xenopus": -2.0,
     "prophage": -3.0, "plasmid": -2.0, "bacteriophage": -3.0,
+    # Added 2026-11-04 from a labelled sample of the first cycle to reach
+    # databases, datasets and protocols (design §1.10). Crops and livestock,
+    # which belong beside `rice` and `maize` above: no in-scope resource is
+    # about them, so these are safe for every type.
+    "barley": -3.0, "peanut": -3.0, "arachis": -3.0, "hevea": -3.0,
+    "domestic animal": -3.0,
+}
+
+# The other half of that sample's organism noise, and deliberately NOT in the
+# table above. A database of prokaryotic transposable elements is out of scope;
+# a DNA language model trained across domains of life mentions the same words
+# and is in scope -- `model:evo` scores -3.00 instead of 0.00 with "prokaryot"
+# applied to it, which changes no decision today only because §1.4's
+# under-scoring of the `how` axis already put it below the boundary. So these
+# are charged to the three resource types only, where the organism named is
+# what the resource is for.
+SINGLE_CLADE_RESOURCE = {
+    "rhizobi": -3.0, "escherichia": -3.0, "prokaryot": -3.0,
+    "toxoplasma": -3.0, "herpesvirus": -3.0,
 }
 MULTI_SPECIES = ["multi-species", "multispecies", "cross-species",
                  "all domains of life", "across species", "pan-genome"]
 
 CLADE_FLOOR = -4.0
+
+# The floor is a model's protection and a resource's loophole, which §1.10
+# measured. It exists because one stray "yeast" in a comparison should not sink
+# an in-scope human model, and for a model that is right. For a database, a
+# dataset or a protocol the clade is not a stray mention: it is what the
+# resource is *for*, named in the title, so capping the penalty at -4.0 left
+# `PlantPAN 4.0`, `AraENCODE` and a barley mutant collection above the boundary
+# at 8.00, 7.50 and 3.00. These three types take the penalty uncapped.
+#
+# `module` is deliberately NOT here, and that was measured too: the labelled
+# sample covers the three types the new clauses fetch, and exempting `module`
+# on the strength of it took `module:nfc-2023-identification-transcriptional-
+# activator` from 4.00 to -3.00 -- a published record below the boundary on
+# evidence that says nothing about module collections.
+CLADE_FLOOR_EXEMPT = ("database", "dataset", "protocol")
+
+# ... which then needs a wider waiver than `MULTI_SPECIES`, for the same
+# measured reason in the other direction: `database:remap-2022` covers human,
+# mouse, Drosophila and Arabidopsis and says so by name rather than calling
+# itself cross-species, so uncapping alone pushed a published record under the
+# boundary. These markers are checked only for the four types above, because
+# for a model "Homo sapiens" in an abstract is not evidence of scope.
+MULTI_SPECIES_RESOURCE = ["human and mouse", "human and mice",
+                          "mouse and human", "homo sapiens", "mus musculus"]
 
 # eCR_mod_lib's DBD/ED/CR vocabulary, kept for the one query it still serves.
 # The `with-what` axis is the only place CFCR reaches that literature.
@@ -442,13 +485,22 @@ def score_discovery(rec: dict) -> tuple[float, dict]:
     off = _table(OUT_OF_SCOPE, title, abstract, 0.0)
     if off:
         parts["out_of_scope"] = off
-    if not hits(MULTI_SPECIES, both):
-        clade = _table(SINGLE_CLADE, title, abstract, 0.0)
+    expect_type = rec.get("expect_type")
+    waivers = MULTI_SPECIES + (MULTI_SPECIES_RESOURCE
+                               if expect_type in CLADE_FLOOR_EXEMPT else [])
+    if not hits(waivers, both):
+        table = (SINGLE_CLADE if expect_type not in CLADE_FLOOR_EXEMPT
+                 else {**SINGLE_CLADE, **SINGLE_CLADE_RESOURCE})
+        clade = _table(table, title, abstract, 0.0)
         if clade:
-            # Floored, not uncapped: one stray "yeast" in a comparison should
-            # not sink an in-scope human model. Design §1.6.1 records what that
-            # choice costs -- a genuine Arabidopsis model scores back over 3.0.
-            parts["single_clade"] = max(clade, CLADE_FLOOR)
+            # Floored for a model, because one stray "yeast" in a comparison
+            # should not sink an in-scope human model: design §1.6.1 records
+            # what that costs, a genuine Arabidopsis model back over 3.0.
+            # Uncapped for the three resource types, because the clade is
+            # the subject rather than a mention -- §1.10 measured 11 of 49
+            # out-of-scope rows removed for no in-scope loss.
+            parts["single_clade"] = (clade if expect_type in CLADE_FLOOR_EXEMPT
+                                     else max(clade, CLADE_FLOOR))
     return round(sum(parts.values()), 2), parts
 
 

@@ -444,27 +444,89 @@ with real input:
 | `reference_epigenomes` | 135 | 41 |
 | the eight older clauses | 1,591 | 232 |
 
-**642 of the cycle's 874 decisions come from the four new clauses**, and 329 of
-the 899 above-boundary candidates score 8.0 or more. That is not a plausible
-in-scope rate for a 788-paper pull, and the cause is visible in the tables
-themselves: `DATABASE_TERMS` pays 2.5 for `database`, 2.0 for `curated`, 2.0
-for `open-access`, 1.5 for `release` and 1.5 for `update`, against a cap of
-8.0. A paper announcing any database release in any field clears the boundary
-on vocabulary that says nothing about whether the resource acts on cell fate.
+**642 of the cycle's 874 decisions come from the four new clauses.** The first
+version of this section called that implausible and inferred that
+`DATABASE_TERMS` was over-scoring. **Measured, it was wrong**, and the
+correction is the useful part.
 
-The older tables do not behave this way, and the difference is history rather
-than design: `INPUT_GATE`, `TASK` and the rest were re-measured against
-`db/papers.tsv` in §1.3 and tuned on §1.6's noise, while these three were
-specified and left. §1.2's rule that a term in the title counts double applies
-to all of them equally, so nothing about the mechanism is at fault.
+#### What the labelled sample says
 
-**What this does not change.** The clauses stay. A query that reaches 96% of
-the catalogue is doing its job, and the 642 rows are evidence that the three
-types were never in the pipeline rather than evidence that they should not be.
-Calibrating the tables against `literature/scope_labels.yaml`, which already
-labels every published database, dataset and protocol, is the work; it is an
-M4 item and it needs the same treatment §1.6 gave the clade penalty — a
-measured cost, not a guess at weights.
+`literature/scope_labels.yaml` could not answer it: all 21 records of these
+three types are published and none was withdrawn, so the catalogue supplies
+positives and no negatives here. So a seeded sample of 80 of the 642
+(`random.seed(20261104)`) was read against `docs/scope_criteria.md`, one at a
+time, and labelled in or out. 31 of the 80 are in scope — and per clause:
+
+| clause | sampled | in scope | rate |
+|---|---|---|---|
+| `chromatin_protocols` | 8 | 5 | 63% |
+| `motif_databases` | 32 | 16 | **50%** |
+| `perturbation_atlases` | 33 | 9 | 27% |
+| `reference_epigenomes` | 7 | 1 | 14% |
+
+So `motif_databases` proposing 313 of 788 is close to the rate a curator would
+accept, and `DATABASE_TERMS` and `PROTOCOL_TERMS` are not the problem. The
+problem is `DATASET_TERMS`, which both weak clauses route to, and it is not a
+weight: of the 49 out-of-scope rows in the sample, **18 fail C1 and 12 fail
+C3** — a Perturb-seq *finding* and a Perturb-seq *dataset* share every word.
+The catalogued datasets are themselves titled as platform and finding papers
+("Perturb-Seq: Dissecting Molecular Circuits…", "Exploring Genetic Interaction
+Manifolds…"); what makes them resources is that the data was reused, which no
+abstract states. §1.5 already says C1 is the criterion a score cannot see, and
+this is that finding in a second domain.
+
+#### What could be calibrated, and was
+
+13 of the 49 fail on organism scope, and those a term list can reach. Two
+changes, each measured:
+
+**Ten clade terms**, split by what they risk. `barley`, `peanut`, `arachis`,
+`hevea` and `domestic animal` join `SINGLE_CLADE` for every type, beside `rice`
+and `maize`. `rhizobi`, `escherichia`, `prokaryot`, `toxoplasma` and
+`herpesvirus` go in a separate `SINGLE_CLADE_RESOURCE` charged only to the
+three resource types, because a DNA language model trained across domains of
+life says the same words legitimately: with `prokaryot` applied to it
+`model:evo` scores −3.00 rather than 0.00, which changes no decision only
+because §1.4's under-scoring of the `how` axis already had it below the
+boundary.
+
+**The clade floor is now type-aware.** `CLADE_FLOOR` exists because one stray
+"yeast" should not sink an in-scope human model (§1.6.1), and for a model that
+is right. For a database, a dataset or a protocol the clade is the subject, not
+a mention: capped at −4.0, `PlantPAN 4.0`, `AraENCODE` and a barley mutant
+collection sat at 8.00, 7.50 and 3.00. Those three types take it uncapped,
+which then needed a wider waiver — `database:remap-2022` covers human, mouse,
+Drosophila and Arabidopsis and names them rather than calling itself
+cross-species, so uncapping alone pushed a published record under the boundary.
+`MULTI_SPECIES_RESOURCE` is that waiver, and it too is charged only to those
+types, since "Homo sapiens" in a model's abstract is not evidence of scope.
+
+`module` is deliberately not exempt. Exempting it on this sample's strength —
+the sample says nothing about module collections — took
+`module:nfc-2023-identification-transcriptional-activator` from 4.00 to −3.00.
+
+#### The cost, measured both ways
+
+| | |
+|---|---|
+| out-of-scope sample rows now below the boundary | **11 of 49** |
+| in-scope sample rows lost | **0** |
+| published records whose score moves at all | 1 (`database:remap-2022`, 4.00 → 8.00) |
+| published records crossing below 3.0 | **0** |
+| sample precision above the boundary | 39% → **45%** |
+| the cycle's decisions | 874 → **830** |
+
+One label of my own was wrong and the calibration found it: candidate 8 read as
+an in-scope ATAC-seq protocol until the uncapped penalty flagged it, and the
+title the sample truncated ends "from adult *Drosophila melanogaster*
+neurons". It is out on organism scope, which is why the in-scope loss is 0
+rather than 1.
+
+**What stays open.** 830 decisions is still a wall, and 44 fewer is not a fix:
+the remaining noise is C1 and C3, which M4b's predicates are for. The clauses
+stay either way — reaching 96% of the catalogue is the job, and these rows are
+evidence that three types were never in the pipeline rather than evidence that
+they do not belong.
 
 ---
 

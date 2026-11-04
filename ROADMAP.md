@@ -208,9 +208,12 @@ The dominant cost of the whole project.
 - [x] A cached cycle that confirms the projected reach — 239 of 249 on
       2026-11-04, one short of the projection because `model:oyster` was
       added after the probes were run
-- [ ] Calibrate `DATABASE_TERMS`, `DATASET_TERMS` and `PROTOCOL_TERMS`, which
-      this cycle exercised for the first time and which produced 642 of its
-      874 decisions
+- [x] Calibrate the scoring for the three types the new clauses reach — done
+      2026-11-04 against a labelled sample of 80, and the result corrected the
+      diagnosis: `DATABASE_TERMS` and `PROTOCOL_TERMS` were fine at 50% and
+      63% in-scope, the organism half was fixable and is fixed (11 of 49
+      out-of-scope rows dropped, no in-scope loss, 874 decisions → 830), and
+      the rest is C1 and C3, which M4b owns
 
 **Exit, rewritten 2026-11-04.** It used to be "~150 entities, and
 `reports/vocab_candidates.md` fires for the first time". Both halves were
@@ -264,11 +267,13 @@ repository by anyone, which `query_coverage.py` makes true offline.
 cycle, with 1,648 more recorded as deferred below the boundary. 642 of the 874
 come from the four clauses added today, and that is the finding rather than the
 price: those clauses are the first ever to send a candidate to
-`DATABASE_TERMS`, `DATASET_TERMS` and `PROTOCOL_TERMS`, which were written
-without one and are therefore uncalibrated. `motif_databases` alone proposes
-313. §1.10 of `docs/triage_design.md` has the measurement; calibrating the
-three tables is now an M4 item, because a reach measurement that lands 874 rows
-on a curator has moved the wall rather than removed it.
+`DATABASE_TERMS`, `DATASET_TERMS` and `PROTOCOL_TERMS`. A labelled sample of 80
+then showed the tables were mostly right and the first diagnosis here was
+wrong — `motif_databases` is 50% in scope and `chromatin_protocols` 63%, which
+is the rate a curator accepts. The organism half was fixable and is fixed; the
+rest is C1 and C3, which no keyword table decides. §1.10 of
+`docs/triage_design.md` carries both the sample and the correction. 830
+decisions stand, which is still a wall and is M4b's to lower.
 
 This is also the general-interest claim M7 needs. Kipoi, the Stegle catalogue
 and the awesome-lists all say that a human curated them; none publishes the
