@@ -5,9 +5,11 @@
 # Conventions:
 #   * entity_id prefix MUST equal `type` (QC enforces it), so models are
 #     `model:<slug>`.
-#   * `evidence_tier` below is the curator's CLAIM. 05_validate.py recomputes it
+#   * `evidence_tier` is the curator's CLAIM. 05_validate.py recomputes it
 #     from entity_paper roles + author overlap and reports disagreements; the
-#     derivation is authoritative (schema §3.1).
+#     derivation is authoritative (schema §3.1). It sits at the record's top
+#     level, not under `model_ext`, since 2026-11-04: a benchmark and a dataset
+#     can be independently evaluated too, so the column moved to `entity`.
 #   * Replicate checkpoints of one model are ONE entity. A re-implementation
 #     under its own name is a separate entity with `variant_of` set. A successor
 #     with its own paper is a separate entity with `supersedes` set.
@@ -44,8 +46,8 @@
   status: active
   curator: JimYuhaoWu
   date_added: 2026-10-16
+  evidence_tier: externally-benchmarked
   model_ext:
-    evidence_tier: externally-benchmarked
     availability_tier: open-source
     model_family: interval-model
     architecture: [cnn, transformer]
@@ -154,8 +156,8 @@
   supersedes: model:enformer
   curator: JimYuhaoWu
   date_added: 2026-10-16
+  evidence_tier: externally-benchmarked
   model_ext:
-    evidence_tier: externally-benchmarked
     availability_tier: open-source
     model_family: interval-model
     architecture: [cnn, transformer]
@@ -248,8 +250,8 @@
   variant_of: model:borzoi
   curator: JimYuhaoWu
   date_added: 2026-10-16
+  evidence_tier: externally-benchmarked
   model_ext:
-    evidence_tier: externally-benchmarked
     availability_tier: open-source
     model_family: interval-model
     architecture: [cnn, transformer]
@@ -303,8 +305,8 @@
   status: active
   curator: JimYuhaoWu
   date_added: 2026-10-16
+  evidence_tier: externally-benchmarked
   model_ext:
-    evidence_tier: externally-benchmarked
     availability_tier: api-only
     model_family: interval-model
     architecture: [cnn, transformer]
@@ -411,8 +413,8 @@
   status: active
   curator: JimYuhaoWu
   date_added: 2026-10-16
+  evidence_tier: externally-benchmarked
   model_ext:
-    evidence_tier: externally-benchmarked
     availability_tier: open-weights
     model_family: dna-lm
     architecture: [transformer]
@@ -603,8 +605,8 @@
   status: active
   curator: JimYuhaoWu
   date_added: 2026-10-16
+  evidence_tier: externally-benchmarked
   model_ext:
-    evidence_tier: externally-benchmarked
     availability_tier: open-source
     model_family: dna-lm
     architecture: [ssm, transformer]
@@ -684,8 +686,8 @@
   status: active
   curator: JimYuhaoWu
   date_added: 2026-10-16
+  evidence_tier: externally-benchmarked
   model_ext:
-    evidence_tier: externally-benchmarked
     availability_tier: open-source
     model_family: interval-model
     architecture: [cnn]
@@ -742,8 +744,8 @@
   status: active
   curator: JimYuhaoWu
   date_added: 2026-10-16
+  evidence_tier: externally-benchmarked
   model_ext:
-    evidence_tier: externally-benchmarked
     availability_tier: open-source
     model_family: perturbation-model
     architecture: [gnn]

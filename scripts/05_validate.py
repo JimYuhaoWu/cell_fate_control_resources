@@ -11,7 +11,7 @@ Checks
   vocab           controlled column values resolve to a vocab term or synonym
   paper-exists    every entity_paper.paper_id is a known paper
   primary-paper   every entity has a role='primary' paper (whitelist in config/)
-  evidence-tier   asserted model_ext.evidence_tier matches the derivation
+  evidence-tier   asserted entity.evidence_tier matches the derivation
   refs            supersedes / variant_of / preprint_of resolve, no cycles
   duplicates      fuzzy name+alias collisions
   orphan-papers   papers attached to no entity
@@ -360,13 +360,34 @@ def check_papers(db, entities, rep, whitelist):
     return papers, by_entity
 
 
-def check_evidence_tier(db, papers, by_entity, rep):
+def check_evidence_tier(entities, papers, by_entity, rep):
+    """
+    Claim against derivation, for every entity that has either.
+
+    Reads `entity` rather than `model_ext` since 2026-11-04, when the column
+    moved: the 8 published records holding an independent evaluation that are
+    not models -- BEND, DART-Eval, JASPAR 2024, two training sets, Replogle
+    2022, EpiFactors, a CUT&RUN protocol -- had their `benchmark`/`critique`
+    rows recorded and no column to derive a tier into.
+
+    **It reports an entity only when there is something to check**: a tier
+    asserted, or an evaluation to derive one from. The other 466 would each
+    get a line saying `self-reported [no benchmark/critique papers]`, which is
+    derivable from `entity_paper` by anyone and would be 466 of the ~540 rows
+    in a committed `db/qc_report.tsv` -- a check that reports the same
+    non-finding every run teaches a reader to skip the file. The old version
+    iterated `model_ext` and so reported this for the 25 records that happen to
+    carry some other model field, which was arbitrary rather than quiet.
+    """
     authors = {pid: {norm_author(a) for a in (p["authors"] or [])}
                for pid, p in papers.items()}
-    for ext in db.fetch("model_ext"):
-        eid = ext["entity_id"]
-        claimed = ext.get("evidence_tier")
+    for ent in entities:
+        eid = ent["entity_id"]
+        claimed = ent.get("evidence_tier")
         eps = by_entity.get(eid, [])
+        if claimed is None and not any(
+                ep["role"] in ("benchmark", "critique") for ep in eps):
+            continue
         primary = set()
         for ep in eps:
             if ep["role"] == "primary":
@@ -405,13 +426,12 @@ def check_evidence_tier(db, papers, by_entity, rep):
                         "repair the author lists behind those evaluations, or "
                         "drop the asserted evidence_tier")
         elif claimed is None:
-            # A `model_ext` block that carries no tier is not asserting a null
-            # one: it is a record that holds some other model field -- a
-            # licence, a parameter count -- and leaves the tier to be derived,
-            # which is what the catalogue says it does everywhere else. Reading
-            # absence as an assertion made any script that writes a non-tier
-            # model field have to assert the one number it is forbidden to
-            # touch (03_record.py §"It never writes evidence_tier").
+            # A record that carries no tier is not asserting a null one: it
+            # leaves the tier to be derived, which is what the catalogue says
+            # it does everywhere else. Reading absence as an assertion made any
+            # script that writes some other field have to assert the one number
+            # it is forbidden to touch (03_record.py §"It never writes
+            # evidence_tier").
             rep.add(INFO, "evidence-tier", eid,
                     f"{derived} [{detail}] -- derived, not asserted")
         elif claimed != derived:
@@ -622,7 +642,7 @@ def main() -> int:
         check_vocab(db, entities, rep)
         check_unused_vocab(db, entities, rep)
         papers, by_entity = check_papers(db, entities, rep, whitelist)
-        check_evidence_tier(db, papers, by_entity, rep)
+        check_evidence_tier(entities, papers, by_entity, rep)
         check_refs(entities, rep)
         check_duplicates(entities, rep)
         check_links(db, rep, args.check_links, args.link_timeout)

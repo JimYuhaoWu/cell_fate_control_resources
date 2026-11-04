@@ -12,6 +12,7 @@ denormalized, and never see the entity/ext/join split.
     load(type="model", organism="mouse", assay="ATAC-seq")
     load(type="model", fate_axis="where", availability_tier="open-weights")
     load(type="model", evidence_tier="externally-benchmarked")
+    load(evidence_tier="externally-benchmarked")      # any type, since 2026-11-04
     load(type="protocol", validation_tier="published-peer-reviewed")
     load_papers("model:borzoi", role="critique")
     load_links("model:borzoi", kind="code")

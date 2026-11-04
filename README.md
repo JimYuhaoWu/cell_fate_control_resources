@@ -84,6 +84,9 @@ query possible that no existing list can serve:
 from cfcr import load
 
 load(type="model", evidence_tier="externally-benchmarked")
+load(evidence_tier="externally-benchmarked")   # any type: a benchmark, a
+                                               # dataset and a protocol can be
+                                               # independently evaluated too
 ```
 
 `evidence_tier` is **derived, never asserted.** QC recomputes it from the

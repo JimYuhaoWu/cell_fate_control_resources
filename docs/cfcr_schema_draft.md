@@ -16,7 +16,7 @@ below. Where the two disagree, the code and `README.md` are authoritative.
 | 3.1 | `n_parameters INTEGER` | `n_parameters_min` / `n_parameters_max` | Several models ship as a family of checkpoints under one name, so one integer collapsed "ships in four sizes" into the same null as "nobody published the figure" |
 | 7 | Three committed snapshots | Four, adding `db/links.tsv` | Links were written to SQLite but exported nowhere, so the loader could not see them and the site could link to papers but to no actual resource |
 | 6.1 | `modlib:` entity-id prefix | `module:` | QC enforces that the id prefix equals `type`, so the type can be read from the id |
-| 3.1 | `evidence_tier` on `model_ext` | Unchanged, and now measurably too narrow | Measured 2026-11-04: 8 published records that are **not** models hold an independent `benchmark` or `critique` evaluation, and have nowhere to put the tier derived from it — BEND, DART-Eval, JASPAR 2024, the Borzoi and Enformer training data, Replogle 2022, EpiFactors and the CUT&RUN protocol. The `entity_paper` rows exist, the derivation runs, and the claim is dropped on the floor because the column belongs to one of six extension tables. The evidence layer is CFCR's differentiator, so this is the one field whose placement is a scope decision rather than a modelling detail. Tracked as ROADMAP M4's depth item |
+| 3.1 → 2.1 | `evidence_tier` on `model_ext` | On `entity` | Measured 2026-11-04: 8 published records that are **not** models hold an independent `benchmark` or `critique` evaluation and had nowhere to put the tier derived from it — BEND, DART-Eval, JASPAR 2024, the Borzoi and Enformer training data, Replogle 2022, EpiFactors and the CUT&RUN protocol. The `entity_paper` rows existed, the derivation ran, and the claim was dropped because the column belonged to one extension table of six. A benchmark can be benchmarked and a dataset independently re-analysed, so the claim is the entity's. The alternative was the column in all six extension tables, which is six homes for one derivation. `availability_tier` stayed on `model_ext`: weights and an endpoint are a model's property |
 
 Two further gaps found while building are recorded in
 `reports/seed_flags.md`: `vocab.facet` cannot be a DDL enum, and
@@ -66,6 +66,7 @@ The spine. Every catalogued object gets exactly one row.
 | `assay` | TEXT[] | **Controlled** → `vocab/assay.yaml` |
 | `task` | TEXT[] | **Controlled** → `vocab/task.yaml` |
 | `status` | TEXT | enum: `active` `deprecated` `superseded` `unmaintained` |
+| `evidence_tier` | TEXT | enum: `externally-benchmarked` · `partially-independent` · `self-reported`. **Derived**, never asserted — see §3.1's note, which applies to every type |
 | `supersedes` | TEXT | FK → `entity.entity_id`, nullable |
 | `variant_of` | TEXT | FK → `entity.entity_id`, nullable (replicates, ports, forks) |
 | `date_added` | DATE | **Curated.** Written by hand; the build does not stamp it |
@@ -161,7 +162,6 @@ Each joins 1:1 to `entity` on `entity_id`.
 | Column | Type | Notes |
 |---|---|---|
 | `entity_id` | TEXT PK FK | |
-| `evidence_tier` | TEXT | enum: `externally-benchmarked` · `self-reported` |
 | `availability_tier` | TEXT | enum: `open-source` · `open-weights` · `api-only` |
 | `model_family` | TEXT | **Controlled**: `interval-model` `dna-lm` `perturbation-model` `module-predictor` `other` |
 | `architecture` | TEXT[] | **Controlled**: `cnn` `transformer` `ssm` `diffusion` `vae` `gan` `flow` `hybrid` |
@@ -178,6 +178,9 @@ Each joins 1:1 to `entity` on `entity_id`.
 > `evidence_tier` is derived, not asserted: it is `externally-benchmarked` iff at
 > least one `entity_paper` row has `role IN ('benchmark','critique')` **and** that
 > paper shares no authors with the `primary` paper. QC computes and flags conflicts.
+> The column is on `entity` (§2.1), not here, since 2026-11-04 — the note stays
+> in this section because this is where readers look for it, and the rule is the
+> same for all six types.
 
 ### 3.2 `benchmark_ext`
 
@@ -470,9 +473,9 @@ search("enhancer redundancy", type="model", organism="human", k=20)
   task: [coverage-prediction, variant-effect-prediction]
   tags: [unet, calico, eqtl-prioritization]
   status: active
-  supersedes: model:enformer
+  evidence_tier: externally-benchmarked     # derived; see §2.1 and the note
+  supersedes: model:enformer                # in §3.1
   model_ext:
-    evidence_tier: externally-benchmarked   # derived; see §3.1
     availability_tier: open-source
     model_family: interval-model
     architecture: [cnn, transformer]

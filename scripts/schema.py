@@ -102,8 +102,10 @@ LINK_KINDS = ("code", "weights", "website", "dataset", "docs", "api",
 # it over every entity_paper row with role IN ('benchmark','critique'),
 # comparing its authors against the `primary` paper's.
 #
-# What stays CFCR's is the step below: the model takes the most independent tier
-# any single evaluation reaches.
+# What stays CFCR's is the step below: the entity takes the most independent
+# tier any single evaluation reaches. The entity, not the model -- the column
+# lives on `entity` because a benchmark, a dataset and a protocol can all be
+# evaluated independently too.
 # any independent evaluation    -> externally-benchmarked
 # else any partially independent -> partially-independent
 # else                           -> self-reported
@@ -206,6 +208,20 @@ CREATE TABLE IF NOT EXISTS entity (
     assay           TEXT,           -- JSON array, controlled
     task            TEXT,           -- JSON array, controlled
     status          TEXT    {_check('status', ENTITY_STATUS)},
+    -- Derived, not asserted (schema §3.1). The YAML value is the curator's
+    -- claim; 05_validate.py recomputes it from entity_paper + author overlap
+    -- and reports every disagreement. See EVIDENCE_TIERS for the three-way
+    -- independence rule.
+    --
+    -- On `entity` rather than `model_ext` since 2026-11-04, and the reason is
+    -- a measurement: 8 published records that are not models held an
+    -- independent evaluation and had nowhere to put the tier derived from it
+    -- -- BEND, DART-Eval, JASPAR 2024, two training sets, Replogle 2022,
+    -- EpiFactors and a CUT&RUN protocol. A benchmark can be benchmarked and a
+    -- dataset can be independently re-analysed, so the claim belongs to the
+    -- entity. The alternative was the column in all six extension tables,
+    -- which is six homes for one derivation.
+    evidence_tier   TEXT    {_check('evidence_tier', EVIDENCE_TIERS)},
     review_state    TEXT    NOT NULL DEFAULT 'reviewed'
                             {_check('review_state', REVIEW_STATES, nullable=False)},
     withdrawn_reason TEXT,          -- why, for review_state 'withdrawn' only
@@ -270,11 +286,10 @@ CREATE TABLE IF NOT EXISTS vocab (
 CREATE_MODEL_EXT = f"""
 CREATE TABLE IF NOT EXISTS model_ext (
     entity_id           TEXT PRIMARY KEY REFERENCES entity(entity_id) ON DELETE CASCADE,
-    -- Derived, not asserted (schema §3.1). The YAML value is the curator's
-    -- claim; 05_validate.py recomputes it from entity_paper + author overlap
-    -- and reports every disagreement. See EVIDENCE_TIERS for the three-way
-    -- independence rule and its threshold.
-    evidence_tier       TEXT {_check('evidence_tier', EVIDENCE_TIERS)},
+    -- `evidence_tier` was here until 2026-11-04 and is now on `entity`; see
+    -- the comment there. `availability_tier` stays, because weights and an
+    -- endpoint are a model's property and the other five types have nothing
+    -- to publish under those terms.
     availability_tier   TEXT {_check('availability_tier', AVAILABILITY_TIERS)},
     model_family        TEXT {_check('model_family', MODEL_FAMILIES)},
     architecture        TEXT,       -- JSON array, controlled
@@ -404,6 +419,11 @@ MIGRATIONS: list[tuple[str, str, str]] = [
     ("model_ext", "n_parameters_min", "INTEGER"),
     ("model_ext", "n_parameters_max", "INTEGER"),
     ("entity", "withdrawn_reason", "TEXT"),
+    # ALTER TABLE ADD COLUMN cannot carry a CHECK, so a carried-over database
+    # gets this column without the EVIDENCE_TIERS constraint a fresh build
+    # puts on it. That is the same gap _check_enum_constraints documents, and
+    # the same fix: db/cfcr.db is derived and gitignored, so delete it.
+    ("entity", "evidence_tier", "TEXT"),
 ]
 
 # Columns removed after a table shipped, dropped when present. Needed because
@@ -415,6 +435,7 @@ MIGRATIONS: list[tuple[str, str, str]] = [
 # Format: (table, column).
 OBSOLETE_COLUMNS: list[tuple[str, str]] = [
     ("model_ext", "n_parameters"),      # replaced by the min/max pair
+    ("model_ext", "evidence_tier"),     # moved to entity
 ]
 
 CREATE_INDEXES = [
@@ -425,7 +446,7 @@ CREATE_INDEXES = [
     "CREATE INDEX IF NOT EXISTS idx_ep_role ON entity_paper(role);",
     "CREATE INDEX IF NOT EXISTS idx_link_entity ON link(entity_id);",
     "CREATE INDEX IF NOT EXISTS idx_vocab_facet ON vocab(facet);",
-    "CREATE INDEX IF NOT EXISTS idx_model_evidence ON model_ext(evidence_tier);",
+    "CREATE INDEX IF NOT EXISTS idx_entity_evidence ON entity(evidence_tier);",
     "CREATE INDEX IF NOT EXISTS idx_model_family ON model_ext(model_family);",
 ]
 
@@ -756,17 +777,17 @@ class CFCR:
         return [decode_row(table, dict(row)) for row in cur.fetchall()]
 
     def counts(self) -> dict:
-        """Record counts by entity type, paper role, and model evidence tier."""
+        """Record counts by entity type, paper role, and evidence tier."""
         cur = self.conn.cursor()
         cur.execute("SELECT type, COUNT(*) FROM entity GROUP BY type")
         by_type = dict(cur.fetchall())
         cur.execute("SELECT role, COUNT(*) FROM entity_paper GROUP BY role")
         by_role = dict(cur.fetchall())
-        cur.execute("SELECT evidence_tier, COUNT(*) FROM model_ext "
+        cur.execute("SELECT evidence_tier, COUNT(*) FROM entity "
                     "GROUP BY evidence_tier")
-        # A model_ext row with no tier is a record holding some other model
-        # field -- a licence, say -- and leaving the tier to be derived. Its
-        # key has to be a string: build_manifest.json is written with
+        # An entity with no tier is one leaving it to be derived, which is
+        # almost all of them. Its key has to be a string:
+        # build_manifest.json is written with
         # sort_keys=True, and a None among the keys raises TypeError while
         # sorting, which took 04_build.py's exit status to 1 as soon as
         # 07_enrich.py started writing licences.

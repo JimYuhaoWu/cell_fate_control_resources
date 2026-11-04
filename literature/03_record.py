@@ -17,13 +17,15 @@ Writes:
 Three things this script must not do.
 
 **It never writes `evidence_tier`.** The tier is derived in
-`scripts/05_validate.py` from author overlap between a model's `primary` paper
-and the papers whose role is `benchmark` or `critique` (docs/triage_design.md
-§0, §2.4). This script writes the role and stops. A new record therefore
-carries no `model_ext` block at all, not one with a null tier: QC derives
-`self-reported` for a model with no evaluations, so a null in the block is a
-disagreement, and inventing `self-reported` to match would be this script
-asserting the one number the catalogue is not allowed to assert.
+`scripts/05_validate.py` from author overlap between an entity's `primary`
+paper and the papers whose role is `benchmark` or `critique`
+(docs/triage_design.md §0, §2.4). This script writes the role and stops. A new
+record therefore carries no `evidence_tier` key at all, rather than a null one:
+QC derives `self-reported` for an entity with no evaluations, so a null would
+be a disagreement, and inventing `self-reported` to match would be this script
+asserting the one number the catalogue is not allowed to assert. The key is at
+the record's top level since 2026-11-04, when the column moved from `model_ext`
+to `entity` -- it was never a model's alone.
 
 **It never drops a decision.** Accepted, rejected, deferred and vetoed all land
 in `literature/decisions.yaml`, keyed by paper id, so a rejection is recorded
