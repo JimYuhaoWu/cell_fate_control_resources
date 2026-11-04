@@ -16,6 +16,7 @@ below. Where the two disagree, the code and `README.md` are authoritative.
 | 3.1 | `n_parameters INTEGER` | `n_parameters_min` / `n_parameters_max` | Several models ship as a family of checkpoints under one name, so one integer collapsed "ships in four sizes" into the same null as "nobody published the figure" |
 | 7 | Three committed snapshots | Four, adding `db/links.tsv` | Links were written to SQLite but exported nowhere, so the loader could not see them and the site could link to papers but to no actual resource |
 | 6.1 | `modlib:` entity-id prefix | `module:` | QC enforces that the id prefix equals `type`, so the type can be read from the id |
+| 3.1 | `evidence_tier` on `model_ext` | Unchanged, and now measurably too narrow | Measured 2026-11-04: 8 published records that are **not** models hold an independent `benchmark` or `critique` evaluation, and have nowhere to put the tier derived from it — BEND, DART-Eval, JASPAR 2024, the Borzoi and Enformer training data, Replogle 2022, EpiFactors and the CUT&RUN protocol. The `entity_paper` rows exist, the derivation runs, and the claim is dropped on the floor because the column belongs to one of six extension tables. The evidence layer is CFCR's differentiator, so this is the one field whose placement is a scope decision rather than a modelling detail. Tracked as ROADMAP M4's depth item |
 
 Two further gaps found while building are recorded in
 `reports/seed_flags.md`: `vocab.facet` cannot be a DDL enum, and

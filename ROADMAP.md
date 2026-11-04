@@ -208,6 +208,29 @@ The dominant cost of the whole project.
 - [x] A cached cycle that confirms the projected reach — 239 of 249 on
       2026-11-04, one short of the projection because `model:oyster` was
       added after the probes were run
+- [ ] **Depth: the evidence layer, reaching the records that have evidence.**
+      Three things, measured 2026-11-04 and each a number rather than an
+      impression:
+      - `evidence_tier` is a column of `model_ext` (`scripts/schema.py:277`),
+        so only a `model` can carry one. **8 published records hold an
+        independent evaluation and cannot express it**: `benchmark:bend`,
+        `benchmark:dart-eval`, `database:jaspar-2024`, `dataset:borzoi-data`,
+        `dataset:enformer-data`, `dataset:replogle-2022-perturb-seq`,
+        `module:epifactors-2022-chromatin-regulators` and
+        `protocol:cutrun-janssens-henikoff`. Their `benchmark`/`critique` rows
+        are recorded and the derived claim has nowhere to live, so the site
+        shows nothing. The differentiator is implemented for one of six types
+      - **Sweep coverage is recorded nowhere.** `literature/candidates/*.json`
+        is gitignored, so nothing in the repository says which of the 234
+        one-paper records have had their citing works walked. A record with no
+        badge therefore means "no evaluation exists" and "nobody has looked"
+        at once, and those are different facts — which is the distinction
+        `derive_tier` already refuses to blur when evaluations exist and all
+        classify `unknown`
+      - The faceted query M2 exits on — *which interval models has anyone
+        outside the authoring group evaluated, and can I legally use the
+        weights* — is answerable for the **8 records carrying both
+        `evidence_tier` and `availability_tier`**, against 250 published
 - [x] Calibrate the scoring for the three types the new clauses reach — done
       2026-11-04 against a labelled sample of 80, and the result corrected the
       diagnosis: `DATABASE_TERMS` and `PROTOCOL_TERMS` were fine at 50% and
@@ -215,9 +238,23 @@ The dominant cost of the whole project.
       out-of-scope rows dropped, no in-scope loss, 874 decisions → 830), and
       the rest is C1 and C3, which M4b owns
 
-**Exit, rewritten 2026-11-04.** It used to be "~150 entities, and
-`reports/vocab_candidates.md` fires for the first time". Both halves were
-wrong, in opposite directions.
+**Exit, rewritten 2026-11-04, in two halves.** It used to be "~150 entities,
+and `reports/vocab_candidates.md` fires for the first time". Both halves were
+wrong, in opposite directions — and replacing them with the clause file alone
+would have been a third mistake, because M4 is what the NAR inquiry gate reads
+as done and no part of the old exit or the clause file mentions the evidence
+layer. **Breadth and depth, and M4 closes on both.**
+
+The depth half is the item above and its exit is coverage, not a yield: for
+every published record, the repository must say whether anyone has looked for
+an independent evaluation, and any record that can hold evidence must be able
+to express it. What the looking finds is not a criterion — a resource nobody
+has evaluated is a true and publishable fact about it, and promising a number
+of evaluations would be promising to find what may not exist. This is M4a's
+discipline applied to the other axis: there, the exit was that the admission
+error rate became a number rather than an impression.
+
+The breadth half follows.
 
 The entity half was set before the boundary existed, and 250 records already
 survive it, so **the target is now ~300 published and the ceiling ~450** — the
@@ -667,6 +704,11 @@ because the editor will open the site.
 - **M4 is done.** 20 entities will not survive comparison with Kipoi's 2,000+
   or the Stegle catalogue's 156. This, not the website, is what gates the
   submission.
+  **Sharpened 2026-11-04**, because the entity count stopped being the binding
+  half and M4's exit was rewritten to say so. 250 records already survive the
+  boundary, so what this gate now means is M4's *depth* item: the evidence
+  layer is answerable for 8 published records of 250, and the inquiry has to
+  open the site in front of an editor. Breadth is no longer the risk here.
 - **At least one co-maintainer.** NAR states that "retirement or graduation of
   developers is not a valid reason to terminate the database", which turns the
   checkbox above into part of the case rather than a nicety.
