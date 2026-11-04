@@ -205,7 +205,12 @@ The dominant cost of the whole project.
       `literature/search_queries.yaml` as twelve clauses in each engine's own
       syntax, and `literature/query_coverage.py`, which measures what they
       reach from committed data and no network
-- [ ] A cached cycle that confirms the projected reach of 240 of 249
+- [x] A cached cycle that confirms the projected reach — 239 of 249 on
+      2026-11-04, one short of the projection because `model:oyster` was
+      added after the probes were run
+- [ ] Calibrate `DATABASE_TERMS`, `DATASET_TERMS` and `PROTOCOL_TERMS`, which
+      this cycle exercised for the first time and which produced 642 of its
+      874 decisions
 
 **Exit, rewritten 2026-11-04.** It used to be "~150 entities, and
 `reports/vocab_candidates.md` fires for the first time". Both halves were
@@ -233,10 +238,19 @@ boolean clauses per collection, in Europe PMC's and arXiv's own syntax, so a
 clause can be pasted into either engine without installing anything — and
 `reports/query_coverage.md` must report both:
 
-| | measured 2026-11-04, clauses as of 2026-10-29 |
-|---|---|
-| published records whose primary paper the clauses reach | 206 of 249 |
-| withdrawn records returned in the same hit set | 207 of 239 |
+| | 8 clauses, cap 300 | 12 clauses, cap 800 |
+|---|---|---|
+| published records whose primary paper the clauses reach | 206 of 249 | **239 of 249** |
+| withdrawn records returned in the same hit set | 207 of 239 | 207 of 239 |
+
+Both columns are from `reports/query_coverage.md`, the left one measured
+against the 2026-10-29 cache and the right against 2026-11-04. The ten still
+unreached each have a reason and none is a scoring question: three are papers
+older than `min_year` (ENCODE 2012, ATAC-seq 2013, CIS-BP 2014), two are
+indexed nowhere the pipeline reads (DART-Eval's proceedings DOI, a protocols.io
+DOI), two are the module collections whose clause was rejected at 1,856 hits,
+two are arXiv-only records the arXiv half does not reach, and one is a record
+added after the clauses were last widened.
 
 **Both numbers, because the second is the honest half.** The clauses return as
 many out-of-scope primaries as in-scope ones, so a query reaches a literature
@@ -244,6 +258,17 @@ and never a boundary; the criteria are what separate them. A reach figure
 published without its companion would claim the file does the admission, which
 it does not. The exit condition is that both are regenerable from the
 repository by anyone, which `query_coverage.py` makes true offline.
+
+**And the cycle cost what the reach bought.** Twelve clauses at cap 800 fetch
+3,209 papers and produce **874 decisions** against the 97 of the previous
+cycle, with 1,648 more recorded as deferred below the boundary. 642 of the 874
+come from the four clauses added today, and that is the finding rather than the
+price: those clauses are the first ever to send a candidate to
+`DATABASE_TERMS`, `DATASET_TERMS` and `PROTOCOL_TERMS`, which were written
+without one and are therefore uncalibrated. `motif_databases` alone proposes
+313. §1.10 of `docs/triage_design.md` has the measurement; calibrating the
+three tables is now an M4 item, because a reach measurement that lands 874 rows
+on a curator has moved the wall rather than removed it.
 
 This is also the general-interest claim M7 needs. Kipoi, the Stegle catalogue
 and the awesome-lists all say that a human curated them; none publishes the

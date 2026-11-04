@@ -75,9 +75,16 @@ def primaries() -> tuple[dict[str, str], dict[str, str]]:
     return published, withdrawn
 
 
-def load_run(run_date: str) -> dict[str, set[str]]:
-    """clause id -> the identifiers its cached hits carry, both sources merged."""
+def load_run(run_date: str) -> tuple[dict[str, set[str]], dict[str, int]]:
+    """clause id -> (the identifiers its cached hits carry, how many papers).
+
+    Both, because they are not the same number and conflating them is a way to
+    overstate a clause. A hit can carry a DOI, a `paper_id` and a PMCID at
+    once, so the identifier set runs about twice the length of the hit list;
+    matching needs every identifier, and reporting needs the paper count.
+    """
     per_clause: dict[str, set[str]] = defaultdict(set)
+    papers: dict[str, int] = defaultdict(int)
     prefix = f"discovery_{run_date}_"
     for f in sorted(CACHE.glob(f"{prefix}*.json")):
         # discovery_<date>_<clause id>_<source>.json, and a clause id holds
@@ -86,7 +93,8 @@ def load_run(run_date: str) -> dict[str, set[str]]:
         hits = json.loads(f.read_text(encoding="utf-8"))
         for h in hits:
             per_clause[clause] |= hit_ids(h)
-    return dict(per_clause)
+        papers[clause] += len(hits)
+    return dict(per_clause), dict(papers)
 
 
 def latest_run() -> str:
@@ -97,7 +105,7 @@ def latest_run() -> str:
 
 
 def report(run_date: str) -> str:
-    per_clause = load_run(run_date)
+    per_clause, papers = load_run(run_date)
     if not per_clause:
         sys.exit(f"no cached discovery dumps for {run_date}")
     union: set[str] = set().union(*per_clause.values())
@@ -110,12 +118,13 @@ def report(run_date: str) -> str:
 
     out = [f"cached discovery run: {run_date}",
            f"clauses: {len(per_clause)}",
-           f"distinct identifiers in the hit set: {len(union)}", ""]
+           f"papers fetched: {sum(papers.values())}",
+           f"distinct identifiers they carry: {len(union)}", ""]
 
     out.append("reach, per clause:")
     for clause in sorted(per_clause):
         n = sum(1 for p in pub.values() if p in per_clause[clause])
-        out.append(f"  {clause:24s} {len(per_clause[clause]):5d} hits -> "
+        out.append(f"  {clause:24s} {papers[clause]:5d} papers -> "
                    f"{n:4d} published primaries")
 
     pct = 100 * len(reached) / len(pub) if pub else 0.0

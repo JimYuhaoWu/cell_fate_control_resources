@@ -421,6 +421,53 @@ and the fetch cap is why no cycle could see them.
 
 ---
 
+### 1.10 Three tables that had never scored anything
+
+**Measured 2026-11-04**, on the first cycle over the twelve clauses in
+`literature/search_queries.yaml` (ROADMAP M4). `TABLES` has keyed
+`("database", None)`, `("dataset", None)` and `("protocol", None)` to
+`DATABASE_TERMS`, `DATASET_TERMS` and `PROTOCOL_TERMS` since this file's
+scoring was first written. Until this cycle **not one candidate had ever been
+scored by any of them**, because no query asked for those three types: every
+published database, dataset and protocol in the catalogue entered by hand
+through `05_backfill.py`.
+
+The four clauses added for them work, in the sense that reach went from 206 of
+249 published records to 239. What they also did is show what the tables do
+with real input:
+
+| clause | papers fetched | score ≥ 3.0 |
+|---|---|---|
+| `motif_databases` | 788 | **313** |
+| `perturbation_atlases` | 255 | 201 |
+| `chromatin_protocols` | 440 | 87 |
+| `reference_epigenomes` | 135 | 41 |
+| the eight older clauses | 1,591 | 232 |
+
+**642 of the cycle's 874 decisions come from the four new clauses**, and 329 of
+the 899 above-boundary candidates score 8.0 or more. That is not a plausible
+in-scope rate for a 788-paper pull, and the cause is visible in the tables
+themselves: `DATABASE_TERMS` pays 2.5 for `database`, 2.0 for `curated`, 2.0
+for `open-access`, 1.5 for `release` and 1.5 for `update`, against a cap of
+8.0. A paper announcing any database release in any field clears the boundary
+on vocabulary that says nothing about whether the resource acts on cell fate.
+
+The older tables do not behave this way, and the difference is history rather
+than design: `INPUT_GATE`, `TASK` and the rest were re-measured against
+`db/papers.tsv` in §1.3 and tuned on §1.6's noise, while these three were
+specified and left. §1.2's rule that a term in the title counts double applies
+to all of them equally, so nothing about the mechanism is at fault.
+
+**What this does not change.** The clauses stay. A query that reaches 96% of
+the catalogue is doing its job, and the 642 rows are evidence that the three
+types were never in the pipeline rather than evidence that they should not be.
+Calibrating the tables against `literature/scope_labels.yaml`, which already
+labels every published database, dataset and protocol, is the work; it is an
+M4 item and it needs the same treatment §1.6 gave the clade penalty — a
+measured cost, not a guess at weights.
+
+---
+
 ## 2. Proposing roles from the citing set
 
 ### 2.1 The problem

@@ -53,15 +53,22 @@ queries:
   # is written about now and missed almost every paper that founded it: the
   # canon says "from DNA sequence" (Akita, Borzoi), "sequence-based modeling"
   # (Orca, scBasset), "regulatory code" (Basset), "base-resolution" (BPNet,
-  # ChromBPNet) and "Directly from Genomic Sequence" (Xpresso). 525 -> 584
-  # hits, and it newly reaches model:akita, model:basset, model:bpnet,
-  # model:chrombpnet, model:expecto, model:orca, model:scbasset and
-  # model:xpresso -- eight records on lines ROADMAP M4 ticks as done.
+  # ChromBPNet) and "Directly from Genomic Sequence" (Xpresso). It newly
+  # reaches model:akita, model:basset, model:bpnet, model:chrombpnet,
+  # model:expecto, model:orca, model:scbasset and model:xpresso -- eight
+  # records on lines ROADMAP M4 ticks as done.
+  #
+  # 584 live hits in the date window, measured the day it was widened. Two
+  # kinds of number appear in this file and they are not the same: a *live hit
+  # count* is what Europe PMC says the clause matches, and a *fetched paper
+  # count* is what a cycle brings back, which `max_results_per_query` bounds.
+  # This clause matches 584 and the cap below now takes all of them.
   #
   # `accessibility` and `genome_3d` were widened the same way and the change
   # was reverted: the candidates they gained (ChromBPNet and scBasset; Akita
-  # and Orca) are reached by this clause already, and the cost was 101 -> 468
-  # hits for genome_3d. Measured, redundant, not committed.
+  # and Orca) are reached by this clause already, and widening genome_3d took
+  # it from 103 fetched papers to 468 live hits for nothing. Measured,
+  # redundant, not committed.
   - id: interval_models
     fate_axis: where
     expect_type: model
@@ -78,9 +85,9 @@ queries:
   # Widened 2026-11-04. The four phrasings added are how the founding papers
   # of this axis actually write it: DeepSEA says "effects of noncoding
   # variants", ExPecto and GPN say "variant effects", and the committed exact
-  # phrase "variant effect prediction" matched neither. 88 -> 166 hits, and it
-  # newly reaches model:deepsea, model:sei, model:borzoi, model:flashzoi and
-  # dataset:borzoi-data.
+  # phrase "variant effect prediction" matched neither. 166 live hits, all of
+  # them fetched, and it newly reaches model:deepsea, model:sei, model:borzoi,
+  # model:flashzoi and dataset:borzoi-data.
   - id: variant_effect
     fate_axis: where
     expect_type: model
@@ -143,7 +150,7 @@ queries:
   # of genome-wide variant effects" while GENA-LM's says "foundational DNA
   # language models". DNABERT writes "DNA-language" with the hyphen, Evo 2
   # "Genome modeling", EpiGePT "transformer-based language model". Five
-  # additions, 310 -> 379 hits, and it newly reaches model:dnabert,
+  # additions and 379 live hits, and it newly reaches model:dnabert,
   # model:gena-lm, model:gpn, model:evo2 and model:epigept.
   - id: dna_language_models
     fate_axis: how
@@ -405,7 +412,24 @@ min_year: 2015
 #
 # arXiv is left at the same cap and does not page: its largest query is 58 hits
 # and none is near 100, so there is nothing past the end to reach.
-max_results_per_query: 300
+#
+# Raised to 800 on 2026-11-04, and this time the evidence is a regression
+# rather than a shortfall. The widenings above took `interval_models` to 584
+# live hits, `dna_language_models` to 379, `motif_databases` to 790 and
+# `chromatin_protocols` to 440, so four of the twelve clauses hit the 300 cap
+# -- and the first cycle on them reached 225 of 249 published records where the
+# per-DOI probes said 240. The 15 missing are not misses, they are
+# displacements: `model:enformer` and `model:basenji` were reached by the
+# narrower clause on 2026-10-29 and fell out of the top 300 once the clause
+# admitted more papers. A wider query with a fixed cap can lose records it used
+# to find, which is the one failure mode that makes reach look like a tuning
+# problem when it is a paging problem.
+#
+# 800 clears the largest clause (790) with room. The cost is paging: 8 requests
+# for `motif_databases`, 6 for `interval_models`, 5 for `chromatin_protocols`,
+# 4 for `dna_language_models` and 1 each for the other eight, so about 31
+# Europe PMC requests for a full cycle against 12 before.
+max_results_per_query: 800
 
 # Breadth as measured on 2026-10-20, Europe PMC / arXiv, so the first cycle
 # starts from numbers rather than guesses:
