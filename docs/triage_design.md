@@ -621,6 +621,43 @@ threshold exists to drop, so this is a cost to weigh rather than a defect to
 fix; it is recorded here because the next threshold change should be argued
 against 291 rows and not 283.
 
+**What those two rows turn out to be, and what list B is for now.** Both fall
+below 5.0 for one reason: an OpenAlex `type: review`, worth −3.0.
+`10.1093/gigascience/giad085` scores 3.50 in list A and
+`10.3390/bios16100581` 4.25, and without the demotion they would be 6.50 and
+7.25 -- clear of the threshold with room. §2.2 says the demotion "demotes,
+never excludes"; in list A it excludes, because `render_list_a` drops
+below-threshold rows rather than sectioning them. **So list B is not working as
+a class-level scorer here. It is working as the appeal against a demotion**,
+and that is the concrete case §2.3a's open question was missing.
+
+Two things make it a poor appeal. The first is that the demotion rests on a
+field OpenAlex revises: `W4387948556` is typed `review` in the citing set
+cached 2026-11-03 and `article` in the one cached 2026-10-20, same 120
+references and the same abstract. That is also why `reports/triage_eval.md`
+prints 5.25 for its list-B score rather than the 2.25 today's copy scores --
+`triage_eval.py` keys list B globally across entity caches and keeps whichever
+copy it meets first, so an older, undemoted copy can win the slot. Noted rather
+than fixed; `02_triage.py` sweeps one candidates file and cannot see it.
+
+The second is that §2.5's title-only split, which is the other thing list B
+does, **no longer recovers anything.** It was built because
+`10.1038/s41588-023-01517-5` sat at 102/132 ranked among everything with an
+abstract and 6/8 once the abstract-less works were ranked apart. That critique
+now returns through list A -- 167/841 for `model:enformer`, 154/757 for
+`dataset:enformer-data` -- because it cites the primary, and the reference gate
+does not read abstracts. Of the 291 curated rows not one lands in the
+title-only pool, which holds 6 rows.
+
+The split is still load-bearing where there is no reference gate, which is
+upstream: `whochecked.report.sections` keeps it and cites this measurement.
+Here it is dead weight. **So the answer to "does list B still earn a second
+scorer" is currently "yes, for a reason that has nothing to do with scoring a
+class":** it catches two demoted rows, and the cheaper fixes are to exempt
+demoted rows from the threshold or to let `render_list_a` list them instead of
+dropping them. Both are threshold decisions, so both belong to the same
+argument as the 5.0 above, and neither is taken here.
+
 What this is not is a review burden. 3,688 of the 6,895 clear 5.0, and the
 three outcomes above are what turn that into a human's afternoon; the
 measurement here is of the ranking, not of the question count.
