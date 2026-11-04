@@ -16,6 +16,25 @@
 # The curator still decides, and the decision is written into
 # literature/reviews/review_YYYY-MM-DD.md.
 
+# **What these clauses reach, and how that is known.** 2026-11-04.
+# `literature/query_coverage.py` reads the cached discovery dumps and
+# `records/` and reports two numbers: how many published records the clauses
+# find the primary paper of, and how many *withdrawn* ones they find as well.
+# Against the 2026-10-29 run the eight clauses as they then stood reached 206
+# of the 249 published records carrying a primary, and returned 207 of the 239
+# withdrawn ones in the same hit set. The second number is the point: a query
+# reaches a literature, not a boundary, and `docs/scope_criteria.md` is what
+# separates the halves. ROADMAP M4 makes the pair its exit criterion.
+#
+# The 43 misses were then tested one at a time, by asking Europe PMC for
+# `(every clause) AND DOI:"<the paper>"`. **Not one of the 39 testable misses
+# was hidden by `max_results_per_query`** -- the clause terms matched none of
+# them. So the gap was vocabulary, and the widenings below are dated today and
+# were each run live, per the rule above, with the records they newly reach
+# named in their own comment. Projected reach afterwards is 240 of 249; the
+# next cached cycle is what will confirm it, since a projection is not a
+# measurement.
+
 # Appended to every Europe PMC query. CFCR's organism scope is human, mouse and
 # multi-species models (vocab/organism.yaml), but the filter is on *publication
 # type*, not organism: a model trained on plant genomes is out of scope by the
@@ -30,22 +49,47 @@ arxiv_categories: ["q-bio.GN", "cs.LG", "q-bio.QM"]
 
 queries:
   # ── `where`: sequence-to-function ──────────────────────────────────────────
+  # Widened 2026-11-04. The four committed phrasings described the axis as it
+  # is written about now and missed almost every paper that founded it: the
+  # canon says "from DNA sequence" (Akita, Borzoi), "sequence-based modeling"
+  # (Orca, scBasset), "regulatory code" (Basset), "base-resolution" (BPNet,
+  # ChromBPNet) and "Directly from Genomic Sequence" (Xpresso). 525 -> 584
+  # hits, and it newly reaches model:akita, model:basset, model:bpnet,
+  # model:chrombpnet, model:expecto, model:orca, model:scbasset and
+  # model:xpresso -- eight records on lines ROADMAP M4 ticks as done.
+  #
+  # `accessibility` and `genome_3d` were widened the same way and the change
+  # was reverted: the candidates they gained (ChromBPNet and scBasset; Akita
+  # and Orca) are reached by this clause already, and the cost was 101 -> 468
+  # hits for genome_3d. Measured, redundant, not committed.
   - id: interval_models
     fate_axis: where
     expect_type: model
     europepmc: >
       (TITLE_ABS:"gene expression prediction" OR TITLE_ABS:"sequence-to-function"
-       OR TITLE_ABS:"sequence to expression" OR TITLE_ABS:"regulatory activity prediction")
+       OR TITLE_ABS:"sequence to expression" OR TITLE_ABS:"regulatory activity prediction"
+       OR TITLE_ABS:"from DNA sequence" OR TITLE_ABS:"from genomic sequence"
+       OR TITLE_ABS:"sequence-based modeling" OR TITLE_ABS:"sequence-based prediction"
+       OR TITLE_ABS:"regulatory code" OR TITLE_ABS:"base-resolution")
       AND (TITLE_ABS:"deep learning" OR TITLE_ABS:"neural network"
            OR TITLE_ABS:"convolutional" OR TITLE_ABS:"transformer")
     arxiv: 'abs:"gene expression prediction" AND abs:"genomic sequence"'
 
+  # Widened 2026-11-04. The four phrasings added are how the founding papers
+  # of this axis actually write it: DeepSEA says "effects of noncoding
+  # variants", ExPecto and GPN say "variant effects", and the committed exact
+  # phrase "variant effect prediction" matched neither. 88 -> 166 hits, and it
+  # newly reaches model:deepsea, model:sei, model:borzoi, model:flashzoi and
+  # dataset:borzoi-data.
   - id: variant_effect
     fate_axis: where
     expect_type: model
     europepmc: >
-      TITLE_ABS:"variant effect prediction"
-      AND (TITLE_ABS:"non-coding" OR TITLE_ABS:"noncoding" OR TITLE_ABS:"regulatory")
+      (TITLE_ABS:"variant effect prediction" OR TITLE_ABS:"variant effects"
+       OR TITLE_ABS:"effects of noncoding variants"
+       OR TITLE_ABS:"effects of non-coding variants")
+      AND (TITLE_ABS:"non-coding" OR TITLE_ABS:"noncoding"
+           OR TITLE_ABS:"regulatory" OR TITLE_ABS:"expression")
       AND (TITLE_ABS:"deep learning" OR TITLE_ABS:"model")
     arxiv: 'abs:"variant effect" AND abs:"regulatory"'
 
@@ -92,13 +136,25 @@ queries:
   # keyword query separates them -- the scoring already does, correctly. Fixing
   # this needs paging past the result cap and a table for the `how` axis, which
   # is docs/triage_design.md §1.4's finding one level deeper.
+  #
+  # Widened 2026-11-04, and the reason is a phrase-matching detail worth
+  # recording: Europe PMC's TITLE_ABS:"DNA language model" does **not** match
+  # the plural, and GPN's title is "DNA language models are powerful predictors
+  # of genome-wide variant effects" while GENA-LM's says "foundational DNA
+  # language models". DNABERT writes "DNA-language" with the hyphen, Evo 2
+  # "Genome modeling", EpiGePT "transformer-based language model". Five
+  # additions, 310 -> 379 hits, and it newly reaches model:dnabert,
+  # model:gena-lm, model:gpn, model:evo2 and model:epigept.
   - id: dna_language_models
     fate_axis: how
     expect_type: model
     europepmc: >
-      (TITLE_ABS:"DNA language model" OR TITLE_ABS:"genomic language model"
+      (TITLE_ABS:"DNA language model" OR TITLE_ABS:"DNA language models"
+       OR TITLE_ABS:"DNA-language" OR TITLE_ABS:"genomic language model"
        OR TITLE_ABS:"genome language model" OR TITLE_ABS:"nucleotide transformer"
-       OR TITLE_ABS:"genomic foundation model")
+       OR TITLE_ABS:"genomic foundation model"
+       OR TITLE_ABS:"foundational DNA language" OR TITLE_ABS:"genome modeling"
+       OR TITLE_ABS:"transformer-based language model")
     arxiv: 'all:"DNA language model" OR all:"genomic language model"'
 
   # ── `what`: shallow and pointing outward (README scope rule) ───────────────
@@ -155,13 +211,16 @@ queries:
     fate_axis: null
     expect_type: benchmark
     europepmc: >
-      (TITLE:"benchmark" OR TITLE:"benchmarking" OR TITLE_ABS:"evaluation suite"
+      (TITLE:"benchmark" OR TITLE:"benchmarks" OR TITLE:"benchmarking"
+       OR TITLE_ABS:"evaluation suite"
        OR TITLE_ABS:"systematic evaluation" OR TITLE_ABS:"head-to-head comparison")
       AND (TITLE_ABS:"genomic language model" OR TITLE_ABS:"DNA language model"
            OR TITLE_ABS:"sequence-to-function" OR TITLE_ABS:"regulatory DNA"
            OR TITLE_ABS:"chromatin accessibility"
            OR TITLE_ABS:"gene expression prediction"
-           OR TITLE_ABS:"variant effect prediction")
+           OR TITLE_ABS:"variant effect prediction"
+           OR TITLE_ABS:"long-range DNA"
+           OR TITLE_ABS:"genomic sequence classification")
     # The load-bearing half, and narrowed on 2026-10-28. docs/triage_design.md
     # §2.6.1 names this query as the mitigation for DART-Eval, whose OpenAlex
     # record has one reference deposited so no citation sweep can ever reach
@@ -209,6 +268,94 @@ queries:
        OR TITLE_ABS:"repression domain" OR TITLE_ABS:"chromatin regulator")
       AND (TITLE_ABS:"high-throughput" OR TITLE_ABS:"screen" OR TITLE_ABS:"tiling"
            OR TITLE_ABS:"compendium")
+    arxiv: null
+
+  # ── Resources CFCR holds and never asked for ─────────────────────────
+  # Added 2026-11-04. Until today no clause asked for a database, a dataset or
+  # a protocol, so all 7 published databases, 8 of 9 datasets and all 4
+  # protocols were unreachable by query -- every one of them entered by hand
+  # through 05_backfill.py. triage_rules.py has had a scoring table for each of
+  # the three types since it was written (`DATABASE_TERMS`, `DATASET_TERMS`,
+  # `PROTOCOL_TERMS`, keyed in `TABLES`), and not one of them has ever received
+  # a candidate. These four clauses are what exercise them.
+  #
+  # `arxiv: null` on all four, like `module_collections`: a motif database, a
+  # reference epigenome and a wet-lab protocol are not deposited on arXiv, and
+  # the categories in `arxiv_categories` hold models and benchmarks.
+  - id: motif_databases
+    fate_axis: null
+    expect_type: database
+    # 790 hits. Reaches database:jaspar-2024, database:remap-2022,
+    # database:hocomoco-v12, database:ensembl-regulatory-build and
+    # database:kipoi. The second group is TITLE-anchored for the reason the
+    # `benchmarks` query is: "transcription factors" in an abstract is a
+    # passing mention in half of molecular biology, while a title calling
+    # itself a database, a registry or a rebuild is making a claim about what
+    # the paper ships. database:cis-bp is still unreachable -- its paper is
+    # 2014, before `min_year`.
+    europepmc: >
+      (TITLE_ABS:"transcription factor binding" OR TITLE_ABS:"transcription factors"
+       OR TITLE_ABS:"binding models" OR TITLE_ABS:"regulatory element"
+       OR TITLE_ABS:"cis-regulatory" OR TITLE_ABS:"regulatory build"
+       OR TITLE_ABS:"model zoo" OR TITLE_ABS:"models for genomics")
+      AND (TITLE:"database" OR TITLE:"atlas" OR TITLE:"catalogue"
+           OR TITLE:"catalog" OR TITLE:"registry" OR TITLE:"collection"
+           OR TITLE:"resource" OR TITLE:"encyclopedia" OR TITLE:"repository"
+           OR TITLE:"build" OR TITLE:"rebuild")
+    arxiv: null
+
+  - id: reference_epigenomes
+    fate_axis: null
+    expect_type: dataset
+    # 135 hits, the narrowest of the four. Reaches
+    # database:encode-screen-ccres and dataset:roadmap-epigenomics.
+    # "reference human epigenomes" is listed beside "reference epigenome"
+    # because Roadmap's title interposes the species and Europe PMC matches the
+    # phrase, not the words. dataset:encode matches too but is a 2012 paper, so
+    # the date window excludes it: the 2015 floor is deliberate (see below) and
+    # this is what it costs.
+    europepmc: >
+      (TITLE_ABS:"reference epigenome" OR TITLE_ABS:"reference human epigenomes"
+       OR TITLE_ABS:"encyclopedia of DNA elements"
+       OR TITLE_ABS:"candidate cis-regulatory element")
+      AND (TITLE_ABS:"integrative" OR TITLE_ABS:"human" OR TITLE_ABS:"registry"
+           OR TITLE_ABS:"expanded")
+    arxiv: null
+
+  - id: perturbation_atlases
+    fate_axis: null
+    expect_type: dataset
+    # 256 hits, and the cleanest result of the four: it reaches all five
+    # Perturb-seq and chemical-transcriptomics datasets the catalogue holds --
+    # dataset:adamson-2016-perturb-seq-upr-screen, dataset:dixit-2016-perturb-seq,
+    # dataset:norman-2019-combinatorial-perturb-seq,
+    # dataset:replogle-2022-perturb-seq and dataset:sci-plex. These are the
+    # training sets the `what` axis rests on, so a cycle that proposes one is
+    # proposing the ground truth for a perturbation model, not a model.
+    europepmc: >
+      (TITLE_ABS:"Perturb-seq" OR TITLE_ABS:"single-cell CRISPR screen"
+       OR TITLE_ABS:"CRISPR interference screen"
+       OR TITLE_ABS:"chemical transcriptomics")
+      AND (TITLE_ABS:"single-cell" OR TITLE_ABS:"transcriptomic"
+           OR TITLE_ABS:"atlas")
+    arxiv: null
+
+  - id: chromatin_protocols
+    fate_axis: with-what
+    expect_type: protocol
+    # 440 hits. Reaches protocol:cut-tag and protocol:omni-atac.
+    # protocol:atac-seq matches as well but is Buenrostro 2013, outside the
+    # date window, like dataset:encode above. The assay names carry the query
+    # and the second group asks what kind of paper it is, because "ATAC-seq" in
+    # an abstract is usually a method someone used rather than the protocol
+    # being published -- which is exactly what PROTOCOL_TERMS then scores.
+    europepmc: >
+      (TITLE_ABS:"ATAC-seq" OR TITLE_ABS:"CUT&Tag" OR TITLE_ABS:"CUT&RUN"
+       OR TITLE_ABS:"DNase-seq")
+      AND (TITLE:"protocol" OR TITLE:"method"
+           OR TITLE_ABS:"transposition of native chromatin"
+           OR TITLE_ABS:"efficient epigenomic profiling" OR TITLE_ABS:"improved"
+           OR TITLE_ABS:"fast and sensitive")
     arxiv: null
 
 # How the `benchmark` and `critique` roles are actually found.

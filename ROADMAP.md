@@ -201,19 +201,65 @@ The dominant cost of the whole project.
 - [x] The critical-evaluation thread — the `critique` papers are the differentiator, so backfill them *with* the models, not after
 - [x] Benchmarks: GUANinE, DNALongBench, LRB, OmniGenBench, GUE
 - [x] Module collections to ~15–30 entities, each keyed back to `eCR_mod_lib` — 58, above the range
-- [ ] First vocabulary promotion pass once tags clear the ≥10-record threshold
+- [x] An executable statement of what the catalogue searches for —
+      `literature/search_queries.yaml` as twelve clauses in each engine's own
+      syntax, and `literature/query_coverage.py`, which measures what they
+      reach from committed data and no network
+- [ ] A cached cycle that confirms the projected reach of 240 of 249
 
-**Exit:** ~150 entities, and `reports/vocab_candidates.md` fires for the first
-time, which means the bottom-up vocabulary mechanism has actually been exercised.
+**Exit, rewritten 2026-11-04.** It used to be "~150 entities, and
+`reports/vocab_candidates.md` fires for the first time". Both halves were
+wrong, in opposite directions.
 
-**Half met, and the unmet half is the one that mattered.** 489 entities
-published — 319 models, 91 benchmarks, 58 module collections, 9 datasets, 7
-databases, 5 protocols — against a ~150 target and a ~300-400 ceiling, so the
-entity count is not the open question any more. `vocab_candidates.md` still
-does not fire: a tag needs ≥10 records and only the 20 hand-curated seeds carry
-tags at all, because `07_enrich.py` deliberately refuses to generate them. The
-vocabulary mechanism is therefore still unexercised, which is what this
-milestone was actually for.
+The entity half was set before the boundary existed, and 250 records already
+survive it, so **the target is now ~300 published and the ceiling ~450** — the
+97 pending decisions hold 24 in scope, and the four clauses added today open
+three types that no query could previously reach. A target the project passed
+two milestones ago cannot gate anything.
+
+The vocabulary half could not be met at all, and not for want of effort: a tag
+needs ≥10 records, `07_enrich.py` deliberately refuses to generate tags, and
+only the 20 hand-curated seeds carry any. Meeting it meant hand-tagging ~230
+records, which buys a mechanism demonstration and nothing a reader wants. **It
+moves to M6**, beside the other vocabulary question there, and is no longer
+M4's gate.
+
+**What gates M4 instead: the clause file and its two numbers.** CFCR has an
+intensional boundary (`README.md`, `docs/scope_criteria.md`) and, since M4a, an
+extensional one over its own records (`literature/scope_labels.yaml`). What it
+did not have is a statement of the *literature* it searches, in a form a
+reviewer can run. `literature/search_queries.yaml` is now that statement —
+boolean clauses per collection, in Europe PMC's and arXiv's own syntax, so a
+clause can be pasted into either engine without installing anything — and
+`reports/query_coverage.md` must report both:
+
+| | measured 2026-11-04, clauses as of 2026-10-29 |
+|---|---|
+| published records whose primary paper the clauses reach | 206 of 249 |
+| withdrawn records returned in the same hit set | 207 of 239 |
+
+**Both numbers, because the second is the honest half.** The clauses return as
+many out-of-scope primaries as in-scope ones, so a query reaches a literature
+and never a boundary; the criteria are what separate them. A reach figure
+published without its companion would claim the file does the admission, which
+it does not. The exit condition is that both are regenerable from the
+repository by anyone, which `query_coverage.py` makes true offline.
+
+This is also the general-interest claim M7 needs. Kipoi, the Stegle catalogue
+and the awesome-lists all say that a human curated them; none publishes the
+query that defines its corpus together with the measured disagreement between
+that query and its own contents.
+
+**Half met, and the unmet half is the one that mattered.** Written when 489
+entities were published; M4a has since withdrawn 239 of them and the exit above
+is rewritten, but the diagnosis below is why, so it stands as it was. 489
+entities published — 319 models, 91 benchmarks, 58 module collections, 9
+datasets, 7 databases, 5 protocols — against a ~150 target and a ~300-400
+ceiling, so the entity count is not the open question any more.
+`vocab_candidates.md` still does not fire: a tag needs ≥10 records and only the
+20 hand-curated seeds carry tags at all, because `07_enrich.py` deliberately
+refuses to generate them. The vocabulary mechanism is therefore still
+unexercised, which is what this milestone was actually for.
 
 **Measured on 2026-10-26, and the reason M4 does not close:** the backfill
 bought breadth by spending depth, and the fields it left empty are the ones the
@@ -453,6 +499,44 @@ the question on their own: Basenji2 and GROVER, at ranks 236 and 219, neither
 of which has a paper in `papers.yaml` or a record, on two lines M4 ticks as
 done. §1.9 of `docs/triage_design.md` carries the measurement.
 
+## M4b — the boundary, executable
+
+**Decided 2026-11-04**, and the second half of the clause file that closes M4.
+
+M4's exit ships the clauses and measures their reach. It also measures what
+they cannot do: the same clauses return 206 in-scope and 207 out-of-scope
+primaries, and nothing in a boolean query tells the two apart. Today the
+separation lives in prose — `docs/scope_criteria.md`'s C1–C5 and D1–D5 — and
+in a curator's reading of it, which is correct and is not checkable.
+
+- [ ] C1–C5 and D1–D5 as predicates over a candidate's title, abstract and
+      metadata, in one file beside the clauses
+- [ ] A confusion matrix against `literature/scope_labels.yaml`, which already
+      labels all 490 records, reported per criterion rather than in total
+- [ ] #20 folded in: the discovery scoring encodes C1–C5 and neither D2 nor the
+      prokaryotic half of the organism scope, which is the same gap seen from
+      the scoring side
+- [ ] The 207 withdrawn primaries as the set the predicates must reject, and
+      the 206 published ones as the set they must keep
+
+**Exit:** the predicates exist, and their disagreement with the curator's
+labels is a number per criterion. Not zero — a predicate that reproduced every
+label would mean the labels were mechanical, and D1 took 42 of them. The number
+is what makes the boundary reviewable.
+
+**Why it is a separate milestone and not part of M4.** The clause file is a
+day's work and measurable immediately; encoding ten criteria is not, and
+pretending otherwise would hold M4 open indefinitely for the second time. The
+order also matters: the clauses define the pool the predicates are asked to
+judge, so writing the predicates first would be guessing at their input.
+
+**The risk, stated.** A machine-checkable criterion invites treating the
+machine's answer as the decision, which M4a's whole argument refuses — scope is
+the curator's call, and `scope_labels.yaml` carries `ratified: false` for that
+reason. The predicates are a check on drift, not an admissions committee, and
+the exit above is written as a disagreement rate rather than an accuracy so
+that staying below 100% reads as correct.
+
 ## M5 — hybrid search
 
 Deliberately gated on M4. Deferred from M2 on purpose: with 20 records there is
@@ -477,6 +561,12 @@ Everything schema §11 deferred, plus what M1 and M4 turn up.
       min/max range is a stopgap; NT's 50M and 2.5B checkpoints differ in what
       they are good for, and a range cannot say that
 - [ ] Decide `protocol_ext.category`: give it a vocabulary or demote it to free text
+- [ ] First vocabulary promotion pass once tags clear the ≥10-record threshold
+      — moved here from M4 on 2026-11-04. It was never a breadth question: a
+      tag needs ≥10 records, only the 20 hand-curated seeds carry tags at all,
+      and `07_enrich.py` refuses to generate them on purpose. So this waits on
+      a decision about where tags come from, which is a schema question and
+      belongs beside the others here
 - [ ] Contributor attribution table, for crediting co-maintainers
 - [ ] Per-paper curator override on the `evidence_tier` author-overlap threshold,
       if the backfill shows the global 50% rule misfiring
