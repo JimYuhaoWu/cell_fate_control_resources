@@ -22,6 +22,13 @@
   organism: [human, mouse]
   assay: [CUT&RUN]
   status: active
+  # Asserted 2026-11-04, the first non-model record to carry one. The
+  # derivation rests on 10.26508/lsa.202201778, where a group sharing no author
+  # with Janssens & Henikoff runs this protocol in Plasmodium falciparum and
+  # reports it reproducible and concordant with published ChIP-seq -- an
+  # independent evaluation of the protocol itself, which is what the
+  # `benchmark` role means (schema §2.3). QC derives the same value.
+  evidence_tier: externally-benchmarked
   curator: JimYuhaoWu
   date_added: 2026-10-16
   protocol_ext:

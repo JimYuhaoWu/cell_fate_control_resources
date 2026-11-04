@@ -16196,6 +16196,7 @@
   "description": "The reference CUT&RUN protocol for targeted in situ chromatin profiling at high efficiency from low cell numbers, hosted on protocols.io by the originating lab.\n",
   "difficulty": "moderate",
   "entity_id": "protocol:cutrun-janssens-henikoff",
+  "evidence_tier": "externally-benchmarked",
   "fate_axis": [
    "where"
   ],

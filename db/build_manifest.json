@@ -8,7 +8,7 @@
     "records/datasets.yaml": "1e0a389358610e94eb2a70f66ef02073dcd5397c9f55587d65171ac567f145ea",
     "records/models.yaml": "732c982c7aa72024a4485784509f59a18f558ea54bffa10b335db5c09425a7a6",
     "records/module_libraries.yaml": "44c7cd8023de2293e4af5142b58ee57310944d382c5644b57e26659b54245d80",
-    "records/protocols.yaml": "9fcd131e815352dcc9c24eb3748eb850f7c9be7d0a00e7db0f55ba3903c7675d",
+    "records/protocols.yaml": "36899c3f0569e7fcd16bb721e41cc08ee5bd82a5185d763639132aac7ff66922",
     "vocab/architecture.yaml": "287c121e51fb652f7c527937d81304d31fece7abbc7094ca6b62846067738ff8",
     "vocab/assay.yaml": "c449a1589daec90e56aa61be102d0810ed0f92f704de2116c9b4ff908516c803",
     "vocab/cell_type.yaml": "018cdf102d25782037bdf824b56d96505eeb0edab89077d4e899a1670deff2be",
@@ -26,8 +26,8 @@
   },
   "summary": {
     "by_evidence_tier": {
-      "externally-benchmarked": 8,
-      "not asserted": 482
+      "externally-benchmarked": 9,
+      "not asserted": 481
     },
     "by_paper_role": {
       "application": 9,

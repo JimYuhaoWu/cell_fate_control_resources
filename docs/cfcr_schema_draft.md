@@ -126,6 +126,19 @@ This table is the differentiator. `role IN ('benchmark','critique')` answers
 "which models have independent external evaluation" — a query no existing list
 in the landscape can serve.
 
+> **The vocabulary above was written for models, and 2026-11-04 measured what
+> that costs elsewhere.** `evidence_tier` moved to `entity` so that the other
+> five types could carry a derived tier, and reading the papers behind those
+> derivations showed the rows mostly do not meet `benchmark`'s own definition:
+> they record that a paper *used* the entity, not that it evaluated it. 21
+> papers benchmark models *on* `dataset:replogle-2022-perturb-seq`; CRONDEX is
+> built on `module:epifactors-2022-chromatin-regulators`. And a dataset
+> shipped with a model shares the model's primary paper, so every evaluation
+> of `model:enformer` attaches to `dataset:enformer-data` as well — 44 rows
+> inherited, none curated. `application` ("uses the entity to do biology") is
+> where most belong. 102 rows across 8 records, tracked as ROADMAP M4's depth
+> item.
+
 ### 2.4 `link`
 
 Resources hang off entities, not off papers. One entity, many links.

@@ -231,6 +231,24 @@ The dominant cost of the whole project.
         outside the authoring group evaluated, and can I legally use the
         weights* — is answerable for the **8 records carrying both
         `evidence_tier` and `availability_tier`**, against 250 published
+      - **The `benchmark` role was written for models.** The column moved on
+        2026-11-04 and the first non-model tier was asserted the same day:
+        `protocol:cutrun-janssens-henikoff`, on 10.26508/lsa.202201778, where
+        an unrelated group runs the protocol in *Plasmodium falciparum* and
+        reports it reproducible and concordant with published ChIP-seq. Reading
+        the other 7 candidates' papers stopped the other 7 assertions. Schema
+        §2.3 defines `benchmark` as *independently evaluates this entity*, and
+        on these records the rows largely record **use**: 21 papers benchmark
+        *models* on `dataset:replogle-2022-perturb-seq`, CRONDEX is built on
+        `module:epifactors-2022-chromatin-regulators` rather than evaluating
+        it, and the IBIS challenge attached to `benchmark:dart-eval` has no
+        visible relation to it. Worse mechanically, `dataset:borzoi-data` and
+        `dataset:enformer-data` **share their primary paper with the model**,
+        since a training set shipped with a model has no paper of its own, so
+        all 63 of their evaluations are the model's inherited wholesale. 102
+        `benchmark`/`critique` rows sit on these 8 records, of 291 in the
+        catalogue. Re-reading them against the role vocabulary is the work, and
+        it is curation rather than schema
 - [x] Calibrate the scoring for the three types the new clauses reach — done
       2026-11-04 against a labelled sample of 80, and the result corrected the
       diagnosis: `DATABASE_TERMS` and `PROTOCOL_TERMS` were fine at 50% and
