@@ -248,7 +248,8 @@ The dominant cost of the whole project.
         all 63 of their evaluations are the model's inherited wholesale. 102
         `benchmark`/`critique` rows sit on these 8 records, of 291 in the
         catalogue. Re-reading them against the role vocabulary is the work, and
-        it is curation rather than schema
+        it is curation rather than schema — filed as #23, which carries the
+        per-record counts and the shared-primary-paper question
 - [x] Calibrate the scoring for the three types the new clauses reach — done
       2026-11-04 against a labelled sample of 80, and the result corrected the
       diagnosis: `DATABASE_TERMS` and `PROTOCOL_TERMS` were fine at 50% and
