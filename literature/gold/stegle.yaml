@@ -1,0 +1,1887 @@
+# literature/gold/stegle.yaml
+#
+# An external denominator for `literature/query_coverage.py`, so that the reach
+# of `literature/search_queries.yaml` can be measured against a set CFCR did
+# not assemble. Every other number about the clause file divides by records the
+# clauses themselves found, which cannot show a resource no clause has ever had
+# a term for.
+#
+# Source: PMBio/interp-extrap-perturb at b36ade82b7bee3820684d5ab6e7c74221b0caad2
+# (2026-09-07), the living catalogue behind Dimitrov, Schrod, Rohbeck & Stegle,
+# *Nature Reviews Genetics* 2026. 156 methods, one YAML file each, so the list
+# is taken verbatim and only the labels below are CFCR's.
+#
+# Method of measurement follows Nasser et al., arXiv:2602.00011 (chained
+# prompting for systematic review search strategies): **recall only**, against
+# the items an external completed review included, on the grounds that
+# precision is a downstream concern. CFCR already reports precision separately
+# as the discrimination number, so the two stay apart here too. Two of that
+# paper's choices are deliberately not copied -- it excluded reviews whose
+# strategy returned more than 1,000 hits, and its headline figure applies a
+# post-hoc ">0.2 recall only" filter to its own rows but not to its baselines.
+# Both flatter the result. Nothing here is excluded for being hard to reach;
+# an entry our sources cannot index is reported as its own category.
+#
+# `in_scope` applies docs/scope_criteria.md to each entry, from the method name,
+# task list and description the catalogue carries -- the same title-and-abstract
+# constraint the criteria were written under. `why` names the criterion that
+# decided it. The task vocabulary is the catalogue's own and does most of the
+# work: C5 admits a resource that predicts a perturbation response and excludes
+# one that only embeds or integrates, and `Seen`/`Unseen`/`Combinatorial`
+# prediction is that distinction already drawn by someone else. The 16 entries
+# whose only prediction-adjacent task is `Context Transfer` were read one at a
+# time.
+#
+# **One criterion is suspended, and it matters.** C2 requires the substrate to
+# be genomic DNA sequence or chromatin state. Read literally it puts every
+# entry here out of scope, since these are expression-matrix methods -- and it
+# would equally withdraw `model:gears`, `model:scgpt`, `model:scgenept` and
+# `model:scldm`, which the catalogue publishes today. So C2 is applied as the
+# catalogue applies it in practice, admitting the `what` axis on gene-level
+# perturbation of the genome, and the conflict is recorded rather than settled
+# here: it is M4b's to resolve, with issue #20.
+#
+# `identifier` is what `query_coverage.py` matches a cached hit against. It is
+# derived from the publication URL where the URL carries a DOI or arXiv id, and
+# otherwise by an OpenAlex title search whose match was checked by eye;
+# `identifier_from` says which. Eight in-scope entries are published only at a
+# venue with no DOI and no preprint our sources index, and carry null: that is
+# a source-coverage gap, not a vocabulary gap, and the report keeps it separate.
+
+- key: amici
+  method: AMICI
+  year: 2025
+  tasks:
+  - Linear Gene Programmes
+  - Multi-component Disentanglement
+  publication: https://www.biorxiv.org/content/10.1101/2025.09.22.677860v1.full.pdf
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes,
+    Multi-component Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: artemis
+  method: ARTEMIS
+  year: 2025
+  tasks:
+  - Trace Cell Populations
+  publication: https://academic.oup.com/bioinformatics/article/41/Supplement_1/i189/8199396
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Trace Cell Populations)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: attentionpert
+  method: AttentionPert
+  year: 2024
+  tasks:
+  - Combinatorial Effect Prediction
+  - Unseen Perturbation Prediction
+  publication: https://academic.oup.com/bioinformatics/article/40/Supplement_1/i453/7700899
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: 10.1093/bioinformatics/btae244
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: augur
+  method: AUGUR
+  year: 2020
+  tasks:
+  - Differential Analysis
+  - Perturbation Responsiveness
+  publication: https://www.nature.com/articles/s41587-020-0605-1#Abs1
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Differential Analysis, Perturbation
+    Responsiveness)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: avici
+  method: AVICI
+  year: 2022
+  tasks:
+  - Causal Structure
+  publication: https://arxiv.org/abs/2205.12934
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Causal Structure)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: bicycle
+  method: Bicycle
+  year: 2023
+  tasks:
+  - Causal Structure
+  publication: https://proceedings.mlr.press/v236/rohbeck24a.html
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Causal Structure)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: biolord
+  method: Biolord
+  year: 2024
+  tasks:
+  - Combinatorial Effect Prediction
+  - Context Transfer
+  - Multi-component Disentanglement
+  - Unseen Perturbation Prediction
+  publication: https://www.nature.com/articles/s41587-023-02079-x#Sec6
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: 10.1038/s41587-023-02079-x
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: c2s-scale
+  method: C2S-Scale
+  year: 2025
+  tasks:
+  - Combinatorial Effect Prediction
+  - Unseen Perturbation Prediction
+  publication: https://www.biorxiv.org/content/10.1101/2025.04.14.648850v1
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: 10.1101/2025.04.14.648850
+  identifier_from: url
+- key: causcell
+  method: CausCell
+  year: 2024
+  tasks:
+  - Causal Structure
+  - Combinatorial Effect Prediction
+  - Context Transfer
+  - Multi-component Disentanglement
+  - Seen Perturbation Prediction
+  publication: https://www.nature.com/articles/s41467-025-62008-1
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Seen Perturbation Prediction'
+  identifier: 10.1038/s41467-025-62008-1
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: celcomen
+  method: Celcomen
+  year: 2025
+  tasks:
+  - Feature Relationships
+  - Unsupervised Disentanglement
+  publication: https://openreview.net/pdf?id=Tqdsruwyac
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Feature Relationships, Unsupervised
+    Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: cellbox
+  method: CellBox
+  year: 2021
+  tasks:
+  - Combinatorial Effect Prediction
+  - Context Transfer
+  - Seen Perturbation Prediction
+  publication: https://www.cell.com/cell-systems/pdf/S2405-4712(20)30464-6.pdf
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Seen Perturbation Prediction'
+  identifier: 10.1016/j.cels.2020.11.013
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: cellcap
+  method: CellCap
+  year: 2024
+  tasks:
+  - Linear Gene Programmes
+  - Multi-component Disentanglement
+  publication: https://www.cell.com/cell-systems/fulltext/S2405-4712(25)00078-X
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes,
+    Multi-component Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: celldisect
+  method: CellDISECT
+  year: 2025
+  tasks:
+  - Context Transfer
+  - Contrastive Disentanglement
+  - Nonlinear Gene Programmes
+  publication: https://www.biorxiv.org/content/10.1101/2025.06.03.657578v1.full.pdf
+  in_scope: false
+  why: 'C5: disentangles covariates, does not predict a response'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: celldrift
+  method: CellDrift
+  year: 2022
+  tasks:
+  - Differential Analysis
+  publication: https://academic.oup.com/bib/article/23/5/bbac324/6673850#373524408
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Differential Analysis)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: cellflow
+  method: cellFlow
+  year: 2025
+  tasks:
+  - Combinatorial Effect Prediction
+  - Context Transfer
+  - Trace Cell Populations
+  - Unseen Perturbation Prediction
+  publication: https://www.biorxiv.org/content/10.1101/2025.04.11.648220v1.full.pdf
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: 10.1101/2025.04.11.648220
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: celloracle
+  method: CellOracle
+  year: 2023
+  tasks:
+  - GRN Inference
+  publication: https://www.nature.com/articles/s41586-022-05688-9
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (GRN Inference)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: cellot
+  method: CellOT
+  year: 2023
+  tasks:
+  - Context Transfer
+  - Perturbation Responsiveness
+  - Trace Cell Populations
+  publication: https://www.nature.com/articles/s41592-023-01969-x
+  in_scope: true
+  why: 'C5: maps control to perturbed cell state distributions'
+  identifier: 10.1038/s41592-023-01969-x
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: cfgen
+  method: CFGen
+  year: 2024
+  tasks:
+  - Context Transfer
+  - Trace Cell Populations
+  publication: https://openreview.net/forum?id=3MnMGLctKb
+  in_scope: false
+  why: 'C5: generates synthetic counts'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: chemcpa
+  method: ChemCPA
+  year: 2022
+  tasks:
+  - Context Transfer
+  - Multi-component Disentanglement
+  - Unseen Perturbation Prediction
+  publication: https://proceedings.neurips.cc/paper_files/paper/2022/hash/aa933b5abc1be30baece1d230ec575a7-Abstract-Conference.html
+  in_scope: true
+  why: 'C5: claims Unseen Perturbation Prediction'
+  identifier: arxiv:2204.13545
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: cinema-ot
+  method: CINEMA-OT
+  year: 2023
+  tasks:
+  - Perturbation Responsiveness
+  - Trace Cell Populations
+  - Unsupervised Disentanglement
+  publication: https://www.nature.com/articles/s41592-023-02040-5#Sec11
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Perturbation Responsiveness,
+    Trace Cell Populations, Unsupervised Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: civ
+  method: CIV
+  year: 2023
+  tasks:
+  - Causal Structure
+  publication: https://www.nature.com/articles/s42256-023-00719-0
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Causal Structure)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: clvm
+  method: cLVM
+  year: 2019
+  tasks:
+  - Contrastive Disentanglement
+  - Linear Gene Programmes
+  publication: https://cdn.aaai.org/ojs/4414/4414-13-7453-1-10-20190706.pdf
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Contrastive Disentanglement,
+    Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: codex
+  method: CODEX
+  year: 2024
+  tasks:
+  - Combinatorial Effect Prediction
+  - Context Transfer
+  - Unseen Perturbation Prediction
+  publication: https://academic.oup.com/bioinformatics/article/40/Supplement_1/i91/7700898
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: 10.1093/bioinformatics/btae261
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: condot
+  method: CondOT
+  year: 2022
+  tasks:
+  - Combinatorial Effect Prediction
+  - Context Transfer
+  - Trace Cell Populations
+  - Unseen Perturbation Prediction
+  publication: https://proceedings.neurips.cc/paper_files/paper/2022/file/2d880acd7b31e25d45097455c8e8257f-Paper-Conference.pdf
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: arxiv:2206.14262
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: contrastivevi
+  method: ContrastiveVI
+  year: 2023
+  tasks:
+  - Contrastive Disentanglement
+  - Nonlinear Gene Programmes
+  publication: https://www.nature.com/articles/s41592-023-01955-3
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Contrastive Disentanglement,
+    Nonlinear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: contrastivevi_plus
+  method: ContrastiveVI+
+  year: 2024
+  tasks:
+  - Contrastive Disentanglement
+  - Nonlinear Gene Programmes
+  - Perturbation Responsiveness
+  publication: https://arxiv.org/abs/2411.08072
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Contrastive Disentanglement,
+    Nonlinear Gene Programmes, Perturbation Responsiveness)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: cospar
+  method: CoSpar
+  year: 2022
+  tasks:
+  - Trace Cell Populations
+  publication: https://www.nature.com/articles/s41587-022-01209-1
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Trace Cell Populations)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: cpa
+  method: CPA
+  year: 2023
+  tasks:
+  - Combinatorial Effect Prediction
+  - Context Transfer
+  - Multi-component Disentanglement
+  publication: https://www.embopress.org/doi/full/10.15252/msb.202211517
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction'
+  identifier: 10.15252/msb.202211517
+  identifier_from: url
+- key: cpca
+  method: cPCA
+  year: 2018
+  tasks:
+  - Contrastive Disentanglement
+  - Linear Gene Programmes
+  publication: https://www.nature.com/articles/s41467-018-04608-8#Sec7
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Contrastive Disentanglement,
+    Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: cplvms
+  method: CPLVMs
+  year: 2022
+  tasks:
+  - Contrastive Disentanglement
+  - Linear Gene Programmes
+  publication: https://projecteuclid.org/journals/annals-of-applied-statistics/volume-16/issue-3/Contrastive-latent-variable-modeling-with-application-to-case-control-sequencing/10.1214/21-AOAS1534.short
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Contrastive Disentanglement,
+    Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: csmf
+  method: CSMF
+  year: 2019
+  tasks:
+  - Contrastive Disentanglement
+  - Linear Gene Programmes
+  publication: https://academic.oup.com/nar/article/47/13/6606/5512984
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Contrastive Disentanglement,
+    Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: cvae
+  method: cVAE
+  year: 2019
+  tasks:
+  - Contrastive Disentanglement
+  publication: https://arxiv.org/pdf/1902.04601
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Contrastive Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: cyclecdr
+  method: cycleCDR
+  year: 2024
+  tasks:
+  - Unseen Perturbation Prediction
+  publication: https://academic.oup.com/bioinformatics/article/40/Supplement_1/i462/7700878
+  in_scope: true
+  why: 'C5: claims Unseen Perturbation Prediction'
+  identifier: 10.1093/bioinformatics/btae248
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: cytobridge
+  method: CytoBridge
+  year: 2025
+  tasks:
+  - Context Transfer
+  - Seen Perturbation Prediction
+  - Trace Cell Populations
+  publication: https://openreview.net/pdf?id=Z6DJJIN8IJ
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: arxiv:2505.11197
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: dag-gnn
+  method: DAG-GNN
+  year: 2019
+  tasks:
+  - Causal Structure
+  publication: https://arxiv.org/abs/1904.10098
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Causal Structure)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: dcd-fg
+  method: DCD-FG
+  year: 2022
+  tasks:
+  - Causal Structure
+  publication: https://proceedings.neurips.cc/paper_files/paper/2022/file/7a8fa1382ea068f3f402b72081df16be-Paper-Conference.pdf
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Causal Structure)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: dcdi
+  method: DCDI
+  year: 2020
+  tasks:
+  - Causal Structure
+  publication: https://arxiv.org/pdf/2007.01754
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Causal Structure)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: dci
+  method: DCI
+  year: 2021
+  tasks:
+  - Causal Structure
+  publication: https://academic.oup.com/bioinformatics/article/37/18/3067/6168117
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Causal Structure)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: decipher
+  method: Decipher
+  year: 2024
+  tasks:
+  - Linear Gene Programmes
+  - Unsupervised Disentanglement
+  publication: https://www.biorxiv.org/content/10.1101/2023.11.11.566719v2.full
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes,
+    Unsupervised Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: deepruot
+  method: DeepRUOT
+  year: 2025
+  tasks:
+  - Context Transfer
+  - Seen Perturbation Prediction
+  - Trace Cell Populations
+  publication: https://openreview.net/forum?id=gQlxd3Mtru
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: arxiv:2410.00844
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: dialogue
+  method: DIALOGUE
+  year: 2022
+  tasks:
+  - Linear Gene Programmes
+  publication: https://www.nature.com/articles/s41587-022-01288-0
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: dictys
+  method: Dictys
+  year: 2023
+  tasks:
+  - Causal Structure
+  - GRN Inference
+  publication: https://www.nature.com/articles/s41592-023-01971-3
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Causal Structure, GRN Inference)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: discrepancy-vae
+  method: discrepancy-VAE
+  year: 2023
+  tasks:
+  - Causal Structure
+  - Combinatorial Effect Prediction
+  - Multi-component Disentanglement
+  - Seen Perturbation Prediction
+  publication: https://openreview.net/forum?id=o16sYKHk3S&noteId=2EQ6cmfPHg
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Seen Perturbation Prediction'
+  identifier: null
+  identifier_from: 'unresolved: openreview.net'
+- key: dr.vae
+  method: Dr.VAE
+  year: 2019
+  tasks:
+  - Context Transfer
+  - Seen Perturbation Prediction
+  publication: https://academic.oup.com/bioinformatics/article/35/19/3743/5372343
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: 10.1093/bioinformatics/btz158
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: drvi
+  method: DRVI
+  year: 2024
+  tasks:
+  - Nonlinear Gene Programmes
+  - Unsupervised Disentanglement
+  publication: https://openreview.net/forum?id=8FcsvupyOn
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Nonlinear Gene Programmes,
+    Unsupervised Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: expimap
+  method: Expimap
+  year: 2023
+  tasks:
+  - Nonlinear Gene Programmes
+  publication: https://www.nature.com/articles/s41556-022-01072-x
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Nonlinear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: export
+  method: EXPORT
+  year: 2024
+  tasks:
+  - Linear Gene Programmes
+  publication: https://openreview.net/forum?id=f4nMJPKMkQ&referrer=%5Bthe%20profile%20of%20Xiaoning%20Qian%5D(%2Fprofile%3Fid%3D~Xiaoning_Qian1)
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: fcr
+  method: FCR
+  year: 2024
+  tasks:
+  - Multi-component Disentanglement
+  - Seen Perturbation Prediction
+  publication: https://arxiv.org/pdf/2410.22472
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: arxiv:2410.22472
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: flecs
+  method: FLeCS
+  year: 2025
+  tasks:
+  - Causal Structure
+  - Context Transfer
+  - GRN Inference
+  publication: https://arxiv.org/pdf/2503.20027
+  in_scope: false
+  why: 'C3: infers GRN dynamics'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: gears
+  method: GEARS
+  year: 2023
+  tasks:
+  - Combinatorial Effect Prediction
+  - Unseen Perturbation Prediction
+  publication: https://www.nature.com/articles/s41587-023-01905-6#Abs1
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: 10.1038/s41587-023-01905-6
+  identifier_from: url
+  cfcr_record: model:gears
+- key: geass
+  method: GEASS
+  year: 2023
+  tasks:
+  - Nonlinear Gene Programmes
+  publication: https://openreview.net/forum?id=aKcS3xojnwY
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Nonlinear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: gedi
+  method: GEDI
+  year: 2024
+  tasks:
+  - Linear Gene Programmes
+  publication: https://www.nature.com/articles/s41467-024-50963-0?fromPaywallRec=false
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: genecompass
+  method: GeneCompass
+  year: 2024
+  tasks:
+  - Combinatorial Effect Prediction
+  - GRN Inference
+  - Nonlinear Gene Programmes
+  - Unseen Perturbation Prediction
+  publication: https://www.nature.com/articles/s41422-024-01034-y
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: 10.1038/s41422-024-01034-y
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: geneformer
+  method: Geneformer
+  year: 2023
+  tasks:
+  - GRN Inference
+  publication: https://www.nature.com/articles/s41586-023-06139-9
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (GRN Inference)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: graphvci
+  method: graphVCI
+  year: 2023
+  tasks:
+  - Context Transfer
+  publication: https://openreview.net/pdf?id=ICYasJBlZNs
+  in_scope: true
+  why: 'C5: counterfactual expression under a treatment'
+  identifier: null
+  identifier_from: 'unresolved: openreview.net'
+- key: gsfa
+  method: GSFA
+  year: 2024
+  tasks:
+  - Causal Structure
+  - Linear Gene Programmes
+  - Multi-component Disentanglement
+  publication: https://www.nature.com/articles/s41592-023-02017-4
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Causal Structure, Linear
+    Gene Programmes, Multi-component Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: gwot
+  method: GWOT
+  year: 2025
+  tasks:
+  - Context Transfer
+  - Trace Cell Populations
+  publication: https://arxiv.org/pdf/2405.00838
+  in_scope: false
+  why: 'C3: aligns modalities across screens'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: hotspot
+  method: Hotspot
+  year: 2021
+  tasks:
+  - Feature Relationships
+  - Nonlinear Gene Programmes
+  publication: https://www.sciencedirect.com/science/article/pii/S2405471221001149
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Feature Relationships, Nonlinear
+    Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: invae
+  method: inVAE
+  year: 2024
+  tasks:
+  - Multi-component Disentanglement
+  - Nonlinear Gene Programmes
+  publication: https://www.biorxiv.org/content/10.1101/2024.12.06.627196v1.full
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Multi-component Disentanglement,
+    Nonlinear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: iterpert
+  method: IterPert
+  year: 2024
+  tasks:
+  - Combinatorial Effect Prediction
+  - Unseen Perturbation Prediction
+  publication: https://link.springer.com/chapter/10.1007/978-1-0716-3989-4_2
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: 10.1007/978-1-0716-3989-4_2
+  identifier_from: url
+  miss_cause: 'not indexed: a Springer book chapter, in neither source'
+- key: kasumi
+  method: Kasumi
+  year: 2025
+  tasks:
+  - Feature Relationships
+  publication: https://www.nature.com/articles/s41467-025-59448-0
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Feature Relationships)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: lemur
+  method: LEMUR
+  year: 2025
+  tasks:
+  - Differential Analysis
+  - Seen Perturbation Prediction
+  publication: https://www.nature.com/articles/s41588-024-01996-0
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: 10.1038/s41588-024-01996-0
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: linger
+  method: LINGER
+  year: 2024
+  tasks:
+  - GRN Inference
+  publication: https://www.nature.com/articles/s41587-024-02182-7
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (GRN Inference)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: llm_gp
+  method: LLM+GP
+  year: 2024
+  tasks:
+  - Unseen Perturbation Prediction
+  publication: https://openreview.net/forum?id=eb3ndUlkt4
+  in_scope: true
+  why: 'C5: claims Unseen Perturbation Prediction'
+  identifier: null
+  identifier_from: 'unresolved: openreview.net'
+- key: lpm
+  method: LPM
+  year: 2025
+  tasks:
+  - Combinatorial Effect Prediction
+  - Unseen Perturbation Prediction
+  publication: https://arxiv.org/pdf/2503.23535
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: arxiv:2503.23535
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: mefisto
+  method: MEFISTO
+  year: 2022
+  tasks:
+  - Linear Gene Programmes
+  - Unsupervised Disentanglement
+  publication: https://www.nature.com/articles/s41592-021-01343-9
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes,
+    Unsupervised Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: meld_vcf
+  method: MELD(-VCF)
+  year: 2021
+  tasks:
+  - Perturbation Responsiveness
+  publication: https://www.nature.com/articles/s41587-020-00803-5
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Perturbation Responsiveness)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: memento
+  method: Memento
+  year: 2024
+  tasks:
+  - Differential Analysis
+  - Feature Relationships
+  - Linear Gene Programmes
+  publication: https://www.cell.com/cell/fulltext/S0092-8674(24)01144-9
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Differential Analysis, Feature
+    Relationships, Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: mfm
+  method: MFM
+  year: 2024
+  tasks:
+  - Context Transfer
+  - Seen Perturbation Prediction
+  - Trace Cell Populations
+  publication: https://proceedings.neurips.cc/paper_files/paper/2024/file/f381114cf5aba4e45552869863deaaa7-Paper-Conference.pdf
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: arxiv:2408.14608
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: michigan
+  method: MichiGAN
+  year: 2021
+  tasks:
+  - Combinatorial Effect Prediction
+  - Seen Perturbation Prediction
+  - Unsupervised Disentanglement
+  publication: https://link.springer.com/article/10.1186/s13059-021-02373-4
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Seen Perturbation Prediction'
+  identifier: 10.1186/s13059-021-02373-4
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: milode
+  method: MiloDE
+  year: 2024
+  tasks:
+  - Differential Analysis
+  publication: https://link.springer.com/article/10.1186/s13059-024-03334-3
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Differential Analysis)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: mioflow
+  method: MioFlow
+  year: 2022
+  tasks:
+  - Trace Cell Populations
+  publication: https://proceedings.neurips.cc/paper_files/paper/2022/file/bfc03f077688d8885c0a9389d77616d0-Paper-Conference.pdf
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Trace Cell Populations)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: misty
+  method: MISTy
+  year: 2022
+  tasks:
+  - Feature Relationships
+  publication: https://link.springer.com/article/10.1186/s13059-022-02663-5
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Feature Relationships)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: mixscale
+  method: Mixscale
+  year: 2025
+  tasks:
+  - Differential Analysis
+  - Perturbation Responsiveness
+  publication: https://www.nature.com/articles/s41556-025-01622-z
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Differential Analysis, Perturbation
+    Responsiveness)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: mixscape
+  method: Mixscape
+  year: 2021
+  tasks:
+  - Linear Gene Programmes
+  - Perturbation Responsiveness
+  publication: https://www.nature.com/articles/s41588-021-00778-2#Sec11
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes,
+    Perturbation Responsiveness)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: mmfm
+  method: MMFM
+  year: 2024
+  tasks:
+  - Context Transfer
+  - Seen Perturbation Prediction
+  - Trace Cell Populations
+  publication: https://openreview.net/pdf?id=hwnObmOTrV
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: null
+  identifier_from: 'unresolved: openreview.net'
+- key: mmvae
+  method: mmVAE
+  year: 2022
+  tasks:
+  - Contrastive Disentanglement
+  publication: https://arxiv.org/pdf/2202.10560
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Contrastive Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: mofa-flex
+  method: MOFA-FLEX
+  year: 2025
+  tasks:
+  - Linear Gene Programmes
+  - Multi-component Disentanglement
+  - Unsupervised Disentanglement
+  publication: https://www.biorxiv.org/content/10.1101/2025.11.03.686250v1
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes,
+    Multi-component Disentanglement, Unsupervised Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: mofa_plus
+  method: MOFA+
+  year: 2020
+  tasks:
+  - Linear Gene Programmes
+  - Unsupervised Disentanglement
+  publication: https://link.springer.com/article/10.1186/s13059-020-02015-1
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes,
+    Unsupervised Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: mofacell
+  method: MOFAcell
+  year: 2023
+  tasks:
+  - Linear Gene Programmes
+  publication: https://elifesciences.org/articles/93161
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: moscot
+  method: moscot
+  year: 2025
+  tasks:
+  - Trace Cell Populations
+  publication: https://www.nature.com/articles/s41586-024-08453-2
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Trace Cell Populations)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: multicpa
+  method: MultiCPA
+  year: 2022
+  tasks:
+  - Combinatorial Effect Prediction
+  - Multi-component Disentanglement
+  publication: https://www.biorxiv.org/content/10.1101/2022.07.08.499049v1.abstract
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction'
+  identifier: 10.1101/2022.07.08.499049
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: multigroupvi
+  method: MultiGroupVI
+  year: 2022
+  tasks:
+  - Contrastive Disentanglement
+  - Nonlinear Gene Programmes
+  publication: https://proceedings.mlr.press/v200/weinberger22a
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Contrastive Disentanglement,
+    Nonlinear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: music
+  method: MUSIC
+  year: 2019
+  tasks:
+  - Linear Gene Programmes
+  - Perturbation Responsiveness
+  publication: https://www.nature.com/articles/s41467-019-10216-x
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes,
+    Perturbation Responsiveness)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: muvi
+  method: MuVi
+  year: 2023
+  tasks:
+  - Linear Gene Programmes
+  - Unsupervised Disentanglement
+  publication: https://proceedings.mlr.press/v206/qoku23a.html
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes,
+    Unsupervised Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: nichecompass
+  method: NicheCompass
+  year: 2024
+  tasks:
+  - Linear Gene Programmes
+  publication: https://www.nature.com/articles/s41588-025-02120-6
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: nodags-flow
+  method: NODAGS-Flow
+  year: 2023
+  tasks:
+  - Causal Structure
+  publication: https://proceedings.mlr.press/v206/sethuraman23a/sethuraman23a.pdf
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Causal Structure)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: notears-mlp
+  method: NOTEARS-MLP
+  year: 2020
+  tasks:
+  - Causal Structure
+  publication: https://arxiv.org/abs/1909.13189
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Causal Structure)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: notears
+  method: NOTEARS
+  year: 2018
+  tasks:
+  - Causal Structure
+  publication: https://arxiv.org/abs/1803.01422
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Causal Structure)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: omiclip
+  method: OmiCLIP
+  year: 2025
+  tasks:
+  - Context Transfer
+  publication: https://www.nature.com/articles/s41592-025-02707-1
+  in_scope: false
+  why: 'C2: substrate is H&E histology plus spatial transcriptomics'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: ontovae
+  method: ontoVAE
+  year: 2023
+  tasks:
+  - Linear Gene Programmes
+  publication: https://academic.oup.com/bioinformatics/article/39/6/btad387/7199588
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: ot-cfm
+  method: OT-CFM
+  year: 2024
+  tasks:
+  - Trace Cell Populations
+  publication: https://openreview.net/forum?id=CD9Snc73AW
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Trace Cell Populations)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: pcpca
+  method: PCPCA
+  year: 2024
+  tasks:
+  - Contrastive Disentanglement
+  - Linear Gene Programmes
+  publication: https://projecteuclid.org/journals/annals-of-applied-statistics/volume-18/issue-3/Probabilistic-contrastive-dimension-reduction-for-case-control-study-data/10.1214/24-AOAS1877.short
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Contrastive Disentanglement,
+    Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: pdgrapher
+  method: PDGrapher
+  year: 2025
+  tasks:
+  - Combinatorial Effect Prediction
+  - Context Transfer
+  - Unseen Perturbation Prediction
+  publication: https://pmc.ncbi.nlm.nih.gov/articles/PMC10802439/
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: 10.1038/s41551-025-01481-x
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: perturbation_score
+  method: Perturbation Score
+  year: 2025
+  tasks:
+  - Differential Analysis
+  - Perturbation Responsiveness
+  publication: https://www.nature.com/articles/s41556-025-01626-9
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Differential Analysis, Perturbation
+    Responsiveness)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: pmvae
+  method: pmVAE
+  year: 2021
+  tasks:
+  - Linear Gene Programmes
+  publication: https://icml-compbio.github.io/2021/papers/WCBICML2021_paper_24.pdf
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: prepr-ct
+  method: PrePR-CT
+  year: 2024
+  tasks:
+  - Context Transfer
+  publication: https://www.biorxiv.org/content/10.1101/2024.07.24.604816v1.full.pdf
+  in_scope: true
+  why: 'C5: predicts response in unobserved cell types'
+  identifier: 10.1101/2024.07.24.604816
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: presage
+  method: PRESAGE
+  year: 2025
+  tasks:
+  - Unseen Perturbation Prediction
+  publication: https://www.biorxiv.org/content/10.1101/2025.06.03.657653v1
+  in_scope: true
+  why: 'C5: claims Unseen Perturbation Prediction'
+  identifier: 10.1101/2025.06.03.657653
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: prescient
+  method: Prescient
+  year: 2021
+  tasks:
+  - Context Transfer
+  - Seen Perturbation Prediction
+  - Trace Cell Populations
+  publication: https://www.nature.com/articles/s41467-021-23518-w
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: 10.1038/s41467-021-23518-w
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: prnet
+  method: PRNet
+  year: 2024
+  tasks:
+  - Unseen Perturbation Prediction
+  publication: https://www.nature.com/articles/s41467-024-53457-1
+  in_scope: true
+  why: 'C5: claims Unseen Perturbation Prediction'
+  identifier: 10.1038/s41467-024-53457-1
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: prophet
+  method: Prophet
+  year: 2024
+  tasks:
+  - Context Transfer
+  - Unseen Perturbation Prediction
+  publication: https://www.biorxiv.org/content/10.1101/2024.08.12.607533v2
+  in_scope: true
+  why: 'C5: claims Unseen Perturbation Prediction'
+  identifier: 10.1101/2024.08.12.607533
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: renge
+  method: RENGE
+  year: 2023
+  tasks:
+  - Causal Structure
+  - Context Transfer
+  - GRN Inference
+  publication: https://www.nature.com/articles/s42003-023-05594-4
+  in_scope: false
+  why: 'C3: infers a gene regulatory network'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: ritini
+  method: RiTINI
+  year: 2024
+  tasks:
+  - Causal Structure
+  - Context Transfer
+  - GRN Inference
+  publication: https://proceedings.mlr.press/v231/bhaskar24a.html
+  in_scope: false
+  why: 'C3: infers time-varying interaction graphs'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: river
+  method: River
+  year: 2024
+  tasks:
+  - Differential Analysis
+  publication: https://www.biorxiv.org/content/10.1101/2024.08.04.606512v1.abstract
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Differential Analysis)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: salt_peper
+  method: SALT&PEPER
+  year: 2024
+  tasks:
+  - Combinatorial Effect Prediction
+  publication: https://arxiv.org/abs/2404.16907
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction'
+  identifier: arxiv:2404.16907
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: sams-vae
+  method: SAMS-VAE
+  year: 2023
+  tasks:
+  - Causal Structure
+  - Combinatorial Effect Prediction
+  - Multi-component Disentanglement
+  - Seen Perturbation Prediction
+  publication: https://proceedings.neurips.cc/paper_files/paper/2023/hash/0001ca33ba34ce0351e4612b744b3936-Abstract-Conference.html
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Seen Perturbation Prediction'
+  identifier: arxiv:2311.02794
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap, by one hyphen: the arXiv abstract says "single cell"
+    and the clause asks for "single-cell"'
+- key: sbalign
+  method: SBALIGN
+  year: 2023
+  tasks:
+  - Trace Cell Populations
+  publication: https://proceedings.mlr.press/v216/somnath23a/somnath23a.pdf
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Trace Cell Populations)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: sc-vae
+  method: SC-VAE
+  year: 2024
+  tasks:
+  - Contrastive Disentanglement
+  - Perturbation Responsiveness
+  publication: https://proceedings.mlr.press/v240/tu24a.html
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Contrastive Disentanglement,
+    Perturbation Responsiveness)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: sccausalvi
+  method: scCausalVI
+  year: 2025
+  tasks:
+  - Causal Structure
+  - Context Transfer
+  - Differential Analysis
+  - Multi-component Disentanglement
+  - Perturbation Responsiveness
+  - Seen Perturbation Prediction
+  - Unsupervised Disentanglement
+  publication: https://doi.org/10.1016/j.cels.2025.101443
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: 10.1016/j.cels.2025.101443
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: sccvae
+  method: SCCVAE
+  year: 2025
+  tasks:
+  - Causal Structure
+  - Unseen Perturbation Prediction
+  publication: https://www.biorxiv.org/content/10.1101/2025.06.05.657988v1.full.pdf
+  in_scope: true
+  why: 'C5: claims Unseen Perturbation Prediction'
+  identifier: 10.1101/2025.06.05.657988
+  identifier_from: url
+- key: scdiffusion
+  method: scDiffusion
+  year: 2024
+  tasks:
+  - Context Transfer
+  publication: https://academic.oup.com/bioinformatics/article/40/9/btae518/7738782
+  in_scope: false
+  why: 'C5: generates single-cell data'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: scdisinfact
+  method: scDisInFact
+  year: 2024
+  tasks:
+  - Combinatorial Effect Prediction
+  - Contrastive Disentanglement
+  - Nonlinear Gene Programmes
+  - Seen Perturbation Prediction
+  publication: https://www.nature.com/articles/s41467-024-45227-w
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Seen Perturbation Prediction'
+  identifier: 10.1038/s41467-024-45227-w
+  identifier_from: url
+  cfcr_record: model:scdisinfact
+- key: scdist
+  method: scDIST
+  year: 2024
+  tasks:
+  - Differential Analysis
+  - Perturbation Responsiveness
+  publication: https://www.nature.com/articles/s41467-024-51649-3
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Differential Analysis, Perturbation
+    Responsiveness)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: scdori
+  method: scDoRI
+  year: 2025
+  tasks:
+  - GRN Inference
+  publication: https://www.biorxiv.org/content/10.1101/2025.05.13.653733v1.abstract
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (GRN Inference)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: scdsa
+  method: scDSA
+  year: 2023
+  tasks:
+  - Contrastive Disentanglement
+  - Nonlinear Gene Programmes
+  publication: https://openreview.net/pdf?id=fkoqMdTlEg
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Contrastive Disentanglement,
+    Nonlinear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: scelmo
+  method: scELMo
+  year: 2024
+  tasks:
+  - Seen Perturbation Prediction
+  publication: https://www.biorxiv.org/content/10.1101/2023.12.07.569910v2
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: 10.1101/2023.12.07.569910
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: scenic
+  method: SCENIC+
+  year: 2022
+  tasks:
+  - GRN Inference
+  publication: https://www.nature.com/articles/s41592-023-01938-4
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (GRN Inference)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: sceptre
+  method: SCEPTRE
+  year: 2021
+  tasks:
+  - Differential Analysis
+  - Perturbation Responsiveness
+  publication: https://link.springer.com/article/10.1186/s13059-021-02545-2
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Differential Analysis, Perturbation
+    Responsiveness)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: scetm
+  method: scETM
+  year: 2021
+  tasks:
+  - Linear Gene Programmes
+  publication: https://www.nature.com/articles/s41467-021-25534-2
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: scfoundation
+  method: scFoundation
+  year: 2024
+  tasks:
+  - Combinatorial Effect Prediction
+  - Nonlinear Gene Programmes
+  - Unseen Perturbation Prediction
+  publication: https://www.nature.com/articles/s41592-024-02305-7
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: 10.1038/s41592-024-02305-7
+  identifier_from: url
+- key: scgen
+  method: scGEN
+  year: 2019
+  tasks:
+  - Context Transfer
+  publication: https://www.nature.com/articles/s41592-019-0494-8#Abs1
+  in_scope: true
+  why: 'C5: states it predicts single-cell perturbation responses'
+  identifier: 10.1038/s41592-019-0494-8
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: scgenept
+  method: scGenePT
+  year: 2025
+  tasks:
+  - Combinatorial Effect Prediction
+  - GRN Inference
+  - Nonlinear Gene Programmes
+  - Unseen Perturbation Prediction
+  publication: https://www.biorxiv.org/content/10.1101/2024.10.23.619972v1
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: 10.1101/2024.10.23.619972
+  identifier_from: url
+  cfcr_record: model:scgenept
+- key: scgpt
+  method: scGPT
+  year: 2024
+  tasks:
+  - Combinatorial Effect Prediction
+  - GRN Inference
+  - Nonlinear Gene Programmes
+  - Unseen Perturbation Prediction
+  publication: https://www.nature.com/articles/s41592-024-02201-0
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: 10.1038/s41592-024-02201-0
+  identifier_from: url
+  cfcr_record: model:scgpt
+- key: scinsight
+  method: scINSIGHT
+  year: 2022
+  tasks:
+  - Contrastive Disentanglement
+  - Linear Gene Programmes
+  publication: https://link.springer.com/article/10.1186/s13059-022-02649-3#Sec11
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Contrastive Disentanglement,
+    Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: scitd
+  method: scITD
+  year: 2024
+  tasks:
+  - Linear Gene Programmes
+  publication: https://www.nature.com/articles/s41587-024-02411-z
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: sclambda
+  method: scLAMBDA
+  year: 2024
+  tasks:
+  - Combinatorial Effect Prediction
+  - Multi-component Disentanglement
+  - Unseen Perturbation Prediction
+  publication: https://www.biorxiv.org/content/10.1101/2024.12.04.626878v1
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: 10.1101/2024.12.04.626878
+  identifier_from: url
+- key: scldm
+  method: scLDM
+  year: 2025
+  tasks:
+  - Context Transfer
+  - Unseen Perturbation Prediction
+  publication: https://arxiv.org/abs/2511.02986
+  in_scope: true
+  why: 'C5: claims Unseen Perturbation Prediction'
+  identifier: arxiv:2511.02986
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+  cfcr_record: model:scldm
+- key: scmageck
+  method: scMAGeCK
+  year: 2020
+  tasks:
+  - Differential Analysis
+  publication: https://link.springer.com/article/10.1186/s13059-020-1928-4#Sec10
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Differential Analysis)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: scpca
+  method: scPCA
+  year: 2020
+  tasks:
+  - Contrastive Disentanglement
+  - Linear Gene Programmes
+  publication: https://academic.oup.com/bioinformatics/article/36/11/3422/5807607
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Contrastive Disentanglement,
+    Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: scpram
+  method: scPRAM
+  year: 2024
+  tasks:
+  - Context Transfer
+  - Trace Cell Populations
+  publication: https://academic.oup.com/bioinformatics/article/40/5/btae265/7646141
+  in_scope: true
+  why: 'C5: predicts expression changes in response to perturbation'
+  identifier: 10.1093/bioinformatics/btae265
+  identifier_from: url
+  miss_cause: 'excluded on purpose: the clause''s NOT on "optimal transport" removes
+    it, and scPRAM uses optimal transport to predict a perturbation response'
+- key: scpregan
+  method: scPreGan
+  year: 2022
+  tasks:
+  - Seen Perturbation Prediction
+  publication: https://academic.oup.com/bioinformatics/article/38/13/3377/6593485
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: 10.1093/bioinformatics/btac357
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: scprint
+  method: scPrint
+  year: 2025
+  tasks:
+  - GRN Inference
+  - Multi-component Disentanglement
+  - Nonlinear Gene Programmes
+  publication: https://www.nature.com/articles/s41467-025-58699-1
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (GRN Inference, Multi-component
+    Disentanglement, Nonlinear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: scrank
+  method: scRANK
+  year: 2024
+  tasks:
+  - GRN Inference
+  - Linear Gene Programmes
+  - Perturbation Responsiveness
+  publication: https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(24)00260-X
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (GRN Inference, Linear Gene
+    Programmes, Perturbation Responsiveness)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: scvi
+  method: scVI
+  year: 2018
+  tasks:
+  - Nonlinear Gene Programmes
+  publication: https://www.nature.com/articles/s41592-018-0229-2
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Nonlinear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: sea
+  method: SEA
+  year: 2024
+  tasks:
+  - Causal Structure
+  publication: https://arxiv.org/abs/2402.01929
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Causal Structure)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: sena
+  method: SENA
+  year: 2024
+  tasks:
+  - Causal Structure
+  - Combinatorial Effect Prediction
+  - Multi-component Disentanglement
+  - Seen Perturbation Prediction
+  publication: https://openreview.net/forum?id=NjlafBAahz
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Seen Perturbation Prediction'
+  identifier: null
+  identifier_from: 'unresolved: openreview.net'
+- key: simvi
+  method: SIMVI
+  year: 2025
+  tasks:
+  - Nonlinear Gene Programmes
+  - Unsupervised Disentanglement
+  publication: https://www.nature.com/articles/s41467-025-58089-7
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Nonlinear Gene Programmes,
+    Unsupervised Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: sofa
+  method: SOFA
+  year: 2024
+  tasks:
+  - Multi-component Disentanglement
+  publication: https://www.biorxiv.org/content/10.1101/2024.10.10.617527v3.full
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Multi-component Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: spacenet
+  method: SpaCeNet
+  year: 2024
+  tasks:
+  - Feature Relationships
+  publication: https://genome.cshlp.org/content/34/9/1371
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Feature Relationships)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: sparsevae
+  method: sparseVAE
+  year: 2022
+  tasks:
+  - Unsupervised Disentanglement
+  publication: https://arxiv.org/pdf/2110.10804
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Unsupervised Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: spatialdiva
+  method: SpatialDIVA
+  year: 2025
+  tasks:
+  - Multi-component Disentanglement
+  publication: https://www.biorxiv.org/content/10.1101/2025.02.19.638201v1.full.pdf
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Multi-component Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: spectra
+  method: Spectra
+  year: 2023
+  tasks:
+  - Linear Gene Programmes
+  - Multi-component Disentanglement
+  publication: https://www.nature.com/articles/s41587-023-01940-3
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes,
+    Multi-component Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: squidiff
+  method: Squidiff
+  year: 2025
+  tasks:
+  - Combinatorial Effect Prediction
+  - Context Transfer
+  - Unseen Perturbation Prediction
+  publication: https://www.nature.com/articles/s41592-025-02877-y
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction, Unseen Perturbation Prediction'
+  identifier: 10.1038/s41592-025-02877-y
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: stamp
+  method: STAMP
+  year: 2024
+  tasks:
+  - Linear Gene Programmes
+  - Unsupervised Disentanglement
+  publication: https://www.nature.com/articles/s41592-024-02463-8
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes,
+    Unsupervised Disentanglement)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: state
+  method: State
+  year: 2025
+  tasks:
+  - Combinatorial Effect Prediction
+  - Context Transfer
+  publication: https://arcinstitute.org/manuscripts/State
+  in_scope: true
+  why: 'C5: claims Combinatorial Effect Prediction'
+  identifier: null
+  identifier_from: 'unresolved: arcinstitute.org'
+- key: subcell
+  method: SubCell
+  year: 2024
+  tasks:
+  - Context Transfer
+  - Nonlinear Gene Programmes
+  publication: https://www.biorxiv.org/content/10.1101/2024.12.06.627299v1.abstract
+  in_scope: false
+  why: 'C2: substrate is immunofluorescence images of protein localisation'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: svae-ligr
+  method: svae-ligr
+  year: 2024
+  tasks:
+  - Causal Structure
+  - Context Transfer
+  - Multi-component Disentanglement
+  - Seen Perturbation Prediction
+  publication: https://openreview.net/pdf?id=8hptqO7sfG
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: null
+  identifier_from: 'unresolved: openreview.net'
+- key: svae
+  method: sVAE+
+  year: 2023
+  tasks:
+  - Causal Structure
+  - Multi-component Disentanglement
+  - Nonlinear Gene Programmes
+  - Seen Perturbation Prediction
+  publication: https://proceedings.mlr.press/v213/lopez23a/lopez23a.pdf
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: arxiv:2211.03553
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: taichi
+  method: Taichi
+  year: 2024
+  tasks:
+  - Differential Analysis
+  - Perturbation Responsiveness
+  publication: https://www.biorxiv.org/content/10.1101/2024.05.30.596656v1.abstract
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Differential Analysis, Perturbation
+    Responsiveness)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: tardis
+  method: TarDis
+  year: 2024
+  tasks:
+  - Context Transfer
+  - Multi-component Disentanglement
+  publication: https://link.springer.com/chapter/10.1007/978-3-031-90252-9_23
+  in_scope: false
+  why: 'C5: partitions latent space, does not predict a response'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: trvae
+  method: trVAE
+  year: 2020
+  tasks:
+  - Context Transfer
+  - Multi-component Disentanglement
+  - Seen Perturbation Prediction
+  publication: https://academic.oup.com/bioinformatics/article/36/Supplement_2/i610/6055927#409207818
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: 10.1093/bioinformatics/btaa800
+  identifier_from: openalex-title-search
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: vci
+  method: VCI
+  year: 2024
+  tasks:
+  - Context Transfer
+  - Seen Perturbation Prediction
+  publication: https://arxiv.org/abs/2209.05935
+  in_scope: true
+  why: 'C5: claims Seen Perturbation Prediction'
+  identifier: arxiv:2209.05935
+  identifier_from: url
+  miss_cause: 'vocabulary gap: none of the clause''s four phrases appears in the
+    title or abstract, on whichever source holds it'
+- key: vega
+  method: VEGA
+  year: 2023
+  tasks:
+  - Linear Gene Programmes
+  publication: https://www.nature.com/articles/s41467-021-26017-0
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: vespucci
+  method: Vespucci
+  year: 2024
+  tasks:
+  - Differential Analysis
+  - Perturbation Responsiveness
+  publication: https://www.biorxiv.org/content/10.1101/2024.06.13.598641v2.full
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Differential Analysis, Perturbation
+    Responsiveness)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: virtues
+  method: VirTues
+  year: 2025
+  tasks:
+  - Context Transfer
+  publication: https://arxiv.org/abs/2501.06039
+  in_scope: false
+  why: 'C2: substrate is multiplex spatial proteomics'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'
+- key: waddington-ot
+  method: Waddington-OT
+  year: 2019
+  tasks:
+  - Linear Gene Programmes
+  - Trace Cell Populations
+  publication: https://www.sciencedirect.com/science/article/pii/S009286741930039X?via%3Dihub
+  in_scope: false
+  why: 'C5: claims no perturbation-response prediction (Linear Gene Programmes,
+    Trace Cell Populations)'
+  identifier: null
+  identifier_from: 'not resolved: out of scope'

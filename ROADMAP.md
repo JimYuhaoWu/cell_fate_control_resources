@@ -318,6 +318,31 @@ published without its companion would claim the file does the admission, which
 it does not. The exit condition is that both are regenerable from the
 repository by anyone, which `query_coverage.py` makes true offline.
 
+**A third number, and it is the unflattering one.** Both numbers above divide
+by records the clauses themselves found, so neither can see a resource no
+clause has ever had a term for. Measured 2026-11-09 against a denominator CFCR
+did not assemble -- the 156-method catalogue behind Dimitrov et al., *Nature
+Reviews Genetics* 2026, labelled against `docs/scope_criteria.md` in
+`literature/gold/stegle.yaml` -- **the clauses reach 9 of the 48 in-scope
+entries our sources index, 18.8%**, against 96.0% internally. The method is
+Nasser et al., arXiv:2602.00011: recall only, against an external review's own
+included set.
+
+Every miss was probed one at a time, so the figure decomposes rather than
+sitting there: 36 are a vocabulary gap on the `what` axis, 1 is excluded on
+purpose by `perturbation_response`'s `NOT` on optimal transport, 1 is a Springer
+chapter neither source indexes, and **the cap took none** -- the same result as
+the 2026-11-04 audit. One miss turns on a hyphen: SAMS-VAE's abstract says
+*single cell* and the clause asks for `"single-cell"`.
+
+This does not reopen M4's exit, which is that the numbers are regenerable, and
+`query_coverage.py --gold` makes this one regenerable too. What it does is size
+a gap the internal number hid: `perturbation_response` is one clause for an
+axis holding 105 records, and it was written from the vocabulary of the records
+already in the catalogue. Widening it is M6's vocabulary work, not a correction
+here, and the C2 conflict the gold file had to suspend to label anything at all
+belongs to M4b with issue #20.
+
 **And the cycle cost what the reach bought.** Twelve clauses at cap 800 fetch
 3,209 papers and produce **874 decisions** against the 97 of the previous
 cycle, with 1,648 more recorded as deferred below the boundary. 642 of the 874

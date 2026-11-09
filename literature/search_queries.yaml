@@ -35,6 +35,15 @@
 # next cached cycle is what will confirm it, since a projection is not a
 # measurement.
 
+# **Reach off-catalogue, 2026-11-09.** The paragraphs above divide by records
+# these clauses found, which cannot show a resource no clause has a term for.
+# `literature/gold/stegle.yaml` is an external denominator -- a third party's
+# 156-method catalogue, labelled against docs/scope_criteria.md -- and
+# `query_coverage.py --gold` reports 9 of 48 reached, 18.8%, against 96.0%
+# here. 36 of the 39 misses are a vocabulary gap on the `what` axis, all of
+# them against `perturbation_response` below; the cap took none. See that
+# file's header for the method and the one scope criterion it has to suspend.
+
 # Appended to every Europe PMC query. CFCR's organism scope is human, mouse and
 # multi-species models (vocab/organism.yaml), but the filter is on *publication
 # type*, not organism: a model trained on plant genomes is out of scope by the
