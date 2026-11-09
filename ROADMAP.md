@@ -340,8 +340,9 @@ This does not reopen M4's exit, which is that the numbers are regenerable, and
 a gap the internal number hid: `perturbation_response` is one clause for an
 axis holding 105 records, and it was written from the vocabulary of the records
 already in the catalogue. Widening it is M6's vocabulary work, not a correction
-here, and the C2 conflict the gold file had to suspend to label anything at all
-belongs to M4b with issue #20.
+here, and is filed as #24 with the four phrases and the 36 records they miss;
+the C2 conflict the gold file had to suspend to label anything at all belongs
+to M4b with issue #20.
 
 **And the cycle cost what the reach bought.** Twelve clauses at cap 800 fetch
 3,209 papers and produce **874 decisions** against the 97 of the previous
