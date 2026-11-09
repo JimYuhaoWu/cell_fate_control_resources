@@ -43,6 +43,18 @@
 # here. 36 of the 39 misses are a vocabulary gap on the `what` axis, all of
 # them against `perturbation_response` below; the cap took none. See that
 # file's header for the method and the one scope criterion it has to suspend.
+#
+# `perturbation_response` was widened on 2026-11-10 in answer to that number,
+# and its comment carries the phrase-by-phrase measurement. Projected reach
+# afterwards is 22 of 48, 45.8%, from 9 -- 11 entries on the Europe PMC side
+# and 2 on the arXiv side. Projected, not measured: `query_coverage.py --gold`
+# reads cached discovery dumps, so `reports/query_coverage_stegle.md` still
+# says 9 and will keep saying 9 until a cycle runs with these clauses. The
+# remaining 26 are the honest residue, and most are not a vocabulary problem at
+# all -- they describe themselves by architecture ("disentanglement", "latent
+# embedding", "causal representations") and never name a predicted response, so
+# no phrase reaches them and the catalogue's own `Task` field is doing work no
+# abstract exposes.
 
 # Appended to every Europe PMC query. CFCR's organism scope is human, mouse and
 # multi-species models (vocab/organism.yaml), but the filter is on *publication
@@ -196,6 +208,46 @@ queries:
   #
   # Net: 37 hits -> 109, finding what it must and no longer fetching the
   # category that dominated its noise.
+  #
+  # Widened 2026-11-10 against the external denominator, issue #24. The gold
+  # file's 38 testable misses were scored phrase by phrase, and the phrasings
+  # below are the ones those papers use for the thing they predict: CPA and
+  # chemCPA say "cellular responses", PrePR-CT "unseen cell types", PRnet
+  # "chemical perturbations", Dr.VAE "drug response prediction". 116 live hits
+  # -> 771, and it newly reaches 11 of the catalogue's in-scope entries.
+  #
+  # **Three of the four biggest gainers are not here, and the reason is the
+  # cap.** Reach on this axis is cheap to buy and ruinously expensive to pay
+  # for: "transcriptional responses" would gain 4 and costs 8,111 live hits,
+  # "cellular response" 3 for 2,239, "in silico" 4 for 6,809, and
+  # "genetic perturbations" 2 for a clause total of 1,242. Every one of those
+  # exceeds `max_results_per_query`, and the note on that key records what
+  # happens then -- `model:enformer` and `model:basenji` were *lost* when
+  # `interval_models` was widened past its cap. So a phrase was admitted here
+  # only if its own live count is in the low hundreds, which is why this clause
+  # buys 11 of a possible 18 and stops. 771 against a cap of 800 is tight, and
+  # hit counts move daily; the next clause added here needs the cap raised
+  # first, not after.
+  #
+  # Group B takes `transcriptomic` and **not** `single cell`: the unhyphenated
+  # spelling was measured at 711 hits either way and gains nothing on Europe
+  # PMC, where the papers that spell it that way are not indexed at all. It
+  # earns its place on the arXiv side below, which is where that miss lives.
+  #
+  # The `NOT` is deliberately untouched, and widening group A has made it
+  # expensive: it now blocks three entries the catalogue holds and C5 admits --
+  # CellOT (10.1038/s41592-023-01969-x) and scPRAM
+  # (10.1093/bioinformatics/btae265) on "optimal transport", PRESCIENT
+  # (10.1038/s41467-021-23518-w) on "lineage tracing". All three use an excluded
+  # *method* to predict a perturbation response, which is the thing C5 admits,
+  # so the `NOT` is encoding an admission decision rather than a breadth
+  # control. That is a scope question, not a query question: it belongs in
+  # docs/scope_criteria.md and stays on issue #24 until it is answered there.
+  # Dropping it here would move the boundary silently, which is the one thing a
+  # widening must not do, so the cost is recorded instead: three named records
+  # the clause cannot reach by its own rule. What dropping it would cost in
+  # breadth is not measured, because that measurement should not precede the
+  # scope decision.
   - id: perturbation_response
     fate_axis: what
     expect_type: model
@@ -203,13 +255,31 @@ queries:
       (TITLE_ABS:"perturbation response prediction"
        OR TITLE_ABS:"perturbation prediction"
        OR TITLE_ABS:"predicting transcriptional outcomes"
-       OR TITLE_ABS:"genetic perturbation response")
+       OR TITLE_ABS:"genetic perturbation response"
+       OR TITLE_ABS:"perturbation response" OR TITLE_ABS:"perturbation responses"
+       OR TITLE_ABS:"perturbation effects"
+       OR TITLE_ABS:"responses to perturbations"
+       OR TITLE_ABS:"predicting cellular" OR TITLE_ABS:"unseen perturbations"
+       OR TITLE_ABS:"unseen cell types"
+       OR TITLE_ABS:"combinatorial perturbation"
+       OR TITLE_ABS:"drug response prediction"
+       OR TITLE_ABS:"chemical perturbations" OR TITLE_ABS:"perturbed cells")
       AND (TITLE_ABS:"single-cell" OR TITLE_ABS:"transcriptional"
-           OR TITLE_ABS:"CRISPR")
+           OR TITLE_ABS:"CRISPR" OR TITLE_ABS:"transcriptomic")
       NOT (TITLE_ABS:"optimal transport" OR TITLE_ABS:"flow matching"
            OR TITLE_ABS:"trajectory inference" OR TITLE_ABS:"RNA velocity"
            OR TITLE_ABS:"pseudotime" OR TITLE_ABS:"lineage tracing")
-    arxiv: 'abs:"perturbation response" AND abs:"single-cell"'
+    # Widened 2026-11-10 for a reason the Europe PMC half cannot show. Twelve of
+    # the 48 scoreable gold entries carry an arXiv id, and an arXiv-id entry can
+    # only ever be matched from this side -- a Europe PMC hit does not carry
+    # `arxiv:NNNN.NNNNN` as a paper_id -- so these two phrases were the whole
+    # route to a sixth of the denominator, and they reached **none of the 12**.
+    # All twelve failed on `abs:"perturbation response"`. 38 live hits -> 129,
+    # and chemCPA and FCR now come back.
+    #
+    # `single cell` unhyphenated is here and nowhere else: SAMS-VAE's abstract
+    # spells it that way, and Europe PMC has no record of the paper at all.
+    arxiv: '(abs:"perturbation response" OR abs:"perturbation responses" OR abs:"perturbation effects" OR abs:"cellular responses" OR abs:"perturbation prediction" OR abs:"unseen perturbations") AND (abs:"single-cell" OR abs:"single cell" OR abs:"gene expression")'
 
   # ── Resources that serve the models ────────────────────────────────────────
   # The one query whose hits are mostly *not* new entities: a benchmark paper

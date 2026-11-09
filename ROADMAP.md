@@ -332,17 +332,40 @@ Every miss was probed one at a time, so the figure decomposes rather than
 sitting there: 36 are a vocabulary gap on the `what` axis, 1 is excluded on
 purpose by `perturbation_response`'s `NOT` on optimal transport, 1 is a Springer
 chapter neither source indexes, and **the cap took none** -- the same result as
-the 2026-11-04 audit. One miss turns on a hyphen: SAMS-VAE's abstract says
-*single cell* and the clause asks for `"single-cell"`.
+the 2026-11-04 audit.
+
+**The widening, 2026-11-10, and what it could not buy.** `perturbation_response`
+was widened against those misses rather than against the catalogue's own
+vocabulary: eleven phrasings added on the Europe PMC side, 116 live hits -> 771,
+and a rewritten arXiv side, 38 -> 129, where the committed two phrases had been
+reaching **none** of the twelve arXiv-id entries that only that side can score.
+Projected reach 22 of 48, 45.8%. Projected and not measured, because
+`query_coverage.py --gold` reads cached dumps: the report keeps saying 9 until a
+cycle runs.
+
+The cap is what bounds this. Three of the four biggest gainers are unaffordable
+-- "transcriptional responses" gains 4 for 8,111 live hits, "in silico" 4 for
+6,809, "genetic perturbations" 2 for a clause total of 1,242 -- and
+`max_results_per_query` is 800, where the 2026-11-04 note records Enformer and
+Basenji being *lost* to a widening that outran its cap. So the clause buys 11 of
+a possible 18 and stops, and 771 of 800 leaves no room for the next phrase.
+
+Two corrections to what this section said before. The hyphen claim was wrong:
+SAMS-VAE's abstract does not contain `"perturbation response"` either, so fixing
+the hyphen alone would never have reached it. And the `NOT` blocks more than the
+one entry reported -- now that group A can name these papers, it excludes
+CellOT, scPRAM and PRESCIENT, all three of which use an excluded *method* to
+predict a perturbation response, which is what C5 admits. That is a scope
+decision rather than a query one and stays on #24.
 
 This does not reopen M4's exit, which is that the numbers are regenerable, and
 `query_coverage.py --gold` makes this one regenerable too. What it does is size
 a gap the internal number hid: `perturbation_response` is one clause for an
 axis holding 105 records, and it was written from the vocabulary of the records
-already in the catalogue. Widening it is M6's vocabulary work, not a correction
-here, and is filed as #24 with the four phrases and the 36 records they miss;
-the C2 conflict the gold file had to suspend to label anything at all belongs
-to M4b with issue #20.
+already in the catalogue. The widening above answers #24's first half; what
+stays open there is the `NOT`'s admission decision, which belongs in
+docs/scope_criteria.md. The C2 conflict the gold file had to suspend to label
+anything at all belongs to M4b with issue #20.
 
 **And the cycle cost what the reach bought.** Twelve clauses at cap 800 fetch
 3,209 papers and produce **874 decisions** against the 97 of the previous

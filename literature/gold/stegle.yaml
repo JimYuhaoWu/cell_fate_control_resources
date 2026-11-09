@@ -1290,8 +1290,10 @@
   why: 'C5: claims Combinatorial Effect Prediction, Seen Perturbation Prediction'
   identifier: arxiv:2311.02794
   identifier_from: openalex-title-search
-  miss_cause: 'vocabulary gap, by one hyphen: the arXiv abstract says "single cell"
-    and the clause asks for "single-cell"'
+  miss_cause: 'vocabulary gap: the arXiv abstract carries neither clause term --
+    it says "single cell" where the clause asked "single-cell", and it does not
+    say "perturbation response" at all, so the hyphen was never the only reason.
+    Corrected 2026-11-10; the original note here said the hyphen alone'
 - key: sbalign
   method: SBALIGN
   year: 2023
